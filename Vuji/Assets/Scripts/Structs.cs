@@ -1,0 +1,25 @@
+namespace StructsRequest
+{
+    [System.Serializable]
+    public class LoginStructRequest
+    {
+        public string login;
+        public string password;
+    }
+
+    [System.Serializable]
+    public class RegisterStructRequest
+    {
+        public string login;
+        public string password;
+    }
+}
+
+namespace StructsResponse
+{
+    [System.Serializable]
+    public class TokenStructResponse
+    {
+        public string token;
+    }
+}

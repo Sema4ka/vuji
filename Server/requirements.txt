@@ -1,0 +1,8 @@
+pyjwt~=2.3.0
+sqlalchemy~=1.4.32
+bcrypt~=3.2.0
+fastapi~=0.75.0
+pydantic~=1.9.0
+python-multipart~=0.0.5
+starlette~=0.17.1
+uvicorn~=0.17.5	0.17.6
