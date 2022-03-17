@@ -4,25 +4,26 @@ using Photon.Pun;
 
 public class MovementPlayer : MonoBehaviour
 {
-    PhotonView view;
-    BaseEntity player;
-    private float moveSpeed;
-    private Rigidbody2D rb2d;
+    private PhotonView _view;
+    private BaseEntity _player;
+    private float _moveSpeed;
+    private Rigidbody2D _rb2d;
+
 
     private void Start()
     {
-        player = GetComponent<BaseEntity>();
-        moveSpeed = player.GetMoveSpeed();
-        rb2d = GetComponent<Rigidbody2D>();
-        view = GetComponent<PhotonView>();
+        _player = GetComponent<BaseEntity>();
+        _moveSpeed = _player.GetMoveSpeed();
+        _rb2d = GetComponent<Rigidbody2D>();
+        _view = GetComponent<PhotonView>();
     }
 
     private void Update()
     {
-        if (view.IsMine)
+        if (_view.IsMine)
         {
             Vector2 movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-            rb2d.MovePosition(rb2d.position + movement * moveSpeed * Time.fixedDeltaTime);
+            _rb2d.MovePosition(_rb2d.position + movement * _moveSpeed * Time.fixedDeltaTime);
         }
     }
 }
