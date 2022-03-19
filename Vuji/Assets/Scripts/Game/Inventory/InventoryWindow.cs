@@ -52,7 +52,6 @@ public class InventoryWindow : MonoBehaviour
             {
                 currentItemIndex = playerInventory.inventoryItems.Count - 1;
             }
-            Debug.Log(currentItemIndex.ToString());
             Redraw();
         }
 
@@ -68,7 +67,6 @@ public class InventoryWindow : MonoBehaviour
             {
                 currentItemIndex = playerInventory.inventoryItems.Count - 1;
             }
-            Debug.Log(currentItemIndex.ToString());
             Redraw();
         }
     }
