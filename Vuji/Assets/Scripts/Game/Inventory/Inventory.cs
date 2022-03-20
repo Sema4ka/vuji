@@ -5,15 +5,12 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] BaseItem to_add;
     public Action<BaseItem> onItemAdded;
 
     [SerializeField] public List<BaseItem> inventoryItems = new List<BaseItem>();
 
     public void Start()
     {
-        AddItem(to_add);
-        AddItem(to_add);
     }
 
     public void AddItem(BaseItem item){

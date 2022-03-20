@@ -8,6 +8,18 @@ public class BaseEntity : MonoBehaviour
     [SerializeField] private float healthPoints = 100.0f;
     [SerializeField] private float moveSpeed = 5.0f;
 
+    [SerializeField] private List<BaseSkill> skills = new List<BaseSkill>();
+
+
+    public void AddEffect(BaseEffect effect)
+    {
+        effect.ApplyEffect(this);
+    }
+
+    public void UseSkill(BaseSkill skill)
+    {
+        skill.UseSkill(this);
+    }
 
     public float GetMoveSpeed()
     {
@@ -24,6 +36,12 @@ public class BaseEntity : MonoBehaviour
         return entityName;
     }
 
+
+    public void TakeDamage(int healthDamage)
+    {
+        this.healthPoints -= healthDamage;
+        Debug.Log("Damaged: " + this.entityName + " by " + this.healthPoints + " health");
+    }
 
     public void ChangeHealthPoints(int newHealthPoint)
     {
