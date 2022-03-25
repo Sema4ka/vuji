@@ -13,12 +13,12 @@ public class DroppedItem : MonoBehaviour
         _spriteRenderer.sprite = itemData.GetImage();
     }
 
-    void OnTriggerEnter2D(Collider2D entitiy)
+    void OnTriggerEnter2D(Collider2D entity)
     {
         
-        if (entitiy.gameObject.CompareTag("Player"))
+        if (entity.gameObject.CompareTag("Player"))
         {
-            entitiy.gameObject.GetComponent<Inventory>().AddItem(itemData);
+            entity.gameObject.GetComponent<Inventory>().AddItem(itemData);
 
             Destroy(gameObject);
         }

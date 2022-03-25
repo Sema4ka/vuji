@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
 using UnityEngine;
-
 public class BaseEntity : MonoBehaviour
 {
     [SerializeField] private string entityName = "baseEntityName";
     [SerializeField] private float healthPoints = 100.0f;
     [SerializeField] private float moveSpeed = 5.0f;
-
     [SerializeField] private List<BaseSkill> skills = new List<BaseSkill>();
-
+    
 
     public void AddEffect(BaseEffect effect)
     {
@@ -35,17 +34,10 @@ public class BaseEntity : MonoBehaviour
     {
         return entityName;
     }
-
-
+    
     public void TakeDamage(int healthDamage)
     {
         this.healthPoints -= healthDamage;
         Debug.Log("Damaged: " + this.entityName + " by " + this.healthPoints + " health");
-    }
-
-    public void ChangeHealthPoints(int newHealthPoint)
-    {
-        this.healthPoints -= newHealthPoint;
-        Debug.Log("New HP: " + this.healthPoints);
     }
 }

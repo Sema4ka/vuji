@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4607931167675587257}
   - component: {fileID: 4607931167675587256}
   - component: {fileID: 6738772781447510662}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Goblin
   m_TagString: Entity
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8, y: 8.45}
+    oldSize: {x: 1, y: 1.05625}
     newSize: {x: 8, y: 8.45}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -147,3 +147,4 @@ MonoBehaviour:
   entityName: Goblin
   healthPoints: 100
   moveSpeed: 5
+  skills: []
