@@ -16,6 +16,7 @@ class User(Base):
     username = Column(String, unique=False, nullable=False)
     password = Column(String)
     created_at = Column(DATETIME)
+    users_online = relationship("UsersOnline", backref="users_online", cascade="all,delete,save-update")
 
     def __repr__(self):
         return (
@@ -29,3 +30,12 @@ class User(Base):
                 self.__setattr__(i, value if value else attr)
         session.add(self)
         session.commit()
+
+
+class UsersOnline(Base):
+    __tablename__ = "users online"
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey("users.id"), unique=True)
+    last_online = Column(Integer)
+
+

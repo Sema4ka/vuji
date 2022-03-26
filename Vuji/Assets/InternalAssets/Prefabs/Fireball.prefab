@@ -47,11 +47,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileName: Fireball
-  description: fireball description
+  projectileDescription: 
   projectileDamage: 100
   velocity: 10
   lifeTime: 3
   destroyOnCollide: 1
+  aimDirection: {x: -0.03999853, y: 0.22666407, z: -2}
+  aimAngle: 100.00774
 --- !u!212 &7985432767138076325
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -111,7 +113,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8255796032531646231}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

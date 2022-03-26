@@ -16,6 +16,7 @@ public class Controllers : MonoBehaviour
         _dataBase = gameObject.AddComponent<DataBase>();
     }
 
+
     public void AutoAuth()
     {
         StartCoroutine(AutoAuthNet());
@@ -36,14 +37,21 @@ public class Controllers : MonoBehaviour
         StartCoroutine(RegisterNet(login, password));
     }
 
+    public void UserOnline(string token)
+    {
+        StartCoroutine(UserOnlineNet(token));
+    }
+
+    public void UserOffline(string token)
+    {
+        StartCoroutine(UserOfflineNet(token));
+    }
+
     private IEnumerator AutoAuthNet()
     {
         WWWForm form = new WWWForm();
-        string token = _dataBase.get_token();
-        
-        // чтобы была возможность войти в разные аккаунты
-        token = "TESTTOKEN";
-        
+        string token = _dataBase.GetToken();
+
         UnityWebRequest www = UnityWebRequest.Post(SERVER_DOMAIN + "/auth", form);
         www.SetRequestHeader("Authorization", token);
         yield return www.SendWebRequest();
@@ -55,7 +63,7 @@ public class Controllers : MonoBehaviour
         {
             TokenStructResponse tokenStructResponse =
                 JsonUtility.FromJson<TokenStructResponse>(www.downloadHandler.text);
-            _dataBase.set_token(tokenStructResponse.token);
+            _dataBase.SetToken(tokenStructResponse.token);
             SceneManager.LoadScene("Lobby");
         }
     }
@@ -100,7 +108,7 @@ public class Controllers : MonoBehaviour
         {
             TokenStructResponse tokenStructResponse =
                 JsonUtility.FromJson<TokenStructResponse>(www.downloadHandler.text);
-            _dataBase.set_token(tokenStructResponse.token);
+            _dataBase.SetToken(tokenStructResponse.token);
             SceneManager.LoadScene("Lobby");
         }
     }
@@ -131,8 +139,30 @@ public class Controllers : MonoBehaviour
         {
             TokenStructResponse tokenStructResponse =
                 JsonUtility.FromJson<TokenStructResponse>(www.downloadHandler.text);
-            _dataBase.set_token(tokenStructResponse.token);
+            _dataBase.SetToken(tokenStructResponse.token);
             SceneManager.LoadScene("Login");
         }
+    }
+
+    private IEnumerator UserOnlineNet(string token)
+    {
+        UserOnlineAndOfflineStructRequest userStruct = new UserOnlineAndOfflineStructRequest();
+        userStruct.data = "None";
+        string json = JsonUtility.ToJson(userStruct);
+        UnityWebRequest www = UnityWebRequest.Put(SERVER_DOMAIN + "/user_online", json);
+        www.SetRequestHeader("Authorization", token);
+        www.SetRequestHeader("Content-Type", "application/json; charset=UTF-8");
+        yield return www.SendWebRequest();
+    }
+
+    private IEnumerator UserOfflineNet(string token)
+    {
+        UserOnlineAndOfflineStructRequest userStruct = new UserOnlineAndOfflineStructRequest();
+        userStruct.data = "None";
+        string json = JsonUtility.ToJson(userStruct);
+        UnityWebRequest www = UnityWebRequest.Put(SERVER_DOMAIN + "/user_offline", json);
+        www.SetRequestHeader("Authorization", token);
+        www.SetRequestHeader("Content-Type", "application/json; charset=UTF-8");
+        yield return www.SendWebRequest();
     }
 }

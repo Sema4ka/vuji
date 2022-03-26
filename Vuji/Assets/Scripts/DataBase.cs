@@ -54,7 +54,7 @@ public class DataBase : MonoBehaviour
         }
     }
 
-    public string get_token()
+    public string GetToken()
     {
         string token = "None";
         if (TokenInDB())
@@ -69,12 +69,15 @@ public class DataBase : MonoBehaviour
 
             CloseConnection();
         }
-        
 
+        if (token == "")
+        {
+            token = "None";
+        }
         return token;
     }
 
-    public void set_token(string token)
+    public void SetToken(string token)
     {
         if (TokenInDB())
         {
