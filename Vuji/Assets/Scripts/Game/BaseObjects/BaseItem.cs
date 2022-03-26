@@ -50,4 +50,14 @@ public class BaseItem : ScriptableObject
 
         return true;
     }
+    public bool UseItem()
+    {
+        // Do smth
+        amount = amount - 1;
+        if (amount < 1)
+        {
+            return false;
+        }
+        return true;
+    }
 }

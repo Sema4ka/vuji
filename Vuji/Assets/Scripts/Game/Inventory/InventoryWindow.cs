@@ -2,82 +2,68 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class InventoryWindow : MonoBehaviour
 {
-    [SerializeField] Image highlight;
     [SerializeField] Inventory playerInventory;
     [SerializeField] RectTransform inventoryPanel;
-    private int currentItemIndex = 0;
+
+    private KeyCode[] numbersKeyCodes = {
+         KeyCode.Alpha1,
+         KeyCode.Alpha2,
+         KeyCode.Alpha3,
+         KeyCode.Alpha4,
+         KeyCode.Alpha5,
+         KeyCode.Alpha6,
+         KeyCode.Alpha7,
+         KeyCode.Alpha8,
+         KeyCode.Alpha9,
+     };
 
     List<GameObject> displayedIcons = new List<GameObject>();
 
     public void Start()
     {
         playerInventory.onItemAdded += OnItemAdded;
+        DisplayedItem.onItemDrop += OnItemDropped;
         Redraw();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            BaseItem currentItem = playerInventory.inventoryItems[currentItemIndex];
-            bool dropAll = Input.GetKeyDown(KeyCode.LeftControl);
-            bool hasItem = currentItem.DropItem(dropAll);
-            if (!hasItem)
+        for (int i = 0; i < 9; i++) {
+            if (Input.GetKeyDown(numbersKeyCodes[i]))
             {
-                playerInventory.inventoryItems.Remove(currentItem);
-                currentItemIndex--;
-                if (currentItemIndex < 0)
+                if (displayedIcons.Count > i)
                 {
-                    currentItemIndex = 0;
+                    bool stillHas = playerInventory.inventoryItems[i].UseItem();
+                    if (!stillHas)
+                    {
+                        playerInventory.inventoryItems.RemoveAt(i); 
+                    }
+                    Redraw();
                 }
             }
-            Redraw();
         }
+    }
 
+    void OnItemDropped(int itemId) => OnItemDrop(itemId);
+    void OnItemAdded(BaseItem item) => Redraw();
 
-        if (displayedIcons.Count < 1) return;
-
-
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+    void OnItemDrop(int itemId)
+    {
+        if (displayedIcons.Count > itemId && itemId >= 0)
         {
-            currentItemIndex = (currentItemIndex + 1);
-            if (currentItemIndex > playerInventory.inventoryItems.Count - 1)
-            {
-                currentItemIndex = 0;
-            }
-            else if (currentItemIndex < 0)
-            {
-                currentItemIndex = playerInventory.inventoryItems.Count - 1;
-            }
-            Redraw();
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            currentItemIndex = (currentItemIndex - 1);
-            if (currentItemIndex > playerInventory.inventoryItems.Count - 1)
-            {
-                currentItemIndex = 0;
-            }
-            else if (currentItemIndex < 0)
-            {
-                currentItemIndex = playerInventory.inventoryItems.Count - 1;
+            if (!playerInventory.inventoryItems[itemId].DropItem()){
+                playerInventory.inventoryItems.RemoveAt(itemId);
             }
             Redraw();
         }
     }
 
-
-    void OnItemAdded(BaseItem item) => Redraw();
-
     void Redraw()
     {
-        highlight.transform.SetParent(inventoryPanel);
-        highlight.gameObject.SetActive(false);
         ClearDisplayedItems();
         for (var i = 0; i < playerInventory.inventoryItems.Count; i++)
         {
@@ -87,17 +73,10 @@ public class InventoryWindow : MonoBehaviour
             {
                 var icon = new GameObject(name: "Icon");
                 icon.AddComponent<Image>().sprite = item.GetImage();
+                icon.AddComponent<DisplayedItem>().displayedItem = icon.GetComponent<RectTransform>();
+                icon.GetComponent<DisplayedItem>().inventoryPanel = inventoryPanel;
+                icon.GetComponent<DisplayedItem>().itemId = i;
                 icon.transform.SetParent(inventoryPanel);
-                if (i == currentItemIndex)
-                {
-                    if (!highlight.gameObject.activeSelf)
-                    {
-                        highlight.gameObject.SetActive(true);
-                    }
-                    highlight.transform.SetParent(icon.transform);
-                    
-                    highlight.transform.position = icon.transform.position;
-                }
                 displayedIcons.Add(icon);
             }
         }
