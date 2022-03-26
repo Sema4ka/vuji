@@ -38,6 +38,6 @@ public class BaseEntity : MonoBehaviour
     public void TakeDamage(int healthDamage)
     {
         this.healthPoints -= healthDamage;
-        Debug.Log("Damaged: " + this.entityName + " by " + this.healthPoints + " health");
+        Debug.Log(this.entityName + " hp is " + this.healthPoints);
     }
 }
