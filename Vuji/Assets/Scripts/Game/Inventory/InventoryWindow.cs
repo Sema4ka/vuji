@@ -27,6 +27,7 @@ public class InventoryWindow : MonoBehaviour
     {
         playerInventory.onItemAdded += OnItemAdded;
         DisplayedItem.onItemDrop += OnItemDropped;
+        DisplayedItem.onItemSwap += onItemSwapped;
         Redraw();
     }
 
@@ -48,9 +49,35 @@ public class InventoryWindow : MonoBehaviour
         }
     }
 
+    void onItemSwapped(DisplayedItem item) => OnItemSwap(item);
     void OnItemDropped(int itemId) => OnItemDrop(itemId);
     void OnItemAdded(BaseItem item) => Redraw();
 
+    void OnItemSwap(DisplayedItem item)
+    {
+        bool swapped = false;
+        foreach (GameObject icon in displayedIcons)
+        {
+            RectTransform iconTransform = icon.GetComponent<RectTransform>();
+            Vector2 mousePos = Input.mousePosition;
+            if (RectTransformUtility.RectangleContainsScreenPoint(iconTransform, mousePos))
+            {
+                int newId = icon.GetComponent<DisplayedItem>().itemId;
+                int oldId = item.itemId;
+                if (newId == oldId) continue;
+                BaseItem swapping = playerInventory.inventoryItems[newId];
+                playerInventory.inventoryItems[newId] = playerInventory.inventoryItems[oldId];
+                playerInventory.inventoryItems[oldId] = swapping;
+                swapped = true;
+                break;
+            }
+        }
+        if (swapped) Redraw();
+        else
+        {
+            item.transform.position = item.itemPosition;
+        }
+    }
     void OnItemDrop(int itemId)
     {
         if (displayedIcons.Count > itemId && itemId >= 0)
