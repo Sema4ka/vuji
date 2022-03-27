@@ -198,7 +198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4226257920223867894, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4226257920223867894, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: m_UsedByEffector
@@ -231,6 +231,10 @@ PrefabInstance:
     - target: {fileID: 4226257920223867894, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668378391900193972, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 5668378391900193972, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: m_BodyType
@@ -266,6 +270,10 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: a094b416db64b3643ab4bb39be9df383, type: 3}
     - target: {fileID: 5704524849896797653, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704524849896797653, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5704524849896797653, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}

@@ -16,7 +16,7 @@ public class BaseProjectile : MonoBehaviour
     [SerializeField] private float aimAngle;
 
     // список тэгов с которыми должен уничтожаться объект
-    private List<string> _destroyTags = new List<string>() {"Entity", "Wall"};
+    private List<string> _destroyTags = new List<string>() {"Entity"};
     private Rigidbody2D _projectileRb2d;
 
     public string GetProjectileName()
