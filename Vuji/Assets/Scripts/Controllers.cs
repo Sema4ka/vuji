@@ -1,21 +1,26 @@
-using System;
 using System.Collections;
 using StructsRequest;
 using StructsResponse;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
+using Photon.Pun;
+
 
 public class Controllers : MonoBehaviour
-{
+{   
     private string SERVER_DOMAIN = "http://127.0.0.1:8000";
     private DataBase _dataBase;
+    #region Unity Methods
 
     private void Start()
     {
         _dataBase = gameObject.AddComponent<DataBase>();
     }
 
+    #endregion
+
+    #region Public Methods
 
     public void AutoAuth()
     {
@@ -37,15 +42,28 @@ public class Controllers : MonoBehaviour
         StartCoroutine(RegisterNet(login, password));
     }
 
-    public void UserOnline(string token)
+    public void UserOnline()
     {
+        string token = _dataBase.GetToken();
         StartCoroutine(UserOnlineNet(token));
     }
 
-    public void UserOffline(string token)
+    public void UserOffline()
     {
+        string token = _dataBase.GetToken();
+        _dataBase.SetToken("");
         StartCoroutine(UserOfflineNet(token));
     }
+
+    public void GetUserID(string token)
+    {
+        
+        StartCoroutine(GetUserIDNet(token));
+    }
+
+    #endregion
+
+    #region Private IEnumerator Methods
 
     private IEnumerator AutoAuthNet()
     {
@@ -165,4 +183,24 @@ public class Controllers : MonoBehaviour
         www.SetRequestHeader("Content-Type", "application/json; charset=UTF-8");
         yield return www.SendWebRequest();
     }
+
+    private IEnumerator GetUserIDNet(string token)
+    {
+        UnityWebRequest www = UnityWebRequest.Get(SERVER_DOMAIN + "/user_id");
+        www.SetRequestHeader("Authorization", token);
+        yield return www.SendWebRequest();
+        if (www.result == UnityWebRequest.Result.ProtocolError)
+        {
+            Debug.Log("ERROR: cant set user_id in Photon.NickMame");
+        }
+        else
+        {
+            UserIDStructResponse userIDStructResponse =
+                JsonUtility.FromJson<UserIDStructResponse>(www.downloadHandler.text);
+            string userID = userIDStructResponse.userID;
+            PhotonNetwork.NickName = userID;
+        }
+    }
+
+    #endregion
 }

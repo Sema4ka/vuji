@@ -50,7 +50,8 @@ public class PlayerMelee : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<BaseEntity>().TakeDamage(damage);
+            if(enemy.gameObject != gameObject)
+                enemy.GetComponent<BaseEntity>().TakeDamage(damage);
         }
     }
 }

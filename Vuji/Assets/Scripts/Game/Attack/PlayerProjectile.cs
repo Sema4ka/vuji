@@ -5,6 +5,8 @@ using Photon.Pun;
 
 public class PlayerProjectile : MonoBehaviour
 {
+    #region Fields
+
     [SerializeField] private GameObject projectile;
     [SerializeField] private Transform rotatePoint;
     [SerializeField] private Transform firePoint;
@@ -13,6 +15,8 @@ public class PlayerProjectile : MonoBehaviour
     private Vector3 _aimDirection;
     private float _aimAngle;
     private PhotonView _view;
+
+    #endregion
 
     private void Start()
     {
@@ -30,7 +34,7 @@ public class PlayerProjectile : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 RemoteProjectileAttack(_aimAngle, _aimDirection);
-                _view.RPC("RemoteProjectileAttack", RpcTarget.All, _aimAngle, _aimDirection);
+                _view.RPC("RemoteProjectileAttack", RpcTarget.Others, _aimAngle, _aimDirection);
             }
         }
     }
@@ -41,6 +45,7 @@ public class PlayerProjectile : MonoBehaviour
         rotatePoint.rotation = Quaternion.Euler(0, 0, aimAngle);
         projectile.GetComponent<BaseProjectile>().SetAimDirection(aimDirection);
         projectile.GetComponent<BaseProjectile>().SetAimAngel(aimAngle);
+        projectile.GetComponent<BaseProjectile>().SetSenderCollider(gameObject);
 
         GameObject projectileInst = Instantiate(projectile, firePoint.position, firePoint.rotation);
     }

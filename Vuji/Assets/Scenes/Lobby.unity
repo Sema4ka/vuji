@@ -1486,9 +1486,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1441286645}
+  - component: {fileID: 1441286648}
   - component: {fileID: 1441286644}
   - component: {fileID: 1441286646}
-  - component: {fileID: 1441286648}
   - component: {fileID: 1441286647}
   m_Layer: 0
   m_Name: LobbyManager

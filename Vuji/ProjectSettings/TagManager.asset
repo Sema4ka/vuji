@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - Entity
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - PlayerLayer
   - 
   - 
   - 
@@ -42,4 +43,28 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: FloorLayer
+    uniqueID: 546535827
+    locked: 0
+  - name: WallLayer
+    uniqueID: 2309438575
+    locked: 0
+  - name: DecorationLayer
+    uniqueID: 642337981
+    locked: 0
+  - name: ColliderLayer
+    uniqueID: 2006734979
+    locked: 0
+  - name: ItemsLayer
+    uniqueID: 56799427
+    locked: 0
+  - name: EntityLayer
+    uniqueID: 3806648501
+    locked: 0
+  - name: ProjectileLayer
+    uniqueID: 3581235335
+    locked: 0
+  - name: PlayerLayer
+    uniqueID: 1141617105
     locked: 0

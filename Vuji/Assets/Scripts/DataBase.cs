@@ -10,10 +10,16 @@ public class DataBase : MonoBehaviour
     private static SqliteCommand _command;
     private static IDataReader _reader;
 
+    #region Unity Methods
+
     void Start()
     {
         CreateDB();
     }
+
+    #endregion
+
+    #region Private Methods
 
     private static void OpenConnection()
     {
@@ -54,6 +60,10 @@ public class DataBase : MonoBehaviour
         }
     }
 
+    #endregion
+
+    #region Public Methods
+
     public string GetToken()
     {
         string token = "None";
@@ -66,7 +76,6 @@ public class DataBase : MonoBehaviour
             {
                 token = _reader["token"].ToString();
             }
-
             CloseConnection();
         }
 
@@ -94,4 +103,6 @@ public class DataBase : MonoBehaviour
             CloseConnection();
         }
     }
+
+    #endregion
 }

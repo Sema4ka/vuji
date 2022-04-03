@@ -1,23 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Photon.Pun;
 using UnityEngine;
 
 public class BaseProjectile : MonoBehaviour
 {
+    #region Fields
+
     [SerializeField] private string projectileName = "New Projectile";
     [SerializeField] private string projectileDescription = "";
     [SerializeField] private int projectileDamage = 1;
     [SerializeField] private float velocity = 1.0f;
     [SerializeField] private float lifeTime = 5.0f;
     [SerializeField] private bool destroyOnCollide = true;
-
     [SerializeField] private Vector3 aimDirection;
     [SerializeField] private float aimAngle;
+    [SerializeField] private GameObject senderGameObject;
 
-    // список тэгов с которыми должен уничтожаться объект
-    private List<string> _destroyTags = new List<string>() {"Entity"};
+    // список тегов которым должен наноситься урон и где проджектайл должен уничтожаться
+    private List<string> _damageTags = new List<string>() {"Entity", "Player"};
+    private List<string> _destroyTags = new List<string>() {"Entity", "Player", "Wall"};
+
     private Rigidbody2D _projectileRb2d;
+
+    #endregion
+
+    #region Public Methods
+
+    public void SetSenderCollider(GameObject senderObject)
+    {
+        senderGameObject = senderObject;
+    }
 
     public string GetProjectileName()
     {
@@ -44,6 +58,14 @@ public class BaseProjectile : MonoBehaviour
         _destroyTags = newDestroyTags;
     }
 
+
+    public void SetDamageTags(List<string> newDamageTags)
+    {
+        _damageTags = newDamageTags;
+    }
+
+    #endregion
+
     void Start()
     {
         _projectileRb2d = GetComponent<Rigidbody2D>();
@@ -65,13 +87,14 @@ public class BaseProjectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D colliderObject)
     {
-        if (colliderObject.gameObject.CompareTag("Entity"))
+        if (_damageTags.Contains(colliderObject.gameObject.tag) & (senderGameObject != colliderObject.gameObject))
         {
             colliderObject.GetComponent<BaseEntity>().TakeDamage(projectileDamage);
         }
 
         // Contains как мне кажется не лучший метод для "содержиться ли элемент в массиеве"
-        if (destroyOnCollide & _destroyTags.Contains(colliderObject.gameObject.tag))
+        if (destroyOnCollide & _destroyTags.Contains(colliderObject.gameObject.tag) &
+            (senderGameObject != colliderObject.gameObject))
         {
             Destroy(gameObject);
         }

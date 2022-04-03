@@ -91,5 +91,15 @@ def put_user_offline(request: Request, session: Session = Depends(get_session)):
     return Response(status_code=400)
 
 
+@app.get("/user_id")
+def get_user_id(request: Request):
+    token = request.headers['Authorization']
+    if jwt_func.jwt_validate(token):
+        user_id = str(jwt_func.jwt_user_id(token))
+        data = dict_to_json(userID=user_id)
+        return Response(data, status_code=200)
+    return Response(status_code=400)
+
+
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8000, timeout_keep_alive=0)

@@ -13,14 +13,12 @@ namespace StructsRequest
         public string login;
         public string password;
     }
-    
+
     [System.Serializable]
     public class UserOnlineAndOfflineStructRequest
     {
         public string data;
     }
-
-
 }
 
 namespace StructsResponse
@@ -29,5 +27,11 @@ namespace StructsResponse
     public class TokenStructResponse
     {
         public string token;
+    }
+
+    [System.Serializable]
+    public class UserIDStructResponse
+    {
+        public string userID;
     }
 }
