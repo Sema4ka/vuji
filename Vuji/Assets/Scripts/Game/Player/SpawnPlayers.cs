@@ -5,7 +5,7 @@ public class SpawnPlayers : MonoBehaviourPunCallbacks
     public GameObject playerGameObject;
     void Awake()
     {
-        Vector2 position = new Vector2(5, 5);
+        Vector2 position = new Vector2(0, 0);
         PhotonNetwork.Instantiate(playerGameObject.name, position, Quaternion.identity);
     }
 
