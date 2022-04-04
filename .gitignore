@@ -31,6 +31,8 @@
 
 # Visual Studio cache directory
 .vs/
+Vuji/.vsconfig
+
 
 # Gradle cache directory
 .gradle/
@@ -83,4 +85,3 @@ crashlytics-build.properties
 venv/
 .idea/
 __pycache__/
-Vuji/.vsconfig
