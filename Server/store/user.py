@@ -3,6 +3,7 @@ from store.models.models import *
 import random
 import datetime
 
+
 def get_user(session, **kwargs):
     try:
         user = session.query(User).filter_by(**kwargs).one()

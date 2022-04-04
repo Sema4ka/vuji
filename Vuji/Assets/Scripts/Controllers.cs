@@ -1,20 +1,26 @@
-using System;
 using System.Collections;
 using StructsRequest;
 using StructsResponse;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
+using Photon.Pun;
+
 
 public class Controllers : MonoBehaviour
-{
+{   
     private string SERVER_DOMAIN = "http://127.0.0.1:8000";
     private DataBase _dataBase;
+    #region Unity Methods
 
     private void Start()
     {
         _dataBase = gameObject.AddComponent<DataBase>();
     }
+
+    #endregion
+
+    #region Public Methods
 
     public void AutoAuth()
     {
@@ -36,14 +42,34 @@ public class Controllers : MonoBehaviour
         StartCoroutine(RegisterNet(login, password));
     }
 
+    public void UserOnline()
+    {
+        string token = _dataBase.GetToken();
+        StartCoroutine(UserOnlineNet(token));
+    }
+
+    public void UserOffline()
+    {
+        string token = _dataBase.GetToken();
+        _dataBase.SetToken("");
+        StartCoroutine(UserOfflineNet(token));
+    }
+
+    public void GetUserID(string token)
+    {
+        
+        StartCoroutine(GetUserIDNet(token));
+    }
+
+    #endregion
+
+    #region Private IEnumerator Methods
+
     private IEnumerator AutoAuthNet()
     {
         WWWForm form = new WWWForm();
-        string token = _dataBase.get_token();
-        
-        // чтобы была возможность войти в разные аккаунты
-        token = "TESTTOKEN";
-        
+        string token = _dataBase.GetToken();
+
         UnityWebRequest www = UnityWebRequest.Post(SERVER_DOMAIN + "/auth", form);
         www.SetRequestHeader("Authorization", token);
         yield return www.SendWebRequest();
@@ -55,7 +81,7 @@ public class Controllers : MonoBehaviour
         {
             TokenStructResponse tokenStructResponse =
                 JsonUtility.FromJson<TokenStructResponse>(www.downloadHandler.text);
-            _dataBase.set_token(tokenStructResponse.token);
+            _dataBase.SetToken(tokenStructResponse.token);
             SceneManager.LoadScene("Lobby");
         }
     }
@@ -100,7 +126,7 @@ public class Controllers : MonoBehaviour
         {
             TokenStructResponse tokenStructResponse =
                 JsonUtility.FromJson<TokenStructResponse>(www.downloadHandler.text);
-            _dataBase.set_token(tokenStructResponse.token);
+            _dataBase.SetToken(tokenStructResponse.token);
             SceneManager.LoadScene("Lobby");
         }
     }
@@ -131,8 +157,50 @@ public class Controllers : MonoBehaviour
         {
             TokenStructResponse tokenStructResponse =
                 JsonUtility.FromJson<TokenStructResponse>(www.downloadHandler.text);
-            _dataBase.set_token(tokenStructResponse.token);
+            _dataBase.SetToken(tokenStructResponse.token);
             SceneManager.LoadScene("Login");
         }
     }
+
+    private IEnumerator UserOnlineNet(string token)
+    {
+        UserOnlineAndOfflineStructRequest userStruct = new UserOnlineAndOfflineStructRequest();
+        userStruct.data = "None";
+        string json = JsonUtility.ToJson(userStruct);
+        UnityWebRequest www = UnityWebRequest.Put(SERVER_DOMAIN + "/user_online", json);
+        www.SetRequestHeader("Authorization", token);
+        www.SetRequestHeader("Content-Type", "application/json; charset=UTF-8");
+        yield return www.SendWebRequest();
+    }
+
+    private IEnumerator UserOfflineNet(string token)
+    {
+        UserOnlineAndOfflineStructRequest userStruct = new UserOnlineAndOfflineStructRequest();
+        userStruct.data = "None";
+        string json = JsonUtility.ToJson(userStruct);
+        UnityWebRequest www = UnityWebRequest.Put(SERVER_DOMAIN + "/user_offline", json);
+        www.SetRequestHeader("Authorization", token);
+        www.SetRequestHeader("Content-Type", "application/json; charset=UTF-8");
+        yield return www.SendWebRequest();
+    }
+
+    private IEnumerator GetUserIDNet(string token)
+    {
+        UnityWebRequest www = UnityWebRequest.Get(SERVER_DOMAIN + "/user_id");
+        www.SetRequestHeader("Authorization", token);
+        yield return www.SendWebRequest();
+        if (www.result == UnityWebRequest.Result.ProtocolError)
+        {
+            Debug.Log("ERROR: cant set user_id in Photon.NickMame");
+        }
+        else
+        {
+            UserIDStructResponse userIDStructResponse =
+                JsonUtility.FromJson<UserIDStructResponse>(www.downloadHandler.text);
+            string userID = userIDStructResponse.userID;
+            PhotonNetwork.NickName = userID;
+        }
+    }
+
+    #endregion
 }

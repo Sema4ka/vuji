@@ -25,26 +25,22 @@ public class AnimationPlayer : MonoBehaviour
         {
             if (Input.GetAxisRaw("Vertical") < 0)
             {
-                ChangePlayerAnimation(FrontPlayerAnimation);
                 _view.RPC("ChangePlayerAnimation", RpcTarget.All, FrontPlayerAnimation);
             }
 
 
             else if (Input.GetAxisRaw("Vertical") > 0)
             {
-                ChangePlayerAnimation(BackPlayerAnimation);
                 _view.RPC("ChangePlayerAnimation", RpcTarget.All, BackPlayerAnimation);
             }
 
             else if (Input.GetAxisRaw("Horizontal") > 0)
             {
-                ChangePlayerAnimation(RightPlayerAnimation);
                 _view.RPC("ChangePlayerAnimation", RpcTarget.All, RightPlayerAnimation);
             }
 
             else if (Input.GetAxisRaw("Horizontal") < 0)
             {
-                ChangePlayerAnimation(LeftPlayerAnimation);
                 _view.RPC("ChangePlayerAnimation", RpcTarget.All, LeftPlayerAnimation);
             }
 

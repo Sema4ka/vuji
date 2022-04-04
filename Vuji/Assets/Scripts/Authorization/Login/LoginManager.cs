@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class LoginManager : MonoBehaviour
 {
-    // я определяю объекты в Unity, но можно и конструкции Find и GetComponent
+    // я определяю объекты в Unity, но можно и конструкции Find, GetComponent
     private Controllers _controllers;
     public InputField loginInput;
     public InputField passwordInput;
