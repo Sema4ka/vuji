@@ -16,12 +16,12 @@ public class BaseUpgrade : MonoBehaviour
     {
         return upgradeDescription;
     }
-    public int getCost()
+    public int GetCost()
     {
         return upgradeCost;
     }
 
-    public void applyUpgrade(BaseEntity player)
+    public void ApplyUpgrade(BaseEntity player)
     {
         Debug.Log("Upgrade " + upgradeName + " applied to " + player.GetEntityName());
     }

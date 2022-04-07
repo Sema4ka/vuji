@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -9,17 +10,7 @@ public class InventoryWindow : MonoBehaviour
     [SerializeField] Inventory playerInventory;
     [SerializeField] RectTransform inventoryPanel;
 
-    private KeyCode[] numbersKeyCodes = {
-         KeyCode.Alpha1,
-         KeyCode.Alpha2,
-         KeyCode.Alpha3,
-         KeyCode.Alpha4,
-         KeyCode.Alpha5,
-         KeyCode.Alpha6,
-         KeyCode.Alpha7,
-         KeyCode.Alpha8,
-         KeyCode.Alpha9,
-     };
+    
 
     List<GameObject> displayedIcons = new List<GameObject>();
 
@@ -28,30 +19,36 @@ public class InventoryWindow : MonoBehaviour
         playerInventory.onItemAdded += OnItemAdded;
         DisplayedItem.onItemDrop += OnItemDropped;
         DisplayedItem.onItemSwap += onItemSwapped;
+        KeyHandler.keyPressed += KeyPressed;
         Redraw();
     }
-
+   
     private void Update()
     {
-        for (int i = 0; i < 9; i++) {
-            if (Input.GetKeyDown(numbersKeyCodes[i]))
+        
+    }
+
+    void onItemSwapped(DisplayedItem item) => OnItemSwap(item);
+    void OnItemDropped(int itemId) => OnItemDrop(itemId);
+    void OnItemAdded(BaseItem item) => Redraw();
+    void KeyPressed(string name, KeyCode[] keys)
+    {
+        for (int i = 0; i < 9; i++)
+        {
+            if (keys.Contains(KeyHandler.numbersKeyCodes[i]))
             {
                 if (displayedIcons.Count > i)
                 {
                     bool stillHas = playerInventory.inventoryItems[i].UseItem();
                     if (!stillHas)
                     {
-                        playerInventory.inventoryItems.RemoveAt(i); 
+                        playerInventory.inventoryItems.RemoveAt(i);
                     }
                     Redraw();
                 }
             }
         }
     }
-
-    void onItemSwapped(DisplayedItem item) => OnItemSwap(item);
-    void OnItemDropped(int itemId) => OnItemDrop(itemId);
-    void OnItemAdded(BaseItem item) => Redraw();
 
     void OnItemSwap(DisplayedItem item)
     {

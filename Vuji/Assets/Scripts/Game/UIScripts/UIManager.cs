@@ -65,7 +65,7 @@ public class UIManager : MonoBehaviourPunCallbacks
         string info = "";
         foreach (string arg in args)
         {
-            Debug.Log("ARG: " + arg);
+            //Debug.Log("ARG: " + arg);
             info += arg;
             info += "\n";
         }

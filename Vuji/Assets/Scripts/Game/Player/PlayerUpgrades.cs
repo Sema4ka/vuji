@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,15 +15,23 @@ public class PlayerUpgrades : MonoBehaviour
 
     void Start()
     {
-        
+        KeyHandler.keyPressed += KeyPressed;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U))
+    }
+
+    void KeyPressed(string name, KeyCode[] keys)
+    {
+        if (name == "Upgrades")
         {
             upgradesPanel.gameObject.SetActive(!upgradesPanel.gameObject.activeSelf);
-        }    
+        }
+        if (keys.Contains(KeyCode.Escape))
+        {
+            upgradesPanel.gameObject.SetActive(false);
+        }
     }
 
     public int GetXp()
@@ -36,13 +45,13 @@ public class PlayerUpgrades : MonoBehaviour
     }
     public void AddUpgrade(Button btn)
     {
-        if (xpPoints >= btn.GetComponent<BaseUpgrade>().getCost())
+        if (xpPoints >= btn.GetComponent<BaseUpgrade>().GetCost())
         {
-            xpPoints -= btn.GetComponent<BaseUpgrade>().getCost();
+            xpPoints -= btn.GetComponent<BaseUpgrade>().GetCost();
             btn.onClick.RemoveAllListeners();
             Color col = btn.GetComponent<Image>().color;
             col.a = 0.1f;
-            btn.GetComponent<BaseUpgrade>().applyUpgrade(player);
+            btn.GetComponent<BaseUpgrade>().ApplyUpgrade(player);
         }        
         
     }
