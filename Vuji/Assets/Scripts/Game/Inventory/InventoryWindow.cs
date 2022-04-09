@@ -31,7 +31,7 @@ public class InventoryWindow : MonoBehaviour
     void onItemSwapped(DisplayedItem item) => OnItemSwap(item);
     void OnItemDropped(int itemId) => OnItemDrop(itemId);
     void OnItemAdded(BaseItem item) => Redraw();
-    void KeyPressed(string name, KeyCode[] keys)
+    void KeyPressed(KeyHandler keyHandler, string name, KeyCode[] keys)
     {
         for (int i = 0; i < 9; i++)
         {
