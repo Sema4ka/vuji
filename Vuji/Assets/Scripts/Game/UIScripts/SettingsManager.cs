@@ -37,6 +37,9 @@ public class SettingsManager : MonoBehaviour
         KeybindManager.keyChanged += OnKeyChanged;
         int movY = 100, ablY = 100, UIY = 100;
 
+        movementKeys.GetComponent<RectTransform>().sizeDelta = new Vector2(360, KeyHandler.movementKeys.Length * 100 + 50);
+        abilityKeys.GetComponent<RectTransform>().sizeDelta = new Vector2(360, KeyHandler.abilityKeys.Length * 100 + 50);
+        UIKeys.GetComponent<RectTransform>().sizeDelta = new Vector2(360, KeyHandler.uiKeys.Length * 100 + 50);
 
         foreach (KeyValuePair<string, KeyCode[]> pair in keyHandler.GetKeybinds())
         {
