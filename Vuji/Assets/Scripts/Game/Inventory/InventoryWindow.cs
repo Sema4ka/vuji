@@ -35,7 +35,7 @@ public class InventoryWindow : MonoBehaviour
     {
         for (int i = 0; i < 9; i++)
         {
-            if (keys.Contains(KeyHandler.abilityKeys[i]))
+            if (keys.Contains(KeyHandler.numbersKeyCodes[i]))
             {
                 if (displayedIcons.Count > i)
                 {
