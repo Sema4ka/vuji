@@ -36,7 +36,7 @@ public class InventoryWindow : MonoBehaviour
     {
         string[] words = name.Split(' ');
         if (words[0] != "Slot") return;
-        int num = Convert.ToInt32(words[1]);
+        int num = Convert.ToInt32(words[1]) - 1;
         if (displayedIcons.Count() > num)
         {
             bool stillHas = playerInventory.inventoryItems[num].UseItem();
