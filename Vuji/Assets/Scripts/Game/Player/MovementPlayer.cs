@@ -38,6 +38,7 @@ public class MovementPlayer : MonoBehaviour
             {
                 int velX = 0, velY = 0;
                 var keyHandler = KeyHandler.instance;
+                if (keyHandler.IsPaused()) return;
                 if (Input.GetKey(keyHandler.GetKeybind("Right")))
                 {
                     velX += 1;

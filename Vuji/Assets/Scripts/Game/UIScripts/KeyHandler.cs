@@ -94,7 +94,9 @@ public static Action<string, KeyCode> keyPressed;
     public void Pause(bool pause) {
         paused = pause;
     }
-
+    public bool IsPaused() {
+        return paused;
+    }
     public void SetUIOpened(bool opened)
     {
         uiOpened = opened;
