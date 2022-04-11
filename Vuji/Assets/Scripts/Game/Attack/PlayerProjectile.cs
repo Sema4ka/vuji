@@ -21,18 +21,24 @@ public class PlayerProjectile : MonoBehaviour
     private void Start()
     {
         _view = GetComponent<PhotonView>();
+        KeyHandler.keyPressed += OnKeyPressed;
     }
 
     private void Update()
     {
+        
+    }
+
+    void OnKeyPressed(string name, KeyCode key)
+    {
         if (_view.IsMine)
         {
-            _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            _aimDirection = _mousePosition - rotatePoint.position;
-            _aimAngle = Mathf.Atan2(_aimDirection.y, _aimDirection.x) * Mathf.Rad2Deg;
-            rotatePoint.rotation = Quaternion.Euler(0, 0, _aimAngle);
-            if (Input.GetMouseButtonDown(0))
+            if (name == "RangeAttack")
             {
+                _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                _aimDirection = _mousePosition - rotatePoint.position;
+                _aimAngle = Mathf.Atan2(_aimDirection.y, _aimDirection.x) * Mathf.Rad2Deg;
+                rotatePoint.rotation = Quaternion.Euler(0, 0, _aimAngle);
                 RemoteProjectileAttack(_aimAngle, _aimDirection);
                 _view.RPC("RemoteProjectileAttack", RpcTarget.Others, _aimAngle, _aimDirection);
             }

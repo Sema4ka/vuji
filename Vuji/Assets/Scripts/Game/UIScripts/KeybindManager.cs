@@ -8,8 +8,8 @@ public class KeybindManager : MonoBehaviour
 {
     [SerializeField] Text keybindName;
     [SerializeField] Text keybindKeys;
-    [SerializeField] KeyCode[] keys;
-    public static Action<KeybindManager, string, KeyCode[]> keyChanged;
+    [SerializeField] KeyCode key;
+    public static Action<KeybindManager, string, KeyCode> keyChanged;
     public static Action<bool> Binding;
 
     private bool binding;
@@ -24,13 +24,13 @@ public class KeybindManager : MonoBehaviour
     {
         if (binding)
         {
-            List<KeyCode> newKeys = new List<KeyCode>();
+            KeyCode newKey = KeyCode.None;
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 binding = false;
                 keybindKeys.text = "None";
-                keys = new KeyCode[0];
-                keyChanged?.Invoke(this, keybindName.text, keys);
+                key = KeyCode.None;
+                keyChanged?.Invoke(this, keybindName.text, key);
                 Binding?.Invoke(false);
                 return;
             }
@@ -38,20 +38,14 @@ public class KeybindManager : MonoBehaviour
             {
                 if (Input.GetKeyDown(keyCode))
                 {
-                    newKeys.Add(keyCode);
+                    newKey = keyCode;
                 }
             }
-            if (newKeys.Count > 0)
+            if (newKey != KeyCode.None)
             {
-                int maxElems = 1;
-                if (newKeys.Count > 1)
-                {
-                    maxElems = 2;
-                }
-                keybindKeys.text = String.Join(" + ", newKeys.GetRange(0, maxElems));
-                keys = newKeys.GetRange(0, maxElems).ToArray();
-                
-                keyChanged?.Invoke(this, keybindName.text, keys);
+                key = newKey;
+                keybindKeys.text = newKey.ToString();
+                keyChanged?.Invoke(this, keybindName.text, key);
                 binding = false;
                 Binding?.Invoke(false);
             }
@@ -62,18 +56,18 @@ public class KeybindManager : MonoBehaviour
     {
         return keybindName.text;
     }
-    public KeyCode[] GetKeys()
+    public KeyCode GetKey()
     {
-        return keys;
+        return key;
     }
     public void SetName(string newName)
     {
         keybindName.text = newName;
     }
-    public void SetKeys(KeyCode[] newKeys)
+    public void SetKey(KeyCode newKey)
     {
-        keys = newKeys;
-        keybindKeys.text = String.Join(" + ", newKeys);
+        key = newKey;
+        keybindKeys.text = key.ToString();
     }
 
     public void SetKeybind()
@@ -86,5 +80,6 @@ public class KeybindManager : MonoBehaviour
     public void ResetKeybind()
     {
         keybindKeys.text = "None";
+        key = KeyCode.None;
     }
 }

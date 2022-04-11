@@ -22,16 +22,17 @@ public class PlayerUpgrades : MonoBehaviour
     {
     }
 
-    void KeyPressed(KeyHandler keyHandler, string name, KeyCode[] keys)
+    void KeyPressed(string name, KeyCode key)
     {
         if (name == "Upgrades")
         {
-            keyHandler.SetUIOpened(true);
             upgradesPanel.gameObject.SetActive(!upgradesPanel.gameObject.activeSelf);
+            KeyHandler.instance.SetUIOpened(upgradesPanel.gameObject.activeSelf);
 
         }
         if (name == "EscapeMenu")
         {
+            if (upgradesPanel?.gameObject.activeSelf == true)
             upgradesPanel.gameObject.SetActive(false);
         }
     }

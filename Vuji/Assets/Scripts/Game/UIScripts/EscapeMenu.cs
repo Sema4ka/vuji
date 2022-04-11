@@ -7,7 +7,6 @@ public class EscapeMenu : MonoBehaviour
 {
     [SerializeField] private RectTransform menuPanel;
     [SerializeField] private RectTransform settingsPanel;
-    [SerializeField] private KeyHandler keyHandler;
 
     // Start is called before the first frame update
     void Start()
@@ -15,8 +14,9 @@ public class EscapeMenu : MonoBehaviour
         KeyHandler.keyPressed += KeyPressed;
     }
 
-    void KeyPressed(KeyHandler keyHandler, string name, KeyCode[] keys)
+    void KeyPressed(string name, KeyCode key)
     {
+        var keyHandler = KeyHandler.instance;
         if (name == "EscapeMenu")
         {
             if (keyHandler.GetUIOpened())
@@ -30,18 +30,18 @@ public class EscapeMenu : MonoBehaviour
     }
     public void LeaveLobby()
     {
-        PhotonNetwork.LeaveLobby();
+        PhotonNetwork.LeaveRoom();
     }
     public void OpenSettings()
     {
         settingsPanel.gameObject.SetActive(true);
         menuPanel.gameObject.SetActive(false);
-        keyHandler.SetUIOpened(true);
+        KeyHandler.instance.SetUIOpened(true);
     }
     public void ResumeGame()
     {
         menuPanel.gameObject.SetActive(false);
-        keyHandler.Pause(false);
+        KeyHandler.instance.Pause(false);
     }
     public void LeaveGame()
     {

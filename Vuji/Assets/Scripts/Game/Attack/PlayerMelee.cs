@@ -23,16 +23,21 @@ public class PlayerMelee : MonoBehaviour
 
     private void Update()
     {
+        
+    }
+    
+    void OnKeyPressed(string name, KeyCode key)
+    {
         if (_view.IsMine)
         {
             _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (name == "Attack")
             {
                 _playerPosition = transform.position;
                 _mousePosition.z = 0;
                 var xLen = _mousePosition.x - _playerPosition.x;
                 var yLen = _mousePosition.y - _playerPosition.y;
-                var xyLen = (float) (Math.Sqrt(Math.Pow(xLen, 2) + Math.Pow(yLen, 2)));
+                var xyLen = (float)(Math.Sqrt(Math.Pow(xLen, 2) + Math.Pow(yLen, 2)));
                 var x = (xLen * attackDistance) / xyLen + _playerPosition.x;
                 var y = (yLen * attackDistance) / xyLen + _playerPosition.y;
                 _attackPoint = new Vector3(x, y, 0);
@@ -41,7 +46,6 @@ public class PlayerMelee : MonoBehaviour
             }
         }
     }
-
 
     [PunRPC]
     private void RemoteMeleeAttack(Vector3 attackPoint)

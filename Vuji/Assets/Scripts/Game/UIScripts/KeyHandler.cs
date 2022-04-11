@@ -1,19 +1,22 @@
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class KeyHandler : MonoBehaviour
 {
+    public static KeyHandler instance;
     public static List<KeyCode> AllKeys;
     private bool binding = false;
 #region Fields
-public static Action<KeyHandler, string, KeyCode[]> keyPressed;
+public static Action<string, KeyCode> keyPressed;
+    public static Action<string, bool> movementKeyPressed;
     #region KeyFields
     public static string[] movementKeys;
     public static string[] abilityKeys;
     public static string[] uiKeys;
-    private Dictionary<string, KeyCode[]> keybinds = new Dictionary<string, KeyCode[]>();
+    private Dictionary<string, KeyCode> keybinds = new Dictionary<string, KeyCode>();
     #endregion
     #region ManagementFields
     private bool paused = false;
@@ -35,6 +38,7 @@ public static Action<KeyHandler, string, KeyCode[]> keyPressed;
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         KeybindManager.Binding += OnBinding;
         List<KeyCode> _allKeys = new List<KeyCode> { };
         foreach (KeyCode keycode in Enum.GetValues(typeof(KeyCode)))
@@ -48,14 +52,19 @@ public static Action<KeyHandler, string, KeyCode[]> keyPressed;
         // if haven't found one - create it with basic settings
         // string arrays contains names for 3 Categories - Movement, Abilities and UI
         uiKeys = new string[2] {"Upgrades", "EscapeMenu"};
-        abilityKeys = new string[9] { "Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5", "Slot 6", "Slot 7", "Slot 8", "Slot 9"};
-        movementKeys = new string[1] { "Jump" };
-        keybinds["Upgrades"] = new KeyCode[] { KeyCode.U };
-        keybinds["EscapeMenu"] = new KeyCode[] { KeyCode.Escape };
-        keybinds["Jump"] = new KeyCode[] {KeyCode.Space};
+        abilityKeys = new string[11] { "Attack", "RangeAttack", "Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5", "Slot 6", "Slot 7", "Slot 8", "Slot 9"};
+        movementKeys = new string[4] { "Right", "Left", "Forward", "Backward" };
+        keybinds["Upgrades"] = KeyCode.U;
+        keybinds["EscapeMenu"] = KeyCode.Escape;
+        keybinds["Right"] = KeyCode.D;
+        keybinds["Left"] =  KeyCode.A;
+        keybinds["Forward"] = KeyCode.W;
+        keybinds["Backward"] = KeyCode.S;
+        keybinds["Attack"] = KeyCode.Space;
+        keybinds["RangeAttack"] = KeyCode.Mouse0;
         for (int i = 0;i < 9; i++)
         {
-            keybinds["Slot " + (i + 1).ToString()] = new KeyCode[] { numbersKeyCodes[i] };
+            keybinds["Slot " + (i + 1).ToString()] = numbersKeyCodes[i];
         }
 
     }
@@ -67,7 +76,7 @@ public static Action<KeyHandler, string, KeyCode[]> keyPressed;
         if (paused)
         {
             if (Input.GetKeyDown(KeyCode.Escape)) {
-                keyPressed?.Invoke(this, "EscapeMenu", new KeyCode[] { KeyCode.Escape });
+                keyPressed?.Invoke("EscapeMenu", KeyCode.Escape);
             }
             return;
         }
@@ -75,17 +84,9 @@ public static Action<KeyHandler, string, KeyCode[]> keyPressed;
         // Detect if some of keybings are pressed and Invoke keyPressed
         foreach (string key in keybinds.Keys)
         {
-            bool toAddKey = true;
-            foreach (KeyCode keyCode in keybinds[key])
+            if (Input.GetKeyDown(keybinds[key]) && !movementKeys.Contains(key))
             {
-                if (!Input.GetKeyDown(keyCode))
-                {
-                    toAddKey = false;
-                }
-            }
-            if (toAddKey && keybinds[key].Length > 0)
-            {
-                keyPressed?.Invoke(this, key, keybinds[key]);
+                keyPressed?.Invoke(key, keybinds[key]);
             }
         }
     }
@@ -106,18 +107,23 @@ public static Action<KeyHandler, string, KeyCode[]> keyPressed;
     {
         binding = isBinding;
     }
-    public Dictionary<string, KeyCode[]> GetKeybinds()
+    public Dictionary<string, KeyCode> GetKeybinds()
     {
         return keybinds;
     }
-
-    public bool SetKeybind(string name, KeyCode[] keys)
+    public KeyCode GetKeybind(string name)
     {
-        if (keybinds.ContainsValue(keys))
+        if (!keybinds.ContainsKey(name)) return KeyCode.None;
+        return keybinds[name];
+    }
+
+    public bool SetKeybind(string name, KeyCode key)
+    {
+        if (keybinds.ContainsValue(key) && keybinds[name] != key)
         {
             return false;
         }
-        keybinds[name] = keys;
+        keybinds[name] = key;
         return true;
     }
 }

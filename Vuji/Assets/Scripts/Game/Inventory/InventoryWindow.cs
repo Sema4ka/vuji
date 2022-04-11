@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System;
 
 public class InventoryWindow : MonoBehaviour
 {
@@ -31,22 +32,19 @@ public class InventoryWindow : MonoBehaviour
     void onItemSwapped(DisplayedItem item) => OnItemSwap(item);
     void OnItemDropped(int itemId) => OnItemDrop(itemId);
     void OnItemAdded(BaseItem item) => Redraw();
-    void KeyPressed(KeyHandler keyHandler, string name, KeyCode[] keys)
+    void KeyPressed(string name, KeyCode key)
     {
-        for (int i = 0; i < 9; i++)
+        string[] words = name.Split(' ');
+        if (words[0] != "Slot") return;
+        int num = Convert.ToInt32(words[1]);
+        if (displayedIcons.Count() > num)
         {
-            if (keys.Contains(KeyHandler.numbersKeyCodes[i]))
+            bool stillHas = playerInventory.inventoryItems[num].UseItem();
+            if (!stillHas)
             {
-                if (displayedIcons.Count > i)
-                {
-                    bool stillHas = playerInventory.inventoryItems[i].UseItem();
-                    if (!stillHas)
-                    {
-                        playerInventory.inventoryItems.RemoveAt(i);
-                    }
-                    Redraw();
-                }
+                playerInventory.inventoryItems.RemoveAt(num);
             }
+            Redraw();
         }
     }
 
