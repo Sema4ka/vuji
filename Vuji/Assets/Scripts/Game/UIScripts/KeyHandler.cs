@@ -6,12 +6,24 @@ using UnityEngine;
 
 public class KeyHandler : MonoBehaviour
 {
+    /// <summary>
+    /// Модуль для всего, что связанно со считыванием нажатий на клавиатуру (привязка, считывание, регулирование)
+    /// 
+    /// <param name="AllKeys">Список всех KeyCode</param>
+    /// <param name="movementKeys">Список всех действий связанных с движением</param>
+    /// <param name="abilityKeys">Список всех действий связанных с умениями персонажа</param>
+    /// <param name="uiKeys">Список всех действий связанных с меню UI</param>
+    /// <param name="keybinds">Все связанные действия и KeyCode</param>
+    /// <param name="numbersKeyCodes">KeyCode для цифровых клавиш клавиатуры</param>
+    /// 
+    /// </summary>
+    #region Fields
     public static KeyHandler instance;
+
     public static List<KeyCode> AllKeys;
     private bool binding = false;
-#region Fields
-public static Action<string, KeyCode> keyPressed;
-    public static Action<string, bool> movementKeyPressed;
+    
+    public static Action<string, KeyCode> keyPressed;
     #region KeyFields
     public static string[] movementKeys;
     public static string[] abilityKeys;
@@ -35,6 +47,7 @@ public static Action<string, KeyCode> keyPressed;
      };
     #endregion
     #endregion
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +60,8 @@ public static Action<string, KeyCode> keyPressed;
         }
 
         AllKeys = _allKeys;
+
+
 
         // Check for keybinds file
         // if haven't found one - create it with basic settings
@@ -72,8 +87,8 @@ public static Action<string, KeyCode> keyPressed;
     // Update is called once per frame
     void Update()
     {
-        if (binding) return;
-        if (paused)
+        if (binding) return; // Считывание нажатий происходит в KeybindManager во время изменения привязанной клавиши
+        if (paused) // При открытии меню паузы считываются лишь нажатия esc
         {
             if (Input.GetKeyDown(KeyCode.Escape)) {
                 keyPressed?.Invoke("EscapeMenu", KeyCode.Escape);
@@ -91,37 +106,70 @@ public static Action<string, KeyCode> keyPressed;
         }
     }
     #region EscapeManagementFunctions
+    /// <summary>
+    /// Регулирует "приостановку" игры. Во время паузы считывается только нажатие ESC
+    /// <param name="pause"></param>
+    /// </summary>
     public void Pause(bool pause) {
+        
         paused = pause;
     }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns>Приостановлена ли игра</returns>
     public bool IsPaused() {
         return paused;
     }
+    /// <summary>
+    /// Регулирует статус открытых меню (при нажатии ESC все меню сворачиваются, повтроное нажатие открывает меню паузы)
+    /// </summary>
     public void SetUIOpened(bool opened)
     {
         uiOpened = opened;
     }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns>Открыто ли меню UI</returns>
     public bool GetUIOpened() {
         return uiOpened;
     }
     #endregion
+    /// <summary>
+    /// Вызывается при изменении привязанной клавиши (из KeybindManager)
+    /// </summary>
     void OnBinding(bool isBinding)
     {
         binding = isBinding;
     }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns>Словарь действий и привязанных клавиш</returns>
     public Dictionary<string, KeyCode> GetKeybinds()
     {
         return keybinds;
     }
+    /// <summary>
+    /// Привязанная к действию клавиша
+    /// </summary>
+    /// <param name="name">Действие</param>
+    /// <returns>Привязанная клавиша</returns>
     public KeyCode GetKeybind(string name)
     {
         if (!keybinds.ContainsKey(name)) return KeyCode.None;
         return keybinds[name];
     }
-
+    /// <summary>
+    /// Установить привязанную клавишу для действия
+    /// </summary>
+    /// <param name="name">Действие</param>
+    /// <param name="key">Клавиша</param>
+    /// <returns>Была ли установлена указанная клавиша</returns>
     public bool SetKeybind(string name, KeyCode key)
     {
-        if (keybinds.ContainsValue(key) && keybinds[name] != key)
+        if (keybinds.ContainsValue(key) && keybinds[name] != key) // Исключить повторения
         {
             return false;
         }
