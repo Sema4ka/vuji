@@ -4,19 +4,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// ћодуль дл€ всего, что св€занно со считыванием нажатий на клавиатуру (прив€зка, считывание, регулирование)
+/// <para>
+/// AllKeys - —писок всех KeyCode
+/// </para> <para>
+/// movementKeys - —писок всех действий св€занных с движением
+/// </para> <para>
+/// abilityKeys - —писок всех действий св€занных с умени€ми персонажа
+/// </para> <para>
+/// uiKeys - —писок всех действий св€занных с меню UI
+/// </para> <para>
+/// keybinds - ¬се св€занные действи€ и KeyCode
+/// </para> <para>
+/// numbersKeyCodes - KeyCode дл€ цифровых клавиш клавиатуры
+/// </para>
+/// </summary>
 public class KeyHandler : MonoBehaviour
 {
-    /// <summary>
-    /// ћодуль дл€ всего, что св€занно со считыванием нажатий на клавиатуру (прив€зка, считывание, регулирование)
-    /// 
-    /// <param name="AllKeys">—писок всех KeyCode</param>
-    /// <param name="movementKeys">—писок всех действий св€занных с движением</param>
-    /// <param name="abilityKeys">—писок всех действий св€занных с умени€ми персонажа</param>
-    /// <param name="uiKeys">—писок всех действий св€занных с меню UI</param>
-    /// <param name="keybinds">¬се св€занные действи€ и KeyCode</param>
-    /// <param name="numbersKeyCodes">KeyCode дл€ цифровых клавиш клавиатуры</param>
-    /// 
-    /// </summary>
+    
     #region Fields
     public static KeyHandler instance;
 
