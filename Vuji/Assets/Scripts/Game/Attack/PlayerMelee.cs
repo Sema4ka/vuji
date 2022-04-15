@@ -19,6 +19,7 @@ public class PlayerMelee : MonoBehaviour
     private void Start()
     {
         _view = GetComponent<PhotonView>();
+        KeyHandler.keyPressed += OnKeyPressed;
     }
 
     private void Update()
