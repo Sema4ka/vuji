@@ -1,55 +1,44 @@
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
+
 
 public class LobbyManager : MonoBehaviourPunCallbacks
 {
-    public InputField createInput;
-    public InputField joinInput;
+    #region Fields
+
     private Controllers _controllers;
-    private DataBase _dataBase;
+
+    #endregion
+
     #region Unity Methods
 
     void Start()
     {
         _controllers = GetComponent<Controllers>();
-        _dataBase = GetComponent<DataBase>();
-        string token = _dataBase.GetToken();
-        _controllers.GetUserID(token);
     }
 
     #endregion
 
     #region Private Methods
 
-    private void CreateRoom()
-    {
-        RoomOptions roomOptions = new RoomOptions();
-        roomOptions.MaxPlayers = 2;
-        PhotonNetwork.CreateRoom(createInput.text, roomOptions);
-    }
-
-    private void JoinRoom()
-    {
-        PhotonNetwork.JoinRoom(joinInput.text);
-    }
-
-    private void RandomRoom()
-    {
-        PhotonNetwork.JoinRandomOrCreateRoom();
-    }
-
+    /// <summary>
+    /// Метод выхода из приложения
+    /// </summary>
     private void QuitGame()
     {
         Application.Quit();
     }
 
+    /// <summary>
+    ///  Метод который выходит из текущего аккаунта и переключается на сцену Login
+    /// </summary>
     private void LeaveAccount()
     {
         _controllers.UserOffline();
+        gameObject.GetComponent<SocketServerController>().CloseConnection();
         SceneManager.LoadScene("Login");
     }
 
@@ -57,9 +46,43 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     #region Public Methods
 
-    public override void OnJoinedRoom()
+    /// <summary>
+    /// Метод служит для включения скрипа InviteFriend и заполнения его полей
+    /// </summary>
+    /// <param name="invitedUserID">userID - приглашаемого</param>
+    /// <param name="roomName">Имя комнаты куда нужно зайти приглашенному</param>
+    public void CreateInviteFriend(int invitedUserID, string roomName = null)
     {
-        PhotonNetwork.LoadLevel("Game");
+        var inviteFriend = gameObject.GetComponent<InviteFriend>();
+        inviteFriend.enabled = true;
+        inviteFriend.invitedUserID = invitedUserID;
+        inviteFriend.roomName = roomName;
+        inviteFriend.StartInviteFriend();
+    }
+
+    /// <summary>
+    /// Метод который создает комнату и вызывает метод приглашения
+    /// </summary>
+    /// <param name="invitedUserID"> userID приглашаемого</param>
+    public void CreateLobbyAndInviteUser(int invitedUserID)
+    {
+        var roomName = Random.Range(1000, 10000000).ToString();
+        RoomOptions roomOptions = new RoomOptions() {IsVisible = false, PublishUserId = true};
+        roomOptions.MaxPlayers = 2;
+        CreateInviteFriend(invitedUserID);
+        PhotonNetwork.CreateRoom(roomName, roomOptions);
+    }
+
+    /// <summary>
+    /// Метод вызывает подключение к комнате фотон
+    /// </summary>
+    /// <param name="roomName">название комнаты</param>
+    public void AcceptInviteFriend(string roomName)
+    {
+        var acceptFriendInvite = gameObject.GetComponent<AcceptFriendInvite>();
+        acceptFriendInvite.enabled = true;
+        acceptFriendInvite.roomName = roomName;
+        acceptFriendInvite.StartAcceptInvite();
     }
 
     #endregion

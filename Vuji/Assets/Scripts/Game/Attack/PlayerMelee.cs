@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using Photon.Pun.UtilityScripts;
+using Photon.Realtime;
 
 public class PlayerMelee : MonoBehaviour
 {
@@ -36,7 +38,6 @@ public class PlayerMelee : MonoBehaviour
                 var x = (xLen * attackDistance) / xyLen + _playerPosition.x;
                 var y = (yLen * attackDistance) / xyLen + _playerPosition.y;
                 _attackPoint = new Vector3(x, y, 0);
-                RemoteMeleeAttack(_attackPoint);
                 _view.RPC("RemoteMeleeAttack", RpcTarget.All, _attackPoint);
             }
         }
@@ -50,8 +51,36 @@ public class PlayerMelee : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            if(enemy.gameObject != gameObject)
+            if (CanDamageThisEnemy(enemy.gameObject))
                 enemy.GetComponent<BaseEntity>().TakeDamage(damage);
         }
+    }
+
+    /// <summary>
+    /// Метод проверяет:
+    /// 1) Урон по себе
+    /// 2) Урон игроку из своей команды
+    /// </summary>
+    /// <param name="enemyGameObject">Объект которому наноситсся урон</param>
+    /// <returns>true - можно наносить урон; false - нельзя наносить урон</returns>
+    private bool CanDamageThisEnemy(GameObject enemyGameObject)
+    {
+        if (enemyGameObject == gameObject)
+        {
+            return false;
+        }
+
+        if (enemyGameObject.CompareTag("Player"))
+        {
+            var otherPlayerView = enemyGameObject.GetComponent<PhotonView>();
+            var myPlayerView = gameObject.GetComponent<PhotonView>();
+
+            if (otherPlayerView.Owner.GetPhotonTeam().Name == myPlayerView.Owner.GetPhotonTeam().Name)
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

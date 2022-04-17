@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Photon.Pun;
 
 public class Connect : MonoBehaviourPunCallbacks
@@ -13,7 +10,6 @@ public class Connect : MonoBehaviourPunCallbacks
         PhotonNetwork.GameVersion = "0.1";
         PhotonNetwork.AutomaticallySyncScene = true;
         PhotonNetwork.ConnectUsingSettings();
-
         _controllers = GetComponent<Controllers>();
 
     }
