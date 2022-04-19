@@ -8819,7 +8819,7 @@ GameObject:
   - component: {fileID: 1126929707}
   - component: {fileID: 1126929711}
   - component: {fileID: 1126929710}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14441,10 +14441,17 @@ RectTransform:
   m_Father: {fileID: 1544365026}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 10, y: 0}
   m_SizeDelta: {x: 20, y: 20}
+=======
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 80, y: -91.26999}
+  m_SizeDelta: {x: 160, y: 182.54}
+>>>>>>> origin/enemyai
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2146885292
 MonoBehaviour:
