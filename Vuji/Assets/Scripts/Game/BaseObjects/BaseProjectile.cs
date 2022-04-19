@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Photon.Pun;
+using Photon.Pun.UtilityScripts;
 using UnityEngine;
 
 public class BaseProjectile : MonoBehaviour
@@ -87,7 +88,7 @@ public class BaseProjectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D colliderObject)
     {
-        if (_damageTags.Contains(colliderObject.gameObject.tag) & (senderGameObject != colliderObject.gameObject))
+        if (CanDamageThisEntity(colliderObject.gameObject))
         {
             colliderObject.GetComponent<BaseEntity>().TakeDamage(projectileDamage);
         }
@@ -98,5 +99,39 @@ public class BaseProjectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    /// <summary>
+    /// Метод проверяет:
+    /// 1) Можем ли мы наносить урон этому объекту
+    /// 2) Урон по себе
+    /// 3) Урон игроку из своей команды
+    /// </summary>
+    /// <param name="enemyGameObject">Объект которому наноситсся урон</param>
+    /// <returns>true - можно наносить урон; false - нельзя наносить урон</returns>
+    private bool CanDamageThisEntity(GameObject enemyGameObject)
+    {
+        if (!_damageTags.Contains(enemyGameObject.tag))
+        {
+            return false;
+        }
+
+        if (enemyGameObject == senderGameObject)
+        {
+            return false;
+        }
+
+        if (enemyGameObject.CompareTag("Player"))
+        {
+            var otherPlayerView = enemyGameObject.GetComponent<PhotonView>();
+            var myPlayerView = senderGameObject.GetComponent<PhotonView>();
+
+            if (otherPlayerView.Owner.GetPhotonTeam().Name == myPlayerView.Owner.GetPhotonTeam().Name)
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

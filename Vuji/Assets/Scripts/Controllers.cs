@@ -1,31 +1,28 @@
 using System.Collections;
 using StructsRequest;
 using StructsResponse;
+using ServersInfo;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
-using Photon.Pun;
+
 
 
 public class Controllers : MonoBehaviour
-{   
-    private string SERVER_DOMAIN = "http://127.0.0.1:8000";
+{
+    private readonly string _serverDomain = MainServerInfo.ServerDomain;
     private DataBase _dataBase;
+
     #region Unity Methods
 
     private void Start()
     {
-        _dataBase = gameObject.AddComponent<DataBase>();
+        _dataBase = gameObject.GetComponent<DataBase>();
     }
 
     #endregion
 
     #region Public Methods
-
-    public void AutoAuth()
-    {
-        StartCoroutine(AutoAuthNet());
-    }
 
     public void CheckVujiServer()
     {
@@ -57,20 +54,30 @@ public class Controllers : MonoBehaviour
 
     public void GetUserID(string token)
     {
-        
         StartCoroutine(GetUserIDNet(token));
+    }
+
+    public void FindFriendsByName(string friendsName)
+    {
+        string token = _dataBase.GetToken();
+        StartCoroutine(FindFriendsByNameNet(token, friendsName));
     }
 
     #endregion
 
     #region Private IEnumerator Methods
 
+    private void AutoAuth()
+    {
+        StartCoroutine(AutoAuthNet());
+    }
+
     private IEnumerator AutoAuthNet()
     {
         WWWForm form = new WWWForm();
         string token = _dataBase.GetToken();
 
-        UnityWebRequest www = UnityWebRequest.Post(SERVER_DOMAIN + "/auth", form);
+        UnityWebRequest www = UnityWebRequest.Post(_serverDomain + "/auth", form);
         www.SetRequestHeader("Authorization", token);
         yield return www.SendWebRequest();
         if (www.result == UnityWebRequest.Result.ProtocolError)
@@ -88,7 +95,7 @@ public class Controllers : MonoBehaviour
 
     private IEnumerator CheckVujiServerNet()
     {
-        UnityWebRequest www = UnityWebRequest.Get(SERVER_DOMAIN);
+        UnityWebRequest www = UnityWebRequest.Get(_serverDomain);
         yield return www.SendWebRequest();
         if (www.result != UnityWebRequest.Result.Success)
         {
@@ -109,7 +116,7 @@ public class Controllers : MonoBehaviour
         loginStruct.login = login;
         loginStruct.password = password;
         string json = JsonUtility.ToJson(loginStruct);
-        UnityWebRequest www = UnityWebRequest.Post(SERVER_DOMAIN + "/login", form);
+        UnityWebRequest www = UnityWebRequest.Post(_serverDomain + "/login", form);
         byte[] postBytes = System.Text.Encoding.UTF8.GetBytes(json);
         UploadHandler uploadHandler = new UploadHandlerRaw(postBytes);
 
@@ -140,7 +147,7 @@ public class Controllers : MonoBehaviour
         registerStructRequest.password = password;
 
         string json = JsonUtility.ToJson(registerStructRequest);
-        UnityWebRequest www = UnityWebRequest.Post(SERVER_DOMAIN + "/register", form);
+        UnityWebRequest www = UnityWebRequest.Post(_serverDomain + "/register", form);
         byte[] postBytes = System.Text.Encoding.UTF8.GetBytes(json);
         UploadHandler uploadHandler = new UploadHandlerRaw(postBytes);
 
@@ -167,7 +174,7 @@ public class Controllers : MonoBehaviour
         UserOnlineAndOfflineStructRequest userStruct = new UserOnlineAndOfflineStructRequest();
         userStruct.data = "None";
         string json = JsonUtility.ToJson(userStruct);
-        UnityWebRequest www = UnityWebRequest.Put(SERVER_DOMAIN + "/user_online", json);
+        UnityWebRequest www = UnityWebRequest.Put(_serverDomain + "/user_online", json);
         www.SetRequestHeader("Authorization", token);
         www.SetRequestHeader("Content-Type", "application/json; charset=UTF-8");
         yield return www.SendWebRequest();
@@ -178,7 +185,7 @@ public class Controllers : MonoBehaviour
         UserOnlineAndOfflineStructRequest userStruct = new UserOnlineAndOfflineStructRequest();
         userStruct.data = "None";
         string json = JsonUtility.ToJson(userStruct);
-        UnityWebRequest www = UnityWebRequest.Put(SERVER_DOMAIN + "/user_offline", json);
+        UnityWebRequest www = UnityWebRequest.Put(_serverDomain + "/user_offline", json);
         www.SetRequestHeader("Authorization", token);
         www.SetRequestHeader("Content-Type", "application/json; charset=UTF-8");
         yield return www.SendWebRequest();
@@ -186,7 +193,7 @@ public class Controllers : MonoBehaviour
 
     private IEnumerator GetUserIDNet(string token)
     {
-        UnityWebRequest www = UnityWebRequest.Get(SERVER_DOMAIN + "/user_id");
+        UnityWebRequest www = UnityWebRequest.Get(_serverDomain + "/user_id");
         www.SetRequestHeader("Authorization", token);
         yield return www.SendWebRequest();
         if (www.result == UnityWebRequest.Result.ProtocolError)
@@ -198,7 +205,36 @@ public class Controllers : MonoBehaviour
             UserIDStructResponse userIDStructResponse =
                 JsonUtility.FromJson<UserIDStructResponse>(www.downloadHandler.text);
             string userID = userIDStructResponse.userID;
-            PhotonNetwork.NickName = userID;
+        }
+    }
+
+    private IEnumerator FindFriendsByNameNet(string token, string friendsName)
+    {
+        WWWForm form = new WWWForm();
+        FindFriendsByNameStructRequest findFriendsByNameStructRequest = new FindFriendsByNameStructRequest();
+        findFriendsByNameStructRequest.friendsName = friendsName;
+
+        string json = JsonUtility.ToJson(findFriendsByNameStructRequest);
+        UnityWebRequest www = UnityWebRequest.Post(_serverDomain + "/find_friends_by_name", form);
+        byte[] postBytes = System.Text.Encoding.UTF8.GetBytes(json);
+        UploadHandler uploadHandler = new UploadHandlerRaw(postBytes);
+
+        www.uploadHandler = uploadHandler;
+        www.SetRequestHeader("Content-Type", "application/json; charset=UTF-8");
+        www.SetRequestHeader("Authorization", token);
+        yield return www.SendWebRequest();
+        if (www.result == UnityWebRequest.Result.ProtocolError)
+        {
+            Debug.Log("Unexpected error findFriends");
+        }
+        else
+        {
+            FindFriendsByNameStructResponse findFriendsByNameStructResponse =
+                JsonUtility.FromJson<FindFriendsByNameStructResponse>("{\"friends\":" + www.downloadHandler.text + "}");
+            UserInfoObject[] userInfoObject = findFriendsByNameStructResponse.friends;
+
+            FriendsListController friendsListController = gameObject.GetComponent<FriendsListController>();
+            friendsListController.FillFriendsList(userInfoObject);
         }
     }
 

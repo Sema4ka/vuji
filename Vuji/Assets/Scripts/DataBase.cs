@@ -21,6 +21,9 @@ public class DataBase : MonoBehaviour
 
     #region Private Methods
 
+    /// <summary>
+    /// Открывает соеденение с локальной БД
+    /// </summary>
     private static void OpenConnection()
     {
         _connection = new SqliteConnection(dbName);
@@ -28,13 +31,18 @@ public class DataBase : MonoBehaviour
         _connection.Open();
     }
 
+    /// <summary>
+    /// Закрывает соеденение с локальной БД
+    /// </summary>
     private static void CloseConnection()
     {
         _connection.Close();
         _command.Dispose();
     }
 
-
+    /// <summary>
+    /// Метод создает локальную БД
+    /// </summary>
     private void CreateDB()
     {
         OpenConnection();
@@ -43,6 +51,10 @@ public class DataBase : MonoBehaviour
         CloseConnection();
     }
 
+    /// <summary>
+    /// Метод проверяет наличие токена в БД
+    /// </summary>
+    /// <returns></returns>
     private bool TokenInDB()
     {
         OpenConnection();
@@ -64,6 +76,10 @@ public class DataBase : MonoBehaviour
 
     #region Public Methods
 
+    /// <summary>
+    /// Метод возвращает токен из БД
+    /// </summary>
+    /// <returns>токен</returns>
     public string GetToken()
     {
         string token = "None";
@@ -76,6 +92,7 @@ public class DataBase : MonoBehaviour
             {
                 token = _reader["token"].ToString();
             }
+
             CloseConnection();
         }
 
@@ -83,9 +100,14 @@ public class DataBase : MonoBehaviour
         {
             token = "None";
         }
+
         return token;
     }
 
+    /// <summary>
+    /// Метод записывает новый токен в БД
+    /// </summary>
+    /// <param name="token">новый токен</param>
     public void SetToken(string token)
     {
         if (TokenInDB())

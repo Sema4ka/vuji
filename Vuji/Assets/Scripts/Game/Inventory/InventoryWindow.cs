@@ -23,7 +23,7 @@ public class InventoryWindow : MonoBehaviour
         KeyHandler.keyPressed += KeyPressed;
         Redraw();
     }
-   
+
     private void Update()
     {
         

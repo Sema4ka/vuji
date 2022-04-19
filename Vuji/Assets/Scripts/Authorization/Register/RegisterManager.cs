@@ -16,6 +16,9 @@ public class RegisterManager : MonoBehaviour
         _controllers = GetComponent<Controllers>();
     }
 
+    /// <summary>
+    /// Регистрация аккаунта + проверка корректности заполненных полей
+    /// </summary>
     public void RegisterAccount()
     {
         if (passwordOneInput.text != passwordTwoInput.text)

@@ -14,7 +14,9 @@ public class LoginManager : MonoBehaviour
         _controllers = GetComponent<Controllers>();
     }
 
-
+    /// <summary>
+    /// Авторизация в аккаунт
+    /// </summary>
     public void LoginInAccount()
     {
         _controllers.Login(loginInput.text, passwordInput.text);

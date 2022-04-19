@@ -27,6 +27,19 @@ def dict_to_json(**kwargs):
     return json_string
 
 
+def array_to_json(arr):
+    json_string = json.dumps(arr)
+    return json_string
+
+
+def generate_info_about_user(user):
+    res = {
+        "userID": user.id,
+        "username": user.username,
+    }
+    return res
+
+
 @app.get('/')
 def index():
     return "server online"
@@ -98,6 +111,23 @@ def get_user_id(request: Request):
         user_id = str(jwt_func.jwt_user_id(token))
         data = dict_to_json(userID=user_id)
         return Response(data, status_code=200)
+    return Response(status_code=400)
+
+
+@app.post("/find_friends_by_name")
+def post_find_friends_by_name(body: FindFriendsByNameBase, request: Request, session: Session = Depends(get_session)):
+    token = request.headers['Authorization']
+    name = body.friendsName
+
+    if jwt_func.jwt_validate(token) and name != '':
+        users_list = user_store.find_users_by_name(session, name)
+        if users_list is not None:
+            users_info = []
+            for user in users_list:
+                if user.id != jwt_func.jwt_user_id(token):
+                    users_info.append(generate_info_about_user(user))
+            data = array_to_json(users_info)
+            return Response(data, status_code=200)
     return Response(status_code=400)
 
 

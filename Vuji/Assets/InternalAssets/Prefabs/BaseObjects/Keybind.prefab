@@ -259,12 +259,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5118382202200720495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3074b4e6e2720f4b94c0f7058af5bc3, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e72f1ad98f88d944a8f38f0fa044b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   keybindName: {fileID: 4268855604678850353}
   keybindKeys: {fileID: 2011604581777242686}
-  keys: 
+  key: 0
 --- !u!1 &5340652779208490523
 GameObject:
   m_ObjectHideFlags: 0

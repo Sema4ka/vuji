@@ -1,13 +1,30 @@
 using UnityEngine;
 using Photon.Pun;
-public class SpawnPlayers : MonoBehaviourPunCallbacks
+using Photon.Pun.UtilityScripts;
+
+public class SpawnPlayers : MonoBehaviour
 {
     public GameObject playerGameObject;
-    void Awake()
-    {
-        Vector2 position = new Vector2(0, 0);
-        PhotonNetwork.Instantiate(playerGameObject.name, position, Quaternion.identity);
-    }
+    [SerializeField] private Transform spawnPointTeamOne;
+    [SerializeField] private Transform spawnPointTeamTwo;
+    private Vector3 _position;
 
-    
+    private void Start()
+    {
+        foreach (var player in PhotonNetwork.PlayerList)
+        {
+            if (player.Equals(PhotonNetwork.LocalPlayer))
+            {
+                if (player.GetPhotonTeam().Name == "TeamOne")
+                {
+                    _position = spawnPointTeamOne.position;
+                }
+                else if (player.GetPhotonTeam().Name == "TeamTwo")
+                {
+                    _position = spawnPointTeamTwo.position;
+                }
+            }
+        }
+        PhotonNetwork.Instantiate(playerGameObject.name, _position, Quaternion.identity);
+    }
 }

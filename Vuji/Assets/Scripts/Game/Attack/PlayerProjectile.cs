@@ -18,7 +18,7 @@ public class PlayerProjectile : MonoBehaviour
 
     #endregion
 
-    private void Start()
+        private void Start()
     {
         _view = GetComponent<PhotonView>();
         KeyHandler.keyPressed += OnKeyPressed;
@@ -40,7 +40,7 @@ public class PlayerProjectile : MonoBehaviour
                 _aimAngle = Mathf.Atan2(_aimDirection.y, _aimDirection.x) * Mathf.Rad2Deg;
                 rotatePoint.rotation = Quaternion.Euler(0, 0, _aimAngle);
                 RemoteProjectileAttack(_aimAngle, _aimDirection);
-                _view.RPC("RemoteProjectileAttack", RpcTarget.Others, _aimAngle, _aimDirection);
+                _view.RPC("RemoteProjectileAttack", RpcTarget.All, _aimAngle, _aimDirection);
             }
         }
     }

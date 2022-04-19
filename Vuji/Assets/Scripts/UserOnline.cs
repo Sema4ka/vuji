@@ -3,7 +3,7 @@ using UnityEngine;
 public class UserOnline : MonoBehaviour
 {
     private Controllers _controllers;
-    private float _userTimeOnline = 10;
+    private float _userTimeOnline = 5;
     private float _currentUserTimeOnline;
 
     #region Unity Methods
@@ -18,6 +18,9 @@ public class UserOnline : MonoBehaviour
 
     #region Private Methods
 
+    /// <summary>
+    /// каждые {_userTimeOnline} секунд отправляет сообщение на Server(FastAPI), о том что пользователь по токену в сети 
+    /// </summary>
     private void Update()
     {
         _currentUserTimeOnline -= Time.deltaTime;
