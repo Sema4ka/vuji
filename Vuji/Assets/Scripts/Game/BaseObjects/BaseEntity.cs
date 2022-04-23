@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class BaseEntity : MonoBehaviour
@@ -7,8 +8,14 @@ public class BaseEntity : MonoBehaviour
     [SerializeField] private float healthPoints = 100.0f;
     [SerializeField] private float moveSpeed = 5.0f;
     [SerializeField] private List<BaseSkill> skills = new List<BaseSkill>();
+    private PhotonView _view;
 
     #region Public Methods
+
+    private void Start()
+    {
+        _view = gameObject.GetComponent<PhotonView>();
+    }
 
     public void AddEffect(BaseEffect effect)
     {
@@ -37,20 +44,31 @@ public class BaseEntity : MonoBehaviour
 
     public void TakeDamage(int healthDamage)
     {
-        healthPoints -= healthDamage;
-        if (healthPoints <= 0)
+        if (gameObject.CompareTag("Player"))
         {
-            if (gameObject.CompareTag("Player"))
-            {
-                gameObject.GetComponent<PlayerScript>().KillPlayer();
-            }
-            else
+            _view.RPC("DamagePlayerRemote", RpcTarget.All, healthDamage);
+        }
+        else
+        {
+            healthPoints -= healthDamage;
+            if (healthPoints <= 0)
             {
                 Destroy(gameObject);
             }
         }
 
+
         Debug.Log(entityName + " hp is " + healthPoints);
+    }
+
+    [PunRPC]
+    private void DamagePlayerRemote(int healthDamage)
+    {
+        healthPoints -= healthDamage;
+        if (healthPoints <= 0)
+        {
+            gameObject.GetComponent<PlayerScript>().KillPlayer();
+        }
     }
 
     #endregion

@@ -35,7 +35,7 @@ def array_to_json(arr):
 def generate_info_about_user(user):
     res = {
         "userID": user.id,
-        "username": user.login + " == " + user.username,
+        "username": user.username,
     }
     return res
 

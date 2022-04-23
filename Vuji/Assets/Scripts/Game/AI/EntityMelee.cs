@@ -10,16 +10,14 @@ public class EntityMelee : MonoBehaviour
     [SerializeField] int damage = 10;
     [SerializeField] float attackTimeout;
 
-    private bool isTimeout = false;
+    private bool _isTimeout=false;
 
-    private GameObject target;
-
-    private Vector3 attackPoint;
+    private Vector3 _attackPoint;
 
 
     public void Attack(GameObject target)
     {
-        if(!isTimeout)
+        if (!_isTimeout)
         {
             StartCoroutine("AttackTiemout");
 
@@ -29,24 +27,22 @@ public class EntityMelee : MonoBehaviour
             var x = (xLen * attackDistance) / xyLen + transform.position.x;
             var y = (yLen * attackDistance) / xyLen + transform.position.y;
 
-            attackPoint = new Vector3(x, y, 0);
+            _attackPoint = new Vector3(x, y, 0);
 
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint, attackRange, enemyLayers);
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint, attackRange, enemyLayers);
 
             foreach (Collider2D enemy in hitEnemies)
             {
-                if(enemy.gameObject != gameObject)
+                if (enemy.gameObject != gameObject)
                     enemy.GetComponent<BaseEntity>().TakeDamage(damage);
             }
-
- 
         }
     }
 
     IEnumerator AttackTiemout()
     {
-        isTimeout = true;
+        _isTimeout = true;
         yield return new WaitForSeconds(attackTimeout);
-        isTimeout = false;
+        _isTimeout = false;
     }
 }

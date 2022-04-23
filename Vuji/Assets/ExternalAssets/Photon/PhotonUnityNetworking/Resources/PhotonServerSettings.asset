@@ -49,6 +49,9 @@ MonoBehaviour:
   - RemoteSetPlayerMangerInfo
   - JoinToMasterClientRoom
   - SetPlayersTeam
+  - AttackTiemout
+  - AttackRemote
+  - DamagePlayerRemote
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
