@@ -6,20 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class Generator : MonoBehaviour
 {
-    public Room[] RoomPrefabs;
-    public Room StartingRoom;
+    public GameObject[] RoomPrefabs;
+    public GameObject StartingRoom;
+    private GameObject[,] spawnedRooms;
 
-    private Room[,] spawnedRooms;
-
+    public Grid grid;
     private void Start()
     {
-        spawnedRooms = new Room[2, 3];
-        spawnedRooms[2, 2] = StartingRoom;
-
-        for (int i = 0; i < 12; i++)
-        {
-            PlaceOneRoom();
-        }
+        GameObject newRoom = Grid.Instantiate(RoomPrefabs[0]);
     }
 
     private void PlaceOneRoom()
@@ -41,6 +35,6 @@ public class Generator : MonoBehaviour
             }
         }
 
-        Room newRoom = Instantiate(RoomPrefabs[Random.Range(0, RoomPrefabs.Length)]);
+        GameObject newRoom = Grid.Instantiate(RoomPrefabs[Random.Range(0, RoomPrefabs.Length)]);
     }
 }
