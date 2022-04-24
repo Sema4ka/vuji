@@ -1,0 +1,32 @@
+image: python:latest
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+
+before_script:
+  - python --version
+  - pip install virtualenv
+  - virtualenv venv
+  - source venv/bin/activate
+  - pip install -r requirements.txt
+
+stages:
+    - test
+    - style
+
+pytest:
+    stage: test
+    script:
+        - pytest 
+
+
+codeStyle:
+    stage: style
+    script:
+        - pylint .
