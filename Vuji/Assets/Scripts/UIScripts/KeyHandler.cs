@@ -5,19 +5,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Модуль для всего, что связанно со считыванием нажатий на клавиатуру (привязка, считывание, регулирование)
+/// РњРѕРґСѓР»СЊ РґР»СЏ РІСЃРµРіРѕ, С‡С‚Рѕ СЃРІСЏР·Р°РЅРЅРѕ СЃРѕ СЃС‡РёС‚С‹РІР°РЅРёРµРј РЅР°Р¶Р°С‚РёР№ РЅР° РєР»Р°РІРёР°С‚СѓСЂСѓ (РїСЂРёРІСЏР·РєР°, СЃС‡РёС‚С‹РІР°РЅРёРµ, СЂРµРіСѓР»РёСЂРѕРІР°РЅРёРµ)
 /// <para>
-/// AllKeys - Список всех KeyCode
+/// AllKeys - РЎРїРёСЃРѕРє РІСЃРµС… KeyCode
 /// </para> <para>
-/// movementKeys - Список всех действий связанных с движением
+/// movementKeys - РЎРїРёСЃРѕРє РІСЃРµС… РґРµР№СЃС‚РІРёР№ СЃРІСЏР·Р°РЅРЅС‹С… СЃ РґРІРёР¶РµРЅРёРµРј
 /// </para> <para>
-/// abilityKeys - Список всех действий связанных с умениями персонажа
+/// abilityKeys - РЎРїРёСЃРѕРє РІСЃРµС… РґРµР№СЃС‚РІРёР№ СЃРІСЏР·Р°РЅРЅС‹С… СЃ СѓРјРµРЅРёСЏРјРё РїРµСЂСЃРѕРЅР°Р¶Р°
 /// </para> <para>
-/// uiKeys - Список всех действий связанных с меню UI
+/// uiKeys - РЎРїРёСЃРѕРє РІСЃРµС… РґРµР№СЃС‚РІРёР№ СЃРІСЏР·Р°РЅРЅС‹С… СЃ РјРµРЅСЋ UI
 /// </para> <para>
-/// keybinds - Все связанные действия и KeyCode
+/// keybinds - Р’СЃРµ СЃРІСЏР·Р°РЅРЅС‹Рµ РґРµР№СЃС‚РІРёСЏ Рё KeyCode
 /// </para> <para>
-/// numbersKeyCodes - KeyCode для цифровых клавиш клавиатуры
+/// numbersKeyCodes - KeyCode РґР»СЏ С†РёС„СЂРѕРІС‹С… РєР»Р°РІРёС€ РєР»Р°РІРёР°С‚СѓСЂС‹
 /// </para>
 /// </summary>
 public class KeyHandler : MonoBehaviour
@@ -93,8 +93,8 @@ public class KeyHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (binding) return; // Считывание нажатий происходит в KeybindManager во время изменения привязанной клавиши
-        if (paused) // При открытии меню паузы считываются лишь нажатия esc
+        if (binding) return; // РЎС‡РёС‚С‹РІР°РЅРёРµ РЅР°Р¶Р°С‚РёР№ РїСЂРѕРёСЃС…РѕРґРёС‚ РІ KeybindManager РІРѕ РІСЂРµРјСЏ РёР·РјРµРЅРµРЅРёСЏ РїСЂРёРІСЏР·Р°РЅРЅРѕР№ РєР»Р°РІРёС€Рё
+        if (paused) // РџСЂРё РѕС‚РєСЂС‹С‚РёРё РјРµРЅСЋ РїР°СѓР·С‹ СЃС‡РёС‚С‹РІР°СЋС‚СЃСЏ Р»РёС€СЊ РЅР°Р¶Р°С‚РёСЏ esc
         {
             if (Input.GetKeyDown(KeyCode.Escape)) {
                 keyPressed?.Invoke("EscapeMenu", KeyCode.Escape);
@@ -113,7 +113,7 @@ public class KeyHandler : MonoBehaviour
     }
     #region EscapeManagementFunctions
     /// <summary>
-    /// Регулирует "приостановку" игры. Во время паузы считывается только нажатие ESC
+    /// Р РµРіСѓР»РёСЂСѓРµС‚ "РїСЂРёРѕСЃС‚Р°РЅРѕРІРєСѓ" РёРіСЂС‹. Р’Рѕ РІСЂРµРјСЏ РїР°СѓР·С‹ СЃС‡РёС‚С‹РІР°РµС‚СЃСЏ С‚РѕР»СЊРєРѕ РЅР°Р¶Р°С‚РёРµ ESC
     /// <param name="pause"></param>
     /// </summary>
     public void Pause(bool pause) {
@@ -123,12 +123,12 @@ public class KeyHandler : MonoBehaviour
     /// <summary>
     /// 
     /// </summary>
-    /// <returns>Приостановлена ли игра</returns>
+    /// <returns>РџСЂРёРѕСЃС‚Р°РЅРѕРІР»РµРЅР° Р»Рё РёРіСЂР°</returns>
     public bool IsPaused() {
         return paused;
     }
     /// <summary>
-    /// Регулирует статус открытых меню (при нажатии ESC все меню сворачиваются, повтроное нажатие открывает меню паузы)
+    /// Р РµРіСѓР»РёСЂСѓРµС‚ СЃС‚Р°С‚СѓСЃ РѕС‚РєСЂС‹С‚С‹С… РјРµРЅСЋ (РїСЂРё РЅР°Р¶Р°С‚РёРё ESC РІСЃРµ РјРµРЅСЋ СЃРІРѕСЂР°С‡РёРІР°СЋС‚СЃСЏ, РїРѕРІС‚СЂРѕРЅРѕРµ РЅР°Р¶Р°С‚РёРµ РѕС‚РєСЂС‹РІР°РµС‚ РјРµРЅСЋ РїР°СѓР·С‹)
     /// </summary>
     public void SetUIOpened(bool opened)
     {
@@ -137,13 +137,13 @@ public class KeyHandler : MonoBehaviour
     /// <summary>
     /// 
     /// </summary>
-    /// <returns>Открыто ли меню UI</returns>
+    /// <returns>РћС‚РєСЂС‹С‚Рѕ Р»Рё РјРµРЅСЋ UI</returns>
     public bool GetUIOpened() {
         return uiOpened;
     }
     #endregion
     /// <summary>
-    /// Вызывается при изменении привязанной клавиши (из KeybindManager)
+    /// Р’С‹Р·С‹РІР°РµС‚СЃСЏ РїСЂРё РёР·РјРµРЅРµРЅРёРё РїСЂРёРІСЏР·Р°РЅРЅРѕР№ РєР»Р°РІРёС€Рё (РёР· KeybindManager)
     /// </summary>
     void OnBinding(bool isBinding)
     {
@@ -152,30 +152,30 @@ public class KeyHandler : MonoBehaviour
     /// <summary>
     /// 
     /// </summary>
-    /// <returns>Словарь действий и привязанных клавиш</returns>
+    /// <returns>РЎР»РѕРІР°СЂСЊ РґРµР№СЃС‚РІРёР№ Рё РїСЂРёРІСЏР·Р°РЅРЅС‹С… РєР»Р°РІРёС€</returns>
     public Dictionary<string, KeyCode> GetKeybinds()
     {
         return keybinds;
     }
     /// <summary>
-    /// Привязанная к действию клавиша
+    /// РџСЂРёРІСЏР·Р°РЅРЅР°СЏ Рє РґРµР№СЃС‚РІРёСЋ РєР»Р°РІРёС€Р°
     /// </summary>
-    /// <param name="name">Действие</param>
-    /// <returns>Привязанная клавиша</returns>
+    /// <param name="name">Р”РµР№СЃС‚РІРёРµ</param>
+    /// <returns>РџСЂРёРІСЏР·Р°РЅРЅР°СЏ РєР»Р°РІРёС€Р°</returns>
     public KeyCode GetKeybind(string name)
     {
         if (!keybinds.ContainsKey(name)) return KeyCode.None;
         return keybinds[name];
     }
     /// <summary>
-    /// Установить привязанную клавишу для действия
+    /// РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРёРІСЏР·Р°РЅРЅСѓСЋ РєР»Р°РІРёС€Сѓ РґР»СЏ РґРµР№СЃС‚РІРёСЏ
     /// </summary>
-    /// <param name="name">Действие</param>
-    /// <param name="key">Клавиша</param>
-    /// <returns>Была ли установлена указанная клавиша</returns>
+    /// <param name="name">Р”РµР№СЃС‚РІРёРµ</param>
+    /// <param name="key">РљР»Р°РІРёС€Р°</param>
+    /// <returns>Р‘С‹Р»Р° Р»Рё СѓСЃС‚Р°РЅРѕРІР»РµРЅР° СѓРєР°Р·Р°РЅРЅР°СЏ РєР»Р°РІРёС€Р°</returns>
     public bool SetKeybind(string name, KeyCode key)
     {
-        if (keybinds.ContainsValue(key) && keybinds[name] != key) // Исключить повторения
+        if (keybinds.ContainsValue(key) && keybinds[name] != key) // РСЃРєР»СЋС‡РёС‚СЊ РїРѕРІС‚РѕСЂРµРЅРёСЏ
         {
             return false;
         }

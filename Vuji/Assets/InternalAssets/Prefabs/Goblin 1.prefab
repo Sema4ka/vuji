@@ -271,8 +271,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Goblin
   healthPoints: 100
+  maxHealthPoints: 100
   moveSpeed: 400
   skills: []
+  healthBarPrefab: {fileID: 170056, guid: e41946a981c3b444a84d15eb7c608ca4, type: 3}
 --- !u!114 &2170655173613443271
 MonoBehaviour:
   m_ObjectHideFlags: 0

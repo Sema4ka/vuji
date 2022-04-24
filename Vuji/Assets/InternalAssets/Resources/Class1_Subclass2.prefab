@@ -126,7 +126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2435816656477564949, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: entityName
-      value: Player
+      value: Class 1 Subclass 2
       objectReference: {fileID: 0}
     - target: {fileID: 3571788434696612582, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: m_RootOrder
@@ -314,7 +314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7012066835509977681, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Class1_Subclass2
       objectReference: {fileID: 0}
     - target: {fileID: 7012066835509977681, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: m_Layer
