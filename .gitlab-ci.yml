@@ -14,7 +14,7 @@ before_script:
   - pip install virtualenv
   - virtualenv venv
   - source venv/bin/activate
-  - pip install -r requirements.txt
+  - pip install -r Server/requirements.txt
 
 stages:
     - test
