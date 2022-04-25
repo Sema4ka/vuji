@@ -23,10 +23,11 @@ stages:
 pytest:
     stage: test
     script:
-        - pytest 
+        - pytest Server/pytests.py 
 
 
 codeStyle:
     stage: style
     script:
-        - pylint .
+        - pylint --disable=C0412,W0702 Server/socket_server.py
+        - pylint --disable=C0412 fast_api_server.py
