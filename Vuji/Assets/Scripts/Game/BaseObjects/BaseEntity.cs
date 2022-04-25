@@ -28,7 +28,8 @@ public class BaseEntity : MonoBehaviour
         float healthPercentage = healthPoints / maxHealthPoints;
 
         Vector3 pos = transform.position;
-        healthBar = Instantiate(healthBarPrefab, transform);
+        healthBar = Instantiate(healthBarPrefab, Vector3.zero, Quaternion.identity);
+        healthBar.transform.SetParent(transform, false);
 
         healthBar.GetComponent<RectTransform>().position = pos + new Vector3(0, height * 0.6f, 0);
         healthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(width, height * 0.1f);
