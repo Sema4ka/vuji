@@ -7,3 +7,4 @@ python-multipart~=0.0.5
 starlette~=0.17.1
 uvicorn~=0.17.5
 pytest~=7.1.2
+pylint~=2.13.7
