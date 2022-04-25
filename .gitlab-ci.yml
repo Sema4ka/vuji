@@ -23,7 +23,7 @@ stages:
 pytest:
     stage: test
     script:
-        - pytest pytests.py 
+        - pytest Server/pytests.py 
 
 
 codeStyle:
