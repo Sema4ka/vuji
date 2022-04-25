@@ -1,6 +1,6 @@
 import pytest
-import SocketServer as sockServer
-import FastApiServer as fastApiServer
+import socket_server as sockServer
+import fast_api_server as fastApiServer
 
 
 @pytest.mark.parametrize("command, args, answer",

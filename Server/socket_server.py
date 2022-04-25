@@ -1,4 +1,6 @@
-# -*- coding: utf-8 -*-
+"""
+socket server
+"""
 import socket
 import threading
 import JWT_func
@@ -16,6 +18,12 @@ COMMAND_HAVE_INVITE_SERVER = "701S"  # [СЕРВЕР] отправляет др�
 
 
 def generate_message(command, *args):
+    """
+    Метод генерация сообзение по стандарту
+    :param command: комнада
+    :param args: данные
+    :return: string
+    """
     message = f"{command}:"
     for i in args:
         message += str(i) + ":"
@@ -23,11 +31,25 @@ def generate_message(command, *args):
 
 
 def send_message_to_client(to_user_id, message):
+    """
+    отправка сообщение клиенту
+    :param to_user_id: ID кому отправить сообщениеА
+    :param message: сообщение клиенту
+    :return:
+    """
     CLIENTS_SOCKETS[to_user_id].send(bytes(message), "UTF-8")
 
 
 class Client(threading.Thread):
+    """
+    Класс клиента
+    """
     def __init__(self, client_address, client_socket):
+        """
+        Init
+        :param client_address: адресс клиента
+        :param client_socket: сокет клиета
+        """
         threading.Thread.__init__(self)
         self.client_socket = client_socket
         self.client_address = client_address
@@ -37,11 +59,21 @@ class Client(threading.Thread):
         print("New connect: ", self.client_address)
 
     def save_info_about_client(self, message):
+        """
+        сохранение инф о подключенном клиенте
+        :param message:
+        :return:
+        """
         token = message[1]
         self.my_user_id = JWT_func.jwt_user_id(token)
         CLIENTS_SOCKETS[self.my_user_id] = self.client_socket
 
     def invite_friend(self, message):
+        """
+        отправка приглашения другому клиенту
+        :param message: сообщение приглашения
+        :return:
+        """
         invited_user_id = int(message[2])
         room_name = message[3]
         try:
@@ -51,15 +83,25 @@ class Client(threading.Thread):
             CLIENTS_SOCKETS[self.my_user_id].send(bytes(res, encoding="UTF-8"))
         except KeyError:
             print(f"CANT FIND USER. Users list{CLIENTS_SOCKETS}")
-            res = generate_message(COMMAND_INVITE_SERVER, "User was not found in the list of connected to SocketServer")
+            res = generate_message(COMMAND_INVITE_SERVER,
+                                   "User was not found in the list of connected to SocketServer")
             CLIENTS_SOCKETS[self.my_user_id].send(bytes(res, encoding="UTF-8"))
 
     def open_client_socket(self, message):
+        """
+        открытие сокета клиента
+        :param message:
+        :return:
+        """
         self.save_info_about_client(message)
         res = generate_message(COMMAND_OPEN_CONNECT_SERVER, "You connected to SocketServer")
         CLIENTS_SOCKETS[self.my_user_id].send(bytes(res, encoding="UTF-8"))
 
     def run(self):
+        """
+        запуск
+        :return:
+        """
         while True:
             try:
                 data = self.client_socket.recv(4096)
@@ -89,6 +131,10 @@ class Client(threading.Thread):
 
 
 def main():
+    """
+    main функция
+    :return:
+    """
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
