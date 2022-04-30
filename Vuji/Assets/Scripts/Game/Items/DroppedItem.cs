@@ -6,21 +6,11 @@ public class DroppedItem : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
 
-    void Start()
+    public void SetItem(BaseItem aitemData)
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
-
-        _spriteRenderer.sprite = itemData.GetImage();
+        this.itemData = aitemData;
+        _spriteRenderer.sprite = aitemData.GetImage();
     }
 
-    void OnTriggerEnter2D(Collider2D entity)
-    {
-        
-        if (entity.gameObject.CompareTag("Player"))
-        {
-            entity.gameObject.GetComponent<Inventory>().AddItem(itemData);
-
-            Destroy(gameObject);
-        }
-    }
 }

@@ -9,11 +9,14 @@ public class BaseEntity : MonoBehaviour
     [SerializeField] private float moveSpeed = 5.0f;
     [SerializeField] private List<BaseSkill> skills = new List<BaseSkill>();
     private PhotonView _view;
+    public GameObject _droppedItemPrefab;
+
 
     #region Public Methods
 
     private void Start()
     {
+        // _droppedItemPrefab = Resources.Load("Assets/InternalAssets/Prefabs/BaseObjects/DroppedItem") as GameObject;
         _view = gameObject.GetComponent<PhotonView>();
     }
 
@@ -46,19 +49,39 @@ public class BaseEntity : MonoBehaviour
     {
         if (gameObject.CompareTag("Player"))
         {
-            _view.RPC("DamagePlayerRemote", RpcTarget.All, healthDamage);
+            DamagePlayerRemote(healthDamage);
+            _view.RPC("DamagePlayerRemote", RpcTarget.Others, healthDamage);
         }
         else
         {
             healthPoints -= healthDamage;
             if (healthPoints <= 0)
             {
-                Destroy(gameObject);
+                Death();
             }
         }
-
-
         Debug.Log(entityName + " hp is " + healthPoints);
+    }
+
+    private void Death()
+    {
+        DropAllItems();
+        Destroy(gameObject);
+    }
+
+    private void DropAllItems()
+    {
+        Inventory inventory = GetComponent<Inventory>();
+        var items = inventory.GetAllItems();
+        foreach(BaseItem itemData in items)
+        {
+
+            Vector2 position = new Vector2(Random.Range(-3.0f, 3.0f) + gameObject.transform.position.x, Random.Range(-3.0f, 3.0f) + gameObject.transform.position.y);
+
+            GameObject droppedItem = Instantiate(_droppedItemPrefab, position, Quaternion.identity);
+            droppedItem.GetComponent<DroppedItem>().SetItem(itemData); 
+        }
+        inventory.ClearInventory();
     }
 
     [PunRPC]
@@ -67,6 +90,7 @@ public class BaseEntity : MonoBehaviour
         healthPoints -= healthDamage;
         if (healthPoints <= 0)
         {
+            DropAllItems();
             gameObject.GetComponent<PlayerScript>().KillPlayer();
         }
     }

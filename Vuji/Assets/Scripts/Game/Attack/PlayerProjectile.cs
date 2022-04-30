@@ -33,7 +33,8 @@ public class PlayerProjectile : MonoBehaviour
             rotatePoint.rotation = Quaternion.Euler(0, 0, _aimAngle);
             if (Input.GetMouseButtonDown(0))
             {
-                _view.RPC("RemoteProjectileAttack", RpcTarget.All, _aimAngle, _aimDirection);
+                RemoteProjectileAttack(_aimAngle, _aimDirection);
+                _view.RPC("RemoteProjectileAttack", RpcTarget.Others, _aimAngle, _aimDirection);
             }
         }
     }

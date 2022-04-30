@@ -19,6 +19,16 @@ public class Inventory : MonoBehaviour
         Debug.Log("Added item: " + item.GetItemName() + item.GetDescription() +  item.GetAmount());
     }
 
+    public void ClearInventory()
+    {
+        inventoryItems.Clear();
+    }
+
+    public void RemoveItem(BaseItem item)
+    {
+        inventoryItems.Remove(item);
+    }
+
     public List<BaseItem> GetAllItems(){
         return inventoryItems;
     }

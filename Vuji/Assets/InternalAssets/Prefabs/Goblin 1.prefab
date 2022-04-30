@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 2170655173613443271}
   - component: {fileID: 2170655173613443270}
   - component: {fileID: 2170655173613443265}
+  - component: {fileID: 8380352050001717541}
   m_Layer: 3
   m_Name: Goblin 1
   m_TagString: Entity
@@ -273,6 +274,7 @@ MonoBehaviour:
   healthPoints: 100
   moveSpeed: 400
   skills: []
+  _droppedItemPrefab: {fileID: 8455292785502437808, guid: 9a0fdf131a4a86540bae8470b1178eba, type: 3}
 --- !u!114 &2170655173613443271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,3 +335,16 @@ MonoBehaviour:
   attackRange: 1
   damage: 10
   attackTimeout: 2
+--- !u!114 &8380352050001717541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2444644922516386366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762379b28effcbe478eefe159bf68bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryItems: []
