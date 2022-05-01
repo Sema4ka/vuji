@@ -9,7 +9,14 @@ public class HealthBarManager : MonoBehaviour
     [SerializeField] Color Low;
     [SerializeField] Color High;
     private Vector3 offset;
-
+    private void Start()
+    {
+        GetComponentInParent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
+        slider.fillRect.GetComponent<RectTransform>().offsetMin = Vector2.zero;
+        slider.fillRect.GetComponent<RectTransform>().offsetMax = Vector2.zero;
+        slider.fillRect.parent.GetComponent<RectTransform>().offsetMax = Vector2.zero;
+        slider.fillRect.parent.GetComponent<RectTransform>().offsetMin = Vector2.zero;
+    }
     public void SetHealth(float health, float maxHp)
     {
         gameObject.SetActive(health < maxHp);
