@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class HealthBarManager : MonoBehaviour
 {
-    [SerializeField] Slider slider;
+    public Slider slider;
     [SerializeField] Color Low;
     [SerializeField] Color High;
     private Vector3 offset;
 
     public void SetHealth(float health, float maxHp)
     {
+        gameObject.SetActive(health < maxHp);
         slider.value = health;
         slider.maxValue = maxHp;
         slider.fillRect.GetComponentInChildren<Image>().color = Color.Lerp(Low, High, slider.normalizedValue);

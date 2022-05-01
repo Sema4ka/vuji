@@ -20,6 +20,11 @@ public class BaseEntity : MonoBehaviour
         float height = 1.0f;
         healthBar.SetOffset(new Vector3(0, height * 0.6f, 0));
         healthBar.SetHealth(healthPoints, maxHealthPoints);
+        gameObject.GetComponentInChildren<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
+        healthBar.slider.fillRect.GetComponent<RectTransform>().offsetMin = Vector2.zero;
+        healthBar.slider.fillRect.GetComponent<RectTransform>().offsetMax = Vector2.zero;
+        healthBar.slider.fillRect.parent.GetComponent<RectTransform>().offsetMax = Vector2.zero;
+        healthBar.slider.fillRect.parent.GetComponent<RectTransform>().offsetMin = Vector2.zero;
     }
 
     private void Update()
