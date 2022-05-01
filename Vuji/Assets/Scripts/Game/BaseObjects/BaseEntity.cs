@@ -12,35 +12,19 @@ public class BaseEntity : MonoBehaviour
     [SerializeField] private List<BaseSkill> skills = new List<BaseSkill>();
 
     #region HealthBar
-    [SerializeField] private GameObject healthBarPrefab;
-    private GameObject healthBar;
-    private float width;
-    private float height;
+    [SerializeField] HealthBarManager healthBar;
     #endregion
     private void Start()
     {
-
-        maxHealthPoints = healthPoints > maxHealthPoints ? healthPoints : maxHealthPoints;
-
-        width = GetComponent<RectTransform>().sizeDelta.x;
-        height = GetComponent<RectTransform>().sizeDelta.y;
-
-        float healthPercentage = healthPoints / maxHealthPoints;
-
-        Vector3 pos = transform.position;
-        healthBar = Instantiate(healthBarPrefab, Vector3.zero, Quaternion.identity);
-        healthBar.transform.SetParent(transform, false);
-
-        healthBar.GetComponent<RectTransform>().position = pos + new Vector3(0, height * 0.6f, 0);
-        healthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(width, height * 0.1f);
-        healthBar.GetComponent<Slider>().value = healthPercentage;
+        maxHealthPoints = Math.Max(maxHealthPoints, healthPoints);
+        float height = 1.0f;
+        healthBar.SetOffset(new Vector3(0, height * 0.6f, 0));
+        healthBar.SetHealth(healthPoints, maxHealthPoints);
     }
 
     private void Update()
     {
-        float healthPercentage = healthPoints / maxHealthPoints;
-        healthBar.GetComponent<Slider>().value = healthPercentage;
-        // healthPercent.sizeDelta = new Vector2(healthPercentage, height * 0.1f);
+        healthBar.SetHealth(healthPoints, maxHealthPoints);
     }
 
     #region Public Methods
