@@ -7,7 +7,7 @@ public class BaseEntity : MonoBehaviour
     [SerializeField] private string entityName = "baseEntityName";
     [SerializeField] private float healthPoints = 100.0f;
     [SerializeField] private float moveSpeed = 5.0f;
-    [SerializeField] private List<BaseSkill> skills = new List<BaseSkill>();
+    [SerializeField] private List<GameObject> skills = new List<GameObject>();
     private PhotonView _view;
     public GameObject _droppedItemPrefab;
 
@@ -25,9 +25,10 @@ public class BaseEntity : MonoBehaviour
         effect.ApplyEffect(this);
     }
 
-    public void UseSkill(BaseSkill skill)
+    public void UseSkill(int skillNum)
     {
-        skill.UseSkill(this);
+        Debug.Log("UseSkill");
+        StartCoroutine(skills[skillNum].GetComponent<BaseSkill>().UseSkill(this.gameObject));
     }
 
     public float GetMoveSpeed()
