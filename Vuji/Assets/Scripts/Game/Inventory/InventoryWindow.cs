@@ -1,83 +1,91 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using System;
 
 public class InventoryWindow : MonoBehaviour
 {
-    [SerializeField] Image highlight;
     [SerializeField] Inventory playerInventory;
     [SerializeField] RectTransform inventoryPanel;
-    private int currentItemIndex = 0;
+
+    
 
     List<GameObject> displayedIcons = new List<GameObject>();
 
     public void Start()
     {
         playerInventory.onItemAdded += OnItemAdded;
+        DisplayedItem.onItemDrop += OnItemDropped;
+        DisplayedItem.onItemSwap += onItemSwapped;
+        KeyHandler.keyPressed += KeyPressed;
         Redraw();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        
+    }
+
+    void onItemSwapped(DisplayedItem item) => OnItemSwap(item);
+    void OnItemDropped(int itemId) => OnItemDrop(itemId);
+    void OnItemAdded(BaseItem item) => Redraw();
+    void KeyPressed(string name, KeyCode key)
+    {
+        string[] words = name.Split(' ');
+        if (words[0] != "Slot") return;
+        int num = Convert.ToInt32(words[1]) - 1;
+        if (displayedIcons.Count() > num)
         {
-            BaseItem currentItem = playerInventory.inventoryItems[currentItemIndex];
-            bool dropAll = Input.GetKeyDown(KeyCode.LeftControl);
-            bool hasItem = currentItem.DropItem(dropAll);
-            if (!hasItem)
+            bool stillHas = playerInventory.inventoryItems[num].UseItem();
+            if (!stillHas)
             {
-                playerInventory.inventoryItems.Remove(currentItem);
-                currentItemIndex--;
-                if (currentItemIndex < 0)
-                {
-                    currentItemIndex = 0;
-                }
-            }
-            Redraw();
-        }
-
-
-        if (displayedIcons.Count < 1) return;
-
-
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            currentItemIndex = (currentItemIndex + 1);
-            if (currentItemIndex > playerInventory.inventoryItems.Count - 1)
-            {
-                currentItemIndex = 0;
-            }
-            else if (currentItemIndex < 0)
-            {
-                currentItemIndex = playerInventory.inventoryItems.Count - 1;
-            }
-            Redraw();
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            currentItemIndex = (currentItemIndex - 1);
-            if (currentItemIndex > playerInventory.inventoryItems.Count - 1)
-            {
-                currentItemIndex = 0;
-            }
-            else if (currentItemIndex < 0)
-            {
-                currentItemIndex = playerInventory.inventoryItems.Count - 1;
+                playerInventory.inventoryItems.RemoveAt(num);
             }
             Redraw();
         }
     }
 
-
-    void OnItemAdded(BaseItem item) => Redraw();
+    void OnItemSwap(DisplayedItem item)
+    {
+        bool swapped = false;
+        foreach (GameObject icon in displayedIcons)
+        {
+            RectTransform iconTransform = icon.GetComponent<RectTransform>();
+            Vector2 mousePos = Input.mousePosition;
+            if (RectTransformUtility.RectangleContainsScreenPoint(iconTransform, mousePos))
+            {
+                int newId = icon.GetComponent<DisplayedItem>().itemId;
+                int oldId = item.itemId;
+                if (newId == oldId) continue;
+                BaseItem swapping = playerInventory.inventoryItems[newId];
+                playerInventory.inventoryItems[newId] = playerInventory.inventoryItems[oldId];
+                playerInventory.inventoryItems[oldId] = swapping;
+                swapped = true;
+                break;
+            }
+        }
+        if (swapped) Redraw();
+        else
+        {
+            item.transform.position = item.itemPosition;
+        }
+    }
+    void OnItemDrop(int itemId)
+    {
+        if (displayedIcons.Count > itemId && itemId >= 0)
+        {
+            if (!playerInventory.inventoryItems[itemId].DropItem()){
+                playerInventory.inventoryItems.RemoveAt(itemId);
+            }
+            Redraw();
+        }
+    }
 
     void Redraw()
     {
-        highlight.transform.SetParent(inventoryPanel);
-        highlight.gameObject.SetActive(false);
         ClearDisplayedItems();
         for (var i = 0; i < playerInventory.inventoryItems.Count; i++)
         {
@@ -87,17 +95,10 @@ public class InventoryWindow : MonoBehaviour
             {
                 var icon = new GameObject(name: "Icon");
                 icon.AddComponent<Image>().sprite = item.GetImage();
+                icon.AddComponent<DisplayedItem>().displayedItem = icon.GetComponent<RectTransform>();
+                icon.GetComponent<DisplayedItem>().inventoryPanel = inventoryPanel;
+                icon.GetComponent<DisplayedItem>().itemId = i;
                 icon.transform.SetParent(inventoryPanel);
-                if (i == currentItemIndex)
-                {
-                    if (!highlight.gameObject.activeSelf)
-                    {
-                        highlight.gameObject.SetActive(true);
-                    }
-                    highlight.transform.SetParent(icon.transform);
-                    
-                    highlight.transform.position = icon.transform.position;
-                }
                 displayedIcons.Add(icon);
             }
         }

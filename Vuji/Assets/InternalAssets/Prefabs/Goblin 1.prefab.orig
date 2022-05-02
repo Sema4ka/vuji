@@ -275,7 +275,11 @@ MonoBehaviour:
   maxHealthPoints: 100
   moveSpeed: 400
   skills: []
+<<<<<<< HEAD
   _droppedItemPrefab: {fileID: 8455292785502437808, guid: 9a0fdf131a4a86540bae8470b1178eba, type: 3}
+=======
+  healthBarPrefab: {fileID: 170056, guid: e41946a981c3b444a84d15eb7c608ca4, type: 3}
+>>>>>>> Levkin
 --- !u!114 &2170655173613443271
 MonoBehaviour:
   m_ObjectHideFlags: 0
