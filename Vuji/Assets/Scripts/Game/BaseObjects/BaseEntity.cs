@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
@@ -20,7 +19,9 @@ public class BaseEntity : MonoBehaviour
     #endregion
     private void Start()
     {
-        maxHealthPoints = Math.Max(maxHealthPoints, healthPoints);
+        _view = gameObject.GetComponent<PhotonView>();
+
+        maxHealthPoints = Mathf.Max(maxHealthPoints, healthPoints);
         float height = 1.0f;
         healthBar.SetOffset(new Vector3(0, height * 0.6f, 0));
         healthBar.SetHealth(healthPoints, maxHealthPoints);
@@ -32,12 +33,6 @@ public class BaseEntity : MonoBehaviour
     }
 
     #region Public Methods
-
-    private void Start()
-    {
-        // _droppedItemPrefab = Resources.Load("Assets/InternalAssets/Prefabs/BaseObjects/DroppedItem") as GameObject;
-        _view = gameObject.GetComponent<PhotonView>();
-    }
 
     public void AddEffect(BaseEffect effect)
     {
