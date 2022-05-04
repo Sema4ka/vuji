@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Data;
 using UnityEngine;
 using Mono.Data.Sqlite;
@@ -47,6 +48,10 @@ public class DataBase : MonoBehaviour
     {
         OpenConnection();
         _command.CommandText = "CREATE TABLE IF NOT EXISTS token (id INTEGER, token STRING, PRIMARY KEY (id));";
+        _command.ExecuteNonQuery();
+        CloseConnection();
+        OpenConnection();
+        _command.CommandText = "CREATE TABLE IF NOT EXISTS keybinds (id INTEGER, name STRING, keybind STRING, category STRING, PRIMARY KEY (id));";
         _command.ExecuteNonQuery();
         CloseConnection();
     }
@@ -126,5 +131,62 @@ public class DataBase : MonoBehaviour
         }
     }
 
+    public bool ExistKeybind(string name)
+    {
+        OpenConnection();
+        _command.CommandText = "SELECT * from keybinds WHERE name ='" + name + "';";
+        _reader = _command.ExecuteReader();
+        if (_reader.Read())
+        {
+            CloseConnection();
+            return true;
+        }
+        CloseConnection();
+        return false;
+        
+    }
+
+    public void AddKeybind(string name, KeyCode key, string category)
+    {
+        OpenConnection();
+        _command.CommandText = "INSERT INTO keybinds (name, keybind, category) VALUES ('" + name + "', '" + key.ToString() + "', '" + category + "');";
+        _command.ExecuteNonQuery();
+        CloseConnection();
+    }
+    public void SetKeybind(string name, KeyCode key)
+    {
+        if (!ExistKeybind(name)) { return; }
+        OpenConnection();
+        _command.CommandText = "UPDATE keybinds SET keybind  = '" + key.ToString() + "' WHERE name ='" + name + "';";
+        _command.ExecuteNonQuery();
+        CloseConnection();
+    }
+    public List<Keybind> GetKeybinds()
+    {
+        List<Keybind> keybinds = new List<Keybind>();
+        OpenConnection();
+        _command.CommandText = "SELECT * from keybinds";
+        _reader = _command.ExecuteReader();
+        while (_reader.Read())
+        {
+            keybinds.Add(new Keybind(_reader["name"].ToString(), _reader["keybind"].ToString(), _reader["category"].ToString()));
+        }
+        CloseConnection();
+        return keybinds;
+    }
     #endregion
+}
+
+public class Keybind
+{
+    public string name;
+    public string key;
+    public string category;
+
+    public Keybind(string name, string key, string category)
+    {
+        this.name = name;
+        this.key = key;
+        this.category = category;
+    }
 }

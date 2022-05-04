@@ -16,6 +16,12 @@ public class PlayerUpgrades : MonoBehaviour
     void Start()
     {
         KeyHandler.keyPressed += KeyPressed;
+        SpawnPlayers.OnSpawn += OnSpawn;
+    }
+
+    void OnSpawn(GameObject playerObject)
+    {
+        player = playerObject.GetComponent<BaseEntity>();
     }
 
     void Update()

@@ -206,7 +206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 969722351}
+      - m_Target: {fileID: 969722348}
         m_TargetAssemblyTypeName: EscapeMenu, Assembly-CSharp
         m_MethodName: OpenSettings
         m_Mode: 1
@@ -481,7 +481,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0005312071}
+  m_AnchoredPosition: {x: 0, y: 0.000064878}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &91812337 stripped
@@ -1382,7 +1382,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0005312071}
+  m_AnchoredPosition: {x: 0, y: 0.000064878}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &206107780
@@ -2121,7 +2121,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1804068491}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999718
+  m_Size: 0.99999243
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6615,6 +6615,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3358193766999599620, guid: 62883f7483d917e498e2e11d0b7db9c0, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7825836781632106004, guid: 62883f7483d917e498e2e11d0b7db9c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 344518803715478542, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -6707,14 +6715,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.UI.Button, UnityEngine.UI
       objectReference: {fileID: 0}
-    - target: {fileID: 3358193766999599620, guid: 62883f7483d917e498e2e11d0b7db9c0, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7825836781632106004, guid: 62883f7483d917e498e2e11d0b7db9c0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62883f7483d917e498e2e11d0b7db9c0, type: 3}
 --- !u!224 &704223088 stripped
@@ -6740,6 +6740,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1443279524973358840, guid: bb406fa652b80eb069c63e299eef1a01, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2268231579532343771, guid: bb406fa652b80eb069c63e299eef1a01, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -10226,6 +10230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ebf22ececda3545981bb83af9401a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataBase: {fileID: 1513204525}
 --- !u!1001 &971340569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11878,7 +11883,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0005312071}
+  m_AnchoredPosition: {x: 0, y: 0.000064878}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1001 &1022439142
@@ -12470,7 +12475,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 969722351}
+      - m_Target: {fileID: 969722348}
         m_TargetAssemblyTypeName: EscapeMenu, Assembly-CSharp
         m_MethodName: LeaveLobby
         m_Mode: 1
@@ -14473,7 +14478,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1056265787}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999718
+  m_Size: 0.99999243
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -14914,6 +14919,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1443279524973358840, guid: bb406fa652b80eb069c63e299eef1a01, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2268231579532343771, guid: bb406fa652b80eb069c63e299eef1a01, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -15444,6 +15453,7 @@ GameObject:
   - component: {fileID: 1513204521}
   - component: {fileID: 1513204523}
   - component: {fileID: 1513204524}
+  - component: {fileID: 1513204525}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -15508,6 +15518,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPlayers: {fileID: 1559671846}
+--- !u!114 &1513204525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513204520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a519817154b0d4e42914594b0b9cfe84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1516947664 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
@@ -16000,7 +16022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f814fc1ead66b42b09a66961b1221f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerGameObject: {fileID: 6754265623814182265, guid: 0c71cf25457e96f4cb1a4afc1a7ba664, type: 3}
+  playerGameObject: {fileID: 0}
   spawnPointTeamOne: {fileID: 1492331144}
   spawnPointTeamTwo: {fileID: 777041490}
 --- !u!4 &1559671848
@@ -16854,7 +16876,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1031644692}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999718
+  m_Size: 0.99999243
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -18630,9 +18652,9 @@ MonoBehaviour:
   videoSettingsPanel: {fileID: 452825175}
   midSettingsPanel: {fileID: 1513159152}
   keybindsPanel: {fileID: 1077542399}
-  movementKeys: {fileID: 1599292240}
-  abilityKeys: {fileID: 929678221}
-  UIKeys: {fileID: 1933149452}
+  movementKeys: {fileID: 1896758719}
+  abilityKeys: {fileID: 2107781637}
+  UIKeys: {fileID: 586227018}
   movementBlocker: {fileID: 504724733}
   maxFpsText: {fileID: 577920466}
 --- !u!1 &1977561841
@@ -18718,7 +18740,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 969722351}
+      - m_Target: {fileID: 969722348}
         m_TargetAssemblyTypeName: EscapeMenu, Assembly-CSharp
         m_MethodName: LeaveGame
         m_Mode: 1
@@ -19336,7 +19358,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 969722351}
+      - m_Target: {fileID: 969722348}
         m_TargetAssemblyTypeName: EscapeMenu, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1

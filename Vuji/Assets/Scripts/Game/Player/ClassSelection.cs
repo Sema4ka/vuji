@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class ClassSelection : MonoBehaviour
 {
+    bool classSet = false;
+
     [SerializeField] int height;
     [SerializeField] GameObject classSelection;
     [SerializeField] GameObject SubclassButton;
@@ -43,7 +45,7 @@ public class ClassSelection : MonoBehaviour
 
     void OnTimerEnd(bool ended)
     {
-        if (ended)
+        if (ended && !classSet)
         {
             var classNum = UnityEngine.Random.Range(1, 3);
             var cls = firstClassSubclasses;
@@ -64,6 +66,7 @@ public class ClassSelection : MonoBehaviour
 
             SetPlayerClass(cls[UnityEngine.Random.Range(0, cls.Length)]);
         }
+        gameObject.SetActive(false);
     }
 
     void SpawnSubclassButtons(RectTransform parent, GameObject[] prefabs)
@@ -83,9 +86,12 @@ public class ClassSelection : MonoBehaviour
 
     void SetPlayerClass(GameObject playerPrefab)
     {
-        classSelection.SetActive(false);
+        firstClass.gameObject.SetActive(false);
+        secondClass.gameObject.SetActive(false);
+        thirdClass.gameObject.SetActive(false);
         Debug.Log(playerPrefab.GetComponent<BaseEntity>().GetEntityName());
         spawnPlayers.playerGameObject = playerPrefab;
+        classSet = true;
     }
 
     // Update is called once per frame

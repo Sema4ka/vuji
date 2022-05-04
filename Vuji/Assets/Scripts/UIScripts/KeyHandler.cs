@@ -25,6 +25,8 @@ public class KeyHandler : MonoBehaviour
     
     #region Fields
     public static KeyHandler instance;
+    private bool spawnPause = true;
+    [SerializeField] DataBase dataBase;
 
     public static List<KeyCode> AllKeys;
     private bool binding = false;
@@ -59,6 +61,7 @@ public class KeyHandler : MonoBehaviour
     {
         instance = this;
         KeybindManager.Binding += OnBinding;
+        SpawnPlayers.OnSpawn += OnSpawn;
         List<KeyCode> _allKeys = new List<KeyCode> { };
         foreach (KeyCode keycode in Enum.GetValues(typeof(KeyCode)))
         {
@@ -67,13 +70,44 @@ public class KeyHandler : MonoBehaviour
 
         AllKeys = _allKeys;
 
+        List<Keybind> keybindList = dataBase.GetKeybinds();
+
+        List<string> movementKeysList = new List<string>();
+        List<string> abilityKeysList = new List<string>();
+        List<string> uiKeysList = new List<string>();
+
+        foreach (Keybind keybind in keybindList)
+        {
+            KeyCode thisKeyCode = (KeyCode)System.Enum.Parse(typeof(KeyCode), keybind.key);
+            keybinds[keybind.name] = thisKeyCode;
+            switch (keybind.category)
+            {
+                case "Movement":
+                    movementKeysList.Add(keybind.name);
+                    break;
+                case "Ability":
+                    abilityKeysList.Add(keybind.name);
+                    break;
+                case "UI":
+                    uiKeysList.Add(keybind.name);
+                    break;
+                default:
+                    Debug.Log("Keybind without a category: " + keybind.name);
+                    break;
+            }
+        }
+
+        movementKeys = movementKeysList.ToArray();
+        abilityKeys = abilityKeysList.ToArray();
+        uiKeys = uiKeysList.ToArray();
+
 
 
         // Check for keybinds file
         // if haven't found one - create it with basic settings
         // string arrays contains names for 3 Categories - Movement, Abilities and UI
-        uiKeys = new string[2] {"Upgrades", "EscapeMenu"};
-        abilityKeys = new string[11] { "Attack", "RangeAttack", "Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5", "Slot 6", "Slot 7", "Slot 8", "Slot 9"};
+        /*uiKeys = new string[2] {"Upgrades", "EscapeMenu"};
+        abilityKeys = new string[] { "Attack", "RangeAttack", "Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5", "Slot 6", "Slot 7", "Slot 8", "Slot 9", "Skill 1", "Skill 2", "Skill 3"};
         movementKeys = new string[4] { "Right", "Left", "Forward", "Backward" };
         keybinds["Upgrades"] = KeyCode.U;
         keybinds["EscapeMenu"] = KeyCode.Escape;
@@ -87,13 +121,34 @@ public class KeyHandler : MonoBehaviour
         {
             keybinds["Slot " + (i + 1).ToString()] = numbersKeyCodes[i];
         }
+        keybinds["Skill 1"] = KeyCode.R;
+        keybinds["Skill 2"] = KeyCode.F;
+        keybinds["Skill 3"] = KeyCode.C;
+
+        foreach (string key in keybinds.Keys)
+        {
+            string category = "";
+            if (movementKeys.Contains(key))
+            {
+                category = "Movement";
+            }
+            if (abilityKeys.Contains(key))
+            {
+                category = "Ability";
+            }
+            if (uiKeys.Contains(key))
+            {
+                category = "UI";
+            }
+            dataBase.AddKeybind(key, keybinds[key], category);
+        }*/
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (binding) return; // Считывание нажатий происходит в KeybindManager во время изменения привязанной клавиши
+        if (binding || spawnPause) return; // Считывание нажатий происходит в KeybindManager во время изменения привязанной клавиши. Не считывает во время паузы
         if (paused) // При открытии меню паузы считываются лишь нажатия esc
         {
             if (Input.GetKeyDown(KeyCode.Escape)) {
@@ -111,6 +166,12 @@ public class KeyHandler : MonoBehaviour
             }
         }
     }
+
+    void OnSpawn(GameObject player)
+    {
+        spawnPause = false;
+    }
+
     #region EscapeManagementFunctions
     /// <summary>
     /// Регулирует "приостановку" игры. Во время паузы считывается только нажатие ESC
@@ -167,7 +228,7 @@ public class KeyHandler : MonoBehaviour
         if (!keybinds.ContainsKey(name)) return KeyCode.None;
         return keybinds[name];
     }
-    /// <summary>
+    /// <summary>-*
     /// Установить привязанную клавишу для действия
     /// </summary>
     /// <param name="name">Действие</param>
@@ -180,6 +241,7 @@ public class KeyHandler : MonoBehaviour
             return false;
         }
         keybinds[name] = key;
+        dataBase.SetKeybind(name, key);
         return true;
     }
 }

@@ -14,8 +14,9 @@ public class BaseEntity : MonoBehaviour
     public GameObject _droppedItemPrefab;
 
 
-    #region HealthBar
-    [SerializeField] HealthBarManager healthBar;
+    #region Information
+    [SerializeField] public HealthBarManager healthBar;
+    [SerializeField] public EntityNameManager displayedName;
     #endregion
     private void Start()
     {
@@ -25,6 +26,8 @@ public class BaseEntity : MonoBehaviour
         float height = 1.0f;
         healthBar.SetOffset(new Vector3(0, height * 0.6f, 0));
         healthBar.SetHealth(healthPoints, maxHealthPoints);
+        displayedName.SetOffset(new Vector3(0, height * 0.6f, 0));
+        displayedName.SetText(entityName);
     }
 
     private void Update()
