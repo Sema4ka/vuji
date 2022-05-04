@@ -9,10 +9,13 @@ public class BaseEntity : MonoBehaviour
     [SerializeField] private float healthPoints = 100.0f;
     [SerializeField] private float maxHealthPoints = 100.0f;
     [SerializeField] private float moveSpeed = 5.0f;
-    [SerializeField] private List<GameObject> skills = new List<GameObject>();
+    [SerializeField] private GameObject qSkill;
+    [SerializeField] private GameObject eSkill;
+
     private PhotonView _view;
     public GameObject _droppedItemPrefab;
-
+    private bool isQCooldown = false;
+    private bool isEColldown = false;
 
     #region HealthBar
     [SerializeField] HealthBarManager healthBar;
@@ -41,8 +44,19 @@ public class BaseEntity : MonoBehaviour
 
     public void UseSkill(int skillNum)
     {
-        Debug.Log("UseSkill");
-        StartCoroutine(skills[skillNum].GetComponent<BaseSkill>().UseSkill(this.gameObject));
+        Debug.Log(isQCooldown);
+        if (!isQCooldown)
+            if(Input.GetMouseButton(0))
+                StartCoroutine(qSkill.GetComponent<BaseSkill>().UseSkill(this.gameObject, "q"));
+        if (!isEColldown)
+            if(Input.GetMouseButton(1))
+                StartCoroutine(eSkill.GetComponent<BaseSkill>().UseSkill(this.gameObject, "e"));
+    }
+
+    public void setIsCooldown(string key, bool value)
+    {
+        if(key == "q") this.isQCooldown = value;
+        if(key == "e") this.isEColldown = value;
     }
 
     public float GetMoveSpeed()

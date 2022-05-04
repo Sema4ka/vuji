@@ -7,19 +7,15 @@ public class FireballSkill : BaseSkill
 {
     [SerializeField] private GameObject projectile;
 
-    private void Start() {
-        this.energyCost = 20;
-        this.castTime = 10f;
-        this.cooldown = 1f;
-    }
-
-    public override IEnumerator UseSkill(GameObject caster)
+    public override IEnumerator UseSkill(GameObject caster, string key)
     {
-        base.UseSkill(caster);
-        yield return new WaitForSeconds(10.0f);
+        base.UseSkill(caster, key);
+        caster.GetComponent<BaseEntity>().setIsCooldown(key, true);
+        yield return new WaitForSeconds(castTime);
 
         caster.GetComponent<PlayerProjectile>().Attack(projectile);
-        
+
         yield return new WaitForSeconds(cooldown);
+        caster.GetComponent<BaseEntity>().setIsCooldown(key, false);
     }       
 }

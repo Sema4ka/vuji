@@ -7,16 +7,17 @@ using UnityEngine;
 [System.Serializable]
 public class BaseSkill : MonoBehaviour 
 {
-    // "Количество маны требуемое для использования способности"
-    protected int energyCost { get; set; }
+    [Tooltip("Количество маны требуемое для использования способности")]
+    [SerializeField] protected int energyCost;
 
-    // "Время, которое проходит между нажатием кнопки и активацией способности"
-    protected float castTime { get; set; }
+    [Tooltip("Время, которое проходит между нажатием кнопки и активацией способности")]
+    [SerializeField] protected float castTime;
 
-    // "Задержка перед повторным использованием способности"
-    protected float cooldown { get; set; }
+    [Tooltip("Задержка перед повторным использованием способности")]
+    [SerializeField] protected float cooldown;
 
-    public virtual IEnumerator UseSkill(GameObject caster) {
+    public virtual IEnumerator UseSkill(GameObject caster, string key) {
+        caster.GetComponent<BaseEntity>().setIsCooldown(key, true);
         yield return new WaitForSeconds(castTime);
     }
 }

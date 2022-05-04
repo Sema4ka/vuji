@@ -43,4 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72fd7d1a190dc969c9b60a907598eade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  energyCost: 20
+  castTime: 1
+  cooldown: 5
   projectile: {fileID: 8255796032531646231, guid: cb552d274162fca42b4ff650b5074138, type: 3}
