@@ -11,20 +11,27 @@ public class SpawnPlayers : MonoBehaviour
 
     private void Start()
     {
-        foreach (var player in PhotonNetwork.PlayerList)
+        
+    }
+    private void Update()
+    {
+        if (playerGameObject != null)
         {
-            if (player.Equals(PhotonNetwork.LocalPlayer))
+            foreach (var player in PhotonNetwork.PlayerList)
             {
-                if (player.GetPhotonTeam().Name == "TeamOne")
+                if (player.Equals(PhotonNetwork.LocalPlayer))
                 {
-                    _position = spawnPointTeamOne.position;
-                }
-                else if (player.GetPhotonTeam().Name == "TeamTwo")
-                {
-                    _position = spawnPointTeamTwo.position;
+                    if (player.GetPhotonTeam().Name == "TeamOne")
+                    {
+                        _position = spawnPointTeamOne.position;
+                    }
+                    else if (player.GetPhotonTeam().Name == "TeamTwo")
+                    {
+                        _position = spawnPointTeamTwo.position;
+                    }
                 }
             }
+            PhotonNetwork.Instantiate(playerGameObject.name, _position, Quaternion.identity);
         }
-        PhotonNetwork.Instantiate(playerGameObject.name, _position, Quaternion.identity);
     }
 }
