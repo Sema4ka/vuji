@@ -66,7 +66,8 @@ public class ClassSelection : MonoBehaviour
 
             SetPlayerClass(cls[UnityEngine.Random.Range(0, cls.Length)]);
         }
-        gameObject.SetActive(false);
+        Debug.Log(classSelection.activeSelf);
+        classSelection.SetActive(false);
     }
 
     void SpawnSubclassButtons(RectTransform parent, GameObject[] prefabs)
@@ -86,6 +87,7 @@ public class ClassSelection : MonoBehaviour
 
     void SetPlayerClass(GameObject playerPrefab)
     {
+        if (classSet) return;
         firstClass.gameObject.SetActive(false);
         secondClass.gameObject.SetActive(false);
         thirdClass.gameObject.SetActive(false);

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using ExitGames.Client.Photon;
 using UnityEngine;
+using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
 using PhotonHashtable = ExitGames.Client.Photon.Hashtable;
@@ -20,6 +21,8 @@ public class Play : MonoBehaviourPunCallbacks
     private readonly RoomOptions _roomOptions = new RoomOptions {MaxPlayers = 4, IsOpen = true, IsVisible = true};
     private readonly List<string> _playerInRoom = new List<string>();
 
+    [SerializeField] Text errorText;
+
     /// <summary>
     /// Событие кнопки Play
     /// </summary>
@@ -32,9 +35,13 @@ public class Play : MonoBehaviourPunCallbacks
         }
 
         // играет не один (запускает только лидер комнаты)
-        if (PhotonNetwork.PlayerList.Length > 1 && PhotonNetwork.IsMasterClient)
+        else if (PhotonNetwork.PlayerList.Length > 1 && PhotonNetwork.IsMasterClient)
         {
             PlayInTeam();
+        }
+        else
+        {
+            errorText.text = "Not leader";
         }
     }
 
@@ -167,6 +174,7 @@ public class Play : MonoBehaviourPunCallbacks
             {
                 gameObject.GetComponent<StartGameLevel>().enabled = true;
                 PhotonNetwork.JoinRandomOrCreateRoom(roomOptions: _roomOptions);
+                Debug.Log("Aboba");
             }
 
             // Play team master client
@@ -191,6 +199,10 @@ public class Play : MonoBehaviourPunCallbacks
             }
 
             _startMode = 0;
+        }
+        else
+        {
+            errorText.text = "Not connected";
         }
     }
 }

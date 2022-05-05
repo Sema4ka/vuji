@@ -17,7 +17,7 @@ public class InventoryWindow : MonoBehaviour
 
     public void Start()
     {
-        playerInventory.onItemAdded += OnItemAdded;
+        if (playerInventory != null) playerInventory.onItemAdded += OnItemAdded;
         DisplayedItem.onItemDrop += OnItemDropped;
         DisplayedItem.onItemSwap += onItemSwapped;
         KeyHandler.keyPressed += KeyPressed;
@@ -28,6 +28,7 @@ public class InventoryWindow : MonoBehaviour
     void OnSpawn(GameObject playerObject)
     {
         playerInventory = playerObject.GetComponent<Inventory>();
+        playerInventory.onItemAdded += OnItemAdded;
     }
 
     private void Update()
@@ -83,7 +84,7 @@ public class InventoryWindow : MonoBehaviour
     {
         if (displayedIcons.Count > itemId && itemId >= 0)
         {
-            if (!playerInventory.inventoryItems[itemId].DropItem()){
+            if (!playerInventory.DropItem(playerInventory.inventoryItems[itemId])){
                 playerInventory.inventoryItems.RemoveAt(itemId);
             }
             Redraw();
