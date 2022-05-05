@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Collider32x32
+  m_Name: LevelSprites_39
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 76e9291d3abcb194fab17305ef5ef642, type: 3}
+  m_Sprite: {fileID: -4305302564252043055, guid: 233c814fae372ce4ba4915eb9b743bcc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
