@@ -44,5 +44,6 @@ public class SpawnPlayers : MonoBehaviour
             GameObject playerObject = PhotonNetwork.Instantiate(playerGameObject.name, _position, Quaternion.identity);
             OnSpawn?.Invoke(playerObject);
         }
+        canSpawn = false;
     }
 }

@@ -174,7 +174,6 @@ public class Play : MonoBehaviourPunCallbacks
             {
                 gameObject.GetComponent<StartGameLevel>().enabled = true;
                 PhotonNetwork.JoinRandomOrCreateRoom(roomOptions: _roomOptions);
-                Debug.Log("Aboba");
             }
 
             // Play team master client

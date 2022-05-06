@@ -22,13 +22,13 @@ public class InventoryWindow : MonoBehaviour
         DisplayedItem.onItemSwap += onItemSwapped;
         KeyHandler.keyPressed += KeyPressed;
         SpawnPlayers.OnSpawn += OnSpawn;
-        Redraw();
     }
 
     void OnSpawn(GameObject playerObject)
     {
         playerInventory = playerObject.GetComponent<Inventory>();
         playerInventory.onItemAdded += OnItemAdded;
+        Redraw();
     }
 
     private void Update()
