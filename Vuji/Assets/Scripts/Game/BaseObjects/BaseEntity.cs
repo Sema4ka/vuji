@@ -7,6 +7,7 @@ public class BaseEntity : MonoBehaviour
     [SerializeField] private float healthPoints = 100.0f;
     [SerializeField] private float moveSpeed = 5.0f;
     [SerializeField] private List<BaseSkill> skills = new List<BaseSkill>();
+    [SerializeField] private Inventory inventorie = new Inventory();
 
     #region Public Methods
 
