@@ -5,7 +5,7 @@ using Photon.Pun.UtilityScripts;
 
 public class SpawnPlayers : MonoBehaviour
 {
-    public GameObject playerGameObject = null;
+    private GameObject playerGameObject = null;
 
     public static Action<GameObject> OnSpawn;
 
@@ -45,5 +45,10 @@ public class SpawnPlayers : MonoBehaviour
             OnSpawn?.Invoke(playerObject);
         }
         canSpawn = false;
+    }
+
+    public void SetPlayerObject(GameObject prefab)
+    {
+        playerGameObject = prefab;
     }
 }

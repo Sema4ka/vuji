@@ -92,7 +92,7 @@ public class ClassSelection : MonoBehaviour
         secondClass.gameObject.SetActive(false);
         thirdClass.gameObject.SetActive(false);
         Debug.Log(playerPrefab.GetComponent<BaseEntity>().GetEntityName());
-        spawnPlayers.playerGameObject = playerPrefab;
+        spawnPlayers.SetPlayerObject(playerPrefab);
         classSet = true;
     }
 
