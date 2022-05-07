@@ -18,6 +18,6 @@ public class BaseSkill : MonoBehaviour
 
     public virtual IEnumerator UseSkill(GameObject caster, string key) {
         caster.GetComponent<BaseEntity>().setIsCooldown(key, true);
-        yield return new WaitForSeconds(castTime);
+        yield return new WaitForSeconds(0.0f);
     }
 }

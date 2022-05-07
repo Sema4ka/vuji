@@ -14,8 +14,9 @@ public class BaseEntity : MonoBehaviour
 
     private PhotonView _view;
     public GameObject _droppedItemPrefab;
-    private bool isQCooldown = false;
-    private bool isEColldown = false;
+    private bool _isQCooldown = false;
+    private bool _isEColldown = false;
+    private string _selectedSkill = "";
 
     #region HealthBar
     [SerializeField] HealthBarManager healthBar;
@@ -23,6 +24,8 @@ public class BaseEntity : MonoBehaviour
     private void Start()
     {
         _view = gameObject.GetComponent<PhotonView>();
+        
+        // KeyHandler.keyPressed += UseSkill;
 
         maxHealthPoints = Mathf.Max(maxHealthPoints, healthPoints);
         float height = 1.0f;
@@ -33,6 +36,22 @@ public class BaseEntity : MonoBehaviour
     private void Update()
     {
         healthBar.SetHealth(healthPoints, maxHealthPoints);
+
+
+        if (_view.IsMine){
+            if (Input.GetMouseButtonDown(0))
+            {
+                this.UseSkill(_selectedSkill, KeyCode.Mouse0);
+            }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                this.UseSkill(_selectedSkill, KeyCode.Q);
+            }
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                this.UseSkill(_selectedSkill, KeyCode.E);
+            }
+        }   
     }
 
     #region Public Methods
@@ -42,21 +61,69 @@ public class BaseEntity : MonoBehaviour
         effect.ApplyEffect(this);
     }
 
-    public void UseSkill(int skillNum)
+    public void UseSkill(string skillName, KeyCode key)
     {
-        Debug.Log(isQCooldown);
-        if (!isQCooldown)
-            if(Input.GetMouseButton(0))
-                StartCoroutine(qSkill.GetComponent<BaseSkill>().UseSkill(this.gameObject, "q"));
-        if (!isEColldown)
-            if(Input.GetMouseButton(1))
-                StartCoroutine(eSkill.GetComponent<BaseSkill>().UseSkill(this.gameObject, "e"));
+        if(key == KeyCode.Q){
+
+            if(_isQCooldown){
+                Debug.Log("Q COOLDOWN");
+                return;
+            }
+            if (_selectedSkill == "")
+            {
+                _selectedSkill = "q";
+                Debug.Log("Selected q skill");
+            } 
+            else 
+            {
+                _selectedSkill =  "";
+                Debug.Log("DeSelected q skill");
+            }
+        }
+        if(key == KeyCode.E)
+        {
+            if(_isEColldown){
+                Debug.Log("E COOLDOWN");
+                return;
+            }
+
+            if (_selectedSkill == "")
+            {
+                Debug.Log("Selected e skill");
+                 _selectedSkill = "e";
+            }
+            else 
+            {
+                Debug.Log("DeSelected e skill");
+                _selectedSkill =  "";
+            }
+        }
+        
+        if(key == KeyCode.Mouse0)
+        {
+            if(_selectedSkill == "q")
+            {
+                Debug.Log("Used q skill");
+                StartCoroutine(qSkill.GetComponent<BaseSkill>().UseSkill(this.gameObject, _selectedSkill));
+            } 
+            if(_selectedSkill == "e")
+            {
+                Debug.Log("Used e skill");
+                StartCoroutine(eSkill.GetComponent<BaseSkill>().UseSkill(this.gameObject, _selectedSkill));
+            }
+            _selectedSkill = "";
+        }
+    }
+
+    private void setCurrentSkill(string skillName)
+    {
+        this._selectedSkill = skillName;
     }
 
     public void setIsCooldown(string key, bool value)
     {
-        if(key == "q") this.isQCooldown = value;
-        if(key == "e") this.isEColldown = value;
+        if(key == "q") this._isQCooldown = value;
+        if(key == "e") this._isEColldown = value;
     }
 
     public float GetMoveSpeed()
