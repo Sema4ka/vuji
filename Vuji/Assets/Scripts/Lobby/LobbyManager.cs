@@ -12,6 +12,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     [SerializeField] Text username;
     private Controllers _controllers;
+    [SerializeField] GameObject settings;
 
     #endregion
 
@@ -87,6 +88,10 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         acceptFriendInvite.roomName = roomName;
         acceptFriendInvite.StartAcceptInvite();
     }
-
+    
+    public void ToggleSettings()
+    {
+        settings.SetActive(!settings.activeSelf);
+    }
     #endregion
 }

@@ -54,6 +54,10 @@ public class DataBase : MonoBehaviour
         _command.CommandText = "CREATE TABLE IF NOT EXISTS keybinds (id INTEGER, name STRING, keybind STRING, category STRING, PRIMARY KEY (id));";
         _command.ExecuteNonQuery();
         CloseConnection();
+        OpenConnection();
+        _command.CommandText = "CREATE TABLE IF NOT EXISTS settings (id INTEGER, name STRING, value STRING, PRIMARY KEY (id));";
+        _command.ExecuteNonQuery();
+        CloseConnection();
     }
 
     /// <summary>
@@ -174,6 +178,52 @@ public class DataBase : MonoBehaviour
         CloseConnection();
         return keybinds;
     }
+
+    public void AddSetting(string name, string value)
+    {
+        OpenConnection();
+        _command.CommandText = "INSERT INTO settings (name, value) VALUES ('" + name + "', '" + value + "');";
+        _command.ExecuteNonQuery();
+        CloseConnection();
+    }
+
+    public bool ExistSetting(string name)
+    {
+        OpenConnection();
+        _command.CommandText = "SELECT * from settings WHERE name ='" + name + "';";
+        _reader = _command.ExecuteReader();
+        if (_reader.Read())
+        {
+            CloseConnection();
+            return true;
+        }
+        CloseConnection();
+        return false;
+    }
+
+    public void SetSetting(string name, string value)
+    {
+        if (!ExistSetting(name)) { return; }
+        OpenConnection();
+        _command.CommandText = "UPDATE settings SET value  = '" + value + "' WHERE name ='" + name + "';";
+        _command.ExecuteNonQuery();
+        CloseConnection();
+    }
+
+    public List<Setting> GetSettings()
+    {
+        List<Setting> keybinds = new List<Setting>();
+        OpenConnection();
+        _command.CommandText = "SELECT * from settings";
+        _reader = _command.ExecuteReader();
+        while (_reader.Read())
+        {
+            keybinds.Add(new Setting(_reader["name"].ToString(), _reader["value"].ToString()));
+        }
+        CloseConnection();
+        return keybinds;  
+    }
+
     #endregion
 }
 
@@ -188,5 +238,16 @@ public class Keybind
         this.name = name;
         this.key = key;
         this.category = category;
+    }
+}
+
+public class Setting
+{
+    public string name;
+    public string value;
+    public Setting(string name, string value)
+    {
+        this.name = name;
+        this.value = value;
     }
 }

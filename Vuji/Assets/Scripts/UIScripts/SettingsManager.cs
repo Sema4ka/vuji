@@ -10,6 +10,7 @@ public class SettingsManager : MonoBehaviour
     #region Fields
     public static Action<bool> keybindMovementToggled;
     [SerializeField] GameObject Keybind;
+    [SerializeField] DataBase dataBase;
     #region PanelsFields
     [SerializeField] RectTransform settingsPanel;
     [SerializeField] RectTransform videoSettingsPanel;
@@ -25,6 +26,10 @@ public class SettingsManager : MonoBehaviour
     private int resolutionX = 800;
     private int resolutionY = 600;
     [SerializeField] Text maxFpsText;
+    [SerializeField] Dropdown resolutionDropdown;
+    [SerializeField] Toggle vSyncToggle;
+    [SerializeField] Toggle fullscreenToggle;
+    [SerializeField] Slider fpsSlider;
     #endregion
 
     #region KeybindsFields
@@ -34,6 +39,32 @@ public class SettingsManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        var settingsList = dataBase.GetSettings();
+        foreach (Setting setting in settingsList)
+        {
+            switch (setting.name)
+            {
+                case "FPS":
+                    fpsSlider.value = Convert.ToInt32(setting.value);
+                    ChangeFps(fpsSlider);
+                    break;
+                case "VSync":
+                    vSyncToggle.isOn = Convert.ToBoolean(setting.value);
+                    ChangeVsync(vSyncToggle);
+                    break;
+                case "Resolution":
+                    resolutionDropdown.value = Convert.ToInt32(setting.value);
+                    ChangeResolution(resolutionDropdown);
+                    break;
+                case "Fullscreen":
+                    fullscreenToggle.isOn = Convert.ToBoolean(setting.value);
+                    ChangeFullscreen(fullscreenToggle);
+                    break;
+
+            }
+        }
+
+
         KeyHandler.keyPressed += OnKeyPressed;
         KeybindManager.keyChanged += OnKeyChanged;
         int movY = -50, ablY = -50, UIY = -50;
@@ -97,34 +128,35 @@ public class SettingsManager : MonoBehaviour
             keybind.ResetKeybind();
         }
     }
-    public void OnScroll(Vector2 vector)
-    {
-        Debug.Log(vector.ToString());
-    }
     #region VideoSettingsManager
     public void ChangeFullscreen(Toggle fullscreenToggle)
     {
         fullscreen = fullscreenToggle.isOn;
+        dataBase.SetSetting("Fullscreen", fullscreen.ToString());
         SetScreenResolution();
     }
 
-    public void ChangeResolution(Text dropdownItemText)
+    public void ChangeResolution(Dropdown dropdown)
     {
-        string[] resolution = dropdownItemText.text.ToString().Split('x'); ;
+        dropdown.Hide();
+        string[] resolution = dropdown.captionText.text.ToString().Split('x'); ;
         Debug.Log(string.Join(" ", resolution));
         int.TryParse(resolution[0], out resolutionX);
         int.TryParse(resolution[1], out resolutionY);
+        dataBase.SetSetting("Resolution", dropdown.value.ToString());
         SetScreenResolution();
     }
     public void ChangeFps(Slider fpsSlider)
     {
         Application.targetFrameRate = int.Parse(fpsSlider.value.ToString());
+        dataBase.SetSetting("FPS", fpsSlider.value.ToString());
         maxFpsText.text = "Max FPS: " + fpsSlider.value.ToString();
     }
     
     public void ChangeVsync(Toggle vsyncToggle)
     {
         QualitySettings.vSyncCount = Convert.ToInt32(vsyncToggle.isOn);
+        dataBase.SetSetting("VSync", vsyncToggle.isOn.ToString());
     }
 
     private void SetScreenResolution()
