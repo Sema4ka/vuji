@@ -1,7 +1,7 @@
 using System.Collections.Generic;
+using System;
 using Photon.Pun;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BaseEntity : MonoBehaviour
 {
@@ -9,14 +9,23 @@ public class BaseEntity : MonoBehaviour
     [SerializeField] private float healthPoints = 100.0f;
     [SerializeField] private float maxHealthPoints = 100.0f;
     [SerializeField] private float moveSpeed = 5.0f;
-    [SerializeField] private GameObject qSkill;
-    [SerializeField] private GameObject eSkill;
+
+    //Аналог словаря для юнити инспектора
+    [Serializable]
+    public struct Skill {
+        public string key;
+        public GameObject skill;
+    }
+    public Skill[] skills;
+
+    public GameObject _droppedItemPrefab;
 
     private PhotonView _view;
-    public GameObject _droppedItemPrefab;
-    private bool _isQCooldown = false;
-    private bool _isEColldown = false;
+
+    private bool _isSkill1Cooldown = false;
+    private bool _isSkill2Cooldown = false;
     private string _selectedSkill = "";
+    private Dictionary<string, GameObject> _skills = new Dictionary<string, GameObject>();
 
     #region HealthBar
     [SerializeField] HealthBarManager healthBar;
@@ -25,8 +34,13 @@ public class BaseEntity : MonoBehaviour
     {
         _view = gameObject.GetComponent<PhotonView>();
         
-        // KeyHandler.keyPressed += UseSkill;
-
+        // Заполнение обычного словаря скилов из словаря из инспектора
+        if (skills.Length != 0)
+            for(int i = 0; i < skills.Length; i++){
+                Debug.Log(skills[i].key + " " + skills[i].skill);
+                this._skills[skills[i].key] = skills[i].skill;
+            }
+        
         maxHealthPoints = Mathf.Max(maxHealthPoints, healthPoints);
         float height = 1.0f;
         healthBar.SetOffset(new Vector3(0, height * 0.6f, 0));
@@ -37,19 +51,19 @@ public class BaseEntity : MonoBehaviour
     {
         healthBar.SetHealth(healthPoints, maxHealthPoints);
 
-
-        if (_view.IsMine){
+        // Костыль для инпутов, заменить потом на keyhandler
+        if (gameObject.CompareTag("Player")){
             if (Input.GetMouseButtonDown(0))
             {
                 this.UseSkill(_selectedSkill, KeyCode.Mouse0);
             }
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                this.UseSkill(_selectedSkill, KeyCode.Q);
+                this.UseSkill("Skill 1", KeyCode.Q);
             }
             if (Input.GetKeyDown(KeyCode.E))
             {
-                this.UseSkill(_selectedSkill, KeyCode.E);
+                this.UseSkill("Skill 2", KeyCode.E);
             }
         }   
     }
@@ -63,67 +77,54 @@ public class BaseEntity : MonoBehaviour
 
     public void UseSkill(string skillName, KeyCode key)
     {
-        if(key == KeyCode.Q){
-
-            if(_isQCooldown){
-                Debug.Log("Q COOLDOWN");
-                return;
-            }
-            if (_selectedSkill == "")
-            {
-                _selectedSkill = "q";
-                Debug.Log("Selected q skill");
-            } 
-            else 
-            {
-                _selectedSkill =  "";
-                Debug.Log("DeSelected q skill");
-            }
-        }
-        if(key == KeyCode.E)
+        // Если скилл не выбран
+        if(_selectedSkill == "")
         {
-            if(_isEColldown){
-                Debug.Log("E COOLDOWN");
-                return;
-            }
-
-            if (_selectedSkill == "")
-            {
-                Debug.Log("Selected e skill");
-                 _selectedSkill = "e";
-            }
-            else 
-            {
-                Debug.Log("DeSelected e skill");
-                _selectedSkill =  "";
-            }
+            selectSkill(skillName);
         }
-        
-        if(key == KeyCode.Mouse0)
-        {
-            if(_selectedSkill == "q")
+        else
+        {   
+            // Если скилл использован
+            if(key == KeyCode.Mouse0)
             {
-                Debug.Log("Used q skill");
-                StartCoroutine(qSkill.GetComponent<BaseSkill>().UseSkill(this.gameObject, _selectedSkill));
-            } 
-            if(_selectedSkill == "e")
-            {
-                Debug.Log("Used e skill");
-                StartCoroutine(eSkill.GetComponent<BaseSkill>().UseSkill(this.gameObject, _selectedSkill));
+                Debug.Log("Used " + skillName);
+                StartCoroutine(_skills[skillName].GetComponent<BaseSkill>().UseSkill(this.gameObject, _selectedSkill));
+                deSelectSkill();
             }
-            _selectedSkill = "";
+            // Если скилл выбран, но тот же скилл выбрали ещё раз 
+            else if(_selectedSkill == skillName) deSelectSkill();
+                else selectSkill(skillName);
         }
     }
 
-    private void setCurrentSkill(string skillName)
+    private void deSelectSkill()
     {
-        this._selectedSkill = skillName;
+        Debug.Log("Deselected" + _selectedSkill);
+        this._selectedSkill = "";
+    }
+
+    private void selectSkill(string skillName)
+    {
+        if(skillName == "") {
+            Debug.Log("Skill is not selected");
+            return;
+        }
+
+        if((skillName == "Skill 1" && !_isSkill1Cooldown) || (skillName == "Skill 2" && !_isSkill2Cooldown))
+        {
+            Debug.Log("Selected " + skillName);  
+            this._selectedSkill = skillName;
+        }
+        else
+        {
+            Debug.Log(skillName + " COOLDOWN");
+        }
     }
 
     public void setIsCooldown(string key, bool value)
     {
-        if(key == "q") this._isQCooldown = value;
-        if(key == "e") this._isEColldown = value;
+        if(key == "Skill 1") this._isSkill1Cooldown = value;
+        if(key == "Skill 2") this._isSkill2Cooldown = value;
     }
 
     public float GetMoveSpeed()
@@ -177,7 +178,7 @@ public class BaseEntity : MonoBehaviour
         foreach(BaseItem itemData in items)
         {
 
-            Vector2 position = new Vector2(Random.Range(-3.0f, 3.0f) + gameObject.transform.position.x, Random.Range(-3.0f, 3.0f) + gameObject.transform.position.y);
+            Vector2 position = new Vector2(UnityEngine.Random.Range(-3.0f, 3.0f) + gameObject.transform.position.x, UnityEngine.Random.Range(-3.0f, 3.0f) + gameObject.transform.position.y);
 
             GameObject droppedItem = Instantiate(_droppedItemPrefab, position, Quaternion.identity);
             droppedItem.GetComponent<DroppedItem>().SetItem(itemData); 

@@ -2527,7 +2527,7 @@ PrefabInstance:
       objectReference: {fileID: 2704600687908857770, guid: bf66dd50fd97194fcb788fa3109e812b, type: 3}
     - target: {fileID: 2105968536238032701, guid: 0c71cf25457e96f4cb1a4afc1a7ba664, type: 3}
       propertyPath: skills.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2105968536238032701, guid: 0c71cf25457e96f4cb1a4afc1a7ba664, type: 3}
       propertyPath: _droppedItemPrefab
@@ -2541,6 +2541,22 @@ PrefabInstance:
       propertyPath: skills.Array.data[1]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2105968536238032701, guid: 0c71cf25457e96f4cb1a4afc1a7ba664, type: 3}
+      propertyPath: skills.Array.data[0].key
+      value: Skill 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105968536238032701, guid: 0c71cf25457e96f4cb1a4afc1a7ba664, type: 3}
+      propertyPath: skills.Array.data[1].key
+      value: Skill 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105968536238032701, guid: 0c71cf25457e96f4cb1a4afc1a7ba664, type: 3}
+      propertyPath: skills.Array.data[0].skill
+      value: 
+      objectReference: {fileID: 2704600687908857770, guid: bf66dd50fd97194fcb788fa3109e812b, type: 3}
+    - target: {fileID: 2105968536238032701, guid: 0c71cf25457e96f4cb1a4afc1a7ba664, type: 3}
+      propertyPath: skills.Array.data[1].skill
+      value: 
+      objectReference: {fileID: 2704600687908857770, guid: bf66dd50fd97194fcb788fa3109e812b, type: 3}
     - target: {fileID: 4064142261662602145, guid: 0c71cf25457e96f4cb1a4afc1a7ba664, type: 3}
       propertyPath: projectile
       value: 
@@ -2564,23 +2580,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 455578528085361886, guid: 0c71cf25457e96f4cb1a4afc1a7ba664, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0c71cf25457e96f4cb1a4afc1a7ba664, type: 3}
---- !u!1 &1629266489 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6754265623814182265, guid: 0c71cf25457e96f4cb1a4afc1a7ba664, type: 3}
-  m_PrefabInstance: {fileID: 1572066963}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1629266490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629266489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28c117bc8222e175d98f90d3e8d0ed82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1984878328
 GameObject:
   m_ObjectHideFlags: 0
@@ -3352,6 +3351,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin
       objectReference: {fileID: 0}
+    - target: {fileID: 545032546118323542, guid: cc3ccad3a27def198881bbffa0e221a5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2730506785420501250, guid: cc3ccad3a27def198881bbffa0e221a5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3436,6 +3439,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7342590228761554294, guid: cc3ccad3a27def198881bbffa0e221a5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7342590228761554294, guid: cc3ccad3a27def198881bbffa0e221a5, type: 3}
+      propertyPath: skills.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7342590228761554294, guid: cc3ccad3a27def198881bbffa0e221a5, type: 3}
+      propertyPath: skills.Array.data[0].key
+      value: q
+      objectReference: {fileID: 0}
+    - target: {fileID: 7342590228761554294, guid: cc3ccad3a27def198881bbffa0e221a5, type: 3}
+      propertyPath: skills.Array.data[1].key
+      value: e
+      objectReference: {fileID: 0}
+    - target: {fileID: 7342590228761554294, guid: cc3ccad3a27def198881bbffa0e221a5, type: 3}
+      propertyPath: skills.Array.data[0].skill
+      value: 
+      objectReference: {fileID: 2704600687908857770, guid: bf66dd50fd97194fcb788fa3109e812b, type: 3}
+    - target: {fileID: 7342590228761554294, guid: cc3ccad3a27def198881bbffa0e221a5, type: 3}
+      propertyPath: skills.Array.data[1].skill
+      value: 
+      objectReference: {fileID: 2704600687908857770, guid: bf66dd50fd97194fcb788fa3109e812b, type: 3}
+    - target: {fileID: 7342590228761554294, guid: cc3ccad3a27def198881bbffa0e221a5, type: 3}
+      propertyPath: skillsInspector.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7342590228761554294, guid: cc3ccad3a27def198881bbffa0e221a5, type: 3}
+      propertyPath: skillsInspector.Array.data[0].key
+      value: q
+      objectReference: {fileID: 0}
+    - target: {fileID: 7342590228761554294, guid: cc3ccad3a27def198881bbffa0e221a5, type: 3}
+      propertyPath: skillsInspector.Array.data[1].key
+      value: e
+      objectReference: {fileID: 0}
+    - target: {fileID: 7342590228761554294, guid: cc3ccad3a27def198881bbffa0e221a5, type: 3}
+      propertyPath: skillsInspector.Array.data[0].skill
+      value: 
+      objectReference: {fileID: 2704600687908857770, guid: bf66dd50fd97194fcb788fa3109e812b, type: 3}
+    - target: {fileID: 7342590228761554294, guid: cc3ccad3a27def198881bbffa0e221a5, type: 3}
+      propertyPath: skillsInspector.Array.data[1].skill
+      value: 
+      objectReference: {fileID: 2704600687908857770, guid: bf66dd50fd97194fcb788fa3109e812b, type: 3}
     - target: {fileID: 8598900483187568074, guid: cc3ccad3a27def198881bbffa0e221a5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

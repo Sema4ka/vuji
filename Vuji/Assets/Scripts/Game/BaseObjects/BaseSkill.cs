@@ -16,8 +16,14 @@ public class BaseSkill : MonoBehaviour
     [Tooltip("Задержка перед повторным использованием способности")]
     [SerializeField] protected float cooldown;
 
+    [Tooltip("Запрет на движение игрока во время использования способности")]
+    [SerializeField] protected bool cancelMovementOnCast;
+
+    public static Action<float> onCast;
+
     public virtual IEnumerator UseSkill(GameObject caster, string key) {
         caster.GetComponent<BaseEntity>().setIsCooldown(key, true);
+        onCast?.Invoke(castTime); 
         yield return new WaitForSeconds(0.0f);
     }
 }
