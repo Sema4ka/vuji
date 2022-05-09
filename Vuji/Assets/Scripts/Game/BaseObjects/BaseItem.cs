@@ -39,17 +39,6 @@ public class BaseItem : ScriptableObject
     {
         return image;
     }
-
-    public bool DropItem(bool all = false)
-    {
-        amount = (all ? 0 : amount - 1);
-        if (amount < 1)
-        {
-            return false;
-        }
-
-        return true;
-    }
     public bool UseItem()
     {
         // Do smth

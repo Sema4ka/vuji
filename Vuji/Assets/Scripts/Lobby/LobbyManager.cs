@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.SceneManagement;
@@ -9,7 +10,9 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 {
     #region Fields
 
+    [SerializeField] Text username;
     private Controllers _controllers;
+    [SerializeField] GameObject settings;
 
     #endregion
 
@@ -18,6 +21,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     void Start()
     {
         _controllers = GetComponent<Controllers>();
+        // username.text = PhotonNetwork.NickName; // SET TO USERNAME
     }
 
     #endregion
@@ -84,6 +88,10 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         acceptFriendInvite.roomName = roomName;
         acceptFriendInvite.StartAcceptInvite();
     }
-
+    
+    public void ToggleSettings()
+    {
+        settings.SetActive(!settings.activeSelf);
+    }
     #endregion
 }

@@ -28,8 +28,9 @@ public class BaseEntity : MonoBehaviour
     private string _selectedSkill = "";
     private Dictionary<string, GameObject> _skills = new Dictionary<string, GameObject>();
 
-    #region HealthBar
-    [SerializeField] HealthBarManager healthBar;
+    #region Information
+    [SerializeField] public HealthBarManager healthBar;
+    [SerializeField] public EntityNameManager displayedName;
     #endregion
     private void Start()
     {
@@ -46,6 +47,8 @@ public class BaseEntity : MonoBehaviour
         float height = 1.0f;
         healthBar.SetOffset(new Vector3(0, height * 0.6f, 0));
         healthBar.SetHealth(healthPoints, maxHealthPoints);
+        displayedName.SetOffset(new Vector3(0, height * 0.6f, 0));
+        displayedName.SetText(PhotonNetwork.NickName); // Replace with Username
     }
 
     private void Update()
