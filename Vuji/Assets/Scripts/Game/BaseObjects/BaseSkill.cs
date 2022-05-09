@@ -6,6 +6,12 @@ using UnityEngine;
 [System.Serializable]
 public class BaseSkill : MonoBehaviour 
 {
+    [Tooltip("Название способности")]
+    [SerializeField] protected string skillName;
+
+    [Tooltip("Описание способности")]
+    [SerializeField] protected string skillDescription;
+
     [Tooltip("Количество маны требуемое для использования способности")]
     [SerializeField] protected int energyCost;
 
