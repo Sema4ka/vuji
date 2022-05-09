@@ -1,5 +1,6 @@
 using Photon.Pun;
 using UnityEngine;
+using System.Collections;
 
 public class MovementPlayer : MonoBehaviour
 {
@@ -7,6 +8,9 @@ public class MovementPlayer : MonoBehaviour
     private BaseEntity _player;
     private float _moveSpeed;
     private Rigidbody2D _rb2d;
+
+    private bool canMove = true;
+
     #region KeybindMovement
     private bool keybindMovement = false;
     #endregion
@@ -25,8 +29,22 @@ public class MovementPlayer : MonoBehaviour
         keybindMovement = isOn;
     }
 
+    public void cancelMovement(float stopTime)
+    {
+        StartCoroutine(movementStopCoroutine(stopTime));
+    }
+
+    private IEnumerator movementStopCoroutine(float stopTime)
+    {
+        canMove = false;
+        yield return new WaitForSeconds(stopTime);
+        canMove = true;
+    }
+
     private void Update()
     {
+        if(!canMove) return;
+
         if (_view.IsMine)
         {
             if (!keybindMovement)

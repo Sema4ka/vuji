@@ -9,6 +9,7 @@ public class BaseEntity : MonoBehaviour
     [SerializeField] private float healthPoints = 100.0f;
     [SerializeField] private float maxHealthPoints = 100.0f;
     [SerializeField] private float moveSpeed = 5.0f;
+    [SerializeField] private float energy = 100.0f;
 
     //Аналог словаря для юнити инспектора
     [Serializable]
@@ -127,6 +128,8 @@ public class BaseEntity : MonoBehaviour
         if(key == "Skill 2") this._isSkill2Cooldown = value;
     }
 
+
+
     public float GetMoveSpeed()
     {
         return moveSpeed;
@@ -145,6 +148,14 @@ public class BaseEntity : MonoBehaviour
     public string GetEntityName()
     {
         return entityName;
+    }
+
+    public bool spendEnergy(float energyCost)
+    {
+        if(energyCost > this.energy) return false;
+
+        this.energy -= energyCost;
+        return true;
     }
 
     public void TakeDamage(int healthDamage)

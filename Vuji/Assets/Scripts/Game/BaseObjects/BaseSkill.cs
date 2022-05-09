@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -22,8 +21,6 @@ public class BaseSkill : MonoBehaviour
     public static Action<float> onCast;
 
     public virtual IEnumerator UseSkill(GameObject caster, string key) {
-        caster.GetComponent<BaseEntity>().setIsCooldown(key, true);
-        onCast?.Invoke(castTime); 
         yield return new WaitForSeconds(0.0f);
     }
 }

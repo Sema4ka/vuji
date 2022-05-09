@@ -46,4 +46,5 @@ MonoBehaviour:
   energyCost: 20
   castTime: 1
   cooldown: 5
+  cancelMovementOnCast: 1
   projectile: {fileID: 8255796032531646231, guid: cb552d274162fca42b4ff650b5074138, type: 3}
