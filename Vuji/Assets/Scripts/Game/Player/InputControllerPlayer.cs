@@ -18,7 +18,7 @@ public class InputControllerPlayer : MonoBehaviour
         string[] words = name.Split(' ');
         if (words[0] != "Skill") return;
         int skillNum = Convert.ToInt32(words[1]) - 1;
-        _player.UseSkill(skillNum);
+        _player.UseSkill(name, code);
     }
 
     void Update()
