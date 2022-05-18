@@ -23,7 +23,6 @@ public class PlayerProjectile : MonoBehaviour
         _view = GetComponent<PhotonView>();
     }
 
-
     public void Attack(GameObject projectile)
     {
         this.projectile = projectile;
@@ -39,17 +38,19 @@ public class PlayerProjectile : MonoBehaviour
             _aimDirection = _mousePosition - rotatePoint.position;
             _aimAngle = Mathf.Atan2(_aimDirection.y, _aimDirection.x) * Mathf.Rad2Deg;
             rotatePoint.rotation = Quaternion.Euler(0, 0, _aimAngle);
+            if (Input.GetMouseButtonDown(0))
+            {
+                _view.RPC("RemoteProjectileAttack", RpcTarget.All, _aimAngle, _aimDirection);
+            }
         }
     }
 
     [PunRPC]
     private void RemoteProjectileAttack(float aimAngle, Vector3 aimDirection)
     {
-        rotatePoint.rotation = Quaternion.Euler(0, 0, aimAngle);
         projectile.GetComponent<BaseProjectile>().SetAimDirection(aimDirection);
         projectile.GetComponent<BaseProjectile>().SetAimAngel(aimAngle);
         projectile.GetComponent<BaseProjectile>().SetSenderCollider(gameObject);
-
         GameObject projectileInst = Instantiate(projectile, firePoint.position, firePoint.rotation);
     }
 }

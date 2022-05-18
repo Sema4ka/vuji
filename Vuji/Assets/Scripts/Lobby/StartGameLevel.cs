@@ -71,8 +71,6 @@ public class StartGameLevel : MonoBehaviourPunCallbacks
     /// </summary>
     private void LoadGameLevel()
     {
-        
-        
         PhotonNetwork.LoadLevel("Game");
     }
     

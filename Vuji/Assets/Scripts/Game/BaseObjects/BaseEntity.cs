@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System;
 using Photon.Pun;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BaseEntity : MonoBehaviour
 {
@@ -163,53 +164,54 @@ public class BaseEntity : MonoBehaviour
 
     public void TakeDamage(int healthDamage)
     {
-        if (gameObject.CompareTag("Player"))
+        healthPoints -= healthDamage;
+        if (healthPoints <= 0)
         {
-            DamagePlayerRemote(healthDamage);
-            _view.RPC("DamagePlayerRemote", RpcTarget.Others, healthDamage);
-        }
-        else
-        {
-            healthPoints -= healthDamage;
-            if (healthPoints <= 0)
+            if (gameObject.CompareTag("Player"))
             {
-                Death();
+                PlayerDeath();
+            }
+            else
+            {
+                EntityDeath();
             }
         }
+
         Debug.Log(entityName + " hp is " + healthPoints);
     }
 
-    private void Death()
+    private void EntityDeath()
     {
         DropAllItems();
-        Destroy(gameObject);
+        PhotonNetwork.Destroy(gameObject);
+    }
+
+    private void PlayerDeath()
+    {
+        DropAllItems();
+        gameObject.GetComponent<PlayerScript>().KillPlayer();
     }
 
     private void DropAllItems()
     {
         Inventory inventory = GetComponent<Inventory>();
         var items = inventory.GetAllItems();
-        foreach(BaseItem itemData in items)
+        foreach (BaseItem itemData in items)
         {
+            Vector2 position = new Vector2(Random.Range(-3.0f, 3.0f) + gameObject.transform.position.x,
+                Random.Range(-3.0f, 3.0f) + gameObject.transform.position.y);
 
-            Vector2 position = new Vector2(UnityEngine.Random.Range(-3.0f, 3.0f) + gameObject.transform.position.x, UnityEngine.Random.Range(-3.0f, 3.0f) + gameObject.transform.position.y);
 
             GameObject droppedItem = Instantiate(_droppedItemPrefab, position, Quaternion.identity);
-            droppedItem.GetComponent<DroppedItem>().SetItem(itemData); 
+            droppedItem.GetComponent<DroppedItem>().SetItem(itemData);
         }
-        inventory.ClearInventory();
     }
 
     [PunRPC]
-    private void DamagePlayerRemote(int healthDamage)
+    private void TakeDamageRemote(int photonID, int newDamage)
     {
-        healthPoints -= healthDamage;
-        if (healthPoints <= 0)
-        {
-            DropAllItems();
-            gameObject.GetComponent<PlayerScript>().KillPlayer();
-        }
+        GameObject obj = PhotonView.Find(photonID).gameObject;
+        obj.GetComponent<BaseEntity>().TakeDamage(newDamage);
     }
-
     #endregion
 }

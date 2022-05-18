@@ -10,7 +10,7 @@ public class EntityMelee : MonoBehaviour
     [SerializeField] int damage = 10;
     [SerializeField] float attackTimeout;
 
-    private bool _isTimeout=false;
+    private bool _isTimeout = false;
 
     private Vector3 _attackPoint;
 
@@ -33,8 +33,9 @@ public class EntityMelee : MonoBehaviour
 
             foreach (Collider2D enemy in hitEnemies)
             {
-                if (enemy.gameObject != gameObject)
-                    enemy.GetComponent<BaseEntity>().TakeDamage(damage);
+                GameObject enemyGameObject = enemy.transform.parent.gameObject;
+                if (enemyGameObject != gameObject)
+                    enemyGameObject.GetComponent<BaseEntity>().TakeDamage(damage);
             }
         }
     }

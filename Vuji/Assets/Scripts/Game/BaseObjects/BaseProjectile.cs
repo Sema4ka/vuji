@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using Photon.Pun;
 using Photon.Pun.UtilityScripts;
 using UnityEngine;
@@ -22,7 +21,6 @@ public class BaseProjectile : MonoBehaviour
     // список тегов которым должен наноситься урон и где проджектайл должен уничтожаться
     private List<string> _damageTags = new List<string>() {"Entity", "Player"};
     private List<string> _destroyTags = new List<string>() {"Entity", "Player", "Wall"};
-
     private Rigidbody2D _projectileRb2d;
 
     #endregion
@@ -88,14 +86,20 @@ public class BaseProjectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D colliderObject)
     {
-        if (CanDamageThisEntity(colliderObject.gameObject))
+        GameObject enemyGameObject = colliderObject.gameObject;
+        if (colliderObject.gameObject.layer == 9)
         {
-            colliderObject.GetComponent<BaseEntity>().TakeDamage(projectileDamage);
+            enemyGameObject = colliderObject.transform.parent.gameObject;
+            if (CanDamageThisEntity(enemyGameObject) && PhotonNetwork.IsMasterClient)
+            {
+                senderGameObject.GetComponent<PhotonView>()
+                    .RPC("TakeDamageRemote", RpcTarget.All, enemyGameObject.GetComponent<PhotonView>().ViewID,
+                        projectileDamage);
+            }
         }
-
         // Contains как мне кажется не лучший метод для "содержиться ли элемент в массиеве"
-        if (destroyOnCollide & _destroyTags.Contains(colliderObject.gameObject.tag) &
-            (senderGameObject != colliderObject.gameObject))
+        if (destroyOnCollide & _destroyTags.Contains(enemyGameObject.tag) &
+            (senderGameObject != enemyGameObject))
         {
             Destroy(gameObject);
         }
@@ -124,9 +128,9 @@ public class BaseProjectile : MonoBehaviour
         if (enemyGameObject.CompareTag("Player"))
         {
             var otherPlayerView = enemyGameObject.GetComponent<PhotonView>();
-            var myPlayerView = senderGameObject.GetComponent<PhotonView>();
 
-            if (otherPlayerView.Owner.GetPhotonTeam().Name == myPlayerView.Owner.GetPhotonTeam().Name)
+            if (otherPlayerView.Owner.GetPhotonTeam().Name ==
+                senderGameObject.GetComponent<PhotonView>().Owner.GetPhotonTeam().Name)
             {
                 return false;
             }

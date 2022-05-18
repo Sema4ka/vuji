@@ -6,12 +6,12 @@ public class StartEndZone : MonoBehaviour
 {
 
     [SerializeField] private BaseItem item;
-    private void OnTriggerEnter(BaseEntity player)
+    private void OnTriggerEnter(Collider player)
     {
         List<BaseItem> inventory = player.GetComponent<Inventory>().GetComponent<List<BaseItem>>();
         if (inventory.Contains(item))
         {
-            //вставьте конец
+            //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         }
     }
 }

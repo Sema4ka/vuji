@@ -1,76 +1,65 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Pun.UtilityScripts;
-using Photon.Realtime;
 
 public class PlayerMelee : MonoBehaviour
 {
     [SerializeField] private LayerMask enemyLayers;
     [SerializeField] private float attackDistance = 1f;
     [SerializeField] private float attackRange = 1f;
+    [SerializeField] private int damage = 10;
 
-    private int damage = 10;
     private Vector3 _attackPoint;
     private Vector3 _playerPosition;
     private Vector3 _mousePosition;
-    private PhotonView _view;
+    private PhotonView _myView;
 
     private void Start()
     {
-        _view = GetComponent<PhotonView>();
-        KeyHandler.keyPressed += OnKeyPressed;
+        _myView = gameObject.GetComponent<PhotonView>();
     }
 
-    void OnKeyPressed(string name, KeyCode key)
+    private void Update()
     {
-        if (_view.IsMine)
+        if (_myView.IsMine)
         {
             _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            if (name == "Attack")
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 _playerPosition = transform.position;
                 _mousePosition.z = 0;
                 var xLen = _mousePosition.x - _playerPosition.x;
                 var yLen = _mousePosition.y - _playerPosition.y;
-                var xyLen = (float)(Math.Sqrt(Math.Pow(xLen, 2) + Math.Pow(yLen, 2)));
+                var xyLen = (float) (Math.Sqrt(Math.Pow(xLen, 2) + Math.Pow(yLen, 2)));
                 var x = (xLen * attackDistance) / xyLen + _playerPosition.x;
                 var y = (yLen * attackDistance) / xyLen + _playerPosition.y;
                 _attackPoint = new Vector3(x, y, 0);
-                RemoteMeleeAttack(_attackPoint);
-                _view.RPC("RemoteMeleeAttack", RpcTarget.All, _attackPoint);
+                _myView.RPC("MasterCheckMeleeAttack", RpcTarget.MasterClient, _attackPoint);
+                // RPC to animation melee attack
             }
         }
     }
 
-    private void Update()
-    {
-    }
-
-
     [PunRPC]
-    private void RemoteMeleeAttack(Vector3 attackPoint)
+    private void MasterCheckMeleeAttack(Vector3 attackPoint)
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint, attackRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            if (CanDamageThisEnemy(enemy.gameObject))
-                enemy.GetComponent<BaseEntity>().TakeDamage(damage);
+            if (CanDamageThisEnemy(enemy))
+            {
+                _myView.RPC("TakeDamageRemote", RpcTarget.All, enemy.GetComponentInParent<PhotonView>().ViewID, damage);
+            }
         }
     }
 
-    /// <summary>
-    /// Метод проверяет:
-    /// 1) Урон по себе
-    /// 2) Урон игроку из своей команды
-    /// </summary>
-    /// <param name="enemyGameObject">Объект которому наноситсся урон</param>
-    /// <returns>true - можно наносить урон; false - нельзя наносить урон</returns>
-    private bool CanDamageThisEnemy(GameObject enemyGameObject)
+
+    private bool CanDamageThisEnemy(Collider2D enemyCollider)
     {
+        GameObject enemyGameObject = enemyCollider.transform.parent.gameObject;
+        
         if (enemyGameObject == gameObject)
         {
             return false;
@@ -79,9 +68,8 @@ public class PlayerMelee : MonoBehaviour
         if (enemyGameObject.CompareTag("Player"))
         {
             var otherPlayerView = enemyGameObject.GetComponent<PhotonView>();
-            var myPlayerView = gameObject.GetComponent<PhotonView>();
 
-            if (otherPlayerView.Owner.GetPhotonTeam().Name == myPlayerView.Owner.GetPhotonTeam().Name)
+            if (otherPlayerView.Owner.GetPhotonTeam().Name == _myView.Owner.GetPhotonTeam().Name)
             {
                 return false;
             }

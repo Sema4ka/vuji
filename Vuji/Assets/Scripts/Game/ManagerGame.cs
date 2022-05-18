@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using GameSettings;
 using UnityEngine;
@@ -9,36 +8,22 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class ManagerGame : MonoBehaviourPunCallbacks
 {
-    [SerializeField] private GameObject spawnPlayers;
     private GameObject[] _playerGameObjectsList;
-    private bool _allPlayersInGame = false;
+    private bool _allPlayersWasSpawnedInGame;
 
     #region Unity Methods
 
-    private void Awake()
+    private void Start()
     {
+        _allPlayersWasSpawnedInGame = false;
         DistributionByTeams();
     }
 
     private void Update()
     {
-        if (!_allPlayersInGame)
+        if (!_allPlayersWasSpawnedInGame)
         {
-            _playerGameObjectsList = GameObject.FindGameObjectsWithTag("Player");
-            int livePlayersNow = 0;
-            foreach (var p in _playerGameObjectsList)
-            {
-                if (p.activeSelf) livePlayersNow++;
-            }
-
-            if (livePlayersNow == GameSettingsOriginal.MaxPlayersInGame)
-            {
-                _allPlayersInGame = true;
-            }
-        }
-        else
-        {
-            gameObject.GetComponent<EndGame>().enabled = true;
+            AllPlayersWasSpawned();
         }
     }
 
@@ -47,65 +32,88 @@ public class ManagerGame : MonoBehaviourPunCallbacks
     #region Private Methods
 
     /// <summary>
+    /// Проверка на то что все игроки заспавнены
+    /// </summary>
+    private void AllPlayersWasSpawned()
+    {
+        _playerGameObjectsList = GameObject.FindGameObjectsWithTag("Player");
+        if (_playerGameObjectsList.Length == GameSettingsOriginal.MaxPlayersInGame)
+        {
+            _allPlayersWasSpawnedInGame = true;
+            WhenAllPlayersSpawned();
+        }
+    }
+
+    /// <summary>
+    /// Когда все игроки были заспавнены
+    /// </summary>
+    private void WhenAllPlayersSpawned()
+    {
+        gameObject.GetComponent<EndGame>().enabled = true;
+    }
+
+    /// <summary>
     /// Распределение игроков по командам 
     /// </summary>
     private void DistributionByTeams()
     {
-        var teamNames = new List<string>();
-        foreach (var player in PhotonNetwork.PlayerList)
+        if (PhotonNetwork.IsMasterClient)
         {
-            string playerTeam = player.CustomProperties["team"].ToString();
-
-
-            if (!teamNames.Contains(playerTeam) && playerTeam != "None")
+            PhotonTeamsManager teams = gameObject.GetComponent<PhotonTeamsManager>();
+            var teamNames = new List<string>();
+            foreach (var p in PhotonNetwork.PlayerList)
             {
-                teamNames.Add(playerTeam);
-            }
-        }
-
-        if (teamNames.Count == 0)
-        {
-            var count = 0;
-            foreach (var player in PhotonNetwork.PlayerList)
-            {
-                if (count < GameSettingsOriginal.MaxPlayersInGame / 2)
+                var pTeam = p.CustomProperties["team"].ToString();
+                if (!teamNames.Contains(pTeam) && pTeam != "None")
                 {
-                    player.JoinTeam(1);
-                    count++;
-                }
-                else
-                {
-                    player.JoinTeam(2);
+                    teamNames.Add(pTeam);
                 }
             }
-        }
-        else if (teamNames.Count == 1)
-        {
-            foreach (var player in PhotonNetwork.PlayerList)
+
+            if (teamNames.Count == 0)
             {
-                string playerTeam = player.CustomProperties["team"].ToString();
-                if (playerTeam != "None")
+                var count = 0;
+                foreach (var player in PhotonNetwork.PlayerList)
                 {
-                    player.JoinTeam(1);
-                }
-                else
-                {
-                    player.JoinTeam(2);
+                    if (count < GameSettingsOriginal.MaxPlayersInGame / 2)
+                    {
+                        player.JoinTeam("TeamOne");
+                        count++;
+                    }
+                    else
+                    {
+                        player.JoinTeam("TeamTwo");
+                    }
                 }
             }
-        }
-        else if (teamNames.Count == 2)
-        {
-            foreach (var player in PhotonNetwork.PlayerList)
+            else if (teamNames.Count == 1)
             {
-                string playerTeam = player.CustomProperties["team"].ToString();
-                if (playerTeam == teamNames[0])
+                foreach (var player in PhotonNetwork.PlayerList)
                 {
-                    player.JoinTeam(1);
+                    var playerTeam = player.CustomProperties["team"].ToString();
+                    if (playerTeam != "None")
+                    {
+                        player.JoinTeam("TeamOne");
+                    }
+                    else
+                    {
+                        player.JoinTeam("TeamTwo");
+                    }
                 }
-                else
+            }
+            else if (teamNames.Count == 2)
+            {
+                foreach (var player in PhotonNetwork.PlayerList)
                 {
-                    player.JoinTeam(2);
+                    var playerTeam = player.CustomProperties["team"].ToString();
+                    if (playerTeam == teamNames[0])
+                    {
+                        player.JoinTeam("TeamOne");
+                    }
+                    else
+                    {
+                        player.JoinTeam("TeamTwo");
+                    }
                 }
             }
         }
@@ -138,7 +146,8 @@ public class ManagerGame : MonoBehaviourPunCallbacks
     /// <param name="changedProps"></param>
     public override void OnPlayerPropertiesUpdate(Player targetPlayer, Hashtable changedProps)
     {
-        spawnPlayers.SetActive(true);
+        gameObject.GetComponent<SpawnEnemy>().enabled = true;
+        gameObject.GetComponent<SpawnPlayers>().enabled = true;
     }
 
     #endregion

@@ -24,7 +24,7 @@ public class InventoryWindow : MonoBehaviour
         SpawnPlayers.OnSpawn += OnSpawn;
     }
 
-    void OnSpawn(GameObject playerObject)
+    public void OnSpawn(GameObject playerObject)
     {
         playerInventory = playerObject.GetComponent<Inventory>();
         playerInventory.onItemAdded += OnItemAdded;
@@ -84,9 +84,10 @@ public class InventoryWindow : MonoBehaviour
     {
         if (displayedIcons.Count > itemId && itemId >= 0)
         {
-            if (!playerInventory.DropItem(playerInventory.inventoryItems[itemId])){
-                playerInventory.inventoryItems.RemoveAt(itemId);
-            }
+            // Артем прости
+            // if (!playerInventory.DropItem(playerInventory.inventoryItems[itemId])){
+            //     playerInventory.inventoryItems.RemoveAt(itemId);
+            // }
             Redraw();
         }
     }
