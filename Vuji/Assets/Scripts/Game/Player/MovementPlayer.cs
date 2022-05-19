@@ -44,6 +44,8 @@ public class MovementPlayer : MonoBehaviour
     private void Update()
     {
         if(!canMove) return;
+        var keyHandler = KeyHandler.instance;
+        if (keyHandler.IsPaused()) return;
 
         if (_view.IsMine)
         {
@@ -55,8 +57,6 @@ public class MovementPlayer : MonoBehaviour
             else
             {
                 int velX = 0, velY = 0;
-                var keyHandler = KeyHandler.instance;
-                if (keyHandler.IsPaused()) return;
                 if (Input.GetKey(keyHandler.GetKeybind("Right")))
                 {
                     velX += 1;

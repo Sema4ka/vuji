@@ -401,6 +401,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseUpgrade (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -644,6 +648,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseUpgrade (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -797,6 +805,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseUpgrade (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -891,7 +903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00016597168}
+  m_AnchoredPosition: {x: 0, y: 0.00010993485}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &91438727
@@ -1413,6 +1425,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseUpgrade (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -1913,7 +1929,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1319238528}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99998176
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2149,6 +2165,10 @@ PrefabInstance:
     - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_Name
       value: BaseUpgrade (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
@@ -2801,6 +2821,10 @@ PrefabInstance:
     - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_Name
       value: BaseUpgrade (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
@@ -3548,6 +3572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseUpgrade (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -3664,6 +3692,10 @@ PrefabInstance:
     - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_Name
       value: BaseUpgrade (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
@@ -3851,8 +3883,8 @@ MonoBehaviour:
         m_MethodName: SwitchPanels
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1638582526}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
+          m_ObjectArgument: {fileID: 1638582525}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4002,7 +4034,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638232659}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1643141501}
@@ -4239,6 +4271,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseUpgrade (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -4355,6 +4391,10 @@ PrefabInstance:
     - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_Name
       value: BaseUpgrade (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
@@ -5904,6 +5944,10 @@ PrefabInstance:
     - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_Name
       value: BaseUpgrade (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
@@ -8209,6 +8253,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseUpgrade (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -8325,6 +8373,10 @@ PrefabInstance:
     - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_Name
       value: BaseUpgrade (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
@@ -9477,6 +9529,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseUpgrade (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -9628,6 +9684,10 @@ PrefabInstance:
     - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_Name
       value: BaseUpgrade (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
@@ -9834,6 +9894,10 @@ PrefabInstance:
     - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_Name
       value: BaseUpgrade (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
@@ -10427,6 +10491,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseUpgrade (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -10841,7 +10909,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1234464740}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99998176
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11259,7 +11327,7 @@ RectTransform:
   - {fileID: 966385112}
   - {fileID: 1583342893}
   m_Father: {fileID: 1688611688}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11280,10 +11348,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keybind: {fileID: 5118382202200720495, guid: a6b65e1f041a8cf43b8270aaa696d170, type: 3}
   dataBase: {fileID: 1513204525}
-  settingsPanel: {fileID: 1331939337}
-  videoSettingsPanel: {fileID: 1638582526}
-  midSettingsPanel: {fileID: 966385112}
-  keybindsPanel: {fileID: 1583342893}
+  settingsPanel: {fileID: 1331939336}
+  videoSettingsPanel: {fileID: 1638582525}
+  midSettingsPanel: {fileID: 966385111}
+  keybindsPanel: {fileID: 1583342892}
   movementKeys: {fileID: 743630813}
   abilityKeys: {fileID: 480920429}
   UIKeys: {fileID: 1182430296}
@@ -11627,6 +11695,10 @@ PrefabInstance:
     - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_Name
       value: BaseUpgrade (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
@@ -11991,6 +12063,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseUpgrade (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -12336,6 +12412,10 @@ PrefabInstance:
     - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_Name
       value: BaseUpgrade (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
@@ -13080,8 +13160,8 @@ MonoBehaviour:
         m_MethodName: SwitchPanels
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1583342893}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
+          m_ObjectArgument: {fileID: 1583342892}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -13179,6 +13259,10 @@ PrefabInstance:
     - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_Name
       value: BaseUpgrade (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
@@ -13825,6 +13909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseUpgrade (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -14106,7 +14194,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 999
   m_TargetDisplay: 0
 --- !u!224 &1688611688
 RectTransform:
@@ -14121,8 +14209,8 @@ RectTransform:
   m_Children:
   - {fileID: 717009946}
   - {fileID: 794641947}
-  - {fileID: 1733521727}
   - {fileID: 1331939337}
+  - {fileID: 1733521727}
   - {fileID: 1131997136}
   - {fileID: 1294562850}
   m_Father: {fileID: 0}
@@ -14375,7 +14463,7 @@ RectTransform:
   - {fileID: 1711516653}
   - {fileID: 2111003761}
   m_Father: {fileID: 1688611688}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -15359,7 +15447,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 203542984}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99998176
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -15456,6 +15544,10 @@ PrefabInstance:
     - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_Name
       value: BaseUpgrade (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
@@ -15626,7 +15718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00016597168}
+  m_AnchoredPosition: {x: 0, y: 0.00010993485}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1922898704
@@ -15661,7 +15753,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00016597168}
+  m_AnchoredPosition: {x: 0, y: 0.00010993485}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1933307050
@@ -16188,8 +16280,8 @@ MonoBehaviour:
         m_MethodName: SwitchPanels
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 966385112}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
+          m_ObjectArgument: {fileID: 966385111}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -16534,6 +16626,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseUpgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -16632,7 +16728,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 70}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2111003762
@@ -16783,6 +16879,10 @@ PrefabInstance:
     - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_Name
       value: BaseUpgrade (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050062264447646830, guid: 23c504972536a0849834134fe6b670e6, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4896047589930327917, guid: 23c504972536a0849834134fe6b670e6, type: 3}
       propertyPath: m_RootOrder

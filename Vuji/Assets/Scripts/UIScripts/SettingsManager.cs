@@ -12,10 +12,10 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] GameObject Keybind;
     [SerializeField] DataBase dataBase;
     #region PanelsFields
-    [SerializeField] RectTransform settingsPanel;
-    [SerializeField] RectTransform videoSettingsPanel;
-    [SerializeField] RectTransform midSettingsPanel;
-    [SerializeField] RectTransform keybindsPanel;
+    [SerializeField] GameObject settingsPanel;
+    [SerializeField] GameObject videoSettingsPanel;
+    [SerializeField] GameObject midSettingsPanel;
+    [SerializeField] GameObject keybindsPanel;
     [SerializeField] RectTransform movementKeys;
     [SerializeField] RectTransform abilityKeys;
     [SerializeField] RectTransform UIKeys;
@@ -114,10 +114,11 @@ public class SettingsManager : MonoBehaviour
 
     void OnKeyPressed(string name, KeyCode keys)
     {
+        if (!settingsPanel) return;
         if (name == "EscapeMenu")
         {
-            if (!settingsPanel.gameObject.activeSelf) return;
-            settingsPanel.gameObject.SetActive(false);
+            if (!settingsPanel.activeSelf) return;
+            settingsPanel.SetActive(false);
             KeyHandler.instance.Pause(false);
         }
     }
@@ -165,12 +166,12 @@ public class SettingsManager : MonoBehaviour
     }
     #endregion
     #region PanelsManager
-    public void SwitchPanels(RectTransform toPanel)
+    public void SwitchPanels(GameObject toPanel)
     {
-        videoSettingsPanel.gameObject.SetActive(false);
-        midSettingsPanel.gameObject.SetActive(false);
-        keybindsPanel.gameObject.SetActive(false);
-        toPanel.gameObject.SetActive(true);
+        videoSettingsPanel.SetActive(false);
+        midSettingsPanel.SetActive(false);
+        keybindsPanel.SetActive(false);
+        toPanel.SetActive(true);
     }
     #endregion
 }

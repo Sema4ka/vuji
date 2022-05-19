@@ -2571,8 +2571,8 @@ MonoBehaviour:
         m_MethodName: SwitchPanels
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1096481801}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
+          m_ObjectArgument: {fileID: 1096481800}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4042,8 +4042,8 @@ MonoBehaviour:
         m_MethodName: SwitchPanels
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 697354880}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
+          m_ObjectArgument: {fileID: 697354879}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6742,8 +6742,8 @@ MonoBehaviour:
         m_MethodName: SwitchPanels
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1492174997}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
+          m_ObjectArgument: {fileID: 1492174996}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8563,10 +8563,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keybind: {fileID: 5118382202200720495, guid: a6b65e1f041a8cf43b8270aaa696d170, type: 3}
   dataBase: {fileID: 1441286647}
-  settingsPanel: {fileID: 1318085329}
-  videoSettingsPanel: {fileID: 697354880}
-  midSettingsPanel: {fileID: 1096481801}
-  keybindsPanel: {fileID: 1492174997}
+  settingsPanel: {fileID: 1318085328}
+  videoSettingsPanel: {fileID: 697354879}
+  midSettingsPanel: {fileID: 1096481800}
+  keybindsPanel: {fileID: 1492174996}
   movementKeys: {fileID: 1606339714}
   abilityKeys: {fileID: 379554762}
   UIKeys: {fileID: 1518484284}

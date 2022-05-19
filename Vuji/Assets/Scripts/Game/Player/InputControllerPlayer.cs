@@ -15,10 +15,8 @@ public class InputControllerPlayer : MonoBehaviour
 
     void OnKeyPressed(string name, KeyCode code)
     {
-        string[] words = name.Split(' ');
-        if (words[0] != "Skill") return;
-        int skillNum = Convert.ToInt32(words[1]) - 1;
-        _player.UseSkill(name, code);
+        //if (name == "Use Skill") _player.UseSkill();
+        //else if (name.StartsWith("Skill")) _player.selectSkill(name);
     }
 
     void Update()

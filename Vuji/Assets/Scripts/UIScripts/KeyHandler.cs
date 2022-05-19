@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Модуль для всего, что связанно со считыванием нажатий на клавиатуру (привязка, считывание, регулирование)

@@ -45,7 +45,7 @@ public class BaseEntity : MonoBehaviour
                 Debug.Log(skills[i].key + " " + skills[i].skill);
                 this._skills[skills[i].key] = skills[i].skill;
             }
-
+        KeyHandler.keyPressed += OnKeyPressed;
         maxHealthPoints = Mathf.Max(maxHealthPoints, healthPoints);
         float height = 1.0f;
         healthBar.SetOffset(new Vector3(0, height * 0.6f, 0));
@@ -53,32 +53,17 @@ public class BaseEntity : MonoBehaviour
         displayedName.SetOffset(new Vector3(0, height * 0.6f, 0));
         if (_view.IsMine)
         {
-            displayedName.SetText(PhotonNetwork.NickName); // Replace with Username
+            displayedName.SetText(PhotonNetwork.NickName==""?"Player" : PhotonNetwork.NickName); // Replace with Username
         }
         else
         {
-            displayedName.SetText(entityName);
+            displayedName.gameObject.SetActive(false);
         }
     }
 
     private void Update()
     {
-        // Костыль для инпутов, заменить потом на keyhandler
-        if (gameObject.CompareTag("Player"))
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                this.UseSkill(_selectedSkill, KeyCode.Mouse0);
-            }
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                this.UseSkill("Skill 1", KeyCode.Q);
-            }
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                this.UseSkill("Skill 2", KeyCode.E);
-            }
-        }
+        healthBar.SetHealth(healthPoints, maxHealthPoints);
     }
 
     #region Public Methods
@@ -88,25 +73,21 @@ public class BaseEntity : MonoBehaviour
         effect.ApplyEffect(this);
     }
 
-    public void UseSkill(string skillName, KeyCode key)
+    void OnKeyPressed(string name, KeyCode key)
     {
-        // Если скилл не выбран
-        if (_selectedSkill == "")
+        if (name == "Use Skill") UseSkill();
+        else if (name.StartsWith("Skill")) selectSkill(name);
+    }
+
+    public void UseSkill()
+    {
+        if (!_view.IsMine || _selectedSkill == "") return;
+        if (_selectedSkill.StartsWith("Skill"))
         {
-            selectSkill(skillName);
-        }
-        else
-        {
-            // Если скилл использован
-            if (key == KeyCode.Mouse0)
-            {
-                Debug.Log("Used " + skillName);
-                StartCoroutine(_skills[skillName].GetComponent<BaseSkill>().UseSkill(this.gameObject, _selectedSkill));
-                deSelectSkill();
-            }
-            // Если скилл выбран, но тот же скилл выбрали ещё раз 
-            else if (_selectedSkill == skillName) deSelectSkill();
-            else selectSkill(skillName);
+            string skillName = _selectedSkill;
+            Debug.Log("Used " + skillName);
+            StartCoroutine(_skills[skillName].GetComponent<BaseSkill>().UseSkill(this.gameObject, _selectedSkill));
+            deSelectSkill();
         }
     }
 

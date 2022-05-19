@@ -25,19 +25,14 @@ public class PlayerMelee : MonoBehaviour
         if (_myView.IsMine)
         {
             _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                _playerPosition = transform.position;
-                _mousePosition.z = 0;
-                var xLen = _mousePosition.x - _playerPosition.x;
-                var yLen = _mousePosition.y - _playerPosition.y;
-                var xyLen = (float) (Math.Sqrt(Math.Pow(xLen, 2) + Math.Pow(yLen, 2)));
-                var x = (xLen * attackDistance) / xyLen + _playerPosition.x;
-                var y = (yLen * attackDistance) / xyLen + _playerPosition.y;
-                _attackPoint = new Vector3(x, y, 0);
-                _myView.RPC("MasterCheckMeleeAttack", RpcTarget.MasterClient, _attackPoint);
-                // RPC to animation melee attack
-            }
+            _playerPosition = transform.position;
+            _mousePosition.z = 0;
+            var xLen = _mousePosition.x - _playerPosition.x;
+            var yLen = _mousePosition.y - _playerPosition.y;
+            var xyLen = (float)(Math.Sqrt(Math.Pow(xLen, 2) + Math.Pow(yLen, 2)));
+            var x = (xLen * attackDistance) / xyLen + _playerPosition.x;
+            var y = (yLen * attackDistance) / xyLen + _playerPosition.y;
+            _attackPoint = new Vector3(x, y, 0);
         }
     }
 
