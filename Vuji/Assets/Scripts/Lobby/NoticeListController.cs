@@ -13,14 +13,7 @@ public class NoticeListController : MonoBehaviour
     /// </summary>
     public void OpenNoticeList()
     {
-        if (uiNoticeList.activeSelf)
-        {
-            uiNoticeList.SetActive(false);
-        }
-        else
-        {
-            uiNoticeList.SetActive(true);
-        }
+        uiNoticeList.SetActive(!uiNoticeList.activeSelf);
     }
 
     /// <summary>

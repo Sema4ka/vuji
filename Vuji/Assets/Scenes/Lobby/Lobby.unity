@@ -6128,7 +6128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb3b0ba4f1decb42a222f171be399b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  errorText: {fileID: 1201903447}
 --- !u!114 &1441286656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8693,7 +8692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 382685232}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 0.1

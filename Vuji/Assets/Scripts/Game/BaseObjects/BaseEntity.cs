@@ -49,7 +49,14 @@ public class BaseEntity : MonoBehaviour
         healthBar.SetOffset(new Vector3(0, height * 0.6f, 0));
         healthBar.SetHealth(healthPoints, maxHealthPoints);
         displayedName.SetOffset(new Vector3(0, height * 0.6f, 0));
-        displayedName.SetText(PhotonNetwork.NickName); // Replace with Username
+        if (_view.IsMine)
+        {
+            displayedName.SetText(PhotonNetwork.NickName); // Replace with Username
+        }
+        else
+        {
+            displayedName.SetText(entityName);
+        }
     }
 
     private void Update()

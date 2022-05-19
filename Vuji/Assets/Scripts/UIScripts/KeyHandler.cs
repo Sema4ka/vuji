@@ -101,48 +101,6 @@ public class KeyHandler : MonoBehaviour
         abilityKeys = abilityKeysList.ToArray();
         uiKeys = uiKeysList.ToArray();
 
-
-
-        // Check for keybinds file
-        // if haven't found one - create it with basic settings
-        // string arrays contains names for 3 Categories - Movement, Abilities and UI
-        /*uiKeys = new string[2] {"Upgrades", "EscapeMenu"};
-        abilityKeys = new string[] { "Attack", "RangeAttack", "Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5", "Slot 6", "Slot 7", "Slot 8", "Slot 9", "Skill 1", "Skill 2", "Skill 3"};
-        movementKeys = new string[4] { "Right", "Left", "Forward", "Backward" };
-        keybinds["Upgrades"] = KeyCode.U;
-        keybinds["EscapeMenu"] = KeyCode.Escape;
-        keybinds["Right"] = KeyCode.D;
-        keybinds["Left"] =  KeyCode.A;
-        keybinds["Forward"] = KeyCode.W;
-        keybinds["Backward"] = KeyCode.S;
-        keybinds["Attack"] = KeyCode.Space;
-        keybinds["RangeAttack"] = KeyCode.Mouse0;
-        for (int i = 0;i < 9; i++)
-        {
-            keybinds["Slot " + (i + 1).ToString()] = numbersKeyCodes[i];
-        }
-        keybinds["Skill 1"] = KeyCode.R;
-        keybinds["Skill 2"] = KeyCode.F;
-        keybinds["Skill 3"] = KeyCode.C;
-
-        foreach (string key in keybinds.Keys)
-        {
-            string category = "";
-            if (movementKeys.Contains(key))
-            {
-                category = "Movement";
-            }
-            if (abilityKeys.Contains(key))
-            {
-                category = "Ability";
-            }
-            if (uiKeys.Contains(key))
-            {
-                category = "UI";
-            }
-            dataBase.AddKeybind(key, keybinds[key], category);
-        }*/
-
     }
 
     // Update is called once per frame

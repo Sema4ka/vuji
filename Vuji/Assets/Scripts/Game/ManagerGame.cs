@@ -16,6 +16,7 @@ public class ManagerGame : MonoBehaviourPunCallbacks
     private void Start()
     {
         _allPlayersWasSpawnedInGame = false;
+        gameObject.GetComponent<SpawnPlayers>().enabled = true;
         DistributionByTeams();
     }
 
@@ -147,7 +148,6 @@ public class ManagerGame : MonoBehaviourPunCallbacks
     public override void OnPlayerPropertiesUpdate(Player targetPlayer, Hashtable changedProps)
     {
         gameObject.GetComponent<SpawnEnemy>().enabled = true;
-        gameObject.GetComponent<SpawnPlayers>().enabled = true;
     }
 
     #endregion

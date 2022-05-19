@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    [SerializeField] GameObject _droppedItemPrefab;
     public Action<BaseItem> onItemAdded;
 
     [SerializeField] public List<BaseItem> inventoryItems = new List<BaseItem>();

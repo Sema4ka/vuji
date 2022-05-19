@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 762379b28effcbe478eefe159bf68bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _droppedItemPrefab: {fileID: 8455292785502437808, guid: 9a0fdf131a4a86540bae8470b1178eba, type: 3}
   inventoryItems:
   - {fileID: 11400000, guid: 6ceb69bff7597754fb5f9b70ebe1e937, type: 2}
   - {fileID: 11400000, guid: 6ceb69bff7597754fb5f9b70ebe1e937, type: 2}
-  _droppedItemPrefab: {fileID: 8455292785502437808, guid: 9a0fdf131a4a86540bae8470b1178eba, type: 3}
