@@ -84,10 +84,9 @@ public class InventoryWindow : MonoBehaviour
     {
         if (displayedIcons.Count > itemId && itemId >= 0)
         {
-            // Артем прости
-            // if (!playerInventory.DropItem(playerInventory.inventoryItems[itemId])){
-            //     playerInventory.inventoryItems.RemoveAt(itemId);
-            // }
+            if (!playerInventory.DropItem(playerInventory.inventoryItems[itemId])){
+                playerInventory.inventoryItems.RemoveAt(itemId);
+            }
             Redraw();
         }
     }

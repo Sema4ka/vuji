@@ -14,7 +14,8 @@ public class BaseEntity : MonoBehaviour
 
     //Аналог словаря для юнити инспектора
     [Serializable]
-    public struct Skill {
+    public struct Skill
+    {
         public string key;
         public GameObject skill;
     }
@@ -36,14 +37,15 @@ public class BaseEntity : MonoBehaviour
     private void Start()
     {
         _view = gameObject.GetComponent<PhotonView>();
-        
+
         // Заполнение обычного словаря скилов из словаря из инспектора
         if (skills.Length != 0)
-            for(int i = 0; i < skills.Length; i++){
+            for (int i = 0; i < skills.Length; i++)
+            {
                 Debug.Log(skills[i].key + " " + skills[i].skill);
                 this._skills[skills[i].key] = skills[i].skill;
             }
-        
+
         maxHealthPoints = Mathf.Max(maxHealthPoints, healthPoints);
         float height = 1.0f;
         healthBar.SetOffset(new Vector3(0, height * 0.6f, 0));
@@ -61,10 +63,9 @@ public class BaseEntity : MonoBehaviour
 
     private void Update()
     {
-        healthBar.SetHealth(healthPoints, maxHealthPoints);
-
         // Костыль для инпутов, заменить потом на keyhandler
-        if (gameObject.CompareTag("Player")){
+        if (gameObject.CompareTag("Player"))
+        {
             if (Input.GetMouseButtonDown(0))
             {
                 this.UseSkill(_selectedSkill, KeyCode.Mouse0);
@@ -77,7 +78,7 @@ public class BaseEntity : MonoBehaviour
             {
                 this.UseSkill("Skill 2", KeyCode.E);
             }
-        }   
+        }
     }
 
     #region Public Methods
@@ -90,22 +91,22 @@ public class BaseEntity : MonoBehaviour
     public void UseSkill(string skillName, KeyCode key)
     {
         // Если скилл не выбран
-        if(_selectedSkill == "")
+        if (_selectedSkill == "")
         {
             selectSkill(skillName);
         }
         else
-        {   
+        {
             // Если скилл использован
-            if(key == KeyCode.Mouse0)
+            if (key == KeyCode.Mouse0)
             {
                 Debug.Log("Used " + skillName);
                 StartCoroutine(_skills[skillName].GetComponent<BaseSkill>().UseSkill(this.gameObject, _selectedSkill));
                 deSelectSkill();
             }
             // Если скилл выбран, но тот же скилл выбрали ещё раз 
-            else if(_selectedSkill == skillName) deSelectSkill();
-                else selectSkill(skillName);
+            else if (_selectedSkill == skillName) deSelectSkill();
+            else selectSkill(skillName);
         }
     }
 
@@ -117,14 +118,15 @@ public class BaseEntity : MonoBehaviour
 
     private void selectSkill(string skillName)
     {
-        if(skillName == "") {
+        if (skillName == "")
+        {
             Debug.Log("Skill is not selected");
             return;
         }
 
-        if((skillName == "Skill 1" && !_isSkill1Cooldown) || (skillName == "Skill 2" && !_isSkill2Cooldown))
+        if ((skillName == "Skill 1" && !_isSkill1Cooldown) || (skillName == "Skill 2" && !_isSkill2Cooldown))
         {
-            Debug.Log("Selected " + skillName);  
+            Debug.Log("Selected " + skillName);
             this._selectedSkill = skillName;
         }
         else
@@ -135,8 +137,8 @@ public class BaseEntity : MonoBehaviour
 
     public void setIsCooldown(string key, bool value)
     {
-        if(key == "Skill 1") this._isSkill1Cooldown = value;
-        if(key == "Skill 2") this._isSkill2Cooldown = value;
+        if (key == "Skill 1") this._isSkill1Cooldown = value;
+        if (key == "Skill 2") this._isSkill2Cooldown = value;
     }
 
 
@@ -163,7 +165,7 @@ public class BaseEntity : MonoBehaviour
 
     public bool spendEnergy(float energyCost)
     {
-        if(energyCost > this.energy) return false;
+        if (energyCost > this.energy) return false;
 
         this.energy -= energyCost;
         return true;
