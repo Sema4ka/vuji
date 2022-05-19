@@ -43,19 +43,10 @@ public class BaseEntity : MonoBehaviour
                 Debug.Log(skills[i].key + " " + skills[i].skill);
                 this._skills[skills[i].key] = skills[i].skill;
             }
-        
-        maxHealthPoints = Mathf.Max(maxHealthPoints, healthPoints);
-        float height = 1.0f;
-        healthBar.SetOffset(new Vector3(0, height * 0.6f, 0));
-        healthBar.SetHealth(healthPoints, maxHealthPoints);
-        displayedName.SetOffset(new Vector3(0, height * 0.6f, 0));
-        displayedName.SetText(PhotonNetwork.NickName); // Replace with Username
     }
 
     private void Update()
     {
-        healthBar.SetHealth(healthPoints, maxHealthPoints);
-
         // Костыль для инпутов, заменить потом на keyhandler
         if (gameObject.CompareTag("Player")){
             if (Input.GetMouseButtonDown(0))

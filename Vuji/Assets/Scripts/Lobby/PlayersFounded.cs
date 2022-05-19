@@ -6,6 +6,7 @@ public class PlayersFounded : MonoBehaviour
 {
     [SerializeField] private GameObject playersFounded;
     [SerializeField] private Text playersFoundedText;
+    [SerializeField] private GameObject stopSearchGameButton;
     
     /// <summary>
     /// Обновляет текустовую информацию о текущем кол-ве игроков
@@ -21,6 +22,7 @@ public class PlayersFounded : MonoBehaviour
     public void ShowPlayersFounded()
     {
         playersFounded.SetActive(true);
+        stopSearchGameButton.SetActive(true);
     }
 
     /// <summary>
@@ -29,5 +31,6 @@ public class PlayersFounded : MonoBehaviour
     public void HidePlayersFounded()
     {
         playersFounded.SetActive(false);
+        stopSearchGameButton.SetActive(false);
     }
 }
