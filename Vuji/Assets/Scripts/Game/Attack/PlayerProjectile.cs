@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -11,6 +11,16 @@ public class PlayerProjectile : MonoBehaviour
     [SerializeField] private Transform rotatePoint;
     [SerializeField] private Transform firePoint;
 
+
+    [Serializable]
+    public struct Projectile
+    {
+        public string projectileKey;
+        public GameObject projectile;
+    }
+    [SerializeField] private Projectile[] projectiles;
+    private Dictionary<string, GameObject> _allProjectiles = new Dictionary<string, GameObject>();
+
     private Vector3 _mousePosition;
     private Vector3 _aimDirection;
     private float _aimAngle;
@@ -21,13 +31,21 @@ public class PlayerProjectile : MonoBehaviour
     private void Start()
     {
         _view = GetComponent<PhotonView>();
+
+        // Заполнение нормального словаря всех проджектайлов
+        if (projectiles.Length != 0)
+            for (int i = 0; i < projectiles.Length; i++)
+            {
+                Debug.Log(projectiles[i].projectileKey + " " + projectiles[i].projectile);
+                this._allProjectiles[projectiles[i].projectileKey] = projectiles[i].projectile;
+            }
     }
 
-    public void Attack(GameObject projectile)
+    public void Attack(string projectileKey)
     {
-        this.projectile = projectile;
-        RemoteProjectileAttack(_aimAngle, _aimDirection);
-        _view.RPC("RemoteProjectileAttack", RpcTarget.Others, _aimAngle, _aimDirection);
+        Debug.Log("Attack in playerprojhect.dsedrgjkserg");
+        //RemoteProjectileAttack(_aimAngle, _aimDirection, projectileKey);
+        _view.RPC("RemoteProjectileAttack", RpcTarget.All, _aimAngle, _aimDirection, projectileKey);
     }
 
     private void Update()
@@ -42,8 +60,9 @@ public class PlayerProjectile : MonoBehaviour
     }
 
     [PunRPC]
-    private void RemoteProjectileAttack(float aimAngle, Vector3 aimDirection)
+    private void RemoteProjectileAttack(float aimAngle, Vector3 aimDirection, string projectileKey)
     {
+        projectile = _allProjectiles[projectileKey];
         projectile.GetComponent<BaseProjectile>().SetAimDirection(aimDirection);
         projectile.GetComponent<BaseProjectile>().SetAimAngel(aimAngle);
         projectile.GetComponent<BaseProjectile>().SetSenderCollider(gameObject);

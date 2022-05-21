@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class FlurryOfFire : BaseSkill
 {
     [SerializeField] private GameObject projectile;
     [SerializeField] private float shootTime;
     [SerializeField] private float timeBetweenShoot;
+
 
     public override IEnumerator UseSkill(GameObject caster, string key)
     {
@@ -25,7 +27,7 @@ public class FlurryOfFire : BaseSkill
 
         for(int i = 0; i < shootTime / timeBetweenShoot; i++)
         {
-            caster.GetComponent<PlayerProjectile>().Attack(projectile);
+            caster.GetComponent<PlayerProjectile>().Attack("Bullet");
             yield return new WaitForSeconds(timeBetweenShoot);
         }
         yield return new WaitForSeconds(cooldown);

@@ -80,6 +80,7 @@ public class ClassSelection : MonoBehaviour
             subclass.GetComponent<RectTransform>().sizeDelta = new Vector2(336, height);
             subclass.transform.localPosition = new Vector3(0, posY, 0);
             subclass.GetComponent<Button>().onClick.AddListener(() => { SetPlayerClass(playerPrefab); });
+            subclass.GetComponentInChildren<Text>().text = playerPrefab.GetComponent<BaseEntity>().GetEntityName();
             // subclass.GetComponent<Image>().sprite = playerPrefab.GetComponent<Image>().sprite;
             posY -= height + 10;
         }

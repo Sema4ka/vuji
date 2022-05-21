@@ -337,14 +337,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
---- !u!1 &6754265623814182265 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7012066835509977681, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
-  m_PrefabInstance: {fileID: 4392176692006565672}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &965370960133594574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3571788434696612582, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
+  m_PrefabInstance: {fileID: 4392176692006565672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6754265623814182265 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7012066835509977681, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
   m_PrefabInstance: {fileID: 4392176692006565672}
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &9160914369980648255
@@ -460,6 +460,7 @@ MonoBehaviour:
   projectile: {fileID: 8255796032531646231, guid: cb552d274162fca42b4ff650b5074138, type: 3}
   rotatePoint: {fileID: 1287147371733323864}
   firePoint: {fileID: 5122357596616110450}
+  projectiles: []
 --- !u!114 &5635040281599994055
 MonoBehaviour:
   m_ObjectHideFlags: 0

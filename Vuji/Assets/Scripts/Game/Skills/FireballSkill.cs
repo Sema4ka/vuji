@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Photon.Pun;
 
 public class FireballSkill : BaseSkill
 {
@@ -24,7 +24,7 @@ public class FireballSkill : BaseSkill
         yield return new WaitForSeconds(castTime);
 
 
-        caster.GetComponent<PlayerProjectile>().Attack(projectile);
+        caster.GetComponent<PlayerProjectile>().Attack("Fireball");
 
         yield return new WaitForSeconds(cooldown);
         caster.GetComponent<BaseEntity>().setIsCooldown(key, false);
