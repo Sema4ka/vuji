@@ -45,7 +45,11 @@ public class BaseEntity : MonoBehaviour
                 Debug.Log(skills[i].key + " " + skills[i].skill);
                 this._skills[skills[i].key] = skills[i].skill;
             }
-        KeyHandler.keyPressed += OnKeyPressed;
+
+        if(gameObject.CompareTag("Player")) {
+            if(_view.IsMine)
+                KeyHandler.keyPressed += OnKeyPressed;
+        }
         maxHealthPoints = Mathf.Max(maxHealthPoints, healthPoints);
         float height = 1.0f;
         healthBar.SetOffset(new Vector3(0, height * 0.6f, 0));
@@ -81,13 +85,15 @@ public class BaseEntity : MonoBehaviour
 
     public void UseSkill()
     {
-        if (!_view.IsMine || _selectedSkill == "") return;
         if (_selectedSkill.StartsWith("Skill"))
         {
-            string skillName = _selectedSkill;
-            Debug.Log("Used " + skillName);
-            StartCoroutine(_skills[skillName].GetComponent<BaseSkill>().UseSkill(this.gameObject, _selectedSkill));
+            Debug.Log("Used " + _selectedSkill);
+            StartCoroutine(_skills[_selectedSkill].GetComponent<BaseSkill>().UseSkill(this.gameObject, _selectedSkill));
             deSelectSkill();
+        }
+        else
+        {
+            Debug.Log("Skill is not selected");
         }
     }
 
@@ -99,12 +105,6 @@ public class BaseEntity : MonoBehaviour
 
     private void selectSkill(string skillName)
     {
-        if (skillName == "")
-        {
-            Debug.Log("Skill is not selected");
-            return;
-        }
-
         if ((skillName == "Skill 1" && !_isSkill1Cooldown) || (skillName == "Skill 2" && !_isSkill2Cooldown))
         {
             Debug.Log("Selected " + skillName);
