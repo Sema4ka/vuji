@@ -8,7 +8,6 @@ public class MovementPlayer : MonoBehaviour
     private BaseEntity _player;
     private float _moveSpeed;
     private Rigidbody2D _rb2d;
-    private AudioSource stepSound;
 
     private bool canMove = true;
 
@@ -20,7 +19,6 @@ public class MovementPlayer : MonoBehaviour
     private void Start()
     {
         _player = GetComponent<BaseEntity>();
-        stepSound = GetComponent<AudioSource>();
         _moveSpeed = _player.GetMoveSpeed();
         _rb2d = GetComponent<Rigidbody2D>();
         _view = GetComponent<PhotonView>();
@@ -51,7 +49,6 @@ public class MovementPlayer : MonoBehaviour
 
         if (_view.IsMine)
         {
-
             if (!keybindMovement)
             {
                 Vector2 movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -78,7 +75,6 @@ public class MovementPlayer : MonoBehaviour
                 }
                 Vector2 movement = new Vector2(velX, velY);
                 _rb2d.MovePosition(_rb2d.position + movement * _moveSpeed * Time.fixedDeltaTime);
-
             }
         }
     }
