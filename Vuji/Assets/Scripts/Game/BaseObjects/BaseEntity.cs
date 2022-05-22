@@ -80,8 +80,8 @@ public class BaseEntity : MonoBehaviour
             _currentTick -= Time.deltaTime;
             if (_currentTick <= 0)
             {
-                healthPoints += healthRegeneration;
-                energy += energyRegeneration;
+                healthPoints = healthPoints + healthRegeneration > maxHealthPoints?maxHealthPoints:healthPoints + healthRegeneration;
+                energy = energy + energyRegeneration > maxEnergy?maxEnergy:energy + energyRegeneration;
                 _currentTick = _regenerationTick;
             }
 
