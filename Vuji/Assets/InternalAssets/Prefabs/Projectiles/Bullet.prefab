@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileName: Bullet
   projectileDescription: "\u041F\u0443\u043B\u044F!"
-  projectileDamage: 20
+  projectileDamage: 150
   velocity: 20
   lifeTime: 3
   destroyOnCollide: 1

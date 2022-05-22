@@ -15,7 +15,7 @@ public class BaseEntity : MonoBehaviour
     [SerializeField] private float healthRegeneration = 5.0f;
     [SerializeField] private float energyRegeneration = 5.0f;
 
-    private float _regenerationTick = 1;
+    private float _regenerationTick = 5;
     private float _currentTick;
 
     //Аналог словаря для юнити инспектора
