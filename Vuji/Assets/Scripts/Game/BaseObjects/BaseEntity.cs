@@ -9,7 +9,7 @@ public class BaseEntity : MonoBehaviour
     [SerializeField] private string entityName = "baseEntityName";
     [SerializeField] private float healthPoints = 100.0f;
     [SerializeField] private float maxHealthPoints = 100.0f;
-    [SerializeField] private float moveSpeed = 5.0f;
+    [SerializeField] private float moveSpeed = 3.0f;
     [SerializeField] private float energy = 100.0f;
     [SerializeField] private float maxEnergy = 100.0f;
     [SerializeField] private float healthRegeneration = 1.0f;
@@ -80,14 +80,18 @@ public class BaseEntity : MonoBehaviour
             _currentTick -= Time.deltaTime;
             if (_currentTick <= 0)
             {
-                healthPoints = healthPoints + healthRegeneration > maxHealthPoints?maxHealthPoints:healthPoints + healthRegeneration;
-                energy = energy + energyRegeneration > maxEnergy?maxEnergy:energy + energyRegeneration;
+                _view.RPC("IncreasePoints", RpcTarget.All);
                 _currentTick = _regenerationTick;
             }
 
         }
     }
-
+    [PunRPC]
+    void IncreasePoints(){
+        healthPoints = healthPoints + healthRegeneration > maxHealthPoints?maxHealthPoints:healthPoints + healthRegeneration;
+        energy = energy + energyRegeneration > maxEnergy?maxEnergy:energy + energyRegeneration;
+    }
+    
     #region Public Methods
 
     public void AddEffect(BaseEffect effect)

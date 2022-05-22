@@ -10,6 +10,7 @@ public class EndGameManager : MonoBehaviour
 {
     [SerializeField] Image image;
     [SerializeField] Text text;
+    [SerializeField] GameObject panel;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class EndGameManager : MonoBehaviour
 
     void OnGameEnd(string teamName)
     {
+        panel.SetActive(true);
         PhotonNetwork.LeaveRoom();
         if (PhotonNetwork.LocalPlayer.GetPhotonTeam().Name == teamName)
         {
