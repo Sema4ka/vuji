@@ -86,6 +86,22 @@ public class BaseEntity : MonoBehaviour
 
         }
     }
+
+    [PunRPC]
+    public void IncreaseMaxHealth(float toAdd)
+    {
+        maxHealthPoints += toAdd;
+    }
+    [PunRPC]
+    public void IncreaseMaxEnergy(float toAdd)
+    {
+        maxEnergy += toAdd;
+    }
+    [PunRPC]
+    public void Heal(float hp) {
+        healthPoints = healthPoints + hp > maxHealthPoints ? maxHealthPoints : healthPoints + hp;
+    }
+
     [PunRPC]
     void IncreasePoints(){
         healthPoints = healthPoints + healthRegeneration > maxHealthPoints?maxHealthPoints:healthPoints + healthRegeneration;

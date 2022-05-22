@@ -8,6 +8,7 @@ using System;
 
 public class InventoryWindow : MonoBehaviour
 {
+    private GameObject player;
     [SerializeField] Inventory playerInventory;
     [SerializeField] RectTransform inventoryPanel;
 
@@ -22,10 +23,12 @@ public class InventoryWindow : MonoBehaviour
         DisplayedItem.onItemSwap += onItemSwapped;
         KeyHandler.keyPressed += KeyPressed;
         SpawnPlayers.OnSpawn += OnSpawn;
+        Redraw();
     }
 
     public void OnSpawn(GameObject playerObject)
     {
+        player = playerObject;
         playerInventory = playerObject.GetComponent<Inventory>();
         playerInventory.onItemAdded += OnItemAdded;
         Redraw();
@@ -46,7 +49,7 @@ public class InventoryWindow : MonoBehaviour
         int num = Convert.ToInt32(words[1]) - 1;
         if (displayedIcons.Count() > num)
         {
-            bool stillHas = playerInventory.inventoryItems[num].UseItem();
+            bool stillHas = playerInventory.inventoryItems[num].UseItem(player);
             if (!stillHas)
             {
                 playerInventory.inventoryItems.RemoveAt(num);

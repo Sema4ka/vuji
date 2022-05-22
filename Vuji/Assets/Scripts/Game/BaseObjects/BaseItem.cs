@@ -39,7 +39,7 @@ public class BaseItem : ScriptableObject
     {
         return image;
     }
-    public bool UseItem()
+    public virtual bool UseItem(GameObject owner)
     {
         // Do smth
         amount = amount - 1;
