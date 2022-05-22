@@ -47,9 +47,9 @@ MonoBehaviour:
   skillDescription: "\u041F\u0438\u0440\u0430\u0442 \u043D\u0430\u0447\u0438\u043D\u0430\u0435\u0442
     \u0441\u0442\u0440\u0435\u043B\u044F\u0442\u044C \u0441 \u043F\u043E\u0432\u044B\u0448\u0435\u043D\u043D\u043E\u0439
     \u0430\u0442\u0430\u043A\u043E\u0439"
-  energyCost: 50
+  energyCost: 30
   castTime: 3
-  cooldown: 30
+  cooldown: 20
   cancelMovementOnCast: 1
   projectile: {fileID: 8282622286620053181, guid: dc0c997dbc1c3d09d9123dba13d29921, type: 3}
   shootTime: 3

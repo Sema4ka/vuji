@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileName: Bullet
   projectileDescription: "\u041F\u0443\u043B\u044F!"
-  projectileDamage: 3
+  projectileDamage: 35
   velocity: 20
   lifeTime: 3
   destroyOnCollide: 1
@@ -93,7 +93,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -713731961
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f937ff17c69f8093ba829a8259e76dc2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

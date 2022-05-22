@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Photon.Pun;
 
 public class EscapeMenu : MonoBehaviour
@@ -31,6 +32,7 @@ public class EscapeMenu : MonoBehaviour
     public void LeaveLobby()
     {
         PhotonNetwork.LeaveRoom();
+        SceneManager.LoadScene("Lobby");
     }
     public void OpenSettings()
     {
