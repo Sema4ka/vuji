@@ -60,7 +60,7 @@ namespace ServersInfo
     [System.Serializable]
     public class MainServerInfo
     {
-        public static string ServerDomain = "https://77.81.229.193:8001";
+        public static string ServerDomain = "http://77.81.229.193:8000";
     }
 
     [System.Serializable]
