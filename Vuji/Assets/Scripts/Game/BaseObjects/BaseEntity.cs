@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 
 public class BaseEntity : MonoBehaviour
 {
+    #region Entity Infrormation
     [SerializeField] private string entityName = "baseEntityName";
     [SerializeField] private float healthPoints = 100.0f;
     [SerializeField] private float maxHealthPoints = 100.0f;
@@ -14,10 +15,9 @@ public class BaseEntity : MonoBehaviour
     [SerializeField] private float maxEnergy = 100.0f;
     [SerializeField] private float healthRegeneration = 1.0f;
     [SerializeField] private float energyRegeneration = 5.0f;
+    #endregion
 
-    private float _regenerationTick = 1;
-    private float _currentTick;
-
+    #region Skills
     //Аналог словаря для юнити инспектора
     [Serializable]
     public struct Skill
@@ -26,20 +26,27 @@ public class BaseEntity : MonoBehaviour
         public GameObject skill;
     }
     public Skill[] skills;
+    private Dictionary<string, GameObject> _skills = new Dictionary<string, GameObject>();
+    #endregion
 
+    #region Private fields
+    // Обязятальный префаб для выпадения предметов
     public GameObject _droppedItemPrefab;
 
     private PhotonView _view;
 
+    private float _regenerationTick = 1;
+    private float _currentTick;
     private bool _isSkill1Cooldown = false;
     private bool _isSkill2Cooldown = false;
     private string _selectedSkill = "";
-    private Dictionary<string, GameObject> _skills = new Dictionary<string, GameObject>();
+    #endregion
 
-    #region Information
+    #region DisplayedInformation
     [SerializeField] public HealthBarManager healthBar;
     [SerializeField] public EntityNameManager displayedName;
     #endregion
+
     private void Start()
     {
         _view = gameObject.GetComponent<PhotonView>();
@@ -53,38 +60,18 @@ public class BaseEntity : MonoBehaviour
                 this._skills[skills[i].key] = skills[i].skill;
             }
 
-        if(gameObject.CompareTag("Player")) {
-            if(_view.IsMine)
-                KeyHandler.keyPressed += OnKeyPressed;
-        }
+
         maxHealthPoints = Mathf.Max(maxHealthPoints, healthPoints);
         maxEnergy = Mathf.Max(maxEnergy, energy);
         float height = 1.0f;
         healthBar.SetOffset(new Vector3(0, height * 0.6f, 0));
         healthBar.SetHealth(healthPoints, maxHealthPoints);
         displayedName.SetOffset(new Vector3(0, height * 0.6f, 0));
-        if (_view.IsMine)
-        {
-            displayedName.SetText(PhotonNetwork.NickName==""?"Player" : PhotonNetwork.NickName); // Replace with Username
-        }
-        else
-        {
-            displayedName.gameObject.SetActive(false);
-        }
     }
 
     private void Update()
     {
         healthBar.SetHealth(healthPoints, maxHealthPoints);
-        if (gameObject.CompareTag("Player") && _view.IsMine){
-            _currentTick -= Time.deltaTime;
-            if (_currentTick <= 0)
-            {
-                _view.RPC("IncreasePoints", RpcTarget.All);
-                _currentTick = _regenerationTick;
-            }
-
-        }
     }
 
     [PunRPC]
@@ -115,10 +102,14 @@ public class BaseEntity : MonoBehaviour
         effect.ApplyEffect(this);
     }
 
-    void OnKeyPressed(string name, KeyCode key)
+    public void TickPoints()
     {
-        if (name == "Use Skill") UseSkill();
-        else if (name.StartsWith("Skill")) selectSkill(name);
+        _currentTick -= Time.deltaTime;
+        if (_currentTick <= 0)
+        {
+            _view.RPC("IncreasePoints", RpcTarget.All);
+            _currentTick = _regenerationTick;
+        }
     }
 
     public void UseSkill()
@@ -135,13 +126,7 @@ public class BaseEntity : MonoBehaviour
         }
     }
 
-    private void deSelectSkill()
-    {
-        Debug.Log("Deselected" + _selectedSkill);
-        this._selectedSkill = "";
-    }
-
-    private void selectSkill(string skillName)
+    public void selectSkill(string skillName)
     {
         if ((skillName == "Skill 1" && !_isSkill1Cooldown) || (skillName == "Skill 2" && !_isSkill2Cooldown))
         {
@@ -154,12 +139,17 @@ public class BaseEntity : MonoBehaviour
         }
     }
 
+    private void deSelectSkill()
+    {
+        Debug.Log("Deselected" + _selectedSkill);
+        this._selectedSkill = "";
+    }
+
     public void setIsCooldown(string key, bool value)
     {
         if (key == "Skill 1") this._isSkill1Cooldown = value;
         if (key == "Skill 2") this._isSkill2Cooldown = value;
     }
-
 
 
     public float GetMoveSpeed()
@@ -205,29 +195,19 @@ public class BaseEntity : MonoBehaviour
         healthPoints -= healthDamage;
         if (healthPoints <= 0)
         {
-            if (gameObject.CompareTag("Player"))
-            {
-                PlayerDeath();
-            }
-            else
-            {
-                EntityDeath();
-            }
+            Death();
         }
 
         Debug.Log(entityName + " hp is " + healthPoints);
     }
 
-    private void EntityDeath()
+    private void Death()
     {
         DropAllItems();
-        PhotonNetwork.Destroy(gameObject);
-    }
-
-    private void PlayerDeath()
-    {
-        DropAllItems();
-        gameObject.GetComponent<PlayerScript>().KillPlayer();
+        if(gameObject.CompareTag("Player"))
+            gameObject.GetComponent<PlayerScript>().KillPlayer();
+        else
+            PhotonNetwork.Destroy(gameObject);
     }
 
     private void DropAllItems()
