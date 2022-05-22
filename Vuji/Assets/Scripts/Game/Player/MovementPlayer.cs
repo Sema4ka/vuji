@@ -41,7 +41,7 @@ public class MovementPlayer : MonoBehaviour
         canMove = true;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if(!canMove) return;
         var keyHandler = KeyHandler.instance;

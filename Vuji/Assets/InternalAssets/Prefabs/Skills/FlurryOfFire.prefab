@@ -52,5 +52,5 @@ MonoBehaviour:
   cooldown: 10
   cancelMovementOnCast: 1
   projectile: {fileID: 8282622286620053181, guid: dc0c997dbc1c3d09d9123dba13d29921, type: 3}
-  shootTime: 2
+  shootTime: 1
   timeBetweenShoot: 0.1

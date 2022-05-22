@@ -12,10 +12,10 @@ public class BaseEntity : MonoBehaviour
     [SerializeField] private float moveSpeed = 5.0f;
     [SerializeField] private float energy = 100.0f;
     [SerializeField] private float maxEnergy = 100.0f;
-    [SerializeField] private float healthRegeneration = 5.0f;
+    [SerializeField] private float healthRegeneration = 1.0f;
     [SerializeField] private float energyRegeneration = 5.0f;
 
-    private float _regenerationTick = 5;
+    private float _regenerationTick = 1;
     private float _currentTick;
 
     //Аналог словаря для юнити инспектора
