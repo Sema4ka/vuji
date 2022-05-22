@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using Photon.Pun;
+using System.Collections;
+
 
 public class AnimationPlayer : MonoBehaviour
 {
@@ -12,12 +14,15 @@ public class AnimationPlayer : MonoBehaviour
     private const string LeftPlayerAnimation = "Left";
     private const string RightPlayerAnimation = "Right";
     private AudioSource stepSound;
+    private bool isStepPlaying;
 
     private void Start()
     {
         _view = GetComponent<PhotonView>();
+        isStepPlaying = false;
         _animator = GetComponent<Animator>();
         stepSound = GetComponent<AudioSource>();
+
     }
 
 
@@ -28,30 +33,26 @@ public class AnimationPlayer : MonoBehaviour
             if (Input.GetAxisRaw("Vertical") < 0)
             {
                 _view.RPC("ChangePlayerAnimation", RpcTarget.All, FrontPlayerAnimation);
-                stepSound.PlayOneShot(stepSound.clip);
-
+                playStep();
             }
 
 
             else if (Input.GetAxisRaw("Vertical") > 0)
             {
                 _view.RPC("ChangePlayerAnimation", RpcTarget.All, BackPlayerAnimation);
-                stepSound.PlayOneShot(stepSound.clip);
-
+                playStep();
             }
 
             else if (Input.GetAxisRaw("Horizontal") > 0)
             {
                 _view.RPC("ChangePlayerAnimation", RpcTarget.All, RightPlayerAnimation);
-                stepSound.PlayOneShot(stepSound.clip);
-
+                playStep();
             }
 
             else if (Input.GetAxisRaw("Horizontal") < 0)
             {
                 _view.RPC("ChangePlayerAnimation", RpcTarget.All, LeftPlayerAnimation);
-                stepSound.PlayOneShot(stepSound.clip);
-
+                playStep();
             }
 
 
@@ -60,6 +61,21 @@ public class AnimationPlayer : MonoBehaviour
         }
     }
 
+    void playStep()
+    {
+        if (!isStepPlaying)
+        {
+            stepSound.Play();
+            StartCoroutine(stepDelay(0.84f));
+        }
+    }
+
+    private IEnumerator stepDelay(float delay)
+    {
+        isStepPlaying=true;
+        yield return new WaitForSeconds(delay);
+        isStepPlaying = false;
+    }
     [PunRPC]
     private void ChangePlayerAnimation(string newAnimation)
     {
