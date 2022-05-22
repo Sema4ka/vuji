@@ -20,6 +20,7 @@ public class EndGameManager : MonoBehaviour
 
     void OnGameEnd(string teamName)
     {
+        PhotonNetwork.LeaveRoom();
         if (PhotonNetwork.LocalPlayer.GetPhotonTeam().Name == teamName)
         {
             image.color = Color.blue;

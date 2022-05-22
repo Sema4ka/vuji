@@ -1008,7 +1008,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000007298575}
+  m_AnchoredPosition: {x: 0, y: -0.0000033251092}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &91438727
@@ -17081,7 +17081,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1319238528}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9812463
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -37403,7 +37403,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1294562853}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EndGameManager, Assembly-CSharp
         m_MethodName: LeaveGame
         m_Mode: 1
@@ -41697,7 +41697,6 @@ GameObject:
   - component: {fileID: 1294562850}
   - component: {fileID: 1294562852}
   - component: {fileID: 1294562851}
-  - component: {fileID: 1294562853}
   m_Layer: 5
   m_Name: EndGame Panel
   m_TagString: Untagged
@@ -41765,20 +41764,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294562849}
   m_CullTransparentMesh: 1
---- !u!114 &1294562853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294562849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 664795e6542a90340b28ff806f225770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  image: {fileID: 1657340276}
-  text: {fileID: 284091627}
 --- !u!1 &1294614127
 GameObject:
   m_ObjectHideFlags: 0
@@ -41862,7 +41847,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1234464740}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9812463
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -45250,6 +45235,7 @@ GameObject:
   - component: {fileID: 1688611682}
   - component: {fileID: 1688611681}
   - component: {fileID: 1688611689}
+  - component: {fileID: 1688611690}
   m_Layer: 5
   m_Name: UI Canvas
   m_TagString: Untagged
@@ -45418,6 +45404,20 @@ MonoBehaviour:
   dataBase: {fileID: 1513204525}
   soundSettingsContent: {fileID: 1548921837}
   soundSlider: {fileID: 4432263645364463289, guid: d414966cf9b3e0d43bfea7b8344ebeff, type: 3}
+--- !u!114 &1688611690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688611680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664795e6542a90340b28ff806f225770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1657340276}
+  text: {fileID: 284091627}
 --- !u!1 &1711516652
 GameObject:
   m_ObjectHideFlags: 0
@@ -46981,7 +46981,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 203542984}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9812463
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -47252,7 +47252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000005391834}
+  m_AnchoredPosition: {x: 0, y: -0.0000033251092}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1922898704
@@ -47287,7 +47287,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000007298575}
+  m_AnchoredPosition: {x: 0, y: -0.0000033251092}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1933307050
