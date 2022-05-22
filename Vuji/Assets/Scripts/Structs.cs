@@ -60,13 +60,13 @@ namespace ServersInfo
     [System.Serializable]
     public class MainServerInfo
     {
-        public static string ServerDomain = "http://127.0.0.1:8000";
+        public static string ServerDomain = "https://77.81.229.193:8001";
     }
 
     [System.Serializable]
     public class SocketServerInfo
     {
-        public static string SocketServerIP = "127.0.0.1";
+        public static string SocketServerIP = "77.81.229.193";
         public static int SocketServerPort = 5000;
         public static string CommandOpenConnect = "600"; // [КЛИЕНТ] подключение к серверу
         public static string CommandInvite = "700"; // [КЛИЕНТ] ответ на 601S - пользователь подключен
