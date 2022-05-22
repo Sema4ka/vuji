@@ -11,6 +11,12 @@ public class BaseEntity : MonoBehaviour
     [SerializeField] private float maxHealthPoints = 100.0f;
     [SerializeField] private float moveSpeed = 5.0f;
     [SerializeField] private float energy = 100.0f;
+    [SerializeField] private float maxEnergy = 100.0f;
+    [SerializeField] private float healthRegeneration = 5.0f;
+    [SerializeField] private float energyRegeneration = 5.0f;
+
+    private float _regenerationTick = 1;
+    private float _currentTick;
 
     //Аналог словаря для юнити инспектора
     [Serializable]
@@ -37,6 +43,7 @@ public class BaseEntity : MonoBehaviour
     private void Start()
     {
         _view = gameObject.GetComponent<PhotonView>();
+        _currentTick = _regenerationTick;
 
         // Заполнение обычного словаря скилов из словаря из инспектора
         if (skills.Length != 0)
@@ -51,6 +58,7 @@ public class BaseEntity : MonoBehaviour
                 KeyHandler.keyPressed += OnKeyPressed;
         }
         maxHealthPoints = Mathf.Max(maxHealthPoints, healthPoints);
+        maxEnergy = Mathf.Max(maxEnergy, energy);
         float height = 1.0f;
         healthBar.SetOffset(new Vector3(0, height * 0.6f, 0));
         healthBar.SetHealth(healthPoints, maxHealthPoints);
@@ -68,6 +76,16 @@ public class BaseEntity : MonoBehaviour
     private void Update()
     {
         healthBar.SetHealth(healthPoints, maxHealthPoints);
+        if (gameObject.CompareTag("Player") && _view.IsMine){
+            _currentTick -= Time.deltaTime;
+            if (_currentTick <= 0)
+            {
+                healthPoints += healthRegeneration;
+                energy += energyRegeneration;
+                _currentTick = _regenerationTick;
+            }
+
+        }
     }
 
     #region Public Methods
@@ -137,6 +155,16 @@ public class BaseEntity : MonoBehaviour
     public float GetMaxHealthPoints()
     {
         return maxHealthPoints;
+    }
+
+    public float GetEnergyPoints()
+    {
+        return energy;
+    }
+
+    public float GetMaxEnergyPoints()
+    {
+        return maxEnergy;
     }
 
     public string GetEntityName()
