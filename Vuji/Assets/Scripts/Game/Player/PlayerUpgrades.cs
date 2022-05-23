@@ -18,6 +18,11 @@ public class PlayerUpgrades : MonoBehaviour
         KeyHandler.keyPressed += KeyPressed;
         SpawnPlayers.OnSpawn += OnSpawn;
     }
+    private void OnDestroy()
+    {
+        SpawnPlayers.OnSpawn -= OnSpawn;
+        KeyHandler.keyPressed -= KeyPressed;
+    }
 
     void OnSpawn(GameObject playerObject)
     {

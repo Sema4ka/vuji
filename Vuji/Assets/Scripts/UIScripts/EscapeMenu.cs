@@ -14,6 +14,10 @@ public class EscapeMenu : MonoBehaviour
     {
         KeyHandler.keyPressed += KeyPressed;
     }
+    private void OnDestroy()
+    {
+        KeyHandler.keyPressed -= KeyPressed;
+    }
 
     void KeyPressed(string name, KeyCode key)
     {

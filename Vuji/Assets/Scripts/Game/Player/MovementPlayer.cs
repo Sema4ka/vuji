@@ -24,6 +24,10 @@ public class MovementPlayer : MonoBehaviour
         _view = GetComponent<PhotonView>();
         SettingsManager.keybindMovementToggled += ToggleKeybindMovement;
     }
+    private void OnDestroy()
+    {
+        SettingsManager.keybindMovementToggled -= ToggleKeybindMovement;
+    }
     void ToggleKeybindMovement(bool isOn)
     {
         keybindMovement = isOn;

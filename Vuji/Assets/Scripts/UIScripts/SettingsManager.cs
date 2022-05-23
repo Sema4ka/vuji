@@ -34,7 +34,13 @@ public class SettingsManager : MonoBehaviour
 
     #region KeybindsFields
     #endregion
-  #endregion
+    #endregion
+
+    private void OnDestroy()
+    {
+        KeyHandler.keyPressed -= OnKeyPressed;
+        KeybindManager.keyChanged -= OnKeyChanged;
+    }
 
     // Start is called before the first frame update
     void Start()

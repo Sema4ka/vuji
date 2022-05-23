@@ -15,6 +15,11 @@ public class SoundSettings : MonoBehaviour
     // Sound volumes list
     Dictionary<string, float> volumeList = new Dictionary<string, float>();
 
+    private void OnDestroy()
+    {
+        SoundSliderManager.onValueChange -= SoundSliderValueChange;
+    }
+
     // Load all sounds
     void Start()
     {

@@ -16,6 +16,11 @@ public class SkillCastTimer : MonoBehaviour
         BaseSkill.onCast += StartTimer;
     }
 
+    private void OnDestroy()
+    {
+        BaseSkill.onCast -= StartTimer;
+    }
+
     public void StartTimer(float time)
     {
         timerValue = 0f;

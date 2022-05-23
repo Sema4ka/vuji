@@ -23,7 +23,14 @@ public class InventoryWindow : MonoBehaviour
         DisplayedItem.onItemSwap += onItemSwapped;
         KeyHandler.keyPressed += KeyPressed;
         SpawnPlayers.OnSpawn += OnSpawn;
-        Redraw();
+    }
+    private void OnDestroy()
+    {
+        DisplayedItem.onItemDrop -= OnItemDropped;
+        DisplayedItem.onItemSwap -= onItemSwapped;
+        KeyHandler.keyPressed -= KeyPressed;
+        SpawnPlayers.OnSpawn -= OnSpawn;
+        playerInventory.onItemAdded -= OnItemAdded;
     }
 
     public void OnSpawn(GameObject playerObject)

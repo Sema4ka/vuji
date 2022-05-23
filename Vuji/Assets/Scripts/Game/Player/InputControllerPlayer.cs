@@ -13,6 +13,11 @@ public class InputControllerPlayer : MonoBehaviour
         _player = this.gameObject.GetComponent<BaseEntity>();    
     }
 
+    private void OnDestroy()
+    {
+        KeyHandler.keyPressed -= OnKeyPressed;
+    }
+
     void OnKeyPressed(string name, KeyCode code)
     {
         //if (name == "Use Skill") _player.UseSkill();

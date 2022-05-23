@@ -14,13 +14,23 @@ public class HealthBarUI : MonoBehaviour
         HealthBar.minValue = 0f;
         SpawnPlayers.OnSpawn += OnSpawn;
     }
+    private void OnDestroy()
+    {
+        SpawnPlayers.OnSpawn -= OnSpawn;
+    }
     void OnSpawn(GameObject player){
         entity = player.GetComponent<BaseEntity>();
     }
     // Update is called once per frame
     void Update()
     {
-        if (entity == null) return;
+        if (entity == null)
+        {
+            HealthBar.maxValue = 0f;
+            HealthBar.value = 0f;
+            HealthBarText.text = "";
+            return;
+        }
         HealthBar.maxValue = entity.GetMaxHealthPoints();
         HealthBar.value = entity.GetHealthPoints();
         HealthBarText.text = entity.GetHealthPoints().ToString() + "/" + entity.GetMaxHealthPoints().ToString();

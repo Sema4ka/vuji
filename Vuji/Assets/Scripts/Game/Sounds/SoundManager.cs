@@ -17,6 +17,10 @@ public class SoundManager : MonoBehaviour
         SoundSettings.volumeChange += VolumeUpdated;
         volumeSet = true;
     }
+    private void OnDestroy()
+    {
+        SoundSettings.volumeChange -= VolumeUpdated;
+    }
 
     private void Update()
     {

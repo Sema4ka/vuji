@@ -66,7 +66,7 @@ public class ClassSelection : MonoBehaviour
 
             SetPlayerClass(cls[UnityEngine.Random.Range(0, cls.Length)]);
         }
-        Debug.Log(classSelection.activeSelf);
+        TimerManager.timerEnd -= OnTimerEnd;
         classSelection.SetActive(false);
     }
 
@@ -100,7 +100,6 @@ public class ClassSelection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     

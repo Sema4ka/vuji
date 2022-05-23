@@ -16,11 +16,17 @@ public class EndGameManager : MonoBehaviour
     [SerializeField] GameObject UiCanvas;
     [SerializeField] GameObject GameManager;
 
+    public static Action<bool> temp;
+
     // Start is called before the first frame update
     void Start()
     {
         EndGame.OnGameEnd += OnGameEnd;
 
+    }
+    private void OnDestroy()
+    {
+        EndGame.OnGameEnd -= OnGameEnd;
     }
 
     void OnGameEnd(string teamName)
@@ -40,11 +46,10 @@ public class EndGameManager : MonoBehaviour
         PhotonNetwork.LeaveRoom();
     }
 
-
     public void LeaveGame()
     {
         Destroy(UiCanvas);
         Destroy(GameManager);
         SceneManager.LoadScene("Lobby");
-}
+    }
 }

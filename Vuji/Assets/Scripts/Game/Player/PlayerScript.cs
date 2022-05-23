@@ -27,6 +27,10 @@ public class PlayerScript : MonoBehaviour
         else
             _playerEntitiy.displayedName.gameObject.SetActive(false);
     }
+    private void OnDestroy()
+    {
+        if (_view.IsMine) KeyHandler.keyPressed -= OnKeyPressed;
+    }
 
     private void Update() {
         if(_view.IsMine)

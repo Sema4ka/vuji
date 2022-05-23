@@ -169,7 +169,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 242792630073809309, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2435816656477564949, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: moveSpeed
@@ -185,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 8455292785502437808, guid: 9a0fdf131a4a86540bae8470b1178eba, type: 3}
     - target: {fileID: 2965660368256064661, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3571788434696612582, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: m_RootOrder
@@ -401,9 +401,10 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 512
+  damage: 10
   attackDistance: 1
   attackRange: 1
-  damage: 10
+  attackTimeout: 1
 --- !u!114 &1988209152861905804
 MonoBehaviour:
   m_ObjectHideFlags: 0

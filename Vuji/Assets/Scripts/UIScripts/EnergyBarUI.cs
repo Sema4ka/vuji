@@ -14,6 +14,10 @@ public class EnergyBarUI : MonoBehaviour
         EnergyBar.minValue = 0f;
         SpawnPlayers.OnSpawn += OnSpawn;
     }
+    private void OnDestroy()
+    {
+        SpawnPlayers.OnSpawn -= OnSpawn;
+    }
     void OnSpawn(GameObject player){
         entity = player.GetComponent<BaseEntity>();
     }
@@ -21,7 +25,13 @@ public class EnergyBarUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (entity == null) return;
+        if (entity == null)
+        {
+            EnergyBar.maxValue = 0f;
+            EnergyBar.value = 0f;
+            EnergyBarText.text = "";
+            return;
+        }
         EnergyBar.maxValue = entity.GetMaxEnergyPoints();
         EnergyBar.value = entity.GetEnergyPoints();
         EnergyBarText.text = entity.GetEnergyPoints().ToString() + "/" + entity.GetMaxEnergyPoints().ToString();

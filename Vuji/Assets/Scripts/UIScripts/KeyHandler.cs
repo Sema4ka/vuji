@@ -57,6 +57,12 @@ public class KeyHandler : MonoBehaviour
     #endregion
     #endregion
 
+    private void OnDestroy()
+    {
+        SpawnPlayers.OnSpawn -= OnSpawn;
+        KeybindManager.Binding -= OnBinding;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
