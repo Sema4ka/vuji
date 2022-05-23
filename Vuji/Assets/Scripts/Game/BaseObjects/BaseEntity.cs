@@ -191,6 +191,21 @@ public class BaseEntity : MonoBehaviour
         return entityName;
     }
 
+    public int GetDefense()
+    {
+        return defense;
+    }
+
+    public void IncreaseDefense(int addDefense)
+    {
+        this.defense += addDefense;
+    }
+
+    public void DecreaseDefense(int addDefense)
+    {
+        this.defense -= addDefense;
+    }
+
     public bool spendEnergy(float energyCost)
     {
         if (energyCost > this.energy) return false;

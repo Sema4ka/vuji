@@ -176,6 +176,10 @@ PrefabInstance:
       value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 2435816656477564949, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
+      propertyPath: maxEnergy
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435816656477564949, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: moveSpeed
       value: 3
       objectReference: {fileID: 0}
@@ -210,7 +214,7 @@ PrefabInstance:
     - target: {fileID: 2435816656477564949, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: skills.Array.data[0].skill
       value: 
-      objectReference: {fileID: 2704600687908857770, guid: bf66dd50fd97194fcb788fa3109e812b, type: 3}
+      objectReference: {fileID: 3796884077945413057, guid: bc1306c81ce2143fd933fdce7f1f6db7, type: 3}
     - target: {fileID: 2435816656477564949, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: skills.Array.data[1].skill
       value: 
@@ -417,14 +421,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
---- !u!1 &6754265623814182265 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7012066835509977681, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
-  m_PrefabInstance: {fileID: 4392176692006565672}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &965370960133594574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3571788434696612582, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
+  m_PrefabInstance: {fileID: 4392176692006565672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6754265623814182265 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7012066835509977681, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
   m_PrefabInstance: {fileID: 4392176692006565672}
   m_PrefabAsset: {fileID: 0}
 --- !u!82 &4541029417071092074

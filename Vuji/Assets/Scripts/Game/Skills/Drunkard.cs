@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Photon.Pun;
 
-public class FlurryOfFire : BaseSkill
+public class Drunkard : BaseSkill
 {
-    [SerializeField] private GameObject projectile;
-    [SerializeField] private float shootTime;
-    [SerializeField] private float timeBetweenShoot;
 
+    [Tooltip("Пират опустошает бутылку рома, на время опьянения пират получает на n меньше урона, но + n% к шансу промахнуться")]
+    [SerializeField] private int additionalDefense = 5;
+
+    [Tooltip("Время опьянения (секунд)")]
+    [SerializeField] private float drunkTime = 10.0f;
 
     public override IEnumerator UseSkill(GameObject caster, string key)
     {
@@ -24,16 +25,14 @@ public class FlurryOfFire : BaseSkill
         if(cancelMovementOnCast)
             caster.GetComponent<MovementPlayer>().cancelMovement(castTime);
         yield return new WaitForSeconds(castTime);
-        
+
         // Сам скилл
-        for(int i = 0; i < shootTime / timeBetweenShoot; i++)
-        {
-            caster.GetComponent<PlayerProjectile>().Attack("Bullet");
-            yield return new WaitForSeconds(timeBetweenShoot);
-        }
+        caster.GetComponent<BaseEntity>().IncreaseDefense(additionalDefense);
+        yield return new WaitForSeconds(drunkTime);
+        caster.GetComponent<BaseEntity>().DecreaseDefense(additionalDefense);
         // Сам скилл
-        
+
         yield return new WaitForSeconds(cooldown);
         caster.GetComponent<BaseEntity>().setIsCooldown(key, false);
-    }       
+    }
 }
