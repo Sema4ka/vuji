@@ -1008,7 +1008,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000010248366}
+  m_AnchoredPosition: {x: 0, y: 0.0007445257}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &91438727
@@ -44485,6 +44485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1590556292}
   - component: {fileID: 1590556293}
+  - component: {fileID: 1590556294}
   m_Layer: 5
   m_Name: SkillCast Timer Slider
   m_TagString: Untagged
@@ -44565,6 +44566,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1590556294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590556291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c09a95dbf2b103e4698e19ca415050c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 469668849}
+  timerSlider: {fileID: 1590556293}
 --- !u!1 &1593738542
 GameObject:
   m_ObjectHideFlags: 0
@@ -45876,6 +45891,8 @@ MonoBehaviour:
   image: {fileID: 1657340276}
   text: {fileID: 284091627}
   panel: {fileID: 1294562849}
+  UiCanvas: {fileID: 1688611680}
+  GameManager: {fileID: 1513204520}
 --- !u!1 &1711516652
 GameObject:
   m_ObjectHideFlags: 0
@@ -47710,7 +47727,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000000985247}
+  m_AnchoredPosition: {x: 0, y: 0.00073232723}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1922898704
@@ -47745,7 +47762,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000010248366}
+  m_AnchoredPosition: {x: 0, y: 0.0007445257}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1933307050

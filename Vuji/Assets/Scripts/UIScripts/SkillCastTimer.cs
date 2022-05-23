@@ -34,7 +34,7 @@ public class SkillCastTimer : MonoBehaviour
             current = 0f;
         }
         timerSlider.value = current;
-        timerText.text = Convert.ToInt32(current).ToString() + "s";
+        timerText.text = current > 0f?Convert.ToInt32(current).ToString() + "s":"";
 
     }
 }

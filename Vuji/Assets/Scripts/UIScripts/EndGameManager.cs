@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,9 @@ public class EndGameManager : MonoBehaviour
     [SerializeField] Text text;
     [SerializeField] GameObject panel;
 
+    [SerializeField] GameObject UiCanvas;
+    [SerializeField] GameObject GameManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +26,7 @@ public class EndGameManager : MonoBehaviour
     void OnGameEnd(string teamName)
     {
         panel.SetActive(true);
-        PhotonNetwork.LeaveRoom();
-        if (PhotonNetwork.LocalPlayer.GetPhotonTeam().Name == teamName)
+        if (PhotonNetwork.LocalPlayer.GetPhotonTeam().Name != teamName)
         {
             image.color = Color.blue;
             text.text = "Victory";
@@ -33,11 +36,15 @@ public class EndGameManager : MonoBehaviour
             image.color = Color.red;
             text.text = "Defeat";
         }
+        PhotonNetwork.LocalPlayer.LeaveCurrentTeam();
+        PhotonNetwork.LeaveRoom();
     }
 
 
     public void LeaveGame()
     {
+        Destroy(UiCanvas);
+        Destroy(GameManager);
         SceneManager.LoadScene("Lobby");
-    }
+}
 }

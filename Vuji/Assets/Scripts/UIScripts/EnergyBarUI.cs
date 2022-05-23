@@ -21,6 +21,7 @@ public class EnergyBarUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (entity == null) return;
         EnergyBar.maxValue = entity.GetMaxEnergyPoints();
         EnergyBar.value = entity.GetEnergyPoints();
         EnergyBarText.text = entity.GetEnergyPoints().ToString() + "/" + entity.GetMaxEnergyPoints().ToString();

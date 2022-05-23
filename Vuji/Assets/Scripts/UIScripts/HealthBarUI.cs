@@ -20,6 +20,7 @@ public class HealthBarUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (entity == null) return;
         HealthBar.maxValue = entity.GetMaxHealthPoints();
         HealthBar.value = entity.GetHealthPoints();
         HealthBarText.text = entity.GetHealthPoints().ToString() + "/" + entity.GetMaxHealthPoints().ToString();
