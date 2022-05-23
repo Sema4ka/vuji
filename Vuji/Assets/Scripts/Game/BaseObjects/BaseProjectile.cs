@@ -63,6 +63,11 @@ public class BaseProjectile : MonoBehaviour
         _damageTags = newDamageTags;
     }
 
+    public void AddDamage(int additionalDamage)
+    {
+        this.projectileDamage += additionalDamage;
+    }
+
     #endregion
 
     void Start()

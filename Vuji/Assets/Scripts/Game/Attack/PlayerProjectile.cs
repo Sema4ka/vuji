@@ -43,7 +43,6 @@ public class PlayerProjectile : MonoBehaviour
 
     public void Attack(string projectileKey)
     {
-        Debug.Log("Attack in playerprojhect.dsedrgjkserg");
         //RemoteProjectileAttack(_aimAngle, _aimDirection, projectileKey);
         _view.RPC("RemoteProjectileAttack", RpcTarget.All, _aimAngle, _aimDirection, projectileKey);
     }
@@ -63,9 +62,13 @@ public class PlayerProjectile : MonoBehaviour
     private void RemoteProjectileAttack(float aimAngle, Vector3 aimDirection, string projectileKey)
     {
         projectile = _allProjectiles[projectileKey];
-        projectile.GetComponent<BaseProjectile>().SetAimDirection(aimDirection);
-        projectile.GetComponent<BaseProjectile>().SetAimAngel(aimAngle);
-        projectile.GetComponent<BaseProjectile>().SetSenderCollider(gameObject);
+        BaseProjectile projectileBase = projectile.GetComponent<BaseProjectile>();
+
+        projectileBase.SetAimDirection(aimDirection);
+        projectileBase.SetAimAngel(aimAngle);
+        projectileBase.SetSenderCollider(gameObject);
+        projectileBase.AddDamage(gameObject.GetComponent<BaseEntity>().GetBaseDamage());
+        
         GameObject projectileInst = Instantiate(projectile, firePoint.position, firePoint.rotation);
     }
 }

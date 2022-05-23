@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Pun.UtilityScripts;
@@ -6,14 +8,16 @@ using Photon.Pun.UtilityScripts;
 public class PlayerMelee : MonoBehaviour
 {
     [SerializeField] private LayerMask enemyLayers;
+    [SerializeField] private int damage = 10;
     [SerializeField] private float attackDistance = 1f;
     [SerializeField] private float attackRange = 1f;
-    [SerializeField] private int damage = 10;
+    [SerializeField] private float attackTimeout = 1f;
 
     private Vector3 _attackPoint;
     private Vector3 _playerPosition;
     private Vector3 _mousePosition;
     private PhotonView _myView;
+    private bool _isTimeout = false;
 
     private void Start()
     {
@@ -37,15 +41,20 @@ public class PlayerMelee : MonoBehaviour
     }
 
     [PunRPC]
-    private void MasterCheckMeleeAttack(Vector3 attackPoint)
+    public void MasterCheckMeleeAttack()
     {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint, attackRange, enemyLayers);
+        Debug.Log("Mellee check");
+        if(_isTimeout) return;
+        StartCoroutine(AttackTiemout());
+
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint, attackRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
             if (CanDamageThisEnemy(enemy))
             {
-                _myView.RPC("TakeDamageRemote", RpcTarget.All, enemy.GetComponentInParent<PhotonView>().ViewID, damage);
+                int dmg = damage + gameObject.GetComponent<BaseEntity>().GetBaseDamage();
+                _myView.RPC("TakeDamageRemote", RpcTarget.All, enemy.GetComponentInParent<PhotonView>().ViewID, dmg);
             }
         }
     }
@@ -71,5 +80,12 @@ public class PlayerMelee : MonoBehaviour
         }
 
         return true;
+    }
+
+    private IEnumerator AttackTiemout()
+    {
+        _isTimeout = true;
+        yield return new WaitForSeconds(attackTimeout);
+        _isTimeout = false;
     }
 }

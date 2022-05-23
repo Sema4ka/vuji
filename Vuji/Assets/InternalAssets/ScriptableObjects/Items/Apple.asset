@@ -15,4 +15,4 @@ MonoBehaviour:
   itemName: Apple
   description: Apple is a cool fruit! Restores you 100 hp on use.
   amount: 1
-  image: {fileID: 21300000, guid: 84a52c5cc928c66448c43dccbc0ea1f1, type: 3}
+  image: {fileID: 21300000, guid: a44272609b02ea217a6d0ed38d7c6311, type: 3}

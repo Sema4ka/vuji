@@ -8,6 +8,7 @@ public class BaseEntity : MonoBehaviour
 {
     #region Entity Infrormation
     [SerializeField] private string entityName = "baseEntityName";
+    [SerializeField] private int baseDamage = 5;
     [SerializeField] private float healthPoints = 100.0f;
     [SerializeField] private float maxHealthPoints = 100.0f;
     [SerializeField] private float moveSpeed = 3.0f;
@@ -175,6 +176,11 @@ public class BaseEntity : MonoBehaviour
     public float GetMaxEnergyPoints()
     {
         return maxEnergy;
+    }
+
+    public int GetBaseDamage()
+    {
+        return baseDamage;
     }
 
     public string GetEntityName()
