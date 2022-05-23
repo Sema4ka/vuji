@@ -6,9 +6,10 @@ using Random = UnityEngine.Random;
 
 public class BaseEntity : MonoBehaviour
 {
-    #region Entity Infrormation
+    #region Entity Stats
     [SerializeField] private string entityName = "baseEntityName";
     [SerializeField] private int baseDamage = 5;
+    [SerializeField] private int defense = 0;
     [SerializeField] private float healthPoints = 100.0f;
     [SerializeField] private float maxHealthPoints = 100.0f;
     [SerializeField] private float moveSpeed = 3.0f;
@@ -28,6 +29,8 @@ public class BaseEntity : MonoBehaviour
     }
     public Skill[] skills;
     private Dictionary<string, GameObject> _skills = new Dictionary<string, GameObject>();
+
+    [SerializeField] private List<GameObject> _passiveSkills = new List<GameObject>();
     #endregion
 
     #region Private fields
@@ -198,7 +201,7 @@ public class BaseEntity : MonoBehaviour
 
     public void TakeDamage(int healthDamage)
     {
-        healthPoints -= healthDamage;
+        healthPoints = healthPoints - healthDamage + defense;
         if (healthPoints <= 0)
         {
             Death();
