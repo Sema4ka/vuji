@@ -3,7 +3,8 @@ guid: ced51948ca954555c9c3ffe3aec13203
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - skillSprite: {fileID: 21300000, guid: e54d96880b8336242b3f06243c8ca443, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

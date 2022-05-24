@@ -24,7 +24,26 @@ public class BaseSkill : MonoBehaviour
     [Tooltip("Запрет на движение игрока во время использования способности")]
     [SerializeField] protected bool cancelMovementOnCast;
 
+    [Tooltip("Skill Sprite")]
+    [SerializeField] protected Sprite skillSprite;
+
+    public string GetName()
+    {
+        return skillName;
+    }
+
+    public string GetDescription()
+    {
+        return skillDescription;
+    }
+
+    public Sprite GetSprite()
+    {
+        return skillSprite;
+    }
+
     public static Action<float> onCast;
+    public Action<float> onRelease;
 
     public virtual IEnumerator UseSkill(GameObject caster, string key) {
         yield return new WaitForSeconds(0.0f);

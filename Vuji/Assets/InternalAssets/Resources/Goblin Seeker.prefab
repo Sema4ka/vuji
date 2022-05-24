@@ -334,6 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Goblin
   baseDamage: 5
+  defense: 0
   healthPoints: 100
   maxHealthPoints: 100
   moveSpeed: 400
@@ -342,6 +343,7 @@ MonoBehaviour:
   healthRegeneration: 1
   energyRegeneration: 5
   skills: []
+  _passiveSkills: []
   _droppedItemPrefab: {fileID: 8455292785502437808, guid: 9a0fdf131a4a86540bae8470b1178eba, type: 3}
   healthBar: {fileID: 7538319698648844218}
   displayedName: {fileID: 2751477512586530114}

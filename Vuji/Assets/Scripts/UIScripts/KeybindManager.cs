@@ -44,7 +44,7 @@ public class KeybindManager : MonoBehaviour
             if (newKey != KeyCode.None)
             {
                 key = newKey;
-                keybindKeys.text = newKey.ToString();
+                keybindKeys.text = KeyHandler.NormalizeKeybind(newKey);
                 keyChanged?.Invoke(this, keybindName.text, key);
                 binding = false;
                 Binding?.Invoke(false);
@@ -67,7 +67,7 @@ public class KeybindManager : MonoBehaviour
     public void SetKey(KeyCode newKey)
     {
         key = newKey;
-        keybindKeys.text = key.ToString();
+        keybindKeys.text = KeyHandler.NormalizeKeybind(newKey);
     }
 
     public void SetKeybind()

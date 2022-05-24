@@ -209,4 +209,33 @@ public class KeyHandler : MonoBehaviour
         dataBase.SetKeybind(name, key);
         return true;
     }
+    public static string NormalizeKeybind(KeyCode code)
+    {
+        string keyName = code.ToString();
+        if (keyName.StartsWith("Alpha"))
+        {
+            return keyName[keyName.Length - 1].ToString();
+        }
+        else if (keyName.StartsWith("Mouse"))
+        {
+            switch (keyName)
+            {
+                case "Mouse0":
+                    return "LMB";
+                case "Mouse1":
+                    return "RMB";
+                case "Mouse2":
+                    return "MMB";
+                case "Mouse3":
+                    return "SMB 1";
+                case "Mouse4":
+                    return "SMB 2";
+                case "Mouse5":
+                    return "SMB 3";
+                case "Mouse6":
+                    return "SMB 4";
+            }
+        }
+        return keyName;
+    }
 }

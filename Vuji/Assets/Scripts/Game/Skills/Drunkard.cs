@@ -27,11 +27,12 @@ public class Drunkard : BaseSkill
         yield return new WaitForSeconds(castTime);
 
         // Сам скилл
+        onRelease?.Invoke(cooldown + drunkTime);
         caster.GetComponent<BaseEntity>().IncreaseDefense(additionalDefense);
         yield return new WaitForSeconds(drunkTime);
         caster.GetComponent<BaseEntity>().DecreaseDefense(additionalDefense);
         // Сам скилл
-
+        
         yield return new WaitForSeconds(cooldown);
         caster.GetComponent<BaseEntity>().setIsCooldown(key, false);
     }

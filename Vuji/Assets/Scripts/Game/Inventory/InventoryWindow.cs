@@ -30,7 +30,7 @@ public class InventoryWindow : MonoBehaviour
         DisplayedItem.onItemSwap -= onItemSwapped;
         KeyHandler.keyPressed -= KeyPressed;
         SpawnPlayers.OnSpawn -= OnSpawn;
-        playerInventory.onItemAdded -= OnItemAdded;
+        if (playerInventory != null) playerInventory.onItemAdded -= OnItemAdded;
     }
 
     public void OnSpawn(GameObject playerObject)

@@ -30,6 +30,8 @@ public class BaseEntity : MonoBehaviour
     public Skill[] skills;
     private Dictionary<string, GameObject> _skills = new Dictionary<string, GameObject>();
 
+    public Action<string, bool> OnSkillSelectionChange;
+
     [SerializeField] private List<GameObject> _passiveSkills = new List<GameObject>();
     #endregion
 
@@ -136,6 +138,7 @@ public class BaseEntity : MonoBehaviour
         {
             Debug.Log("Selected " + skillName);
             this._selectedSkill = skillName;
+            OnSkillSelectionChange?.Invoke(_selectedSkill, true);
         }
         else
         {
@@ -143,10 +146,16 @@ public class BaseEntity : MonoBehaviour
         }
     }
 
-    private void deSelectSkill()
+    public void deSelectSkill()
     {
         Debug.Log("Deselected" + _selectedSkill);
+        OnSkillSelectionChange?.Invoke(_selectedSkill, false);
         this._selectedSkill = "";
+    }
+
+    public string GetSelectedSkill()
+    {
+        return _selectedSkill;
     }
 
     public void setIsCooldown(string key, bool value)

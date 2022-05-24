@@ -25,7 +25,7 @@ public class FireballSkill : BaseSkill
 
 
         caster.GetComponent<PlayerProjectile>().Attack("Fireball");
-
+        onRelease?.Invoke(cooldown);
         yield return new WaitForSeconds(cooldown);
         caster.GetComponent<BaseEntity>().setIsCooldown(key, false);
     }       

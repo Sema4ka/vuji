@@ -51,6 +51,7 @@ MonoBehaviour:
   castTime: 2
   cooldown: 10
   cancelMovementOnCast: 1
+  skillSprite: {fileID: 21300000, guid: 35d8101376263a344a53102660e3e2bd, type: 3}
   projectile: {fileID: 8282622286620053181, guid: dc0c997dbc1c3d09d9123dba13d29921, type: 3}
   shootTime: 1
   timeBetweenShoot: 0.1

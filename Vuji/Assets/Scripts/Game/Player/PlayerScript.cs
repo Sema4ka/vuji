@@ -43,7 +43,15 @@ public class PlayerScript : MonoBehaviour
         Debug.Log("KeyPressed" + name);
         if (name == "Attack") GetComponent<PlayerMelee>().MasterCheckMeleeAttack();
         if (name == "Use Skill") _playerEntitiy.UseSkill();
-        else if (name.StartsWith("Skill")) _playerEntitiy.selectSkill(name);
+        else if (name.StartsWith("Skill"))
+        {
+            var current = _playerEntitiy.GetSelectedSkill();
+            _playerEntitiy.deSelectSkill();
+            if (current != name)
+            {
+                _playerEntitiy.selectSkill(name);
+            }
+        }
     }
 
 

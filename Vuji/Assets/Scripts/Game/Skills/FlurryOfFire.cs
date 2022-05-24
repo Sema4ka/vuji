@@ -32,7 +32,7 @@ public class FlurryOfFire : BaseSkill
             yield return new WaitForSeconds(timeBetweenShoot);
         }
         // Сам скилл
-        
+        onRelease?.Invoke(cooldown);
         yield return new WaitForSeconds(cooldown);
         caster.GetComponent<BaseEntity>().setIsCooldown(key, false);
     }       
