@@ -11,7 +11,7 @@ public class TimerWithSpritemanager : MonoBehaviour
     [SerializeField] GameObject coverPanel;
     [SerializeField] GameObject selectionPanel;
     [SerializeField] Text keyText;
-    
+
     private GameObject targetPlayer;
     private BaseSkill targetSkill;
 
@@ -28,7 +28,7 @@ public class TimerWithSpritemanager : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (targetSkill != null) targetSkill.onRelease += SetTime; ;
+        if (targetSkill != null) targetSkill.onRelease += SetTime;
     }
 
     public void SetEntity(GameObject player, BaseSkill skill, string keyName)
@@ -60,6 +60,7 @@ public class TimerWithSpritemanager : MonoBehaviour
         {
             current = 0f;
         }
+        keyText.text = KeyHandler.NormalizeKeybind(KeyHandler.instance.GetKeybind(keyName));
         targetedText.text = current > 0f ? Convert.ToInt32(current).ToString() + "s" : "";
         coverPanel.SetActive(current > 0f);
     }
