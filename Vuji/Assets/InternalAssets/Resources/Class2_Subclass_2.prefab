@@ -401,9 +401,9 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 512
+  damage: 10
   attackDistance: 1
   attackRange: 1
-  damage: 10
   attackTimeout: 1
 --- !u!114 &1988209152861905804
 MonoBehaviour:
