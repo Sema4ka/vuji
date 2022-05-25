@@ -49,6 +49,6 @@ MonoBehaviour:
   castTime: 3
   cooldown: 20
   cancelMovementOnCast: 1
-  skillSprite: {fileID: 21300000, guid: e54d96880b8336242b3f06243c8ca443, type: 3}
+  skillSprite: {fileID: 21300000, guid: fe0865e97f2dfdd6db4a98502796e86f, type: 3}
   additionalDefense: 60
   drunkTime: 10
