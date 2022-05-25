@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: c4cc5b61db512994ca1843a4e6ee04a3
+guid: eeea23df38afd654abdacd37e0e35be6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1826435285958538685
-    second: idle_right_0
+      213: -5201769707316070118
+    second: iddle_left_0
   - first:
-      213: 6179533113006291798
-    second: idle_right_1
+      213: 6633567647600573218
+    second: iddle_left_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,32 +109,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle_right_0
+      name: iddle_left_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 2
-        width: 23
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: db53cc8373dc85910800000000000000
-      internalID: 1826435285958538685
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle_right_1
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 2
+        x: 4
+        y: 4
         width: 23
         height: 25
       alignment: 0
@@ -144,8 +123,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65bf08e20ac12c550800000000000000
-      internalID: 6179533113006291798
+      spriteID: a19b908e20a9fc7b0800000000000000
+      internalID: -5201769707316070118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iddle_left_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 4
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b71cc11aa2f0c50800000000000000
+      internalID: 6633567647600573218
       vertices: []
       indices: 
       edges: []

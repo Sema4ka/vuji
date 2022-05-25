@@ -9,55 +9,58 @@ public class AnimationPlayer : MonoBehaviour
     private PhotonView _view;
     private Animator _animator;
     private string _currentAnimation = "Front";
-    private const string FrontPlayerAnimation = "Front";
-    private const string BackPlayerAnimation = "Back";
-    private const string LeftPlayerAnimation = "Left";
-    private const string RightPlayerAnimation = "Right";
+
     private AudioSource stepSound;
     private bool isStepPlaying;
+    private float y;
+    private float x;
+
+
+
+    private bool isMoving;
+    private string movingState;
 
     private void Start()
     {
         _view = GetComponent<PhotonView>();
         isStepPlaying = false;
+        isMoving = false;
         _animator = GetComponent<Animator>();
         stepSound = GetComponent<AudioSource>();
 
     }
+   // _view.RPC("ChangePlayerAnimation", RpcTarget.All, FrontPlayerAnimation);
 
 
     private void Update()
     {
         if (_view.IsMine)
         {
-            if (Input.GetAxisRaw("Vertical") < 0)
+            y = Input.GetAxisRaw("Vertical");
+            x = Input.GetAxisRaw("Horizontal");
+
+            if(x!=0 || y!=0)
             {
-                _view.RPC("ChangePlayerAnimation", RpcTarget.All, FrontPlayerAnimation);
+                isMoving = true;
+                if (y > 0)
+                    movingState = "back";
+                else
+                    movingState = "front";
+                if (x > 0)
+                    movingState = "right";
+                else if (x!=0)
+                    movingState = "left";
+            }
+            if (!isMoving)
+            {
+                _view.RPC("ChangePlayerAnimation", RpcTarget.All, "iddle_"+movingState);
+            }
+            else
+            {
+                _view.RPC("ChangePlayerAnimation", RpcTarget.All, "move_"+movingState);
                 playStep();
             }
-
-
-            else if (Input.GetAxisRaw("Vertical") > 0)
-            {
-                _view.RPC("ChangePlayerAnimation", RpcTarget.All, BackPlayerAnimation);
-                playStep();
-            }
-
-            else if (Input.GetAxisRaw("Horizontal") > 0)
-            {
-                _view.RPC("ChangePlayerAnimation", RpcTarget.All, RightPlayerAnimation);
-                playStep();
-            }
-
-            else if (Input.GetAxisRaw("Horizontal") < 0)
-            {
-                _view.RPC("ChangePlayerAnimation", RpcTarget.All, LeftPlayerAnimation);
-                playStep();
-            }
-
-
-            // возможность включить анимацию покоя
-            // if (Input.GetAxisRaw("Vertical") == 0 & Input.GetAxisRaw("Horizontal") == 0){}
+            isMoving = false;
         }
     }
 
