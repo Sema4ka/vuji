@@ -103,9 +103,9 @@ public class BaseEntity : MonoBehaviour
     
     #region Public Methods
 
-    public void AddEffect(BaseEffect effect)
+    public void AddEffect(GameObject effect)
     {
-        effect.ApplyEffect(this);
+        effect.GetComponent<BaseEffect>().ApplyEffect(this.gameObject);
     }
 
     public void TickPoints()

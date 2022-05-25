@@ -4,24 +4,22 @@ using UnityEngine;
 
 public class OnFire : BaseEffect
 {
-    public OnFire()
-    {
-        effectName = "OnFire";
-        description = "ты гориш";
+    [SerializeField] private int fireDamage = 5;
+    [SerializeField] private float damageTickSeconds = 1.0f;
+    [SerializeField] private int repeatCount = 5;
 
-        duration = 10f;
-    }
-
-    public override void ApplyEffect(BaseEntity entity)
+    public override void ApplyEffect(GameObject entity)
     {
         base.ApplyEffect(entity);
         StartCoroutine(OnFireEffect(entity));
         
     }
 
-    public IEnumerator OnFireEffect(BaseEntity entity){
-        entity.TakeDamage(10);
-        yield return new WaitForSeconds(1f);
-        entity.TakeDamage(10);
+    public IEnumerator OnFireEffect(GameObject entity){
+        for(int i = 0; i < repeatCount; i++)
+        {
+            entity.GetComponent<BaseEntity>().TakeDamage(10);
+            yield return new WaitForSeconds(1f);
+        }
     }
 }

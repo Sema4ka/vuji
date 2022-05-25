@@ -4,12 +4,13 @@ using UnityEngine;
 
 public abstract class BaseEffect : MonoBehaviour
 {
-    public string effectName = "New Effect";
-    public string description = "Effect description";
+    [SerializeField] public string effectName = "New Effect";
+    [SerializeField] public string description = "Effect description";
+    [SerializeField] public float duration = 5f;
 
-    public float duration = 5f;
+    [SerializeField] public Sprite effectSprite;
 
-    public virtual void ApplyEffect(BaseEntity entity)
+    public virtual void ApplyEffect(GameObject entity)
     {
         Debug.Log("Apply Effect " + effectName + " on entity " + entity.name);
     }

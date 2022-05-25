@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Drunkard : BaseSkill
 {
+    [SerializeField] private GameObject drunkEffect;
 
     [Tooltip("Пират опустошает бутылку рома, на время опьянения пират получает на n меньше урона, но + n% к шансу промахнуться")]
     [SerializeField] private int additionalDefense = 5;
 
-    [Tooltip("Время опьянения (секунд)")]
-    [SerializeField] private float drunkTime = 10.0f;
+    [Tooltip("Время опьянения (секунды)")]
+    [SerializeField] private float drunkTime = 10;
 
     public override IEnumerator UseSkill(GameObject caster, string key)
     {
@@ -27,10 +28,11 @@ public class Drunkard : BaseSkill
         yield return new WaitForSeconds(castTime);
 
         // Сам скилл
-        onRelease?.Invoke(cooldown + drunkTime);
-        caster.GetComponent<BaseEntity>().IncreaseDefense(additionalDefense);
-        yield return new WaitForSeconds(drunkTime);
-        caster.GetComponent<BaseEntity>().DecreaseDefense(additionalDefense);
+        drunkEffect.GetComponent<Drunk>().additionalDefense = additionalDefense;
+        drunkEffect.GetComponent<Drunk>().duration = drunkTime;
+        onRelease?.Invoke(cooldown);
+
+        caster.GetComponent<BaseEntity>().AddEffect(drunkEffect);
         // Сам скилл
         
         yield return new WaitForSeconds(cooldown);
