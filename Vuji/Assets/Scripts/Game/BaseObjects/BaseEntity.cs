@@ -233,7 +233,7 @@ public class BaseEntity : MonoBehaviour
 
         Debug.Log(entityName + " hp is " + healthPoints);
     }
-
+    #endregion
     private void Death()
     {
         DropAllItems();
@@ -249,8 +249,7 @@ public class BaseEntity : MonoBehaviour
         var items = inventory.GetAllItems();
         foreach (BaseItem itemData in items)
         {
-            Vector2 position = new Vector2(Random.Range(-3.0f, 3.0f) + gameObject.transform.position.x,
-                Random.Range(-3.0f, 3.0f) + gameObject.transform.position.y);
+            Vector2 position = new Vector2(gameObject.transform.position.x,gameObject.transform.position.y - 0.2f);
 
 
             GameObject droppedItem = Instantiate(_droppedItemPrefab, position, Quaternion.identity);
@@ -264,5 +263,5 @@ public class BaseEntity : MonoBehaviour
         GameObject obj = PhotonView.Find(photonID).gameObject;
         obj.GetComponent<BaseEntity>().TakeDamage(newDamage);
     }
-    #endregion
+    
 }

@@ -17,17 +17,12 @@ public class LeaveRoom : MonoBehaviourPunCallbacks
         }
     }
 
-    public override void OnConnectedToMaster()
+    public void ShowLeaveRoomButton()
     {
-        Debug.Log("YOU LEFT ROOM");
-        leaveRoomButton.SetActive(false);
-        gameObject.GetComponent<StartGameLevel>().enabled = false;
-        gameObject.GetComponent<PlayersFounded>().HidePlayersFounded();
-    }
-
-    public override void OnJoinedRoom()
-    {
-        Debug.Log("YOU JOIN IN ROOM: " + PhotonNetwork.CurrentRoom.Name);
         leaveRoomButton.SetActive(true);
+    }
+    public void HideLeaveRoomButton()
+    {
+        leaveRoomButton.SetActive(false);
     }
 }

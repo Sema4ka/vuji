@@ -23,6 +23,7 @@ public class PlayersFounded : MonoBehaviour
     {
         playersFounded.SetActive(true);
         stopSearchGameButton.SetActive(true);
+        Debug.Log("SHOW here" + Time.deltaTime);
     }
 
     /// <summary>
@@ -30,7 +31,9 @@ public class PlayersFounded : MonoBehaviour
     /// </summary>
     public void HidePlayersFounded()
     {
+        UpdatePlayersFounded();
         playersFounded.SetActive(false);
         stopSearchGameButton.SetActive(false);
+        Debug.Log("HIDE here" + Time.deltaTime);
     }
 }

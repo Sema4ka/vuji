@@ -23,23 +23,29 @@ public class StartGameLevel : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        _playersFounded.ShowPlayersFounded();
-        if (CheckPreGameRoom())
+        if (gameObject.GetComponent<LobbyManager>().playerStatus == "SEARCHGAME")
         {
-            LoadGameLevel();
-        }
+            _playersFounded.ShowPlayersFounded();
+            if (CheckPreGameRoom())
+            {
+                LoadGameLevel();
+            }
 
-        _playersFounded.UpdatePlayersFounded();
+            _playersFounded.UpdatePlayersFounded();
+        }
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        if (CheckPreGameRoom())
+        if (gameObject.GetComponent<LobbyManager>().playerStatus == "SEARCHGAME")
         {
-            LoadGameLevel();
-        }
+            if (CheckPreGameRoom())
+            {
+                LoadGameLevel();
+            }
 
-        _playersFounded.UpdatePlayersFounded();
+            _playersFounded.UpdatePlayersFounded();
+        }
     }
 
     public override void OnPlayerLeftRoom(Player newPlayer)

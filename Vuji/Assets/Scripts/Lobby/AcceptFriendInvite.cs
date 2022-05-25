@@ -15,6 +15,7 @@ public class AcceptFriendInvite : MonoBehaviourPunCallbacks
         }
         else
         {
+            gameObject.GetComponent<LobbyManager>().playerStatus = "INLOBBY";
             PhotonNetwork.JoinRoom(roomName);
         }
     }

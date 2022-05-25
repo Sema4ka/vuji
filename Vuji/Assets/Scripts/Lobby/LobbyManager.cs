@@ -10,10 +10,11 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 {
     #region Fields
 
-    [SerializeField] Text username;
-    private Controllers _controllers;
+    [SerializeField] private Text username;
     [SerializeField] GameObject settings;
-
+    private Controllers _controllers;
+    // EMPTY; INLOBBY; SEARCHGAME
+    public string playerStatus;
     #endregion
 
     #region Unity Methods
@@ -74,6 +75,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         RoomOptions roomOptions = new RoomOptions() {IsVisible = false, PublishUserId = true};
         roomOptions.MaxPlayers = 2;
         CreateInviteFriend(invitedUserID);
+        gameObject.GetComponent<LobbyManager>().playerStatus = "INLOBBY";
         PhotonNetwork.CreateRoom(roomName, roomOptions);
     }
 
@@ -93,5 +95,26 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     {
         settings.SetActive(!settings.activeSelf);
     }
+
+    public override void OnJoinedRoom()
+    {
+        if (playerStatus == "INLOBBY")
+        {
+            Debug.Log("YOU JOIN IN ROOM: " + PhotonNetwork.CurrentRoom.Name);
+            gameObject.GetComponent<LeaveRoom>().ShowLeaveRoomButton();
+        }else if (playerStatus == "SEARCHGAME")
+        {
+            
+        }
+    }
+
+    public override void OnConnectedToMaster()
+    {
+        Debug.Log("YOU LEFT ROOM");
+        gameObject.GetComponent<LeaveRoom>().HideLeaveRoomButton();
+        gameObject.GetComponent<StartGameLevel>().enabled = false;
+        gameObject.GetComponent<PlayersFounded>().HidePlayersFounded();
+    }
+    
     #endregion
 }

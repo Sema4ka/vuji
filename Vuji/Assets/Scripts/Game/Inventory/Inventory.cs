@@ -27,8 +27,7 @@ public class Inventory : MonoBehaviour
     {
         item.SetAmount(item.GetAmount() - 1);
 
-        Vector2 position = new Vector2(UnityEngine.Random.Range(-3.0f, 3.0f) + gameObject.transform.position.x, UnityEngine.Random.Range(-3.0f, 3.0f) + gameObject.transform.position.y);
-
+        Vector2 position = new Vector2(gameObject.transform.position.x,gameObject.transform.position.y - 0.2f);
         GameObject droppedItem = Instantiate(_droppedItemPrefab, position, Quaternion.identity);
         droppedItem.GetComponent<DroppedItem>().SetItem(item);
 

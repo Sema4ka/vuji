@@ -44,7 +44,7 @@ public class DataBase : MonoBehaviour
     /// <summary>
     /// Метод создает локальную БД
     /// </summary>
-    private void CreateDB()
+        private void CreateDB()
     {
         OpenConnection();
         _command.CommandText = @"PRAGMA foreign_keys=OFF;

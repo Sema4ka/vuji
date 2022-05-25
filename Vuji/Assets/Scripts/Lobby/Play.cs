@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine;
 using PhotonHashtable = ExitGames.Client.Photon.Hashtable;
 using Random = UnityEngine.Random;
 
@@ -13,7 +14,7 @@ public class Play : MonoBehaviourPunCallbacks
     // 3 - [TEAM] you find master step 1/2
     // 4 - [TEAM] you find master step 2/2
     private int _startMode;
-    private readonly RoomOptions _roomOptions = new RoomOptions {MaxPlayers = 4, IsOpen = true, IsVisible = true};
+    private readonly RoomOptions _roomOptions = new RoomOptions {MaxPlayers = 4, IsOpen = true, IsVisible = true, PublishUserId = true};
     private readonly List<string> _playerInRoom = new List<string>();
 
     /// <summary>
@@ -21,6 +22,7 @@ public class Play : MonoBehaviourPunCallbacks
     /// </summary>
     public void StartPlayInGame()
     {
+        gameObject.GetComponent<LobbyManager>().playerStatus = "SEARCHGAME";
         // играет один
         if ((PhotonNetwork.InRoom && PhotonNetwork.PlayerList.Length == 1) || (PhotonNetwork.PlayerList.Length == 0))
         {
@@ -41,6 +43,7 @@ public class Play : MonoBehaviourPunCallbacks
     {
         SetPlayerTeam();
         _startMode = 1;
+        gameObject.GetComponent<LobbyManager>().playerStatus = "SEARCHGAME";
         if (PhotonNetwork.InRoom)
         {
             PhotonNetwork.LeaveRoom();
@@ -71,6 +74,7 @@ public class Play : MonoBehaviourPunCallbacks
             view.RPC("JoinToMasterClientRoom", RpcTarget.Others, PhotonNetwork.MasterClient.UserId);
 
             _startMode = 2;
+            gameObject.GetComponent<LobbyManager>().playerStatus = "SEARCHGAME";
             PhotonNetwork.LeaveRoom();
         }
     }
@@ -107,6 +111,7 @@ public class Play : MonoBehaviourPunCallbacks
     [PunRPC]
     private void JoinToMasterClientRoom(string masterClientID)
     {
+        gameObject.GetComponent<LobbyManager>().playerStatus = "SEARCHGAME";
         _masterClientIDGame = masterClientID;
         FindMasterClientRoom();
     }
@@ -147,7 +152,11 @@ public class Play : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
-        GoInGame();
+        if (gameObject.GetComponent<LobbyManager>().playerStatus == "SEARCHGAME")
+        {
+            GoInGame();
+        }
+        
     }
 
     /// <summary>
@@ -156,6 +165,7 @@ public class Play : MonoBehaviourPunCallbacks
     /// <param name="roomID">Только для _startMode == 4</param>
     private void GoInGame(string roomID = null)
     {
+
         if (PhotonNetwork.IsConnected)
         {
             // Play solo
@@ -163,6 +173,8 @@ public class Play : MonoBehaviourPunCallbacks
             {
                 gameObject.GetComponent<StartGameLevel>().enabled = true;
                 PhotonNetwork.JoinRandomOrCreateRoom(roomOptions: _roomOptions);
+                
+
             }
 
             // Play team master client
