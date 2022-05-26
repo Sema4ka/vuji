@@ -18,8 +18,8 @@ public class OnFire : BaseEffect
     public IEnumerator OnFireEffect(GameObject entity){
         for(int i = 0; i < repeatCount; i++)
         {
-            entity.GetComponent<BaseEntity>().TakeDamage(10);
-            yield return new WaitForSeconds(1f);
+            entity.GetComponent<BaseEntity>().TakeDamage(fireDamage);
+            yield return new WaitForSeconds(damageTickSeconds);
         }
     }
 }

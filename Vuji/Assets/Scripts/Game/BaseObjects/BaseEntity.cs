@@ -51,6 +51,8 @@ public class BaseEntity : MonoBehaviour
     #region DisplayedInformation
     [SerializeField] public HealthBarManager healthBar;
     [SerializeField] public EntityNameManager displayedName;
+
+    public Action<BaseEffect, BaseEntity> OnEffectApply;
     #endregion
 
     private void Start()
@@ -105,6 +107,7 @@ public class BaseEntity : MonoBehaviour
 
     public void AddEffect(GameObject effect)
     {
+        OnEffectApply?.Invoke(effect.GetComponent<BaseEffect>(), this);
         effect.GetComponent<BaseEffect>().ApplyEffect(this.gameObject);
     }
 
