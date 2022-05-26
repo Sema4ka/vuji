@@ -333,11 +333,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityName: Goblin
-  baseDamage: 5
+  baseDamage: 35
   defense: 0
-  healthPoints: 100
-  maxHealthPoints: 100
-  moveSpeed: 400
+  healthPoints: 400
+  maxHealthPoints: 400
+  moveSpeed: 600
   energy: 100
   maxEnergy: 100
   healthRegeneration: 1
@@ -406,8 +406,7 @@ MonoBehaviour:
     m_Bits: 512
   attackDistance: 1.5
   attackRange: 1
-  damage: 10
-  attackTimeout: 2
+  attackTimeout: 0.5
 --- !u!114 &7852709774010933425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,9 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryItems:
-  - {fileID: 11400000, guid: 6ceb69bff7597754fb5f9b70ebe1e937, type: 2}
-  - {fileID: 11400000, guid: 6ceb69bff7597754fb5f9b70ebe1e937, type: 2}
-  - {fileID: 11400000, guid: 6ceb69bff7597754fb5f9b70ebe1e937, type: 2}
+  - {fileID: 11400000, guid: 2d6a38ff45f2b2a4f8c3dfbb9d039e14, type: 2}
   _droppedItemPrefab: {fileID: 8455292785502437808, guid: 9a0fdf131a4a86540bae8470b1178eba, type: 3}
 --- !u!1 &4422509826429962177
 GameObject:

@@ -7,13 +7,16 @@ public class EntityMelee : MonoBehaviour
     [SerializeField] private LayerMask enemyLayers;
     [SerializeField] private float attackDistance = 1f;
     [SerializeField] private float attackRange = 1f;
-    [SerializeField] int damage = 10;
     [SerializeField] float attackTimeout;
 
     private bool _isTimeout = false;
 
+    private int _damage;
     private Vector3 _attackPoint;
 
+    private void Start() {
+        _damage = gameObject.GetComponent<BaseEntity>().GetBaseDamage();
+    }
 
     public void Attack(GameObject target)
     {
@@ -35,7 +38,7 @@ public class EntityMelee : MonoBehaviour
             {
                 GameObject enemyGameObject = enemy.transform.parent.gameObject;
                 if (enemyGameObject != gameObject)
-                    enemyGameObject.GetComponent<BaseEntity>().TakeDamage(damage);
+                    enemyGameObject.GetComponent<BaseEntity>().TakeDamage(_damage);
             }
         }
     }
