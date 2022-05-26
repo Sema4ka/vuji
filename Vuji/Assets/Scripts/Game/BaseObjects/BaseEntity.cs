@@ -225,6 +225,9 @@ public class BaseEntity : MonoBehaviour
 
     public void TakeDamage(int healthDamage)
     {
+        // Проверка на полное поглощение урона
+        if(defense - healthDamage >= 0) return;
+
         healthPoints = healthPoints - healthDamage + defense;
         if (healthPoints <= 0)
         {

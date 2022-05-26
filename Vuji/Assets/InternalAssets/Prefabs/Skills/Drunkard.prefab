@@ -46,10 +46,10 @@ MonoBehaviour:
   skillName: "\u041F\u044C\u044F\u043D\u0438\u0446\u0430"
   skillDescription: https://www.youtube.com/watch?v=nF90iFyQ13I
   energyCost: 40
-  castTime: 3
+  castTime: 2
   cooldown: 20
   cancelMovementOnCast: 1
   skillSprite: {fileID: 21300000, guid: fe0865e97f2dfdd6db4a98502796e86f, type: 3}
   drunkEffect: {fileID: 71302700742402522, guid: 183fedd9278c61591b8bd7b1a8313903, type: 3}
-  additionalDefense: 10
+  additionalDefense: 40
   drunkTime: 10

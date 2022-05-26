@@ -577,7 +577,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 512
-  damage: 10
+  damage: 45
   attackDistance: 1
   attackRange: 1
   attackTimeout: 1
