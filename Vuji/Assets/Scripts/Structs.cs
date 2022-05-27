@@ -42,6 +42,14 @@ namespace StructsResponse
     }
 
     [System.Serializable]
+    public class UserInfoStructResponse
+    {
+        public string login;
+        public string username;
+        public string created_at;
+    }
+
+    [System.Serializable]
     public class FindFriendsByNameStructResponse
     {
         public UserInfoObject[] friends;

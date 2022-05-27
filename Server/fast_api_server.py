@@ -200,6 +200,31 @@ def post_find_friends_by_name(body: schemas.FindFriendsByNameBase,
     return Response(status_code=400)
 
 
+@app.get("/me")
+def get_user_info(request: Request, session: Session = Depends(get_session)):
+    """
+    Получение имени пользователя
+
+    Args:
+        request (Request): Запрос на сервер
+        session (Session): Сессия базы данных.
+    Returns:
+        Response:
+            string Username: Имя пользователя
+    """
+
+    token = request.headers['Authorization']
+    if jwt_func.jwt_validate(token):
+        user = user_store.get_user(session, id=jwt_func.jwt_user_id(token))
+        data = {
+            "login": user.login,
+            "username": user.username,
+            "created_at": user.created_at
+        }
+        return Response(data, status_code=200)
+    return Response(status_code=400)
+
+
 def main():
     """
     Запуск сервера

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Inventory : MonoBehaviour
 {
@@ -9,6 +10,14 @@ public class Inventory : MonoBehaviour
 
     [SerializeField] public List<BaseItem> inventoryItems = new List<BaseItem>();
     [SerializeField] private GameObject _droppedItemPrefab;
+
+    PhotonView _view;
+
+    private void Start()
+    {
+        _view = GetComponent<PhotonView>();
+    }
+
     public void AddItem(BaseItem item, GameObject itemGameObject){
         inventoryItems.Add(item);
         onItemAdded?.Invoke(item);
@@ -23,14 +32,24 @@ public class Inventory : MonoBehaviour
     {
         inventoryItems.Clear();
     }
-    public bool DropItem(BaseItem item)
+
+
+    [PunRPC]
+    public void SyncronisedDrop(int index)
     {
+        var item = inventoryItems[index];
         item.SetAmount(item.GetAmount() - 1);
 
-        Vector2 position = new Vector2(gameObject.transform.position.x,gameObject.transform.position.y - 0.2f);
+        Vector2 position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 1f);
         GameObject droppedItem = Instantiate(_droppedItemPrefab, position, Quaternion.identity);
         droppedItem.GetComponent<DroppedItem>().SetItem(item);
+    }
 
+    public bool DropItem(int itemId)
+    {
+        _view.RPC("SyncronisedDrop", RpcTarget.All, itemId);
+
+        var item = inventoryItems[itemId];
         if (item.GetAmount() < 1)
         {
             return false;

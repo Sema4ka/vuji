@@ -5,6 +5,7 @@ using ServersInfo;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 
 
@@ -61,6 +62,14 @@ public class Controllers : MonoBehaviour
     {
         string token = _dataBase.GetToken();
         StartCoroutine(FindFriendsByNameNet(token, friendsName));
+    }
+
+    public void SetLocalUserName(Text field)
+    {
+        string token = _dataBase.GetToken();
+        StartCoroutine(GetUserInfo(token, field));
+        
+        
     }
 
     #endregion
@@ -235,6 +244,28 @@ public class Controllers : MonoBehaviour
 
             FriendsListController friendsListController = gameObject.GetComponent<FriendsListController>();
             friendsListController.FillFriendsList(userInfoObject);
+        }
+    }
+
+    private IEnumerator GetUserInfo(string token, Text field=null)
+    {
+        UserOnlineAndOfflineStructRequest userStruct = new UserOnlineAndOfflineStructRequest();
+        userStruct.data = "None";
+        string json = JsonUtility.ToJson(userStruct);
+        UnityWebRequest www = UnityWebRequest.Get(_serverDomain + "/my_name");
+        www.SetRequestHeader("Authorization", token);
+        www.SetRequestHeader("Content-Type", "application/json; charset=UTF-8");
+        yield return www.SendWebRequest();
+        if (www.result == UnityWebRequest.Result.ProtocolError)
+        {
+            Debug.Log("ERROR: cant get username");
+        }
+        else
+        {
+            UserInfoStructResponse response=
+                JsonUtility.FromJson<UserInfoStructResponse>(www.downloadHandler.text);
+            if (field != null) field.text = response.username;
+            
         }
     }
 

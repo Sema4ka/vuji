@@ -94,7 +94,7 @@ public class InventoryWindow : MonoBehaviour
     {
         if (displayedIcons.Count > itemId && itemId >= 0)
         {
-            if (!playerInventory.DropItem(playerInventory.inventoryItems[itemId])){
+            if (!playerInventory.DropItem(itemId)){
                 playerInventory.inventoryItems.RemoveAt(itemId);
             }
             Redraw();

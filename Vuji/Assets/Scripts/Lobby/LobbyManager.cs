@@ -22,6 +22,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     void Start()
     {
         _controllers = GetComponent<Controllers>();
+        _controllers.SetLocalUserName(username);
         // username.text = PhotonNetwork.NickName; // SET TO USERNAME
     }
 
