@@ -13,6 +13,7 @@ public class RegisterManager : MonoBehaviour
 
     void Start()
     {
+        Screen.SetResolution(1054, 593, false);
         _controllers = GetComponent<Controllers>();
     }
 

@@ -75,6 +75,9 @@ public class DataBase : MonoBehaviour
                                 INSERT INTO settings VALUES(2,'VSync','True');
                                 INSERT INTO settings VALUES(3,'Resolution',2);
                                 INSERT INTO settings VALUES(4,'Fullscreen','False');
+                                INSERT INTO settings VALUES(5,'General volume','1');
+                                INSERT INTO settings VALUES(6,'Music volume','1');
+                                INSERT INTO settings VALUES(7,'Environment volume','1');
                                 COMMIT;
 ";
         _command.ExecuteNonQuery();
