@@ -19,6 +19,9 @@ public class PlayerMelee : MonoBehaviour
     private PhotonView _myView;
     private bool _isTimeout = false;
 
+    private Animator _animator;
+
+
     private void Start()
     {
         _myView = gameObject.GetComponent<PhotonView>();
@@ -45,6 +48,7 @@ public class PlayerMelee : MonoBehaviour
     {
         Debug.Log("Mellee check");
         if(_isTimeout) return;
+        GetComponent<AnimationPlayer>().ChangePlayerAnimation_("atack_");
         StartCoroutine(AttackTiemout());
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint, attackRange, enemyLayers);
@@ -87,5 +91,6 @@ public class PlayerMelee : MonoBehaviour
         _isTimeout = true;
         yield return new WaitForSeconds(attackTimeout);
         _isTimeout = false;
+        GetComponent<AnimationPlayer>().ChangePlayerAnimation("iddle_");
     }
 }

@@ -12,11 +12,9 @@ public class AnimationPlayer : MonoBehaviour
 
     private AudioSource stepSound;
     private bool isStepPlaying;
+
     private float y;
     private float x;
-
-
-
     private bool isMoving;
     private string movingState;
 
@@ -27,41 +25,49 @@ public class AnimationPlayer : MonoBehaviour
         isMoving = false;
         _animator = GetComponent<Animator>();
         stepSound = GetComponent<AudioSource>();
-
     }
-   // _view.RPC("ChangePlayerAnimation", RpcTarget.All, FrontPlayerAnimation);
+    // _view.RPC("ChangePlayerAnimation", RpcTarget.All, FrontPlayerAnimation);
 
 
     private void Update()
     {
-        if (_view.IsMine)
+        if (_view.IsMine && GetComponent<MovementPlayer>().canMove)
         {
-            y = Input.GetAxisRaw("Vertical");
-            x = Input.GetAxisRaw("Horizontal");
-
-            if(x!=0 || y!=0)
-            {
-                isMoving = true;
-                if (y > 0)
-                    movingState = "back";
-                else
-                    movingState = "front";
-                if (x > 0)
-                    movingState = "right";
-                else if (x!=0)
-                    movingState = "left";
-            }
+            getCurrentMovingState();
             if (!isMoving)
             {
-                _view.RPC("ChangePlayerAnimation", RpcTarget.All, "iddle_"+movingState);
+                ChangePlayerAnimation("iddle_");
             }
             else
             {
-                _view.RPC("ChangePlayerAnimation", RpcTarget.All, "move_"+movingState);
+                ChangePlayerAnimation("move_");
                 playStep();
             }
-            isMoving = false;
         }
+        isMoving = false;
+    }
+    public void ChangePlayerAnimation_(string newAnim)
+    {
+        _view.RPC("ChangePlayerAnimation", RpcTarget.All, newAnim);
+    }
+    public string getCurrentMovingState()
+    {
+        y = Input.GetAxisRaw("Vertical");
+        x = Input.GetAxisRaw("Horizontal");
+
+        if (x != 0 || y != 0)
+        {
+            isMoving = true;
+            if (y > 0)
+                movingState = "back";
+            else
+                movingState = "front";
+            if (x > 0)
+                movingState = "right";
+            else if (x != 0)
+                movingState = "left";
+        }
+        return movingState;
     }
 
     void playStep()
@@ -69,6 +75,7 @@ public class AnimationPlayer : MonoBehaviour
         if (!isStepPlaying)
         {
             stepSound.Play();
+            stepSound.pitch = new System.Random().Next(80, 100) / 100;
             StartCoroutine(stepDelay(0.84f));
         }
     }
@@ -80,10 +87,10 @@ public class AnimationPlayer : MonoBehaviour
         isStepPlaying = false;
     }
     [PunRPC]
-    private void ChangePlayerAnimation(string newAnimation)
+    public void ChangePlayerAnimation(string newAnimation)
     {
-        if (_currentAnimation == newAnimation) return;
-        _currentAnimation = newAnimation;
+        if (_currentAnimation == newAnimation+movingState) return;
+        _currentAnimation = newAnimation+movingState;
         _animator.Play(_currentAnimation);
     }
 }
