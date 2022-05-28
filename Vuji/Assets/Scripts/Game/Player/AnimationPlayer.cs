@@ -8,7 +8,7 @@ public class AnimationPlayer : MonoBehaviour
 {
     private PhotonView _view;
     private Animator _animator;
-    private string _currentAnimation = "Front";
+    private string _currentAnimation = "";
 
     private AudioSource stepSound;
     private bool isStepPlaying;
@@ -16,7 +16,7 @@ public class AnimationPlayer : MonoBehaviour
     private float y;
     private float x;
     private bool isMoving;
-    private string movingState;
+    public string movingState;
 
     private void Start()
     {
@@ -36,19 +36,20 @@ public class AnimationPlayer : MonoBehaviour
             getCurrentMovingState();
             if (!isMoving)
             {
-                ChangePlayerAnimation("iddle_");
+                ChangePlayerAnimation_q("iddle_"+movingState);
             }
             else
             {
-                ChangePlayerAnimation("move_");
+                ChangePlayerAnimation_q("move_"+movingState);
                 playStep();
             }
         }
         isMoving = false;
     }
-    public void ChangePlayerAnimation_(string newAnim)
+    public void ChangePlayerAnimation_q(string newAnim)
     {
         _view.RPC("ChangePlayerAnimation", RpcTarget.All, newAnim);
+        Debug.Log(newAnim+" "+movingState);
     }
     public string getCurrentMovingState()
     {
@@ -89,8 +90,8 @@ public class AnimationPlayer : MonoBehaviour
     [PunRPC]
     public void ChangePlayerAnimation(string newAnimation)
     {
-        if (_currentAnimation == newAnimation+movingState) return;
-        _currentAnimation = newAnimation+movingState;
+        if (_currentAnimation == newAnimation) return;
+        _currentAnimation = newAnimation;
         _animator.Play(_currentAnimation);
     }
 }
