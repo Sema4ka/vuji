@@ -29,7 +29,6 @@ public class Berserk : BasePassiveSkill
 
         if(_previousState != _healthState)
         {
-            Debug.Log("Changed state from " + _previousState + " to " + _healthState);
             _previousState = _healthState;
             ChangeDamage();
         }
@@ -37,7 +36,6 @@ public class Berserk : BasePassiveSkill
 
     void ChangeDamage()
     {
-        Debug.Log("Change Damage");
         if(_healthState == "lower")
             _casterEntity.IncreaseDamage(additionalDamage);
         if(_healthState == "upper")

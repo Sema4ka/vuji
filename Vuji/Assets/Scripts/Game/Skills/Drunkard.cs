@@ -25,6 +25,9 @@ public class Drunkard : BaseSkill
         caster.GetComponent<BaseEntity>().setIsCooldown(key, true);
         if(cancelMovementOnCast)
             caster.GetComponent<MovementPlayer>().cancelMovement(castTime);
+
+        AnimationPlayer anim = caster.GetComponent<AnimationPlayer>();
+        anim.ChangePlayerAnimation_q(anim._drink);
         yield return new WaitForSeconds(castTime);
 
         // Сам скилл

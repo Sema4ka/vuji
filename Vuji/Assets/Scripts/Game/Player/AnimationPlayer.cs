@@ -18,6 +18,18 @@ public class AnimationPlayer : MonoBehaviour
     private bool isMoving;
     public string movingState;
 
+    public readonly string _attack = "attack_";
+    public readonly string _move = "move_";
+    public readonly string _drink = "drink_";
+    public readonly string _idle = "idle_";
+    public readonly string _shot = "shot_";
+
+    public readonly string _left = "left";
+    public readonly string _right = "right";
+    public readonly string _up = "back";
+    public readonly string _down = "front";
+
+
     private void Start()
     {
         _view = GetComponent<PhotonView>();
@@ -36,11 +48,13 @@ public class AnimationPlayer : MonoBehaviour
             getCurrentMovingState();
             if (!isMoving)
             {
-                ChangePlayerAnimation_q("iddle_"+movingState);
+                ChangePlayerAnimation_q(_idle);
+                Debug.Log(_idle + movingState + "nemove");
             }
             else
             {
-                ChangePlayerAnimation_q("move_"+movingState);
+                ChangePlayerAnimation_q(_move);
+                Debug.Log(_move + movingState+"mofe");
                 playStep();
             }
         }
@@ -48,8 +62,8 @@ public class AnimationPlayer : MonoBehaviour
     }
     public void ChangePlayerAnimation_q(string newAnim)
     {
-        _view.RPC("ChangePlayerAnimation", RpcTarget.All, newAnim);
-        Debug.Log(newAnim+" "+movingState);
+        if(!_animator.GetCurrentAnimatorStateInfo(-1).IsName(_attack+movingState))
+            _view.RPC("ChangePlayerAnimation", RpcTarget.All, newAnim + movingState);
     }
     public string getCurrentMovingState()
     {
@@ -60,13 +74,13 @@ public class AnimationPlayer : MonoBehaviour
         {
             isMoving = true;
             if (y > 0)
-                movingState = "back";
+                movingState = _up;
             else
-                movingState = "front";
+                movingState = _down;
             if (x > 0)
-                movingState = "right";
+                movingState = _right;
             else if (x != 0)
-                movingState = "left";
+                movingState = _left;
         }
         return movingState;
     }
@@ -92,6 +106,7 @@ public class AnimationPlayer : MonoBehaviour
     {
         if (_currentAnimation == newAnimation) return;
         _currentAnimation = newAnimation;
+        Debug.Log(newAnimation+"Photon");
         _animator.Play(_currentAnimation);
     }
 }

@@ -61,6 +61,8 @@ MonoBehaviour:
   - IncreaseMaxHealth
   - SyncronisedDrop
   - ChangePlayerAnimationRpc
+  - CreateAcidFloor
+  - CreateAOE
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

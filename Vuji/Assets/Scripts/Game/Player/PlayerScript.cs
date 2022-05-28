@@ -41,7 +41,13 @@ public class PlayerScript : MonoBehaviour
     void OnKeyPressed(string name, KeyCode key)
     {
         Debug.Log("KeyPressed" + name);
-        if (name == "Attack") GetComponent<PlayerMelee>().MasterCheckMeleeAttack();
+        if (name == "Attack")
+        {
+            if(_playerEntitiy.GetEntityName() == "Pirate") GetComponent<PlayerMelee>().MasterCheckMeleeAttack();
+            if(_playerEntitiy.GetEntityName() == "Mage") _playerEntitiy.gameObject.GetComponent<PlayerProjectile>().Attack("Fireball", 1.5f);
+            AnimationPlayer _anim = GetComponent<AnimationPlayer>();
+            _anim.ChangePlayerAnimation_q(_anim._attack);
+        }
         if (name == "Use Skill") _playerEntitiy.UseSkill();
         else if (name.StartsWith("Skill"))
         {
