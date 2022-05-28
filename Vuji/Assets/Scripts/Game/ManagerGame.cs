@@ -76,6 +76,7 @@ public class ManagerGame : MonoBehaviourPunCallbacks
                 var count = 0;
                 foreach (var player in PhotonNetwork.PlayerList)
                 {
+                    if (player.GetPhotonTeam() != null) player.LeaveCurrentTeam();
                     if (count < GameSettingsOriginal.MaxPlayersInGame / 2)
                     {
                         player.JoinTeam("TeamOne");

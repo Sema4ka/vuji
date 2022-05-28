@@ -75,9 +75,9 @@ public class SettingsManager : MonoBehaviour
         KeybindManager.keyChanged += OnKeyChanged;
         int movY = -50, ablY = -50, UIY = -50;
 
-        movementKeys.GetComponent<RectTransform>().sizeDelta = new Vector2(330, KeyHandler.movementKeys.Length * 100 + 50);
-        abilityKeys.GetComponent<RectTransform>().sizeDelta = new Vector2(330, KeyHandler.abilityKeys.Length * 100 + 50);
-        UIKeys.GetComponent<RectTransform>().sizeDelta = new Vector2(330, KeyHandler.uiKeys.Length * 100 + 50);
+        movementKeys.GetComponent<RectTransform>().sizeDelta = new Vector2(190, KeyHandler.movementKeys.Length * 50 + 25);
+        abilityKeys.GetComponent<RectTransform>().sizeDelta = new Vector2(190, KeyHandler.abilityKeys.Length * 50 + 25);
+        UIKeys.GetComponent<RectTransform>().sizeDelta = new Vector2(190, KeyHandler.uiKeys.Length * 50 + 25);
 
         foreach (KeyValuePair<string, KeyCode> pair in KeyHandler.instance.GetKeybinds())
         {
@@ -86,19 +86,19 @@ public class SettingsManager : MonoBehaviour
             if (KeyHandler.movementKeys.Contains(pair.Key)){
                 keybind.transform.SetParent(movementKeys, false);
                 keybind.transform.localPosition = new Vector2(0, movY);
-                movY -= 100;
+                movY -= 50;
             }
             else if (KeyHandler.abilityKeys.Contains(pair.Key)){
                 
                 keybind.transform.SetParent(abilityKeys, false);
                 keybind.transform.localPosition = new Vector2(0, ablY);
-                ablY -= 100;
+                ablY -= 50;
             }
             else if (KeyHandler.uiKeys.Contains(pair.Key))
             {
                 keybind.transform.SetParent(UIKeys, false);
                 keybind.transform.localPosition = new Vector2(0, UIY);
-                UIY -= 100;
+                UIY -= 50;
             }
             
             keybind.GetComponent<KeybindManager>().SetKey(pair.Value);
@@ -157,7 +157,7 @@ public class SettingsManager : MonoBehaviour
     {
         Application.targetFrameRate = int.Parse(fpsSlider.value.ToString());
         dataBase.SetSetting("FPS", fpsSlider.value.ToString());
-        maxFpsText.text = "Max FPS: " + fpsSlider.value.ToString();
+        maxFpsText.text = fpsSlider.value.ToString();
     }
     
     public void ChangeVsync(Toggle vsyncToggle)

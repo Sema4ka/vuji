@@ -32,12 +32,12 @@ public class SoundSettings : MonoBehaviour
             if (!setting.name.EndsWith("volume")) continue;
             GameObject slider = Instantiate(soundSlider);
             slider.transform.SetParent(soundSettingsContent, false);
-            slider.transform.localPosition = new Vector2(500, nowY);
+            slider.transform.localPosition = new Vector2(335, nowY);
             var manager = slider.GetComponent<SoundSliderManager>();
             manager.SetName(setting.name);
             manager.SetValue(float.Parse(setting.value));
             volumeList[setting.name] = float.Parse(setting.value);
-            nowY -= 100;
+            nowY -= 50;
         }
     }
     // Volume set by user

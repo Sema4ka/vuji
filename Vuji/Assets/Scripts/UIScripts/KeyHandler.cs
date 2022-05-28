@@ -66,6 +66,7 @@ public class KeyHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("KeyHandler Started");
         instance = this;
         KeybindManager.Binding += OnBinding;
         SpawnPlayers.OnSpawn += OnSpawn;
