@@ -745,3 +745,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcbdc9ce2722fda41973a62586f14ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5642654506287429546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6754265623814182265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c83ae04d5bb1b3ce7a82423ef8c09cd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u0411\u0435\u0440\u0441\u0435\u0440\u043A"
+  skillDescription: "\u044B\u043F\u044F\u0432\u0430\u043F\u0440\u0444\u043A\u0430\u044B\u044F\u0432\u0443\u0432\u0440\u043A"
+  additionalDamage: 50
+  healthPercent: 70
