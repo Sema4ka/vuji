@@ -44,10 +44,8 @@ public class PlayerScript : MonoBehaviour
         if (name == "Attack")
         {
             if(_playerEntitiy.GetEntityName() == "Pirate") GetComponent<PlayerMelee>().MasterCheckMeleeAttack();
-            if(_playerEntitiy.GetEntityName() == "Mage") _playerEntitiy.gameObject.GetComponent<PlayerProjectile>().Attack("Fireball", 3);
+            if(_playerEntitiy.GetEntityName() == "Mage") _playerEntitiy.gameObject.GetComponent<PlayerProjectile>().Attack("Fireball", 1.5f);
             AnimationPlayer _anim = GetComponent<AnimationPlayer>();
-            _anim.ChangePlayerAnimation_q(_anim._attack);
-        }
             _anim.ChangePlayerAnimation_q(_anim._attack);
         }
         if (name == "Use Skill") _playerEntitiy.UseSkill();

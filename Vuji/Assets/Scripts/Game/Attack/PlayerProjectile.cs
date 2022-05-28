@@ -51,9 +51,10 @@ public class PlayerProjectile : MonoBehaviour
     public void Attack(string projectileKey, float time)
     {
         //RemoteProjectileAttack(_aimAngle, _aimDirection, projectileKey);
-        if(!isTimeout)
+        if(!isTimeout){
             StartCoroutine(AttackTimeout(time));
             _view.RPC("RemoteProjectileAttack", RpcTarget.All, _aimAngle, _aimDirection, projectileKey);
+        }
     }
 
     private void Update()
