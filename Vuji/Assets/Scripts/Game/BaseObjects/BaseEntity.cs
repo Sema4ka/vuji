@@ -50,6 +50,7 @@ public class BaseEntity : MonoBehaviour
     #region DisplayedInformation
     [SerializeField] public HealthBarManager healthBar;
     [SerializeField] public EntityNameManager displayedName;
+    [SerializeField] Controllers _controller;
 
     public Action<BaseEffect, BaseEntity> OnEffectApply;
     #endregion
@@ -74,6 +75,15 @@ public class BaseEntity : MonoBehaviour
         healthBar.SetOffset(new Vector3(0, height * 0.6f, 0));
         healthBar.SetHealth(healthPoints, maxHealthPoints);
         displayedName.SetOffset(new Vector3(0, height * 0.6f, 0));
+        if (gameObject.CompareTag("Player"))
+        {
+            if (_view.IsMine)
+            {
+                _controller.SetLocalUserName(displayedName.entityName);
+                displayedName.SendText(_view);
+            }
+        }
+            
     }
 
     private void Update()

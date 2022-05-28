@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
 public class EntityNameManager : MonoBehaviour
 {
-    [SerializeField] Text entityName;
+    public Text entityName;
+
     private Vector3 offset;
     // Start is called before the first frame update
     void Start()
@@ -20,9 +22,9 @@ public class EntityNameManager : MonoBehaviour
         entityName.transform.position = new Vector3(temp.x, temp.y + 20, 0);
     }
 
-    public void SetText(string newText)
+    public void SendText(PhotonView _view)
     {
-        entityName.text = newText;
+        _view.RPC("UpdateText", RpcTarget.All, entityName.text);
     }
     public void SetOffset(Vector3 newOffset)
     {
@@ -31,5 +33,9 @@ public class EntityNameManager : MonoBehaviour
     public Vector3 GetOffset()
     {
         return offset;
+    }
+    [PunRPC]
+    public void UpdateText(string newText) {
+        entityName.text = newText;
     }
 }

@@ -21,11 +21,6 @@ public class PlayerScript : MonoBehaviour
 
         if(_view.IsMine)
             KeyHandler.keyPressed += OnKeyPressed;
-
-        if (_view.IsMine)
-            _playerEntitiy.displayedName.SetText(PhotonNetwork.NickName==""?"Player" : PhotonNetwork.NickName); // Replace with Username
-        else
-            _playerEntitiy.displayedName.gameObject.SetActive(false);
     }
     private void OnDestroy()
     {

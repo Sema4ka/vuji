@@ -21,6 +21,7 @@ public class DroppedItem : MonoBehaviour
     {
         if (entity.gameObject.CompareTag("Player"))
         {
+            if (entity.gameObject.GetComponent<Inventory>().inventoryItems.Count >= 9) return;
             entity.gameObject.GetComponent<Inventory>().AddItem(itemData, gameObject);
             Destroy(gameObject);
         }
