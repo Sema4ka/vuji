@@ -43,12 +43,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023c595b72d5b673cabca9a76dae02b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 5
-  skillDescription: 5
-  energyCost: 5
+  skillName: "\u041F\u043E\u0437\u044B\u0432"
+  skillDescription: "\u0412\u044B \u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u0435\u0441\u044C
+    \u0441\u0438\u043B\u044C\u043D\u0435\u0435"
+  energyCost: 100
   castTime: 5
-  cooldown: 5
+  cooldown: 30
   cancelMovementOnCast: 1
-  skillSprite: {fileID: 21300000, guid: a44272609b02ea217a6d0ed38d7c6311, type: 3}
-  additionalSpeed: 5
-  additionalDamage: 5
+  skillSprite: {fileID: 21300000, guid: ecf0a263d88b1264f9e060560d894e4c, type: 3}
+  speedEffect: {fileID: 5801032215040037669, guid: 5223e83c040f6b96cba55a891bc2b222, type: 3}
+  strongEffect: {fileID: 8158227689627682409, guid: 7a7a78488c6606439b96840ad1f4c86c, type: 3}

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Exclamation : BaseSkill
 {
-    [SerializeField] private int additionalSpeed;
-    [SerializeField] private int additionalDamage;
+    [SerializeField] GameObject speedEffect;
+    [SerializeField] GameObject strongEffect;
 
     public override IEnumerator UseSkill(GameObject caster, string key)
     {
@@ -23,7 +23,8 @@ public class Exclamation : BaseSkill
         yield return new WaitForSeconds(castTime);
         
         // Сам скилл
-        Debug.Log("USerSklil");
+        caster.GetComponent<BaseEntity>().AddEffect(speedEffect);
+        caster.GetComponent<BaseEntity>().AddEffect(strongEffect);
         // Сам скилл
         onRelease?.Invoke(cooldown);
         yield return new WaitForSeconds(cooldown);

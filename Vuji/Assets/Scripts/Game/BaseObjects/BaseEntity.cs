@@ -218,6 +218,15 @@ public class BaseEntity : MonoBehaviour
         this.baseDamage -= addDamage;
     }
 
+    public void IncreaseSpeed(int addSpeed)
+    {
+        this.moveSpeed += addSpeed;
+    }
+
+    public void DecreaseSpeed(int addSpeed)
+    {
+        this.moveSpeed -= addSpeed;
+    }
 
     public void IncreaseDefense(int addDefense)
     {

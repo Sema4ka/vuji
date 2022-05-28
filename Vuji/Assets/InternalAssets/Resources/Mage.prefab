@@ -129,7 +129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2435816656477564949, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: moveSpeed
-      value: 5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 2435816656477564949, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: baseDamage
@@ -170,7 +170,7 @@ PrefabInstance:
     - target: {fileID: 2435816656477564949, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: skills.Array.data[1].skill
       value: 
-      objectReference: {fileID: 2704600687908857770, guid: bf66dd50fd97194fcb788fa3109e812b, type: 3}
+      objectReference: {fileID: 2885703309132641603, guid: d14ae855919c6018b8049ea8bf9d8cf0, type: 3}
     - target: {fileID: 2965660368256064661, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: m_RootOrder
       value: 3
