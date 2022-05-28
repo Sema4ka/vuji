@@ -41,11 +41,13 @@ public class PlayerScript : MonoBehaviour
     void OnKeyPressed(string name, KeyCode key)
     {
         Debug.Log("KeyPressed" + name);
-
         if (name == "Attack")
         {
-            GetComponent<PhotonView>().RPC("MasterCheckMeleeAttack", RpcTarget.All);
+            if(_playerEntitiy.GetEntityName() == "Pirate") GetComponent<PlayerMelee>().MasterCheckMeleeAttack();
+            if(_playerEntitiy.GetEntityName() == "Mage") _playerEntitiy.gameObject.GetComponent<PlayerProjectile>().Attack("Fireball", 3);
             AnimationPlayer _anim = GetComponent<AnimationPlayer>();
+            _anim.ChangePlayerAnimation_q(_anim._attack);
+        }
             _anim.ChangePlayerAnimation_q(_anim._attack);
         }
         if (name == "Use Skill") _playerEntitiy.UseSkill();

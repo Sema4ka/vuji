@@ -47,6 +47,7 @@ public class MovementPlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
+        _moveSpeed = _player.GetMoveSpeed();
         if(!canMove) return;
         var keyHandler = KeyHandler.instance;
         if (keyHandler.IsPaused()) return;
