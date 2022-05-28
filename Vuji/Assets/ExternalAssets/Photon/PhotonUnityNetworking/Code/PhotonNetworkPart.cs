@@ -404,18 +404,18 @@ namespace Photon.Pun
 
                 if (owningPv)
                 {
-                    Debug.LogWarning("Received RPC \"" + inMethodName + "\" for viewID " + netViewID + " but this PhotonView does not exist! View was/is ours." + (ownerSent ? " Owner called." : " Remote called.") + " By: " + sender);
+                   // Debug.LogWarning("Received RPC \"" + inMethodName + "\" for viewID " + netViewID + " but this PhotonView does not exist! View was/is ours." + (ownerSent ? " Owner called." : " Remote called.") + " By: " + sender);
                 }
                 else
                 {
-                    Debug.LogWarning("Received RPC \"" + inMethodName + "\" for viewID " + netViewID + " but this PhotonView does not exist! Was remote PV." + (ownerSent ? " Owner called." : " Remote called.") + " By: " + sender + " Maybe GO was destroyed but RPC not cleaned up.");
+                  //  Debug.LogWarning("Received RPC \"" + inMethodName + "\" for viewID " + netViewID + " but this PhotonView does not exist! Was remote PV." + (ownerSent ? " Owner called." : " Remote called.") + " By: " + sender + " Maybe GO was destroyed but RPC not cleaned up.");
                 }
                 return;
             }
 
             if (photonNetview.Prefix != otherSidePrefix)
             {
-                Debug.LogError("Received RPC \"" + inMethodName + "\" on viewID " + netViewID + " with a prefix of " + otherSidePrefix + ", our prefix is " + photonNetview.Prefix + ". The RPC has been ignored.");
+             //  Debug.LogError("Received RPC \"" + inMethodName + "\" on viewID " + netViewID + " with a prefix of " + otherSidePrefix + ", our prefix is " + photonNetview.Prefix + ". The RPC has been ignored.");
                 return;
             }
 
@@ -428,7 +428,7 @@ namespace Photon.Pun
 
             if (PhotonNetwork.LogLevel >= PunLogLevel.Full)
             {
-                Debug.Log("Received RPC: " + inMethodName);
+//                Debug.Log("Received RPC: " + inMethodName);
             }
 
 
@@ -852,7 +852,7 @@ namespace Photon.Pun
 
             if (PhotonNetwork.LogLevel >= PunLogLevel.Full)
             {
-                Debug.Log("Network destroy Instantiated GO: " + go.name);
+//                Debug.Log("Network destroy Instantiated GO: " + go.name);
             }
             
             foundPVs.Clear();           // as foundPVs is re-used, clean it to avoid lingering references
@@ -1023,7 +1023,7 @@ namespace Photon.Pun
 
             if (PhotonNetwork.LogLevel >= PunLogLevel.Full)
             {
-                Debug.Log("Registered PhotonView: " + netView.ViewID);
+//                Debug.Log("Registered PhotonView: " + netView.ViewID);
             }
         }
 
@@ -1205,7 +1205,7 @@ namespace Photon.Pun
 
             if (PhotonNetwork.LogLevel >= PunLogLevel.Full)
             {
-                Debug.Log("Sending RPC \"" + methodName + "\" to target: " + target + " or player:" + player + ".");
+//                Debug.Log("Sending RPC \"" + methodName + "\" to target: " + target + " or player:" + player + ".");
             }
 
 

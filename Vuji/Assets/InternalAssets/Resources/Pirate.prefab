@@ -212,6 +212,10 @@ PrefabInstance:
       value: Skill 2
       objectReference: {fileID: 0}
     - target: {fileID: 2435816656477564949, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
+      propertyPath: _passiveSkills.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435816656477564949, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: skills.Array.data[0].skill
       value: 
       objectReference: {fileID: 3796884077945413057, guid: bc1306c81ce2143fd933fdce7f1f6db7, type: 3}
@@ -219,6 +223,10 @@ PrefabInstance:
       propertyPath: skills.Array.data[1].skill
       value: 
       objectReference: {fileID: 6119958733980992348, guid: 08297c57ec5b42cb68e192d9a48269a1, type: 3}
+    - target: {fileID: 2435816656477564949, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
+      propertyPath: _passiveSkills.Array.data[0]
+      value: 
+      objectReference: {fileID: 8607349788670492310, guid: bca1e2ee690a38c8eb403cae04092d1d, type: 3}
     - target: {fileID: 3571788434696612582, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -421,14 +429,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
---- !u!1 &6754265623814182265 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7012066835509977681, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
-  m_PrefabInstance: {fileID: 4392176692006565672}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &965370960133594574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3571788434696612582, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
+  m_PrefabInstance: {fileID: 4392176692006565672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6754265623814182265 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7012066835509977681, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
   m_PrefabInstance: {fileID: 4392176692006565672}
   m_PrefabAsset: {fileID: 0}
 --- !u!82 &4541029417071092074

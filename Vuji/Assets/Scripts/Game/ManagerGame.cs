@@ -19,7 +19,7 @@ public class ManagerGame : MonoBehaviourPunCallbacks
         gameObject.GetComponent<SpawnPlayers>().enabled = true;
         DistributionByTeams();
     }
-
+    
     private void Update()
     {
         if (!_allPlayersWasSpawnedInGame)

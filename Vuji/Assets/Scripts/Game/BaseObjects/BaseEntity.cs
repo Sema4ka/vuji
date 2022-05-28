@@ -67,7 +67,9 @@ public class BaseEntity : MonoBehaviour
                 Debug.Log(skills[i].key + " " + skills[i].skill);
                 this._skills[skills[i].key] = skills[i].skill;
             }
-
+        
+        if (_passiveSkills.Count != 0)
+            _passiveSkills[0].GetComponent<BasePassiveSkill>().ActivatePassiveSkill(this.gameObject);
 
         maxHealthPoints = Mathf.Max(maxHealthPoints, healthPoints);
         maxEnergy = Mathf.Max(maxEnergy, energy);
@@ -207,6 +209,18 @@ public class BaseEntity : MonoBehaviour
     {
         return defense;
     }
+
+
+    public void IncreaseDamage(int addDamage)
+    {
+        this.baseDamage += addDamage;
+    }
+
+    public void DecreaseDamage(int addDamage)
+    {
+        this.baseDamage -= addDamage;
+    }
+
 
     public void IncreaseDefense(int addDefense)
     {
