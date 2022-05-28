@@ -9,7 +9,7 @@ public class MovementPlayer : MonoBehaviour
     private float _moveSpeed;
     private Rigidbody2D _rb2d;
 
-    private bool canMove = true;
+    public bool canMove = true;
 
     #region KeybindMovement
     private bool keybindMovement = false;
