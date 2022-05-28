@@ -24,7 +24,7 @@ public class HealthBarUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (entity == null)
+        if (entity == null && !entity.isDead)
         {
             HealthBar.maxValue = 0f;
             HealthBar.value = 0f;

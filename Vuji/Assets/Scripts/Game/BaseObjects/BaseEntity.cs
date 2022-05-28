@@ -52,6 +52,8 @@ public class BaseEntity : MonoBehaviour
     [SerializeField] public EntityNameManager displayedName;
     [SerializeField] Controllers _controller;
 
+    public bool isDead { get; private set; } = false;
+
     public Action<BaseEffect, BaseEntity> OnEffectApply;
     #endregion
 
@@ -272,6 +274,7 @@ public class BaseEntity : MonoBehaviour
     #endregion
     private void Death()
     {
+        isDead = true;
         DropAllItems();
         if(gameObject.CompareTag("Player"))
             gameObject.GetComponent<PlayerScript>().KillPlayer();

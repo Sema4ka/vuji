@@ -219,8 +219,9 @@ def get_user_info(request: Request, session: Session = Depends(get_session)):
         data = {
             "login": user.login,
             "username": user.username,
-            "created_at": user.created_at
+            "created_at": user.created_at.isoformat(" ", "seconds")
         }
+        data = dict_to_json(**data)
         return Response(data, status_code=200)
     return Response(status_code=400)
 

@@ -66,7 +66,9 @@ public class Controllers : MonoBehaviour
 
     public void SetLocalUserName(Text field)
     {
-        if (_dataBase == null) return;
+        Debug.Log("Local username");
+        if (_dataBase == null) _dataBase = gameObject.GetComponent<DataBase>(); ;
+        Debug.Log("Database not null");
         string token = _dataBase.GetToken();
         StartCoroutine(GetUserInfo(token, field));
         
@@ -250,6 +252,7 @@ public class Controllers : MonoBehaviour
 
     private IEnumerator GetUserInfo(string token, Text field=null)
     {
+        Debug.Log(field.ToString());
         UserOnlineAndOfflineStructRequest userStruct = new UserOnlineAndOfflineStructRequest();
         userStruct.data = "None";
         string json = JsonUtility.ToJson(userStruct);
@@ -259,13 +262,13 @@ public class Controllers : MonoBehaviour
         yield return www.SendWebRequest();
         if (www.result == UnityWebRequest.Result.ProtocolError)
         {
-            Debug.Log("ERROR: cant get username");
+            Debug.Log("ERROR: cant get username. " + www.responseCode);
         }
         else
         {
             UserInfoStructResponse response=
                 JsonUtility.FromJson<UserInfoStructResponse>(www.downloadHandler.text);
-            if (field != null) field.text = response.username;
+            if (field != null) field.text = response.login;
             
         }
     }
