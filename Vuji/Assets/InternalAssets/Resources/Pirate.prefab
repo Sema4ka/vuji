@@ -45,7 +45,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.3, y: 0.4}
+  m_Size: {x: 0.6, y: 0.8}
   m_Direction: 0
 --- !u!1 &2665297913324767168
 GameObject:
@@ -56,7 +56,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5122357596616110450}
-  - component: {fileID: 678302249421401396}
   m_Layer: 10
   m_Name: FirePoint
   m_TagString: Untagged
@@ -78,57 +77,6 @@ Transform:
   m_Father: {fileID: 1287147371733323864}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &678302249421401396
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2665297913324767168}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b4ab2f8f14e870e47b7e6decb61b5ca1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 19.2, y: 10.8}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &3008551674978302123
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,6 +122,10 @@ PrefabInstance:
     - target: {fileID: 2435816656477564949, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: energy
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435816656477564949, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
+      propertyPath: defense
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2435816656477564949, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: maxEnergy
@@ -669,6 +621,22 @@ MonoBehaviour:
   inventoryItems:
   - {fileID: 11400000, guid: 2d6a38ff45f2b2a4f8c3dfbb9d039e14, type: 2}
   _droppedItemPrefab: {fileID: 8455292785502437808, guid: 9a0fdf131a4a86540bae8470b1178eba, type: 3}
+--- !u!114 &5642654506287429546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6754265623814182265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c83ae04d5bb1b3ce7a82423ef8c09cd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u0411\u0435\u0440\u0441\u0435\u0440\u043A"
+  skillDescription: "\u044B\u043F\u044F\u0432\u0430\u043F\u0440\u0444\u043A\u0430\u044B\u044F\u0432\u0443\u0432\u0440\u043A"
+  additionalDamage: 50
+  healthPercent: 70
 --- !u!114 &6016211119298176330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,19 +713,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcbdc9ce2722fda41973a62586f14ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5642654506287429546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6754265623814182265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c83ae04d5bb1b3ce7a82423ef8c09cd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u0411\u0435\u0440\u0441\u0435\u0440\u043A"
-  skillDescription: "\u044B\u043F\u044F\u0432\u0430\u043F\u0440\u0444\u043A\u0430\u044B\u044F\u0432\u0443\u0432\u0440\u043A"
-  additionalDamage: 50
-  healthPercent: 70

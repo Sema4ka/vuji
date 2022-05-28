@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -25,7 +26,7 @@ public class PlayerProjectile : MonoBehaviour
     private Vector3 _aimDirection;
     private float _aimAngle;
     private PhotonView _view;
-
+    private bool isTimeout = false;
     #endregion
 
     private void Start()
@@ -45,6 +46,14 @@ public class PlayerProjectile : MonoBehaviour
     {
         //RemoteProjectileAttack(_aimAngle, _aimDirection, projectileKey);
         _view.RPC("RemoteProjectileAttack", RpcTarget.All, _aimAngle, _aimDirection, projectileKey);
+    }
+
+    public void Attack(string projectileKey, float time)
+    {
+        //RemoteProjectileAttack(_aimAngle, _aimDirection, projectileKey);
+        if(!isTimeout)
+            StartCoroutine(AttackTimeout(time));
+            _view.RPC("RemoteProjectileAttack", RpcTarget.All, _aimAngle, _aimDirection, projectileKey);
     }
 
     private void Update()
@@ -70,5 +79,13 @@ public class PlayerProjectile : MonoBehaviour
         projectileBase.AddDamage(gameObject.GetComponent<BaseEntity>().GetBaseDamage());
         
         GameObject projectileInst = Instantiate(projectile, firePoint.position, firePoint.rotation);
+    }
+
+
+    private IEnumerator AttackTimeout(float time)
+    {
+        isTimeout = true;
+        yield return new WaitForSeconds(time);
+        isTimeout = false;
     }
 }
