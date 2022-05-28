@@ -253,7 +253,7 @@ public class Controllers : MonoBehaviour
         UserOnlineAndOfflineStructRequest userStruct = new UserOnlineAndOfflineStructRequest();
         userStruct.data = "None";
         string json = JsonUtility.ToJson(userStruct);
-        UnityWebRequest www = UnityWebRequest.Get(_serverDomain + "/my_name");
+        UnityWebRequest www = UnityWebRequest.Get(_serverDomain + "/me");
         www.SetRequestHeader("Authorization", token);
         www.SetRequestHeader("Content-Type", "application/json; charset=UTF-8");
         yield return www.SendWebRequest();
