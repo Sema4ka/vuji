@@ -66,6 +66,7 @@ public class Controllers : MonoBehaviour
 
     public void SetLocalUserName(Text field)
     {
+        if (_dataBase == null) return;
         string token = _dataBase.GetToken();
         StartCoroutine(GetUserInfo(token, field));
         
