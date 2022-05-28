@@ -32,7 +32,6 @@ public class BaseEntity : MonoBehaviour
 
     public Action<string, bool> OnSkillSelectionChange;
 
-    [SerializeField] private List<GameObject> _passiveSkills = new List<GameObject>();
     #endregion
 
     #region Private fields
@@ -68,8 +67,6 @@ public class BaseEntity : MonoBehaviour
                 this._skills[skills[i].key] = skills[i].skill;
             }
         
-        if (_passiveSkills.Count != 0)
-            _passiveSkills[0].GetComponent<BasePassiveSkill>().ActivatePassiveSkill(this.gameObject);
 
         maxHealthPoints = Mathf.Max(maxHealthPoints, healthPoints);
         maxEnergy = Mathf.Max(maxEnergy, energy);

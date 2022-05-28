@@ -8,20 +8,23 @@ public class Berserk : BasePassiveSkill
     [SerializeField] private int additionalDamage;
 
     [Tooltip("n% (0-100)")]
-    [SerializeField] private int healthPercent;
+    [SerializeField] private float healthPercent;
 
     private BaseEntity _casterEntity;
 
     private string _previousState = "upper";
     private string _healthState = "upper";
 
+    private void Start() {
+        this._casterEntity = gameObject.GetComponent<BaseEntity>();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(_casterEntity.GetHealthPoints() + "   " +_casterEntity.GetMaxHealthPoints() * (healthPercent / 100) + "   " + healthPercent / 100);
-        if(_casterEntity.GetHealthPoints() < _casterEntity.GetMaxHealthPoints() * (healthPercent / 100))
+        if((float)_casterEntity.GetHealthPoints() < (float)_casterEntity.GetMaxHealthPoints() * (float)((float)healthPercent / 100))
             _healthState = "lower";
-        if(_casterEntity.GetHealthPoints() >= _casterEntity.GetMaxHealthPoints() * (healthPercent / 100))
+        if((float)_casterEntity.GetHealthPoints() >= (float)_casterEntity.GetMaxHealthPoints() * (float)((float)healthPercent / 100))
             _healthState = "upper";
 
         if(_previousState != _healthState)
@@ -30,13 +33,6 @@ public class Berserk : BasePassiveSkill
             _previousState = _healthState;
             ChangeDamage();
         }
-    }
-
-    public override void ActivatePassiveSkill(GameObject caster)
-    {
-        base.ActivatePassiveSkill(caster);
-        this._casterEntity = caster.GetComponent<BaseEntity>();
-        Debug.Log("Berserk ");
     }
 
     void ChangeDamage()

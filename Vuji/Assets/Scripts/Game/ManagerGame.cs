@@ -15,6 +15,11 @@ public class ManagerGame : MonoBehaviourPunCallbacks
 
     private void Start()
     {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            PhotonNetwork.CurrentRoom.IsOpen = false;
+            PhotonNetwork.CurrentRoom.IsVisible = false;
+        }
         _allPlayersWasSpawnedInGame = false;
         gameObject.GetComponent<SpawnPlayers>().enabled = true;
         DistributionByTeams();
