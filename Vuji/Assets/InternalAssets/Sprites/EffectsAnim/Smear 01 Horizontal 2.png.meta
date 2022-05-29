@@ -39,6 +39,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -220,6 +221,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Smear 01 Horizontal 2_3: 6709114958538270699
+      Smear 01 Horizontal 2_0: -5234595463494836664
+      Smear 01 Horizontal 2_1: -3452810339524642139
+      Smear 01 Horizontal 2_4: 4014703680948787574
+      Smear 01 Horizontal 2_2: 508038023364838101
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

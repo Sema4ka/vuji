@@ -180,6 +180,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -1402,6 +1403,61 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      LevelSprites_53: 7480430419921234969
+      LevelSprites_15: 5015129315446440995
+      LevelSprites_44: 344708789342459587
+      LevelSprites_28: 5982017274638276859
+      LevelSprites_7: -6634724072455510692
+      LevelSprites_31: 4764164445941052138
+      LevelSprites_34: 4014321568876519125
+      LevelSprites_43: 3464306128933631737
+      LevelSprites_0: 6849307935157771694
+      LevelSprites_33: 6980290632492603671
+      LevelSprites_29: 5792387706137705717
+      LevelSprites_5: 8047261368548102712
+      LevelSprites_6: 3685732100344809224
+      LevelSprites_51: -1261283072750422561
+      LevelSprites_39: -4305302564252043055
+      LevelSprites_23: -3495741914629762656
+      LevelSprites_19: -6100410461115489894
+      LevelSprites_30: -1795256919683355810
+      LevelSprites_38: -6138715606118981126
+      LevelSprites_25: -3839630375461662595
+      LevelSprites_50: -1546237549349984573
+      LevelSprites_40: 1256402317269163503
+      LevelSprites_3: 836606158800921871
+      LevelSprites_32: 1716385948876983945
+      LevelSprites_22: 648489329355513172
+      LevelSprites_14: 8708683494430692263
+      LevelSprites_26: 1014354419136311492
+      LevelSprites_12: -7288796588912268283
+      LevelSprites_20: 8605377325799572324
+      LevelSprites_21: 2134775190228395087
+      LevelSprites_48: 2470703205990068292
+      LevelSprites_35: -7941127657813025383
+      LevelSprites_41: 2509390318638255708
+      LevelSprites_24: 746843893510151801
+      LevelSprites_1: -5618043606747604078
+      LevelSprites_42: -1525428000779349789
+      LevelSprites_16: 1898425342340122187
+      LevelSprites_17: -3980383605781696451
+      LevelSprites_8: 8209050669868746580
+      LevelSprites_52: 342356808782549369
+      LevelSprites_36: 1755719105039871797
+      LevelSprites_37: -638472095197736862
+      LevelSprites_46: 3444392612614591432
+      LevelSprites_10: -5537502884622857329
+      LevelSprites_13: 2144622301956979374
+      LevelSprites_2: 56140416081230837
+      LevelSprites_47: 4498897419741988180
+      LevelSprites_4: -7666807739173096851
+      LevelSprites_9: -7715021204821982598
+      LevelSprites_27: 5399269692572988165
+      LevelSprites_45: 2858119022831643543
+      LevelSprites_11: 4354869353624865280
+      LevelSprites_49: 5078238216681762300
+      LevelSprites_18: -4407326180142018882
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

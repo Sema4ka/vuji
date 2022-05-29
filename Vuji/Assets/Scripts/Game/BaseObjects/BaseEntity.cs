@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using System;
 using Photon.Pun;
+using Photon.Pun.UtilityScripts;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class BaseEntity : MonoBehaviour
@@ -50,7 +52,10 @@ public class BaseEntity : MonoBehaviour
     #region DisplayedInformation
     [SerializeField] public HealthBarManager healthBar;
     [SerializeField] public EntityNameManager displayedName;
-    [SerializeField] Controllers _controller;
+    public static Action<BaseEntity, string> teamSpawn;
+    public Controllers _controller;
+
+    public bool isDead { get; private set; } = false;
 
     public Action<BaseEffect, BaseEntity> OnEffectApply;
     #endregion
@@ -67,8 +72,8 @@ public class BaseEntity : MonoBehaviour
                 Debug.Log(skills[i].key + " " + skills[i].skill);
                 this._skills[skills[i].key] = skills[i].skill;
             }
-        
 
+        
         maxHealthPoints = Mathf.Max(maxHealthPoints, healthPoints);
         maxEnergy = Mathf.Max(maxEnergy, energy);
         float height = 1.0f;
@@ -79,8 +84,7 @@ public class BaseEntity : MonoBehaviour
         {
             if (_view.IsMine)
             {
-                _controller.SetLocalUserName(displayedName.entityName);
-                displayedName.SendText(_view);
+                _view.RPC("UpdateText", RpcTarget.All, "[" + PhotonNetwork.LocalPlayer.GetPhotonTeam().Name + "] ", PhotonNetwork.LocalPlayer.NickName);
             }
         }
             
@@ -89,6 +93,13 @@ public class BaseEntity : MonoBehaviour
     private void Update()
     {
         healthBar.SetHealth(healthPoints, maxHealthPoints);
+    }
+
+    [PunRPC]
+    public void UpdateText(string teamTag, string newText)
+    {
+        GetComponentInChildren<Text>().text =  teamTag + newText;
+        if ("[" + PhotonNetwork.LocalPlayer.GetPhotonTeam().Name + "] " == teamTag) teamSpawn?.Invoke(this, newText);
     }
 
     [PunRPC]
@@ -272,6 +283,7 @@ public class BaseEntity : MonoBehaviour
     #endregion
     private void Death()
     {
+        isDead = true;
         DropAllItems();
         if(gameObject.CompareTag("Player"))
             gameObject.GetComponent<PlayerScript>().KillPlayer();

@@ -32,6 +32,13 @@ public class EnergyBarUI : MonoBehaviour
             EnergyBarText.text = "";
             return;
         }
+        if (entity.isDead)
+        {
+            EnergyBar.maxValue = 0f;
+            EnergyBar.value = 0f;
+            EnergyBarText.text = "";
+            return;
+        }
         EnergyBar.maxValue = entity.GetMaxEnergyPoints();
         EnergyBar.value = entity.GetEnergyPoints();
         EnergyBarText.text = entity.GetEnergyPoints().ToString() + "/" + entity.GetMaxEnergyPoints().ToString();

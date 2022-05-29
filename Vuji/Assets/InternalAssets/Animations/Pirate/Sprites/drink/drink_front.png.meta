@@ -54,6 +54,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -352,6 +353,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      drink_front_3: 1696962778319169199
+      drink_front_6: 2522594185360552241
+      drink_front_9: 6771886400848895062
+      drink_front_2: -4279008141776690763
+      drink_front_4: -2824999943081596
+      drink_front_8: 96250566263155171
+      drink_front_1: 5396310432417503702
+      drink_front_5: -7311507559414135643
+      drink_front_0: 4774621073648182659
+      drink_front_7: 31411697299282767
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

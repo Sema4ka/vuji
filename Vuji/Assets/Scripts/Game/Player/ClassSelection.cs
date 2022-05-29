@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
+using Photon.Pun.UtilityScripts;
 
 public class ClassSelection : MonoBehaviour
 {
@@ -33,6 +35,7 @@ public class ClassSelection : MonoBehaviour
     void Start()
     {
         TimerManager.timerEnd += OnTimerEnd;
+        
         firstClassSubclassesPanel.sizeDelta = new Vector2(356, firstClassSubclasses.Length * height + 50);
         secondClassSubclassesPanel.sizeDelta = new Vector2(356, secondClassSubclasses.Length * height + 50);
         thirdClassSubclassesPanel.sizeDelta = new Vector2(356, thirdClassSubclasses.Length * height + 50);

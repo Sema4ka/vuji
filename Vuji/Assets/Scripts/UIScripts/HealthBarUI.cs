@@ -31,6 +31,13 @@ public class HealthBarUI : MonoBehaviour
             HealthBarText.text = "";
             return;
         }
+        if (entity.isDead) // Тот кто писал это - идиот
+        {
+            HealthBar.maxValue = 0f;
+            HealthBar.value = 0f;
+            HealthBarText.text = "";
+            return;
+        }
         HealthBar.maxValue = entity.GetMaxHealthPoints();
         HealthBar.value = entity.GetHealthPoints();
         HealthBarText.text = entity.GetHealthPoints().ToString() + "/" + entity.GetMaxHealthPoints().ToString();

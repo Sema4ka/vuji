@@ -51,7 +51,6 @@ public class DataBase : MonoBehaviour
                                 BEGIN TRANSACTION;
                                 CREATE TABLE token (id INTEGER, token STRING, PRIMARY KEY (id));
                                 CREATE TABLE keybinds (id INTEGER, name STRING, keybind STRING, category STRING, PRIMARY KEY (id));
-                                INSERT INTO keybinds VALUES(0,'Upgrades','U','UI');
                                 INSERT INTO keybinds VALUES(1,'EscapeMenu','Escape','UI');
                                 INSERT INTO keybinds VALUES(2,'Right','D','Movement');
                                 INSERT INTO keybinds VALUES(3,'Left','A','Movement');
