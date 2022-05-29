@@ -7,6 +7,7 @@ public class TeamHPBarUI : MonoBehaviour
 {
     [SerializeField] Slider HealthBar;
     [SerializeField] Text HealthBarText;
+    [SerializeField] Text DeadText;
     private BaseEntity entity;
     // Start is called before the first frame update
     void Start()
@@ -20,14 +21,13 @@ public class TeamHPBarUI : MonoBehaviour
         {
             HealthBar.maxValue = 0f;
             HealthBar.value = 0f;
-            HealthBarText.text = "";
             return;
         }
         if (entity.isDead) // Тот кто писал это - идиот
         {
             HealthBar.maxValue = 0f;
             HealthBar.value = 0f;
-            HealthBarText.text = "";
+            DeadText.text = "DEAD";
             return;
         }
         HealthBar.maxValue = entity.GetMaxHealthPoints();
