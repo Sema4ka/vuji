@@ -52,6 +52,7 @@ public class BaseEntity : MonoBehaviour
     #region DisplayedInformation
     [SerializeField] public HealthBarManager healthBar;
     [SerializeField] public EntityNameManager displayedName;
+    public static Action<BaseEntity, string> teamSpawn;
     public Controllers _controller;
 
     public bool isDead { get; private set; } = false;
@@ -71,8 +72,8 @@ public class BaseEntity : MonoBehaviour
                 Debug.Log(skills[i].key + " " + skills[i].skill);
                 this._skills[skills[i].key] = skills[i].skill;
             }
-        
 
+        
         maxHealthPoints = Mathf.Max(maxHealthPoints, healthPoints);
         maxEnergy = Mathf.Max(maxEnergy, energy);
         float height = 1.0f;
@@ -83,7 +84,7 @@ public class BaseEntity : MonoBehaviour
         {
             if (_view.IsMine)
             {
-                _view.RPC("UpdateText", RpcTarget.All, "[" + PhotonNetwork.LocalPlayer.GetPhotonTeam().Name + "] " + PhotonNetwork.LocalPlayer.NickName);
+                _view.RPC("UpdateText", RpcTarget.All, "[" + PhotonNetwork.LocalPlayer.GetPhotonTeam().Name + "] ", PhotonNetwork.LocalPlayer.NickName);
             }
         }
             
@@ -95,9 +96,10 @@ public class BaseEntity : MonoBehaviour
     }
 
     [PunRPC]
-    public void UpdateText(string newText)
+    public void UpdateText(string teamTag, string newText)
     {
-        GetComponentInChildren<Text>().text =  newText;
+        GetComponentInChildren<Text>().text =  teamTag + newText;
+        if ("[" + PhotonNetwork.LocalPlayer.GetPhotonTeam().Name + "] " == teamTag) teamSpawn?.Invoke(this, newText);
     }
 
     [PunRPC]
