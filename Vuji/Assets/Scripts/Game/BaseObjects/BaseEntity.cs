@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using System;
 using Photon.Pun;
+using Photon.Pun.UtilityScripts;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class BaseEntity : MonoBehaviour
@@ -50,7 +52,7 @@ public class BaseEntity : MonoBehaviour
     #region DisplayedInformation
     [SerializeField] public HealthBarManager healthBar;
     [SerializeField] public EntityNameManager displayedName;
-    [SerializeField] Controllers _controller;
+    public Controllers _controller;
 
     public bool isDead { get; private set; } = false;
 
@@ -81,8 +83,7 @@ public class BaseEntity : MonoBehaviour
         {
             if (_view.IsMine)
             {
-                _controller.SetLocalUserName(displayedName.entityName);
-                displayedName.SendText(_view);
+                _view.RPC("UpdateText", RpcTarget.All, "[" + PhotonNetwork.LocalPlayer.GetPhotonTeam().Name + "] " + PhotonNetwork.LocalPlayer.NickName);
             }
         }
             
@@ -91,6 +92,12 @@ public class BaseEntity : MonoBehaviour
     private void Update()
     {
         healthBar.SetHealth(healthPoints, maxHealthPoints);
+    }
+
+    [PunRPC]
+    public void UpdateText(string newText)
+    {
+        GetComponentInChildren<Text>().text =  newText;
     }
 
     [PunRPC]

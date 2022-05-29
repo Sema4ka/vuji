@@ -25,7 +25,14 @@ public class EnergyBarUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (entity == null && !entity.isDead)
+        if (entity == null)
+        {
+            EnergyBar.maxValue = 0f;
+            EnergyBar.value = 0f;
+            EnergyBarText.text = "";
+            return;
+        }
+        if (entity.isDead)
         {
             EnergyBar.maxValue = 0f;
             EnergyBar.value = 0f;

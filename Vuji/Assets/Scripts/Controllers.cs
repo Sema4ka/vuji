@@ -66,9 +66,7 @@ public class Controllers : MonoBehaviour
 
     public void SetLocalUserName(Text field)
     {
-        Debug.Log("Local username");
         if (_dataBase == null) _dataBase = gameObject.GetComponent<DataBase>(); ;
-        Debug.Log("Database not null");
         string token = _dataBase.GetToken();
         StartCoroutine(GetUserInfo(token, field));
         
@@ -252,7 +250,6 @@ public class Controllers : MonoBehaviour
 
     private IEnumerator GetUserInfo(string token, Text field=null)
     {
-        Debug.Log(field.ToString());
         UserOnlineAndOfflineStructRequest userStruct = new UserOnlineAndOfflineStructRequest();
         userStruct.data = "None";
         string json = JsonUtility.ToJson(userStruct);

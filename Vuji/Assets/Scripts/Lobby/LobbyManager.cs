@@ -99,6 +99,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
+        PhotonNetwork.LocalPlayer.NickName = username.text;
         if (playerStatus == "INLOBBY")
         {
             Debug.Log("YOU JOIN IN ROOM: " + PhotonNetwork.CurrentRoom.Name);
