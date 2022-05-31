@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 94da5418cc34499e871ce61587c1bba7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - goblinSeekerGameObject2: {fileID: 3378967160182215683, guid: 26a7c1c97f844e042ba2377b1bc87b57, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
