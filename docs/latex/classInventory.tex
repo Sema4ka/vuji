@@ -1,0 +1,167 @@
+\hypertarget{classInventory}{}\doxysection{Класс Inventory}
+\label{classInventory}\index{Inventory@{Inventory}}
+Граф наследования\+:Inventory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classInventory}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classInventory_a7d265340a3028a2e85f1679b11e6f62a}{Add\+Item}} (\mbox{\hyperlink{classBaseItem}{Base\+Item}} item, Game\+Object item\+Game\+Object)
+\item 
+List$<$ \mbox{\hyperlink{classBaseItem}{Base\+Item}} $>$ \mbox{\hyperlink{classInventory_aff0adeaa74cd173eed097425d6bd97ac}{Get\+All\+Items}} ()
+\item 
+void \mbox{\hyperlink{classInventory_aa26b4ffe70ad4830d7f2434959442391}{Clear\+Inventory}} ()
+\item 
+void \mbox{\hyperlink{classInventory_a5f2bfc0751b10b3eabff2d3c99b5b750}{Syncronised\+Drop}} (int index)
+\item 
+bool \mbox{\hyperlink{classInventory_aff2b6bf11386c1e6cf13269d98ed92fe}{Drop\+Item}} (int item\+Id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+Action$<$ \mbox{\hyperlink{classBaseItem}{Base\+Item}} $>$ \mbox{\hyperlink{classInventory_a38c8628ab7e87a52d6829f5d2d3752e8}{on\+Item\+Added}}
+\item 
+List$<$ \mbox{\hyperlink{classBaseItem}{Base\+Item}} $>$ \mbox{\hyperlink{classInventory_a41919b753a161e9989e91d1d1583fda7}{inventory\+Items}} = new List$<$\mbox{\hyperlink{classBaseItem}{Base\+Item}}$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{Inventory_8cs_source}{Inventory.\+cs}} строка \mbox{\hyperlink{Inventory_8cs_source_l00007}{7}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classInventory_a7d265340a3028a2e85f1679b11e6f62a}\label{classInventory_a7d265340a3028a2e85f1679b11e6f62a}} 
+\index{Inventory@{Inventory}!AddItem@{AddItem}}
+\index{AddItem@{AddItem}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{AddItem()}{AddItem()}}
+{\footnotesize\ttfamily void Inventory.\+Add\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBaseItem}{Base\+Item}}}]{item,  }\item[{Game\+Object}]{item\+Game\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{Inventory_8cs_source}{Inventory.\+cs}} строка \mbox{\hyperlink{Inventory_8cs_source_l00021}{21}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021                                                                  \{}
+\DoxyCodeLine{00022         inventoryItems.Add(item);}
+\DoxyCodeLine{00023         onItemAdded?.Invoke(item);}
+\DoxyCodeLine{00024         Debug.Log(\textcolor{stringliteral}{"{}Added item: "{}} + item.GetItemName() + item.GetDescription() +  item.GetAmount());}
+\DoxyCodeLine{00025         Destroy(itemGameObject);}
+\DoxyCodeLine{00026     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInventory_aa26b4ffe70ad4830d7f2434959442391}\label{classInventory_aa26b4ffe70ad4830d7f2434959442391}} 
+\index{Inventory@{Inventory}!ClearInventory@{ClearInventory}}
+\index{ClearInventory@{ClearInventory}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{ClearInventory()}{ClearInventory()}}
+{\footnotesize\ttfamily void Inventory.\+Clear\+Inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{Inventory_8cs_source}{Inventory.\+cs}} строка \mbox{\hyperlink{Inventory_8cs_source_l00031}{31}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032     \{}
+\DoxyCodeLine{00033         inventoryItems.Clear();}
+\DoxyCodeLine{00034     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInventory_aff2b6bf11386c1e6cf13269d98ed92fe}\label{classInventory_aff2b6bf11386c1e6cf13269d98ed92fe}} 
+\index{Inventory@{Inventory}!DropItem@{DropItem}}
+\index{DropItem@{DropItem}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{DropItem()}{DropItem()}}
+{\footnotesize\ttfamily bool Inventory.\+Drop\+Item (\begin{DoxyParamCaption}\item[{int}]{item\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{Inventory_8cs_source}{Inventory.\+cs}} строка \mbox{\hyperlink{Inventory_8cs_source_l00048}{48}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049     \{}
+\DoxyCodeLine{00050         \_view.RPC(\textcolor{stringliteral}{"{}SyncronisedDrop"{}}, RpcTarget.All, itemId);}
+\DoxyCodeLine{00051 }
+\DoxyCodeLine{00052         var item = inventoryItems[itemId];}
+\DoxyCodeLine{00053         \textcolor{keywordflow}{if} (item.GetAmount() < 1)}
+\DoxyCodeLine{00054         \{}
+\DoxyCodeLine{00055             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00056         \}}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00059     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInventory_aff0adeaa74cd173eed097425d6bd97ac}\label{classInventory_aff0adeaa74cd173eed097425d6bd97ac}} 
+\index{Inventory@{Inventory}!GetAllItems@{GetAllItems}}
+\index{GetAllItems@{GetAllItems}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{GetAllItems()}{GetAllItems()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classBaseItem}{Base\+Item}} $>$ Inventory.\+Get\+All\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{Inventory_8cs_source}{Inventory.\+cs}} строка \mbox{\hyperlink{Inventory_8cs_source_l00028}{28}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028                                        \{}
+\DoxyCodeLine{00029         \textcolor{keywordflow}{return} inventoryItems;}
+\DoxyCodeLine{00030     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInventory_a5f2bfc0751b10b3eabff2d3c99b5b750}\label{classInventory_a5f2bfc0751b10b3eabff2d3c99b5b750}} 
+\index{Inventory@{Inventory}!SyncronisedDrop@{SyncronisedDrop}}
+\index{SyncronisedDrop@{SyncronisedDrop}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{SyncronisedDrop()}{SyncronisedDrop()}}
+{\footnotesize\ttfamily void Inventory.\+Syncronised\+Drop (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{Inventory_8cs_source}{Inventory.\+cs}} строка \mbox{\hyperlink{Inventory_8cs_source_l00038}{38}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039     \{}
+\DoxyCodeLine{00040         var item = inventoryItems[index];}
+\DoxyCodeLine{00041         item.SetAmount(item.GetAmount() -\/ 1);}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043         Vector2 position = \textcolor{keyword}{new} Vector2(gameObject.transform.position.x, gameObject.transform.position.y -\/ 1f);}
+\DoxyCodeLine{00044         GameObject droppedItem = Instantiate(\_droppedItemPrefab, position, Quaternion.identity);}
+\DoxyCodeLine{00045         droppedItem.GetComponent<\mbox{\hyperlink{classDroppedItem}{DroppedItem}}>().SetItem(item);}
+\DoxyCodeLine{00046     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classInventory_a41919b753a161e9989e91d1d1583fda7}\label{classInventory_a41919b753a161e9989e91d1d1583fda7}} 
+\index{Inventory@{Inventory}!inventoryItems@{inventoryItems}}
+\index{inventoryItems@{inventoryItems}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{inventoryItems}{inventoryItems}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classBaseItem}{Base\+Item}}$>$ Inventory.\+inventory\+Items = new List$<$\mbox{\hyperlink{classBaseItem}{Base\+Item}}$>$()}
+
+
+
+См. определение в файле \mbox{\hyperlink{Inventory_8cs_source}{Inventory.\+cs}} строка \mbox{\hyperlink{Inventory_8cs_source_l00011}{11}}
+
+\mbox{\Hypertarget{classInventory_a38c8628ab7e87a52d6829f5d2d3752e8}\label{classInventory_a38c8628ab7e87a52d6829f5d2d3752e8}} 
+\index{Inventory@{Inventory}!onItemAdded@{onItemAdded}}
+\index{onItemAdded@{onItemAdded}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{onItemAdded}{onItemAdded}}
+{\footnotesize\ttfamily Action$<$\mbox{\hyperlink{classBaseItem}{Base\+Item}}$>$ Inventory.\+on\+Item\+Added}
+
+
+
+См. определение в файле \mbox{\hyperlink{Inventory_8cs_source}{Inventory.\+cs}} строка \mbox{\hyperlink{Inventory_8cs_source_l00009}{9}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Game/\+Inventory/Inventory.\+cs\end{DoxyCompactItemize}

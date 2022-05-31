@@ -1,0 +1,57 @@
+\hypertarget{classManagerGame}{}\doxysection{Класс Manager\+Game}
+\label{classManagerGame}\index{ManagerGame@{ManagerGame}}
+Граф наследования\+:Manager\+Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classManagerGame}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{classManagerGame_ac2d5aa3aceabdd31a625ff47160484ae}{On\+Player\+Properties\+Update}} (Player target\+Player, Hashtable changed\+Props)
+\begin{DoxyCompactList}\small\item\em После того как игроки будут распределны по командам -\/ заспавнить их  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{ManagerGame_8cs_source}{Manager\+Game.\+cs}} строка \mbox{\hyperlink{ManagerGame_8cs_source_l00009}{9}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classManagerGame_ac2d5aa3aceabdd31a625ff47160484ae}\label{classManagerGame_ac2d5aa3aceabdd31a625ff47160484ae}} 
+\index{ManagerGame@{ManagerGame}!OnPlayerPropertiesUpdate@{OnPlayerPropertiesUpdate}}
+\index{OnPlayerPropertiesUpdate@{OnPlayerPropertiesUpdate}!ManagerGame@{ManagerGame}}
+\doxysubsubsection{\texorpdfstring{OnPlayerPropertiesUpdate()}{OnPlayerPropertiesUpdate()}}
+{\footnotesize\ttfamily override void Manager\+Game.\+On\+Player\+Properties\+Update (\begin{DoxyParamCaption}\item[{Player}]{target\+Player,  }\item[{Hashtable}]{changed\+Props }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+После того как игроки будут распределны по командам -\/ заспавнить их  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em target\+Player} & \\
+\hline
+{\em changed\+Props} & \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{ManagerGame_8cs_source}{Manager\+Game.\+cs}} строка \mbox{\hyperlink{ManagerGame_8cs_source_l00154}{154}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00155     \{}
+\DoxyCodeLine{00156         gameObject.GetComponent<\mbox{\hyperlink{classSpawnEnemy}{SpawnEnemy}}>().enabled = \textcolor{keyword}{true};}
+\DoxyCodeLine{00157         \textcolor{comment}{//gameObject.GetComponent<SpawnPlayers>().enabled = true;}}
+\DoxyCodeLine{00158     \}}
+
+\end{DoxyCode}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Game/Manager\+Game.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vuji: Класс UnityMainThreadDispatcher</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Vuji<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="classUnityMainThreadDispatcher-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс UnityMainThreadDispatcher</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>A thread-safe class which holds a queue with actions to execute on the next Update() method. It can be used to make calls to the main thread for things such as UI Manipulation in Unity. It was developed for use in combination with the Firebase Unity plugin, which uses separate threads for event handling   
+ <a href="classUnityMainThreadDispatcher.html#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:UnityMainThreadDispatcher:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classUnityMainThreadDispatcher.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ae36d462813f2482b0fbbc641300757ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnityMainThreadDispatcher.html#ae36d462813f2482b0fbbc641300757ab">Update</a> ()</td></tr>
+<tr class="separator:ae36d462813f2482b0fbbc641300757ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d02e71f322324222a11c99779a34ece"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnityMainThreadDispatcher.html#a6d02e71f322324222a11c99779a34ece">Enqueue</a> (IEnumerator action)</td></tr>
+<tr class="memdesc:a6d02e71f322324222a11c99779a34ece"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locks the queue and adds the IEnumerator to the queue   <a href="classUnityMainThreadDispatcher.html#a6d02e71f322324222a11c99779a34ece">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6d02e71f322324222a11c99779a34ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fe8fe4807bc1e9ee32c136811233f5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnityMainThreadDispatcher.html#a2fe8fe4807bc1e9ee32c136811233f5c">Enqueue</a> (Action action)</td></tr>
+<tr class="memdesc:a2fe8fe4807bc1e9ee32c136811233f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locks the queue and adds the Action to the queue  <a href="classUnityMainThreadDispatcher.html#a2fe8fe4807bc1e9ee32c136811233f5c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2fe8fe4807bc1e9ee32c136811233f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8cfe1ec2ae0b3738c57e767f0c77426"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnityMainThreadDispatcher.html#ab8cfe1ec2ae0b3738c57e767f0c77426">EnqueueAsync</a> (Action action)</td></tr>
+<tr class="memdesc:ab8cfe1ec2ae0b3738c57e767f0c77426"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locks the queue and adds the Action to the queue, returning a Task which is completed when the action completes   <a href="classUnityMainThreadDispatcher.html#ab8cfe1ec2ae0b3738c57e767f0c77426">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab8cfe1ec2ae0b3738c57e767f0c77426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a6bac57f1f2e4ea5fb9b5ba02511c26cb"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnityMainThreadDispatcher.html#a6bac57f1f2e4ea5fb9b5ba02511c26cb">Exists</a> ()</td></tr>
+<tr class="separator:a6bac57f1f2e4ea5fb9b5ba02511c26cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c8da3e746d3d72971ee7b3d0638ed70"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classUnityMainThreadDispatcher.html">UnityMainThreadDispatcher</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnityMainThreadDispatcher.html#a7c8da3e746d3d72971ee7b3d0638ed70">Instance</a> ()</td></tr>
+<tr class="separator:a7c8da3e746d3d72971ee7b3d0638ed70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >A thread-safe class which holds a queue with actions to execute on the next Update() method. It can be used to make calls to the main thread for things such as UI Manipulation in Unity. It was developed for use in combination with the Firebase Unity plugin, which uses separate threads for event handling  </p>
+<p >Author: Pim de Witte (pimdewitte.com) and contributors, <a href="https://github.com/PimDeWitte/UnityMainThreadDispatcher">https://github.com/PimDeWitte/UnityMainThreadDispatcher</a> </p>
+
+<p class="definition">См. определение в файле <a class="el" href="UnityMainThreadDispatcher_8cs_source.html">UnityMainThreadDispatcher.cs</a> строка <a class="el" href="UnityMainThreadDispatcher_8cs_source.html#l00028">28</a></p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a2fe8fe4807bc1e9ee32c136811233f5c" name="a2fe8fe4807bc1e9ee32c136811233f5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fe8fe4807bc1e9ee32c136811233f5c">&#9670;&nbsp;</a></span>Enqueue() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityMainThreadDispatcher.Enqueue </td>
+          <td>(</td>
+          <td class="paramtype">Action&#160;</td>
+          <td class="paramname"><em>action</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Locks the queue and adds the Action to the queue </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">action</td><td>function that will be executed from the main thread.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="UnityMainThreadDispatcher_8cs_source.html">UnityMainThreadDispatcher.cs</a> строка <a class="el" href="UnityMainThreadDispatcher_8cs_source.html#l00056">56</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_function" href="classUnityMainThreadDispatcher.html#a6d02e71f322324222a11c99779a34ece">Enqueue</a>(ActionWrapper(action));</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+<div class="ttc" id="aclassUnityMainThreadDispatcher_html_a6d02e71f322324222a11c99779a34ece"><div class="ttname"><a href="classUnityMainThreadDispatcher.html#a6d02e71f322324222a11c99779a34ece">UnityMainThreadDispatcher.Enqueue</a></div><div class="ttdeci">void Enqueue(IEnumerator action)</div><div class="ttdoc">Locks the queue and adds the IEnumerator to the queue</div><div class="ttdef"><b>Definition:</b> <a href="UnityMainThreadDispatcher_8cs_source.html#l00044">UnityMainThreadDispatcher.cs:44</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6d02e71f322324222a11c99779a34ece" name="a6d02e71f322324222a11c99779a34ece"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d02e71f322324222a11c99779a34ece">&#9670;&nbsp;</a></span>Enqueue() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityMainThreadDispatcher.Enqueue </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerator&#160;</td>
+          <td class="paramname"><em>action</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Locks the queue and adds the IEnumerator to the queue  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">action</td><td>IEnumerator function that will be executed from the main thread.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="UnityMainThreadDispatcher_8cs_source.html">UnityMainThreadDispatcher.cs</a> строка <a class="el" href="UnityMainThreadDispatcher_8cs_source.html#l00044">44</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>                                            {</div>
+<div class="line"><span class="lineno">   45</span>        lock (_executionQueue) {</div>
+<div class="line"><span class="lineno">   46</span>            _executionQueue.Enqueue (() =&gt; {</div>
+<div class="line"><span class="lineno">   47</span>                StartCoroutine (action);</div>
+<div class="line"><span class="lineno">   48</span>            });</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab8cfe1ec2ae0b3738c57e767f0c77426" name="ab8cfe1ec2ae0b3738c57e767f0c77426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8cfe1ec2ae0b3738c57e767f0c77426">&#9670;&nbsp;</a></span>EnqueueAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task UnityMainThreadDispatcher.EnqueueAsync </td>
+          <td>(</td>
+          <td class="paramtype">Action&#160;</td>
+          <td class="paramname"><em>action</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Locks the queue and adds the Action to the queue, returning a Task which is completed when the action completes  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">action</td><td>function that will be executed from the main thread.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>A Task that can be awaited until the action completes</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="UnityMainThreadDispatcher_8cs_source.html">UnityMainThreadDispatcher.cs</a> строка <a class="el" href="UnityMainThreadDispatcher_8cs_source.html#l00066">66</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>    {</div>
+<div class="line"><span class="lineno">   68</span>        var tcs = <span class="keyword">new</span> TaskCompletionSource&lt;bool&gt;();</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordtype">void</span> WrappedAction() {</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">try</span> </div>
+<div class="line"><span class="lineno">   72</span>            {</div>
+<div class="line"><span class="lineno">   73</span>                action();</div>
+<div class="line"><span class="lineno">   74</span>                tcs.TrySetResult(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   75</span>            } <span class="keywordflow">catch</span> (Exception ex) </div>
+<div class="line"><span class="lineno">   76</span>            {</div>
+<div class="line"><span class="lineno">   77</span>                tcs.TrySetException(ex);</div>
+<div class="line"><span class="lineno">   78</span>            }</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>        <a class="code hl_function" href="classUnityMainThreadDispatcher.html#a6d02e71f322324222a11c99779a34ece">Enqueue</a>(ActionWrapper(WrappedAction));</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> tcs.Task;</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6bac57f1f2e4ea5fb9b5ba02511c26cb" name="a6bac57f1f2e4ea5fb9b5ba02511c26cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bac57f1f2e4ea5fb9b5ba02511c26cb">&#9670;&nbsp;</a></span>Exists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityMainThreadDispatcher.Exists </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="UnityMainThreadDispatcher_8cs_source.html">UnityMainThreadDispatcher.cs</a> строка <a class="el" href="UnityMainThreadDispatcher_8cs_source.html#l00095">95</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>                                {</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> _instance != <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7c8da3e746d3d72971ee7b3d0638ed70" name="a7c8da3e746d3d72971ee7b3d0638ed70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c8da3e746d3d72971ee7b3d0638ed70">&#9670;&nbsp;</a></span>Instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classUnityMainThreadDispatcher.html">UnityMainThreadDispatcher</a> UnityMainThreadDispatcher.Instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="UnityMainThreadDispatcher_8cs_source.html">UnityMainThreadDispatcher.cs</a> строка <a class="el" href="UnityMainThreadDispatcher_8cs_source.html#l00099">99</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>                                                       {</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> (!Exists ()) {</div>
+<div class="line"><span class="lineno">  101</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception (<span class="stringliteral">&quot;UnityMainThreadDispatcher could not find the UnityMainThreadDispatcher object. Please ensure you have added the MainThreadExecutor Prefab to your scene.&quot;</span>);</div>
+<div class="line"><span class="lineno">  102</span>        }</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> _instance;</div>
+<div class="line"><span class="lineno">  104</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae36d462813f2482b0fbbc641300757ab" name="ae36d462813f2482b0fbbc641300757ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae36d462813f2482b0fbbc641300757ab">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityMainThreadDispatcher.Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="UnityMainThreadDispatcher_8cs_source.html">UnityMainThreadDispatcher.cs</a> строка <a class="el" href="UnityMainThreadDispatcher_8cs_source.html#l00032">32</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>                         {</div>
+<div class="line"><span class="lineno">   33</span>        lock(_executionQueue) {</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">while</span> (_executionQueue.Count &gt; 0) {</div>
+<div class="line"><span class="lineno">   35</span>                _executionQueue.Dequeue().Invoke();</div>
+<div class="line"><span class="lineno">   36</span>            }</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>Vuji/Assets/Scripts/<a class="el" href="UnityMainThreadDispatcher_8cs_source.html">UnityMainThreadDispatcher.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

@@ -1,0 +1,34 @@
+\hypertarget{BaseUpgrade_8cs_source}{}\doxysection{Base\+Upgrade.\+cs}
+\label{BaseUpgrade_8cs_source}\index{Vuji/Assets/Scripts/Game/BaseObjects/BaseUpgrade.cs@{Vuji/Assets/Scripts/Game/BaseObjects/BaseUpgrade.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00001}00001 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00003}00003 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00005}\mbox{\hyperlink{classBaseUpgrade}{00005}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classBaseUpgrade}{BaseUpgrade}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00007}00007     [SerializeField] \textcolor{keyword}{private} \textcolor{keywordtype}{string} upgradeName;}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00008}00008     [SerializeField] \textcolor{keyword}{private} \textcolor{keywordtype}{string} upgradeDescription;}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00009}00009     [SerializeField] \textcolor{keyword}{private} \textcolor{keywordtype}{int} upgradeCost;}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00011}00011     \textcolor{keyword}{public} \textcolor{keywordtype}{string} GetName()}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00012}00012     \{}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00013}00013         \textcolor{keywordflow}{return} upgradeName;}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00014}00014     \}}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00015}00015     \textcolor{keyword}{public} \textcolor{keywordtype}{string} GetDescription()}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00016}00016     \{}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00017}00017         \textcolor{keywordflow}{return} upgradeDescription;}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00018}00018     \}}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00019}00019     \textcolor{keyword}{public} \textcolor{keywordtype}{int} GetCost()}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00020}00020     \{}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00021}00021         \textcolor{keywordflow}{return} upgradeCost;}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00022}00022     \}}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00024}00024     \textcolor{keyword}{public} \textcolor{keywordtype}{void} ApplyUpgrade(\mbox{\hyperlink{classBaseEntity}{BaseEntity}} player)}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00025}00025     \{}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00026}00026         Debug.Log(\textcolor{stringliteral}{"{}Upgrade "{}} + upgradeName + \textcolor{stringliteral}{"{} applied to "{}} + player.GetEntityName());}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00027}00027     \}}
+\DoxyCodeLine{\Hypertarget{BaseUpgrade_8cs_source_l00028}00028 \}}
+
+\end{DoxyCode}

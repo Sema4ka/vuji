@@ -1,0 +1,108 @@
+\hypertarget{classSoundSettings}{}\doxysection{Класс Sound\+Settings}
+\label{classSoundSettings}\index{SoundSettings@{SoundSettings}}
+Граф наследования\+:Sound\+Settings\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSoundSettings}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classSoundSettings_a8b2756be4cf3f18fb6f8c6766340b6f8}{Sound\+Slider\+Value\+Change}} (string name, float value)
+\item 
+float \mbox{\hyperlink{classSoundSettings_a0b4686d7e0fbbfd36ef5379094d02993}{Get\+Volume}} (string name)
+\begin{DoxyCompactList}\small\item\em Get a volume for sound category  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+static Action$<$ string, float $>$ \mbox{\hyperlink{classSoundSettings_ae3e8637a9ecb9485e9ae25c35c52dd03}{volume\+Change}}
+\item 
+static \mbox{\hyperlink{classSoundSettings}{Sound\+Settings}} \mbox{\hyperlink{classSoundSettings_a360d94404382cd92a0266bf86d48dff4}{instance}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{SoundSettings_8cs_source}{Sound\+Settings.\+cs}} строка \mbox{\hyperlink{SoundSettings_8cs_source_l00007}{7}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classSoundSettings_a0b4686d7e0fbbfd36ef5379094d02993}\label{classSoundSettings_a0b4686d7e0fbbfd36ef5379094d02993}} 
+\index{SoundSettings@{SoundSettings}!GetVolume@{GetVolume}}
+\index{GetVolume@{GetVolume}!SoundSettings@{SoundSettings}}
+\doxysubsubsection{\texorpdfstring{GetVolume()}{GetVolume()}}
+{\footnotesize\ttfamily float Sound\+Settings.\+Get\+Volume (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a volume for sound category  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em name} & Volume settings name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Volume of sound
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{SoundSettings_8cs_source}{Sound\+Settings.\+cs}} строка \mbox{\hyperlink{SoundSettings_8cs_source_l00055}{55}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056     \{}
+\DoxyCodeLine{00057         \textcolor{keywordflow}{return} volumeList[name];}
+\DoxyCodeLine{00058     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSoundSettings_a8b2756be4cf3f18fb6f8c6766340b6f8}\label{classSoundSettings_a8b2756be4cf3f18fb6f8c6766340b6f8}} 
+\index{SoundSettings@{SoundSettings}!SoundSliderValueChange@{SoundSliderValueChange}}
+\index{SoundSliderValueChange@{SoundSliderValueChange}!SoundSettings@{SoundSettings}}
+\doxysubsubsection{\texorpdfstring{SoundSliderValueChange()}{SoundSliderValueChange()}}
+{\footnotesize\ttfamily void Sound\+Settings.\+Sound\+Slider\+Value\+Change (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{SoundSettings_8cs_source}{Sound\+Settings.\+cs}} строка \mbox{\hyperlink{SoundSettings_8cs_source_l00044}{44}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045     \{}
+\DoxyCodeLine{00046         volumeList[name] = value;}
+\DoxyCodeLine{00047         dataBase.SetSetting(name, value.ToString());}
+\DoxyCodeLine{00048         volumeChange?.Invoke(name, value);}
+\DoxyCodeLine{00049     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classSoundSettings_a360d94404382cd92a0266bf86d48dff4}\label{classSoundSettings_a360d94404382cd92a0266bf86d48dff4}} 
+\index{SoundSettings@{SoundSettings}!instance@{instance}}
+\index{instance@{instance}!SoundSettings@{SoundSettings}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSoundSettings}{Sound\+Settings}} Sound\+Settings.\+instance\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{SoundSettings_8cs_source}{Sound\+Settings.\+cs}} строка \mbox{\hyperlink{SoundSettings_8cs_source_l00013}{13}}
+
+\mbox{\Hypertarget{classSoundSettings_ae3e8637a9ecb9485e9ae25c35c52dd03}\label{classSoundSettings_ae3e8637a9ecb9485e9ae25c35c52dd03}} 
+\index{SoundSettings@{SoundSettings}!volumeChange@{volumeChange}}
+\index{volumeChange@{volumeChange}!SoundSettings@{SoundSettings}}
+\doxysubsubsection{\texorpdfstring{volumeChange}{volumeChange}}
+{\footnotesize\ttfamily Action$<$string, float$>$ Sound\+Settings.\+volume\+Change\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{SoundSettings_8cs_source}{Sound\+Settings.\+cs}} строка \mbox{\hyperlink{SoundSettings_8cs_source_l00012}{12}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+UIScripts/Sound\+Settings.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,20 @@
+\hypertarget{AgressionTrigger_8cs_source}{}\doxysection{Agression\+Trigger.\+cs}
+\label{AgressionTrigger_8cs_source}\index{Vuji/Assets/Scripts/Game/AI/AgressionTrigger.cs@{Vuji/Assets/Scripts/Game/AI/AgressionTrigger.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AgressionTrigger_8cs_source_l00001}00001 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{AgressionTrigger_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{AgressionTrigger_8cs_source_l00003}00003 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{AgressionTrigger_8cs_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{AgressionTrigger_8cs_source_l00005}\mbox{\hyperlink{classAgressionTrigger}{00005}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classAgressionTrigger}{AgressionTrigger}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{AgressionTrigger_8cs_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{AgressionTrigger_8cs_source_l00007}00007     \textcolor{keywordtype}{void} OnTriggerEnter2D(Collider2D other)}
+\DoxyCodeLine{\Hypertarget{AgressionTrigger_8cs_source_l00008}00008     \{}
+\DoxyCodeLine{\Hypertarget{AgressionTrigger_8cs_source_l00009}00009         \textcolor{keywordflow}{if} (other.CompareTag(\textcolor{stringliteral}{"{}Player"{}}))}
+\DoxyCodeLine{\Hypertarget{AgressionTrigger_8cs_source_l00010}00010         \{}
+\DoxyCodeLine{\Hypertarget{AgressionTrigger_8cs_source_l00011}00011             transform.parent.GetComponent<\mbox{\hyperlink{classEnemyAI}{EnemyAI}}>().AgressionStart(other.gameObject);}
+\DoxyCodeLine{\Hypertarget{AgressionTrigger_8cs_source_l00012}00012         \}}
+\DoxyCodeLine{\Hypertarget{AgressionTrigger_8cs_source_l00013}00013     \}}
+\DoxyCodeLine{\Hypertarget{AgressionTrigger_8cs_source_l00014}00014 \}}
+
+\end{DoxyCode}

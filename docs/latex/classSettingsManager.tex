@@ -1,0 +1,173 @@
+\hypertarget{classSettingsManager}{}\doxysection{Класс Settings\+Manager}
+\label{classSettingsManager}\index{SettingsManager@{SettingsManager}}
+Граф наследования\+:Settings\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSettingsManager}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classSettingsManager_ae79628da0b0bdd9c3f367d2843ab4425}{On\+Keybind\+Movement\+Toggle}} (Toggle keybind\+Mvm\+Toggle)
+\item 
+void \mbox{\hyperlink{classSettingsManager_aaddcc5a9e7c83045f6045a2ce8587466}{Change\+Fullscreen}} (Toggle fullscreen\+Toggle)
+\item 
+void \mbox{\hyperlink{classSettingsManager_a3100e5b80f59bac64ccfca1f0f50ba05}{Change\+Resolution}} (Dropdown dropdown)
+\item 
+void \mbox{\hyperlink{classSettingsManager_ac3fe7f3449802da230f5d143d4c8f1ee}{Change\+Fps}} (Slider fps\+Slider)
+\item 
+void \mbox{\hyperlink{classSettingsManager_a94dbffd9e73f3884fa094f2e53eda4a6}{Change\+Vsync}} (Toggle vsync\+Toggle)
+\item 
+void \mbox{\hyperlink{classSettingsManager_a1639742f5c595b9db8549c41c2be2723}{Switch\+Panels}} (Game\+Object to\+Panel)
+\end{DoxyCompactItemize}
+\doxysubsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+static Action$<$ bool $>$ \mbox{\hyperlink{classSettingsManager_a2efa94824e9388569c9e875868ea00f3}{keybind\+Movement\+Toggled}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{SettingsManager_8cs_source}{Settings\+Manager.\+cs}} строка \mbox{\hyperlink{SettingsManager_8cs_source_l00008}{8}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classSettingsManager_ac3fe7f3449802da230f5d143d4c8f1ee}\label{classSettingsManager_ac3fe7f3449802da230f5d143d4c8f1ee}} 
+\index{SettingsManager@{SettingsManager}!ChangeFps@{ChangeFps}}
+\index{ChangeFps@{ChangeFps}!SettingsManager@{SettingsManager}}
+\doxysubsubsection{\texorpdfstring{ChangeFps()}{ChangeFps()}}
+{\footnotesize\ttfamily void Settings\+Manager.\+Change\+Fps (\begin{DoxyParamCaption}\item[{Slider}]{fps\+Slider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{SettingsManager_8cs_source}{Settings\+Manager.\+cs}} строка \mbox{\hyperlink{SettingsManager_8cs_source_l00156}{156}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00157     \{}
+\DoxyCodeLine{00158         Application.targetFrameRate = \textcolor{keywordtype}{int}.Parse(fpsSlider.value.ToString());}
+\DoxyCodeLine{00159         dataBase.SetSetting(\textcolor{stringliteral}{"{}FPS"{}}, fpsSlider.value.ToString());}
+\DoxyCodeLine{00160         maxFpsText.text = fpsSlider.value.ToString();}
+\DoxyCodeLine{00161     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSettingsManager_aaddcc5a9e7c83045f6045a2ce8587466}\label{classSettingsManager_aaddcc5a9e7c83045f6045a2ce8587466}} 
+\index{SettingsManager@{SettingsManager}!ChangeFullscreen@{ChangeFullscreen}}
+\index{ChangeFullscreen@{ChangeFullscreen}!SettingsManager@{SettingsManager}}
+\doxysubsubsection{\texorpdfstring{ChangeFullscreen()}{ChangeFullscreen()}}
+{\footnotesize\ttfamily void Settings\+Manager.\+Change\+Fullscreen (\begin{DoxyParamCaption}\item[{Toggle}]{fullscreen\+Toggle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{SettingsManager_8cs_source}{Settings\+Manager.\+cs}} строка \mbox{\hyperlink{SettingsManager_8cs_source_l00139}{139}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00140     \{}
+\DoxyCodeLine{00141         fullscreen = fullscreenToggle.isOn;}
+\DoxyCodeLine{00142         dataBase.SetSetting(\textcolor{stringliteral}{"{}Fullscreen"{}}, fullscreen.ToString());}
+\DoxyCodeLine{00143         SetScreenResolution();}
+\DoxyCodeLine{00144     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSettingsManager_a3100e5b80f59bac64ccfca1f0f50ba05}\label{classSettingsManager_a3100e5b80f59bac64ccfca1f0f50ba05}} 
+\index{SettingsManager@{SettingsManager}!ChangeResolution@{ChangeResolution}}
+\index{ChangeResolution@{ChangeResolution}!SettingsManager@{SettingsManager}}
+\doxysubsubsection{\texorpdfstring{ChangeResolution()}{ChangeResolution()}}
+{\footnotesize\ttfamily void Settings\+Manager.\+Change\+Resolution (\begin{DoxyParamCaption}\item[{Dropdown}]{dropdown }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{SettingsManager_8cs_source}{Settings\+Manager.\+cs}} строка \mbox{\hyperlink{SettingsManager_8cs_source_l00146}{146}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00147     \{}
+\DoxyCodeLine{00148         dropdown.Hide();}
+\DoxyCodeLine{00149         \textcolor{keywordtype}{string}[] resolution = dropdown.captionText.text.ToString().Split(\textcolor{charliteral}{'x'}); ;}
+\DoxyCodeLine{00150         Debug.Log(\textcolor{keywordtype}{string}.Join(\textcolor{stringliteral}{"{} "{}}, resolution));}
+\DoxyCodeLine{00151         \textcolor{keywordtype}{int}.TryParse(resolution[0], out resolutionX);}
+\DoxyCodeLine{00152         \textcolor{keywordtype}{int}.TryParse(resolution[1], out resolutionY);}
+\DoxyCodeLine{00153         dataBase.SetSetting(\textcolor{stringliteral}{"{}Resolution"{}}, dropdown.value.ToString());}
+\DoxyCodeLine{00154         SetScreenResolution();}
+\DoxyCodeLine{00155     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSettingsManager_a94dbffd9e73f3884fa094f2e53eda4a6}\label{classSettingsManager_a94dbffd9e73f3884fa094f2e53eda4a6}} 
+\index{SettingsManager@{SettingsManager}!ChangeVsync@{ChangeVsync}}
+\index{ChangeVsync@{ChangeVsync}!SettingsManager@{SettingsManager}}
+\doxysubsubsection{\texorpdfstring{ChangeVsync()}{ChangeVsync()}}
+{\footnotesize\ttfamily void Settings\+Manager.\+Change\+Vsync (\begin{DoxyParamCaption}\item[{Toggle}]{vsync\+Toggle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{SettingsManager_8cs_source}{Settings\+Manager.\+cs}} строка \mbox{\hyperlink{SettingsManager_8cs_source_l00163}{163}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00164     \{}
+\DoxyCodeLine{00165         QualitySettings.vSyncCount = Convert.ToInt32(vsyncToggle.isOn);}
+\DoxyCodeLine{00166         dataBase.SetSetting(\textcolor{stringliteral}{"{}VSync"{}}, vsyncToggle.isOn.ToString());}
+\DoxyCodeLine{00167     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSettingsManager_ae79628da0b0bdd9c3f367d2843ab4425}\label{classSettingsManager_ae79628da0b0bdd9c3f367d2843ab4425}} 
+\index{SettingsManager@{SettingsManager}!OnKeybindMovementToggle@{OnKeybindMovementToggle}}
+\index{OnKeybindMovementToggle@{OnKeybindMovementToggle}!SettingsManager@{SettingsManager}}
+\doxysubsubsection{\texorpdfstring{OnKeybindMovementToggle()}{OnKeybindMovementToggle()}}
+{\footnotesize\ttfamily void Settings\+Manager.\+On\+Keybind\+Movement\+Toggle (\begin{DoxyParamCaption}\item[{Toggle}]{keybind\+Mvm\+Toggle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{SettingsManager_8cs_source}{Settings\+Manager.\+cs}} строка \mbox{\hyperlink{SettingsManager_8cs_source_l00115}{115}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00116     \{}
+\DoxyCodeLine{00117         movementBlocker.gameObject.SetActive(!keybindMvmToggle.isOn);}
+\DoxyCodeLine{00118         keybindMovementToggled?.Invoke(keybindMvmToggle.isOn);}
+\DoxyCodeLine{00119     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSettingsManager_a1639742f5c595b9db8549c41c2be2723}\label{classSettingsManager_a1639742f5c595b9db8549c41c2be2723}} 
+\index{SettingsManager@{SettingsManager}!SwitchPanels@{SwitchPanels}}
+\index{SwitchPanels@{SwitchPanels}!SettingsManager@{SettingsManager}}
+\doxysubsubsection{\texorpdfstring{SwitchPanels()}{SwitchPanels()}}
+{\footnotesize\ttfamily void Settings\+Manager.\+Switch\+Panels (\begin{DoxyParamCaption}\item[{Game\+Object}]{to\+Panel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{SettingsManager_8cs_source}{Settings\+Manager.\+cs}} строка \mbox{\hyperlink{SettingsManager_8cs_source_l00175}{175}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00176     \{}
+\DoxyCodeLine{00177         videoSettingsPanel.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{00178         midSettingsPanel.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{00179         keybindsPanel.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{00180         toPanel.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{00181     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classSettingsManager_a2efa94824e9388569c9e875868ea00f3}\label{classSettingsManager_a2efa94824e9388569c9e875868ea00f3}} 
+\index{SettingsManager@{SettingsManager}!keybindMovementToggled@{keybindMovementToggled}}
+\index{keybindMovementToggled@{keybindMovementToggled}!SettingsManager@{SettingsManager}}
+\doxysubsubsection{\texorpdfstring{keybindMovementToggled}{keybindMovementToggled}}
+{\footnotesize\ttfamily Action$<$bool$>$ Settings\+Manager.\+keybind\+Movement\+Toggled\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{SettingsManager_8cs_source}{Settings\+Manager.\+cs}} строка \mbox{\hyperlink{SettingsManager_8cs_source_l00011}{11}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+UIScripts/Settings\+Manager.\+cs\end{DoxyCompactItemize}

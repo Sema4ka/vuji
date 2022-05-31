@@ -1,0 +1,24 @@
+\hypertarget{BaseEffect_8cs_source}{}\doxysection{Base\+Effect.\+cs}
+\label{BaseEffect_8cs_source}\index{Vuji/Assets/Scripts/Game/BaseObjects/BaseEffect.cs@{Vuji/Assets/Scripts/Game/BaseObjects/BaseEffect.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{BaseEffect_8cs_source_l00001}00001 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{BaseEffect_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{BaseEffect_8cs_source_l00003}00003 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{BaseEffect_8cs_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{BaseEffect_8cs_source_l00005}\mbox{\hyperlink{classBaseEffect}{00005}} \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keyword}{class }\mbox{\hyperlink{classBaseEffect}{BaseEffect}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{BaseEffect_8cs_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{BaseEffect_8cs_source_l00007}00007     [SerializeField] \textcolor{keyword}{public} \textcolor{keywordtype}{string} effectName = \textcolor{stringliteral}{"{}New Effect"{}};}
+\DoxyCodeLine{\Hypertarget{BaseEffect_8cs_source_l00008}00008     [SerializeField] \textcolor{keyword}{public} \textcolor{keywordtype}{string} description = \textcolor{stringliteral}{"{}Effect description"{}};}
+\DoxyCodeLine{\Hypertarget{BaseEffect_8cs_source_l00009}00009     [SerializeField] \textcolor{keyword}{public} \textcolor{keywordtype}{float} duration = 5f;}
+\DoxyCodeLine{\Hypertarget{BaseEffect_8cs_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{BaseEffect_8cs_source_l00011}00011     [SerializeField] \textcolor{keyword}{public} Sprite effectSprite;}
+\DoxyCodeLine{\Hypertarget{BaseEffect_8cs_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{BaseEffect_8cs_source_l00013}00013     \textcolor{keyword}{public} \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} ApplyEffect(GameObject entity)}
+\DoxyCodeLine{\Hypertarget{BaseEffect_8cs_source_l00014}00014     \{}
+\DoxyCodeLine{\Hypertarget{BaseEffect_8cs_source_l00015}00015         Debug.Log(\textcolor{stringliteral}{"{}Apply Effect "{}} + effectName + \textcolor{stringliteral}{"{} on entity "{}} + entity.name);}
+\DoxyCodeLine{\Hypertarget{BaseEffect_8cs_source_l00016}00016     \}}
+\DoxyCodeLine{\Hypertarget{BaseEffect_8cs_source_l00017}00017     }
+\DoxyCodeLine{\Hypertarget{BaseEffect_8cs_source_l00018}00018 \}}
+
+\end{DoxyCode}

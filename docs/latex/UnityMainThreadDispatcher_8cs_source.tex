@@ -1,0 +1,107 @@
+\hypertarget{UnityMainThreadDispatcher_8cs_source}{}\doxysection{Unity\+Main\+Thread\+Dispatcher.\+cs}
+\label{UnityMainThreadDispatcher_8cs_source}\index{Vuji/Assets/Scripts/UnityMainThreadDispatcher.cs@{Vuji/Assets/Scripts/UnityMainThreadDispatcher.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00001}00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00002}00002 \textcolor{comment}{Copyright 2015 Pim de Witte All Rights Reserved.}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00003}00003 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00004}00004 \textcolor{comment}{Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00005}00005 \textcolor{comment}{you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00006}00006 \textcolor{comment}{You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00007}00007 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00008}00008 \textcolor{comment}{    http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00009}00009 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00010}00010 \textcolor{comment}{Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00011}00011 \textcolor{comment}{distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00012}00012 \textcolor{comment}{WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00013}00013 \textcolor{comment}{See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00014}00014 \textcolor{comment}{limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00015}00015 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00017}00017 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00018}00018 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00019}00019 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00020}00020 \textcolor{keyword}{using }System;}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00021}00021 \textcolor{keyword}{using }System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00028}\mbox{\hyperlink{classUnityMainThreadDispatcher}{00028}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classUnityMainThreadDispatcher}{UnityMainThreadDispatcher}} : MonoBehaviour \{}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00030}00030     \textcolor{keyword}{private} \textcolor{keyword}{static} readonly Queue<Action> \_executionQueue = \textcolor{keyword}{new} Queue<Action>();}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00032}00032     \textcolor{keyword}{public} \textcolor{keywordtype}{void} Update() \{}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00033}00033         lock(\_executionQueue) \{}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00034}00034             \textcolor{keywordflow}{while} (\_executionQueue.Count > 0) \{}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00035}00035                 \_executionQueue.Dequeue().Invoke();}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00036}00036             \}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00037}00037         \}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00038}00038     \}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00044}\mbox{\hyperlink{classUnityMainThreadDispatcher_a6d02e71f322324222a11c99779a34ece}{00044}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classUnityMainThreadDispatcher_a6d02e71f322324222a11c99779a34ece}{Enqueue}}(IEnumerator action) \{}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00045}00045         lock (\_executionQueue) \{}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00046}00046             \_executionQueue.Enqueue (() => \{}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00047}00047                 StartCoroutine (action);}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00048}00048             \});}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00049}00049         \}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00050}00050     \}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00056}\mbox{\hyperlink{classUnityMainThreadDispatcher_a2fe8fe4807bc1e9ee32c136811233f5c}{00056}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classUnityMainThreadDispatcher_a2fe8fe4807bc1e9ee32c136811233f5c}{Enqueue}}(Action action)}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00057}00057     \{}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00058}00058         \mbox{\hyperlink{classUnityMainThreadDispatcher_a6d02e71f322324222a11c99779a34ece}{Enqueue}}(ActionWrapper(action));}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00059}00059     \}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00060}00060     }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00066}\mbox{\hyperlink{classUnityMainThreadDispatcher_ab8cfe1ec2ae0b3738c57e767f0c77426}{00066}}     \textcolor{keyword}{public} Task \mbox{\hyperlink{classUnityMainThreadDispatcher_ab8cfe1ec2ae0b3738c57e767f0c77426}{EnqueueAsync}}(Action action)}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00067}00067     \{}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00068}00068         var tcs = \textcolor{keyword}{new} TaskCompletionSource<bool>();}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00070}00070         \textcolor{keywordtype}{void} WrappedAction() \{}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00071}00071             \textcolor{keywordflow}{try} }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00072}00072             \{}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00073}00073                 action();}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00074}00074                 tcs.TrySetResult(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00075}00075             \} \textcolor{keywordflow}{catch} (Exception ex) }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00076}00076             \{}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00077}00077                 tcs.TrySetException(ex);}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00078}00078             \}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00079}00079         \}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00081}00081         \mbox{\hyperlink{classUnityMainThreadDispatcher_a6d02e71f322324222a11c99779a34ece}{Enqueue}}(ActionWrapper(WrappedAction));}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00082}00082         \textcolor{keywordflow}{return} tcs.Task;}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00083}00083     \}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00085}00085     }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00086}00086     IEnumerator ActionWrapper(Action a)}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00087}00087     \{}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00088}00088         a();}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00089}00089         yield \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00090}00090     \}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00093}00093     \textcolor{keyword}{private} \textcolor{keyword}{static} \mbox{\hyperlink{classUnityMainThreadDispatcher}{UnityMainThreadDispatcher}} \_instance = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00095}00095     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{bool} Exists() \{}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00096}00096         \textcolor{keywordflow}{return} \_instance != \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00097}00097     \}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00099}00099     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{classUnityMainThreadDispatcher}{UnityMainThreadDispatcher}} Instance() \{}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00100}00100         \textcolor{keywordflow}{if} (!Exists ()) \{}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00101}00101             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception (\textcolor{stringliteral}{"{}UnityMainThreadDispatcher could not find the UnityMainThreadDispatcher object. Please ensure you have added the MainThreadExecutor Prefab to your scene."{}});}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00102}00102         \}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00103}00103         \textcolor{keywordflow}{return} \_instance;}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00104}00104     \}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00107}00107     \textcolor{keywordtype}{void} Awake() \{}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00108}00108         \textcolor{keywordflow}{if} (\_instance == \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00109}00109             \_instance = \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00110}00110             DontDestroyOnLoad(this.gameObject);}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00111}00111         \}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00112}00112     \}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00114}00114     \textcolor{keywordtype}{void} OnDestroy() \{}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00115}00115             \_instance = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00116}00116     \}}
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{UnityMainThreadDispatcher_8cs_source_l00119}00119 \}}
+
+\end{DoxyCode}

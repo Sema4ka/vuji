@@ -1,0 +1,75 @@
+\hypertarget{classDrunkard}{}\doxysection{Класс Drunkard}
+\label{classDrunkard}\index{Drunkard@{Drunkard}}
+Граф наследования\+:Drunkard\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classDrunkard}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+override IEnumerator \mbox{\hyperlink{classDrunkard_ae1a63aa5b7a87b39b4084c7ea7b76db9}{Use\+Skill}} (Game\+Object caster, string key)
+\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{Drunkard_8cs_source}{Drunkard.\+cs}} строка \mbox{\hyperlink{Drunkard_8cs_source_l00005}{5}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classDrunkard_ae1a63aa5b7a87b39b4084c7ea7b76db9}\label{classDrunkard_ae1a63aa5b7a87b39b4084c7ea7b76db9}} 
+\index{Drunkard@{Drunkard}!UseSkill@{UseSkill}}
+\index{UseSkill@{UseSkill}!Drunkard@{Drunkard}}
+\doxysubsubsection{\texorpdfstring{UseSkill()}{UseSkill()}}
+{\footnotesize\ttfamily override IEnumerator Drunkard.\+Use\+Skill (\begin{DoxyParamCaption}\item[{Game\+Object}]{caster,  }\item[{string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Переопределяет метод предка \mbox{\hyperlink{classBaseSkill}{Base\+Skill}}.
+
+
+
+См. определение в файле \mbox{\hyperlink{Drunkard_8cs_source}{Drunkard.\+cs}} строка \mbox{\hyperlink{Drunkard_8cs_source_l00015}{15}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016     \{}
+\DoxyCodeLine{00017         base.UseSkill(caster, key);}
+\DoxyCodeLine{00018         \textcolor{keywordflow}{if} (caster.GetComponent<\mbox{\hyperlink{classBaseEntity}{BaseEntity}}>().spendEnergy(energyCost) == \textcolor{keyword}{false})}
+\DoxyCodeLine{00019         \{}
+\DoxyCodeLine{00020             Debug.Log(\textcolor{stringliteral}{"{}Not enough energy to cast "{}} + this.gameObject.name);}
+\DoxyCodeLine{00021             yield \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00022         \}}
+\DoxyCodeLine{00023         }
+\DoxyCodeLine{00024         onCast?.Invoke(castTime); }
+\DoxyCodeLine{00025         caster.GetComponent<\mbox{\hyperlink{classBaseEntity}{BaseEntity}}>().setIsCooldown(key, \textcolor{keyword}{true});}
+\DoxyCodeLine{00026         \textcolor{keywordflow}{if}(cancelMovementOnCast)}
+\DoxyCodeLine{00027             caster.GetComponent<\mbox{\hyperlink{classMovementPlayer}{MovementPlayer}}>().cancelMovement(castTime);}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029         \mbox{\hyperlink{classAnimationPlayer}{AnimationPlayer}} anim = caster.GetComponent<\mbox{\hyperlink{classAnimationPlayer}{AnimationPlayer}}>();}
+\DoxyCodeLine{00030         anim.ChangePlayerAnimation\_q(anim.\_drink);}
+\DoxyCodeLine{00031         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForSeconds(castTime);}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033         \textcolor{comment}{// Сам скилл}}
+\DoxyCodeLine{00034         drunkEffect.GetComponent<\mbox{\hyperlink{classDrunk}{Drunk}}>().additionalDefense = additionalDefense;}
+\DoxyCodeLine{00035         drunkEffect.GetComponent<\mbox{\hyperlink{classDrunk}{Drunk}}>().duration = drunkTime;}
+\DoxyCodeLine{00036         onRelease?.Invoke(cooldown);}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038         caster.GetComponent<\mbox{\hyperlink{classBaseEntity}{BaseEntity}}>().AddEffect(drunkEffect);}
+\DoxyCodeLine{00039         \textcolor{comment}{// Сам скилл}}
+\DoxyCodeLine{00040         }
+\DoxyCodeLine{00041         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForSeconds(cooldown);}
+\DoxyCodeLine{00042         caster.GetComponent<\mbox{\hyperlink{classBaseEntity}{BaseEntity}}>().setIsCooldown(key, \textcolor{keyword}{false});}
+\DoxyCodeLine{00043     \}}
+
+\end{DoxyCode}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Game/\+Skills/Drunkard.\+cs\end{DoxyCompactItemize}

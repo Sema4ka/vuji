@@ -1,0 +1,89 @@
+\hypertarget{classStrong}{}\doxysection{Класс Strong}
+\label{classStrong}\index{Strong@{Strong}}
+Граф наследования\+:Strong\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classStrong}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{classStrong_a7dd7d1598a5f857957b571ad6a513105}{Apply\+Effect}} (Game\+Object entity)
+\item 
+IEnumerator \mbox{\hyperlink{classStrong_afd0045e49affc74f9739b0ac669f480b}{Strong\+Effect}} (Game\+Object entity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classStrong_a939f4ac5564cce9f72cc7d71879f2293}{additional\+Damage}} = 30
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{Strong_8cs_source}{Strong.\+cs}} строка \mbox{\hyperlink{Strong_8cs_source_l00005}{5}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classStrong_a7dd7d1598a5f857957b571ad6a513105}\label{classStrong_a7dd7d1598a5f857957b571ad6a513105}} 
+\index{Strong@{Strong}!ApplyEffect@{ApplyEffect}}
+\index{ApplyEffect@{ApplyEffect}!Strong@{Strong}}
+\doxysubsubsection{\texorpdfstring{ApplyEffect()}{ApplyEffect()}}
+{\footnotesize\ttfamily override void Strong.\+Apply\+Effect (\begin{DoxyParamCaption}\item[{Game\+Object}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Переопределяет метод предка \mbox{\hyperlink{classBaseEffect}{Base\+Effect}}.
+
+
+
+См. определение в файле \mbox{\hyperlink{Strong_8cs_source}{Strong.\+cs}} строка \mbox{\hyperlink{Strong_8cs_source_l00010}{10}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011     \{}
+\DoxyCodeLine{00012         base.ApplyEffect(entity);}
+\DoxyCodeLine{00013         entity.gameObject.GetComponent<MonoBehaviour>().StartCoroutine(StrongEffect(entity));}
+\DoxyCodeLine{00014     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStrong_afd0045e49affc74f9739b0ac669f480b}\label{classStrong_afd0045e49affc74f9739b0ac669f480b}} 
+\index{Strong@{Strong}!StrongEffect@{StrongEffect}}
+\index{StrongEffect@{StrongEffect}!Strong@{Strong}}
+\doxysubsubsection{\texorpdfstring{StrongEffect()}{StrongEffect()}}
+{\footnotesize\ttfamily IEnumerator Strong.\+Strong\+Effect (\begin{DoxyParamCaption}\item[{Game\+Object}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{Strong_8cs_source}{Strong.\+cs}} строка \mbox{\hyperlink{Strong_8cs_source_l00016}{16}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016                                                       \{}
+\DoxyCodeLine{00017         entity.GetComponent<\mbox{\hyperlink{classBaseEntity}{BaseEntity}}>().IncreaseDamage(additionalDamage);}
+\DoxyCodeLine{00018         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForSeconds(duration);}
+\DoxyCodeLine{00019         entity.GetComponent<\mbox{\hyperlink{classBaseEntity}{BaseEntity}}>().DecreaseDamage(additionalDamage);}
+\DoxyCodeLine{00020     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classStrong_a939f4ac5564cce9f72cc7d71879f2293}\label{classStrong_a939f4ac5564cce9f72cc7d71879f2293}} 
+\index{Strong@{Strong}!additionalDamage@{additionalDamage}}
+\index{additionalDamage@{additionalDamage}!Strong@{Strong}}
+\doxysubsubsection{\texorpdfstring{additionalDamage}{additionalDamage}}
+{\footnotesize\ttfamily int Strong.\+additional\+Damage = 30}
+
+
+
+См. определение в файле \mbox{\hyperlink{Strong_8cs_source}{Strong.\+cs}} строка \mbox{\hyperlink{Strong_8cs_source_l00008}{8}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Game/\+Effects/Strong.\+cs\end{DoxyCompactItemize}

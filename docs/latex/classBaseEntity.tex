@@ -1,0 +1,712 @@
+\hypertarget{classBaseEntity}{}\doxysection{Класс Base\+Entity}
+\label{classBaseEntity}\index{BaseEntity@{BaseEntity}}
+Граф наследования\+:Base\+Entity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBaseEntity}
+\end{center}
+\end{figure}
+\doxysubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structBaseEntity_1_1Skill}{Skill}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBaseEntity_af0aed32cb6481348a3826e9abedc498f}{Update\+Text}} (string team\+Tag, string new\+Text)
+\item 
+void \mbox{\hyperlink{classBaseEntity_a594854e225fd95a048c31c129d888684}{Increase\+Max\+Health}} (float to\+Add)
+\item 
+void \mbox{\hyperlink{classBaseEntity_a102658270a1779b2b54a3e57e74b0e61}{Increase\+Max\+Energy}} (float to\+Add)
+\item 
+void \mbox{\hyperlink{classBaseEntity_a44ba64c6451bff995ab2801675995755}{Heal}} (float hp)
+\item 
+void \mbox{\hyperlink{classBaseEntity_a05bdf0eb6d7689bbf7db75c666329a66}{Add\+Effect}} (Game\+Object effect)
+\item 
+void \mbox{\hyperlink{classBaseEntity_acf8d6e26b61a0bac63efec8975b10287}{Tick\+Points}} ()
+\item 
+void \mbox{\hyperlink{classBaseEntity_a69244d8e880be8f894f00dee48512942}{Use\+Skill}} ()
+\item 
+void \mbox{\hyperlink{classBaseEntity_ab6bd34b40a4989cca1ec626903402912}{select\+Skill}} (string skill\+Name)
+\item 
+void \mbox{\hyperlink{classBaseEntity_a756c534e8c8cba6ecc4315b6fcb8add7}{de\+Select\+Skill}} ()
+\item 
+string \mbox{\hyperlink{classBaseEntity_ac2c8bdc3bb25736ce29c8e187a4bebf2}{Get\+Selected\+Skill}} ()
+\item 
+void \mbox{\hyperlink{classBaseEntity_a38d1515ff3ff4a6b4c60c35d2ce3f7a0}{set\+Is\+Cooldown}} (string key, bool value)
+\item 
+float \mbox{\hyperlink{classBaseEntity_a306b46324d7bfad3a800949f8c9a6c42}{Get\+Move\+Speed}} ()
+\item 
+float \mbox{\hyperlink{classBaseEntity_a6586afea7ad41528ce81c3d0761dcee1}{Get\+Health\+Points}} ()
+\item 
+float \mbox{\hyperlink{classBaseEntity_a6f911478b97658ffbdc7d610600b0db0}{Get\+Max\+Health\+Points}} ()
+\item 
+float \mbox{\hyperlink{classBaseEntity_af721c122f448b77317e087e1f7eaec48}{Get\+Energy\+Points}} ()
+\item 
+float \mbox{\hyperlink{classBaseEntity_a2dfe11903841be8b636e4e1674e64eef}{Get\+Max\+Energy\+Points}} ()
+\item 
+int \mbox{\hyperlink{classBaseEntity_ac7c42c6861bc861ee718064ad962b73e}{Get\+Base\+Damage}} ()
+\item 
+string \mbox{\hyperlink{classBaseEntity_a1441cd3fd9e0a7290d55dfe78964ec90}{Get\+Entity\+Name}} ()
+\item 
+int \mbox{\hyperlink{classBaseEntity_af3b857ec54ef7cef6dc7c861a443600b}{Get\+Defense}} ()
+\item 
+void \mbox{\hyperlink{classBaseEntity_a18ae3f692a717078a0250c68f9beb0c1}{Increase\+Damage}} (int add\+Damage)
+\item 
+void \mbox{\hyperlink{classBaseEntity_a5aa36e99562f347f97484b669120c26c}{Decrease\+Damage}} (int add\+Damage)
+\item 
+void \mbox{\hyperlink{classBaseEntity_a9e0de617d80f8e7fdbb02ff6490daac9}{Increase\+Speed}} (int add\+Speed)
+\item 
+void \mbox{\hyperlink{classBaseEntity_a0d69e2320657ee43168f082a01166dc5}{Decrease\+Speed}} (int add\+Speed)
+\item 
+void \mbox{\hyperlink{classBaseEntity_ab7cddce9f15f3b05e04e70882402ab34}{Increase\+Defense}} (int add\+Defense)
+\item 
+void \mbox{\hyperlink{classBaseEntity_ae16cca8f26607e845999d035fe88dc62}{Decrease\+Defense}} (int add\+Defense)
+\item 
+bool \mbox{\hyperlink{classBaseEntity_aa8ac0b71ec44fe4ee19f4fed267ddee5}{spend\+Energy}} (float energy\+Cost)
+\item 
+void \mbox{\hyperlink{classBaseEntity_ac154bdf31e2a6d0567e313a8eedd246b}{Take\+Damage}} (int health\+Damage)
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structBaseEntity_1_1Skill}{Skill}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classBaseEntity_a53a56c3a6104547b8f98f5363f45a660}{skills}}
+\item 
+Action$<$ string, bool $>$ \mbox{\hyperlink{classBaseEntity_abae51991c0db28ebbdb926a9e64f134e}{On\+Skill\+Selection\+Change}}
+\item 
+Game\+Object \mbox{\hyperlink{classBaseEntity_a3007b197c8973d365447949e75f10a8a}{\+\_\+dropped\+Item\+Prefab}}
+\item 
+\mbox{\hyperlink{classHealthBarManager}{Health\+Bar\+Manager}} \mbox{\hyperlink{classBaseEntity_a7e2566d0dda5c7c9cd5a6e0475dc58b7}{health\+Bar}}
+\item 
+\mbox{\hyperlink{classEntityNameManager}{Entity\+Name\+Manager}} \mbox{\hyperlink{classBaseEntity_aab35f76455261acede837e96518fdf7e}{displayed\+Name}}
+\item 
+\mbox{\hyperlink{classControllers}{Controllers}} \mbox{\hyperlink{classBaseEntity_a29b58d8be3ac3e18ef66c2b60c5cfccf}{\+\_\+controller}}
+\item 
+Action$<$ \mbox{\hyperlink{classBaseEffect}{Base\+Effect}}, \mbox{\hyperlink{classBaseEntity}{Base\+Entity}} $>$ \mbox{\hyperlink{classBaseEntity_af8e432747ffe51867253782b757288f6}{On\+Effect\+Apply}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+static Action$<$ \mbox{\hyperlink{classBaseEntity}{Base\+Entity}}, string $>$ \mbox{\hyperlink{classBaseEntity_a130a8a3e4ffcdc96f15b85f0486f4723}{team\+Spawn}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Свойства}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classBaseEntity_a41d798858166549b0a3b436af2597379}{is\+Dead}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00009}{9}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classBaseEntity_a05bdf0eb6d7689bbf7db75c666329a66}\label{classBaseEntity_a05bdf0eb6d7689bbf7db75c666329a66}} 
+\index{BaseEntity@{BaseEntity}!AddEffect@{AddEffect}}
+\index{AddEffect@{AddEffect}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{AddEffect()}{AddEffect()}}
+{\footnotesize\ttfamily void Base\+Entity.\+Add\+Effect (\begin{DoxyParamCaption}\item[{Game\+Object}]{effect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00128}{128}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00129     \{}
+\DoxyCodeLine{00130         OnEffectApply?.Invoke(effect.GetComponent<\mbox{\hyperlink{classBaseEffect}{BaseEffect}}>(), \textcolor{keyword}{this});}
+\DoxyCodeLine{00131         effect.GetComponent<\mbox{\hyperlink{classBaseEffect}{BaseEffect}}>().ApplyEffect(this.gameObject);}
+\DoxyCodeLine{00132     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_a5aa36e99562f347f97484b669120c26c}\label{classBaseEntity_a5aa36e99562f347f97484b669120c26c}} 
+\index{BaseEntity@{BaseEntity}!DecreaseDamage@{DecreaseDamage}}
+\index{DecreaseDamage@{DecreaseDamage}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{DecreaseDamage()}{DecreaseDamage()}}
+{\footnotesize\ttfamily void Base\+Entity.\+Decrease\+Damage (\begin{DoxyParamCaption}\item[{int}]{add\+Damage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00237}{237}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00238     \{}
+\DoxyCodeLine{00239         this.baseDamage -\/= addDamage;}
+\DoxyCodeLine{00240     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_ae16cca8f26607e845999d035fe88dc62}\label{classBaseEntity_ae16cca8f26607e845999d035fe88dc62}} 
+\index{BaseEntity@{BaseEntity}!DecreaseDefense@{DecreaseDefense}}
+\index{DecreaseDefense@{DecreaseDefense}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{DecreaseDefense()}{DecreaseDefense()}}
+{\footnotesize\ttfamily void Base\+Entity.\+Decrease\+Defense (\begin{DoxyParamCaption}\item[{int}]{add\+Defense }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00257}{257}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00258     \{}
+\DoxyCodeLine{00259         this.defense -\/= addDefense;}
+\DoxyCodeLine{00260     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_a0d69e2320657ee43168f082a01166dc5}\label{classBaseEntity_a0d69e2320657ee43168f082a01166dc5}} 
+\index{BaseEntity@{BaseEntity}!DecreaseSpeed@{DecreaseSpeed}}
+\index{DecreaseSpeed@{DecreaseSpeed}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{DecreaseSpeed()}{DecreaseSpeed()}}
+{\footnotesize\ttfamily void Base\+Entity.\+Decrease\+Speed (\begin{DoxyParamCaption}\item[{int}]{add\+Speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00247}{247}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00248     \{}
+\DoxyCodeLine{00249         this.moveSpeed -\/= addSpeed;}
+\DoxyCodeLine{00250     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_a756c534e8c8cba6ecc4315b6fcb8add7}\label{classBaseEntity_a756c534e8c8cba6ecc4315b6fcb8add7}} 
+\index{BaseEntity@{BaseEntity}!deSelectSkill@{deSelectSkill}}
+\index{deSelectSkill@{deSelectSkill}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{deSelectSkill()}{deSelectSkill()}}
+{\footnotesize\ttfamily void Base\+Entity.\+de\+Select\+Skill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00172}{172}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00173     \{}
+\DoxyCodeLine{00174         Debug.Log(\textcolor{stringliteral}{"{}Deselected"{}} + \_selectedSkill);}
+\DoxyCodeLine{00175         OnSkillSelectionChange?.Invoke(\_selectedSkill, \textcolor{keyword}{false});}
+\DoxyCodeLine{00176         this.\_selectedSkill = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00177     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_ac7c42c6861bc861ee718064ad962b73e}\label{classBaseEntity_ac7c42c6861bc861ee718064ad962b73e}} 
+\index{BaseEntity@{BaseEntity}!GetBaseDamage@{GetBaseDamage}}
+\index{GetBaseDamage@{GetBaseDamage}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{GetBaseDamage()}{GetBaseDamage()}}
+{\footnotesize\ttfamily int Base\+Entity.\+Get\+Base\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00216}{216}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00217     \{}
+\DoxyCodeLine{00218         \textcolor{keywordflow}{return} baseDamage;}
+\DoxyCodeLine{00219     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_af3b857ec54ef7cef6dc7c861a443600b}\label{classBaseEntity_af3b857ec54ef7cef6dc7c861a443600b}} 
+\index{BaseEntity@{BaseEntity}!GetDefense@{GetDefense}}
+\index{GetDefense@{GetDefense}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{GetDefense()}{GetDefense()}}
+{\footnotesize\ttfamily int Base\+Entity.\+Get\+Defense (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00226}{226}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00227     \{}
+\DoxyCodeLine{00228         \textcolor{keywordflow}{return} defense;}
+\DoxyCodeLine{00229     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_af721c122f448b77317e087e1f7eaec48}\label{classBaseEntity_af721c122f448b77317e087e1f7eaec48}} 
+\index{BaseEntity@{BaseEntity}!GetEnergyPoints@{GetEnergyPoints}}
+\index{GetEnergyPoints@{GetEnergyPoints}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{GetEnergyPoints()}{GetEnergyPoints()}}
+{\footnotesize\ttfamily float Base\+Entity.\+Get\+Energy\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00206}{206}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00207     \{}
+\DoxyCodeLine{00208         \textcolor{keywordflow}{return} energy;}
+\DoxyCodeLine{00209     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_a1441cd3fd9e0a7290d55dfe78964ec90}\label{classBaseEntity_a1441cd3fd9e0a7290d55dfe78964ec90}} 
+\index{BaseEntity@{BaseEntity}!GetEntityName@{GetEntityName}}
+\index{GetEntityName@{GetEntityName}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{GetEntityName()}{GetEntityName()}}
+{\footnotesize\ttfamily string Base\+Entity.\+Get\+Entity\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00221}{221}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00222     \{}
+\DoxyCodeLine{00223         \textcolor{keywordflow}{return} entityName;}
+\DoxyCodeLine{00224     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_a6586afea7ad41528ce81c3d0761dcee1}\label{classBaseEntity_a6586afea7ad41528ce81c3d0761dcee1}} 
+\index{BaseEntity@{BaseEntity}!GetHealthPoints@{GetHealthPoints}}
+\index{GetHealthPoints@{GetHealthPoints}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{GetHealthPoints()}{GetHealthPoints()}}
+{\footnotesize\ttfamily float Base\+Entity.\+Get\+Health\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00196}{196}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00197     \{}
+\DoxyCodeLine{00198         \textcolor{keywordflow}{return} healthPoints;}
+\DoxyCodeLine{00199     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_a2dfe11903841be8b636e4e1674e64eef}\label{classBaseEntity_a2dfe11903841be8b636e4e1674e64eef}} 
+\index{BaseEntity@{BaseEntity}!GetMaxEnergyPoints@{GetMaxEnergyPoints}}
+\index{GetMaxEnergyPoints@{GetMaxEnergyPoints}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{GetMaxEnergyPoints()}{GetMaxEnergyPoints()}}
+{\footnotesize\ttfamily float Base\+Entity.\+Get\+Max\+Energy\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00211}{211}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00212     \{}
+\DoxyCodeLine{00213         \textcolor{keywordflow}{return} maxEnergy;}
+\DoxyCodeLine{00214     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_a6f911478b97658ffbdc7d610600b0db0}\label{classBaseEntity_a6f911478b97658ffbdc7d610600b0db0}} 
+\index{BaseEntity@{BaseEntity}!GetMaxHealthPoints@{GetMaxHealthPoints}}
+\index{GetMaxHealthPoints@{GetMaxHealthPoints}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{GetMaxHealthPoints()}{GetMaxHealthPoints()}}
+{\footnotesize\ttfamily float Base\+Entity.\+Get\+Max\+Health\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00201}{201}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00202     \{}
+\DoxyCodeLine{00203         \textcolor{keywordflow}{return} maxHealthPoints;}
+\DoxyCodeLine{00204     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_a306b46324d7bfad3a800949f8c9a6c42}\label{classBaseEntity_a306b46324d7bfad3a800949f8c9a6c42}} 
+\index{BaseEntity@{BaseEntity}!GetMoveSpeed@{GetMoveSpeed}}
+\index{GetMoveSpeed@{GetMoveSpeed}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{GetMoveSpeed()}{GetMoveSpeed()}}
+{\footnotesize\ttfamily float Base\+Entity.\+Get\+Move\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00191}{191}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00192     \{}
+\DoxyCodeLine{00193         \textcolor{keywordflow}{return} moveSpeed;}
+\DoxyCodeLine{00194     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_ac2c8bdc3bb25736ce29c8e187a4bebf2}\label{classBaseEntity_ac2c8bdc3bb25736ce29c8e187a4bebf2}} 
+\index{BaseEntity@{BaseEntity}!GetSelectedSkill@{GetSelectedSkill}}
+\index{GetSelectedSkill@{GetSelectedSkill}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{GetSelectedSkill()}{GetSelectedSkill()}}
+{\footnotesize\ttfamily string Base\+Entity.\+Get\+Selected\+Skill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00179}{179}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00180     \{}
+\DoxyCodeLine{00181         \textcolor{keywordflow}{return} \_selectedSkill;}
+\DoxyCodeLine{00182     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_a44ba64c6451bff995ab2801675995755}\label{classBaseEntity_a44ba64c6451bff995ab2801675995755}} 
+\index{BaseEntity@{BaseEntity}!Heal@{Heal}}
+\index{Heal@{Heal}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{Heal()}{Heal()}}
+{\footnotesize\ttfamily void Base\+Entity.\+Heal (\begin{DoxyParamCaption}\item[{float}]{hp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00116}{116}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00116                                \{}
+\DoxyCodeLine{00117         healthPoints = healthPoints + hp > maxHealthPoints ? maxHealthPoints : healthPoints + hp;}
+\DoxyCodeLine{00118     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_a18ae3f692a717078a0250c68f9beb0c1}\label{classBaseEntity_a18ae3f692a717078a0250c68f9beb0c1}} 
+\index{BaseEntity@{BaseEntity}!IncreaseDamage@{IncreaseDamage}}
+\index{IncreaseDamage@{IncreaseDamage}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{IncreaseDamage()}{IncreaseDamage()}}
+{\footnotesize\ttfamily void Base\+Entity.\+Increase\+Damage (\begin{DoxyParamCaption}\item[{int}]{add\+Damage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00232}{232}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00233     \{}
+\DoxyCodeLine{00234         this.baseDamage += addDamage;}
+\DoxyCodeLine{00235     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_ab7cddce9f15f3b05e04e70882402ab34}\label{classBaseEntity_ab7cddce9f15f3b05e04e70882402ab34}} 
+\index{BaseEntity@{BaseEntity}!IncreaseDefense@{IncreaseDefense}}
+\index{IncreaseDefense@{IncreaseDefense}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{IncreaseDefense()}{IncreaseDefense()}}
+{\footnotesize\ttfamily void Base\+Entity.\+Increase\+Defense (\begin{DoxyParamCaption}\item[{int}]{add\+Defense }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00252}{252}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00253     \{}
+\DoxyCodeLine{00254         this.defense += addDefense;}
+\DoxyCodeLine{00255     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_a102658270a1779b2b54a3e57e74b0e61}\label{classBaseEntity_a102658270a1779b2b54a3e57e74b0e61}} 
+\index{BaseEntity@{BaseEntity}!IncreaseMaxEnergy@{IncreaseMaxEnergy}}
+\index{IncreaseMaxEnergy@{IncreaseMaxEnergy}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{IncreaseMaxEnergy()}{IncreaseMaxEnergy()}}
+{\footnotesize\ttfamily void Base\+Entity.\+Increase\+Max\+Energy (\begin{DoxyParamCaption}\item[{float}]{to\+Add }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00111}{111}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112     \{}
+\DoxyCodeLine{00113         maxEnergy += toAdd;}
+\DoxyCodeLine{00114     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_a594854e225fd95a048c31c129d888684}\label{classBaseEntity_a594854e225fd95a048c31c129d888684}} 
+\index{BaseEntity@{BaseEntity}!IncreaseMaxHealth@{IncreaseMaxHealth}}
+\index{IncreaseMaxHealth@{IncreaseMaxHealth}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{IncreaseMaxHealth()}{IncreaseMaxHealth()}}
+{\footnotesize\ttfamily void Base\+Entity.\+Increase\+Max\+Health (\begin{DoxyParamCaption}\item[{float}]{to\+Add }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00106}{106}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00107     \{}
+\DoxyCodeLine{00108         maxHealthPoints += toAdd;}
+\DoxyCodeLine{00109     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_a9e0de617d80f8e7fdbb02ff6490daac9}\label{classBaseEntity_a9e0de617d80f8e7fdbb02ff6490daac9}} 
+\index{BaseEntity@{BaseEntity}!IncreaseSpeed@{IncreaseSpeed}}
+\index{IncreaseSpeed@{IncreaseSpeed}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{IncreaseSpeed()}{IncreaseSpeed()}}
+{\footnotesize\ttfamily void Base\+Entity.\+Increase\+Speed (\begin{DoxyParamCaption}\item[{int}]{add\+Speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00242}{242}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00243     \{}
+\DoxyCodeLine{00244         this.moveSpeed += addSpeed;}
+\DoxyCodeLine{00245     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_ab6bd34b40a4989cca1ec626903402912}\label{classBaseEntity_ab6bd34b40a4989cca1ec626903402912}} 
+\index{BaseEntity@{BaseEntity}!selectSkill@{selectSkill}}
+\index{selectSkill@{selectSkill}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{selectSkill()}{selectSkill()}}
+{\footnotesize\ttfamily void Base\+Entity.\+select\+Skill (\begin{DoxyParamCaption}\item[{string}]{skill\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00158}{158}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00159     \{}
+\DoxyCodeLine{00160         \textcolor{keywordflow}{if} ((skillName == \textcolor{stringliteral}{"{}Skill 1"{}} \&\& !\_isSkill1Cooldown) || (skillName == \textcolor{stringliteral}{"{}Skill 2"{}} \&\& !\_isSkill2Cooldown))}
+\DoxyCodeLine{00161         \{}
+\DoxyCodeLine{00162             Debug.Log(\textcolor{stringliteral}{"{}Selected "{}} + skillName);}
+\DoxyCodeLine{00163             this.\_selectedSkill = skillName;}
+\DoxyCodeLine{00164             OnSkillSelectionChange?.Invoke(\_selectedSkill, \textcolor{keyword}{true});}
+\DoxyCodeLine{00165         \}}
+\DoxyCodeLine{00166         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00167         \{}
+\DoxyCodeLine{00168             Debug.Log(skillName + \textcolor{stringliteral}{"{} COOLDOWN"{}});}
+\DoxyCodeLine{00169         \}}
+\DoxyCodeLine{00170     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_a38d1515ff3ff4a6b4c60c35d2ce3f7a0}\label{classBaseEntity_a38d1515ff3ff4a6b4c60c35d2ce3f7a0}} 
+\index{BaseEntity@{BaseEntity}!setIsCooldown@{setIsCooldown}}
+\index{setIsCooldown@{setIsCooldown}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{setIsCooldown()}{setIsCooldown()}}
+{\footnotesize\ttfamily void Base\+Entity.\+set\+Is\+Cooldown (\begin{DoxyParamCaption}\item[{string}]{key,  }\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00184}{184}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00185     \{}
+\DoxyCodeLine{00186         \textcolor{keywordflow}{if} (key == \textcolor{stringliteral}{"{}Skill 1"{}}) this.\_isSkill1Cooldown = value;}
+\DoxyCodeLine{00187         \textcolor{keywordflow}{if} (key == \textcolor{stringliteral}{"{}Skill 2"{}}) this.\_isSkill2Cooldown = value;}
+\DoxyCodeLine{00188     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_aa8ac0b71ec44fe4ee19f4fed267ddee5}\label{classBaseEntity_aa8ac0b71ec44fe4ee19f4fed267ddee5}} 
+\index{BaseEntity@{BaseEntity}!spendEnergy@{spendEnergy}}
+\index{spendEnergy@{spendEnergy}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{spendEnergy()}{spendEnergy()}}
+{\footnotesize\ttfamily bool Base\+Entity.\+spend\+Energy (\begin{DoxyParamCaption}\item[{float}]{energy\+Cost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00262}{262}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00263     \{}
+\DoxyCodeLine{00264         \textcolor{keywordflow}{if} (energyCost > this.energy) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00265 }
+\DoxyCodeLine{00266         this.energy -\/= energyCost;}
+\DoxyCodeLine{00267         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00268     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_ac154bdf31e2a6d0567e313a8eedd246b}\label{classBaseEntity_ac154bdf31e2a6d0567e313a8eedd246b}} 
+\index{BaseEntity@{BaseEntity}!TakeDamage@{TakeDamage}}
+\index{TakeDamage@{TakeDamage}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
+{\footnotesize\ttfamily void Base\+Entity.\+Take\+Damage (\begin{DoxyParamCaption}\item[{int}]{health\+Damage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00270}{270}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00271     \{}
+\DoxyCodeLine{00272         \textcolor{comment}{// Проверка на полное поглощение урона}}
+\DoxyCodeLine{00273         \textcolor{keywordflow}{if}(defense -\/ healthDamage >= 0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00274 }
+\DoxyCodeLine{00275         healthPoints = healthPoints -\/ healthDamage + defense;}
+\DoxyCodeLine{00276         \textcolor{keywordflow}{if} (healthPoints <= 0)}
+\DoxyCodeLine{00277         \{}
+\DoxyCodeLine{00278             Death();}
+\DoxyCodeLine{00279         \}}
+\DoxyCodeLine{00280 }
+\DoxyCodeLine{00281         Debug.Log(entityName + \textcolor{stringliteral}{"{} hp is "{}} + healthPoints);}
+\DoxyCodeLine{00282     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_acf8d6e26b61a0bac63efec8975b10287}\label{classBaseEntity_acf8d6e26b61a0bac63efec8975b10287}} 
+\index{BaseEntity@{BaseEntity}!TickPoints@{TickPoints}}
+\index{TickPoints@{TickPoints}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{TickPoints()}{TickPoints()}}
+{\footnotesize\ttfamily void Base\+Entity.\+Tick\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00134}{134}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00135     \{}
+\DoxyCodeLine{00136         \_currentTick -\/= Time.deltaTime;}
+\DoxyCodeLine{00137         \textcolor{keywordflow}{if} (\_currentTick <= 0)}
+\DoxyCodeLine{00138         \{}
+\DoxyCodeLine{00139             \_view.RPC(\textcolor{stringliteral}{"{}IncreasePoints"{}}, RpcTarget.All);}
+\DoxyCodeLine{00140             \_currentTick = \_regenerationTick;}
+\DoxyCodeLine{00141         \}}
+\DoxyCodeLine{00142     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_af0aed32cb6481348a3826e9abedc498f}\label{classBaseEntity_af0aed32cb6481348a3826e9abedc498f}} 
+\index{BaseEntity@{BaseEntity}!UpdateText@{UpdateText}}
+\index{UpdateText@{UpdateText}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{UpdateText()}{UpdateText()}}
+{\footnotesize\ttfamily void Base\+Entity.\+Update\+Text (\begin{DoxyParamCaption}\item[{string}]{team\+Tag,  }\item[{string}]{new\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00099}{99}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00100     \{}
+\DoxyCodeLine{00101         GetComponentInChildren<Text>().text =  teamTag + newText;}
+\DoxyCodeLine{00102         \textcolor{keywordflow}{if} (\textcolor{stringliteral}{"{}["{}} + PhotonNetwork.LocalPlayer.GetPhotonTeam().Name + \textcolor{stringliteral}{"{}] "{}} == teamTag) teamSpawn?.Invoke(\textcolor{keyword}{this}, newText);}
+\DoxyCodeLine{00103     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseEntity_a69244d8e880be8f894f00dee48512942}\label{classBaseEntity_a69244d8e880be8f894f00dee48512942}} 
+\index{BaseEntity@{BaseEntity}!UseSkill@{UseSkill}}
+\index{UseSkill@{UseSkill}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{UseSkill()}{UseSkill()}}
+{\footnotesize\ttfamily void Base\+Entity.\+Use\+Skill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00144}{144}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00145     \{}
+\DoxyCodeLine{00146         \textcolor{keywordflow}{if} (\_selectedSkill.StartsWith(\textcolor{stringliteral}{"{}Skill"{}}))}
+\DoxyCodeLine{00147         \{}
+\DoxyCodeLine{00148             Debug.Log(\textcolor{stringliteral}{"{}Used "{}} + \_selectedSkill);}
+\DoxyCodeLine{00149             StartCoroutine(\_skills[\_selectedSkill].GetComponent<BaseSkill>().UseSkill(this.gameObject, \_selectedSkill));}
+\DoxyCodeLine{00150             deSelectSkill();}
+\DoxyCodeLine{00151         \}}
+\DoxyCodeLine{00152         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00153         \{}
+\DoxyCodeLine{00154             Debug.Log(\textcolor{stringliteral}{"{}Skill is not selected"{}});}
+\DoxyCodeLine{00155         \}}
+\DoxyCodeLine{00156     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classBaseEntity_a29b58d8be3ac3e18ef66c2b60c5cfccf}\label{classBaseEntity_a29b58d8be3ac3e18ef66c2b60c5cfccf}} 
+\index{BaseEntity@{BaseEntity}!\_controller@{\_controller}}
+\index{\_controller@{\_controller}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{\_controller}{\_controller}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classControllers}{Controllers}} Base\+Entity.\+\_\+controller}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00056}{56}}
+
+\mbox{\Hypertarget{classBaseEntity_a3007b197c8973d365447949e75f10a8a}\label{classBaseEntity_a3007b197c8973d365447949e75f10a8a}} 
+\index{BaseEntity@{BaseEntity}!\_droppedItemPrefab@{\_droppedItemPrefab}}
+\index{\_droppedItemPrefab@{\_droppedItemPrefab}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{\_droppedItemPrefab}{\_droppedItemPrefab}}
+{\footnotesize\ttfamily Game\+Object Base\+Entity.\+\_\+dropped\+Item\+Prefab}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00041}{41}}
+
+\mbox{\Hypertarget{classBaseEntity_aab35f76455261acede837e96518fdf7e}\label{classBaseEntity_aab35f76455261acede837e96518fdf7e}} 
+\index{BaseEntity@{BaseEntity}!displayedName@{displayedName}}
+\index{displayedName@{displayedName}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{displayedName}{displayedName}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEntityNameManager}{Entity\+Name\+Manager}} Base\+Entity.\+displayed\+Name}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00054}{54}}
+
+\mbox{\Hypertarget{classBaseEntity_a7e2566d0dda5c7c9cd5a6e0475dc58b7}\label{classBaseEntity_a7e2566d0dda5c7c9cd5a6e0475dc58b7}} 
+\index{BaseEntity@{BaseEntity}!healthBar@{healthBar}}
+\index{healthBar@{healthBar}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{healthBar}{healthBar}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHealthBarManager}{Health\+Bar\+Manager}} Base\+Entity.\+health\+Bar}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00053}{53}}
+
+\mbox{\Hypertarget{classBaseEntity_af8e432747ffe51867253782b757288f6}\label{classBaseEntity_af8e432747ffe51867253782b757288f6}} 
+\index{BaseEntity@{BaseEntity}!OnEffectApply@{OnEffectApply}}
+\index{OnEffectApply@{OnEffectApply}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{OnEffectApply}{OnEffectApply}}
+{\footnotesize\ttfamily Action$<$\mbox{\hyperlink{classBaseEffect}{Base\+Effect}}, \mbox{\hyperlink{classBaseEntity}{Base\+Entity}}$>$ Base\+Entity.\+On\+Effect\+Apply}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00060}{60}}
+
+\mbox{\Hypertarget{classBaseEntity_abae51991c0db28ebbdb926a9e64f134e}\label{classBaseEntity_abae51991c0db28ebbdb926a9e64f134e}} 
+\index{BaseEntity@{BaseEntity}!OnSkillSelectionChange@{OnSkillSelectionChange}}
+\index{OnSkillSelectionChange@{OnSkillSelectionChange}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{OnSkillSelectionChange}{OnSkillSelectionChange}}
+{\footnotesize\ttfamily Action$<$string, bool$>$ Base\+Entity.\+On\+Skill\+Selection\+Change}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00035}{35}}
+
+\mbox{\Hypertarget{classBaseEntity_a53a56c3a6104547b8f98f5363f45a660}\label{classBaseEntity_a53a56c3a6104547b8f98f5363f45a660}} 
+\index{BaseEntity@{BaseEntity}!skills@{skills}}
+\index{skills@{skills}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{skills}{skills}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structBaseEntity_1_1Skill}{Skill}} \mbox{[}$\,$\mbox{]} Base\+Entity.\+skills}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00032}{32}}
+
+\mbox{\Hypertarget{classBaseEntity_a130a8a3e4ffcdc96f15b85f0486f4723}\label{classBaseEntity_a130a8a3e4ffcdc96f15b85f0486f4723}} 
+\index{BaseEntity@{BaseEntity}!teamSpawn@{teamSpawn}}
+\index{teamSpawn@{teamSpawn}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{teamSpawn}{teamSpawn}}
+{\footnotesize\ttfamily Action$<$\mbox{\hyperlink{classBaseEntity}{Base\+Entity}}, string$>$ Base\+Entity.\+team\+Spawn\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00055}{55}}
+
+
+
+\doxysubsection{Полный список свойств}
+\mbox{\Hypertarget{classBaseEntity_a41d798858166549b0a3b436af2597379}\label{classBaseEntity_a41d798858166549b0a3b436af2597379}} 
+\index{BaseEntity@{BaseEntity}!isDead@{isDead}}
+\index{isDead@{isDead}!BaseEntity@{BaseEntity}}
+\doxysubsubsection{\texorpdfstring{isDead}{isDead}}
+{\footnotesize\ttfamily bool Base\+Entity.\+is\+Dead = false\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseEntity_8cs_source}{Base\+Entity.\+cs}} строка \mbox{\hyperlink{BaseEntity_8cs_source_l00058}{58}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058 \{ \textcolor{keyword}{get}; \textcolor{keyword}{private} \textcolor{keyword}{set}; \} = \textcolor{keyword}{false};}
+
+\end{DoxyCode}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Game/\+Base\+Objects/Base\+Entity.\+cs\end{DoxyCompactItemize}

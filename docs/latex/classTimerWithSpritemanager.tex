@@ -1,0 +1,72 @@
+\hypertarget{classTimerWithSpritemanager}{}\doxysection{Класс Timer\+With\+Spritemanager}
+\label{classTimerWithSpritemanager}\index{TimerWithSpritemanager@{TimerWithSpritemanager}}
+Граф наследования\+:Timer\+With\+Spritemanager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTimerWithSpritemanager}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTimerWithSpritemanager_af1ee4a828d0d3fbf274185a5c4dad44e}{Set\+Time}} (float time)
+\item 
+void \mbox{\hyperlink{classTimerWithSpritemanager_a05de0e4f3ac9a6a3586c584ebc92c9ba}{Set\+Entity}} (Game\+Object player, \mbox{\hyperlink{classBaseSkill}{Base\+Skill}} skill, string key\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{TimerWithSpritemanager_8cs_source}{Timer\+With\+Spritemanager.\+cs}} строка \mbox{\hyperlink{TimerWithSpritemanager_8cs_source_l00007}{7}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classTimerWithSpritemanager_a05de0e4f3ac9a6a3586c584ebc92c9ba}\label{classTimerWithSpritemanager_a05de0e4f3ac9a6a3586c584ebc92c9ba}} 
+\index{TimerWithSpritemanager@{TimerWithSpritemanager}!SetEntity@{SetEntity}}
+\index{SetEntity@{SetEntity}!TimerWithSpritemanager@{TimerWithSpritemanager}}
+\doxysubsubsection{\texorpdfstring{SetEntity()}{SetEntity()}}
+{\footnotesize\ttfamily void Timer\+With\+Spritemanager.\+Set\+Entity (\begin{DoxyParamCaption}\item[{Game\+Object}]{player,  }\item[{\mbox{\hyperlink{classBaseSkill}{Base\+Skill}}}]{skill,  }\item[{string}]{key\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{TimerWithSpritemanager_8cs_source}{Timer\+With\+Spritemanager.\+cs}} строка \mbox{\hyperlink{TimerWithSpritemanager_8cs_source_l00034}{34}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035     \{}
+\DoxyCodeLine{00036         targetPlayer = player;}
+\DoxyCodeLine{00037         targetSkill = skill;}
+\DoxyCodeLine{00038         this.keyName = keyName;}
+\DoxyCodeLine{00039         targetedSprite.sprite = skill.GetSprite();}
+\DoxyCodeLine{00040         keyText.text = \mbox{\hyperlink{classKeyHandler}{KeyHandler}}.NormalizeKeybind(\mbox{\hyperlink{classKeyHandler}{KeyHandler}}.instance.\mbox{\hyperlink{classKeyHandler_a92adaef63ecb21b2dfa480f693b94adf}{GetKeybind}}(keyName));}
+\DoxyCodeLine{00041         targetedText.text = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00042         skill.onRelease += SetTime;}
+\DoxyCodeLine{00043         player.GetComponent<\mbox{\hyperlink{classBaseEntity}{BaseEntity}}>().OnSkillSelectionChange += SetSelection;}
+\DoxyCodeLine{00044     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTimerWithSpritemanager_af1ee4a828d0d3fbf274185a5c4dad44e}\label{classTimerWithSpritemanager_af1ee4a828d0d3fbf274185a5c4dad44e}} 
+\index{TimerWithSpritemanager@{TimerWithSpritemanager}!SetTime@{SetTime}}
+\index{SetTime@{SetTime}!TimerWithSpritemanager@{TimerWithSpritemanager}}
+\doxysubsubsection{\texorpdfstring{SetTime()}{SetTime()}}
+{\footnotesize\ttfamily void Timer\+With\+Spritemanager.\+Set\+Time (\begin{DoxyParamCaption}\item[{float}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{TimerWithSpritemanager_8cs_source}{Timer\+With\+Spritemanager.\+cs}} строка \mbox{\hyperlink{TimerWithSpritemanager_8cs_source_l00023}{23}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024     \{}
+\DoxyCodeLine{00025         timerInterval = time;}
+\DoxyCodeLine{00026         timerValue = 0f;}
+\DoxyCodeLine{00027     \}}
+
+\end{DoxyCode}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+UIScripts/Timer\+With\+Spritemanager.\+cs\end{DoxyCompactItemize}

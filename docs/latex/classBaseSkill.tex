@@ -1,0 +1,222 @@
+\hypertarget{classBaseSkill}{}\doxysection{Класс Base\+Skill}
+\label{classBaseSkill}\index{BaseSkill@{BaseSkill}}
+Граф наследования\+:Base\+Skill\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classBaseSkill}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classBaseSkill_abe19009601b6a62a430038563e01dfd3}{Get\+Name}} ()
+\item 
+string \mbox{\hyperlink{classBaseSkill_a7fbc176ad74b385d024e7e0aecdbbb2c}{Get\+Description}} ()
+\item 
+Sprite \mbox{\hyperlink{classBaseSkill_ac76f144bb87cfcbb25f464d75c301b7b}{Get\+Sprite}} ()
+\item 
+virtual IEnumerator \mbox{\hyperlink{classBaseSkill_a3c6e32f82bb8d3e35aade6acae55d11f}{Use\+Skill}} (Game\+Object caster, string key)
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+Action$<$ float $>$ \mbox{\hyperlink{classBaseSkill_aa1c4f55cbe61c4c3a12b24d4d449c62e}{on\+Release}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+static Action$<$ float $>$ \mbox{\hyperlink{classBaseSkill_a3dd9cce5521ed79dd3f20621696dfc68}{on\+Cast}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные данные}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classBaseSkill_a2b24fcdfe60cd1dc979df141d7bc3fac}{skill\+Name}}
+\item 
+string \mbox{\hyperlink{classBaseSkill_a9c9f490e37e271b779667d6a9d09cb00}{skill\+Description}}
+\item 
+int \mbox{\hyperlink{classBaseSkill_af276bbe6f5727d7da4ba46d5ca2495c8}{energy\+Cost}}
+\item 
+float \mbox{\hyperlink{classBaseSkill_acfadedea7ab497811fd75b4d270afe88}{cast\+Time}}
+\item 
+float \mbox{\hyperlink{classBaseSkill_ae335d7d75c1fe7b3d9c403201800bd42}{cooldown}}
+\item 
+bool \mbox{\hyperlink{classBaseSkill_afb8e0a352bec9b1cb9a23446b73cdf43}{cancel\+Movement\+On\+Cast}}
+\item 
+Sprite \mbox{\hyperlink{classBaseSkill_ad556677017c2091c1054012b7023df9d}{skill\+Sprite}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00007}{7}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classBaseSkill_a7fbc176ad74b385d024e7e0aecdbbb2c}\label{classBaseSkill_a7fbc176ad74b385d024e7e0aecdbbb2c}} 
+\index{BaseSkill@{BaseSkill}!GetDescription@{GetDescription}}
+\index{GetDescription@{GetDescription}!BaseSkill@{BaseSkill}}
+\doxysubsubsection{\texorpdfstring{GetDescription()}{GetDescription()}}
+{\footnotesize\ttfamily string Base\+Skill.\+Get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00035}{35}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036     \{}
+\DoxyCodeLine{00037         \textcolor{keywordflow}{return} skillDescription;}
+\DoxyCodeLine{00038     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseSkill_abe19009601b6a62a430038563e01dfd3}\label{classBaseSkill_abe19009601b6a62a430038563e01dfd3}} 
+\index{BaseSkill@{BaseSkill}!GetName@{GetName}}
+\index{GetName@{GetName}!BaseSkill@{BaseSkill}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily string Base\+Skill.\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00030}{30}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031     \{}
+\DoxyCodeLine{00032         \textcolor{keywordflow}{return} skillName;}
+\DoxyCodeLine{00033     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseSkill_ac76f144bb87cfcbb25f464d75c301b7b}\label{classBaseSkill_ac76f144bb87cfcbb25f464d75c301b7b}} 
+\index{BaseSkill@{BaseSkill}!GetSprite@{GetSprite}}
+\index{GetSprite@{GetSprite}!BaseSkill@{BaseSkill}}
+\doxysubsubsection{\texorpdfstring{GetSprite()}{GetSprite()}}
+{\footnotesize\ttfamily Sprite Base\+Skill.\+Get\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00040}{40}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041     \{}
+\DoxyCodeLine{00042         \textcolor{keywordflow}{return} skillSprite;}
+\DoxyCodeLine{00043     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseSkill_a3c6e32f82bb8d3e35aade6acae55d11f}\label{classBaseSkill_a3c6e32f82bb8d3e35aade6acae55d11f}} 
+\index{BaseSkill@{BaseSkill}!UseSkill@{UseSkill}}
+\index{UseSkill@{UseSkill}!BaseSkill@{BaseSkill}}
+\doxysubsubsection{\texorpdfstring{UseSkill()}{UseSkill()}}
+{\footnotesize\ttfamily virtual IEnumerator Base\+Skill.\+Use\+Skill (\begin{DoxyParamCaption}\item[{Game\+Object}]{caster,  }\item[{string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00048}{48}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048                                                                        \{}
+\DoxyCodeLine{00049         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForSeconds(0.0f);}
+\DoxyCodeLine{00050     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classBaseSkill_afb8e0a352bec9b1cb9a23446b73cdf43}\label{classBaseSkill_afb8e0a352bec9b1cb9a23446b73cdf43}} 
+\index{BaseSkill@{BaseSkill}!cancelMovementOnCast@{cancelMovementOnCast}}
+\index{cancelMovementOnCast@{cancelMovementOnCast}!BaseSkill@{BaseSkill}}
+\doxysubsubsection{\texorpdfstring{cancelMovementOnCast}{cancelMovementOnCast}}
+{\footnotesize\ttfamily bool Base\+Skill.\+cancel\+Movement\+On\+Cast\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00025}{25}}
+
+\mbox{\Hypertarget{classBaseSkill_acfadedea7ab497811fd75b4d270afe88}\label{classBaseSkill_acfadedea7ab497811fd75b4d270afe88}} 
+\index{BaseSkill@{BaseSkill}!castTime@{castTime}}
+\index{castTime@{castTime}!BaseSkill@{BaseSkill}}
+\doxysubsubsection{\texorpdfstring{castTime}{castTime}}
+{\footnotesize\ttfamily float Base\+Skill.\+cast\+Time\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00019}{19}}
+
+\mbox{\Hypertarget{classBaseSkill_ae335d7d75c1fe7b3d9c403201800bd42}\label{classBaseSkill_ae335d7d75c1fe7b3d9c403201800bd42}} 
+\index{BaseSkill@{BaseSkill}!cooldown@{cooldown}}
+\index{cooldown@{cooldown}!BaseSkill@{BaseSkill}}
+\doxysubsubsection{\texorpdfstring{cooldown}{cooldown}}
+{\footnotesize\ttfamily float Base\+Skill.\+cooldown\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00022}{22}}
+
+\mbox{\Hypertarget{classBaseSkill_af276bbe6f5727d7da4ba46d5ca2495c8}\label{classBaseSkill_af276bbe6f5727d7da4ba46d5ca2495c8}} 
+\index{BaseSkill@{BaseSkill}!energyCost@{energyCost}}
+\index{energyCost@{energyCost}!BaseSkill@{BaseSkill}}
+\doxysubsubsection{\texorpdfstring{energyCost}{energyCost}}
+{\footnotesize\ttfamily int Base\+Skill.\+energy\+Cost\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00016}{16}}
+
+\mbox{\Hypertarget{classBaseSkill_a3dd9cce5521ed79dd3f20621696dfc68}\label{classBaseSkill_a3dd9cce5521ed79dd3f20621696dfc68}} 
+\index{BaseSkill@{BaseSkill}!onCast@{onCast}}
+\index{onCast@{onCast}!BaseSkill@{BaseSkill}}
+\doxysubsubsection{\texorpdfstring{onCast}{onCast}}
+{\footnotesize\ttfamily Action$<$float$>$ Base\+Skill.\+on\+Cast\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00045}{45}}
+
+\mbox{\Hypertarget{classBaseSkill_aa1c4f55cbe61c4c3a12b24d4d449c62e}\label{classBaseSkill_aa1c4f55cbe61c4c3a12b24d4d449c62e}} 
+\index{BaseSkill@{BaseSkill}!onRelease@{onRelease}}
+\index{onRelease@{onRelease}!BaseSkill@{BaseSkill}}
+\doxysubsubsection{\texorpdfstring{onRelease}{onRelease}}
+{\footnotesize\ttfamily Action$<$float$>$ Base\+Skill.\+on\+Release}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00046}{46}}
+
+\mbox{\Hypertarget{classBaseSkill_a9c9f490e37e271b779667d6a9d09cb00}\label{classBaseSkill_a9c9f490e37e271b779667d6a9d09cb00}} 
+\index{BaseSkill@{BaseSkill}!skillDescription@{skillDescription}}
+\index{skillDescription@{skillDescription}!BaseSkill@{BaseSkill}}
+\doxysubsubsection{\texorpdfstring{skillDescription}{skillDescription}}
+{\footnotesize\ttfamily string Base\+Skill.\+skill\+Description\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00013}{13}}
+
+\mbox{\Hypertarget{classBaseSkill_a2b24fcdfe60cd1dc979df141d7bc3fac}\label{classBaseSkill_a2b24fcdfe60cd1dc979df141d7bc3fac}} 
+\index{BaseSkill@{BaseSkill}!skillName@{skillName}}
+\index{skillName@{skillName}!BaseSkill@{BaseSkill}}
+\doxysubsubsection{\texorpdfstring{skillName}{skillName}}
+{\footnotesize\ttfamily string Base\+Skill.\+skill\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00010}{10}}
+
+\mbox{\Hypertarget{classBaseSkill_ad556677017c2091c1054012b7023df9d}\label{classBaseSkill_ad556677017c2091c1054012b7023df9d}} 
+\index{BaseSkill@{BaseSkill}!skillSprite@{skillSprite}}
+\index{skillSprite@{skillSprite}!BaseSkill@{BaseSkill}}
+\doxysubsubsection{\texorpdfstring{skillSprite}{skillSprite}}
+{\footnotesize\ttfamily Sprite Base\+Skill.\+skill\+Sprite\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00028}{28}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Game/\+Base\+Objects/Base\+Skill.\+cs\end{DoxyCompactItemize}

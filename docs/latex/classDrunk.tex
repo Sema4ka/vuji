@@ -1,0 +1,89 @@
+\hypertarget{classDrunk}{}\doxysection{Класс Drunk}
+\label{classDrunk}\index{Drunk@{Drunk}}
+Граф наследования\+:Drunk\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classDrunk}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{classDrunk_adac02d916e92271089fbc8a3edfc5eea}{Apply\+Effect}} (Game\+Object entity)
+\item 
+IEnumerator \mbox{\hyperlink{classDrunk_a2e15ef6ecb2a2bddb40099fc2de60ee1}{Drunk\+Effect}} (Game\+Object entity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classDrunk_aa33da81f491906d89ea81fdfe22cfab5}{additional\+Defense}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{Drunk_8cs_source}{Drunk.\+cs}} строка \mbox{\hyperlink{Drunk_8cs_source_l00005}{5}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classDrunk_adac02d916e92271089fbc8a3edfc5eea}\label{classDrunk_adac02d916e92271089fbc8a3edfc5eea}} 
+\index{Drunk@{Drunk}!ApplyEffect@{ApplyEffect}}
+\index{ApplyEffect@{ApplyEffect}!Drunk@{Drunk}}
+\doxysubsubsection{\texorpdfstring{ApplyEffect()}{ApplyEffect()}}
+{\footnotesize\ttfamily override void Drunk.\+Apply\+Effect (\begin{DoxyParamCaption}\item[{Game\+Object}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Переопределяет метод предка \mbox{\hyperlink{classBaseEffect}{Base\+Effect}}.
+
+
+
+См. определение в файле \mbox{\hyperlink{Drunk_8cs_source}{Drunk.\+cs}} строка \mbox{\hyperlink{Drunk_8cs_source_l00010}{10}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011     \{}
+\DoxyCodeLine{00012         base.ApplyEffect(entity);}
+\DoxyCodeLine{00013         entity.gameObject.GetComponent<MonoBehaviour>().StartCoroutine(DrunkEffect(entity));}
+\DoxyCodeLine{00014     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classDrunk_a2e15ef6ecb2a2bddb40099fc2de60ee1}\label{classDrunk_a2e15ef6ecb2a2bddb40099fc2de60ee1}} 
+\index{Drunk@{Drunk}!DrunkEffect@{DrunkEffect}}
+\index{DrunkEffect@{DrunkEffect}!Drunk@{Drunk}}
+\doxysubsubsection{\texorpdfstring{DrunkEffect()}{DrunkEffect()}}
+{\footnotesize\ttfamily IEnumerator Drunk.\+Drunk\+Effect (\begin{DoxyParamCaption}\item[{Game\+Object}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{Drunk_8cs_source}{Drunk.\+cs}} строка \mbox{\hyperlink{Drunk_8cs_source_l00016}{16}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016                                                      \{}
+\DoxyCodeLine{00017         entity.GetComponent<\mbox{\hyperlink{classBaseEntity}{BaseEntity}}>().IncreaseDefense(additionalDefense);}
+\DoxyCodeLine{00018         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForSeconds(duration);}
+\DoxyCodeLine{00019         entity.GetComponent<\mbox{\hyperlink{classBaseEntity}{BaseEntity}}>().DecreaseDefense(additionalDefense);}
+\DoxyCodeLine{00020     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classDrunk_aa33da81f491906d89ea81fdfe22cfab5}\label{classDrunk_aa33da81f491906d89ea81fdfe22cfab5}} 
+\index{Drunk@{Drunk}!additionalDefense@{additionalDefense}}
+\index{additionalDefense@{additionalDefense}!Drunk@{Drunk}}
+\doxysubsubsection{\texorpdfstring{additionalDefense}{additionalDefense}}
+{\footnotesize\ttfamily int Drunk.\+additional\+Defense}
+
+
+
+См. определение в файле \mbox{\hyperlink{Drunk_8cs_source}{Drunk.\+cs}} строка \mbox{\hyperlink{Drunk_8cs_source_l00008}{8}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Game/\+Effects/Drunk.\+cs\end{DoxyCompactItemize}

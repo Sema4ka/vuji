@@ -1,0 +1,52 @@
+\hypertarget{SoundManager_8cs_source}{}\doxysection{Sound\+Manager.\+cs}
+\label{SoundManager_8cs_source}\index{Vuji/Assets/Scripts/Game/Sounds/SoundManager.cs@{Vuji/Assets/Scripts/Game/Sounds/SoundManager.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00001}00001 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00003}00003 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00005}\mbox{\hyperlink{classSoundManager}{00005}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classSoundManager}{SoundManager}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00007}00007     [SerializeField] \textcolor{keywordtype}{string} Category;}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00008}00008     [SerializeField] AudioSource source;}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00009}00009     \textcolor{keyword}{private} \textcolor{keywordtype}{bool} volumeSet = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00010}00010     \textcolor{keyword}{private} \textcolor{keywordtype}{float} volume;}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00011}00011     \textcolor{comment}{// Start is called before the first frame update}}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00012}00012     \textcolor{keywordtype}{void} Start()}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00014}00014         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classSoundSettings}{SoundSettings}}.instance == \textcolor{keyword}{null}) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00015}00015         volume = \mbox{\hyperlink{classSoundSettings}{SoundSettings}}.instance.\mbox{\hyperlink{classSoundSettings_a0b4686d7e0fbbfd36ef5379094d02993}{GetVolume}}(Category);}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00016}00016         source.volume = volume * \mbox{\hyperlink{classSoundSettings}{SoundSettings}}.instance.\mbox{\hyperlink{classSoundSettings_a0b4686d7e0fbbfd36ef5379094d02993}{GetVolume}}(\textcolor{stringliteral}{"{}General volume"{}});}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00017}00017         SoundSettings.volumeChange += VolumeUpdated;}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00018}00018         volumeSet = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00019}00019     \}}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00020}00020     \textcolor{keyword}{private} \textcolor{keywordtype}{void} OnDestroy()}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00021}00021     \{}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00022}00022         SoundSettings.volumeChange -\/= VolumeUpdated;}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00023}00023     \}}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00025}00025     \textcolor{keyword}{private} \textcolor{keywordtype}{void} Update()}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00026}00026     \{}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00027}00027         \textcolor{keywordflow}{if} (volumeSet || \mbox{\hyperlink{classSoundSettings}{SoundSettings}}.instance == \textcolor{keyword}{null}) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00028}00028         volume = \mbox{\hyperlink{classSoundSettings}{SoundSettings}}.instance.\mbox{\hyperlink{classSoundSettings_a0b4686d7e0fbbfd36ef5379094d02993}{GetVolume}}(Category);}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00029}00029         source.volume = volume * \mbox{\hyperlink{classSoundSettings}{SoundSettings}}.instance.\mbox{\hyperlink{classSoundSettings_a0b4686d7e0fbbfd36ef5379094d02993}{GetVolume}}(\textcolor{stringliteral}{"{}General volume"{}});}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00030}00030         SoundSettings.volumeChange += VolumeUpdated;}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00031}00031         volumeSet = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00032}00032     \}}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00034}00034     \textcolor{keywordtype}{void} VolumeUpdated(\textcolor{keywordtype}{string} name, \textcolor{keywordtype}{float} value)}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00035}00035     \{}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00036}00036         \textcolor{keywordflow}{if} (name == Category)}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00037}00037         \{}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00038}00038             source.volume = value * \mbox{\hyperlink{classSoundSettings}{SoundSettings}}.instance.\mbox{\hyperlink{classSoundSettings_a0b4686d7e0fbbfd36ef5379094d02993}{GetVolume}}(\textcolor{stringliteral}{"{}General volume"{}});}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00039}00039             volume = value;}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00040}00040         \}}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00041}00041         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name == \textcolor{stringliteral}{"{}General volume"{}})}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00042}00042         \{}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00043}00043             source.volume = volume * value;}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00044}00044         \}}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00045}00045     \}}
+\DoxyCodeLine{\Hypertarget{SoundManager_8cs_source_l00046}00046 \}}
+
+\end{DoxyCode}

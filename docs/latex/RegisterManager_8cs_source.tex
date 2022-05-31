@@ -1,0 +1,40 @@
+\hypertarget{RegisterManager_8cs_source}{}\doxysection{Register\+Manager.\+cs}
+\label{RegisterManager_8cs_source}\index{Vuji/Assets/Scripts/Authorization/Register/RegisterManager.cs@{Vuji/Assets/Scripts/Authorization/Register/RegisterManager.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00001}00001 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00003}00003 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00004}00004 \textcolor{keyword}{using }UnityEngine.UI;}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00005}00005 \textcolor{keyword}{using }UnityEngine.SceneManagement;}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00007}\mbox{\hyperlink{classRegisterManager}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classRegisterManager}{RegisterManager}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00009}00009     \textcolor{keyword}{private} \mbox{\hyperlink{classControllers}{Controllers}} \_controllers;}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00010}00010     \textcolor{keyword}{public} InputField loginInput;}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00011}00011     \textcolor{keyword}{public} InputField passwordOneInput;}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00012}00012     \textcolor{keyword}{public} InputField passwordTwoInput;}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00014}00014     \textcolor{keywordtype}{void} Start()}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00015}00015     \{}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00016}00016         Screen.SetResolution(1054, 593, \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00017}00017         \_controllers = GetComponent<Controllers>();}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00018}00018     \}}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00023}\mbox{\hyperlink{classRegisterManager_aaff776f42312682084090fe597cde777}{00023}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRegisterManager_aaff776f42312682084090fe597cde777}{RegisterAccount}}()}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00024}00024     \{}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00025}00025         \textcolor{keywordflow}{if} (passwordOneInput.text != passwordTwoInput.text)}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00026}00026         \{}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00027}00027             Debug.Log(\textcolor{stringliteral}{"{}password error"{}});}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00028}00028             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00029}00029         \}}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00030}00030         \_controllers.Register(loginInput.text, passwordOneInput.text);}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00031}00031     \}}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00033}00033     \textcolor{keyword}{public} \textcolor{keywordtype}{void} ShowLoginScene()}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00034}00034     \{}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00035}00035         SceneManager.LoadScene(\textcolor{stringliteral}{"{}Login"{}});}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00036}00036     \}}
+\DoxyCodeLine{\Hypertarget{RegisterManager_8cs_source_l00037}00037 \}}
+
+\end{DoxyCode}

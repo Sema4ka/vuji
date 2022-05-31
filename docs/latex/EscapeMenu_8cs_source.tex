@@ -1,0 +1,62 @@
+\hypertarget{EscapeMenu_8cs_source}{}\doxysection{Escape\+Menu.\+cs}
+\label{EscapeMenu_8cs_source}\index{Vuji/Assets/Scripts/UIScripts/EscapeMenu.cs@{Vuji/Assets/Scripts/UIScripts/EscapeMenu.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00001}00001 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00003}00003 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00004}00004 \textcolor{keyword}{using }UnityEngine.SceneManagement;}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00005}00005 \textcolor{keyword}{using }Photon.Pun;}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00007}\mbox{\hyperlink{classEscapeMenu}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classEscapeMenu}{EscapeMenu}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00009}00009     [SerializeField] \textcolor{keyword}{private} RectTransform menuPanel;}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00010}00010     [SerializeField] \textcolor{keyword}{private} RectTransform settingsPanel;}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00012}00012     \textcolor{comment}{// Start is called before the first frame update}}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00013}00013     \textcolor{keywordtype}{void} Start()}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00014}00014     \{}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00015}00015         KeyHandler.keyPressed += KeyPressed;}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00016}00016     \}}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00017}00017     \textcolor{keyword}{private} \textcolor{keywordtype}{void} OnDestroy()}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00018}00018     \{}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00019}00019         KeyHandler.keyPressed -\/= KeyPressed;}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00020}00020     \}}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00022}00022     \textcolor{keywordtype}{void} KeyPressed(\textcolor{keywordtype}{string} name, KeyCode key)}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00023}00023     \{}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00024}00024         var keyHandler = \mbox{\hyperlink{classKeyHandler}{KeyHandler}}.instance;}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00025}00025         \textcolor{keywordflow}{if} (name == \textcolor{stringliteral}{"{}EscapeMenu"{}})}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00026}00026         \{}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00027}00027             \textcolor{keywordflow}{if} (keyHandler.GetUIOpened())}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00028}00028             \{}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00029}00029                 keyHandler.\mbox{\hyperlink{classKeyHandler_ad911f5143829f9bfddd07dba72e4b470}{SetUIOpened}}(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00030}00030                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00031}00031             \}}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00032}00032             menuPanel.gameObject.SetActive(!menuPanel.gameObject.activeSelf);}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00033}00033             keyHandler.Pause(menuPanel.gameObject.activeSelf);}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00034}00034         \}}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00035}00035     \}}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00036}00036     \textcolor{keyword}{public} \textcolor{keywordtype}{void} LeaveLobby()}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00037}00037     \{}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00038}00038         PhotonNetwork.LeaveRoom();}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00039}00039         SceneManager.LoadScene(\textcolor{stringliteral}{"{}Lobby"{}});}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00040}00040     \}}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00041}00041     \textcolor{keyword}{public} \textcolor{keywordtype}{void} OpenSettings()}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00042}00042     \{}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00043}00043         settingsPanel.gameObject.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00044}00044         menuPanel.gameObject.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00045}00045         \mbox{\hyperlink{classKeyHandler}{KeyHandler}}.instance.\mbox{\hyperlink{classKeyHandler_ad911f5143829f9bfddd07dba72e4b470}{SetUIOpened}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00046}00046     \}}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00047}00047     \textcolor{keyword}{public} \textcolor{keywordtype}{void} ResumeGame()}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00048}00048     \{}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00049}00049         menuPanel.gameObject.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00050}00050         \mbox{\hyperlink{classKeyHandler}{KeyHandler}}.instance.\mbox{\hyperlink{classKeyHandler_a709aa3a10f129eafc0fcb1815f35d43d}{Pause}}(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00051}00051     \}}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00052}00052     \textcolor{keyword}{public} \textcolor{keywordtype}{void} LeaveGame()}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00053}00053     \{}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00054}00054         Application.Quit();}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00055}00055     \}}
+\DoxyCodeLine{\Hypertarget{EscapeMenu_8cs_source_l00056}00056 \}}
+
+\end{DoxyCode}

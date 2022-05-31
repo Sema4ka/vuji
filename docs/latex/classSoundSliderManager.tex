@@ -1,0 +1,107 @@
+\hypertarget{classSoundSliderManager}{}\doxysection{Класс Sound\+Slider\+Manager}
+\label{classSoundSliderManager}\index{SoundSliderManager@{SoundSliderManager}}
+Граф наследования\+:Sound\+Slider\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSoundSliderManager}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classSoundSliderManager_a2b34fedbc148b265f72c0e95f788ccfe}{Value\+Changed}} ()
+\item 
+void \mbox{\hyperlink{classSoundSliderManager_ae32c2ccf67516407ddb1f73d022af403}{Set\+Name}} (string new\+Name)
+\item 
+void \mbox{\hyperlink{classSoundSliderManager_ad242020d6d457bcb427d2daee78266c7}{Set\+Value}} (float value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+static Action$<$ string, float $>$ \mbox{\hyperlink{classSoundSliderManager_a47d2a09b96502e7a146db9b220f862b5}{on\+Value\+Change}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{SoundSliderManager_8cs_source}{Sound\+Slider\+Manager.\+cs}} строка \mbox{\hyperlink{SoundSliderManager_8cs_source_l00007}{7}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classSoundSliderManager_ae32c2ccf67516407ddb1f73d022af403}\label{classSoundSliderManager_ae32c2ccf67516407ddb1f73d022af403}} 
+\index{SoundSliderManager@{SoundSliderManager}!SetName@{SetName}}
+\index{SetName@{SetName}!SoundSliderManager@{SoundSliderManager}}
+\doxysubsubsection{\texorpdfstring{SetName()}{SetName()}}
+{\footnotesize\ttfamily void Sound\+Slider\+Manager.\+Set\+Name (\begin{DoxyParamCaption}\item[{string}]{new\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{SoundSliderManager_8cs_source}{Sound\+Slider\+Manager.\+cs}} строка \mbox{\hyperlink{SoundSliderManager_8cs_source_l00027}{27}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028     \{}
+\DoxyCodeLine{00029         text.text = newName;}
+\DoxyCodeLine{00030     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSoundSliderManager_ad242020d6d457bcb427d2daee78266c7}\label{classSoundSliderManager_ad242020d6d457bcb427d2daee78266c7}} 
+\index{SoundSliderManager@{SoundSliderManager}!SetValue@{SetValue}}
+\index{SetValue@{SetValue}!SoundSliderManager@{SoundSliderManager}}
+\doxysubsubsection{\texorpdfstring{SetValue()}{SetValue()}}
+{\footnotesize\ttfamily void Sound\+Slider\+Manager.\+Set\+Value (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{SoundSliderManager_8cs_source}{Sound\+Slider\+Manager.\+cs}} строка \mbox{\hyperlink{SoundSliderManager_8cs_source_l00031}{31}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032     \{}
+\DoxyCodeLine{00033         oldValue = value;}
+\DoxyCodeLine{00034         slider.value = value;}
+\DoxyCodeLine{00035     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSoundSliderManager_a2b34fedbc148b265f72c0e95f788ccfe}\label{classSoundSliderManager_a2b34fedbc148b265f72c0e95f788ccfe}} 
+\index{SoundSliderManager@{SoundSliderManager}!ValueChanged@{ValueChanged}}
+\index{ValueChanged@{ValueChanged}!SoundSliderManager@{SoundSliderManager}}
+\doxysubsubsection{\texorpdfstring{ValueChanged()}{ValueChanged()}}
+{\footnotesize\ttfamily void Sound\+Slider\+Manager.\+Value\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{SoundSliderManager_8cs_source}{Sound\+Slider\+Manager.\+cs}} строка \mbox{\hyperlink{SoundSliderManager_8cs_source_l00016}{16}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017     \{}
+\DoxyCodeLine{00018         \textcolor{keywordflow}{if} (oldValue != slider.value)}
+\DoxyCodeLine{00019         \{}
+\DoxyCodeLine{00020             onValueChange?.Invoke(text.text, slider.value);}
+\DoxyCodeLine{00021             oldValue = slider.value;}
+\DoxyCodeLine{00022         \}}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classSoundSliderManager_a47d2a09b96502e7a146db9b220f862b5}\label{classSoundSliderManager_a47d2a09b96502e7a146db9b220f862b5}} 
+\index{SoundSliderManager@{SoundSliderManager}!onValueChange@{onValueChange}}
+\index{onValueChange@{onValueChange}!SoundSliderManager@{SoundSliderManager}}
+\doxysubsubsection{\texorpdfstring{onValueChange}{onValueChange}}
+{\footnotesize\ttfamily Action$<$string, float$>$ Sound\+Slider\+Manager.\+on\+Value\+Change\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{SoundSliderManager_8cs_source}{Sound\+Slider\+Manager.\+cs}} строка \mbox{\hyperlink{SoundSliderManager_8cs_source_l00012}{12}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+UIScripts/Sound\+Slider\+Manager.\+cs\end{DoxyCompactItemize}

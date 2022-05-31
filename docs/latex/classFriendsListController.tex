@@ -1,0 +1,126 @@
+\hypertarget{classFriendsListController}{}\doxysection{Класс Friends\+List\+Controller}
+\label{classFriendsListController}\index{FriendsListController@{FriendsListController}}
+Граф наследования\+:Friends\+List\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classFriendsListController}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classFriendsListController_a484d06175495dc41e793b5baa2c0af72}{Open\+Friends\+List}} ()
+\begin{DoxyCompactList}\small\item\em Метод открывает/скрывает список друзей  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFriendsListController_a13257206d6a8a35d02ad3be9a286a8ca}{Find\+Friends\+By\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Метод для поиск пользователь с похожем именем Затем в корутине будет вызван метод Fill\+Friends\+List из \mbox{\hyperlink{classControllers}{Controllers}}  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFriendsListController_ab6d5dbe01cb3521cdb941a1c9a141be3}{Fill\+Friends\+List}} (\mbox{\hyperlink{classStructsResponse_1_1UserInfoObject}{User\+Info\+Object}}\mbox{[}$\,$\mbox{]} user\+Info\+Objects)
+\begin{DoxyCompactList}\small\item\em Заполнение Scroll\+View префабами найденых пользователей  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{FriendsListController_8cs_source}{Friends\+List\+Controller.\+cs}} строка \mbox{\hyperlink{FriendsListController_8cs_source_l00005}{5}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classFriendsListController_ab6d5dbe01cb3521cdb941a1c9a141be3}\label{classFriendsListController_ab6d5dbe01cb3521cdb941a1c9a141be3}} 
+\index{FriendsListController@{FriendsListController}!FillFriendsList@{FillFriendsList}}
+\index{FillFriendsList@{FillFriendsList}!FriendsListController@{FriendsListController}}
+\doxysubsubsection{\texorpdfstring{FillFriendsList()}{FillFriendsList()}}
+{\footnotesize\ttfamily void Friends\+List\+Controller.\+Fill\+Friends\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classStructsResponse_1_1UserInfoObject}{User\+Info\+Object}}\mbox{[}$\,$\mbox{]}}]{user\+Info\+Objects }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Заполнение Scroll\+View префабами найденых пользователей  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em user\+Info\+Objects} & массив всех найденных пользователей и информации о них.\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{FriendsListController_8cs_source}{Friends\+List\+Controller.\+cs}} строка \mbox{\hyperlink{FriendsListController_8cs_source_l00059}{59}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060     \{}
+\DoxyCodeLine{00061         \textcolor{comment}{// удалить всех старых пользователей}}
+\DoxyCodeLine{00062         \textcolor{keywordflow}{foreach} (Transform child \textcolor{keywordflow}{in} uiFriendListScrollContent)}
+\DoxyCodeLine{00063         \{}
+\DoxyCodeLine{00064             Destroy(child.gameObject);}
+\DoxyCodeLine{00065         \}}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00067         \textcolor{comment}{// добавить новых пользователей}}
+\DoxyCodeLine{00068         \textcolor{keywordflow}{foreach} (var userinfo \textcolor{keywordflow}{in} userInfoObjects)}
+\DoxyCodeLine{00069         \{}
+\DoxyCodeLine{00070             \textcolor{comment}{// берем префаб и заполняем его поля}}
+\DoxyCodeLine{00071             var friendItem = uiFriendItemPrefab.gameObject.GetComponent<\mbox{\hyperlink{classFriendItemManager}{FriendItemManager}}>();}
+\DoxyCodeLine{00072             friendItem.userID = userinfo.userID;}
+\DoxyCodeLine{00073             friendItem.usernameTextField.text = userinfo.username;}
+\DoxyCodeLine{00074             friendItem.lobbyManager = gameObject.GetComponent<\mbox{\hyperlink{classLobbyManager}{LobbyManager}}>();}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076             \textcolor{comment}{// инициализируем поле установив его родителя как ScrollContent}}
+\DoxyCodeLine{00077             var instance = Instantiate(friendItem.gameObject);}
+\DoxyCodeLine{00078             instance.transform.SetParent(uiFriendListScrollContent.transform, \textcolor{keyword}{false});}
+\DoxyCodeLine{00079         \}}
+\DoxyCodeLine{00080     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFriendsListController_a13257206d6a8a35d02ad3be9a286a8ca}\label{classFriendsListController_a13257206d6a8a35d02ad3be9a286a8ca}} 
+\index{FriendsListController@{FriendsListController}!FindFriendsByName@{FindFriendsByName}}
+\index{FindFriendsByName@{FindFriendsByName}!FriendsListController@{FriendsListController}}
+\doxysubsubsection{\texorpdfstring{FindFriendsByName()}{FindFriendsByName()}}
+{\footnotesize\ttfamily void Friends\+List\+Controller.\+Find\+Friends\+By\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Метод для поиск пользователь с похожем именем Затем в корутине будет вызван метод Fill\+Friends\+List из \mbox{\hyperlink{classControllers}{Controllers}}  
+
+
+
+См. определение в файле \mbox{\hyperlink{FriendsListController_8cs_source}{Friends\+List\+Controller.\+cs}} строка \mbox{\hyperlink{FriendsListController_8cs_source_l00049}{49}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050     \{}
+\DoxyCodeLine{00051         var friendsName = friendsNameInputField.text;}
+\DoxyCodeLine{00052         \_controllers.FindFriendsByName(friendsName);}
+\DoxyCodeLine{00053     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFriendsListController_a484d06175495dc41e793b5baa2c0af72}\label{classFriendsListController_a484d06175495dc41e793b5baa2c0af72}} 
+\index{FriendsListController@{FriendsListController}!OpenFriendsList@{OpenFriendsList}}
+\index{OpenFriendsList@{OpenFriendsList}!FriendsListController@{FriendsListController}}
+\doxysubsubsection{\texorpdfstring{OpenFriendsList()}{OpenFriendsList()}}
+{\footnotesize\ttfamily void Friends\+List\+Controller.\+Open\+Friends\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Метод открывает/скрывает список друзей  
+
+
+
+См. определение в файле \mbox{\hyperlink{FriendsListController_8cs_source}{Friends\+List\+Controller.\+cs}} строка \mbox{\hyperlink{FriendsListController_8cs_source_l00033}{33}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034     \{}
+\DoxyCodeLine{00035         \textcolor{keywordflow}{if} (uiFriendsList.activeSelf)}
+\DoxyCodeLine{00036         \{}
+\DoxyCodeLine{00037             uiFriendsList.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{00038         \}}
+\DoxyCodeLine{00039         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00040         \{}
+\DoxyCodeLine{00041             uiFriendsList.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{00042         \}}
+\DoxyCodeLine{00043     \}}
+
+\end{DoxyCode}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Lobby/Friends\+List\+Controller.\+cs\end{DoxyCompactItemize}

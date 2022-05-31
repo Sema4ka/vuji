@@ -1,0 +1,61 @@
+\hypertarget{EndGameManager_8cs_source}{}\doxysection{End\+Game\+Manager.\+cs}
+\label{EndGameManager_8cs_source}\index{Vuji/Assets/Scripts/UIScripts/EndGameManager.cs@{Vuji/Assets/Scripts/UIScripts/EndGameManager.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00001}00001 \textcolor{keyword}{using }System;}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00003}00003 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00004}00004 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00005}00005 \textcolor{keyword}{using }UnityEngine.UI;}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00006}00006 \textcolor{keyword}{using }UnityEngine.SceneManagement;}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00007}00007 \textcolor{keyword}{using }Photon.Pun;}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00008}00008 \textcolor{keyword}{using }Photon.Pun.UtilityScripts;}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00010}\mbox{\hyperlink{classEndGameManager}{00010}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classEndGameManager}{EndGameManager}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00012}00012     [SerializeField] Image image;}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00013}00013     [SerializeField] Text text;}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00014}00014     [SerializeField] GameObject panel;}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00016}00016     [SerializeField] GameObject UiCanvas;}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00017}00017     [SerializeField] GameObject GameManager;}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00019}00019     \textcolor{keyword}{public} \textcolor{keyword}{static} Action<bool> temp;}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00021}00021     \textcolor{comment}{// Start is called before the first frame update}}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00022}00022     \textcolor{keywordtype}{void} Start()}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00023}00023     \{}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00024}00024         EndGame.OnGameEnd += OnGameEnd;}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00026}00026     \}}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00027}00027     \textcolor{keyword}{private} \textcolor{keywordtype}{void} OnDestroy()}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00028}00028     \{}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00029}00029         EndGame.OnGameEnd -\/= OnGameEnd;}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00030}00030     \}}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00032}00032     \textcolor{keywordtype}{void} OnGameEnd(\textcolor{keywordtype}{string} teamName)}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00033}00033     \{}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00034}00034         panel.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00035}00035         \textcolor{keywordflow}{if} (PhotonNetwork.LocalPlayer.GetPhotonTeam().Name != teamName)}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00036}00036         \{}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00037}00037             image.color = Color.blue;}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00038}00038             text.text = \textcolor{stringliteral}{"{}Victory"{}};}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00039}00039         \}}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00040}00040         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00041}00041         \{}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00042}00042             image.color = Color.red;}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00043}00043             text.text = \textcolor{stringliteral}{"{}Defeat"{}};}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00044}00044         \}}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00045}00045         PhotonNetwork.LocalPlayer.LeaveCurrentTeam();}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00046}00046         PhotonNetwork.LeaveRoom();}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00047}00047     \}}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00049}00049     \textcolor{keyword}{public} \textcolor{keywordtype}{void} LeaveGame()}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00050}00050     \{}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00051}00051         Destroy(UiCanvas);}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00052}00052         Destroy(GameManager);}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00053}00053         SceneManager.LoadScene(\textcolor{stringliteral}{"{}Lobby"{}});}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00054}00054     \}}
+\DoxyCodeLine{\Hypertarget{EndGameManager_8cs_source_l00055}00055 \}}
+
+\end{DoxyCode}

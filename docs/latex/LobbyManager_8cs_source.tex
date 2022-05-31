@@ -1,0 +1,109 @@
+\hypertarget{LobbyManager_8cs_source}{}\doxysection{Lobby\+Manager.\+cs}
+\label{LobbyManager_8cs_source}\index{Vuji/Assets/Scripts/Lobby/LobbyManager.cs@{Vuji/Assets/Scripts/Lobby/LobbyManager.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00001}00001 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00002}00002 \textcolor{keyword}{using }UnityEngine.UI;}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00003}00003 \textcolor{keyword}{using }Photon.Pun;}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00004}00004 \textcolor{keyword}{using }Photon.Realtime;}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00005}00005 \textcolor{keyword}{using }UnityEngine.SceneManagement;}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00006}00006 \textcolor{keyword}{using }Random = UnityEngine.Random;}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00009}\mbox{\hyperlink{classLobbyManager}{00009}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classLobbyManager}{LobbyManager}} : MonoBehaviourPunCallbacks}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00011}00011 \textcolor{preprocessor}{    \#region Fields}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00013}00013     [SerializeField] \textcolor{keyword}{private} Text username;}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00014}00014     [SerializeField] GameObject settings;}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00015}00015     \textcolor{keyword}{private} \mbox{\hyperlink{classControllers}{Controllers}} \_controllers;}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00016}00016     \textcolor{comment}{// EMPTY; INLOBBY; SEARCHGAME}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00017}00017     \textcolor{keyword}{public} \textcolor{keywordtype}{string} playerStatus;}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00018}00018 \textcolor{preprocessor}{    \#endregion}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00020}00020 \textcolor{preprocessor}{    \#region Unity Methods}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00022}00022     \textcolor{keywordtype}{void} Start()}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00023}00023     \{}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00024}00024         \_controllers = GetComponent<Controllers>();}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00025}00025         \_controllers.SetLocalUserName(username);}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00026}00026         \textcolor{comment}{// username.text = PhotonNetwork.NickName; // SET TO USERNAME}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00027}00027     \}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00029}00029 \textcolor{preprocessor}{    \#endregion}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00031}00031 \textcolor{preprocessor}{    \#region Private Methods}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00036}00036     \textcolor{keyword}{private} \textcolor{keywordtype}{void} QuitGame()}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00037}00037     \{}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00038}00038         Application.Quit();}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00039}00039     \}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00044}00044     \textcolor{keyword}{private} \textcolor{keywordtype}{void} LeaveAccount()}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00045}00045     \{}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00046}00046         \_controllers.UserOffline();}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00047}00047         gameObject.GetComponent<\mbox{\hyperlink{classSocketServerController}{SocketServerController}}>().CloseConnection();}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00048}00048         SceneManager.LoadScene(\textcolor{stringliteral}{"{}Login"{}});}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00049}00049     \}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00051}00051 \textcolor{preprocessor}{    \#endregion}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00053}00053 \textcolor{preprocessor}{    \#region Public Methods}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00060}\mbox{\hyperlink{classLobbyManager_ad9a9f9118bdcc7c916bc9eb9a96a4a48}{00060}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classLobbyManager_ad9a9f9118bdcc7c916bc9eb9a96a4a48}{CreateInviteFriend}}(\textcolor{keywordtype}{int} invitedUserID, \textcolor{keywordtype}{string} roomName = \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00061}00061     \{}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00062}00062         var inviteFriend = gameObject.GetComponent<\mbox{\hyperlink{classInviteFriend}{InviteFriend}}>();}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00063}00063         inviteFriend.enabled = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00064}00064         inviteFriend.invitedUserID = invitedUserID;}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00065}00065         inviteFriend.roomName = roomName;}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00066}00066         inviteFriend.\mbox{\hyperlink{classInviteFriend_a05829b0b3f31b888d15065d26fb40d53}{StartInviteFriend}}();}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00067}00067     \}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00073}\mbox{\hyperlink{classLobbyManager_ad959fa3231125eed8b5e91fc8af3dbdd}{00073}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classLobbyManager_ad959fa3231125eed8b5e91fc8af3dbdd}{CreateLobbyAndInviteUser}}(\textcolor{keywordtype}{int} invitedUserID)}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00074}00074     \{}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00075}00075         var roomName = Random.Range(1000, 10000000).ToString();}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00076}00076         RoomOptions roomOptions = \textcolor{keyword}{new} RoomOptions() \{IsVisible = \textcolor{keyword}{false}, PublishUserId = \textcolor{keyword}{true}\};}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00077}00077         roomOptions.MaxPlayers = 2;}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00078}00078         \mbox{\hyperlink{classLobbyManager_ad9a9f9118bdcc7c916bc9eb9a96a4a48}{CreateInviteFriend}}(invitedUserID);}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00079}00079         gameObject.GetComponent<\mbox{\hyperlink{classLobbyManager}{LobbyManager}}>().playerStatus = \textcolor{stringliteral}{"{}INLOBBY"{}};}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00080}00080         PhotonNetwork.CreateRoom(roomName, roomOptions);}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00081}00081     \}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00087}\mbox{\hyperlink{classLobbyManager_adc7d3896d9a29e21cfe46bfab11f6a48}{00087}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classLobbyManager_adc7d3896d9a29e21cfe46bfab11f6a48}{AcceptInviteFriend}}(\textcolor{keywordtype}{string} roomName)}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00088}00088     \{}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00089}00089         var acceptFriendInvite = gameObject.GetComponent<\mbox{\hyperlink{classAcceptFriendInvite}{AcceptFriendInvite}}>();}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00090}00090         acceptFriendInvite.enabled = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00091}00091         acceptFriendInvite.roomName = roomName;}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00092}00092         acceptFriendInvite.\mbox{\hyperlink{classAcceptFriendInvite_a9542089150fd80e4aaff19fb0829ebcb}{StartAcceptInvite}}();}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00093}00093     \}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00094}00094     }
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00095}00095     \textcolor{keyword}{public} \textcolor{keywordtype}{void} ToggleSettings()}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00096}00096     \{}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00097}00097         settings.SetActive(!settings.activeSelf);}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00098}00098     \}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00100}00100     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} OnJoinedRoom()}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00101}00101     \{}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00102}00102         PhotonNetwork.LocalPlayer.NickName = username.text;}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00103}00103         \textcolor{keywordflow}{if} (playerStatus == \textcolor{stringliteral}{"{}INLOBBY"{}})}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00104}00104         \{}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00105}00105             Debug.Log(\textcolor{stringliteral}{"{}YOU JOIN IN ROOM: "{}} + PhotonNetwork.CurrentRoom.Name);}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00106}00106             gameObject.GetComponent<\mbox{\hyperlink{classLeaveRoom}{LeaveRoom}}>().ShowLeaveRoomButton();}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00107}00107         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (playerStatus == \textcolor{stringliteral}{"{}SEARCHGAME"{}})}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00108}00108         \{}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00109}00109             }
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00110}00110         \}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00111}00111     \}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00113}00113     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} OnConnectedToMaster()}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00114}00114     \{}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00115}00115         Debug.Log(\textcolor{stringliteral}{"{}YOU LEFT ROOM"{}});}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00116}00116         gameObject.GetComponent<\mbox{\hyperlink{classLeaveRoom}{LeaveRoom}}>().HideLeaveRoomButton();}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00117}00117         gameObject.GetComponent<\mbox{\hyperlink{classStartGameLevel}{StartGameLevel}}>().enabled = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00118}00118         gameObject.GetComponent<\mbox{\hyperlink{classPlayersFounded}{PlayersFounded}}>().HidePlayersFounded();}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00119}00119     \}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00120}00120     }
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00121}00121 \textcolor{preprocessor}{    \#endregion}}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00122}00122 \}}
+
+\end{DoxyCode}
