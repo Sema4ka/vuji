@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2885703309132641603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1889470199176484316}
+  - component: {fileID: 8677147372796511243}
+  m_Layer: 0
+  m_Name: Exclamination
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1889470199176484316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885703309132641603}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8677147372796511243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885703309132641603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023c595b72d5b673cabca9a76dae02b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u041F\u043E\u0437\u044B\u0432"
+  skillDescription: "\u0412\u044B \u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u0435\u0441\u044C
+    \u0441\u0438\u043B\u044C\u043D\u0435\u0435"
+  energyCost: 100
+  castTime: 5
+  cooldown: 30
+  cancelMovementOnCast: 1
+  skillSprite: {fileID: 21300000, guid: ecf0a263d88b1264f9e060560d894e4c, type: 3}
+  speedEffect: {fileID: 5801032215040037669, guid: 5223e83c040f6b96cba55a891bc2b222, type: 3}
+  strongEffect: {fileID: 8158227689627682409, guid: 7a7a78488c6606439b96840ad1f4c86c, type: 3}
