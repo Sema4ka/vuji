@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,7 +47,7 @@ MonoBehaviour:
   skillName: "\u0428\u043A\u0432\u0430\u043B \u043E\u0433\u043D\u044F"
   skillDescription: "\u041F\u0438\u0440\u0430\u0442 \u043D\u0430\u0447\u0438\u043D\u0430\u0435\u0442
     \u0441\u0442\u0440\u0435\u043B\u044F\u0442\u044C \u0441 \u043F\u043E\u0432\u044B\u0448\u0435\u043D\u043D\u043E\u0439
-    \u0430\u0442\u0430\u043A\u043E\u0439"
+    \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u044C\u044E"
   energyCost: 100
   castTime: 2
   cooldown: 10

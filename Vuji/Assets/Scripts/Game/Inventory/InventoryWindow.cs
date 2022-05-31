@@ -115,6 +115,7 @@ public class InventoryWindow : MonoBehaviour
                 icon.AddComponent<DisplayedItem>().displayedItem = icon.GetComponent<RectTransform>();
                 icon.GetComponent<DisplayedItem>().inventoryPanel = inventoryPanel;
                 icon.GetComponent<DisplayedItem>().itemId = i;
+                icon.AddComponent<TooltipTextUI>().text = "\"" + item.GetItemName() + "\"\n" + item.GetDescription() + "\n" + "Amount: " + item.GetAmount();
                 icon.transform.SetParent(inventoryPanel);
                 displayedIcons.Add(icon);
             }

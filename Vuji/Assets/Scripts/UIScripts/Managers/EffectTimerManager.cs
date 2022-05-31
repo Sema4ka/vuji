@@ -8,6 +8,7 @@ public class EffectTimerManager : MonoBehaviour
 {
     [SerializeField] Image targetedSprite;
     [SerializeField] Text targetedText;
+    [SerializeField] TooltipTextUI tooltipText;
 
 
     private BaseEffect targetedEffect;
@@ -25,6 +26,7 @@ public class EffectTimerManager : MonoBehaviour
         targetedSprite.sprite = effect.effectSprite;
         timerInterval = effect.duration;
         targetedEffect = effect;
+        tooltipText.text = "\"" + effect.effectName + "\"\n" + effect.description + "\n" + "Duration: " + effect.duration + "s";
     }
 
     // Update is called once per frame

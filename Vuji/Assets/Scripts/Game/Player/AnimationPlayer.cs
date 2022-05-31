@@ -49,12 +49,12 @@ public class AnimationPlayer : MonoBehaviour
             if (!isMoving)
             {
                 ChangePlayerAnimation_q(_idle);
-                Debug.Log(_idle + movingState + "nemove");
+                //Debug.Log(_idle + movingState + "nemove");
             }
             else
             {
                 ChangePlayerAnimation_q(_move);
-                Debug.Log(_move + movingState+"mofe");
+                //Debug.Log(_move + movingState+"mofe");
                 playStep();
             }
         }
@@ -106,7 +106,7 @@ public class AnimationPlayer : MonoBehaviour
     {
         if (_currentAnimation == newAnimation) return;
         _currentAnimation = newAnimation;
-        Debug.Log(newAnimation+"Photon");
+        //Debug.Log(newAnimation+"Photon");
         _animator.Play(_currentAnimation);
     }
 }

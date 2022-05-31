@@ -11,6 +11,7 @@ public class TimerWithSpritemanager : MonoBehaviour
     [SerializeField] GameObject coverPanel;
     [SerializeField] GameObject selectionPanel;
     [SerializeField] Text keyText;
+    [SerializeField] TooltipTextUI tooltipText;
 
     private GameObject targetPlayer;
     private BaseSkill targetSkill;
@@ -40,6 +41,7 @@ public class TimerWithSpritemanager : MonoBehaviour
         keyText.text = KeyHandler.NormalizeKeybind(KeyHandler.instance.GetKeybind(keyName));
         targetedText.text = "";
         skill.onRelease += SetTime;
+        tooltipText.text = "\"" + skill.GetName() + "\"\n" + skill.GetDescription() + "\n" + "Cast time: " + skill.GetCastTime().ToString() + "s\n" + "Energy cost: "+ skill.GetCost().ToString() + "\n" + "Cooldown: " + skill.GetCooldownTime().ToString() + "s";
         player.GetComponent<BaseEntity>().OnSkillSelectionChange += SetSelection;
     }
 
