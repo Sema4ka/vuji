@@ -1,0 +1,396 @@
+  % Handle batch mode
+  % to overcome problems with too many open files
+  \let\mypdfximage\pdfximage\def\pdfximage{\immediate\mypdfximage}
+  % Set document class depending on configuration
+  \documentclass[twoside]{book}
+  %% moved from doxygen.sty due to workaround for LaTex 2019 version and unmaintained tabu package
+  \usepackage{ifthen}
+  \ifx\requestedLaTeXdate\undefined
+    \usepackage{array}
+  \else
+    \usepackage{array}[=2016-10-06]
+  \fi
+  %%
+  % Packages required by doxygen
+  \usepackage{fixltx2e} % for \textsubscript
+  \usepackage{doxygen}
+  \usepackage{graphicx}
+  \usepackage[utf8]{inputenc}
+  \usepackage{makeidx}
+  \PassOptionsToPackage{warn}{textcomp}
+  \usepackage{textcomp}
+  \usepackage[nointegrals]{wasysym}
+  \usepackage{ifxetex}
+  % NLS support packages
+  \usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+  % Define default fonts
+  % Font selection
+  \usepackage[T1]{fontenc}
+  % set main and monospaced font
+  \usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\renewcommand{\familydefault}{\sfdefault}
+  \usepackage{sectsty}
+  \allsectionsfont{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \renewcommand{\DoxyLabelFont}{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+   % Arguments of doxygenemoji:
+   % 1) ':<text>:' form of the emoji, already LaTeX-escaped
+   % 2) file with the name of the emoji without the .png extension
+   % in case image exist use this otherwise use the ':<text>:' form
+   \newcommand{\doxygenemoji}[2]{%
+     \IfFileExists{./#2.png}{\raisebox{-0.1em}{\includegraphics[height=0.9em]{./#2.png}}}{#1}%
+   }
+  % Page & text layout
+  \usepackage{geometry}
+  \geometry{%
+    a4paper,%
+    top=2.5cm,%
+    bottom=2.5cm,%
+    left=2.5cm,%
+    right=2.5cm%
+  }
+  % Allow a bit of overflow to go unnoticed by other means
+  \tolerance=750
+  \hfuzz=15pt
+  \hbadness=750
+  \setlength{\emergencystretch}{15pt}
+  \setlength{\parindent}{0cm}
+  \newcommand{\doxynormalparskip}{\setlength{\parskip}{3ex plus 2ex minus 2ex}}
+  \newcommand{\doxytocparskip}{\setlength{\parskip}{1ex plus 0ex minus 0ex}}
+  \doxynormalparskip
+  % Redefine paragraph/subparagraph environments, using sectsty fonts
+  \makeatletter
+  \renewcommand{\paragraph}{%
+    \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@parafont%
+    }%
+  }
+  \renewcommand{\subparagraph}{%
+    \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@subparafont%
+    }%
+  }
+  \makeatother
+  \makeatletter
+  \newcommand\hrulefilll{\leavevmode\leaders\hrule\hskip 0pt plus 1filll\kern\z@}
+  \makeatother
+  % Headers & footers
+  \usepackage{fancyhdr}
+  \pagestyle{fancyplain}
+  \renewcommand{\footrulewidth}{0.4pt}
+  \fancypagestyle{fancyplain}{
+    \fancyhf{}
+    \fancyhead[LE, RO]{\bfseries\thepage}
+    \fancyhead[LO]{\bfseries\rightmark}
+    \fancyhead[RE]{\bfseries\leftmark}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize Создано системой Doxygen }
+  }
+  \fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize Создано системой Doxygen }
+    \renewcommand{\headrulewidth}{0pt}
+  }
+  \pagestyle{fancyplain}
+  \renewcommand{\chaptermark}[1]{%
+    \markboth{#1}{}%
+  }
+  \renewcommand{\sectionmark}[1]{%
+    \markright{\thesection\ #1}%
+  }
+  % ToC, LoF, LoT, bibliography, and index
+  % Indices & bibliography
+  \usepackage{natbib}
+  \usepackage[titles]{tocloft}
+  \setcounter{tocdepth}{3}
+  \setcounter{secnumdepth}{5}
+  % creating indexes
+  \makeindex
+  \usepackage{newunicodechar}
+  \newunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \newunicodechar{²}{${}^{2}$}% Superscript two
+  \newunicodechar{³}{${}^{3}$}% Superscript three
+  % Hyperlinks
+    % Hyperlinks (required, but should be loaded last)
+    \ifpdf
+      \usepackage[pdftex,pagebackref=true]{hyperref}
+    \else
+      \ifxetex
+        \usepackage[pagebackref=true]{hyperref}
+      \else
+        \usepackage[ps2pdf,pagebackref=true]{hyperref}
+      \fi
+    \fi
+    \hypersetup{%
+      colorlinks=true,%
+      linkcolor=blue,%
+      citecolor=blue,%
+      unicode,%
+      pdftitle={Vuji},%
+      pdfsubject={}%
+    }
+  % Custom commands used by the header
+  % Custom commands
+  \newcommand{\clearemptydoublepage}{%
+    \newpage{\pagestyle{empty}\cleardoublepage}%
+  }
+  % caption style definition
+  \usepackage{caption}
+  \captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+  % in page table of contents
+  \usepackage{etoc}
+  \etocsettocstyle{\doxytocparskip}{\doxynormalparskip}
+  % prevent numbers overlap the titles in toc
+  \renewcommand{\numberline}[1]{#1~}
+% End of preamble, now comes the document contents
+%===== C O N T E N T S =====
+\begin{document}
+  \raggedbottom
+  % Titlepage & ToC
+    % To avoid duplicate page anchors due to reuse of same numbers for
+    % the index (be it as roman numbers)
+    \hypersetup{pageanchor=false,
+                bookmarksnumbered=true,
+                pdfencoding=unicode
+               }
+  \pagenumbering{alph}
+  \begin{titlepage}
+  \vspace*{7cm}
+  \begin{center}%
+  {\Large Vuji}\\
+  \vspace*{1cm}
+  {\large Создано системой Doxygen 1.9.5}\\
+  \end{center}
+  \end{titlepage}
+  \clearemptydoublepage
+  \pagenumbering{roman}
+  \tableofcontents
+  \clearemptydoublepage
+  \pagenumbering{arabic}
+  % re-enable anchors again
+  \hypersetup{pageanchor=true}
+%--- Begin generated contents ---
+\chapter{Алфавитный указатель пространств имен}
+\input{namespaces}
+\chapter{Иерархический список классов}
+\input{hierarchy}
+\chapter{Алфавитный указатель классов}
+\input{annotated}
+\chapter{Список файлов}
+\input{files}
+\chapter{Пространства имен}
+\input{namespaceGameSettings}
+\input{namespaceServersInfo}
+\input{namespaceStructsRequest}
+\input{namespaceStructsResponse}
+\chapter{Классы}
+\input{classAcceptFriendInvite}
+\input{classAgressionTrigger}
+\input{classAnimationPlayer}
+\input{structPlayerAOE_1_1AOEstruct}
+\input{classAppe}
+\input{classAttackTrigger}
+\input{classBaseAOE}
+\input{classBaseEffect}
+\input{classBaseEntity}
+\input{classBaseItem}
+\input{classBasePassiveSkill}
+\input{classBaseProjectile}
+\input{classBaseSkill}
+\input{classBaseUpgrade}
+\input{classBerserk}
+\input{classCameraFollow}
+\input{classCameraPlayer}
+\input{classClassSelection}
+\input{classConnect}
+\input{classControllers}
+\input{classDataBase}
+\input{classDisplayedItem}
+\input{classDroppedItem}
+\input{classDrunk}
+\input{classDrunkard}
+\input{classEffectsListManager}
+\input{classEffectTimerManager}
+\input{classEndGame}
+\input{classEndGameManager}
+\input{classEnemyAI}
+\input{classEnergyBarUI}
+\input{classEntityMelee}
+\input{classEntityNameManager}
+\input{classEscapeMenu}
+\input{classExclamation}
+\input{classStructsRequest_1_1FindFriendsByNameStructRequest}
+\input{classStructsResponse_1_1FindFriendsByNameStructResponse}
+\input{classFireballSkill}
+\input{classFlurryOfFire}
+\input{classFriendItemManager}
+\input{classFriendsListController}
+\input{classGameSettings_1_1GameSettingsOriginal}
+\input{classGenerator}
+\input{classHealthBarManager}
+\input{classHealthBarUI}
+\input{classInputControllerPlayer}
+\input{classInventory}
+\input{classInventoryWindow}
+\input{classInviteFriend}
+\input{classKeybind}
+\input{classKeybindManager}
+\input{classKeyHandler}
+\input{classLeaveRoom}
+\input{classLobbyManager}
+\input{classLoginManager}
+\input{classStructsRequest_1_1LoginStructRequest}
+\input{classServersInfo_1_1MainServerInfo}
+\input{classManagerGame}
+\input{classMovementPlayer}
+\input{classNoticeInviteManager}
+\input{classNoticeListController}
+\input{classOnFire}
+\input{classPlay}
+\input{classPlayerAOE}
+\input{classPlayerMelee}
+\input{classPlayerProjectile}
+\input{classPlayerScript}
+\input{classPlayersFounded}
+\input{classPlayersTeamsManager}
+\input{classPlayerUpgrades}
+\input{classPoison}
+\input{structPlayerProjectile_1_1Projectile}
+\input{classRegisterManager}
+\input{classStructsRequest_1_1RegisterStructRequest}
+\input{classRoom}
+\input{classSetting}
+\input{classSettingsManager}
+\input{structBaseEntity_1_1Skill}
+\input{classSkillCastTimer}
+\input{classSkillPanelManager}
+\input{classSocketServerController}
+\input{classServersInfo_1_1SocketServerInfo}
+\input{classSoundManager}
+\input{classSoundSettings}
+\input{classSoundSliderManager}
+\input{classSpawnEnemy}
+\input{classSpawnPlayers}
+\input{classSpeedUp}
+\input{classStartEndZone}
+\input{classStartGameLevel}
+\input{classStopSearchGame}
+\input{classStrong}
+\input{classTeamHPBarUI}
+\input{classTeamHpPanelManager}
+\input{classTimerManager}
+\input{classTimerWithSpritemanager}
+\input{classStructsResponse_1_1TokenStructResponse}
+\input{classToxicant}
+\input{classUnityMainThreadDispatcher}
+\input{classStructsResponse_1_1UserIDStructResponse}
+\input{classStructsResponse_1_1UserInfoObject}
+\input{classStructsResponse_1_1UserInfoStructResponse}
+\input{classUserOnline}
+\input{classStructsRequest_1_1UserOnlineAndOfflineStructRequest}
+\chapter{Файлы}
+\input{LoginManager_8cs_source}
+\input{RegisterManager_8cs_source}
+\input{Controllers_8cs_source}
+\input{DataBase_8cs_source}
+\input{AgressionTrigger_8cs_source}
+\input{AttackTrigger_8cs_source}
+\input{EnemyAI_8cs_source}
+\input{EntityMelee_8cs_source}
+\input{PlayerAOE_8cs_source}
+\input{PlayerMelee_8cs_source}
+\input{PlayerProjectile_8cs_source}
+\input{BaseAOE_8cs_source}
+\input{BaseEffect_8cs_source}
+\input{BaseEntity_8cs_source}
+\input{BaseItem_8cs_source}
+\input{BasePassiveSkill_8cs_source}
+\input{BaseProjectile_8cs_source}
+\input{BaseSkill_8cs_source}
+\input{BaseUpgrade_8cs_source}
+\input{CameraFollow_8cs_source}
+\input{Drunk_8cs_source}
+\input{OnFire_8cs_source}
+\input{Poison_8cs_source}
+\input{SpeedUp_8cs_source}
+\input{Strong_8cs_source}
+\input{EndGame_8cs_source}
+\input{DisplayedItem_8cs_source}
+\input{Inventory_8cs_source}
+\input{InventoryWindow_8cs_source}
+\input{Appe_8cs_source}
+\input{DroppedItem_8cs_source}
+\input{ManagerGame_8cs_source}
+\input{Generator_8cs_source}
+\input{Room_8cs_source}
+\input{StartEndZone_8cs_source}
+\input{Berserk_8cs_source}
+\input{AnimationPlayer_8cs_source}
+\input{CameraPlayer_8cs_source}
+\input{ClassSelection_8cs_source}
+\input{InputControllerPlayer_8cs_source}
+\input{MovementPlayer_8cs_source}
+\input{PlayerScript_8cs_source}
+\input{PlayerUpgrades_8cs_source}
+\input{Drunkard_8cs_source}
+\input{Exclamation_8cs_source}
+\input{FireballSkill_8cs_source}
+\input{FlurryOfFire_8cs_source}
+\input{Toxicant_8cs_source}
+\input{SoundManager_8cs_source}
+\input{SpawnEnemy_8cs_source}
+\input{SpawnPlayers_8cs_source}
+\input{PlayersTeamsManager_8cs_source}
+\input{Connect_8cs_source}
+\input{AcceptFriendInvite_8cs_source}
+\input{FriendsListController_8cs_source}
+\input{InviteFriend_8cs_source}
+\input{LeaveRoom_8cs_source}
+\input{LobbyManager_8cs_source}
+\input{NoticeListController_8cs_source}
+\input{Play_8cs_source}
+\input{PlayersFounded_8cs_source}
+\input{SocketServerController_8cs_source}
+\input{StartGameLevel_8cs_source}
+\input{StopSearchGame_8cs_source}
+\input{Structs_8cs_source}
+\input{EffectsListManager_8cs_source}
+\input{EffectTimerManager_8cs_source}
+\input{EndGameManager_8cs_source}
+\input{EnergyBarUI_8cs_source}
+\input{EntityNameManager_8cs_source}
+\input{EscapeMenu_8cs_source}
+\input{FriendItemManager_8cs_source}
+\input{HealthBarManager_8cs_source}
+\input{HealthBarUI_8cs_source}
+\input{KeybindManager_8cs_source}
+\input{KeyHandler_8cs_source}
+\input{NoticeInviteManager_8cs_source}
+\input{SettingsManager_8cs_source}
+\input{SkillCastTimer_8cs_source}
+\input{SkillPanelManager_8cs_source}
+\input{SoundSettings_8cs_source}
+\input{SoundSliderManager_8cs_source}
+\input{TeamHPBarUI_8cs_source}
+\input{TeamHpPanelManager_8cs_source}
+\input{TimerManager_8cs_source}
+\input{TimerWithSpritemanager_8cs_source}
+\input{UnityMainThreadDispatcher_8cs_source}
+\input{UserOnline_8cs_source}
+%--- End generated contents ---
+% Index
+  \backmatter
+  \newpage
+  \phantomsection
+  \clearemptydoublepage
+  \addcontentsline{toc}{chapter}{\indexname}
+  \printindex
+% Required for some languages (in combination with latexdocumentpre from the header)
+\end{document}

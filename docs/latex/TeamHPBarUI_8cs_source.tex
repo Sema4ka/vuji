@@ -1,0 +1,47 @@
+\hypertarget{TeamHPBarUI_8cs_source}{}\doxysection{Team\+HPBar\+UI.\+cs}
+\label{TeamHPBarUI_8cs_source}\index{Vuji/Assets/Scripts/UIScripts/TeamHPBarUI.cs@{Vuji/Assets/Scripts/UIScripts/TeamHPBarUI.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00001}00001 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00003}00003 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00004}00004 \textcolor{keyword}{using }UnityEngine.UI;}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00006}\mbox{\hyperlink{classTeamHPBarUI}{00006}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classTeamHPBarUI}{TeamHPBarUI}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00007}00007 \{}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00008}00008     [SerializeField] Slider HealthBar;}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00009}00009     [SerializeField] Text HealthBarText;}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00010}00010     [SerializeField] Text DeadText;}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00011}00011     \textcolor{keyword}{private} \mbox{\hyperlink{classBaseEntity}{BaseEntity}} entity;}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00012}00012     \textcolor{comment}{// Start is called before the first frame update}}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00013}00013     \textcolor{keywordtype}{void} Start()}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00014}00014     \{}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00015}00015         HealthBar.minValue = 0f;}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00016}00016     \}}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00017}00017     \textcolor{comment}{// Update is called once per frame}}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00018}00018     \textcolor{keywordtype}{void} Update()}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00019}00019     \{}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00020}00020         \textcolor{keywordflow}{if} (entity == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00021}00021         \{}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00022}00022             HealthBar.maxValue = 0f;}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00023}00023             HealthBar.value = 0f;}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00024}00024             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00025}00025         \}}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00026}00026         \textcolor{keywordflow}{if} (entity.isDead) \textcolor{comment}{// Тот кто писал это -\/ идиот}}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00027}00027         \{}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00028}00028             HealthBar.maxValue = 0f;}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00029}00029             HealthBar.value = 0f;}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00030}00030             DeadText.text = \textcolor{stringliteral}{"{}DEAD"{}};}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00031}00031             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00032}00032         \}}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00033}00033         HealthBar.maxValue = entity.GetMaxHealthPoints();}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00034}00034         HealthBar.value = entity.GetHealthPoints();}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00035}00035     \}}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00036}00036     \textcolor{keyword}{public} \textcolor{keywordtype}{void} SetEntity(\mbox{\hyperlink{classBaseEntity}{BaseEntity}} player, \textcolor{keywordtype}{string} name)}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00037}00037     \{}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00038}00038         entity = player;}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00039}00039         HealthBarText.text = name;}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00040}00040     \}}
+\DoxyCodeLine{\Hypertarget{TeamHPBarUI_8cs_source_l00041}00041 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,58 @@
+\hypertarget{EntityMelee_8cs_source}{}\doxysection{Entity\+Melee.\+cs}
+\label{EntityMelee_8cs_source}\index{Vuji/Assets/Scripts/Game/AI/EntityMelee.cs@{Vuji/Assets/Scripts/Game/AI/EntityMelee.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00001}00001 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00003}00003 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00005}\mbox{\hyperlink{classEntityMelee}{00005}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classEntityMelee}{EntityMelee}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00007}00007     [SerializeField] \textcolor{keyword}{private} LayerMask enemyLayers;}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00008}00008     [SerializeField] \textcolor{keyword}{private} \textcolor{keywordtype}{float} attackDistance = 1f;}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00009}00009     [SerializeField] \textcolor{keyword}{private} \textcolor{keywordtype}{float} attackRange = 1f;}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00010}00010     [SerializeField] \textcolor{keywordtype}{float} attackTimeout;}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00012}00012     \textcolor{keyword}{private} \textcolor{keywordtype}{bool} \_isTimeout = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00014}00014     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \_damage;}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00015}00015     \textcolor{keyword}{private} Vector3 \_attackPoint;}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00017}00017     \textcolor{keyword}{private} \textcolor{keywordtype}{void} Start() \{}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00018}00018         \_damage = gameObject.GetComponent<\mbox{\hyperlink{classBaseEntity}{BaseEntity}}>().GetBaseDamage();}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00019}00019     \}}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00021}00021     \textcolor{keyword}{public} \textcolor{keywordtype}{void} Attack(GameObject target)}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00022}00022     \{}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00023}00023         \textcolor{keywordflow}{if} (!\_isTimeout)}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00024}00024         \{}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00025}00025             StartCoroutine(\textcolor{stringliteral}{"{}AttackTiemout"{}});}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00027}00027             var xLen = target.transform.position.x -\/ transform.position.x;}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00028}00028             var yLen = target.transform.position.y -\/ transform.position.y;}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00029}00029             var xyLen = (float) (Mathf.Sqrt(Mathf.Pow(xLen, 2) + Mathf.Pow(yLen, 2)));}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00030}00030             var x = (xLen * attackDistance) / xyLen + transform.position.x;}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00031}00031             var y = (yLen * attackDistance) / xyLen + transform.position.y;}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00033}00033             \_attackPoint = \textcolor{keyword}{new} Vector3(x, y, 0);}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00035}00035             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(\_attackPoint, attackRange, enemyLayers);}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00037}00037             \textcolor{keywordflow}{foreach} (Collider2D enemy \textcolor{keywordflow}{in} hitEnemies)}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00038}00038             \{}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00039}00039                 GameObject enemyGameObject = enemy.transform.parent.gameObject;}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00040}00040                 \textcolor{keywordflow}{if} (enemyGameObject != gameObject)}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00041}00041                     enemyGameObject.GetComponent<\mbox{\hyperlink{classBaseEntity}{BaseEntity}}>().TakeDamage(\_damage);}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00042}00042             \}}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00043}00043         \}}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00044}00044     \}}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00046}00046     IEnumerator AttackTiemout()}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00047}00047     \{}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00048}00048         \_isTimeout = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00049}00049         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForSeconds(attackTimeout);}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00050}00050         \_isTimeout = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00051}00051     \}}
+\DoxyCodeLine{\Hypertarget{EntityMelee_8cs_source_l00052}00052 \}}
+
+\end{DoxyCode}

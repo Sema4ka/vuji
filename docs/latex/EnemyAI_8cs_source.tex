@@ -1,0 +1,84 @@
+\hypertarget{EnemyAI_8cs_source}{}\doxysection{Enemy\+AI.\+cs}
+\label{EnemyAI_8cs_source}\index{Vuji/Assets/Scripts/Game/AI/EnemyAI.cs@{Vuji/Assets/Scripts/Game/AI/EnemyAI.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00001}00001 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00003}00003 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00004}00004 \textcolor{keyword}{using }Pathfinding;}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00006}\mbox{\hyperlink{classEnemyAI}{00006}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classEnemyAI}{EnemyAI}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00007}00007 \{}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00008}00008     GameObject target;}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00009}00009     [SerializeField] \textcolor{keywordtype}{float} nextWaypointDistance = 3f;}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00011}00011     Path path;}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00012}00012     \textcolor{keywordtype}{int} currentWaypoint = 0;}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00013}00013     \textcolor{keyword}{public} \textcolor{keywordtype}{bool} reachedEndOfPath = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00015}00015     Seeker seeker;}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00016}00016     Rigidbody2D rb;}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00018}00018     \textcolor{keywordtype}{void} Start()}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00019}00019     \{}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00020}00020         seeker = GetComponent<Seeker>();}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00021}00021         rb = GetComponent<Rigidbody2D>();}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00022}00022     \}}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00024}00024     \textcolor{keyword}{public} \textcolor{keywordtype}{void} AgressionStart(GameObject target)}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00025}00025     \{}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00026}00026         this.target = target;}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00027}00027         InvokeRepeating(\textcolor{stringliteral}{"{}UpdatePath"{}}, 0f, 0.5f);}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00028}00028     \}}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00030}00030     \textcolor{keywordtype}{void} UpdatePath()}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00031}00031     \{}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00034}00034         \textcolor{keywordflow}{if} (seeker.IsDone()) }
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00035}00035             seeker.StartPath(rb.position, target.transform.position, OnPathComplete);}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00036}00036     \}}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00038}00038     \textcolor{keywordtype}{void} OnPathComplete(Path p)}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00039}00039     \{}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00040}00040         \textcolor{keywordflow}{if}(!p.error)}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00041}00041         \{}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00042}00042             path = p;}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00043}00043             currentWaypoint = 0;}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00044}00044         \}}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00045}00045     \}}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00047}00047     \textcolor{keywordtype}{void} FixedUpdate()}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00048}00048     \{}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00049}00049         \textcolor{keywordflow}{if}(target == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00050}00050             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00051}00051         }
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00052}00052         \textcolor{keywordflow}{if}(path == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00053}00053             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00055}00055         \textcolor{keywordflow}{if}(currentWaypoint >= path.vectorPath.Count)}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00056}00056         \{}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00057}00057             reachedEndOfPath = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00058}00058             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00059}00059         \}}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00060}00060         \textcolor{keywordflow}{else} }
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00061}00061         \{}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00062}00062             reachedEndOfPath = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00063}00063         \}}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00065}00065         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] -\/ rb.position).normalized;}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00066}00066         Vector2 force = direction * GetComponent<BaseEntity>().GetMoveSpeed() * Time.deltaTime;}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00068}00068         rb.AddForce(force);}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00070}00070         \textcolor{keywordtype}{float} distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00072}00072         \textcolor{keywordflow}{if}(distance < nextWaypointDistance)}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00073}00073         \{}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00074}00074             currentWaypoint++;}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00075}00075         \}}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00076}00076     \}}
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{EnemyAI_8cs_source_l00078}00078 \}}
+
+\end{DoxyCode}

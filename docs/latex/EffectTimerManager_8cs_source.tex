@@ -1,0 +1,49 @@
+\hypertarget{EffectTimerManager_8cs_source}{}\doxysection{Effect\+Timer\+Manager.\+cs}
+\label{EffectTimerManager_8cs_source}\index{Vuji/Assets/Scripts/UIScripts/EffectTimerManager.cs@{Vuji/Assets/Scripts/UIScripts/EffectTimerManager.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00001}00001 \textcolor{keyword}{using }System;}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00003}00003 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00004}00004 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00005}00005 \textcolor{keyword}{using }UnityEngine.UI;}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00007}\mbox{\hyperlink{classEffectTimerManager}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classEffectTimerManager}{EffectTimerManager}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00009}00009     [SerializeField] Image targetedSprite;}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00010}00010     [SerializeField] Text targetedText;}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00013}00013     \textcolor{keyword}{private} \mbox{\hyperlink{classBaseEffect}{BaseEffect}} targetedEffect;}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00015}00015     \textcolor{keyword}{private} \textcolor{keywordtype}{float} timerInterval = 0f;}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00016}00016     \textcolor{keyword}{private} \textcolor{keywordtype}{float} timerValue = 0f;}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00017}00017     \textcolor{comment}{// Start is called before the first frame update}}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00018}00018     \textcolor{keywordtype}{void} Start()}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00019}00019     \{}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00020}00020         targetedText.text = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00021}00021     \}}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00023}00023     \textcolor{keyword}{public} \textcolor{keywordtype}{void} SetEffect(\mbox{\hyperlink{classBaseEffect}{BaseEffect}} effect)}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00024}00024     \{}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00025}00025         targetedSprite.sprite = effect.effectSprite;}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00026}00026         timerInterval = effect.duration;}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00027}00027         targetedEffect = effect;}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00028}00028     \}}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00030}00030     \textcolor{comment}{// Update is called once per frame}}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00031}00031     \textcolor{keywordtype}{void} Update()}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00032}00032     \{}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00033}00033         \textcolor{keywordflow}{if} (targetedEffect == \textcolor{keyword}{null}) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00034}00034         timerValue += Time.deltaTime;}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00035}00035         \textcolor{keywordtype}{float} current = timerInterval -\/ timerValue;}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00036}00036         \textcolor{keywordflow}{if} (current < 0f)}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00037}00037         \{}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00038}00038             current = 0f;}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00039}00039             Destroy(gameObject);}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00040}00040         \}}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00041}00041         targetedText.text = current > 0f ? Convert.ToInt32(current).ToString() + \textcolor{stringliteral}{"{}s"{}} : \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00042}00042     \}}
+\DoxyCodeLine{\Hypertarget{EffectTimerManager_8cs_source_l00043}00043 \}}
+
+\end{DoxyCode}

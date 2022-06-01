@@ -1,0 +1,210 @@
+\hypertarget{classLobbyManager}{}\doxysection{Класс Lobby\+Manager}
+\label{classLobbyManager}\index{LobbyManager@{LobbyManager}}
+Граф наследования\+:Lobby\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classLobbyManager}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classLobbyManager_ad9a9f9118bdcc7c916bc9eb9a96a4a48}{Create\+Invite\+Friend}} (int invited\+User\+ID, string room\+Name=null)
+\begin{DoxyCompactList}\small\item\em Метод служит для включения скрипа \mbox{\hyperlink{classInviteFriend}{Invite\+Friend}} и заполнения его полей  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLobbyManager_ad959fa3231125eed8b5e91fc8af3dbdd}{Create\+Lobby\+And\+Invite\+User}} (int invited\+User\+ID)
+\begin{DoxyCompactList}\small\item\em Метод который создает комнату и вызывает метод приглашения  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLobbyManager_adc7d3896d9a29e21cfe46bfab11f6a48}{Accept\+Invite\+Friend}} (string room\+Name)
+\begin{DoxyCompactList}\small\item\em Метод вызывает подключение к комнате фотон  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLobbyManager_a00d35e9d8b396f6b896899aa2ef80d04}{Toggle\+Settings}} ()
+\item 
+override void \mbox{\hyperlink{classLobbyManager_a6e6929ea16e76cd93f7d2c6dffaa8b70}{On\+Joined\+Room}} ()
+\item 
+override void \mbox{\hyperlink{classLobbyManager_a77d3c5b61a23b518f2dbc683d3a21485}{On\+Connected\+To\+Master}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classLobbyManager_ad99066e97396e308fca88bf996ae402a}{player\+Status}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{LobbyManager_8cs_source}{Lobby\+Manager.\+cs}} строка \mbox{\hyperlink{LobbyManager_8cs_source_l00009}{9}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classLobbyManager_adc7d3896d9a29e21cfe46bfab11f6a48}\label{classLobbyManager_adc7d3896d9a29e21cfe46bfab11f6a48}} 
+\index{LobbyManager@{LobbyManager}!AcceptInviteFriend@{AcceptInviteFriend}}
+\index{AcceptInviteFriend@{AcceptInviteFriend}!LobbyManager@{LobbyManager}}
+\doxysubsubsection{\texorpdfstring{AcceptInviteFriend()}{AcceptInviteFriend()}}
+{\footnotesize\ttfamily void Lobby\+Manager.\+Accept\+Invite\+Friend (\begin{DoxyParamCaption}\item[{string}]{room\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Метод вызывает подключение к комнате фотон  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em room\+Name} & название комнаты\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{LobbyManager_8cs_source}{Lobby\+Manager.\+cs}} строка \mbox{\hyperlink{LobbyManager_8cs_source_l00087}{87}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088     \{}
+\DoxyCodeLine{00089         var acceptFriendInvite = gameObject.GetComponent<\mbox{\hyperlink{classAcceptFriendInvite}{AcceptFriendInvite}}>();}
+\DoxyCodeLine{00090         acceptFriendInvite.enabled = \textcolor{keyword}{true};}
+\DoxyCodeLine{00091         acceptFriendInvite.roomName = roomName;}
+\DoxyCodeLine{00092         acceptFriendInvite.\mbox{\hyperlink{classAcceptFriendInvite_a9542089150fd80e4aaff19fb0829ebcb}{StartAcceptInvite}}();}
+\DoxyCodeLine{00093     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLobbyManager_ad9a9f9118bdcc7c916bc9eb9a96a4a48}\label{classLobbyManager_ad9a9f9118bdcc7c916bc9eb9a96a4a48}} 
+\index{LobbyManager@{LobbyManager}!CreateInviteFriend@{CreateInviteFriend}}
+\index{CreateInviteFriend@{CreateInviteFriend}!LobbyManager@{LobbyManager}}
+\doxysubsubsection{\texorpdfstring{CreateInviteFriend()}{CreateInviteFriend()}}
+{\footnotesize\ttfamily void Lobby\+Manager.\+Create\+Invite\+Friend (\begin{DoxyParamCaption}\item[{int}]{invited\+User\+ID,  }\item[{string}]{room\+Name = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Метод служит для включения скрипа \mbox{\hyperlink{classInviteFriend}{Invite\+Friend}} и заполнения его полей  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em invited\+User\+ID} & user\+ID -\/ приглашаемого\\
+\hline
+{\em room\+Name} & Имя комнаты куда нужно зайти приглашенному\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{LobbyManager_8cs_source}{Lobby\+Manager.\+cs}} строка \mbox{\hyperlink{LobbyManager_8cs_source_l00060}{60}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061     \{}
+\DoxyCodeLine{00062         var inviteFriend = gameObject.GetComponent<\mbox{\hyperlink{classInviteFriend}{InviteFriend}}>();}
+\DoxyCodeLine{00063         inviteFriend.enabled = \textcolor{keyword}{true};}
+\DoxyCodeLine{00064         inviteFriend.invitedUserID = invitedUserID;}
+\DoxyCodeLine{00065         inviteFriend.roomName = roomName;}
+\DoxyCodeLine{00066         inviteFriend.\mbox{\hyperlink{classInviteFriend_a05829b0b3f31b888d15065d26fb40d53}{StartInviteFriend}}();}
+\DoxyCodeLine{00067     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLobbyManager_ad959fa3231125eed8b5e91fc8af3dbdd}\label{classLobbyManager_ad959fa3231125eed8b5e91fc8af3dbdd}} 
+\index{LobbyManager@{LobbyManager}!CreateLobbyAndInviteUser@{CreateLobbyAndInviteUser}}
+\index{CreateLobbyAndInviteUser@{CreateLobbyAndInviteUser}!LobbyManager@{LobbyManager}}
+\doxysubsubsection{\texorpdfstring{CreateLobbyAndInviteUser()}{CreateLobbyAndInviteUser()}}
+{\footnotesize\ttfamily void Lobby\+Manager.\+Create\+Lobby\+And\+Invite\+User (\begin{DoxyParamCaption}\item[{int}]{invited\+User\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Метод который создает комнату и вызывает метод приглашения  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em invited\+User\+ID} & user\+ID приглашаемого\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{LobbyManager_8cs_source}{Lobby\+Manager.\+cs}} строка \mbox{\hyperlink{LobbyManager_8cs_source_l00073}{73}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074     \{}
+\DoxyCodeLine{00075         var roomName = Random.Range(1000, 10000000).ToString();}
+\DoxyCodeLine{00076         RoomOptions roomOptions = \textcolor{keyword}{new} RoomOptions() \{IsVisible = \textcolor{keyword}{false}, PublishUserId = \textcolor{keyword}{true}\};}
+\DoxyCodeLine{00077         roomOptions.MaxPlayers = 2;}
+\DoxyCodeLine{00078         \mbox{\hyperlink{classLobbyManager_ad9a9f9118bdcc7c916bc9eb9a96a4a48}{CreateInviteFriend}}(invitedUserID);}
+\DoxyCodeLine{00079         gameObject.GetComponent<\mbox{\hyperlink{classLobbyManager}{LobbyManager}}>().playerStatus = \textcolor{stringliteral}{"{}INLOBBY"{}};}
+\DoxyCodeLine{00080         PhotonNetwork.CreateRoom(roomName, roomOptions);}
+\DoxyCodeLine{00081     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLobbyManager_a77d3c5b61a23b518f2dbc683d3a21485}\label{classLobbyManager_a77d3c5b61a23b518f2dbc683d3a21485}} 
+\index{LobbyManager@{LobbyManager}!OnConnectedToMaster@{OnConnectedToMaster}}
+\index{OnConnectedToMaster@{OnConnectedToMaster}!LobbyManager@{LobbyManager}}
+\doxysubsubsection{\texorpdfstring{OnConnectedToMaster()}{OnConnectedToMaster()}}
+{\footnotesize\ttfamily override void Lobby\+Manager.\+On\+Connected\+To\+Master (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{LobbyManager_8cs_source}{Lobby\+Manager.\+cs}} строка \mbox{\hyperlink{LobbyManager_8cs_source_l00113}{113}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00114     \{}
+\DoxyCodeLine{00115         Debug.Log(\textcolor{stringliteral}{"{}YOU LEFT ROOM"{}});}
+\DoxyCodeLine{00116         gameObject.GetComponent<\mbox{\hyperlink{classLeaveRoom}{LeaveRoom}}>().HideLeaveRoomButton();}
+\DoxyCodeLine{00117         gameObject.GetComponent<\mbox{\hyperlink{classStartGameLevel}{StartGameLevel}}>().enabled = \textcolor{keyword}{false};}
+\DoxyCodeLine{00118         gameObject.GetComponent<\mbox{\hyperlink{classPlayersFounded}{PlayersFounded}}>().HidePlayersFounded();}
+\DoxyCodeLine{00119     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLobbyManager_a6e6929ea16e76cd93f7d2c6dffaa8b70}\label{classLobbyManager_a6e6929ea16e76cd93f7d2c6dffaa8b70}} 
+\index{LobbyManager@{LobbyManager}!OnJoinedRoom@{OnJoinedRoom}}
+\index{OnJoinedRoom@{OnJoinedRoom}!LobbyManager@{LobbyManager}}
+\doxysubsubsection{\texorpdfstring{OnJoinedRoom()}{OnJoinedRoom()}}
+{\footnotesize\ttfamily override void Lobby\+Manager.\+On\+Joined\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{LobbyManager_8cs_source}{Lobby\+Manager.\+cs}} строка \mbox{\hyperlink{LobbyManager_8cs_source_l00100}{100}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00101     \{}
+\DoxyCodeLine{00102         PhotonNetwork.LocalPlayer.NickName = username.text;}
+\DoxyCodeLine{00103         \textcolor{keywordflow}{if} (playerStatus == \textcolor{stringliteral}{"{}INLOBBY"{}})}
+\DoxyCodeLine{00104         \{}
+\DoxyCodeLine{00105             Debug.Log(\textcolor{stringliteral}{"{}YOU JOIN IN ROOM: "{}} + PhotonNetwork.CurrentRoom.Name);}
+\DoxyCodeLine{00106             gameObject.GetComponent<\mbox{\hyperlink{classLeaveRoom}{LeaveRoom}}>().ShowLeaveRoomButton();}
+\DoxyCodeLine{00107         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (playerStatus == \textcolor{stringliteral}{"{}SEARCHGAME"{}})}
+\DoxyCodeLine{00108         \{}
+\DoxyCodeLine{00109             }
+\DoxyCodeLine{00110         \}}
+\DoxyCodeLine{00111     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLobbyManager_a00d35e9d8b396f6b896899aa2ef80d04}\label{classLobbyManager_a00d35e9d8b396f6b896899aa2ef80d04}} 
+\index{LobbyManager@{LobbyManager}!ToggleSettings@{ToggleSettings}}
+\index{ToggleSettings@{ToggleSettings}!LobbyManager@{LobbyManager}}
+\doxysubsubsection{\texorpdfstring{ToggleSettings()}{ToggleSettings()}}
+{\footnotesize\ttfamily void Lobby\+Manager.\+Toggle\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{LobbyManager_8cs_source}{Lobby\+Manager.\+cs}} строка \mbox{\hyperlink{LobbyManager_8cs_source_l00095}{95}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096     \{}
+\DoxyCodeLine{00097         settings.SetActive(!settings.activeSelf);}
+\DoxyCodeLine{00098     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classLobbyManager_ad99066e97396e308fca88bf996ae402a}\label{classLobbyManager_ad99066e97396e308fca88bf996ae402a}} 
+\index{LobbyManager@{LobbyManager}!playerStatus@{playerStatus}}
+\index{playerStatus@{playerStatus}!LobbyManager@{LobbyManager}}
+\doxysubsubsection{\texorpdfstring{playerStatus}{playerStatus}}
+{\footnotesize\ttfamily string Lobby\+Manager.\+player\+Status}
+
+
+
+См. определение в файле \mbox{\hyperlink{LobbyManager_8cs_source}{Lobby\+Manager.\+cs}} строка \mbox{\hyperlink{LobbyManager_8cs_source_l00017}{17}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Lobby/Lobby\+Manager.\+cs\end{DoxyCompactItemize}

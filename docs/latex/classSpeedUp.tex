@@ -1,0 +1,89 @@
+\hypertarget{classSpeedUp}{}\doxysection{Класс Speed\+Up}
+\label{classSpeedUp}\index{SpeedUp@{SpeedUp}}
+Граф наследования\+:Speed\+Up\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classSpeedUp}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{classSpeedUp_a411a008de5d01b967c124663ec343e7d}{Apply\+Effect}} (Game\+Object entity)
+\item 
+IEnumerator \mbox{\hyperlink{classSpeedUp_a28e8de0da06335c62c549811f50b920a}{Speed\+Effect}} (Game\+Object entity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classSpeedUp_a6acb2626caabea3b036b4d1696b4355b}{additional\+Speed}} = 2
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{SpeedUp_8cs_source}{Speed\+Up.\+cs}} строка \mbox{\hyperlink{SpeedUp_8cs_source_l00005}{5}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classSpeedUp_a411a008de5d01b967c124663ec343e7d}\label{classSpeedUp_a411a008de5d01b967c124663ec343e7d}} 
+\index{SpeedUp@{SpeedUp}!ApplyEffect@{ApplyEffect}}
+\index{ApplyEffect@{ApplyEffect}!SpeedUp@{SpeedUp}}
+\doxysubsubsection{\texorpdfstring{ApplyEffect()}{ApplyEffect()}}
+{\footnotesize\ttfamily override void Speed\+Up.\+Apply\+Effect (\begin{DoxyParamCaption}\item[{Game\+Object}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Переопределяет метод предка \mbox{\hyperlink{classBaseEffect}{Base\+Effect}}.
+
+
+
+См. определение в файле \mbox{\hyperlink{SpeedUp_8cs_source}{Speed\+Up.\+cs}} строка \mbox{\hyperlink{SpeedUp_8cs_source_l00010}{10}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011     \{}
+\DoxyCodeLine{00012         base.ApplyEffect(entity);}
+\DoxyCodeLine{00013         entity.gameObject.GetComponent<MonoBehaviour>().StartCoroutine(SpeedEffect(entity));}
+\DoxyCodeLine{00014     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSpeedUp_a28e8de0da06335c62c549811f50b920a}\label{classSpeedUp_a28e8de0da06335c62c549811f50b920a}} 
+\index{SpeedUp@{SpeedUp}!SpeedEffect@{SpeedEffect}}
+\index{SpeedEffect@{SpeedEffect}!SpeedUp@{SpeedUp}}
+\doxysubsubsection{\texorpdfstring{SpeedEffect()}{SpeedEffect()}}
+{\footnotesize\ttfamily IEnumerator Speed\+Up.\+Speed\+Effect (\begin{DoxyParamCaption}\item[{Game\+Object}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{SpeedUp_8cs_source}{Speed\+Up.\+cs}} строка \mbox{\hyperlink{SpeedUp_8cs_source_l00016}{16}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016                                                      \{}
+\DoxyCodeLine{00017         entity.GetComponent<\mbox{\hyperlink{classBaseEntity}{BaseEntity}}>().IncreaseSpeed(additionalSpeed);}
+\DoxyCodeLine{00018         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForSeconds(duration);}
+\DoxyCodeLine{00019         entity.GetComponent<\mbox{\hyperlink{classBaseEntity}{BaseEntity}}>().DecreaseSpeed(additionalSpeed);}
+\DoxyCodeLine{00020     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classSpeedUp_a6acb2626caabea3b036b4d1696b4355b}\label{classSpeedUp_a6acb2626caabea3b036b4d1696b4355b}} 
+\index{SpeedUp@{SpeedUp}!additionalSpeed@{additionalSpeed}}
+\index{additionalSpeed@{additionalSpeed}!SpeedUp@{SpeedUp}}
+\doxysubsubsection{\texorpdfstring{additionalSpeed}{additionalSpeed}}
+{\footnotesize\ttfamily int Speed\+Up.\+additional\+Speed = 2}
+
+
+
+См. определение в файле \mbox{\hyperlink{SpeedUp_8cs_source}{Speed\+Up.\+cs}} строка \mbox{\hyperlink{SpeedUp_8cs_source_l00008}{8}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Game/\+Effects/Speed\+Up.\+cs\end{DoxyCompactItemize}

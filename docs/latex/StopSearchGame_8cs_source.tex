@@ -1,0 +1,103 @@
+\hypertarget{StopSearchGame_8cs_source}{}\doxysection{Stop\+Search\+Game.\+cs}
+\label{StopSearchGame_8cs_source}\index{Vuji/Assets/Scripts/Lobby/StopSearchGame.cs@{Vuji/Assets/Scripts/Lobby/StopSearchGame.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00001}00001 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00002}00002 \textcolor{keyword}{using }Photon.Pun;}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00003}00003 \textcolor{keyword}{using }Photon.Realtime;}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00004}00004 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00006}\mbox{\hyperlink{classStopSearchGame}{00006}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classStopSearchGame}{StopSearchGame}} : MonoBehaviourPunCallbacks}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00007}00007 \{}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00008}00008     \textcolor{keyword}{private} \textcolor{keywordtype}{string} \_teammateID;}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00009}00009     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \_startMode;}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00010}00010     \textcolor{keyword}{private} readonly List<string> \_playerInTeam = \textcolor{keyword}{new} List<string>();}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00012}00012     \textcolor{keyword}{public} \textcolor{keywordtype}{void} CancelSearchGame()}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00014}00014         var myTeamID = PhotonNetwork.LocalPlayer.CustomProperties[\textcolor{stringliteral}{"{}team"{}}].ToString();}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00015}00015         \textcolor{keywordflow}{if} (myTeamID != \textcolor{stringliteral}{"{}None"{}})}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00016}00016         \{}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00017}00017             \textcolor{keywordflow}{foreach} (var player \textcolor{keywordflow}{in} PhotonNetwork.PlayerListOthers)}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00018}00018             \{}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00019}00019                 var playerTeamID = player.CustomProperties[\textcolor{stringliteral}{"{}team"{}}].ToString();}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00020}00020                 \textcolor{keywordflow}{if} (myTeamID == playerTeamID)}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00021}00021                 \{}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00022}00022                     \_playerInTeam.Add(player.UserId);}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00023}00023                     var view = PhotonView.Get(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00024}00024                     view.RPC(\textcolor{stringliteral}{"{}LeaveFromSearch"{}}, RpcTarget.Others, player.UserId, PhotonNetwork.LocalPlayer.UserId);}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00025}00025                     \_startMode = 2;}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00026}00026                     gameObject.GetComponent<\mbox{\hyperlink{classLobbyManager}{LobbyManager}}>().playerStatus = \textcolor{stringliteral}{"{}INLOBBY"{}};}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00027}00027                     PhotonNetwork.LeaveRoom();}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00028}00028                 \}}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00029}00029             \}}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00030}00030         \}}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00031}00031         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00032}00032         \{}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00033}00033             gameObject.GetComponent<\mbox{\hyperlink{classLobbyManager}{LobbyManager}}>().playerStatus = \textcolor{stringliteral}{"{}INLOBBY"{}};}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00034}00034             PhotonNetwork.LeaveRoom();}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00035}00035         \}}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00036}00036     \}}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00038}00038     [PunRPC]}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00039}00039     \textcolor{keyword}{private} \textcolor{keywordtype}{void} LeaveFromSearch(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{string} teammateID)}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00040}00040     \{}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00041}00041         \textcolor{keywordflow}{if} (PhotonNetwork.LocalPlayer.UserId == \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00042}00042         \{}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00043}00043             \_teammateID = teammateID;}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00044}00044             \textcolor{keywordflow}{if} (\_teammateID != \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00045}00045             \{}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00046}00046                 \_startMode = 3;}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00047}00047                 gameObject.GetComponent<\mbox{\hyperlink{classLobbyManager}{LobbyManager}}>().playerStatus = \textcolor{stringliteral}{"{}INLOBBY"{}};}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00048}00048                 gameObject.GetComponent<\mbox{\hyperlink{classStartGameLevel}{StartGameLevel}}>().enabled = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00049}00049                 gameObject.GetComponent<\mbox{\hyperlink{classPlayersFounded}{PlayersFounded}}>().HidePlayersFounded();}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00050}00050                 PhotonNetwork.LeaveRoom();}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00051}00051             \}}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00052}00052         \}}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00053}00053     \}}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00055}00055     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} OnConnectedToMaster()}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00056}00056     \{}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00057}00057         JoinToFriendTeam();}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00058}00058     \}}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00060}00060     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} OnFriendListUpdate(List<FriendInfo> friendsInfo)}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00061}00061     \{}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00062}00062         \textcolor{keywordflow}{foreach} (var \textcolor{keyword}{friend} \textcolor{keywordflow}{in} friendsInfo)}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00063}00063         \{}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00064}00064             \textcolor{keywordflow}{if} (\textcolor{keyword}{friend}.UserId == \_teammateID)}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00065}00065             \{}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00066}00066                 \textcolor{keywordflow}{if} (\textcolor{keyword}{friend}.IsInRoom)}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00067}00067                 \{}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00068}00068                     \_startMode = 4;}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00069}00069                     JoinToFriendTeam(\textcolor{keyword}{friend}.\mbox{\hyperlink{classRoom}{Room}});}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00070}00070                 \}}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00071}00071             \}}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00072}00072         \}}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00073}00073     \}}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00075}00075     \textcolor{keyword}{private} \textcolor{keywordtype}{void} JoinToFriendTeam(\textcolor{keywordtype}{string} roomID = \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00076}00076     \{}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00077}00077         \textcolor{keywordflow}{if} (\_startMode == 2)}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00078}00078         \{}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00079}00079             var roomName = Random.Range(1000, 10000000).ToString();}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00080}00080             RoomOptions roomOptions = \textcolor{keyword}{new} RoomOptions() \{IsVisible = \textcolor{keyword}{false}, PublishUserId = \textcolor{keyword}{true}\};}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00081}00081             roomOptions.MaxPlayers = 2;}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00082}00082             PhotonNetwork.CreateRoom(roomName, roomOptions, expectedUsers: \_playerInTeam.ToArray());}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00083}00083         \}}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00085}00085         \textcolor{keywordflow}{if} (\_startMode == 3)}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00086}00086         \{}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00087}00087             PhotonNetwork.FindFriends(\textcolor{keyword}{new} \textcolor{keywordtype}{string}[1] \{\_teammateID\});}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00088}00088         \}}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00090}00090         \textcolor{keywordflow}{if} (\_startMode == 4)}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00091}00091         \{}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00092}00092             PhotonNetwork.JoinRoom(roomID);}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00093}00093         \}}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00095}00095         \_startMode = 0;}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00096}00096     \}}
+\DoxyCodeLine{\Hypertarget{StopSearchGame_8cs_source_l00097}00097 \}}
+
+\end{DoxyCode}

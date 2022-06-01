@@ -1,0 +1,102 @@
+\hypertarget{classBaseUpgrade}{}\doxysection{Класс Base\+Upgrade}
+\label{classBaseUpgrade}\index{BaseUpgrade@{BaseUpgrade}}
+Граф наследования\+:Base\+Upgrade\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBaseUpgrade}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classBaseUpgrade_a262b74a2b06794ee6f81a9dfbabbb2c4}{Get\+Name}} ()
+\item 
+string \mbox{\hyperlink{classBaseUpgrade_a2469e0348d82c25329994732d325239d}{Get\+Description}} ()
+\item 
+int \mbox{\hyperlink{classBaseUpgrade_ac4f99954e00c31c4a2b72f0fa9ab0b33}{Get\+Cost}} ()
+\item 
+void \mbox{\hyperlink{classBaseUpgrade_a525354bb20fe7259d81d724c29937a5b}{Apply\+Upgrade}} (\mbox{\hyperlink{classBaseEntity}{Base\+Entity}} player)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{BaseUpgrade_8cs_source}{Base\+Upgrade.\+cs}} строка \mbox{\hyperlink{BaseUpgrade_8cs_source_l00005}{5}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classBaseUpgrade_a525354bb20fe7259d81d724c29937a5b}\label{classBaseUpgrade_a525354bb20fe7259d81d724c29937a5b}} 
+\index{BaseUpgrade@{BaseUpgrade}!ApplyUpgrade@{ApplyUpgrade}}
+\index{ApplyUpgrade@{ApplyUpgrade}!BaseUpgrade@{BaseUpgrade}}
+\doxysubsubsection{\texorpdfstring{ApplyUpgrade()}{ApplyUpgrade()}}
+{\footnotesize\ttfamily void Base\+Upgrade.\+Apply\+Upgrade (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBaseEntity}{Base\+Entity}}}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseUpgrade_8cs_source}{Base\+Upgrade.\+cs}} строка \mbox{\hyperlink{BaseUpgrade_8cs_source_l00024}{24}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025     \{}
+\DoxyCodeLine{00026         Debug.Log(\textcolor{stringliteral}{"{}Upgrade "{}} + upgradeName + \textcolor{stringliteral}{"{} applied to "{}} + player.GetEntityName());}
+\DoxyCodeLine{00027     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseUpgrade_ac4f99954e00c31c4a2b72f0fa9ab0b33}\label{classBaseUpgrade_ac4f99954e00c31c4a2b72f0fa9ab0b33}} 
+\index{BaseUpgrade@{BaseUpgrade}!GetCost@{GetCost}}
+\index{GetCost@{GetCost}!BaseUpgrade@{BaseUpgrade}}
+\doxysubsubsection{\texorpdfstring{GetCost()}{GetCost()}}
+{\footnotesize\ttfamily int Base\+Upgrade.\+Get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseUpgrade_8cs_source}{Base\+Upgrade.\+cs}} строка \mbox{\hyperlink{BaseUpgrade_8cs_source_l00019}{19}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020     \{}
+\DoxyCodeLine{00021         \textcolor{keywordflow}{return} upgradeCost;}
+\DoxyCodeLine{00022     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseUpgrade_a2469e0348d82c25329994732d325239d}\label{classBaseUpgrade_a2469e0348d82c25329994732d325239d}} 
+\index{BaseUpgrade@{BaseUpgrade}!GetDescription@{GetDescription}}
+\index{GetDescription@{GetDescription}!BaseUpgrade@{BaseUpgrade}}
+\doxysubsubsection{\texorpdfstring{GetDescription()}{GetDescription()}}
+{\footnotesize\ttfamily string Base\+Upgrade.\+Get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseUpgrade_8cs_source}{Base\+Upgrade.\+cs}} строка \mbox{\hyperlink{BaseUpgrade_8cs_source_l00015}{15}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016     \{}
+\DoxyCodeLine{00017         \textcolor{keywordflow}{return} upgradeDescription;}
+\DoxyCodeLine{00018     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseUpgrade_a262b74a2b06794ee6f81a9dfbabbb2c4}\label{classBaseUpgrade_a262b74a2b06794ee6f81a9dfbabbb2c4}} 
+\index{BaseUpgrade@{BaseUpgrade}!GetName@{GetName}}
+\index{GetName@{GetName}!BaseUpgrade@{BaseUpgrade}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily string Base\+Upgrade.\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseUpgrade_8cs_source}{Base\+Upgrade.\+cs}} строка \mbox{\hyperlink{BaseUpgrade_8cs_source_l00011}{11}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012     \{}
+\DoxyCodeLine{00013         \textcolor{keywordflow}{return} upgradeName;}
+\DoxyCodeLine{00014     \}}
+
+\end{DoxyCode}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Game/\+Base\+Objects/Base\+Upgrade.\+cs\end{DoxyCompactItemize}

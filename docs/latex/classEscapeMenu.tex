@@ -1,0 +1,106 @@
+\hypertarget{classEscapeMenu}{}\doxysection{Класс Escape\+Menu}
+\label{classEscapeMenu}\index{EscapeMenu@{EscapeMenu}}
+Граф наследования\+:Escape\+Menu\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classEscapeMenu}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classEscapeMenu_a6be8e2455ba2834fe0acd06b1e50ab89}{Leave\+Lobby}} ()
+\item 
+void \mbox{\hyperlink{classEscapeMenu_a54aa6611f8fd81d16b236d18e2abc4ea}{Open\+Settings}} ()
+\item 
+void \mbox{\hyperlink{classEscapeMenu_ae90142499d6b71b0c9d8212562e140cb}{Resume\+Game}} ()
+\item 
+void \mbox{\hyperlink{classEscapeMenu_a38bc92b0f334f0b8a3434cd4a18fb34c}{Leave\+Game}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{EscapeMenu_8cs_source}{Escape\+Menu.\+cs}} строка \mbox{\hyperlink{EscapeMenu_8cs_source_l00007}{7}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classEscapeMenu_a38bc92b0f334f0b8a3434cd4a18fb34c}\label{classEscapeMenu_a38bc92b0f334f0b8a3434cd4a18fb34c}} 
+\index{EscapeMenu@{EscapeMenu}!LeaveGame@{LeaveGame}}
+\index{LeaveGame@{LeaveGame}!EscapeMenu@{EscapeMenu}}
+\doxysubsubsection{\texorpdfstring{LeaveGame()}{LeaveGame()}}
+{\footnotesize\ttfamily void Escape\+Menu.\+Leave\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{EscapeMenu_8cs_source}{Escape\+Menu.\+cs}} строка \mbox{\hyperlink{EscapeMenu_8cs_source_l00052}{52}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053     \{}
+\DoxyCodeLine{00054         Application.Quit();}
+\DoxyCodeLine{00055     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEscapeMenu_a6be8e2455ba2834fe0acd06b1e50ab89}\label{classEscapeMenu_a6be8e2455ba2834fe0acd06b1e50ab89}} 
+\index{EscapeMenu@{EscapeMenu}!LeaveLobby@{LeaveLobby}}
+\index{LeaveLobby@{LeaveLobby}!EscapeMenu@{EscapeMenu}}
+\doxysubsubsection{\texorpdfstring{LeaveLobby()}{LeaveLobby()}}
+{\footnotesize\ttfamily void Escape\+Menu.\+Leave\+Lobby (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{EscapeMenu_8cs_source}{Escape\+Menu.\+cs}} строка \mbox{\hyperlink{EscapeMenu_8cs_source_l00036}{36}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037     \{}
+\DoxyCodeLine{00038         PhotonNetwork.LeaveRoom();}
+\DoxyCodeLine{00039         SceneManager.LoadScene(\textcolor{stringliteral}{"{}Lobby"{}});}
+\DoxyCodeLine{00040     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEscapeMenu_a54aa6611f8fd81d16b236d18e2abc4ea}\label{classEscapeMenu_a54aa6611f8fd81d16b236d18e2abc4ea}} 
+\index{EscapeMenu@{EscapeMenu}!OpenSettings@{OpenSettings}}
+\index{OpenSettings@{OpenSettings}!EscapeMenu@{EscapeMenu}}
+\doxysubsubsection{\texorpdfstring{OpenSettings()}{OpenSettings()}}
+{\footnotesize\ttfamily void Escape\+Menu.\+Open\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{EscapeMenu_8cs_source}{Escape\+Menu.\+cs}} строка \mbox{\hyperlink{EscapeMenu_8cs_source_l00041}{41}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042     \{}
+\DoxyCodeLine{00043         settingsPanel.gameObject.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{00044         menuPanel.gameObject.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{00045         \mbox{\hyperlink{classKeyHandler}{KeyHandler}}.instance.\mbox{\hyperlink{classKeyHandler_ad911f5143829f9bfddd07dba72e4b470}{SetUIOpened}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00046     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEscapeMenu_ae90142499d6b71b0c9d8212562e140cb}\label{classEscapeMenu_ae90142499d6b71b0c9d8212562e140cb}} 
+\index{EscapeMenu@{EscapeMenu}!ResumeGame@{ResumeGame}}
+\index{ResumeGame@{ResumeGame}!EscapeMenu@{EscapeMenu}}
+\doxysubsubsection{\texorpdfstring{ResumeGame()}{ResumeGame()}}
+{\footnotesize\ttfamily void Escape\+Menu.\+Resume\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{EscapeMenu_8cs_source}{Escape\+Menu.\+cs}} строка \mbox{\hyperlink{EscapeMenu_8cs_source_l00047}{47}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048     \{}
+\DoxyCodeLine{00049         menuPanel.gameObject.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{00050         \mbox{\hyperlink{classKeyHandler}{KeyHandler}}.instance.\mbox{\hyperlink{classKeyHandler_a709aa3a10f129eafc0fcb1815f35d43d}{Pause}}(\textcolor{keyword}{false});}
+\DoxyCodeLine{00051     \}}
+
+\end{DoxyCode}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+UIScripts/Escape\+Menu.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,74 @@
+\hypertarget{classPlayerProjectile}{}\doxysection{Класс Player\+Projectile}
+\label{classPlayerProjectile}\index{PlayerProjectile@{PlayerProjectile}}
+Граф наследования\+:Player\+Projectile\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPlayerProjectile}
+\end{center}
+\end{figure}
+\doxysubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structPlayerProjectile_1_1Projectile}{Projectile}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classPlayerProjectile_a366867809ae92c723266630f096c7b64}{Attack}} (string projectile\+Key)
+\item 
+void \mbox{\hyperlink{classPlayerProjectile_ae24aa0876af2860611a354694b707810}{Attack}} (string projectile\+Key, float time)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{PlayerProjectile_8cs_source}{Player\+Projectile.\+cs}} строка \mbox{\hyperlink{PlayerProjectile_8cs_source_l00007}{7}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classPlayerProjectile_a366867809ae92c723266630f096c7b64}\label{classPlayerProjectile_a366867809ae92c723266630f096c7b64}} 
+\index{PlayerProjectile@{PlayerProjectile}!Attack@{Attack}}
+\index{Attack@{Attack}!PlayerProjectile@{PlayerProjectile}}
+\doxysubsubsection{\texorpdfstring{Attack()}{Attack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Player\+Projectile.\+Attack (\begin{DoxyParamCaption}\item[{string}]{projectile\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{PlayerProjectile_8cs_source}{Player\+Projectile.\+cs}} строка \mbox{\hyperlink{PlayerProjectile_8cs_source_l00045}{45}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046     \{}
+\DoxyCodeLine{00047         \textcolor{comment}{//RemoteProjectileAttack(\_aimAngle, \_aimDirection, projectileKey);}}
+\DoxyCodeLine{00048         \_view.RPC(\textcolor{stringliteral}{"{}RemoteProjectileAttack"{}}, RpcTarget.All, \_aimAngle, \_aimDirection, projectileKey);}
+\DoxyCodeLine{00049     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPlayerProjectile_ae24aa0876af2860611a354694b707810}\label{classPlayerProjectile_ae24aa0876af2860611a354694b707810}} 
+\index{PlayerProjectile@{PlayerProjectile}!Attack@{Attack}}
+\index{Attack@{Attack}!PlayerProjectile@{PlayerProjectile}}
+\doxysubsubsection{\texorpdfstring{Attack()}{Attack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Player\+Projectile.\+Attack (\begin{DoxyParamCaption}\item[{string}]{projectile\+Key,  }\item[{float}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{PlayerProjectile_8cs_source}{Player\+Projectile.\+cs}} строка \mbox{\hyperlink{PlayerProjectile_8cs_source_l00051}{51}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052     \{}
+\DoxyCodeLine{00053         \textcolor{comment}{//RemoteProjectileAttack(\_aimAngle, \_aimDirection, projectileKey);}}
+\DoxyCodeLine{00054         \textcolor{keywordflow}{if}(!isTimeout)\{}
+\DoxyCodeLine{00055             StartCoroutine(AttackTimeout(time));}
+\DoxyCodeLine{00056             \_view.RPC(\textcolor{stringliteral}{"{}RemoteProjectileAttack"{}}, RpcTarget.All, \_aimAngle, \_aimDirection, projectileKey);}
+\DoxyCodeLine{00057         \}}
+\DoxyCodeLine{00058     \}}
+
+\end{DoxyCode}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Game/\+Attack/Player\+Projectile.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,50 @@
+\hypertarget{Drunkard_8cs_source}{}\doxysection{Drunkard.\+cs}
+\label{Drunkard_8cs_source}\index{Vuji/Assets/Scripts/Game/Skills/Drunkard.cs@{Vuji/Assets/Scripts/Game/Skills/Drunkard.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00001}00001 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00003}00003 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00005}\mbox{\hyperlink{classDrunkard}{00005}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classDrunkard}{Drunkard}} : \mbox{\hyperlink{classBaseSkill}{BaseSkill}}}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00007}00007     [SerializeField] \textcolor{keyword}{private} GameObject drunkEffect;}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00009}00009     [Tooltip(\textcolor{stringliteral}{"{}Пират опустошает бутылку рома, на время опьянения пират получает на n меньше урона, но + n\% к шансу промахнуться"{}})]}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00010}00010     [SerializeField] \textcolor{keyword}{private} \textcolor{keywordtype}{int} additionalDefense = 5;}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00012}00012     [Tooltip(\textcolor{stringliteral}{"{}Время опьянения (секунды)"{}})]}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00013}00013     [SerializeField] \textcolor{keyword}{private} \textcolor{keywordtype}{float} drunkTime = 10;}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00015}00015     \textcolor{keyword}{public} \textcolor{keyword}{override} IEnumerator UseSkill(GameObject caster, \textcolor{keywordtype}{string} key)}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00016}00016     \{}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00017}00017         base.UseSkill(caster, key);}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00018}00018         \textcolor{keywordflow}{if} (caster.GetComponent<\mbox{\hyperlink{classBaseEntity}{BaseEntity}}>().spendEnergy(energyCost) == \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00019}00019         \{}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00020}00020             Debug.Log(\textcolor{stringliteral}{"{}Not enough energy to cast "{}} + this.gameObject.name);}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00021}00021             yield \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00022}00022         \}}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00023}00023         }
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00024}00024         onCast?.Invoke(castTime); }
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00025}00025         caster.GetComponent<\mbox{\hyperlink{classBaseEntity}{BaseEntity}}>().setIsCooldown(key, \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00026}00026         \textcolor{keywordflow}{if}(cancelMovementOnCast)}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00027}00027             caster.GetComponent<\mbox{\hyperlink{classMovementPlayer}{MovementPlayer}}>().cancelMovement(castTime);}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00029}00029         \mbox{\hyperlink{classAnimationPlayer}{AnimationPlayer}} anim = caster.GetComponent<\mbox{\hyperlink{classAnimationPlayer}{AnimationPlayer}}>();}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00030}00030         anim.ChangePlayerAnimation\_q(anim.\_drink);}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00031}00031         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForSeconds(castTime);}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00033}00033         \textcolor{comment}{// Сам скилл}}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00034}00034         drunkEffect.GetComponent<\mbox{\hyperlink{classDrunk}{Drunk}}>().additionalDefense = additionalDefense;}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00035}00035         drunkEffect.GetComponent<\mbox{\hyperlink{classDrunk}{Drunk}}>().duration = drunkTime;}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00036}00036         onRelease?.Invoke(cooldown);}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00038}00038         caster.GetComponent<\mbox{\hyperlink{classBaseEntity}{BaseEntity}}>().AddEffect(drunkEffect);}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00039}00039         \textcolor{comment}{// Сам скилл}}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00040}00040         }
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00041}00041         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForSeconds(cooldown);}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00042}00042         caster.GetComponent<\mbox{\hyperlink{classBaseEntity}{BaseEntity}}>().setIsCooldown(key, \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00043}00043     \}}
+\DoxyCodeLine{\Hypertarget{Drunkard_8cs_source_l00044}00044 \}}
+
+\end{DoxyCode}

@@ -81,7 +81,3 @@ crashlytics-build.properties
 
 # End of https://www.toptal.com/developers/gitignore/api/unity
 
-# Python
-venv/
-.idea/
-__pycache__/

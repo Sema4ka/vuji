@@ -1,0 +1,151 @@
+\hypertarget{classBaseItem}{}\doxysection{Класс Base\+Item}
+\label{classBaseItem}\index{BaseItem@{BaseItem}}
+Граф наследования\+:Base\+Item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classBaseItem}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBaseItem_a2675264b31e537c2e15faa08b23b5933}{Set\+Amount}} (int new\+Amount)
+\item 
+string \mbox{\hyperlink{classBaseItem_acfb3e481b789d7150ed4a1265cb6cf0f}{Get\+Item\+Name}} ()
+\item 
+string \mbox{\hyperlink{classBaseItem_ad0ca9359a8851887ba46eaa536f7730a}{Get\+Description}} ()
+\item 
+int \mbox{\hyperlink{classBaseItem_a0bfd11937bf599a1592321ed44e737d2}{Get\+Amount}} ()
+\item 
+Sprite \mbox{\hyperlink{classBaseItem_aebc2a18fcc0dc5e1a85263b929e08b6e}{Get\+Image}} ()
+\item 
+virtual bool \mbox{\hyperlink{classBaseItem_a9affec9778967043adc96992d0229e9b}{Use\+Item}} (Game\+Object owner)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{BaseItem_8cs_source}{Base\+Item.\+cs}} строка \mbox{\hyperlink{BaseItem_8cs_source_l00006}{6}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classBaseItem_a0bfd11937bf599a1592321ed44e737d2}\label{classBaseItem_a0bfd11937bf599a1592321ed44e737d2}} 
+\index{BaseItem@{BaseItem}!GetAmount@{GetAmount}}
+\index{GetAmount@{GetAmount}!BaseItem@{BaseItem}}
+\doxysubsubsection{\texorpdfstring{GetAmount()}{GetAmount()}}
+{\footnotesize\ttfamily int Base\+Item.\+Get\+Amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseItem_8cs_source}{Base\+Item.\+cs}} строка \mbox{\hyperlink{BaseItem_8cs_source_l00033}{33}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034     \{}
+\DoxyCodeLine{00035         \textcolor{keywordflow}{return} amount;}
+\DoxyCodeLine{00036     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseItem_ad0ca9359a8851887ba46eaa536f7730a}\label{classBaseItem_ad0ca9359a8851887ba46eaa536f7730a}} 
+\index{BaseItem@{BaseItem}!GetDescription@{GetDescription}}
+\index{GetDescription@{GetDescription}!BaseItem@{BaseItem}}
+\doxysubsubsection{\texorpdfstring{GetDescription()}{GetDescription()}}
+{\footnotesize\ttfamily string Base\+Item.\+Get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseItem_8cs_source}{Base\+Item.\+cs}} строка \mbox{\hyperlink{BaseItem_8cs_source_l00028}{28}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029     \{}
+\DoxyCodeLine{00030         \textcolor{keywordflow}{return} description;}
+\DoxyCodeLine{00031     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseItem_aebc2a18fcc0dc5e1a85263b929e08b6e}\label{classBaseItem_aebc2a18fcc0dc5e1a85263b929e08b6e}} 
+\index{BaseItem@{BaseItem}!GetImage@{GetImage}}
+\index{GetImage@{GetImage}!BaseItem@{BaseItem}}
+\doxysubsubsection{\texorpdfstring{GetImage()}{GetImage()}}
+{\footnotesize\ttfamily Sprite Base\+Item.\+Get\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseItem_8cs_source}{Base\+Item.\+cs}} строка \mbox{\hyperlink{BaseItem_8cs_source_l00038}{38}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039     \{}
+\DoxyCodeLine{00040         \textcolor{keywordflow}{return} image;}
+\DoxyCodeLine{00041     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseItem_acfb3e481b789d7150ed4a1265cb6cf0f}\label{classBaseItem_acfb3e481b789d7150ed4a1265cb6cf0f}} 
+\index{BaseItem@{BaseItem}!GetItemName@{GetItemName}}
+\index{GetItemName@{GetItemName}!BaseItem@{BaseItem}}
+\doxysubsubsection{\texorpdfstring{GetItemName()}{GetItemName()}}
+{\footnotesize\ttfamily string Base\+Item.\+Get\+Item\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseItem_8cs_source}{Base\+Item.\+cs}} строка \mbox{\hyperlink{BaseItem_8cs_source_l00023}{23}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024     \{}
+\DoxyCodeLine{00025         \textcolor{keywordflow}{return} itemName;}
+\DoxyCodeLine{00026     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseItem_a2675264b31e537c2e15faa08b23b5933}\label{classBaseItem_a2675264b31e537c2e15faa08b23b5933}} 
+\index{BaseItem@{BaseItem}!SetAmount@{SetAmount}}
+\index{SetAmount@{SetAmount}!BaseItem@{BaseItem}}
+\doxysubsubsection{\texorpdfstring{SetAmount()}{SetAmount()}}
+{\footnotesize\ttfamily void Base\+Item.\+Set\+Amount (\begin{DoxyParamCaption}\item[{int}]{new\+Amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseItem_8cs_source}{Base\+Item.\+cs}} строка \mbox{\hyperlink{BaseItem_8cs_source_l00013}{13}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014     \{}
+\DoxyCodeLine{00015         \textcolor{keywordflow}{if} (newAmount < 0)}
+\DoxyCodeLine{00016         \{}
+\DoxyCodeLine{00017             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00018         \}}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020         amount = newAmount;}
+\DoxyCodeLine{00021     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseItem_a9affec9778967043adc96992d0229e9b}\label{classBaseItem_a9affec9778967043adc96992d0229e9b}} 
+\index{BaseItem@{BaseItem}!UseItem@{UseItem}}
+\index{UseItem@{UseItem}!BaseItem@{BaseItem}}
+\doxysubsubsection{\texorpdfstring{UseItem()}{UseItem()}}
+{\footnotesize\ttfamily virtual bool Base\+Item.\+Use\+Item (\begin{DoxyParamCaption}\item[{Game\+Object}]{owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseItem_8cs_source}{Base\+Item.\+cs}} строка \mbox{\hyperlink{BaseItem_8cs_source_l00042}{42}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043     \{}
+\DoxyCodeLine{00044         \textcolor{comment}{// Do smth}}
+\DoxyCodeLine{00045         amount = amount -\/ 1;}
+\DoxyCodeLine{00046         \textcolor{keywordflow}{if} (amount < 1)}
+\DoxyCodeLine{00047         \{}
+\DoxyCodeLine{00048             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00049         \}}
+\DoxyCodeLine{00050         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00051     \}}
+
+\end{DoxyCode}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Game/\+Base\+Objects/Base\+Item.\+cs\end{DoxyCompactItemize}

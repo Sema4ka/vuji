@@ -1,0 +1,51 @@
+\hypertarget{classRoom}{}\doxysection{Класс Room}
+\label{classRoom}\index{Room@{Room}}
+Граф наследования\+:Room\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRoom}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRoom_ac721cf2f6c219bb55e77a2fc3f5679d5}{Rotate\+Randomly}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{Room_8cs_source}{Room.\+cs}} строка \mbox{\hyperlink{Room_8cs_source_l00005}{5}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classRoom_ac721cf2f6c219bb55e77a2fc3f5679d5}\label{classRoom_ac721cf2f6c219bb55e77a2fc3f5679d5}} 
+\index{Room@{Room}!RotateRandomly@{RotateRandomly}}
+\index{RotateRandomly@{RotateRandomly}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{RotateRandomly()}{RotateRandomly()}}
+{\footnotesize\ttfamily void Room.\+Rotate\+Randomly (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{Room_8cs_source}{Room.\+cs}} строка \mbox{\hyperlink{Room_8cs_source_l00013}{13}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014     \{}
+\DoxyCodeLine{00015         \textcolor{keywordtype}{int} count = Random.Range(0, 4);}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < count; i++)}
+\DoxyCodeLine{00018         \{}
+\DoxyCodeLine{00019             transform.Rotate(0, 90, 0);}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021         \}}
+\DoxyCodeLine{00022     \}}
+
+\end{DoxyCode}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Game/\+Map/Room.\+cs\end{DoxyCompactItemize}

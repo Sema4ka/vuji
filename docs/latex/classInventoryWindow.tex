@@ -1,0 +1,71 @@
+\hypertarget{classInventoryWindow}{}\doxysection{Класс Inventory\+Window}
+\label{classInventoryWindow}\index{InventoryWindow@{InventoryWindow}}
+Граф наследования\+:Inventory\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classInventoryWindow}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classInventoryWindow_a978187561a74e417874b86a05b0cefd6}{Start}} ()
+\item 
+void \mbox{\hyperlink{classInventoryWindow_aa3f191b9ad5d65e87a12e94af2406920}{On\+Spawn}} (Game\+Object player\+Object)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{InventoryWindow_8cs_source}{Inventory\+Window.\+cs}} строка \mbox{\hyperlink{InventoryWindow_8cs_source_l00009}{9}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classInventoryWindow_aa3f191b9ad5d65e87a12e94af2406920}\label{classInventoryWindow_aa3f191b9ad5d65e87a12e94af2406920}} 
+\index{InventoryWindow@{InventoryWindow}!OnSpawn@{OnSpawn}}
+\index{OnSpawn@{OnSpawn}!InventoryWindow@{InventoryWindow}}
+\doxysubsubsection{\texorpdfstring{OnSpawn()}{OnSpawn()}}
+{\footnotesize\ttfamily void Inventory\+Window.\+On\+Spawn (\begin{DoxyParamCaption}\item[{Game\+Object}]{player\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{InventoryWindow_8cs_source}{Inventory\+Window.\+cs}} строка \mbox{\hyperlink{InventoryWindow_8cs_source_l00036}{36}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037     \{}
+\DoxyCodeLine{00038         player = playerObject;}
+\DoxyCodeLine{00039         playerInventory = playerObject.GetComponent<\mbox{\hyperlink{classInventory}{Inventory}}>();}
+\DoxyCodeLine{00040         playerInventory.onItemAdded += OnItemAdded;}
+\DoxyCodeLine{00041         Redraw();}
+\DoxyCodeLine{00042     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInventoryWindow_a978187561a74e417874b86a05b0cefd6}\label{classInventoryWindow_a978187561a74e417874b86a05b0cefd6}} 
+\index{InventoryWindow@{InventoryWindow}!Start@{Start}}
+\index{Start@{Start}!InventoryWindow@{InventoryWindow}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Inventory\+Window.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{InventoryWindow_8cs_source}{Inventory\+Window.\+cs}} строка \mbox{\hyperlink{InventoryWindow_8cs_source_l00019}{19}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020     \{}
+\DoxyCodeLine{00021         \textcolor{keywordflow}{if} (playerInventory != \textcolor{keyword}{null}) playerInventory.onItemAdded += OnItemAdded;}
+\DoxyCodeLine{00022         DisplayedItem.onItemDrop += OnItemDropped;}
+\DoxyCodeLine{00023         DisplayedItem.onItemSwap += onItemSwapped;}
+\DoxyCodeLine{00024         KeyHandler.keyPressed += KeyPressed;}
+\DoxyCodeLine{00025         SpawnPlayers.OnSpawn += OnSpawn;}
+\DoxyCodeLine{00026     \}}
+
+\end{DoxyCode}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Game/\+Inventory/Inventory\+Window.\+cs\end{DoxyCompactItemize}

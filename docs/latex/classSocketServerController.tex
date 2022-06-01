@@ -1,0 +1,81 @@
+\hypertarget{classSocketServerController}{}\doxysection{Класс Socket\+Server\+Controller}
+\label{classSocketServerController}\index{SocketServerController@{SocketServerController}}
+Граф наследования\+:Socket\+Server\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSocketServerController}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classSocketServerController_acdcc40682d25f59bd7d00dce8efc3a03}{Start\+Send\+Invite\+To\+Socket\+Server}} (int invited\+User\+ID, string room\+Name)
+\begin{DoxyCompactList}\small\item\em открытие потока на отправку приглашения другому игроку  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSocketServerController_a43ce34d34a09db220db778750133007c}{Close\+Connection}} ()
+\begin{DoxyCompactList}\small\item\em Метод отключается от Socket\+Server  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{SocketServerController_8cs_source}{Socket\+Server\+Controller.\+cs}} строка \mbox{\hyperlink{SocketServerController_8cs_source_l00008}{8}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classSocketServerController_a43ce34d34a09db220db778750133007c}\label{classSocketServerController_a43ce34d34a09db220db778750133007c}} 
+\index{SocketServerController@{SocketServerController}!CloseConnection@{CloseConnection}}
+\index{CloseConnection@{CloseConnection}!SocketServerController@{SocketServerController}}
+\doxysubsubsection{\texorpdfstring{CloseConnection()}{CloseConnection()}}
+{\footnotesize\ttfamily void Socket\+Server\+Controller.\+Close\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Метод отключается от Socket\+Server  
+
+
+
+См. определение в файле \mbox{\hyperlink{SocketServerController_8cs_source}{Socket\+Server\+Controller.\+cs}} строка \mbox{\hyperlink{SocketServerController_8cs_source_l00168}{168}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00169     \{}
+\DoxyCodeLine{00170         \_tcpSocket.Shutdown(SocketShutdown.Both);}
+\DoxyCodeLine{00171         \_tcpSocket.Close();}
+\DoxyCodeLine{00172     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSocketServerController_acdcc40682d25f59bd7d00dce8efc3a03}\label{classSocketServerController_acdcc40682d25f59bd7d00dce8efc3a03}} 
+\index{SocketServerController@{SocketServerController}!StartSendInviteToSocketServer@{StartSendInviteToSocketServer}}
+\index{StartSendInviteToSocketServer@{StartSendInviteToSocketServer}!SocketServerController@{SocketServerController}}
+\doxysubsubsection{\texorpdfstring{StartSendInviteToSocketServer()}{StartSendInviteToSocketServer()}}
+{\footnotesize\ttfamily void Socket\+Server\+Controller.\+Start\+Send\+Invite\+To\+Socket\+Server (\begin{DoxyParamCaption}\item[{int}]{invited\+User\+ID,  }\item[{string}]{room\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+открытие потока на отправку приглашения другому игроку  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em invited\+User\+ID} & id приглашаемого пользователя\\
+\hline
+{\em room\+Name} & название комнаты куда должен присоедениться приглашенный\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{SocketServerController_8cs_source}{Socket\+Server\+Controller.\+cs}} строка \mbox{\hyperlink{SocketServerController_8cs_source_l00159}{159}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00160     \{}
+\DoxyCodeLine{00161         \_thread = \textcolor{keyword}{new} Thread(() => \{ SendInviteToSocketServer(invitedUserID, roomName); \});}
+\DoxyCodeLine{00162         \_thread.Start();}
+\DoxyCodeLine{00163     \}}
+
+\end{DoxyCode}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Lobby/Socket\+Server\+Controller.\+cs\end{DoxyCompactItemize}

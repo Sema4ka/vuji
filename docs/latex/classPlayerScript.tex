@@ -1,0 +1,58 @@
+\hypertarget{classPlayerScript}{}\doxysection{Класс Player\+Script}
+\label{classPlayerScript}\index{PlayerScript@{PlayerScript}}
+Граф наследования\+:Player\+Script\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPlayerScript}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classPlayerScript_a683cca26aa9143e2da19ce7196104bd5}{Kill\+Player}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{PlayerScript_8cs_source}{Player\+Script.\+cs}} строка \mbox{\hyperlink{PlayerScript_8cs_source_l00005}{5}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classPlayerScript_a683cca26aa9143e2da19ce7196104bd5}\label{classPlayerScript_a683cca26aa9143e2da19ce7196104bd5}} 
+\index{PlayerScript@{PlayerScript}!KillPlayer@{KillPlayer}}
+\index{KillPlayer@{KillPlayer}!PlayerScript@{PlayerScript}}
+\doxysubsubsection{\texorpdfstring{KillPlayer()}{KillPlayer()}}
+{\footnotesize\ttfamily void Player\+Script.\+Kill\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{PlayerScript_8cs_source}{Player\+Script.\+cs}} строка \mbox{\hyperlink{PlayerScript_8cs_source_l00059}{59}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060     \{}
+\DoxyCodeLine{00061         var myPlayerView = gameObject.GetComponent<PhotonView>();}
+\DoxyCodeLine{00062 }
+\DoxyCodeLine{00063         Debug.Log(\textcolor{stringliteral}{"{}PLAYER DIED FROM: "{}} + myPlayerView.Owner.GetPhotonTeam().Name);}
+\DoxyCodeLine{00064         \textcolor{keywordflow}{if} (myPlayerView.Owner.GetPhotonTeam().Name == \textcolor{stringliteral}{"{}TeamOne"{}})}
+\DoxyCodeLine{00065         \{}
+\DoxyCodeLine{00066             \_playersTeamsManager.PlayerInTeamOneDied();}
+\DoxyCodeLine{00067         \}}
+\DoxyCodeLine{00068         }
+\DoxyCodeLine{00069         \textcolor{keywordflow}{if} (myPlayerView.Owner.GetPhotonTeam().Name == \textcolor{stringliteral}{"{}TeamTwo"{}})}
+\DoxyCodeLine{00070         \{}
+\DoxyCodeLine{00071             \_playersTeamsManager.PlayerInTeamTwoDied();}
+\DoxyCodeLine{00072         \}}
+\DoxyCodeLine{00073         gameObject.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{00074         \textcolor{comment}{//PhotonNetwork.Destroy(gameObject);}}
+\DoxyCodeLine{00075     \}}
+
+\end{DoxyCode}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Game/\+Player/Player\+Script.\+cs\end{DoxyCompactItemize}

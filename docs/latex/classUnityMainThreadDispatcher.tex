@@ -1,0 +1,205 @@
+\hypertarget{classUnityMainThreadDispatcher}{}\doxysection{Класс Unity\+Main\+Thread\+Dispatcher}
+\label{classUnityMainThreadDispatcher}\index{UnityMainThreadDispatcher@{UnityMainThreadDispatcher}}
+
+
+A thread-\/safe class which holds a queue with actions to execute on the next Update() method. It can be used to make calls to the main thread for things such as UI Manipulation in Unity. It was developed for use in combination with the Firebase Unity plugin, which uses separate threads for event handling   
+
+
+Граф наследования\+:Unity\+Main\+Thread\+Dispatcher\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classUnityMainThreadDispatcher}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classUnityMainThreadDispatcher_ae36d462813f2482b0fbbc641300757ab}{Update}} ()
+\item 
+void \mbox{\hyperlink{classUnityMainThreadDispatcher_a6d02e71f322324222a11c99779a34ece}{Enqueue}} (IEnumerator action)
+\begin{DoxyCompactList}\small\item\em Locks the queue and adds the IEnumerator to the queue  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUnityMainThreadDispatcher_a2fe8fe4807bc1e9ee32c136811233f5c}{Enqueue}} (Action action)
+\begin{DoxyCompactList}\small\item\em Locks the queue and adds the Action to the queue \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{classUnityMainThreadDispatcher_ab8cfe1ec2ae0b3738c57e767f0c77426}{Enqueue\+Async}} (Action action)
+\begin{DoxyCompactList}\small\item\em Locks the queue and adds the Action to the queue, returning a Task which is completed when the action completes  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classUnityMainThreadDispatcher_a6bac57f1f2e4ea5fb9b5ba02511c26cb}{Exists}} ()
+\item 
+static \mbox{\hyperlink{classUnityMainThreadDispatcher}{Unity\+Main\+Thread\+Dispatcher}} \mbox{\hyperlink{classUnityMainThreadDispatcher_a7c8da3e746d3d72971ee7b3d0638ed70}{Instance}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+A thread-\/safe class which holds a queue with actions to execute on the next Update() method. It can be used to make calls to the main thread for things such as UI Manipulation in Unity. It was developed for use in combination with the Firebase Unity plugin, which uses separate threads for event handling  
+
+Author\+: Pim de Witte (pimdewitte.\+com) and contributors, \href{https://github.com/PimDeWitte/UnityMainThreadDispatcher}{\texttt{ https\+://github.\+com/\+Pim\+De\+Witte/\+Unity\+Main\+Thread\+Dispatcher}} 
+
+См. определение в файле \mbox{\hyperlink{UnityMainThreadDispatcher_8cs_source}{Unity\+Main\+Thread\+Dispatcher.\+cs}} строка \mbox{\hyperlink{UnityMainThreadDispatcher_8cs_source_l00028}{28}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classUnityMainThreadDispatcher_a2fe8fe4807bc1e9ee32c136811233f5c}\label{classUnityMainThreadDispatcher_a2fe8fe4807bc1e9ee32c136811233f5c}} 
+\index{UnityMainThreadDispatcher@{UnityMainThreadDispatcher}!Enqueue@{Enqueue}}
+\index{Enqueue@{Enqueue}!UnityMainThreadDispatcher@{UnityMainThreadDispatcher}}
+\doxysubsubsection{\texorpdfstring{Enqueue()}{Enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Unity\+Main\+Thread\+Dispatcher.\+Enqueue (\begin{DoxyParamCaption}\item[{Action}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Locks the queue and adds the Action to the queue 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em action} & function that will be executed from the main thread.\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{UnityMainThreadDispatcher_8cs_source}{Unity\+Main\+Thread\+Dispatcher.\+cs}} строка \mbox{\hyperlink{UnityMainThreadDispatcher_8cs_source_l00056}{56}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057     \{}
+\DoxyCodeLine{00058         \mbox{\hyperlink{classUnityMainThreadDispatcher_a6d02e71f322324222a11c99779a34ece}{Enqueue}}(ActionWrapper(action));}
+\DoxyCodeLine{00059     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUnityMainThreadDispatcher_a6d02e71f322324222a11c99779a34ece}\label{classUnityMainThreadDispatcher_a6d02e71f322324222a11c99779a34ece}} 
+\index{UnityMainThreadDispatcher@{UnityMainThreadDispatcher}!Enqueue@{Enqueue}}
+\index{Enqueue@{Enqueue}!UnityMainThreadDispatcher@{UnityMainThreadDispatcher}}
+\doxysubsubsection{\texorpdfstring{Enqueue()}{Enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Unity\+Main\+Thread\+Dispatcher.\+Enqueue (\begin{DoxyParamCaption}\item[{IEnumerator}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Locks the queue and adds the IEnumerator to the queue  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em action} & IEnumerator function that will be executed from the main thread.\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{UnityMainThreadDispatcher_8cs_source}{Unity\+Main\+Thread\+Dispatcher.\+cs}} строка \mbox{\hyperlink{UnityMainThreadDispatcher_8cs_source_l00044}{44}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044                                             \{}
+\DoxyCodeLine{00045         lock (\_executionQueue) \{}
+\DoxyCodeLine{00046             \_executionQueue.Enqueue (() => \{}
+\DoxyCodeLine{00047                 StartCoroutine (action);}
+\DoxyCodeLine{00048             \});}
+\DoxyCodeLine{00049         \}}
+\DoxyCodeLine{00050     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUnityMainThreadDispatcher_ab8cfe1ec2ae0b3738c57e767f0c77426}\label{classUnityMainThreadDispatcher_ab8cfe1ec2ae0b3738c57e767f0c77426}} 
+\index{UnityMainThreadDispatcher@{UnityMainThreadDispatcher}!EnqueueAsync@{EnqueueAsync}}
+\index{EnqueueAsync@{EnqueueAsync}!UnityMainThreadDispatcher@{UnityMainThreadDispatcher}}
+\doxysubsubsection{\texorpdfstring{EnqueueAsync()}{EnqueueAsync()}}
+{\footnotesize\ttfamily Task Unity\+Main\+Thread\+Dispatcher.\+Enqueue\+Async (\begin{DoxyParamCaption}\item[{Action}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Locks the queue and adds the Action to the queue, returning a Task which is completed when the action completes  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em action} & function that will be executed from the main thread.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+A Task that can be awaited until the action completes
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{UnityMainThreadDispatcher_8cs_source}{Unity\+Main\+Thread\+Dispatcher.\+cs}} строка \mbox{\hyperlink{UnityMainThreadDispatcher_8cs_source_l00066}{66}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067     \{}
+\DoxyCodeLine{00068         var tcs = \textcolor{keyword}{new} TaskCompletionSource<bool>();}
+\DoxyCodeLine{00069 }
+\DoxyCodeLine{00070         \textcolor{keywordtype}{void} WrappedAction() \{}
+\DoxyCodeLine{00071             \textcolor{keywordflow}{try} }
+\DoxyCodeLine{00072             \{}
+\DoxyCodeLine{00073                 action();}
+\DoxyCodeLine{00074                 tcs.TrySetResult(\textcolor{keyword}{true});}
+\DoxyCodeLine{00075             \} \textcolor{keywordflow}{catch} (Exception ex) }
+\DoxyCodeLine{00076             \{}
+\DoxyCodeLine{00077                 tcs.TrySetException(ex);}
+\DoxyCodeLine{00078             \}}
+\DoxyCodeLine{00079         \}}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081         \mbox{\hyperlink{classUnityMainThreadDispatcher_a6d02e71f322324222a11c99779a34ece}{Enqueue}}(ActionWrapper(WrappedAction));}
+\DoxyCodeLine{00082         \textcolor{keywordflow}{return} tcs.Task;}
+\DoxyCodeLine{00083     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUnityMainThreadDispatcher_a6bac57f1f2e4ea5fb9b5ba02511c26cb}\label{classUnityMainThreadDispatcher_a6bac57f1f2e4ea5fb9b5ba02511c26cb}} 
+\index{UnityMainThreadDispatcher@{UnityMainThreadDispatcher}!Exists@{Exists}}
+\index{Exists@{Exists}!UnityMainThreadDispatcher@{UnityMainThreadDispatcher}}
+\doxysubsubsection{\texorpdfstring{Exists()}{Exists()}}
+{\footnotesize\ttfamily static bool Unity\+Main\+Thread\+Dispatcher.\+Exists (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{UnityMainThreadDispatcher_8cs_source}{Unity\+Main\+Thread\+Dispatcher.\+cs}} строка \mbox{\hyperlink{UnityMainThreadDispatcher_8cs_source_l00095}{95}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00095                                 \{}
+\DoxyCodeLine{00096         \textcolor{keywordflow}{return} \_instance != \textcolor{keyword}{null};}
+\DoxyCodeLine{00097     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUnityMainThreadDispatcher_a7c8da3e746d3d72971ee7b3d0638ed70}\label{classUnityMainThreadDispatcher_a7c8da3e746d3d72971ee7b3d0638ed70}} 
+\index{UnityMainThreadDispatcher@{UnityMainThreadDispatcher}!Instance@{Instance}}
+\index{Instance@{Instance}!UnityMainThreadDispatcher@{UnityMainThreadDispatcher}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classUnityMainThreadDispatcher}{Unity\+Main\+Thread\+Dispatcher}} Unity\+Main\+Thread\+Dispatcher.\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{UnityMainThreadDispatcher_8cs_source}{Unity\+Main\+Thread\+Dispatcher.\+cs}} строка \mbox{\hyperlink{UnityMainThreadDispatcher_8cs_source_l00099}{99}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00099                                                        \{}
+\DoxyCodeLine{00100         \textcolor{keywordflow}{if} (!Exists ()) \{}
+\DoxyCodeLine{00101             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception (\textcolor{stringliteral}{"{}UnityMainThreadDispatcher could not find the UnityMainThreadDispatcher object. Please ensure you have added the MainThreadExecutor Prefab to your scene."{}});}
+\DoxyCodeLine{00102         \}}
+\DoxyCodeLine{00103         \textcolor{keywordflow}{return} \_instance;}
+\DoxyCodeLine{00104     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUnityMainThreadDispatcher_ae36d462813f2482b0fbbc641300757ab}\label{classUnityMainThreadDispatcher_ae36d462813f2482b0fbbc641300757ab}} 
+\index{UnityMainThreadDispatcher@{UnityMainThreadDispatcher}!Update@{Update}}
+\index{Update@{Update}!UnityMainThreadDispatcher@{UnityMainThreadDispatcher}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Unity\+Main\+Thread\+Dispatcher.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{UnityMainThreadDispatcher_8cs_source}{Unity\+Main\+Thread\+Dispatcher.\+cs}} строка \mbox{\hyperlink{UnityMainThreadDispatcher_8cs_source_l00032}{32}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032                          \{}
+\DoxyCodeLine{00033         lock(\_executionQueue) \{}
+\DoxyCodeLine{00034             \textcolor{keywordflow}{while} (\_executionQueue.Count > 0) \{}
+\DoxyCodeLine{00035                 \_executionQueue.Dequeue().Invoke();}
+\DoxyCodeLine{00036             \}}
+\DoxyCodeLine{00037         \}}
+\DoxyCodeLine{00038     \}}
+
+\end{DoxyCode}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/Unity\+Main\+Thread\+Dispatcher.\+cs\end{DoxyCompactItemize}

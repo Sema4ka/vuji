@@ -1,0 +1,174 @@
+\hypertarget{classKeybindManager}{}\doxysection{Класс Keybind\+Manager}
+\label{classKeybindManager}\index{KeybindManager@{KeybindManager}}
+Граф наследования\+:Keybind\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classKeybindManager}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classKeybindManager_a3cba60bc0e2e29f6971d94cc300c6b65}{Get\+Name}} ()
+\item 
+Key\+Code \mbox{\hyperlink{classKeybindManager_aee26ad249ce5dc77e6bcb0218ad84a9f}{Get\+Key}} ()
+\item 
+void \mbox{\hyperlink{classKeybindManager_a705483499b5ed662ca0e05bc2370d5cc}{Set\+Name}} (string new\+Name)
+\item 
+void \mbox{\hyperlink{classKeybindManager_ab40a512f42d91cbe2f28cd755f3a8542}{Set\+Key}} (Key\+Code new\+Key)
+\item 
+void \mbox{\hyperlink{classKeybindManager_abcd160929ace3446b134f04199a8eb4f}{Set\+Keybind}} ()
+\item 
+void \mbox{\hyperlink{classKeybindManager_a6c1e2babefa136fb06c74f773891d153}{Reset\+Keybind}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+static Action$<$ \mbox{\hyperlink{classKeybindManager}{Keybind\+Manager}}, string, Key\+Code $>$ \mbox{\hyperlink{classKeybindManager_a59dc80eba58b1fe028b901bb2d4771c8}{key\+Changed}}
+\item 
+static Action$<$ bool $>$ \mbox{\hyperlink{classKeybindManager_a6edc96d4aa66644f6914b1877fdd9f4d}{Binding}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00007}{7}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classKeybindManager_aee26ad249ce5dc77e6bcb0218ad84a9f}\label{classKeybindManager_aee26ad249ce5dc77e6bcb0218ad84a9f}} 
+\index{KeybindManager@{KeybindManager}!GetKey@{GetKey}}
+\index{GetKey@{GetKey}!KeybindManager@{KeybindManager}}
+\doxysubsubsection{\texorpdfstring{GetKey()}{GetKey()}}
+{\footnotesize\ttfamily Key\+Code Keybind\+Manager.\+Get\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00059}{59}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060     \{}
+\DoxyCodeLine{00061         \textcolor{keywordflow}{return} key;}
+\DoxyCodeLine{00062     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classKeybindManager_a3cba60bc0e2e29f6971d94cc300c6b65}\label{classKeybindManager_a3cba60bc0e2e29f6971d94cc300c6b65}} 
+\index{KeybindManager@{KeybindManager}!GetName@{GetName}}
+\index{GetName@{GetName}!KeybindManager@{KeybindManager}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily string Keybind\+Manager.\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00055}{55}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056     \{}
+\DoxyCodeLine{00057         \textcolor{keywordflow}{return} keybindName.text;}
+\DoxyCodeLine{00058     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classKeybindManager_a6c1e2babefa136fb06c74f773891d153}\label{classKeybindManager_a6c1e2babefa136fb06c74f773891d153}} 
+\index{KeybindManager@{KeybindManager}!ResetKeybind@{ResetKeybind}}
+\index{ResetKeybind@{ResetKeybind}!KeybindManager@{KeybindManager}}
+\doxysubsubsection{\texorpdfstring{ResetKeybind()}{ResetKeybind()}}
+{\footnotesize\ttfamily void Keybind\+Manager.\+Reset\+Keybind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00080}{80}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081     \{}
+\DoxyCodeLine{00082         keybindKeys.text = \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00083         key = KeyCode.None;}
+\DoxyCodeLine{00084     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classKeybindManager_ab40a512f42d91cbe2f28cd755f3a8542}\label{classKeybindManager_ab40a512f42d91cbe2f28cd755f3a8542}} 
+\index{KeybindManager@{KeybindManager}!SetKey@{SetKey}}
+\index{SetKey@{SetKey}!KeybindManager@{KeybindManager}}
+\doxysubsubsection{\texorpdfstring{SetKey()}{SetKey()}}
+{\footnotesize\ttfamily void Keybind\+Manager.\+Set\+Key (\begin{DoxyParamCaption}\item[{Key\+Code}]{new\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00067}{67}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068     \{}
+\DoxyCodeLine{00069         key = newKey;}
+\DoxyCodeLine{00070         keybindKeys.text = \mbox{\hyperlink{classKeyHandler}{KeyHandler}}.NormalizeKeybind(newKey);}
+\DoxyCodeLine{00071     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classKeybindManager_abcd160929ace3446b134f04199a8eb4f}\label{classKeybindManager_abcd160929ace3446b134f04199a8eb4f}} 
+\index{KeybindManager@{KeybindManager}!SetKeybind@{SetKeybind}}
+\index{SetKeybind@{SetKeybind}!KeybindManager@{KeybindManager}}
+\doxysubsubsection{\texorpdfstring{SetKeybind()}{SetKeybind()}}
+{\footnotesize\ttfamily void Keybind\+Manager.\+Set\+Keybind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00073}{73}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074     \{}
+\DoxyCodeLine{00075         binding = \textcolor{keyword}{true};}
+\DoxyCodeLine{00076         keybindKeys.text = \textcolor{stringliteral}{"{}\_"{}};}
+\DoxyCodeLine{00077         Binding?.Invoke(\textcolor{keyword}{true});}
+\DoxyCodeLine{00078     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classKeybindManager_a705483499b5ed662ca0e05bc2370d5cc}\label{classKeybindManager_a705483499b5ed662ca0e05bc2370d5cc}} 
+\index{KeybindManager@{KeybindManager}!SetName@{SetName}}
+\index{SetName@{SetName}!KeybindManager@{KeybindManager}}
+\doxysubsubsection{\texorpdfstring{SetName()}{SetName()}}
+{\footnotesize\ttfamily void Keybind\+Manager.\+Set\+Name (\begin{DoxyParamCaption}\item[{string}]{new\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00063}{63}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064     \{}
+\DoxyCodeLine{00065         keybindName.text = newName;}
+\DoxyCodeLine{00066     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classKeybindManager_a6edc96d4aa66644f6914b1877fdd9f4d}\label{classKeybindManager_a6edc96d4aa66644f6914b1877fdd9f4d}} 
+\index{KeybindManager@{KeybindManager}!Binding@{Binding}}
+\index{Binding@{Binding}!KeybindManager@{KeybindManager}}
+\doxysubsubsection{\texorpdfstring{Binding}{Binding}}
+{\footnotesize\ttfamily Action$<$bool$>$ Keybind\+Manager.\+Binding\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00013}{13}}
+
+\mbox{\Hypertarget{classKeybindManager_a59dc80eba58b1fe028b901bb2d4771c8}\label{classKeybindManager_a59dc80eba58b1fe028b901bb2d4771c8}} 
+\index{KeybindManager@{KeybindManager}!keyChanged@{keyChanged}}
+\index{keyChanged@{keyChanged}!KeybindManager@{KeybindManager}}
+\doxysubsubsection{\texorpdfstring{keyChanged}{keyChanged}}
+{\footnotesize\ttfamily Action$<$\mbox{\hyperlink{classKeybindManager}{Keybind\+Manager}}, string, Key\+Code$>$ Keybind\+Manager.\+key\+Changed\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00012}{12}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+UIScripts/Keybind\+Manager.\+cs\end{DoxyCompactItemize}

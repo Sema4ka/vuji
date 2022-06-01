@@ -1,0 +1,104 @@
+\hypertarget{classInviteFriend}{}\doxysection{Класс Invite\+Friend}
+\label{classInviteFriend}\index{InviteFriend@{InviteFriend}}
+Граф наследования\+:Invite\+Friend\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classInviteFriend}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classInviteFriend_a05829b0b3f31b888d15065d26fb40d53}{Start\+Invite\+Friend}} ()
+\begin{DoxyCompactList}\small\item\em Метод перед приглашением другого игрока. Тут может быть проверка на статус приглашаемого игрока. Если игрока нет в сети не приглашать его  \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{classInviteFriend_af0ca94b43f853f4c60afd13d1c1c0a46}{On\+Joined\+Room}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classInviteFriend_adeb040adf10725a48f5f7a21dc5365ae}{invited\+User\+ID}}
+\item 
+string \mbox{\hyperlink{classInviteFriend_a80dc894fbfd2b0184e6b4bdc9d64b7f3}{room\+Name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{InviteFriend_8cs_source}{Invite\+Friend.\+cs}} строка \mbox{\hyperlink{InviteFriend_8cs_source_l00003}{3}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classInviteFriend_af0ca94b43f853f4c60afd13d1c1c0a46}\label{classInviteFriend_af0ca94b43f853f4c60afd13d1c1c0a46}} 
+\index{InviteFriend@{InviteFriend}!OnJoinedRoom@{OnJoinedRoom}}
+\index{OnJoinedRoom@{OnJoinedRoom}!InviteFriend@{InviteFriend}}
+\doxysubsubsection{\texorpdfstring{OnJoinedRoom()}{OnJoinedRoom()}}
+{\footnotesize\ttfamily override void Invite\+Friend.\+On\+Joined\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{InviteFriend_8cs_source}{Invite\+Friend.\+cs}} строка \mbox{\hyperlink{InviteFriend_8cs_source_l00023}{23}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024     \{}
+\DoxyCodeLine{00025         roomName = PhotonNetwork.CurrentRoom.Name;}
+\DoxyCodeLine{00026         \mbox{\hyperlink{classInviteFriend_a05829b0b3f31b888d15065d26fb40d53}{StartInviteFriend}}();}
+\DoxyCodeLine{00027     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInviteFriend_a05829b0b3f31b888d15065d26fb40d53}\label{classInviteFriend_a05829b0b3f31b888d15065d26fb40d53}} 
+\index{InviteFriend@{InviteFriend}!StartInviteFriend@{StartInviteFriend}}
+\index{StartInviteFriend@{StartInviteFriend}!InviteFriend@{InviteFriend}}
+\doxysubsubsection{\texorpdfstring{StartInviteFriend()}{StartInviteFriend()}}
+{\footnotesize\ttfamily void Invite\+Friend.\+Start\+Invite\+Friend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Метод перед приглашением другого игрока. Тут может быть проверка на статус приглашаемого игрока. Если игрока нет в сети не приглашать его  
+
+
+
+См. определение в файле \mbox{\hyperlink{InviteFriend_8cs_source}{Invite\+Friend.\+cs}} строка \mbox{\hyperlink{InviteFriend_8cs_source_l00013}{13}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014     \{}
+\DoxyCodeLine{00015         \textcolor{keywordflow}{if} (roomName != \textcolor{keyword}{null})}
+\DoxyCodeLine{00016         \{}
+\DoxyCodeLine{00017             \_socketServerController = GetComponent<SocketServerController>();}
+\DoxyCodeLine{00018             \_socketServerController.\mbox{\hyperlink{classSocketServerController_acdcc40682d25f59bd7d00dce8efc3a03}{StartSendInviteToSocketServer}}(invitedUserID, roomName);}
+\DoxyCodeLine{00019             enabled = \textcolor{keyword}{false};}
+\DoxyCodeLine{00020         \}}
+\DoxyCodeLine{00021     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classInviteFriend_adeb040adf10725a48f5f7a21dc5365ae}\label{classInviteFriend_adeb040adf10725a48f5f7a21dc5365ae}} 
+\index{InviteFriend@{InviteFriend}!invitedUserID@{invitedUserID}}
+\index{invitedUserID@{invitedUserID}!InviteFriend@{InviteFriend}}
+\doxysubsubsection{\texorpdfstring{invitedUserID}{invitedUserID}}
+{\footnotesize\ttfamily int Invite\+Friend.\+invited\+User\+ID}
+
+
+
+См. определение в файле \mbox{\hyperlink{InviteFriend_8cs_source}{Invite\+Friend.\+cs}} строка \mbox{\hyperlink{InviteFriend_8cs_source_l00005}{5}}
+
+\mbox{\Hypertarget{classInviteFriend_a80dc894fbfd2b0184e6b4bdc9d64b7f3}\label{classInviteFriend_a80dc894fbfd2b0184e6b4bdc9d64b7f3}} 
+\index{InviteFriend@{InviteFriend}!roomName@{roomName}}
+\index{roomName@{roomName}!InviteFriend@{InviteFriend}}
+\doxysubsubsection{\texorpdfstring{roomName}{roomName}}
+{\footnotesize\ttfamily string Invite\+Friend.\+room\+Name}
+
+
+
+См. определение в файле \mbox{\hyperlink{InviteFriend_8cs_source}{Invite\+Friend.\+cs}} строка \mbox{\hyperlink{InviteFriend_8cs_source_l00006}{6}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Lobby/Invite\+Friend.\+cs\end{DoxyCompactItemize}

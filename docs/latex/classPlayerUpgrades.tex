@@ -1,0 +1,112 @@
+\hypertarget{classPlayerUpgrades}{}\doxysection{Класс Player\+Upgrades}
+\label{classPlayerUpgrades}\index{PlayerUpgrades@{PlayerUpgrades}}
+Граф наследования\+:Player\+Upgrades\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPlayerUpgrades}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classPlayerUpgrades_aa3cd0ec0ef3e27d3256ee1d34efad93d}{Get\+Xp}} ()
+\item 
+void \mbox{\hyperlink{classPlayerUpgrades_abe12f6c1d803e42c4a1642546ec512e1}{Add\+Xp}} (int points)
+\item 
+void \mbox{\hyperlink{classPlayerUpgrades_a6f0cb31e1cf309a61c869f92e7730c96}{Add\+Upgrade}} (Button btn)
+\item 
+void \mbox{\hyperlink{classPlayerUpgrades_a0aa14e851134d1561f78755f888956bb}{Switch\+Panels}} (bool to\+Class=true)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{PlayerUpgrades_8cs_source}{Player\+Upgrades.\+cs}} строка \mbox{\hyperlink{PlayerUpgrades_8cs_source_l00008}{8}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classPlayerUpgrades_a6f0cb31e1cf309a61c869f92e7730c96}\label{classPlayerUpgrades_a6f0cb31e1cf309a61c869f92e7730c96}} 
+\index{PlayerUpgrades@{PlayerUpgrades}!AddUpgrade@{AddUpgrade}}
+\index{AddUpgrade@{AddUpgrade}!PlayerUpgrades@{PlayerUpgrades}}
+\doxysubsubsection{\texorpdfstring{AddUpgrade()}{AddUpgrade()}}
+{\footnotesize\ttfamily void Player\+Upgrades.\+Add\+Upgrade (\begin{DoxyParamCaption}\item[{Button}]{btn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{PlayerUpgrades_8cs_source}{Player\+Upgrades.\+cs}} строка \mbox{\hyperlink{PlayerUpgrades_8cs_source_l00060}{60}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061     \{}
+\DoxyCodeLine{00062         \textcolor{keywordflow}{if} (xpPoints >= btn.GetComponent<\mbox{\hyperlink{classBaseUpgrade}{BaseUpgrade}}>().GetCost())}
+\DoxyCodeLine{00063         \{}
+\DoxyCodeLine{00064             xpPoints -\/= btn.GetComponent<\mbox{\hyperlink{classBaseUpgrade}{BaseUpgrade}}>().GetCost();}
+\DoxyCodeLine{00065             btn.onClick.RemoveAllListeners();}
+\DoxyCodeLine{00066             Color col = btn.GetComponent<Image>().color;}
+\DoxyCodeLine{00067             col.a = 0.1f;}
+\DoxyCodeLine{00068             btn.GetComponent<\mbox{\hyperlink{classBaseUpgrade}{BaseUpgrade}}>().ApplyUpgrade(player);}
+\DoxyCodeLine{00069         \}        }
+\DoxyCodeLine{00070         }
+\DoxyCodeLine{00071     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPlayerUpgrades_abe12f6c1d803e42c4a1642546ec512e1}\label{classPlayerUpgrades_abe12f6c1d803e42c4a1642546ec512e1}} 
+\index{PlayerUpgrades@{PlayerUpgrades}!AddXp@{AddXp}}
+\index{AddXp@{AddXp}!PlayerUpgrades@{PlayerUpgrades}}
+\doxysubsubsection{\texorpdfstring{AddXp()}{AddXp()}}
+{\footnotesize\ttfamily void Player\+Upgrades.\+Add\+Xp (\begin{DoxyParamCaption}\item[{int}]{points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{PlayerUpgrades_8cs_source}{Player\+Upgrades.\+cs}} строка \mbox{\hyperlink{PlayerUpgrades_8cs_source_l00055}{55}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056     \{}
+\DoxyCodeLine{00057         \textcolor{keywordflow}{if} (points < 0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00058         xpPoints += points;}
+\DoxyCodeLine{00059     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPlayerUpgrades_aa3cd0ec0ef3e27d3256ee1d34efad93d}\label{classPlayerUpgrades_aa3cd0ec0ef3e27d3256ee1d34efad93d}} 
+\index{PlayerUpgrades@{PlayerUpgrades}!GetXp@{GetXp}}
+\index{GetXp@{GetXp}!PlayerUpgrades@{PlayerUpgrades}}
+\doxysubsubsection{\texorpdfstring{GetXp()}{GetXp()}}
+{\footnotesize\ttfamily int Player\+Upgrades.\+Get\+Xp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{PlayerUpgrades_8cs_source}{Player\+Upgrades.\+cs}} строка \mbox{\hyperlink{PlayerUpgrades_8cs_source_l00051}{51}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052     \{}
+\DoxyCodeLine{00053         \textcolor{keywordflow}{return} xpPoints;}
+\DoxyCodeLine{00054     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPlayerUpgrades_a0aa14e851134d1561f78755f888956bb}\label{classPlayerUpgrades_a0aa14e851134d1561f78755f888956bb}} 
+\index{PlayerUpgrades@{PlayerUpgrades}!SwitchPanels@{SwitchPanels}}
+\index{SwitchPanels@{SwitchPanels}!PlayerUpgrades@{PlayerUpgrades}}
+\doxysubsubsection{\texorpdfstring{SwitchPanels()}{SwitchPanels()}}
+{\footnotesize\ttfamily void Player\+Upgrades.\+Switch\+Panels (\begin{DoxyParamCaption}\item[{bool}]{to\+Class = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{PlayerUpgrades_8cs_source}{Player\+Upgrades.\+cs}} строка \mbox{\hyperlink{PlayerUpgrades_8cs_source_l00072}{72}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073     \{}
+\DoxyCodeLine{00074         classPanel.gameObject.SetActive(toClass);}
+\DoxyCodeLine{00075         subclassPanel.gameObject.SetActive(!toClass);}
+\DoxyCodeLine{00076     \}}
+
+\end{DoxyCode}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Game/\+Player/Player\+Upgrades.\+cs\end{DoxyCompactItemize}

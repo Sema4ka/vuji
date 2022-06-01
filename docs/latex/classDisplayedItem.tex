@@ -1,0 +1,154 @@
+\hypertarget{classDisplayedItem}{}\doxysection{Класс Displayed\+Item}
+\label{classDisplayedItem}\index{DisplayedItem@{DisplayedItem}}
+Граф наследования\+:Displayed\+Item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDisplayedItem}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{classDisplayedItem_a7618a672d900dbf7704df5a02f32b8c6}{On\+Pointer\+Down}} (Pointer\+Event\+Data event\+Data)
+\item 
+override void \mbox{\hyperlink{classDisplayedItem_a7a7f2483c314c6edafaad914d8bd891f}{On\+Pointer\+Up}} (Pointer\+Event\+Data event\+Data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+Rect\+Transform \mbox{\hyperlink{classDisplayedItem_ad04b2eb3a3764e401cb6d9a0ad56aa27}{inventory\+Panel}}
+\item 
+Rect\+Transform \mbox{\hyperlink{classDisplayedItem_a541a6b7d0e3a0d31f24b6d52fd49bdc2}{displayed\+Item}}
+\item 
+int \mbox{\hyperlink{classDisplayedItem_a1d912b5a45da696e5da0cc0b7e66293d}{item\+Id}}
+\item 
+Vector2 \mbox{\hyperlink{classDisplayedItem_a36611554fd02e14dd85603869d2ff52c}{item\+Position}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+static Action$<$ int $>$ \mbox{\hyperlink{classDisplayedItem_a59b705442c968e04f6b20c9a2bbe0923}{on\+Item\+Drop}}
+\item 
+static Action$<$ \mbox{\hyperlink{classDisplayedItem}{Displayed\+Item}} $>$ \mbox{\hyperlink{classDisplayedItem_a53bed016e9dfd0cd0fbdfd1193236bb8}{on\+Item\+Swap}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{DisplayedItem_8cs_source}{Displayed\+Item.\+cs}} строка \mbox{\hyperlink{DisplayedItem_8cs_source_l00008}{8}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classDisplayedItem_a7618a672d900dbf7704df5a02f32b8c6}\label{classDisplayedItem_a7618a672d900dbf7704df5a02f32b8c6}} 
+\index{DisplayedItem@{DisplayedItem}!OnPointerDown@{OnPointerDown}}
+\index{OnPointerDown@{OnPointerDown}!DisplayedItem@{DisplayedItem}}
+\doxysubsubsection{\texorpdfstring{OnPointerDown()}{OnPointerDown()}}
+{\footnotesize\ttfamily override void Displayed\+Item.\+On\+Pointer\+Down (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{DisplayedItem_8cs_source}{Displayed\+Item.\+cs}} строка \mbox{\hyperlink{DisplayedItem_8cs_source_l00037}{37}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038     \{}
+\DoxyCodeLine{00039         itemPosition = displayedItem.position;}
+\DoxyCodeLine{00040         isDragging = \textcolor{keyword}{true};}
+\DoxyCodeLine{00041     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classDisplayedItem_a7a7f2483c314c6edafaad914d8bd891f}\label{classDisplayedItem_a7a7f2483c314c6edafaad914d8bd891f}} 
+\index{DisplayedItem@{DisplayedItem}!OnPointerUp@{OnPointerUp}}
+\index{OnPointerUp@{OnPointerUp}!DisplayedItem@{DisplayedItem}}
+\doxysubsubsection{\texorpdfstring{OnPointerUp()}{OnPointerUp()}}
+{\footnotesize\ttfamily override void Displayed\+Item.\+On\+Pointer\+Up (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{DisplayedItem_8cs_source}{Displayed\+Item.\+cs}} строка \mbox{\hyperlink{DisplayedItem_8cs_source_l00043}{43}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044     \{}
+\DoxyCodeLine{00045         isDragging = \textcolor{keyword}{false};}
+\DoxyCodeLine{00046         \textcolor{keywordflow}{if} (!RectTransformUtility.RectangleContainsScreenPoint(inventoryPanel, Input.mousePosition))}
+\DoxyCodeLine{00047         \{}
+\DoxyCodeLine{00048             onItemDrop?.Invoke(itemId);}
+\DoxyCodeLine{00049         \}}
+\DoxyCodeLine{00050         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00051         \{}
+\DoxyCodeLine{00052             onItemSwap?.Invoke(\textcolor{keyword}{this});}
+\DoxyCodeLine{00053         \}}
+\DoxyCodeLine{00054     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classDisplayedItem_a541a6b7d0e3a0d31f24b6d52fd49bdc2}\label{classDisplayedItem_a541a6b7d0e3a0d31f24b6d52fd49bdc2}} 
+\index{DisplayedItem@{DisplayedItem}!displayedItem@{displayedItem}}
+\index{displayedItem@{displayedItem}!DisplayedItem@{DisplayedItem}}
+\doxysubsubsection{\texorpdfstring{displayedItem}{displayedItem}}
+{\footnotesize\ttfamily Rect\+Transform Displayed\+Item.\+displayed\+Item}
+
+
+
+См. определение в файле \mbox{\hyperlink{DisplayedItem_8cs_source}{Displayed\+Item.\+cs}} строка \mbox{\hyperlink{DisplayedItem_8cs_source_l00011}{11}}
+
+\mbox{\Hypertarget{classDisplayedItem_ad04b2eb3a3764e401cb6d9a0ad56aa27}\label{classDisplayedItem_ad04b2eb3a3764e401cb6d9a0ad56aa27}} 
+\index{DisplayedItem@{DisplayedItem}!inventoryPanel@{inventoryPanel}}
+\index{inventoryPanel@{inventoryPanel}!DisplayedItem@{DisplayedItem}}
+\doxysubsubsection{\texorpdfstring{inventoryPanel}{inventoryPanel}}
+{\footnotesize\ttfamily Rect\+Transform Displayed\+Item.\+inventory\+Panel}
+
+
+
+См. определение в файле \mbox{\hyperlink{DisplayedItem_8cs_source}{Displayed\+Item.\+cs}} строка \mbox{\hyperlink{DisplayedItem_8cs_source_l00010}{10}}
+
+\mbox{\Hypertarget{classDisplayedItem_a1d912b5a45da696e5da0cc0b7e66293d}\label{classDisplayedItem_a1d912b5a45da696e5da0cc0b7e66293d}} 
+\index{DisplayedItem@{DisplayedItem}!itemId@{itemId}}
+\index{itemId@{itemId}!DisplayedItem@{DisplayedItem}}
+\doxysubsubsection{\texorpdfstring{itemId}{itemId}}
+{\footnotesize\ttfamily int Displayed\+Item.\+item\+Id}
+
+
+
+См. определение в файле \mbox{\hyperlink{DisplayedItem_8cs_source}{Displayed\+Item.\+cs}} строка \mbox{\hyperlink{DisplayedItem_8cs_source_l00012}{12}}
+
+\mbox{\Hypertarget{classDisplayedItem_a36611554fd02e14dd85603869d2ff52c}\label{classDisplayedItem_a36611554fd02e14dd85603869d2ff52c}} 
+\index{DisplayedItem@{DisplayedItem}!itemPosition@{itemPosition}}
+\index{itemPosition@{itemPosition}!DisplayedItem@{DisplayedItem}}
+\doxysubsubsection{\texorpdfstring{itemPosition}{itemPosition}}
+{\footnotesize\ttfamily Vector2 Displayed\+Item.\+item\+Position}
+
+
+
+См. определение в файле \mbox{\hyperlink{DisplayedItem_8cs_source}{Displayed\+Item.\+cs}} строка \mbox{\hyperlink{DisplayedItem_8cs_source_l00013}{13}}
+
+\mbox{\Hypertarget{classDisplayedItem_a59b705442c968e04f6b20c9a2bbe0923}\label{classDisplayedItem_a59b705442c968e04f6b20c9a2bbe0923}} 
+\index{DisplayedItem@{DisplayedItem}!onItemDrop@{onItemDrop}}
+\index{onItemDrop@{onItemDrop}!DisplayedItem@{DisplayedItem}}
+\doxysubsubsection{\texorpdfstring{onItemDrop}{onItemDrop}}
+{\footnotesize\ttfamily Action$<$int$>$ Displayed\+Item.\+on\+Item\+Drop\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{DisplayedItem_8cs_source}{Displayed\+Item.\+cs}} строка \mbox{\hyperlink{DisplayedItem_8cs_source_l00015}{15}}
+
+\mbox{\Hypertarget{classDisplayedItem_a53bed016e9dfd0cd0fbdfd1193236bb8}\label{classDisplayedItem_a53bed016e9dfd0cd0fbdfd1193236bb8}} 
+\index{DisplayedItem@{DisplayedItem}!onItemSwap@{onItemSwap}}
+\index{onItemSwap@{onItemSwap}!DisplayedItem@{DisplayedItem}}
+\doxysubsubsection{\texorpdfstring{onItemSwap}{onItemSwap}}
+{\footnotesize\ttfamily Action$<$\mbox{\hyperlink{classDisplayedItem}{Displayed\+Item}}$>$ Displayed\+Item.\+on\+Item\+Swap\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{DisplayedItem_8cs_source}{Displayed\+Item.\+cs}} строка \mbox{\hyperlink{DisplayedItem_8cs_source_l00016}{16}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Game/\+Inventory/Displayed\+Item.\+cs\end{DoxyCompactItemize}

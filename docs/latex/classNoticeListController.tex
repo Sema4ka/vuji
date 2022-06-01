@@ -1,0 +1,85 @@
+\hypertarget{classNoticeListController}{}\doxysection{Класс Notice\+List\+Controller}
+\label{classNoticeListController}\index{NoticeListController@{NoticeListController}}
+Граф наследования\+:Notice\+List\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classNoticeListController}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classNoticeListController_a8103ce6b79cb5482eff324c10c1ede04}{Open\+Notice\+List}} ()
+\begin{DoxyCompactList}\small\item\em Метод открывает/скрывает список уведомлений  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNoticeListController_a4fcfb0c8fa204b1d83089e0310454720}{Add\+Invite\+Notice}} (string invite\+From\+User\+ID, string room\+Name)
+\begin{DoxyCompactList}\small\item\em Медот добавляет новое уведомление в Scroll\+View  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{NoticeListController_8cs_source}{Notice\+List\+Controller.\+cs}} строка \mbox{\hyperlink{NoticeListController_8cs_source_l00003}{3}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classNoticeListController_a4fcfb0c8fa204b1d83089e0310454720}\label{classNoticeListController_a4fcfb0c8fa204b1d83089e0310454720}} 
+\index{NoticeListController@{NoticeListController}!AddInviteNotice@{AddInviteNotice}}
+\index{AddInviteNotice@{AddInviteNotice}!NoticeListController@{NoticeListController}}
+\doxysubsubsection{\texorpdfstring{AddInviteNotice()}{AddInviteNotice()}}
+{\footnotesize\ttfamily void Notice\+List\+Controller.\+Add\+Invite\+Notice (\begin{DoxyParamCaption}\item[{string}]{invite\+From\+User\+ID,  }\item[{string}]{room\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Медот добавляет новое уведомление в Scroll\+View  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em invite\+From\+User\+ID} & user\+ID игрока который пригласил\\
+\hline
+{\em room\+Name} & название команты, куда приглашают (Фотон комната)\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{NoticeListController_8cs_source}{Notice\+List\+Controller.\+cs}} строка \mbox{\hyperlink{NoticeListController_8cs_source_l00024}{24}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025     \{}
+\DoxyCodeLine{00026         var noticeInvite = uiNoticeInvitePrefab.gameObject.GetComponent<\mbox{\hyperlink{classNoticeInviteManager}{NoticeInviteManager}}>();}
+\DoxyCodeLine{00027         noticeInvite.usernameTextField.text = inviteFromUserID;}
+\DoxyCodeLine{00028         noticeInvite.roomName = roomName;}
+\DoxyCodeLine{00029         noticeInvite.lobbyManager = gameObject.GetComponent<\mbox{\hyperlink{classLobbyManager}{LobbyManager}}>();}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031         var instance = Instantiate(noticeInvite.gameObject);}
+\DoxyCodeLine{00032         instance.transform.SetParent(uiNoticeListScrollContent.transform, \textcolor{keyword}{false});}
+\DoxyCodeLine{00033     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNoticeListController_a8103ce6b79cb5482eff324c10c1ede04}\label{classNoticeListController_a8103ce6b79cb5482eff324c10c1ede04}} 
+\index{NoticeListController@{NoticeListController}!OpenNoticeList@{OpenNoticeList}}
+\index{OpenNoticeList@{OpenNoticeList}!NoticeListController@{NoticeListController}}
+\doxysubsubsection{\texorpdfstring{OpenNoticeList()}{OpenNoticeList()}}
+{\footnotesize\ttfamily void Notice\+List\+Controller.\+Open\+Notice\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Метод открывает/скрывает список уведомлений  
+
+
+
+См. определение в файле \mbox{\hyperlink{NoticeListController_8cs_source}{Notice\+List\+Controller.\+cs}} строка \mbox{\hyperlink{NoticeListController_8cs_source_l00014}{14}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015     \{}
+\DoxyCodeLine{00016         uiNoticeList.SetActive(!uiNoticeList.activeSelf);}
+\DoxyCodeLine{00017     \}}
+
+\end{DoxyCode}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Lobby/Notice\+List\+Controller.\+cs\end{DoxyCompactItemize}

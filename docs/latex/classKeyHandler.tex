@@ -1,0 +1,401 @@
+\hypertarget{classKeyHandler}{}\doxysection{Класс Key\+Handler}
+\label{classKeyHandler}\index{KeyHandler@{KeyHandler}}
+
+
+Модуль для всего, что связанно со считыванием нажатий на клавиатуру (привязка, считывание, регулирование)  
+
+
+Граф наследования\+:Key\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classKeyHandler}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classKeyHandler_a709aa3a10f129eafc0fcb1815f35d43d}{Pause}} (bool pause)
+\begin{DoxyCompactList}\small\item\em Регулирует \char`\"{}приостановку\char`\"{} игры. Во время паузы считывается только нажатие ESC 
+\begin{DoxyParams}{Аргументы}
+{\em pause} & \\
+\hline
+\end{DoxyParams}
+\end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classKeyHandler_a110b326d099346606dd79d599e8c40f5}{Is\+Paused}} ()
+\item 
+void \mbox{\hyperlink{classKeyHandler_ad911f5143829f9bfddd07dba72e4b470}{Set\+UIOpened}} (bool opened)
+\begin{DoxyCompactList}\small\item\em Регулирует статус открытых меню (при нажатии ESC все меню сворачиваются, повтроное нажатие открывает меню паузы)  \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classKeyHandler_a25b759894a969dff6808e728698e010d}{Get\+UIOpened}} ()
+\item 
+Dictionary$<$ string, Key\+Code $>$ \mbox{\hyperlink{classKeyHandler_a548d4b0a14c9a95b5478a88b0d84432b}{Get\+Keybinds}} ()
+\item 
+Key\+Code \mbox{\hyperlink{classKeyHandler_a92adaef63ecb21b2dfa480f693b94adf}{Get\+Keybind}} (string name)
+\begin{DoxyCompactList}\small\item\em Привязанная к действию клавиша  \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classKeyHandler_a10b537304fc13a5cbde0d204eb3b50eb}{Set\+Keybind}} (string name, Key\+Code key)
+\begin{DoxyCompactList}\small\item\em -\/$\ast$ Установить привязанную клавишу для действия  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{classKeyHandler_a2a429f3c48b6447d952223a401793935}{Normalize\+Keybind}} (Key\+Code code)
+\end{DoxyCompactItemize}
+\doxysubsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classKeyHandler}{Key\+Handler}} \mbox{\hyperlink{classKeyHandler_a46df2b1d44c8ef0f2309490c9696d438}{instance}}
+\item 
+static List$<$ Key\+Code $>$ \mbox{\hyperlink{classKeyHandler_a4f75a534b4f0334c0901e90d38431580}{All\+Keys}}
+\item 
+static Action$<$ string, Key\+Code $>$ \mbox{\hyperlink{classKeyHandler_ac058caa291070a97752dfd77c24ce040}{key\+Pressed}}
+\item 
+static string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classKeyHandler_aba11481b2b515eece8b3cf4a22703159}{movement\+Keys}}
+\item 
+static string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classKeyHandler_a712eb3cbf1ee38d8b4beb8600018b063}{ability\+Keys}}
+\item 
+static string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classKeyHandler_a099b10235aef157091a930f215b576ec}{ui\+Keys}}
+\item 
+static Key\+Code\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classKeyHandler_af4ca3b159172bb7694820b3c1f65f0ef}{numbers\+Key\+Codes}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Модуль для всего, что связанно со считыванием нажатий на клавиатуру (привязка, считывание, регулирование) 
+
+All\+Keys -\/ Список всех Key\+Code 
+
+movement\+Keys -\/ Список всех действий связанных с движением 
+
+ability\+Keys -\/ Список всех действий связанных с умениями персонажа 
+
+ui\+Keys -\/ Список всех действий связанных с меню UI 
+
+keybinds -\/ Все связанные действия и Key\+Code 
+
+numbers\+Key\+Codes -\/ Key\+Code для цифровых клавиш клавиатуры 
+
+См. определение в файле \mbox{\hyperlink{KeyHandler_8cs_source}{Key\+Handler.\+cs}} строка \mbox{\hyperlink{KeyHandler_8cs_source_l00024}{24}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classKeyHandler_a92adaef63ecb21b2dfa480f693b94adf}\label{classKeyHandler_a92adaef63ecb21b2dfa480f693b94adf}} 
+\index{KeyHandler@{KeyHandler}!GetKeybind@{GetKeybind}}
+\index{GetKeybind@{GetKeybind}!KeyHandler@{KeyHandler}}
+\doxysubsubsection{\texorpdfstring{GetKeybind()}{GetKeybind()}}
+{\footnotesize\ttfamily Key\+Code Key\+Handler.\+Get\+Keybind (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Привязанная к действию клавиша  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em name} & Действие\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Привязанная клавиша
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{KeyHandler_8cs_source}{Key\+Handler.\+cs}} строка \mbox{\hyperlink{KeyHandler_8cs_source_l00192}{192}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00193     \{}
+\DoxyCodeLine{00194         \textcolor{keywordflow}{if} (!keybinds.ContainsKey(name)) \textcolor{keywordflow}{return} KeyCode.None;}
+\DoxyCodeLine{00195         \textcolor{keywordflow}{return} keybinds[name];}
+\DoxyCodeLine{00196     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classKeyHandler_a548d4b0a14c9a95b5478a88b0d84432b}\label{classKeyHandler_a548d4b0a14c9a95b5478a88b0d84432b}} 
+\index{KeyHandler@{KeyHandler}!GetKeybinds@{GetKeybinds}}
+\index{GetKeybinds@{GetKeybinds}!KeyHandler@{KeyHandler}}
+\doxysubsubsection{\texorpdfstring{GetKeybinds()}{GetKeybinds()}}
+{\footnotesize\ttfamily Dictionary$<$ string, Key\+Code $>$ Key\+Handler.\+Get\+Keybinds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\begin{DoxyReturn}{Возвращает}
+Словарь действий и привязанных клавиш
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{KeyHandler_8cs_source}{Key\+Handler.\+cs}} строка \mbox{\hyperlink{KeyHandler_8cs_source_l00183}{183}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00184     \{}
+\DoxyCodeLine{00185         \textcolor{keywordflow}{return} keybinds;}
+\DoxyCodeLine{00186     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classKeyHandler_a25b759894a969dff6808e728698e010d}\label{classKeyHandler_a25b759894a969dff6808e728698e010d}} 
+\index{KeyHandler@{KeyHandler}!GetUIOpened@{GetUIOpened}}
+\index{GetUIOpened@{GetUIOpened}!KeyHandler@{KeyHandler}}
+\doxysubsubsection{\texorpdfstring{GetUIOpened()}{GetUIOpened()}}
+{\footnotesize\ttfamily bool Key\+Handler.\+Get\+UIOpened (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\begin{DoxyReturn}{Возвращает}
+Открыто ли меню UI
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{KeyHandler_8cs_source}{Key\+Handler.\+cs}} строка \mbox{\hyperlink{KeyHandler_8cs_source_l00168}{168}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00168                               \{}
+\DoxyCodeLine{00169         \textcolor{keywordflow}{return} uiOpened;}
+\DoxyCodeLine{00170     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classKeyHandler_a110b326d099346606dd79d599e8c40f5}\label{classKeyHandler_a110b326d099346606dd79d599e8c40f5}} 
+\index{KeyHandler@{KeyHandler}!IsPaused@{IsPaused}}
+\index{IsPaused@{IsPaused}!KeyHandler@{KeyHandler}}
+\doxysubsubsection{\texorpdfstring{IsPaused()}{IsPaused()}}
+{\footnotesize\ttfamily bool Key\+Handler.\+Is\+Paused (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\begin{DoxyReturn}{Возвращает}
+Приостановлена ли игра
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{KeyHandler_8cs_source}{Key\+Handler.\+cs}} строка \mbox{\hyperlink{KeyHandler_8cs_source_l00154}{154}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00154                            \{}
+\DoxyCodeLine{00155         \textcolor{keywordflow}{return} paused;}
+\DoxyCodeLine{00156     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classKeyHandler_a2a429f3c48b6447d952223a401793935}\label{classKeyHandler_a2a429f3c48b6447d952223a401793935}} 
+\index{KeyHandler@{KeyHandler}!NormalizeKeybind@{NormalizeKeybind}}
+\index{NormalizeKeybind@{NormalizeKeybind}!KeyHandler@{KeyHandler}}
+\doxysubsubsection{\texorpdfstring{NormalizeKeybind()}{NormalizeKeybind()}}
+{\footnotesize\ttfamily static string Key\+Handler.\+Normalize\+Keybind (\begin{DoxyParamCaption}\item[{Key\+Code}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{KeyHandler_8cs_source}{Key\+Handler.\+cs}} строка \mbox{\hyperlink{KeyHandler_8cs_source_l00213}{213}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00214     \{}
+\DoxyCodeLine{00215         \textcolor{keywordtype}{string} keyName = code.ToString();}
+\DoxyCodeLine{00216         \textcolor{keywordflow}{if} (keyName.StartsWith(\textcolor{stringliteral}{"{}Alpha"{}}))}
+\DoxyCodeLine{00217         \{}
+\DoxyCodeLine{00218             \textcolor{keywordflow}{return} keyName[keyName.Length -\/ 1].ToString();}
+\DoxyCodeLine{00219         \}}
+\DoxyCodeLine{00220         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (keyName.StartsWith(\textcolor{stringliteral}{"{}Mouse"{}}))}
+\DoxyCodeLine{00221         \{}
+\DoxyCodeLine{00222             \textcolor{keywordflow}{switch} (keyName)}
+\DoxyCodeLine{00223             \{}
+\DoxyCodeLine{00224                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Mouse0"{}}:}
+\DoxyCodeLine{00225                     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}LMB"{}};}
+\DoxyCodeLine{00226                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Mouse1"{}}:}
+\DoxyCodeLine{00227                     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}RMB"{}};}
+\DoxyCodeLine{00228                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Mouse2"{}}:}
+\DoxyCodeLine{00229                     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}MMB"{}};}
+\DoxyCodeLine{00230                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Mouse3"{}}:}
+\DoxyCodeLine{00231                     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}SMB 1"{}};}
+\DoxyCodeLine{00232                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Mouse4"{}}:}
+\DoxyCodeLine{00233                     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}SMB 2"{}};}
+\DoxyCodeLine{00234                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Mouse5"{}}:}
+\DoxyCodeLine{00235                     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}SMB 3"{}};}
+\DoxyCodeLine{00236                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Mouse6"{}}:}
+\DoxyCodeLine{00237                     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}SMB 4"{}};}
+\DoxyCodeLine{00238             \}}
+\DoxyCodeLine{00239         \}}
+\DoxyCodeLine{00240         \textcolor{keywordflow}{return} keyName;}
+\DoxyCodeLine{00241     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classKeyHandler_a709aa3a10f129eafc0fcb1815f35d43d}\label{classKeyHandler_a709aa3a10f129eafc0fcb1815f35d43d}} 
+\index{KeyHandler@{KeyHandler}!Pause@{Pause}}
+\index{Pause@{Pause}!KeyHandler@{KeyHandler}}
+\doxysubsubsection{\texorpdfstring{Pause()}{Pause()}}
+{\footnotesize\ttfamily void Key\+Handler.\+Pause (\begin{DoxyParamCaption}\item[{bool}]{pause }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Регулирует \char`\"{}приостановку\char`\"{} игры. Во время паузы считывается только нажатие ESC 
+\begin{DoxyParams}{Аргументы}
+{\em pause} & \\
+\hline
+\end{DoxyParams}
+
+
+
+
+См. определение в файле \mbox{\hyperlink{KeyHandler_8cs_source}{Key\+Handler.\+cs}} строка \mbox{\hyperlink{KeyHandler_8cs_source_l00146}{146}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00146                                   \{}
+\DoxyCodeLine{00147         }
+\DoxyCodeLine{00148         paused = pause;}
+\DoxyCodeLine{00149     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classKeyHandler_a10b537304fc13a5cbde0d204eb3b50eb}\label{classKeyHandler_a10b537304fc13a5cbde0d204eb3b50eb}} 
+\index{KeyHandler@{KeyHandler}!SetKeybind@{SetKeybind}}
+\index{SetKeybind@{SetKeybind}!KeyHandler@{KeyHandler}}
+\doxysubsubsection{\texorpdfstring{SetKeybind()}{SetKeybind()}}
+{\footnotesize\ttfamily bool Key\+Handler.\+Set\+Keybind (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{Key\+Code}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+-\/$\ast$ Установить привязанную клавишу для действия  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em name} & Действие\\
+\hline
+{\em key} & Клавиша\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Была ли установлена указанная клавиша
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{KeyHandler_8cs_source}{Key\+Handler.\+cs}} строка \mbox{\hyperlink{KeyHandler_8cs_source_l00203}{203}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00204     \{}
+\DoxyCodeLine{00205         \textcolor{keywordflow}{if} (keybinds.ContainsValue(key) \&\& keybinds[name] != key) \textcolor{comment}{// Исключить повторения}}
+\DoxyCodeLine{00206         \{}
+\DoxyCodeLine{00207             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00208         \}}
+\DoxyCodeLine{00209         keybinds[name] = key;}
+\DoxyCodeLine{00210         dataBase.SetKeybind(name, key);}
+\DoxyCodeLine{00211         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00212     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classKeyHandler_ad911f5143829f9bfddd07dba72e4b470}\label{classKeyHandler_ad911f5143829f9bfddd07dba72e4b470}} 
+\index{KeyHandler@{KeyHandler}!SetUIOpened@{SetUIOpened}}
+\index{SetUIOpened@{SetUIOpened}!KeyHandler@{KeyHandler}}
+\doxysubsubsection{\texorpdfstring{SetUIOpened()}{SetUIOpened()}}
+{\footnotesize\ttfamily void Key\+Handler.\+Set\+UIOpened (\begin{DoxyParamCaption}\item[{bool}]{opened }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Регулирует статус открытых меню (при нажатии ESC все меню сворачиваются, повтроное нажатие открывает меню паузы)  
+
+
+
+См. определение в файле \mbox{\hyperlink{KeyHandler_8cs_source}{Key\+Handler.\+cs}} строка \mbox{\hyperlink{KeyHandler_8cs_source_l00160}{160}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00161     \{}
+\DoxyCodeLine{00162         uiOpened = opened;}
+\DoxyCodeLine{00163     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classKeyHandler_a712eb3cbf1ee38d8b4beb8600018b063}\label{classKeyHandler_a712eb3cbf1ee38d8b4beb8600018b063}} 
+\index{KeyHandler@{KeyHandler}!abilityKeys@{abilityKeys}}
+\index{abilityKeys@{abilityKeys}!KeyHandler@{KeyHandler}}
+\doxysubsubsection{\texorpdfstring{abilityKeys}{abilityKeys}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Key\+Handler.\+ability\+Keys\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{KeyHandler_8cs_source}{Key\+Handler.\+cs}} строка \mbox{\hyperlink{KeyHandler_8cs_source_l00038}{38}}
+
+\mbox{\Hypertarget{classKeyHandler_a4f75a534b4f0334c0901e90d38431580}\label{classKeyHandler_a4f75a534b4f0334c0901e90d38431580}} 
+\index{KeyHandler@{KeyHandler}!AllKeys@{AllKeys}}
+\index{AllKeys@{AllKeys}!KeyHandler@{KeyHandler}}
+\doxysubsubsection{\texorpdfstring{AllKeys}{AllKeys}}
+{\footnotesize\ttfamily List$<$Key\+Code$>$ Key\+Handler.\+All\+Keys\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{KeyHandler_8cs_source}{Key\+Handler.\+cs}} строка \mbox{\hyperlink{KeyHandler_8cs_source_l00032}{32}}
+
+\mbox{\Hypertarget{classKeyHandler_a46df2b1d44c8ef0f2309490c9696d438}\label{classKeyHandler_a46df2b1d44c8ef0f2309490c9696d438}} 
+\index{KeyHandler@{KeyHandler}!instance@{instance}}
+\index{instance@{instance}!KeyHandler@{KeyHandler}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKeyHandler}{Key\+Handler}} Key\+Handler.\+instance\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{KeyHandler_8cs_source}{Key\+Handler.\+cs}} строка \mbox{\hyperlink{KeyHandler_8cs_source_l00028}{28}}
+
+\mbox{\Hypertarget{classKeyHandler_ac058caa291070a97752dfd77c24ce040}\label{classKeyHandler_ac058caa291070a97752dfd77c24ce040}} 
+\index{KeyHandler@{KeyHandler}!keyPressed@{keyPressed}}
+\index{keyPressed@{keyPressed}!KeyHandler@{KeyHandler}}
+\doxysubsubsection{\texorpdfstring{keyPressed}{keyPressed}}
+{\footnotesize\ttfamily Action$<$string, Key\+Code$>$ Key\+Handler.\+key\+Pressed\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{KeyHandler_8cs_source}{Key\+Handler.\+cs}} строка \mbox{\hyperlink{KeyHandler_8cs_source_l00035}{35}}
+
+\mbox{\Hypertarget{classKeyHandler_aba11481b2b515eece8b3cf4a22703159}\label{classKeyHandler_aba11481b2b515eece8b3cf4a22703159}} 
+\index{KeyHandler@{KeyHandler}!movementKeys@{movementKeys}}
+\index{movementKeys@{movementKeys}!KeyHandler@{KeyHandler}}
+\doxysubsubsection{\texorpdfstring{movementKeys}{movementKeys}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Key\+Handler.\+movement\+Keys\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{KeyHandler_8cs_source}{Key\+Handler.\+cs}} строка \mbox{\hyperlink{KeyHandler_8cs_source_l00037}{37}}
+
+\mbox{\Hypertarget{classKeyHandler_af4ca3b159172bb7694820b3c1f65f0ef}\label{classKeyHandler_af4ca3b159172bb7694820b3c1f65f0ef}} 
+\index{KeyHandler@{KeyHandler}!numbersKeyCodes@{numbersKeyCodes}}
+\index{numbersKeyCodes@{numbersKeyCodes}!KeyHandler@{KeyHandler}}
+\doxysubsubsection{\texorpdfstring{numbersKeyCodes}{numbersKeyCodes}}
+{\footnotesize\ttfamily Key\+Code \mbox{[}$\,$\mbox{]} Key\+Handler.\+numbers\+Key\+Codes\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{         KeyCode.Alpha1,}
+\DoxyCodeLine{         KeyCode.Alpha2,}
+\DoxyCodeLine{         KeyCode.Alpha3,}
+\DoxyCodeLine{         KeyCode.Alpha4,}
+\DoxyCodeLine{         KeyCode.Alpha5,}
+\DoxyCodeLine{         KeyCode.Alpha6,}
+\DoxyCodeLine{         KeyCode.Alpha7,}
+\DoxyCodeLine{         KeyCode.Alpha8,}
+\DoxyCodeLine{         KeyCode.Alpha9,}
+\DoxyCodeLine{     \}}
+
+\end{DoxyCode}
+
+
+См. определение в файле \mbox{\hyperlink{KeyHandler_8cs_source}{Key\+Handler.\+cs}} строка \mbox{\hyperlink{KeyHandler_8cs_source_l00046}{46}}
+
+\mbox{\Hypertarget{classKeyHandler_a099b10235aef157091a930f215b576ec}\label{classKeyHandler_a099b10235aef157091a930f215b576ec}} 
+\index{KeyHandler@{KeyHandler}!uiKeys@{uiKeys}}
+\index{uiKeys@{uiKeys}!KeyHandler@{KeyHandler}}
+\doxysubsubsection{\texorpdfstring{uiKeys}{uiKeys}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Key\+Handler.\+ui\+Keys\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{KeyHandler_8cs_source}{Key\+Handler.\+cs}} строка \mbox{\hyperlink{KeyHandler_8cs_source_l00039}{39}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+UIScripts/Key\+Handler.\+cs\end{DoxyCompactItemize}

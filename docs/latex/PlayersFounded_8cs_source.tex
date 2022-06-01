@@ -1,0 +1,36 @@
+\hypertarget{PlayersFounded_8cs_source}{}\doxysection{Players\+Founded.\+cs}
+\label{PlayersFounded_8cs_source}\index{Vuji/Assets/Scripts/Lobby/PlayersFounded.cs@{Vuji/Assets/Scripts/Lobby/PlayersFounded.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00001}00001 \textcolor{keyword}{using }Photon.Pun;}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00002}00002 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00003}00003 \textcolor{keyword}{using }UnityEngine.UI;}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00004}00004 \textcolor{keyword}{using }\mbox{\hyperlink{namespaceGameSettings}{GameSettings}};}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00005}\mbox{\hyperlink{classPlayersFounded}{00005}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classPlayersFounded}{PlayersFounded}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00007}00007     [SerializeField] \textcolor{keyword}{private} GameObject playersFounded;}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00008}00008     [SerializeField] \textcolor{keyword}{private} Text playersFoundedText;}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00009}00009     [SerializeField] \textcolor{keyword}{private} GameObject stopSearchGameButton;}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00010}00010     }
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00014}\mbox{\hyperlink{classPlayersFounded_aacc125c08b837035165a41466a9965b8}{00014}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlayersFounded_aacc125c08b837035165a41466a9965b8}{UpdatePlayersFounded}}()}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00015}00015     \{}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00016}00016         playersFoundedText.text = PhotonNetwork.PlayerList.Length + \textcolor{stringliteral}{"{} / "{}} + GameSettingsOriginal.MaxPlayersInGame + \textcolor{stringliteral}{"{} founded"{}};}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00017}00017     \}}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00022}\mbox{\hyperlink{classPlayersFounded_a20fc19b83bd881a2978bd9df897bfa2a}{00022}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlayersFounded_a20fc19b83bd881a2978bd9df897bfa2a}{ShowPlayersFounded}}()}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00023}00023     \{}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00024}00024         playersFounded.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00025}00025         stopSearchGameButton.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00026}00026         Debug.Log(\textcolor{stringliteral}{"{}SHOW here"{}} + Time.deltaTime);}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00027}00027     \}}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00032}\mbox{\hyperlink{classPlayersFounded_a63b238882ae883332fd0894ef0717bd1}{00032}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlayersFounded_a63b238882ae883332fd0894ef0717bd1}{HidePlayersFounded}}()}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00033}00033     \{}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00034}00034         \mbox{\hyperlink{classPlayersFounded_aacc125c08b837035165a41466a9965b8}{UpdatePlayersFounded}}();}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00035}00035         playersFounded.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00036}00036         stopSearchGameButton.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00037}00037         Debug.Log(\textcolor{stringliteral}{"{}HIDE here"{}} + Time.deltaTime);}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00038}00038     \}}
+\DoxyCodeLine{\Hypertarget{PlayersFounded_8cs_source_l00039}00039 \}}
+
+\end{DoxyCode}

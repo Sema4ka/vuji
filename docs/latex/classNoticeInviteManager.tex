@@ -1,0 +1,107 @@
+\hypertarget{classNoticeInviteManager}{}\doxysection{Класс Notice\+Invite\+Manager}
+\label{classNoticeInviteManager}\index{NoticeInviteManager@{NoticeInviteManager}}
+Граф наследования\+:Notice\+Invite\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classNoticeInviteManager}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classNoticeInviteManager_a1c834d04d6c6b8b6098451eba9c35334}{Accept\+Invite}} ()
+\item 
+void \mbox{\hyperlink{classNoticeInviteManager_a66df4ef5fbf42fd690a922a972e49a11}{Cancel\+Invite}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+Text \mbox{\hyperlink{classNoticeInviteManager_ace075c9a7d8ee1a5dd0b4ffd9fbd6a4a}{username\+Text\+Field}}
+\item 
+string \mbox{\hyperlink{classNoticeInviteManager_abfd62ee3e249656c484653243a324d69}{room\+Name}}
+\item 
+\mbox{\hyperlink{classLobbyManager}{Lobby\+Manager}} \mbox{\hyperlink{classNoticeInviteManager_a037849b2f6cc5547f6f7f72df7d4beff}{lobby\+Manager}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{NoticeInviteManager_8cs_source}{Notice\+Invite\+Manager.\+cs}} строка \mbox{\hyperlink{NoticeInviteManager_8cs_source_l00006}{6}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classNoticeInviteManager_a1c834d04d6c6b8b6098451eba9c35334}\label{classNoticeInviteManager_a1c834d04d6c6b8b6098451eba9c35334}} 
+\index{NoticeInviteManager@{NoticeInviteManager}!AcceptInvite@{AcceptInvite}}
+\index{AcceptInvite@{AcceptInvite}!NoticeInviteManager@{NoticeInviteManager}}
+\doxysubsubsection{\texorpdfstring{AcceptInvite()}{AcceptInvite()}}
+{\footnotesize\ttfamily void Notice\+Invite\+Manager.\+Accept\+Invite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{NoticeInviteManager_8cs_source}{Notice\+Invite\+Manager.\+cs}} строка \mbox{\hyperlink{NoticeInviteManager_8cs_source_l00012}{12}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013     \{}
+\DoxyCodeLine{00014         lobbyManager.\mbox{\hyperlink{classLobbyManager_adc7d3896d9a29e21cfe46bfab11f6a48}{AcceptInviteFriend}}(roomName);}
+\DoxyCodeLine{00015         Destroy(gameObject);}
+\DoxyCodeLine{00016     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNoticeInviteManager_a66df4ef5fbf42fd690a922a972e49a11}\label{classNoticeInviteManager_a66df4ef5fbf42fd690a922a972e49a11}} 
+\index{NoticeInviteManager@{NoticeInviteManager}!CancelInvite@{CancelInvite}}
+\index{CancelInvite@{CancelInvite}!NoticeInviteManager@{NoticeInviteManager}}
+\doxysubsubsection{\texorpdfstring{CancelInvite()}{CancelInvite()}}
+{\footnotesize\ttfamily void Notice\+Invite\+Manager.\+Cancel\+Invite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{NoticeInviteManager_8cs_source}{Notice\+Invite\+Manager.\+cs}} строка \mbox{\hyperlink{NoticeInviteManager_8cs_source_l00018}{18}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019     \{}
+\DoxyCodeLine{00020         Destroy(gameObject);}
+\DoxyCodeLine{00021     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classNoticeInviteManager_a037849b2f6cc5547f6f7f72df7d4beff}\label{classNoticeInviteManager_a037849b2f6cc5547f6f7f72df7d4beff}} 
+\index{NoticeInviteManager@{NoticeInviteManager}!lobbyManager@{lobbyManager}}
+\index{lobbyManager@{lobbyManager}!NoticeInviteManager@{NoticeInviteManager}}
+\doxysubsubsection{\texorpdfstring{lobbyManager}{lobbyManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLobbyManager}{Lobby\+Manager}} Notice\+Invite\+Manager.\+lobby\+Manager}
+
+
+
+См. определение в файле \mbox{\hyperlink{NoticeInviteManager_8cs_source}{Notice\+Invite\+Manager.\+cs}} строка \mbox{\hyperlink{NoticeInviteManager_8cs_source_l00010}{10}}
+
+\mbox{\Hypertarget{classNoticeInviteManager_abfd62ee3e249656c484653243a324d69}\label{classNoticeInviteManager_abfd62ee3e249656c484653243a324d69}} 
+\index{NoticeInviteManager@{NoticeInviteManager}!roomName@{roomName}}
+\index{roomName@{roomName}!NoticeInviteManager@{NoticeInviteManager}}
+\doxysubsubsection{\texorpdfstring{roomName}{roomName}}
+{\footnotesize\ttfamily string Notice\+Invite\+Manager.\+room\+Name}
+
+
+
+См. определение в файле \mbox{\hyperlink{NoticeInviteManager_8cs_source}{Notice\+Invite\+Manager.\+cs}} строка \mbox{\hyperlink{NoticeInviteManager_8cs_source_l00009}{9}}
+
+\mbox{\Hypertarget{classNoticeInviteManager_ace075c9a7d8ee1a5dd0b4ffd9fbd6a4a}\label{classNoticeInviteManager_ace075c9a7d8ee1a5dd0b4ffd9fbd6a4a}} 
+\index{NoticeInviteManager@{NoticeInviteManager}!usernameTextField@{usernameTextField}}
+\index{usernameTextField@{usernameTextField}!NoticeInviteManager@{NoticeInviteManager}}
+\doxysubsubsection{\texorpdfstring{usernameTextField}{usernameTextField}}
+{\footnotesize\ttfamily Text Notice\+Invite\+Manager.\+username\+Text\+Field}
+
+
+
+См. определение в файле \mbox{\hyperlink{NoticeInviteManager_8cs_source}{Notice\+Invite\+Manager.\+cs}} строка \mbox{\hyperlink{NoticeInviteManager_8cs_source_l00008}{8}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+UIScripts/Notice\+Invite\+Manager.\+cs\end{DoxyCompactItemize}

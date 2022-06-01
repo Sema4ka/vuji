@@ -1,0 +1,100 @@
+\hypertarget{classStartGameLevel}{}\doxysection{Класс Start\+Game\+Level}
+\label{classStartGameLevel}\index{StartGameLevel@{StartGameLevel}}
+Граф наследования\+:Start\+Game\+Level\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classStartGameLevel}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{classStartGameLevel_a6bbb2c2e5ece7394d1cf17d0463ef154}{On\+Joined\+Room}} ()
+\item 
+override void \mbox{\hyperlink{classStartGameLevel_a6b5da4f18c10905988c790c58dcb4f67}{On\+Player\+Entered\+Room}} (Player new\+Player)
+\item 
+override void \mbox{\hyperlink{classStartGameLevel_a1d6aa7c303744a27a63f11f16572526f}{On\+Player\+Left\+Room}} (Player new\+Player)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле \mbox{\hyperlink{StartGameLevel_8cs_source}{Start\+Game\+Level.\+cs}} строка \mbox{\hyperlink{StartGameLevel_8cs_source_l00008}{8}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classStartGameLevel_a6bbb2c2e5ece7394d1cf17d0463ef154}\label{classStartGameLevel_a6bbb2c2e5ece7394d1cf17d0463ef154}} 
+\index{StartGameLevel@{StartGameLevel}!OnJoinedRoom@{OnJoinedRoom}}
+\index{OnJoinedRoom@{OnJoinedRoom}!StartGameLevel@{StartGameLevel}}
+\doxysubsubsection{\texorpdfstring{OnJoinedRoom()}{OnJoinedRoom()}}
+{\footnotesize\ttfamily override void Start\+Game\+Level.\+On\+Joined\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{StartGameLevel_8cs_source}{Start\+Game\+Level.\+cs}} строка \mbox{\hyperlink{StartGameLevel_8cs_source_l00024}{24}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025     \{}
+\DoxyCodeLine{00026         \textcolor{keywordflow}{if} (gameObject.GetComponent<\mbox{\hyperlink{classLobbyManager}{LobbyManager}}>().playerStatus == \textcolor{stringliteral}{"{}SEARCHGAME"{}})}
+\DoxyCodeLine{00027         \{}
+\DoxyCodeLine{00028             \_playersFounded.\mbox{\hyperlink{classPlayersFounded_a20fc19b83bd881a2978bd9df897bfa2a}{ShowPlayersFounded}}();}
+\DoxyCodeLine{00029             \textcolor{keywordflow}{if} (CheckPreGameRoom())}
+\DoxyCodeLine{00030             \{}
+\DoxyCodeLine{00031                 LoadGameLevel();}
+\DoxyCodeLine{00032             \}}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034             \_playersFounded.\mbox{\hyperlink{classPlayersFounded_aacc125c08b837035165a41466a9965b8}{UpdatePlayersFounded}}();}
+\DoxyCodeLine{00035         \}}
+\DoxyCodeLine{00036     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStartGameLevel_a6b5da4f18c10905988c790c58dcb4f67}\label{classStartGameLevel_a6b5da4f18c10905988c790c58dcb4f67}} 
+\index{StartGameLevel@{StartGameLevel}!OnPlayerEnteredRoom@{OnPlayerEnteredRoom}}
+\index{OnPlayerEnteredRoom@{OnPlayerEnteredRoom}!StartGameLevel@{StartGameLevel}}
+\doxysubsubsection{\texorpdfstring{OnPlayerEnteredRoom()}{OnPlayerEnteredRoom()}}
+{\footnotesize\ttfamily override void Start\+Game\+Level.\+On\+Player\+Entered\+Room (\begin{DoxyParamCaption}\item[{Player}]{new\+Player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{StartGameLevel_8cs_source}{Start\+Game\+Level.\+cs}} строка \mbox{\hyperlink{StartGameLevel_8cs_source_l00038}{38}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039     \{}
+\DoxyCodeLine{00040         \textcolor{keywordflow}{if} (gameObject.GetComponent<\mbox{\hyperlink{classLobbyManager}{LobbyManager}}>().playerStatus == \textcolor{stringliteral}{"{}SEARCHGAME"{}})}
+\DoxyCodeLine{00041         \{}
+\DoxyCodeLine{00042             \textcolor{keywordflow}{if} (CheckPreGameRoom())}
+\DoxyCodeLine{00043             \{}
+\DoxyCodeLine{00044                 LoadGameLevel();}
+\DoxyCodeLine{00045             \}}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{00047             \_playersFounded.\mbox{\hyperlink{classPlayersFounded_aacc125c08b837035165a41466a9965b8}{UpdatePlayersFounded}}();}
+\DoxyCodeLine{00048         \}}
+\DoxyCodeLine{00049     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStartGameLevel_a1d6aa7c303744a27a63f11f16572526f}\label{classStartGameLevel_a1d6aa7c303744a27a63f11f16572526f}} 
+\index{StartGameLevel@{StartGameLevel}!OnPlayerLeftRoom@{OnPlayerLeftRoom}}
+\index{OnPlayerLeftRoom@{OnPlayerLeftRoom}!StartGameLevel@{StartGameLevel}}
+\doxysubsubsection{\texorpdfstring{OnPlayerLeftRoom()}{OnPlayerLeftRoom()}}
+{\footnotesize\ttfamily override void Start\+Game\+Level.\+On\+Player\+Left\+Room (\begin{DoxyParamCaption}\item[{Player}]{new\+Player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{StartGameLevel_8cs_source}{Start\+Game\+Level.\+cs}} строка \mbox{\hyperlink{StartGameLevel_8cs_source_l00051}{51}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052     \{}
+\DoxyCodeLine{00053         \_playersFounded.\mbox{\hyperlink{classPlayersFounded_aacc125c08b837035165a41466a9965b8}{UpdatePlayersFounded}}();}
+\DoxyCodeLine{00054     \}}
+
+\end{DoxyCode}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Vuji/\+Assets/\+Scripts/\+Lobby/Start\+Game\+Level.\+cs\end{DoxyCompactItemize}
