@@ -1,9 +1,11 @@
 using System;
 using UnityEngine;
-
+/// <summary>
+/// Модуль для отслеживания окончания игры
+/// </summary>
 public class EndGame : MonoBehaviour
 {
-    public static Action<string> OnGameEnd;
+    public static Action<string> OnGameEnd; // Событие окончания игры
 
     private void Start()
     {

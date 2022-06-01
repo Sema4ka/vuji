@@ -28,6 +28,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6435008515245273421}
   m_RootOrder: 1
@@ -103,6 +104,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6435008515245273421}
   m_RootOrder: 0
@@ -178,6 +180,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6435008515245273421}
   m_RootOrder: 2
@@ -257,6 +260,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6435008515245273421}
   m_RootOrder: 3
@@ -320,6 +324,7 @@ GameObject:
   - component: {fileID: 3059070513786212081}
   - component: {fileID: 6006410631371935311}
   - component: {fileID: 4015208481634064032}
+  - component: {fileID: 4231114766313337321}
   m_Layer: 5
   m_Name: TimerWithSprite
   m_TagString: Untagged
@@ -337,6 +342,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1431050324360207497}
   - {fileID: 2938695523351503733}
@@ -375,6 +381,7 @@ MonoBehaviour:
   coverPanel: {fileID: 3515739763935790825}
   selectionPanel: {fileID: 6051048141528171516}
   keyText: {fileID: 8974971180113150743}
+  tooltipText: {fileID: 4231114766313337321}
 --- !u!114 &4015208481634064032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,3 +412,16 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4231114766313337321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8767493498052298475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8124ee6b385bb94faa8d9f8b5c44db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 

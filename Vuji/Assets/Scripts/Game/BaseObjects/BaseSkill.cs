@@ -36,6 +36,20 @@ public class BaseSkill : MonoBehaviour
     {
         return skillDescription;
     }
+    public int GetCost()
+    {
+        return energyCost;
+    }
+
+    public float GetCastTime()
+    {
+        return castTime;
+    }
+
+    public float GetCooldownTime()
+    {
+        return cooldown;
+    }
 
     public Sprite GetSprite()
     {

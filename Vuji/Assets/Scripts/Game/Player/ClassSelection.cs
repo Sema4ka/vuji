@@ -5,37 +5,39 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Pun.UtilityScripts;
-
+/// <summary>
+/// Модуль управления панелью выбора класса пользователя
+/// </summary>
 public class ClassSelection : MonoBehaviour
 {
-    bool classSet = false;
+    bool classSet = false; // Индикатор выбора класса
 
-    [SerializeField] int height;
-    [SerializeField] GameObject classSelection;
-    [SerializeField] GameObject SubclassButton;
-    [SerializeField] SpawnPlayers spawnPlayers;
+    [SerializeField, Tooltip("Высота каждой кнопки выбора клачча")] int height;
+    [SerializeField, Tooltip("Объект панели выбора класса")] GameObject classSelection;
+    [SerializeField, Tooltip("Префаб для кнопки выбора класса/подкласса")] GameObject SubclassButton;
+    [SerializeField, Tooltip("Модуль появления игрока")] SpawnPlayers spawnPlayers;
     #region UI Panels
-    [SerializeField] private Text firstClassName;
-    [SerializeField] private Text secondClassName;
-    [SerializeField] private Text thirdClassName;
+    [SerializeField, Tooltip("Поле названия первого класса")] private Text firstClassName;
+    [SerializeField, Tooltip("Поле названия второго класса")] private Text secondClassName;
+    [SerializeField, Tooltip("Поле названия третьего класса")] private Text thirdClassName;
 
     [SerializeField] private RectTransform firstClass;
     [SerializeField] private RectTransform secondClass;
     [SerializeField] private RectTransform thirdClass;
 
-    [SerializeField] private GameObject[] firstClassSubclasses;
-    [SerializeField] private GameObject[] secondClassSubclasses;
-    [SerializeField] private GameObject[] thirdClassSubclasses;
+    [SerializeField, Tooltip("Список объектов (префабов) для подклассов первого класса")] private GameObject[] firstClassSubclasses;
+    [SerializeField, Tooltip("Список объектов (префабов) для подклассов второго класса")] private GameObject[] secondClassSubclasses;
+    [SerializeField, Tooltip("Список объектов (префабов) для подклассов третьего класса")] private GameObject[] thirdClassSubclasses;
 
-    [SerializeField] private RectTransform firstClassSubclassesPanel;
-    [SerializeField] private RectTransform secondClassSubclassesPanel;
-    [SerializeField] private RectTransform thirdClassSubclassesPanel;
+    [SerializeField, Tooltip("Панель для привязки кнопок выбора подклассов первого класса")] private RectTransform firstClassSubclassesPanel;
+    [SerializeField, Tooltip("Панель для привязки кнопок выбора подклассов второго класса")] private RectTransform secondClassSubclassesPanel;
+    [SerializeField, Tooltip("Панель для привязки кнопок выбора подклассов третьего класса")] private RectTransform thirdClassSubclassesPanel;
     #endregion
     // Start is called before the first frame update
     void Start()
     {
         TimerManager.timerEnd += OnTimerEnd;
-        
+
         firstClassSubclassesPanel.sizeDelta = new Vector2(356, firstClassSubclasses.Length * height + 50);
         secondClassSubclassesPanel.sizeDelta = new Vector2(356, secondClassSubclasses.Length * height + 50);
         thirdClassSubclassesPanel.sizeDelta = new Vector2(356, thirdClassSubclasses.Length * height + 50);
@@ -45,7 +47,10 @@ public class ClassSelection : MonoBehaviour
         SpawnSubclassButtons(thirdClassSubclassesPanel, thirdClassSubclasses);
 
     }
-
+    /// <summary>
+    /// Фукнция для события окончания таймера выбора класса
+    /// </summary>
+    /// <param name="ended"></param>
     void OnTimerEnd(bool ended)
     {
         if (ended && !classSet)
@@ -72,7 +77,11 @@ public class ClassSelection : MonoBehaviour
         TimerManager.timerEnd -= OnTimerEnd;
         classSelection.SetActive(false);
     }
-
+    /// <summary>
+    /// Функция для добавления кнопок выбора класса/подкласса к целевой панели
+    /// </summary>
+    /// <param name="parent">Целевая панель</param>
+    /// <param name="prefabs">Целевой список префабор/подклассов</param>
     void SpawnSubclassButtons(RectTransform parent, GameObject[] prefabs)
     {
         int posY = -75;
@@ -88,7 +97,10 @@ public class ClassSelection : MonoBehaviour
             posY -= height + 10;
         }
     }
-
+    /// <summary>
+    /// Функция установки класса/подкласса пользователя
+    /// </summary>
+    /// <param name="playerPrefab">Объект/префаб подкласса</param>
     void SetPlayerClass(GameObject playerPrefab)
     {
         if (classSet) return;
@@ -105,5 +117,5 @@ public class ClassSelection : MonoBehaviour
     {
     }
 
-    
+
 }
