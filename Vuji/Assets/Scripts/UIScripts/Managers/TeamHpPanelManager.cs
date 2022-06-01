@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Модуль управления панелью списка участников команды
+/// </summary>
 public class TeamHpPanelManager : MonoBehaviour
 {
-    [SerializeField] RectTransform targetTransform;
-    [SerializeField] GameObject sliderPrefab;
+    [SerializeField, Tooltip("Панель для отображения хп игроков команды")] RectTransform targetTransform;
+    [SerializeField, Tooltip("Префаб слайдера для отображения хп игрока команды")] GameObject sliderPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,6 @@ public class TeamHpPanelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

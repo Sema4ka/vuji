@@ -23,25 +23,24 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class KeyHandler : MonoBehaviour
 {
-    
-    #region Fields
-    public static KeyHandler instance;
-    private bool spawnPause = true;
-    [SerializeField] DataBase dataBase;
 
-    public static List<KeyCode> AllKeys;
-    private bool binding = false;
-    
-    public static Action<string, KeyCode> keyPressed;
+    #region Fields
+    public static KeyHandler instance; // Объект класса, необходим для обновления  и синхронизации
+    private bool spawnPause = true; // Индикатор паузы до и после игры
+    [SerializeField] DataBase dataBase; // База данныъ
+    public static List<KeyCode> AllKeys; // Список всех ключей, доступных для считывания
+    private bool binding = false; // Индикатор паузы при изменении ключа дейсвия
+
+    public static Action<string, KeyCode> keyPressed; // Событие нажатия пользователем ключей действий
     #region KeyFields
-    public static string[] movementKeys;
-    public static string[] abilityKeys;
-    public static string[] uiKeys;
-    private Dictionary<string, KeyCode> keybinds = new Dictionary<string, KeyCode>();
+    public static string[] movementKeys; // Список ключей, связанных с движением
+    public static string[] abilityKeys; // Список ключей, связанных с способностями персонажа
+    public static string[] uiKeys; // Список ключей, связанных с пользовательским интерфейсом
+    private Dictionary<string, KeyCode> keybinds = new Dictionary<string, KeyCode>(); // Спиоск всех считываемых ключей действий
     #endregion
     #region ManagementFields
-    private bool paused = false;
-    private bool uiOpened = false;
+    private bool paused = false; // Индикатор паузы (для меню паузы)
+    private bool uiOpened = false; // Индикатор открытия панелей UI (для меню паузы)
 
     public static KeyCode[] numbersKeyCodes = {
          KeyCode.Alpha1,
@@ -53,17 +52,21 @@ public class KeyHandler : MonoBehaviour
          KeyCode.Alpha7,
          KeyCode.Alpha8,
          KeyCode.Alpha9,
-     };
+     }; // Список всех ключей цифр
     #endregion
     #endregion
-
+    /// <summary>
+    /// Убирает функции из событий, дабы они не срабатывали после уничтожения объекта модуля
+    /// </summary>
     private void OnDestroy()
     {
         SpawnPlayers.OnSpawn -= OnSpawn;
         KeybindManager.Binding -= OnBinding;
     }
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Добавление функций в события, считывание настроек управления и заполнение списков.
+    /// </summary>
     void Start()
     {
         Debug.Log("KeyHandler Started");
@@ -111,13 +114,16 @@ public class KeyHandler : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Считывание нажатых ключей, проверка паузы
+    /// </summary>
     void Update()
     {
         if (binding || spawnPause) return; // Считывание нажатий происходит в KeybindManager во время изменения привязанной клавиши. Не считывает во время паузы
         if (paused) // При открытии меню паузы считываются лишь нажатия esc
         {
-            if (Input.GetKeyDown(KeyCode.Escape)) {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
                 keyPressed?.Invoke("EscapeMenu", KeyCode.Escape);
             }
             return;
@@ -132,7 +138,10 @@ public class KeyHandler : MonoBehaviour
             }
         }
     }
-
+    /// <summary>
+    /// Функция для события появления локального игрока
+    /// </summary>
+    /// <param name="player">Объект игрока</param>
     void OnSpawn(GameObject player)
     {
         spawnPause = false;
@@ -143,16 +152,26 @@ public class KeyHandler : MonoBehaviour
     /// Регулирует "приостановку" игры. Во время паузы считывается только нажатие ESC
     /// <param name="pause"></param>
     /// </summary>
-    public void Pause(bool pause) {
-        
+    public void Pause(bool pause)
+    {
+
         paused = pause;
     }
     /// <summary>
     /// 
     /// </summary>
     /// <returns>Приостановлена ли игра</returns>
-    public bool IsPaused() {
+    public bool IsPaused()
+    {
         return paused;
+    }
+    /// <summary>
+    /// Индикатор того, что игра уже началась и не приостановлена, а также не открыты никакие окна UI
+    /// </summary>
+    /// <returns></returns>
+    public bool IsClearAndPlaying()
+    {
+        return !paused && !uiOpened && !spawnPause && !binding;
     }
     /// <summary>
     /// Регулирует статус открытых меню (при нажатии ESC все меню сворачиваются, повтроное нажатие открывает меню паузы)
@@ -165,7 +184,8 @@ public class KeyHandler : MonoBehaviour
     /// 
     /// </summary>
     /// <returns>Открыто ли меню UI</returns>
-    public bool GetUIOpened() {
+    public bool GetUIOpened()
+    {
         return uiOpened;
     }
     #endregion
@@ -210,6 +230,11 @@ public class KeyHandler : MonoBehaviour
         dataBase.SetKeybind(name, key);
         return true;
     }
+    /// <summary>
+    /// Вспомогательная функция для преобразования названия ключа в более логичное
+    /// </summary>
+    /// <param name="code">Ключ действия</param>
+    /// <returns>Преобразованное название ключв</returns>
     public static string NormalizeKeybind(KeyCode code)
     {
         string keyName = code.ToString();

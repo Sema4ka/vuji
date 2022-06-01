@@ -7,12 +7,13 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-
-
+/// <summary>
+/// Класс для взаимодействий с сервером Vuji
+/// </summary>
 public class Controllers : MonoBehaviour
 {
-    private readonly string _serverDomain = MainServerInfo.ServerDomain;
-    private DataBase _dataBase;
+    private readonly string _serverDomain = MainServerInfo.ServerDomain; // Адрес сервера
+    private DataBase _dataBase; // База данных из объекта на котором висит скрипт
 
     #region Unity Methods
 
@@ -24,64 +25,91 @@ public class Controllers : MonoBehaviour
     #endregion
 
     #region Public Methods
-
+    /// <summary>
+    /// Проверяет, доступен ли сервер Vuji
+    /// </summary>
     public void CheckVujiServer()
     {
         StartCoroutine(CheckVujiServerNet());
     }
-
+    /// <summary>
+    /// Получает токен пользователя с сервера Vuji по указанным данным
+    /// </summary>
+    /// <param name="login">Логин пользователя</param>
+    /// <param name="password">Пароль пользователя</param>
     public void Login(string login, string password)
     {
         StartCoroutine(LoginNet(login, password));
     }
-
+    /// <summary>
+    /// Создает аккаунт пользователя по указанным данным
+    /// </summary>
+    /// <param name="login">Логин пользователя</param>
+    /// <param name="password">Пароль пользователя</param>
     public void Register(string login, string password)
     {
         StartCoroutine(RegisterNet(login, password));
     }
-
+    /// <summary>
+    /// Сообщает серверу о том, что пользователь в сети
+    /// </summary>
     public void UserOnline()
     {
         string token = _dataBase.GetToken();
         StartCoroutine(UserOnlineNet(token));
     }
-
+    /// <summary>
+    /// Сообщает серверу о том, что пользователь вышел из аккаунта
+    /// </summary>
     public void UserOffline()
     {
         string token = _dataBase.GetToken();
         _dataBase.SetToken("");
         StartCoroutine(UserOfflineNet(token));
     }
-
+    /// <summary>
+    /// Запрашивает ID пользователя по токену авторизации (из базы данных)
+    /// </summary>
+    /// <param name="token">Токен авторизации пользователя</param>
     public void GetUserID(string token)
     {
         StartCoroutine(GetUserIDNet(token));
     }
-
+    /// <summary>
+    /// Поиск пользователя по имени
+    /// </summary>
+    /// <param name="friendsName">Имя пользователя</param>
     public void FindFriendsByName(string friendsName)
     {
         string token = _dataBase.GetToken();
         StartCoroutine(FindFriendsByNameNet(token, friendsName));
     }
-
+    /// <summary>
+    /// Установить значение текстового поля на имя локального пользователя
+    /// </summary>
+    /// <param name="field">Текстовое поле, значение которого необходимо изменить</param>
     public void SetLocalUserName(Text field)
     {
         if (_dataBase == null) _dataBase = gameObject.GetComponent<DataBase>(); ;
         string token = _dataBase.GetToken();
         StartCoroutine(GetUserInfo(token, field));
-        
-        
+
+
     }
 
     #endregion
 
     #region Private IEnumerator Methods
-
+    /// <summary>
+    /// Автоматическая авторизация (при наличии сохраненного токена)
+    /// </summary>
     private void AutoAuth()
     {
         StartCoroutine(AutoAuthNet());
     }
-
+    /// <summary>
+    /// Корутина для автоматической авторизации
+    /// </summary>
     private IEnumerator AutoAuthNet()
     {
         WWWForm form = new WWWForm();
@@ -248,7 +276,7 @@ public class Controllers : MonoBehaviour
         }
     }
 
-    private IEnumerator GetUserInfo(string token, Text field=null)
+    private IEnumerator GetUserInfo(string token, Text field = null)
     {
         UserOnlineAndOfflineStructRequest userStruct = new UserOnlineAndOfflineStructRequest();
         userStruct.data = "None";
@@ -263,10 +291,10 @@ public class Controllers : MonoBehaviour
         }
         else
         {
-            UserInfoStructResponse response=
+            UserInfoStructResponse response =
                 JsonUtility.FromJson<UserInfoStructResponse>(www.downloadHandler.text);
             if (field != null) field.text = response.login;
-            
+
         }
     }
 

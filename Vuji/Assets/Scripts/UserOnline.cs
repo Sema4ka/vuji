@@ -1,5 +1,7 @@
 using UnityEngine;
-
+/// <summary>
+/// Вспомогательный модуль для сообщения серверу о том, что пользователь онлайн
+/// </summary>
 public class UserOnline : MonoBehaviour
 {
     private Controllers _controllers;

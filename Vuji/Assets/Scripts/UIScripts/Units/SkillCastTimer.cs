@@ -3,13 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// Модуль для управления таймером каста скила целевой сущностью
+/// </summary>
 public class SkillCastTimer : MonoBehaviour
 {
-    [SerializeField] Text timerText;
-    [SerializeField] Slider timerSlider;
-    private float timerInterval;
-    private float timerValue;
+    [SerializeField, Tooltip("Текстовое поле для отображения оставшегося времени")] Text timerText; // Целевой текст таймера
+    [SerializeField, Tooltip("Слайдер для отображения оставшегося времени")] Slider timerSlider; // Целевой слайдер таймера
+    private float timerInterval; // Время каста
+    private float timerValue; // Прошедшее время каста
 
     private void Start()
     {
@@ -20,7 +22,10 @@ public class SkillCastTimer : MonoBehaviour
     {
         BaseSkill.onCast -= StartTimer;
     }
-
+    /// <summary>
+    /// Функция для события каста скила (Запустить таймер каста с указанным временем)
+    /// </summary>
+    /// <param name="time">Время каста умения</param>
     public void StartTimer(float time)
     {
         timerValue = 0f;
@@ -39,7 +44,7 @@ public class SkillCastTimer : MonoBehaviour
             current = 0f;
         }
         timerSlider.value = current;
-        timerText.text = current > 0f?Convert.ToInt32(current).ToString() + "s":"";
+        timerText.text = current > 0f ? Convert.ToInt32(current).ToString() + "s" : "";
 
     }
 }

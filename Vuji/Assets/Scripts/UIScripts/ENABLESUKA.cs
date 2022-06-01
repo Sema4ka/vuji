@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Вспомогательный скрипт, включает все объекты (список задается в редакторе юнити)
+/// </summary>
 public class ENABLESUKA : MonoBehaviour
 {
-    [SerializeField] GameObject[] allObjects;
+    [SerializeField, Tooltip("Список объектов, которые необходимо включить")] GameObject[] allObjects;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,6 @@ public class ENABLESUKA : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

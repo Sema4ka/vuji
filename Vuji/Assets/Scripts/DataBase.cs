@@ -3,13 +3,15 @@ using System.Data;
 using UnityEngine;
 using Mono.Data.Sqlite;
 
-
+/// <summary>
+/// Модуль взаимодействия с базой данных игры
+/// </summary>
 public class DataBase : MonoBehaviour
 {
-    private static string dbName = "URI=file:VujiDB.db";
-    private static SqliteConnection _connection;
-    private static SqliteCommand _command;
-    private static IDataReader _reader;
+    private static string dbName = "URI=file:VujiDB.db"; // Путь к файлу бд
+    private static SqliteConnection _connection; // Вспомогательное поле для хранения сессии
+    private static SqliteCommand _command; // Вспомогательное поле для хранения команды (запроса) SQL
+    private static IDataReader _reader; // Вспомогательное поля для чтеня даннных 
 
     #region Unity Methods
 
@@ -44,7 +46,7 @@ public class DataBase : MonoBehaviour
     /// <summary>
     /// Метод создает локальную БД
     /// </summary>
-        private void CreateDB()
+    private void CreateDB()
     {
         OpenConnection();
         _command.CommandText = @"PRAGMA foreign_keys=OFF;
@@ -157,7 +159,11 @@ public class DataBase : MonoBehaviour
             CloseConnection();
         }
     }
-
+    /// <summary>
+    /// Проверяет, существует ли в базе данных настройка управления по названию действия
+    /// </summary>
+    /// <param name="name">Название действия</param>
+    /// <returns>Существует ли настройка в базе данных</returns>
     public bool ExistKeybind(string name)
     {
         OpenConnection();
@@ -170,9 +176,14 @@ public class DataBase : MonoBehaviour
         }
         CloseConnection();
         return false;
-        
-    }
 
+    }
+    /// <summary>
+    /// Добавляет настройку управления в базу данных с указанными параметрами
+    /// </summary>
+    /// <param name="name">Название действия</param>
+    /// <param name="key">Ключ действия</param>
+    /// <param name="category">Категория действия ("Movement", "Ability", "UI")</param>
     public void AddKeybind(string name, KeyCode key, string category)
     {
         OpenConnection();
@@ -180,6 +191,11 @@ public class DataBase : MonoBehaviour
         _command.ExecuteNonQuery();
         CloseConnection();
     }
+    /// <summary>
+    /// Установить ключ действия в базе данных по названию
+    /// </summary>
+    /// <param name="name">Название действия</param>
+    /// <param name="key">Новый ключ действия</param>
     public void SetKeybind(string name, KeyCode key)
     {
         if (!ExistKeybind(name)) { return; }
@@ -188,6 +204,10 @@ public class DataBase : MonoBehaviour
         _command.ExecuteNonQuery();
         CloseConnection();
     }
+    /// <summary>
+    /// Получить список настоек управления из базы данных
+    /// </summary>
+    /// <returns>Список настроек управления</returns>
     public List<Keybind> GetKeybinds()
     {
         List<Keybind> keybinds = new List<Keybind>();
@@ -201,7 +221,11 @@ public class DataBase : MonoBehaviour
         CloseConnection();
         return keybinds;
     }
-
+    /// <summary>
+    /// Добавить настроку в базу данных с указанными параметрами
+    /// </summary>
+    /// <param name="name">Название настройки</param>
+    /// <param name="value">Значение настройки</param>
     public void AddSetting(string name, string value)
     {
         OpenConnection();
@@ -209,7 +233,11 @@ public class DataBase : MonoBehaviour
         _command.ExecuteNonQuery();
         CloseConnection();
     }
-
+    /// <summary>
+    /// Проверить, существует ли настройка с указаным именем в базе данных
+    /// </summary>
+    /// <param name="name">Имя настройки</param>
+    /// <returns>Существует ли настройка</returns>
     public bool ExistSetting(string name)
     {
         OpenConnection();
@@ -223,7 +251,11 @@ public class DataBase : MonoBehaviour
         CloseConnection();
         return false;
     }
-
+    /// <summary>
+    /// Установить значение для настройки с указанным именем
+    /// </summary>
+    /// <param name="name">Название настройки</param>
+    /// <param name="value">Новое значение</param>
     public void SetSetting(string name, string value)
     {
         if (!ExistSetting(name)) { return; }
@@ -232,7 +264,10 @@ public class DataBase : MonoBehaviour
         _command.ExecuteNonQuery();
         CloseConnection();
     }
-
+    /// <summary>
+    /// Получить список настроек из базы данных
+    /// </summary>
+    /// <returns>Список настроек</returns>
     public List<Setting> GetSettings()
     {
         List<Setting> keybinds = new List<Setting>();
@@ -244,18 +279,26 @@ public class DataBase : MonoBehaviour
             keybinds.Add(new Setting(_reader["name"].ToString(), _reader["value"].ToString()));
         }
         CloseConnection();
-        return keybinds;  
+        return keybinds;
     }
 
     #endregion
 }
 
+/// <summary>
+/// Вспомогательный класс для передачи информации о сохраненных настройках управления
+/// </summary>
 public class Keybind
 {
-    public string name;
-    public string key;
-    public string category;
-
+    public string name; // Название действия
+    public string key; // Ключ действия
+    public string category; // Категория действия
+    /// <summary>
+    /// Конструктор класса
+    /// </summary>
+    /// <param name="name">Название действия</param>
+    /// <param name="key">Ключ действия</param>
+    /// <param name="category">Категория действия</param>
     public Keybind(string name, string key, string category)
     {
         this.name = name;
@@ -263,11 +306,18 @@ public class Keybind
         this.category = category;
     }
 }
-
+/// <summary>
+/// Вспомогательный класс для передачи сохраненных настроек
+/// </summary>
 public class Setting
 {
-    public string name;
-    public string value;
+    public string name; // Название настройки
+    public string value; // Значение
+    /// <summary>
+    /// Конструктор класса
+    /// </summary>
+    /// <param name="name">Название</param>
+    /// <param name="value">Значение</param>
     public Setting(string name, string value)
     {
         this.name = name;

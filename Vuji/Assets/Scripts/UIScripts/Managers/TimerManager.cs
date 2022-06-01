@@ -3,13 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// Модуль управления таймером выбора класса
+/// </summary>
 public class TimerManager : MonoBehaviour
 {
     public static Action<bool> timerEnd;
-    [SerializeField] Text timerText;
-    [SerializeField] Slider timerSlider;
-    [SerializeField] float timerInterval;
+    [SerializeField, Tooltip("Текст таймера выбора класса")] Text timerText;
+    [SerializeField, Tooltip("Слайдер для отображения прогресса таймера")] Slider timerSlider;
+    [SerializeField, Tooltip("Заданное время для выбора класса")] float timerInterval;
     private float timerValue;
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,6 @@ public class TimerManager : MonoBehaviour
         }
         timerSlider.value = current;
         timerText.text = Convert.ToInt32(current).ToString();
-        
+
     }
 }

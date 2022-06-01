@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// Модуль управления баром энергии в нижней части экрана
+/// </summary>
 public class EnergyBarUI : MonoBehaviour
 {
-    [SerializeField] Slider EnergyBar;
-    [SerializeField] Text EnergyBarText;
-    private BaseEntity entity;
+    [SerializeField, Tooltip("Целевой слайдер для отображения количеста энергии")] Slider EnergyBar;
+    [SerializeField, Tooltip("Целевое текстовое поле для отображения количеста энергии")] Text EnergyBarText;
+    private BaseEntity entity; // Целевая сущность
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,12 @@ public class EnergyBarUI : MonoBehaviour
     {
         SpawnPlayers.OnSpawn -= OnSpawn;
     }
-    void OnSpawn(GameObject player){
+    /// <summary>
+    /// Функция для события появления игрока
+    /// </summary>
+    /// <param name="player">Объект игрока</param>
+    void OnSpawn(GameObject player)
+    {
         entity = player.GetComponent<BaseEntity>();
     }
 
@@ -43,7 +50,8 @@ public class EnergyBarUI : MonoBehaviour
         EnergyBar.value = entity.GetEnergyPoints();
         EnergyBarText.text = entity.GetEnergyPoints().ToString() + "/" + entity.GetMaxEnergyPoints().ToString();
     }
-    public void SetEntity(BaseEntity player){
+    public void SetEntity(BaseEntity player)
+    {
         entity = player;
     }
 }

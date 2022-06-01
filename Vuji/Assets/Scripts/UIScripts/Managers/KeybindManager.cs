@@ -4,19 +4,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Модуль управления объектом настройки управления
+/// </summary>
 public class KeybindManager : MonoBehaviour
 {
-    [SerializeField] Text keybindName;
-    [SerializeField] Text keybindKeys;
-    [SerializeField] KeyCode key;
-    public static Action<KeybindManager, string, KeyCode> keyChanged;
-    public static Action<bool> Binding;
+    [SerializeField, Tooltip("Текстовое поле для названия действия")] Text keybindName; // Целевое текстовое поле для названия действия
+    [SerializeField, Tooltip("Текстовое поле для названия ключа действия")] Text keybindKeys; // Целевое текстовое поле для названия ключа дейсвтия
+    [SerializeField, Tooltip("Ключ действия")] KeyCode key; // Ключ дейсвтвия
+    public static Action<KeybindManager, string, KeyCode> keyChanged; // События изменения ключа действия
+    public static Action<bool> Binding; // Событие начала изменения ключа действия
 
-    private bool binding;
+    private bool binding; // Индикатор изменения значения ключа пользователем
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -51,32 +54,51 @@ public class KeybindManager : MonoBehaviour
             }
         }
     }
-
+    /// <summary>
+    /// Получить название настройки управлеия
+    /// </summary>
+    /// <returns>Название настройки</returns>
     public string GetName()
     {
         return keybindName.text;
     }
+    /// <summary>
+    /// Получить заданный ключ настройки управления
+    /// </summary>
+    /// <returns>Ключ настройки управления</returns>
     public KeyCode GetKey()
     {
         return key;
     }
+    /// <summary>
+    /// Установить название настройки управления
+    /// </summary>
+    /// <param name="newName">Новое название</param>
     public void SetName(string newName)
     {
         keybindName.text = newName;
     }
+    /// <summary>
+    /// Установить значение ключа настройки управления
+    /// </summary>
+    /// <param name="newKey">Новый ключ настройки управления</param>
     public void SetKey(KeyCode newKey)
     {
         key = newKey;
         keybindKeys.text = KeyHandler.NormalizeKeybind(newKey);
     }
-
+    /// <summary>
+    /// Фунция для кпноки изменения значения ключа настройки управления
+    /// </summary>
     public void SetKeybind()
     {
         binding = true;
         keybindKeys.text = "_";
         Binding?.Invoke(true);
     }
-
+    /// <summary>
+    /// Функция для обнуления значения ключа управления
+    /// </summary>
     public void ResetKeybind()
     {
         keybindKeys.text = "None";

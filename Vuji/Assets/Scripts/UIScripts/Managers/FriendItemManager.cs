@@ -2,17 +2,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 
-
+/// <summary>
+/// Модуль управления объектом пользователя, доступного для приглашения в группу (в лобби)
+/// </summary>
 public class FriendItemManager : MonoBehaviourPunCallbacks
 {
     #region Fields
 
-    public int userID;
-    public LobbyManager lobbyManager;
-    [SerializeField] public Text usernameTextField;
+    public int userID; // ID целевого игрока
+    public LobbyManager lobbyManager; // Модуль лобби
+    [SerializeField, Tooltip("Текстовое поле для имени пользователя")] public Text usernameTextField; // Целевое текстовое поле для имени пользователя
 
     #endregion
-    
+
 
     #region Public Methods
 
@@ -32,5 +34,5 @@ public class FriendItemManager : MonoBehaviourPunCallbacks
     }
 
     #endregion
-    
+
 }

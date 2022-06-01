@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// Модуль управления панелью улучшения игрока !НЕ АКТИВНО!
+/// </summary>
 public class PlayerUpgrades : MonoBehaviour
 {
     [SerializeField] private BaseEntity player;
@@ -44,7 +46,7 @@ public class PlayerUpgrades : MonoBehaviour
         if (name == "EscapeMenu")
         {
             if (upgradesPanel?.gameObject.activeSelf == true)
-            upgradesPanel.gameObject.SetActive(false);
+                upgradesPanel.gameObject.SetActive(false);
         }
     }
 
@@ -66,10 +68,10 @@ public class PlayerUpgrades : MonoBehaviour
             Color col = btn.GetComponent<Image>().color;
             col.a = 0.1f;
             btn.GetComponent<BaseUpgrade>().ApplyUpgrade(player);
-        }        
-        
+        }
+
     }
-    public void SwitchPanels(bool toClass=true)
+    public void SwitchPanels(bool toClass = true)
     {
         classPanel.gameObject.SetActive(toClass);
         subclassPanel.gameObject.SetActive(!toClass);

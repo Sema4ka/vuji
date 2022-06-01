@@ -5,16 +5,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
-
+/// <summary>
+/// Модуль управления отображаемым инвентарем сущности
+/// </summary>
 public class InventoryWindow : MonoBehaviour
 {
-    private GameObject player;
-    [SerializeField] Inventory playerInventory;
-    [SerializeField] RectTransform inventoryPanel;
+    private GameObject player; // Объект целевой сущности
+    [SerializeField] Inventory playerInventory; // Модуль инвентаря целевой сущности
+    [SerializeField] RectTransform inventoryPanel; // Целевая панель инвентаря
 
-    
 
-    List<GameObject> displayedIcons = new List<GameObject>();
+
+    List<GameObject> displayedIcons = new List<GameObject>(); // Список отображаемых предметов
 
     public void Start()
     {
@@ -43,12 +45,17 @@ public class InventoryWindow : MonoBehaviour
 
     private void Update()
     {
-        
+
     }
 
     void onItemSwapped(DisplayedItem item) => OnItemSwap(item);
     void OnItemDropped(int itemId) => OnItemDrop(itemId);
     void OnItemAdded(BaseItem item) => Redraw();
+    /// <summary>
+    /// Функция для события нажатия ключа действия
+    /// </summary>
+    /// <param name="name">Название действия</param>
+    /// <param name="key">Ключ действия</param>
     void KeyPressed(string name, KeyCode key)
     {
         string[] words = name.Split(' ');
@@ -64,7 +71,10 @@ public class InventoryWindow : MonoBehaviour
             Redraw();
         }
     }
-
+    /// <summary>
+    /// Функция для события изменения позиции предмета в инвентаре
+    /// </summary>
+    /// <param name="item">Целевой предмет</param>
     void OnItemSwap(DisplayedItem item)
     {
         bool swapped = false;
@@ -90,24 +100,31 @@ public class InventoryWindow : MonoBehaviour
             item.transform.position = item.itemPosition;
         }
     }
+    /// <summary>
+    /// Функция для события выбрасывания премета из инвентаря
+    /// </summary>
+    /// <param name="itemId">ID выбрасываемого предмета</param>
     void OnItemDrop(int itemId)
     {
         if (displayedIcons.Count > itemId && itemId >= 0)
         {
-            if (!playerInventory.DropItem(itemId)){
+            if (!playerInventory.DropItem(itemId))
+            {
                 playerInventory.inventoryItems.RemoveAt(itemId);
             }
             Redraw();
         }
     }
-
+    /// <summary>
+    /// Обновить отображаемые предметы
+    /// </summary>
     void Redraw()
     {
         ClearDisplayedItems();
         for (var i = 0; i < playerInventory.inventoryItems.Count; i++)
         {
             var item = playerInventory.inventoryItems[i];
-            
+
             if (item != null)
             {
                 var icon = new GameObject(name: "Icon");
@@ -124,7 +141,7 @@ public class InventoryWindow : MonoBehaviour
 
     void ClearDisplayedItems()
     {
-        for (var i = 0;i < displayedIcons.Count; i++)
+        for (var i = 0; i < displayedIcons.Count; i++)
         {
             Destroy(displayedIcons[i]);
         }

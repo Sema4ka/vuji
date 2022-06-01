@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Модуль для уравления звуком целевого источника
+/// </summary>
 public class SoundManager : MonoBehaviour
 {
-    [SerializeField] string Category;
-    [SerializeField] AudioSource source;
-    private bool volumeSet = false;
-    private float volume;
+    [SerializeField, Tooltip("Категория звука целевого источника")] string Category; // Категория звука целевого источника
+    [SerializeField, Tooltip("Целевой источник звука")] AudioSource source; // Целевой источник звука
+    private bool volumeSet = false; // Индикатор установки громкости звука целевого источника
+    private float volume; // Громкость звука целевого источника
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +32,11 @@ public class SoundManager : MonoBehaviour
         SoundSettings.volumeChange += VolumeUpdated;
         volumeSet = true;
     }
-
+    /// <summary>
+    /// Функция для события обновления настроек звука
+    /// </summary>
+    /// <param name="name">Название категории, громкость которой была обновлена</param>
+    /// <param name="value">Новая громкость для категории</param>
     void VolumeUpdated(string name, float value)
     {
         if (name == Category)

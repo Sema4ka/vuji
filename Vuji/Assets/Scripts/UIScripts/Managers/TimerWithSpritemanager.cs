@@ -3,15 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// Модуль для управления отображаемым объектом скила
+/// </summary>
 public class TimerWithSpritemanager : MonoBehaviour
 {
-    [SerializeField] Image targetedSprite;
-    [SerializeField] Text targetedText;
-    [SerializeField] GameObject coverPanel;
-    [SerializeField] GameObject selectionPanel;
-    [SerializeField] Text keyText;
-    [SerializeField] TooltipTextUI tooltipText;
+    [SerializeField, Tooltip("Целевое изображение для отображения спрайта скила")] Image targetedSprite;
+    [SerializeField, Tooltip("Текстовое поле для отоюражения оставшегося времени перезарядки скила")] Text targetedText;
+    [SerializeField, Tooltip("Обхект панели, закрывающей скрипт во время перезарядки")] GameObject coverPanel;
+    [SerializeField, Tooltip("Обхект панели выбора скила")] GameObject selectionPanel;
+    [SerializeField, Tooltip("Текстовое поле для отображения названия ключа действия для выбора скила")] Text keyText;
+    [SerializeField, Tooltip("Модуль для изменения текста всплывающей подсказки")] TooltipTextUI tooltipText;
 
     private GameObject targetPlayer;
     private BaseSkill targetSkill;
@@ -31,7 +33,12 @@ public class TimerWithSpritemanager : MonoBehaviour
     {
         if (targetSkill != null) targetSkill.onRelease += SetTime;
     }
-
+    /// <summary>
+    /// Установить сущность, скил и ключ для отслеживания
+    /// </summary>
+    /// <param name="player">Целевая сущность</param>
+    /// <param name="skill">Целевой скилл</param>
+    /// <param name="keyName">Название ключа действия дял скила</param>
     public void SetEntity(GameObject player, BaseSkill skill, string keyName)
     {
         targetPlayer = player;
@@ -41,10 +48,15 @@ public class TimerWithSpritemanager : MonoBehaviour
         keyText.text = KeyHandler.NormalizeKeybind(KeyHandler.instance.GetKeybind(keyName));
         targetedText.text = "";
         skill.onRelease += SetTime;
-        tooltipText.text = "\"" + skill.GetName() + "\"\n" + skill.GetDescription() + "\n" + "Cast time: " + skill.GetCastTime().ToString() + "s\n" + "Energy cost: "+ skill.GetCost().ToString() + "\n" + "Cooldown: " + skill.GetCooldownTime().ToString() + "s";
+        tooltipText.text = "\"" + skill.GetName() + "\"\n" + skill.GetDescription() + "\n" + "Cast time: " + skill.GetCastTime().ToString() + "s\n" + "Energy cost: " + skill.GetCost().ToString() + "\n" + "Cooldown: " + skill.GetCooldownTime().ToString() + "s";
         player.GetComponent<BaseEntity>().OnSkillSelectionChange += SetSelection;
     }
 
+    /// <summary>
+    /// Установить выбор скила на указанных
+    /// </summary>
+    /// <param name="skillKey">Название ключа для скила</param>
+    /// <param name="selected">Выбран ли скил по указанному ключу</param>
     void SetSelection(string skillKey, bool selected)
     {
         if (skillKey == keyName)

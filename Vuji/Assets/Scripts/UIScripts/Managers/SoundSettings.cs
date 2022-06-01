@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// Модуль для управления настройками звука
+/// </summary>
 public class SoundSettings : MonoBehaviour
 {
     [SerializeField] DataBase dataBase;
-    [SerializeField] RectTransform soundSettingsContent;
-    [SerializeField] GameObject soundSlider;
+    [SerializeField, Tooltip("Панель настроек звука")] RectTransform soundSettingsContent;
+    [SerializeField, Tooltip("Префаб настройки звука")] GameObject soundSlider;
     public static Action<string, float> volumeChange;
     public static SoundSettings instance;
 
@@ -27,7 +29,7 @@ public class SoundSettings : MonoBehaviour
         SoundSliderManager.onValueChange += SoundSliderValueChange;
         int nowY = -75;
         var settings = dataBase.GetSettings();
-        foreach(Setting setting in settings)
+        foreach (Setting setting in settings)
         {
             if (!setting.name.EndsWith("volume")) continue;
             GameObject slider = Instantiate(soundSlider);
@@ -40,7 +42,11 @@ public class SoundSettings : MonoBehaviour
             nowY -= 50;
         }
     }
-    // Volume set by user
+    /// <summary>
+    /// Функция для события установки значения звука пользователем
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="value"></param>
     public void SoundSliderValueChange(string name, float value)
     {
         volumeList[name] = value;
@@ -48,10 +54,10 @@ public class SoundSettings : MonoBehaviour
         volumeChange?.Invoke(name, value);
     }
     /// <summary>
-    /// Get a volume for sound category
+    /// Получить значение звука для заданной категории
     /// </summary>
-    /// <param name="name">Volume settings name</param>
-    /// <returns>Volume of sound</returns>
+    /// <param name="name">Название категории</param>
+    /// <returns>Громкость категории</returns>
     public float GetVolume(string name)
     {
         return volumeList[name];
