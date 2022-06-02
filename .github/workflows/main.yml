@@ -33,5 +33,3 @@ jobs:
           sudo apt-get install texlive-latex-extra
           sudo apt-get install texlive-lang-cyrillic
           doxygen dconfig
-          cd docs/latex
-          make
