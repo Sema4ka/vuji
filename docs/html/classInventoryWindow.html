@@ -68,6 +68,9 @@ $(function() {
   <div class="headertitle"><div class="title">Класс InventoryWindow</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Модуль управления отображаемым инвентарем сущности   
+ <a href="classInventoryWindow.html#details">Подробнее...</a></p>
 <div class="dynheader">
 Граф наследования:InventoryWindow:</div>
 <div class="dyncontent">
@@ -83,8 +86,9 @@ $(function() {
 <tr class="separator:aa3f191b9ad5d65e87a12e94af2406920"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock">
-<p class="definition">См. определение в файле <a class="el" href="InventoryWindow_8cs_source.html">InventoryWindow.cs</a> строка <a class="el" href="InventoryWindow_8cs_source.html#l00009">9</a></p>
+<div class="textblock"><p >Модуль управления отображаемым инвентарем сущности  </p>
+
+<p class="definition">См. определение в файле <a class="el" href="InventoryWindow_8cs_source.html">InventoryWindow.cs</a> строка <a class="el" href="InventoryWindow_8cs_source.html#l00011">11</a></p>
 </div><h2 class="groupheader">Методы</h2>
 <a id="aa3f191b9ad5d65e87a12e94af2406920" name="aa3f191b9ad5d65e87a12e94af2406920"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa3f191b9ad5d65e87a12e94af2406920">&#9670;&nbsp;</a></span>OnSpawn()</h2>
@@ -110,13 +114,13 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="InventoryWindow_8cs_source.html">InventoryWindow.cs</a> строка <a class="el" href="InventoryWindow_8cs_source.html#l00036">36</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
-<div class="line"><span class="lineno">   38</span>        player = playerObject;</div>
-<div class="line"><span class="lineno">   39</span>        playerInventory = playerObject.GetComponent&lt;<a class="code hl_class" href="classInventory.html">Inventory</a>&gt;();</div>
-<div class="line"><span class="lineno">   40</span>        playerInventory.onItemAdded += OnItemAdded;</div>
-<div class="line"><span class="lineno">   41</span>        Redraw();</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="InventoryWindow_8cs_source.html">InventoryWindow.cs</a> строка <a class="el" href="InventoryWindow_8cs_source.html#l00038">38</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        player = playerObject;</div>
+<div class="line"><span class="lineno">   41</span>        playerInventory = playerObject.GetComponent&lt;<a class="code hl_class" href="classInventory.html">Inventory</a>&gt;();</div>
+<div class="line"><span class="lineno">   42</span>        playerInventory.onItemAdded += OnItemAdded;</div>
+<div class="line"><span class="lineno">   43</span>        Redraw();</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
 <div class="ttc" id="aclassInventory_html"><div class="ttname"><a href="classInventory.html">Inventory</a></div><div class="ttdef"><b>Definition:</b> <a href="Inventory_8cs_source.html#l00007">Inventory.cs:8</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -144,14 +148,14 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="InventoryWindow_8cs_source.html">InventoryWindow.cs</a> строка <a class="el" href="InventoryWindow_8cs_source.html#l00019">19</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (playerInventory != <span class="keyword">null</span>) playerInventory.onItemAdded += OnItemAdded;</div>
-<div class="line"><span class="lineno">   22</span>        DisplayedItem.onItemDrop += OnItemDropped;</div>
-<div class="line"><span class="lineno">   23</span>        DisplayedItem.onItemSwap += onItemSwapped;</div>
-<div class="line"><span class="lineno">   24</span>        KeyHandler.keyPressed += KeyPressed;</div>
-<div class="line"><span class="lineno">   25</span>        SpawnPlayers.OnSpawn += OnSpawn;</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="InventoryWindow_8cs_source.html">InventoryWindow.cs</a> строка <a class="el" href="InventoryWindow_8cs_source.html#l00021">21</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (playerInventory != <span class="keyword">null</span>) playerInventory.onItemAdded += OnItemAdded;</div>
+<div class="line"><span class="lineno">   24</span>        DisplayedItem.onItemDrop += OnItemDropped;</div>
+<div class="line"><span class="lineno">   25</span>        DisplayedItem.onItemSwap += onItemSwapped;</div>
+<div class="line"><span class="lineno">   26</span>        KeyHandler.keyPressed += KeyPressed;</div>
+<div class="line"><span class="lineno">   27</span>        SpawnPlayers.OnSpawn += OnSpawn;</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>

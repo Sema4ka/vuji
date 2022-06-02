@@ -69,6 +69,9 @@ $(function() {
   <div class="headertitle"><div class="title">Класс SoundSettings</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Модуль для управления настройками звука   
+ <a href="classSoundSettings.html#details">Подробнее...</a></p>
 <div class="dynheader">
 Граф наследования:SoundSettings:</div>
 <div class="dyncontent">
@@ -79,9 +82,10 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Открытые члены</h2></td></tr>
 <tr class="memitem:a8b2756be4cf3f18fb6f8c6766340b6f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundSettings.html#a8b2756be4cf3f18fb6f8c6766340b6f8">SoundSliderValueChange</a> (string name, float value)</td></tr>
+<tr class="memdesc:a8b2756be4cf3f18fb6f8c6766340b6f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для события установки значения звука пользователем   <a href="classSoundSettings.html#a8b2756be4cf3f18fb6f8c6766340b6f8">Подробнее...</a><br /></td></tr>
 <tr class="separator:a8b2756be4cf3f18fb6f8c6766340b6f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b4686d7e0fbbfd36ef5379094d02993"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundSettings.html#a0b4686d7e0fbbfd36ef5379094d02993">GetVolume</a> (string name)</td></tr>
-<tr class="memdesc:a0b4686d7e0fbbfd36ef5379094d02993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a volume for sound category   <a href="classSoundSettings.html#a0b4686d7e0fbbfd36ef5379094d02993">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:a0b4686d7e0fbbfd36ef5379094d02993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить значение звука для заданной категории   <a href="classSoundSettings.html#a0b4686d7e0fbbfd36ef5379094d02993">Подробнее...</a><br /></td></tr>
 <tr class="separator:a0b4686d7e0fbbfd36ef5379094d02993"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -92,8 +96,9 @@ $(function() {
 <tr class="separator:a360d94404382cd92a0266bf86d48dff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock">
-<p class="definition">См. определение в файле <a class="el" href="SoundSettings_8cs_source.html">SoundSettings.cs</a> строка <a class="el" href="SoundSettings_8cs_source.html#l00007">7</a></p>
+<div class="textblock"><p >Модуль для управления настройками звука  </p>
+
+<p class="definition">См. определение в файле <a class="el" href="SoundSettings_8cs_source.html">SoundSettings.cs</a> строка <a class="el" href="SoundSettings_8cs_source.html#l00009">9</a></p>
 </div><h2 class="groupheader">Методы</h2>
 <a id="a0b4686d7e0fbbfd36ef5379094d02993" name="a0b4686d7e0fbbfd36ef5379094d02993"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0b4686d7e0fbbfd36ef5379094d02993">&#9670;&nbsp;</a></span>GetVolume()</h2>
@@ -119,19 +124,19 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p>Get a volume for sound category  </p>
+<p>Получить значение звука для заданной категории  </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>Volume settings name</td></tr>
+    <tr><td class="paramname">name</td><td>Название категории</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Возвращает</dt><dd>Volume of sound</dd></dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Громкость категории</dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="SoundSettings_8cs_source.html">SoundSettings.cs</a> строка <a class="el" href="SoundSettings_8cs_source.html#l00055">55</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> volumeList[name];</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="SoundSettings_8cs_source.html">SoundSettings.cs</a> строка <a class="el" href="SoundSettings_8cs_source.html#l00061">61</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> volumeList[name];</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -169,12 +174,22 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="SoundSettings_8cs_source.html">SoundSettings.cs</a> строка <a class="el" href="SoundSettings_8cs_source.html#l00044">44</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
-<div class="line"><span class="lineno">   46</span>        volumeList[name] = value;</div>
-<div class="line"><span class="lineno">   47</span>        dataBase.SetSetting(name, value.ToString());</div>
-<div class="line"><span class="lineno">   48</span>        volumeChange?.Invoke(name, value);</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
+<p>Функция для события установки значения звука пользователем  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+    <tr><td class="paramname">value</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="SoundSettings_8cs_source.html">SoundSettings.cs</a> строка <a class="el" href="SoundSettings_8cs_source.html#l00050">50</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        volumeList[name] = value;</div>
+<div class="line"><span class="lineno">   53</span>        dataBase.<a class="code hl_function" href="classDataBase.html#aff4aec31a57c9de6de40636925da3c83">SetSetting</a>(name, value.ToString());</div>
+<div class="line"><span class="lineno">   54</span>        volumeChange?.Invoke(name, value);</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="ttc" id="aclassDataBase_html_aff4aec31a57c9de6de40636925da3c83"><div class="ttname"><a href="classDataBase.html#aff4aec31a57c9de6de40636925da3c83">DataBase.SetSetting</a></div><div class="ttdeci">void SetSetting(string name, string value)</div><div class="ttdoc">Установить значение для настройки с указанным именем</div><div class="ttdef"><b>Definition:</b> <a href="DataBase_8cs_source.html#l00259">DataBase.cs:259</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -199,7 +214,7 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="SoundSettings_8cs_source.html">SoundSettings.cs</a> строка <a class="el" href="SoundSettings_8cs_source.html#l00013">13</a></p>
+<p class="definition">См. определение в файле <a class="el" href="SoundSettings_8cs_source.html">SoundSettings.cs</a> строка <a class="el" href="SoundSettings_8cs_source.html#l00015">15</a></p>
 
 </div>
 </div>
@@ -223,12 +238,12 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="SoundSettings_8cs_source.html">SoundSettings.cs</a> строка <a class="el" href="SoundSettings_8cs_source.html#l00012">12</a></p>
+<p class="definition">См. определение в файле <a class="el" href="SoundSettings_8cs_source.html">SoundSettings.cs</a> строка <a class="el" href="SoundSettings_8cs_source.html#l00014">14</a></p>
 
 </div>
 </div>
 <hr/>Объявления и описания членов класса находятся в файле:<ul>
-<li>Vuji/Assets/Scripts/UIScripts/<a class="el" href="SoundSettings_8cs_source.html">SoundSettings.cs</a></li>
+<li>Vuji/Assets/Scripts/UIScripts/Managers/<a class="el" href="SoundSettings_8cs_source.html">SoundSettings.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

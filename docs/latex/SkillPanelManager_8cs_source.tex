@@ -1,47 +1,46 @@
 \hypertarget{SkillPanelManager_8cs_source}{}\doxysection{Skill\+Panel\+Manager.\+cs}
-\label{SkillPanelManager_8cs_source}\index{Vuji/Assets/Scripts/UIScripts/SkillPanelManager.cs@{Vuji/Assets/Scripts/UIScripts/SkillPanelManager.cs}}
+\label{SkillPanelManager_8cs_source}\index{Vuji/Assets/Scripts/UIScripts/Managers/SkillPanelManager.cs@{Vuji/Assets/Scripts/UIScripts/Managers/SkillPanelManager.cs}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00001}00001 \textcolor{keyword}{using }System.Collections;}
 \DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections.Generic;}
 \DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00003}00003 \textcolor{keyword}{using }UnityEngine;}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00004}00004 }
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00005}\mbox{\hyperlink{classSkillPanelManager}{00005}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classSkillPanelManager}{SkillPanelManager}} : MonoBehaviour}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00006}00006 \{}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00007}00007     [SerializeField] GameObject timerPrefab;}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00008}00008     [SerializeField] RectTransform skillPanel;}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00009}00009     \textcolor{keyword}{public} GameObject trackedPlayer;}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00010}00010     \textcolor{keyword}{private} \mbox{\hyperlink{classBaseEntity}{BaseEntity}} trackedPlayerScript;}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00011}00011 }
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00012}00012     \textcolor{keyword}{private} List<TimerWithSpritemanager> displayedSkills = \textcolor{keyword}{new} List<TimerWithSpritemanager>();}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00007}\mbox{\hyperlink{classSkillPanelManager}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classSkillPanelManager}{SkillPanelManager}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00009}00009     [SerializeField, Tooltip(\textcolor{stringliteral}{"{}Префаб отображаемого скила"{}})] GameObject timerPrefab;}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00010}00010     [SerializeField, Tooltip(\textcolor{stringliteral}{"{}Панель для привязки отображаемых скилов"{}})] RectTransform skillPanel;}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00011}00011     \textcolor{keyword}{public} GameObject trackedPlayer;}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00012}00012     \textcolor{keyword}{private} \mbox{\hyperlink{classBaseEntity}{BaseEntity}} trackedPlayerScript;}
 \DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00013}00013 }
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00014}00014     \textcolor{comment}{// Start is called before the first frame update}}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00015}00015     \textcolor{keywordtype}{void} Start()}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00016}00016     \{}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00017}00017         SpawnPlayers.OnSpawn += OnSpawn;}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00018}00018     \}}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00019}00019 }
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00020}00020     \textcolor{keyword}{private} \textcolor{keywordtype}{void} OnDestroy()}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00021}00021     \{}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00022}00022         SpawnPlayers.OnSpawn -\/= OnSpawn;}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00023}00023     \}}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00024}00024 }
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00025}00025     \textcolor{keywordtype}{void} OnSpawn(GameObject player)}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00026}00026     \{}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00027}00027         trackedPlayer = player;}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00028}00028         trackedPlayerScript = player.GetComponent<\mbox{\hyperlink{classBaseEntity}{BaseEntity}}>();}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00029}00029         \textcolor{keywordflow}{foreach} (\mbox{\hyperlink{classBaseEntity}{BaseEntity}}.\mbox{\hyperlink{structBaseEntity_1_1Skill}{Skill}} skill in trackedPlayerScript.skills) \{}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00030}00030             GameObject timer = Instantiate(timerPrefab);}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00031}00031             timer.transform.SetParent(skillPanel, \textcolor{keyword}{false});}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00032}00032             timer.GetComponent<\mbox{\hyperlink{classTimerWithSpritemanager}{TimerWithSpritemanager}}>().SetEntity(trackedPlayer, skill.skill.GetComponent<\mbox{\hyperlink{classBaseSkill}{BaseSkill}}>(), skill.key);}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00033}00033         \}}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00034}00034     \}}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00035}00035 }
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00036}00036     \textcolor{comment}{// Update is called once per frame}}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00037}00037     \textcolor{keywordtype}{void} Update()}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00038}00038     \{}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00039}00039         }
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00014}00014     \textcolor{keyword}{private} List<TimerWithSpritemanager> displayedSkills = \textcolor{keyword}{new} List<TimerWithSpritemanager>();}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00016}00016     \textcolor{comment}{// Start is called before the first frame update}}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00017}00017     \textcolor{keywordtype}{void} Start()}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00018}00018     \{}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00019}00019         SpawnPlayers.OnSpawn += OnSpawn;}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00020}00020     \}}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00022}00022     \textcolor{keyword}{private} \textcolor{keywordtype}{void} OnDestroy()}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00023}00023     \{}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00024}00024         SpawnPlayers.OnSpawn -\/= OnSpawn;}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00025}00025     \}}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00030}00030     \textcolor{keywordtype}{void} OnSpawn(GameObject player)}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00031}00031     \{}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00032}00032         trackedPlayer = player;}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00033}00033         trackedPlayerScript = player.GetComponent<\mbox{\hyperlink{classBaseEntity}{BaseEntity}}>();}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00034}00034         \textcolor{keywordflow}{foreach} (\mbox{\hyperlink{classBaseEntity}{BaseEntity}}.\mbox{\hyperlink{structBaseEntity_1_1Skill}{Skill}} skill in trackedPlayerScript.skills)}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00035}00035         \{}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00036}00036             GameObject timer = Instantiate(timerPrefab);}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00037}00037             timer.transform.SetParent(skillPanel, \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00038}00038             timer.GetComponent<\mbox{\hyperlink{classTimerWithSpritemanager}{TimerWithSpritemanager}}>().SetEntity(trackedPlayer, skill.skill.GetComponent<\mbox{\hyperlink{classBaseSkill}{BaseSkill}}>(), skill.key);}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00039}00039         \}}
 \DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00040}00040     \}}
-\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00041}00041 \}}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00042}00042     \textcolor{comment}{// Update is called once per frame}}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00043}00043     \textcolor{keywordtype}{void} Update()}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00044}00044     \{}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00046}00046     \}}
+\DoxyCodeLine{\Hypertarget{SkillPanelManager_8cs_source_l00047}00047 \}}
 
 \end{DoxyCode}

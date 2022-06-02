@@ -1,5 +1,10 @@
 \hypertarget{classEntityNameManager}{}\doxysection{Класс Entity\+Name\+Manager}
 \label{classEntityNameManager}\index{EntityNameManager@{EntityNameManager}}
+
+
+Модуль для упраления и корректировки позиции имени над сущностью   
+
+
 Граф наследования\+:Entity\+Name\+Manager\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,7 +15,7 @@
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classEntityNameManager_ac95f7bfc3b233fd41eae79280dc8c327}{Set\+Offset}} (Vector3 new\+Offset)
-\item 
+\begin{DoxyCompactList}\small\item\em Изменение сохраненного отклонения от позиции сущности  \end{DoxyCompactList}\item 
 Vector3 \mbox{\hyperlink{classEntityNameManager_a85161699b534c9216c8e5e5bb37b18c9}{Get\+Offset}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Открытые атрибуты}
@@ -21,9 +26,9 @@ Text \mbox{\hyperlink{classEntityNameManager_a38028dae72e5c7e8edcf0265987ed77f}{
 
 
 \doxysubsection{Подробное описание}
+Модуль для упраления и корректировки позиции имени над сущностью  
 
-
-См. определение в файле \mbox{\hyperlink{EntityNameManager_8cs_source}{Entity\+Name\+Manager.\+cs}} строка \mbox{\hyperlink{EntityNameManager_8cs_source_l00007}{7}}
+См. определение в файле \mbox{\hyperlink{EntityNameManager_8cs_source}{Entity\+Name\+Manager.\+cs}} строка \mbox{\hyperlink{EntityNameManager_8cs_source_l00009}{9}}
 
 
 
@@ -36,13 +41,20 @@ Text \mbox{\hyperlink{classEntityNameManager_a38028dae72e5c7e8edcf0265987ed77f}{
 
 
 
-См. определение в файле \mbox{\hyperlink{EntityNameManager_8cs_source}{Entity\+Name\+Manager.\+cs}} строка \mbox{\hyperlink{EntityNameManager_8cs_source_l00029}{29}}
+
+
+\begin{DoxyReturn}{Возвращает}
+Сохраненное отклонение от позиции сущности
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{EntityNameManager_8cs_source}{Entity\+Name\+Manager.\+cs}} строка \mbox{\hyperlink{EntityNameManager_8cs_source_l00040}{40}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00030     \{}
-\DoxyCodeLine{00031         \textcolor{keywordflow}{return} offset;}
-\DoxyCodeLine{00032     \}}
+\DoxyCodeLine{00041     \{}
+\DoxyCodeLine{00042         \textcolor{keywordflow}{return} offset;}
+\DoxyCodeLine{00043     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classEntityNameManager_ac95f7bfc3b233fd41eae79280dc8c327}\label{classEntityNameManager_ac95f7bfc3b233fd41eae79280dc8c327}} 
@@ -53,13 +65,22 @@ Text \mbox{\hyperlink{classEntityNameManager_a38028dae72e5c7e8edcf0265987ed77f}{
 
 
 
-См. определение в файле \mbox{\hyperlink{EntityNameManager_8cs_source}{Entity\+Name\+Manager.\+cs}} строка \mbox{\hyperlink{EntityNameManager_8cs_source_l00025}{25}}
+Изменение сохраненного отклонения от позиции сущности  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em new\+Offset} & Новое отклонение\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{EntityNameManager_8cs_source}{Entity\+Name\+Manager.\+cs}} строка \mbox{\hyperlink{EntityNameManager_8cs_source_l00032}{32}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00026     \{}
-\DoxyCodeLine{00027         offset = newOffset;}
-\DoxyCodeLine{00028     \}}
+\DoxyCodeLine{00033     \{}
+\DoxyCodeLine{00034         offset = newOffset;}
+\DoxyCodeLine{00035     \}}
 
 \end{DoxyCode}
 
@@ -73,10 +94,10 @@ Text \mbox{\hyperlink{classEntityNameManager_a38028dae72e5c7e8edcf0265987ed77f}{
 
 
 
-См. определение в файле \mbox{\hyperlink{EntityNameManager_8cs_source}{Entity\+Name\+Manager.\+cs}} строка \mbox{\hyperlink{EntityNameManager_8cs_source_l00009}{9}}
+См. определение в файле \mbox{\hyperlink{EntityNameManager_8cs_source}{Entity\+Name\+Manager.\+cs}} строка \mbox{\hyperlink{EntityNameManager_8cs_source_l00011}{11}}
 
 
 
 Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
 \item 
-Vuji/\+Assets/\+Scripts/\+UIScripts/Entity\+Name\+Manager.\+cs\end{DoxyCompactItemize}
+Vuji/\+Assets/\+Scripts/\+UIScripts/\+Managers/Entity\+Name\+Manager.\+cs\end{DoxyCompactItemize}

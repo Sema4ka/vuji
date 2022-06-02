@@ -40,18 +40,32 @@
 \DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00036}00036     \{}
 \DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00037}00037         \textcolor{keywordflow}{return} skillDescription;}
 \DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00038}00038     \}}
-\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00039}00039 }
-\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00040}00040     \textcolor{keyword}{public} Sprite GetSprite()}
-\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00041}00041     \{}
-\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00042}00042         \textcolor{keywordflow}{return} skillSprite;}
-\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00043}00043     \}}
-\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00044}00044 }
-\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00045}00045     \textcolor{keyword}{public} \textcolor{keyword}{static} Action<float> onCast;}
-\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00046}00046     \textcolor{keyword}{public} Action<float> onRelease;}
-\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00047}00047 }
-\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00048}00048     \textcolor{keyword}{public} \textcolor{keyword}{virtual} IEnumerator UseSkill(GameObject caster, \textcolor{keywordtype}{string} key) \{}
-\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00049}00049         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForSeconds(0.0f);}
-\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00050}00050     \}}
-\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00051}00051 \}}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00039}00039     \textcolor{keyword}{public} \textcolor{keywordtype}{int} GetCost()}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00040}00040     \{}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00041}00041         \textcolor{keywordflow}{return} energyCost;}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00042}00042     \}}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00044}00044     \textcolor{keyword}{public} \textcolor{keywordtype}{float} GetCastTime()}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00045}00045     \{}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00046}00046         \textcolor{keywordflow}{return} castTime;}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00047}00047     \}}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00049}00049     \textcolor{keyword}{public} \textcolor{keywordtype}{float} GetCooldownTime()}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00050}00050     \{}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00051}00051         \textcolor{keywordflow}{return} cooldown;}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00052}00052     \}}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00054}00054     \textcolor{keyword}{public} Sprite GetSprite()}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00055}00055     \{}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00056}00056         \textcolor{keywordflow}{return} skillSprite;}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00057}00057     \}}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00059}00059     \textcolor{keyword}{public} \textcolor{keyword}{static} Action<float> onCast;}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00060}00060     \textcolor{keyword}{public} Action<float> onRelease;}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00062}00062     \textcolor{keyword}{public} \textcolor{keyword}{virtual} IEnumerator UseSkill(GameObject caster, \textcolor{keywordtype}{string} key) \{}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00063}00063         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForSeconds(0.0f);}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00064}00064     \}}
+\DoxyCodeLine{\Hypertarget{BaseSkill_8cs_source_l00065}00065 \}}
 
 \end{DoxyCode}

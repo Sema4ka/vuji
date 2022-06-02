@@ -69,6 +69,9 @@ $(function() {
   <div class="headertitle"><div class="title">Класс FriendItemManager</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Модуль управления объектом пользователя, доступного для приглашения в группу (в лобби)   
+ <a href="classFriendItemManager.html#details">Подробнее...</a></p>
 <div class="dynheader">
 Граф наследования:FriendItemManager:</div>
 <div class="dyncontent">
@@ -92,8 +95,9 @@ $(function() {
 <tr class="separator:a802ee6c1d55b54b9f651e0bf56056201"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock">
-<p class="definition">См. определение в файле <a class="el" href="FriendItemManager_8cs_source.html">FriendItemManager.cs</a> строка <a class="el" href="FriendItemManager_8cs_source.html#l00006">6</a></p>
+<div class="textblock"><p >Модуль управления объектом пользователя, доступного для приглашения в группу (в лобби)  </p>
+
+<p class="definition">См. определение в файле <a class="el" href="FriendItemManager_8cs_source.html">FriendItemManager.cs</a> строка <a class="el" href="FriendItemManager_8cs_source.html#l00008">8</a></p>
 </div><h2 class="groupheader">Методы</h2>
 <a id="a670fc9ee98376b626c82a79529e6d84c" name="a670fc9ee98376b626c82a79529e6d84c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a670fc9ee98376b626c82a79529e6d84c">&#9670;&nbsp;</a></span>InviteFriend()</h2>
@@ -120,17 +124,17 @@ $(function() {
 
 <p>Метод приглашение игрока. Если текущей пользователь не в комнате то создать ее иначе пригласить игрока  </p>
 
-<p class="definition">См. определение в файле <a class="el" href="FriendItemManager_8cs_source.html">FriendItemManager.cs</a> строка <a class="el" href="FriendItemManager_8cs_source.html#l00022">22</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (PhotonNetwork.InRoom)</div>
-<div class="line"><span class="lineno">   25</span>        {</div>
-<div class="line"><span class="lineno">   26</span>            lobbyManager.<a class="code hl_function" href="classLobbyManager.html#ad9a9f9118bdcc7c916bc9eb9a96a4a48">CreateInviteFriend</a>(userID, PhotonNetwork.CurrentRoom.Name);</div>
-<div class="line"><span class="lineno">   27</span>        }</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   29</span>        {</div>
-<div class="line"><span class="lineno">   30</span>            lobbyManager.<a class="code hl_function" href="classLobbyManager.html#ad959fa3231125eed8b5e91fc8af3dbdd">CreateLobbyAndInviteUser</a>(userID);</div>
-<div class="line"><span class="lineno">   31</span>        }</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="FriendItemManager_8cs_source.html">FriendItemManager.cs</a> строка <a class="el" href="FriendItemManager_8cs_source.html#l00024">24</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (PhotonNetwork.InRoom)</div>
+<div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            lobbyManager.<a class="code hl_function" href="classLobbyManager.html#ad9a9f9118bdcc7c916bc9eb9a96a4a48">CreateInviteFriend</a>(userID, PhotonNetwork.CurrentRoom.Name);</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            lobbyManager.<a class="code hl_function" href="classLobbyManager.html#ad959fa3231125eed8b5e91fc8af3dbdd">CreateLobbyAndInviteUser</a>(userID);</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
 <div class="ttc" id="aclassLobbyManager_html_ad959fa3231125eed8b5e91fc8af3dbdd"><div class="ttname"><a href="classLobbyManager.html#ad959fa3231125eed8b5e91fc8af3dbdd">LobbyManager.CreateLobbyAndInviteUser</a></div><div class="ttdeci">void CreateLobbyAndInviteUser(int invitedUserID)</div><div class="ttdoc">Метод который создает комнату и вызывает метод приглашения</div><div class="ttdef"><b>Definition:</b> <a href="LobbyManager_8cs_source.html#l00073">LobbyManager.cs:73</a></div></div>
 <div class="ttc" id="aclassLobbyManager_html_ad9a9f9118bdcc7c916bc9eb9a96a4a48"><div class="ttname"><a href="classLobbyManager.html#ad9a9f9118bdcc7c916bc9eb9a96a4a48">LobbyManager.CreateInviteFriend</a></div><div class="ttdeci">void CreateInviteFriend(int invitedUserID, string roomName=null)</div><div class="ttdoc">Метод служит для включения скрипа InviteFriend и заполнения его полей</div><div class="ttdef"><b>Definition:</b> <a href="LobbyManager_8cs_source.html#l00060">LobbyManager.cs:60</a></div></div>
 </div><!-- fragment -->
@@ -149,7 +153,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="FriendItemManager_8cs_source.html">FriendItemManager.cs</a> строка <a class="el" href="FriendItemManager_8cs_source.html#l00011">11</a></p>
+<p class="definition">См. определение в файле <a class="el" href="FriendItemManager_8cs_source.html">FriendItemManager.cs</a> строка <a class="el" href="FriendItemManager_8cs_source.html#l00013">13</a></p>
 
 </div>
 </div>
@@ -165,7 +169,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="FriendItemManager_8cs_source.html">FriendItemManager.cs</a> строка <a class="el" href="FriendItemManager_8cs_source.html#l00010">10</a></p>
+<p class="definition">См. определение в файле <a class="el" href="FriendItemManager_8cs_source.html">FriendItemManager.cs</a> строка <a class="el" href="FriendItemManager_8cs_source.html#l00012">12</a></p>
 
 </div>
 </div>
@@ -181,12 +185,12 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="FriendItemManager_8cs_source.html">FriendItemManager.cs</a> строка <a class="el" href="FriendItemManager_8cs_source.html#l00012">12</a></p>
+<p class="definition">См. определение в файле <a class="el" href="FriendItemManager_8cs_source.html">FriendItemManager.cs</a> строка <a class="el" href="FriendItemManager_8cs_source.html#l00014">14</a></p>
 
 </div>
 </div>
 <hr/>Объявления и описания членов класса находятся в файле:<ul>
-<li>Vuji/Assets/Scripts/UIScripts/<a class="el" href="FriendItemManager_8cs_source.html">FriendItemManager.cs</a></li>
+<li>Vuji/Assets/Scripts/UIScripts/Managers/<a class="el" href="FriendItemManager_8cs_source.html">FriendItemManager.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

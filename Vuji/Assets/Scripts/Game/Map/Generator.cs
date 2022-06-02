@@ -17,7 +17,7 @@ public class Generator : MonoBehaviour
     {
         spawnedRooms = new Room[Width, Height];
         spawnedRooms[Width / 2, 0] = StartingRoom;
-        Debug.Log("стартовая комната на " +Width / 2 + " " + 0);
+        Debug.Log("" +Width / 2 + " " + 0);
 
 
         for (int i = 0; i < Width * Height - 1; i++)
@@ -50,7 +50,7 @@ public class Generator : MonoBehaviour
         Vector2Int position = vacantPlaces.ElementAt(Random.Range(0, vacantPlaces.Count));
         newRoom.transform.position = new Vector3(position.x +1, position.y+1, 0) * Random.Range(12, 20);
         spawnedRooms[position.x, position.y] = newRoom;
-        Debug.Log("комната на "+ position.x+" " + position.y);
+        Debug.Log(""+ position.x+" " + position.y);
 
 
     }

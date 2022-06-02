@@ -88,7 +88,7 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        spawnedRooms = <span class="keyword">new</span> <a class="code hl_class" href="classRoom.html">Room</a>[Width, Height];</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        spawnedRooms[Width / 2, 0] = StartingRoom;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        Debug.Log(<span class="stringliteral">&quot;стартовая комната на &quot;</span> +Width / 2 + <span class="stringliteral">&quot; &quot;</span> + 0);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        Debug.Log(<span class="stringliteral">&quot;&quot;</span> +Width / 2 + <span class="stringliteral">&quot; &quot;</span> + 0);</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; Width * Height - 1; i++)</div>
@@ -121,7 +121,7 @@ $(function() {
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        Vector2Int position = vacantPlaces.ElementAt(Random.Range(0, vacantPlaces.Count));</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        newRoom.transform.position = <span class="keyword">new</span> Vector3(position.x +1, position.y+1, 0) * Random.Range(12, 20);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        spawnedRooms[position.x, position.y] = newRoom;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        Debug.Log(<span class="stringliteral">&quot;комната на &quot;</span>+ position.x+<span class="stringliteral">&quot; &quot;</span> + position.y);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        Debug.Log(<span class="stringliteral">&quot;&quot;</span>+ position.x+<span class="stringliteral">&quot; &quot;</span> + position.y);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>

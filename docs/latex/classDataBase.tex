@@ -1,5 +1,10 @@
 \hypertarget{classDataBase}{}\doxysection{Класс Data\+Base}
 \label{classDataBase}\index{DataBase@{DataBase}}
+
+
+Модуль взаимодействия с базой данных игры   
+
+
 Граф наследования\+:Data\+Base\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -14,27 +19,27 @@ string \mbox{\hyperlink{classDataBase_acf0a1b063b80461d3a31a8dabe3c134e}{Get\+To
 void \mbox{\hyperlink{classDataBase_a7bef2659955658a824e1596b4ad77b66}{Set\+Token}} (string token)
 \begin{DoxyCompactList}\small\item\em Метод записывает новый токен в БД  \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classDataBase_a450c0fac9fd208af1375860dc1cf0a19}{Exist\+Keybind}} (string name)
-\item 
+\begin{DoxyCompactList}\small\item\em Проверяет, существует ли в базе данных настройка управления по названию действия  \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classDataBase_a0dd608c105678b675ea5b0bedc2c310e}{Add\+Keybind}} (string name, Key\+Code key, string category)
-\item 
+\begin{DoxyCompactList}\small\item\em Добавляет настройку управления в базу данных с указанными параметрами  \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classDataBase_a91560920c846a220ec4edc82d4dbdf01}{Set\+Keybind}} (string name, Key\+Code key)
-\item 
+\begin{DoxyCompactList}\small\item\em Установить ключ действия в базе данных по названию  \end{DoxyCompactList}\item 
 List$<$ \mbox{\hyperlink{classKeybind}{Keybind}} $>$ \mbox{\hyperlink{classDataBase_a4d8e085b8b63788756569e0807c0f88d}{Get\+Keybinds}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Получить список настоек управления из базы данных  \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classDataBase_a26e33405ce8c01dec9048271c11b4e84}{Add\+Setting}} (string name, string value)
-\item 
+\begin{DoxyCompactList}\small\item\em Добавить настроку в базу данных с указанными параметрами  \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classDataBase_abc167e8f4dc24057cca4aa0793349d92}{Exist\+Setting}} (string name)
-\item 
+\begin{DoxyCompactList}\small\item\em Проверить, существует ли настройка с указаным именем в базе данных  \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classDataBase_aff4aec31a57c9de6de40636925da3c83}{Set\+Setting}} (string name, string value)
-\item 
+\begin{DoxyCompactList}\small\item\em Установить значение для настройки с указанным именем  \end{DoxyCompactList}\item 
 List$<$ \mbox{\hyperlink{classSetting}{Setting}} $>$ \mbox{\hyperlink{classDataBase_a6542d0b7f33665d7ee23c4c93f3316e2}{Get\+Settings}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Получить список настроек из базы данных  \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Подробное описание}
+Модуль взаимодействия с базой данных игры  
 
-
-См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00007}{7}}
+См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00009}{9}}
 
 
 
@@ -47,16 +52,29 @@ List$<$ \mbox{\hyperlink{classSetting}{Setting}} $>$ \mbox{\hyperlink{classDataB
 
 
 
-См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00176}{176}}
+Добавляет настройку управления в базу данных с указанными параметрами  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em name} & Название действия\\
+\hline
+{\em key} & Ключ действия\\
+\hline
+{\em category} & Категория действия (\char`\"{}\+Movement\char`\"{}, \char`\"{}\+Ability\char`\"{}, \char`\"{}\+UI\char`\"{})\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00187}{187}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00177     \{}
-\DoxyCodeLine{00178         OpenConnection();}
-\DoxyCodeLine{00179         \_command.CommandText = \textcolor{stringliteral}{"{}INSERT INTO keybinds (name, keybind, category) VALUES ('"{}} + name + \textcolor{stringliteral}{"{}', '"{}} + key.ToString() + \textcolor{stringliteral}{"{}', '"{}} + category + \textcolor{stringliteral}{"{}');"{}};}
-\DoxyCodeLine{00180         \_command.ExecuteNonQuery();}
-\DoxyCodeLine{00181         CloseConnection();}
-\DoxyCodeLine{00182     \}}
+\DoxyCodeLine{00188     \{}
+\DoxyCodeLine{00189         OpenConnection();}
+\DoxyCodeLine{00190         \_command.CommandText = \textcolor{stringliteral}{"{}INSERT INTO keybinds (name, keybind, category) VALUES ('"{}} + name + \textcolor{stringliteral}{"{}', '"{}} + key.ToString() + \textcolor{stringliteral}{"{}', '"{}} + category + \textcolor{stringliteral}{"{}');"{}};}
+\DoxyCodeLine{00191         \_command.ExecuteNonQuery();}
+\DoxyCodeLine{00192         CloseConnection();}
+\DoxyCodeLine{00193     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classDataBase_a26e33405ce8c01dec9048271c11b4e84}\label{classDataBase_a26e33405ce8c01dec9048271c11b4e84}} 
@@ -67,16 +85,27 @@ List$<$ \mbox{\hyperlink{classSetting}{Setting}} $>$ \mbox{\hyperlink{classDataB
 
 
 
-См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00205}{205}}
+Добавить настроку в базу данных с указанными параметрами  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em name} & Название настройки\\
+\hline
+{\em value} & Значение настройки\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00229}{229}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00206     \{}
-\DoxyCodeLine{00207         OpenConnection();}
-\DoxyCodeLine{00208         \_command.CommandText = \textcolor{stringliteral}{"{}INSERT INTO settings (name, value) VALUES ('"{}} + name + \textcolor{stringliteral}{"{}', '"{}} + value + \textcolor{stringliteral}{"{}');"{}};}
-\DoxyCodeLine{00209         \_command.ExecuteNonQuery();}
-\DoxyCodeLine{00210         CloseConnection();}
-\DoxyCodeLine{00211     \}}
+\DoxyCodeLine{00230     \{}
+\DoxyCodeLine{00231         OpenConnection();}
+\DoxyCodeLine{00232         \_command.CommandText = \textcolor{stringliteral}{"{}INSERT INTO settings (name, value) VALUES ('"{}} + name + \textcolor{stringliteral}{"{}', '"{}} + value + \textcolor{stringliteral}{"{}');"{}};}
+\DoxyCodeLine{00233         \_command.ExecuteNonQuery();}
+\DoxyCodeLine{00234         CloseConnection();}
+\DoxyCodeLine{00235     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classDataBase_a450c0fac9fd208af1375860dc1cf0a19}\label{classDataBase_a450c0fac9fd208af1375860dc1cf0a19}} 
@@ -87,23 +116,35 @@ List$<$ \mbox{\hyperlink{classSetting}{Setting}} $>$ \mbox{\hyperlink{classDataB
 
 
 
-См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00161}{161}}
+Проверяет, существует ли в базе данных настройка управления по названию действия  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em name} & Название действия\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Существует ли настройка в базе данных
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00167}{167}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00162     \{}
-\DoxyCodeLine{00163         OpenConnection();}
-\DoxyCodeLine{00164         \_command.CommandText = \textcolor{stringliteral}{"{}SELECT * from keybinds WHERE name ='"{}} + name + \textcolor{stringliteral}{"{}';"{}};}
-\DoxyCodeLine{00165         \_reader = \_command.ExecuteReader();}
-\DoxyCodeLine{00166         \textcolor{keywordflow}{if} (\_reader.Read())}
-\DoxyCodeLine{00167         \{}
-\DoxyCodeLine{00168             CloseConnection();}
-\DoxyCodeLine{00169             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{00170         \}}
-\DoxyCodeLine{00171         CloseConnection();}
-\DoxyCodeLine{00172         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{00173         }
-\DoxyCodeLine{00174     \}}
+\DoxyCodeLine{00168     \{}
+\DoxyCodeLine{00169         OpenConnection();}
+\DoxyCodeLine{00170         \_command.CommandText = \textcolor{stringliteral}{"{}SELECT * from keybinds WHERE name ='"{}} + name + \textcolor{stringliteral}{"{}';"{}};}
+\DoxyCodeLine{00171         \_reader = \_command.ExecuteReader();}
+\DoxyCodeLine{00172         \textcolor{keywordflow}{if} (\_reader.Read())}
+\DoxyCodeLine{00173         \{}
+\DoxyCodeLine{00174             CloseConnection();}
+\DoxyCodeLine{00175             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00176         \}}
+\DoxyCodeLine{00177         CloseConnection();}
+\DoxyCodeLine{00178         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00179 }
+\DoxyCodeLine{00180     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classDataBase_abc167e8f4dc24057cca4aa0793349d92}\label{classDataBase_abc167e8f4dc24057cca4aa0793349d92}} 
@@ -114,22 +155,34 @@ List$<$ \mbox{\hyperlink{classSetting}{Setting}} $>$ \mbox{\hyperlink{classDataB
 
 
 
-См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00213}{213}}
+Проверить, существует ли настройка с указаным именем в базе данных  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em name} & Имя настройки\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Существует ли настройка
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00241}{241}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00214     \{}
-\DoxyCodeLine{00215         OpenConnection();}
-\DoxyCodeLine{00216         \_command.CommandText = \textcolor{stringliteral}{"{}SELECT * from settings WHERE name ='"{}} + name + \textcolor{stringliteral}{"{}';"{}};}
-\DoxyCodeLine{00217         \_reader = \_command.ExecuteReader();}
-\DoxyCodeLine{00218         \textcolor{keywordflow}{if} (\_reader.Read())}
-\DoxyCodeLine{00219         \{}
-\DoxyCodeLine{00220             CloseConnection();}
-\DoxyCodeLine{00221             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{00222         \}}
-\DoxyCodeLine{00223         CloseConnection();}
-\DoxyCodeLine{00224         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{00225     \}}
+\DoxyCodeLine{00242     \{}
+\DoxyCodeLine{00243         OpenConnection();}
+\DoxyCodeLine{00244         \_command.CommandText = \textcolor{stringliteral}{"{}SELECT * from settings WHERE name ='"{}} + name + \textcolor{stringliteral}{"{}';"{}};}
+\DoxyCodeLine{00245         \_reader = \_command.ExecuteReader();}
+\DoxyCodeLine{00246         \textcolor{keywordflow}{if} (\_reader.Read())}
+\DoxyCodeLine{00247         \{}
+\DoxyCodeLine{00248             CloseConnection();}
+\DoxyCodeLine{00249             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00250         \}}
+\DoxyCodeLine{00251         CloseConnection();}
+\DoxyCodeLine{00252         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00253     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classDataBase_a4d8e085b8b63788756569e0807c0f88d}\label{classDataBase_a4d8e085b8b63788756569e0807c0f88d}} 
@@ -140,22 +193,29 @@ List$<$ \mbox{\hyperlink{classSetting}{Setting}} $>$ \mbox{\hyperlink{classDataB
 
 
 
-См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00191}{191}}
+Получить список настоек управления из базы данных  
+
+\begin{DoxyReturn}{Возвращает}
+Список настроек управления
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00211}{211}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00192     \{}
-\DoxyCodeLine{00193         List<Keybind> keybinds = \textcolor{keyword}{new} List<Keybind>();}
-\DoxyCodeLine{00194         OpenConnection();}
-\DoxyCodeLine{00195         \_command.CommandText = \textcolor{stringliteral}{"{}SELECT * from keybinds"{}};}
-\DoxyCodeLine{00196         \_reader = \_command.ExecuteReader();}
-\DoxyCodeLine{00197         \textcolor{keywordflow}{while} (\_reader.Read())}
-\DoxyCodeLine{00198         \{}
-\DoxyCodeLine{00199             keybinds.Add(\textcolor{keyword}{new} \mbox{\hyperlink{classKeybind}{Keybind}}(\_reader[\textcolor{stringliteral}{"{}name"{}}].ToString(), \_reader[\textcolor{stringliteral}{"{}keybind"{}}].ToString(), \_reader[\textcolor{stringliteral}{"{}category"{}}].ToString()));}
-\DoxyCodeLine{00200         \}}
-\DoxyCodeLine{00201         CloseConnection();}
-\DoxyCodeLine{00202         \textcolor{keywordflow}{return} keybinds;}
-\DoxyCodeLine{00203     \}}
+\DoxyCodeLine{00212     \{}
+\DoxyCodeLine{00213         List<Keybind> keybinds = \textcolor{keyword}{new} List<Keybind>();}
+\DoxyCodeLine{00214         OpenConnection();}
+\DoxyCodeLine{00215         \_command.CommandText = \textcolor{stringliteral}{"{}SELECT * from keybinds"{}};}
+\DoxyCodeLine{00216         \_reader = \_command.ExecuteReader();}
+\DoxyCodeLine{00217         \textcolor{keywordflow}{while} (\_reader.Read())}
+\DoxyCodeLine{00218         \{}
+\DoxyCodeLine{00219             keybinds.Add(\textcolor{keyword}{new} \mbox{\hyperlink{classKeybind}{Keybind}}(\_reader[\textcolor{stringliteral}{"{}name"{}}].ToString(), \_reader[\textcolor{stringliteral}{"{}keybind"{}}].ToString(), \_reader[\textcolor{stringliteral}{"{}category"{}}].ToString()));}
+\DoxyCodeLine{00220         \}}
+\DoxyCodeLine{00221         CloseConnection();}
+\DoxyCodeLine{00222         \textcolor{keywordflow}{return} keybinds;}
+\DoxyCodeLine{00223     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classDataBase_a6542d0b7f33665d7ee23c4c93f3316e2}\label{classDataBase_a6542d0b7f33665d7ee23c4c93f3316e2}} 
@@ -166,22 +226,29 @@ List$<$ \mbox{\hyperlink{classSetting}{Setting}} $>$ \mbox{\hyperlink{classDataB
 
 
 
-См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00236}{236}}
+Получить список настроек из базы данных  
+
+\begin{DoxyReturn}{Возвращает}
+Список настроек
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00271}{271}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00237     \{}
-\DoxyCodeLine{00238         List<Setting> keybinds = \textcolor{keyword}{new} List<Setting>();}
-\DoxyCodeLine{00239         OpenConnection();}
-\DoxyCodeLine{00240         \_command.CommandText = \textcolor{stringliteral}{"{}SELECT * from settings"{}};}
-\DoxyCodeLine{00241         \_reader = \_command.ExecuteReader();}
-\DoxyCodeLine{00242         \textcolor{keywordflow}{while} (\_reader.Read())}
-\DoxyCodeLine{00243         \{}
-\DoxyCodeLine{00244             keybinds.Add(\textcolor{keyword}{new} \mbox{\hyperlink{classSetting}{Setting}}(\_reader[\textcolor{stringliteral}{"{}name"{}}].ToString(), \_reader[\textcolor{stringliteral}{"{}value"{}}].ToString()));}
-\DoxyCodeLine{00245         \}}
-\DoxyCodeLine{00246         CloseConnection();}
-\DoxyCodeLine{00247         \textcolor{keywordflow}{return} keybinds;  }
-\DoxyCodeLine{00248     \}}
+\DoxyCodeLine{00272     \{}
+\DoxyCodeLine{00273         List<Setting> keybinds = \textcolor{keyword}{new} List<Setting>();}
+\DoxyCodeLine{00274         OpenConnection();}
+\DoxyCodeLine{00275         \_command.CommandText = \textcolor{stringliteral}{"{}SELECT * from settings"{}};}
+\DoxyCodeLine{00276         \_reader = \_command.ExecuteReader();}
+\DoxyCodeLine{00277         \textcolor{keywordflow}{while} (\_reader.Read())}
+\DoxyCodeLine{00278         \{}
+\DoxyCodeLine{00279             keybinds.Add(\textcolor{keyword}{new} \mbox{\hyperlink{classSetting}{Setting}}(\_reader[\textcolor{stringliteral}{"{}name"{}}].ToString(), \_reader[\textcolor{stringliteral}{"{}value"{}}].ToString()));}
+\DoxyCodeLine{00280         \}}
+\DoxyCodeLine{00281         CloseConnection();}
+\DoxyCodeLine{00282         \textcolor{keywordflow}{return} keybinds;}
+\DoxyCodeLine{00283     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classDataBase_acf0a1b063b80461d3a31a8dabe3c134e}\label{classDataBase_acf0a1b063b80461d3a31a8dabe3c134e}} 
@@ -199,32 +266,32 @@ List$<$ \mbox{\hyperlink{classSetting}{Setting}} $>$ \mbox{\hyperlink{classDataB
 \end{DoxyReturn}
 
 
-См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00115}{115}}
+См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00117}{117}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00116     \{}
-\DoxyCodeLine{00117         \textcolor{keywordtype}{string} token = \textcolor{stringliteral}{"{}None"{}};}
-\DoxyCodeLine{00118         \textcolor{keywordflow}{if} (TokenInDB())}
-\DoxyCodeLine{00119         \{}
-\DoxyCodeLine{00120             OpenConnection();}
-\DoxyCodeLine{00121             \_command.CommandText = \textcolor{stringliteral}{"{}SELECT * FROM token WHERE id=1"{}};}
-\DoxyCodeLine{00122             \_reader = \_command.ExecuteReader();}
-\DoxyCodeLine{00123             \textcolor{keywordflow}{while} (\_reader.Read())}
-\DoxyCodeLine{00124             \{}
-\DoxyCodeLine{00125                 token = \_reader[\textcolor{stringliteral}{"{}token"{}}].ToString();}
-\DoxyCodeLine{00126             \}}
-\DoxyCodeLine{00127 }
-\DoxyCodeLine{00128             CloseConnection();}
-\DoxyCodeLine{00129         \}}
-\DoxyCodeLine{00130 }
-\DoxyCodeLine{00131         \textcolor{keywordflow}{if} (token == \textcolor{stringliteral}{"{}"{}})}
-\DoxyCodeLine{00132         \{}
-\DoxyCodeLine{00133             token = \textcolor{stringliteral}{"{}None"{}};}
-\DoxyCodeLine{00134         \}}
-\DoxyCodeLine{00135 }
-\DoxyCodeLine{00136         \textcolor{keywordflow}{return} token;}
-\DoxyCodeLine{00137     \}}
+\DoxyCodeLine{00118     \{}
+\DoxyCodeLine{00119         \textcolor{keywordtype}{string} token = \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00120         \textcolor{keywordflow}{if} (TokenInDB())}
+\DoxyCodeLine{00121         \{}
+\DoxyCodeLine{00122             OpenConnection();}
+\DoxyCodeLine{00123             \_command.CommandText = \textcolor{stringliteral}{"{}SELECT * FROM token WHERE id=1"{}};}
+\DoxyCodeLine{00124             \_reader = \_command.ExecuteReader();}
+\DoxyCodeLine{00125             \textcolor{keywordflow}{while} (\_reader.Read())}
+\DoxyCodeLine{00126             \{}
+\DoxyCodeLine{00127                 token = \_reader[\textcolor{stringliteral}{"{}token"{}}].ToString();}
+\DoxyCodeLine{00128             \}}
+\DoxyCodeLine{00129 }
+\DoxyCodeLine{00130             CloseConnection();}
+\DoxyCodeLine{00131         \}}
+\DoxyCodeLine{00132 }
+\DoxyCodeLine{00133         \textcolor{keywordflow}{if} (token == \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00134         \{}
+\DoxyCodeLine{00135             token = \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00136         \}}
+\DoxyCodeLine{00137 }
+\DoxyCodeLine{00138         \textcolor{keywordflow}{return} token;}
+\DoxyCodeLine{00139     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classDataBase_a91560920c846a220ec4edc82d4dbdf01}\label{classDataBase_a91560920c846a220ec4edc82d4dbdf01}} 
@@ -235,17 +302,28 @@ List$<$ \mbox{\hyperlink{classSetting}{Setting}} $>$ \mbox{\hyperlink{classDataB
 
 
 
-См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00183}{183}}
+Установить ключ действия в базе данных по названию  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em name} & Название действия\\
+\hline
+{\em key} & Новый ключ действия\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00199}{199}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00184     \{}
-\DoxyCodeLine{00185         \textcolor{keywordflow}{if} (!ExistKeybind(name)) \{ \textcolor{keywordflow}{return}; \}}
-\DoxyCodeLine{00186         OpenConnection();}
-\DoxyCodeLine{00187         \_command.CommandText = \textcolor{stringliteral}{"{}UPDATE keybinds SET keybind  = '"{}} + key.ToString() + \textcolor{stringliteral}{"{}' WHERE name ='"{}} + name + \textcolor{stringliteral}{"{}';"{}};}
-\DoxyCodeLine{00188         \_command.ExecuteNonQuery();}
-\DoxyCodeLine{00189         CloseConnection();}
-\DoxyCodeLine{00190     \}}
+\DoxyCodeLine{00200     \{}
+\DoxyCodeLine{00201         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classDataBase_a450c0fac9fd208af1375860dc1cf0a19}{ExistKeybind}}(name)) \{ \textcolor{keywordflow}{return}; \}}
+\DoxyCodeLine{00202         OpenConnection();}
+\DoxyCodeLine{00203         \_command.CommandText = \textcolor{stringliteral}{"{}UPDATE keybinds SET keybind  = '"{}} + key.ToString() + \textcolor{stringliteral}{"{}' WHERE name ='"{}} + name + \textcolor{stringliteral}{"{}';"{}};}
+\DoxyCodeLine{00204         \_command.ExecuteNonQuery();}
+\DoxyCodeLine{00205         CloseConnection();}
+\DoxyCodeLine{00206     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classDataBase_aff4aec31a57c9de6de40636925da3c83}\label{classDataBase_aff4aec31a57c9de6de40636925da3c83}} 
@@ -256,17 +334,28 @@ List$<$ \mbox{\hyperlink{classSetting}{Setting}} $>$ \mbox{\hyperlink{classDataB
 
 
 
-См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00227}{227}}
+Установить значение для настройки с указанным именем  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em name} & Название настройки\\
+\hline
+{\em value} & Новое значение\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00259}{259}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00228     \{}
-\DoxyCodeLine{00229         \textcolor{keywordflow}{if} (!ExistSetting(name)) \{ \textcolor{keywordflow}{return}; \}}
-\DoxyCodeLine{00230         OpenConnection();}
-\DoxyCodeLine{00231         \_command.CommandText = \textcolor{stringliteral}{"{}UPDATE settings SET value  = '"{}} + value + \textcolor{stringliteral}{"{}' WHERE name ='"{}} + name + \textcolor{stringliteral}{"{}';"{}};}
-\DoxyCodeLine{00232         \_command.ExecuteNonQuery();}
-\DoxyCodeLine{00233         CloseConnection();}
-\DoxyCodeLine{00234     \}}
+\DoxyCodeLine{00260     \{}
+\DoxyCodeLine{00261         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classDataBase_abc167e8f4dc24057cca4aa0793349d92}{ExistSetting}}(name)) \{ \textcolor{keywordflow}{return}; \}}
+\DoxyCodeLine{00262         OpenConnection();}
+\DoxyCodeLine{00263         \_command.CommandText = \textcolor{stringliteral}{"{}UPDATE settings SET value  = '"{}} + value + \textcolor{stringliteral}{"{}' WHERE name ='"{}} + name + \textcolor{stringliteral}{"{}';"{}};}
+\DoxyCodeLine{00264         \_command.ExecuteNonQuery();}
+\DoxyCodeLine{00265         CloseConnection();}
+\DoxyCodeLine{00266     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classDataBase_a7bef2659955658a824e1596b4ad77b66}\label{classDataBase_a7bef2659955658a824e1596b4ad77b66}} 
@@ -286,26 +375,26 @@ List$<$ \mbox{\hyperlink{classSetting}{Setting}} $>$ \mbox{\hyperlink{classDataB
 \end{DoxyParams}
 
 
-См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00143}{143}}
+См. определение в файле \mbox{\hyperlink{DataBase_8cs_source}{Data\+Base.\+cs}} строка \mbox{\hyperlink{DataBase_8cs_source_l00145}{145}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00144     \{}
-\DoxyCodeLine{00145         \textcolor{keywordflow}{if} (TokenInDB())}
-\DoxyCodeLine{00146         \{}
-\DoxyCodeLine{00147             OpenConnection();}
-\DoxyCodeLine{00148             \_command.CommandText = \textcolor{stringliteral}{"{}UPDATE token SET token = '"{}} + token + \textcolor{stringliteral}{"{}' WHERE id =1;"{}};}
-\DoxyCodeLine{00149             \_command.ExecuteNonQuery();}
-\DoxyCodeLine{00150             CloseConnection();}
-\DoxyCodeLine{00151         \}}
-\DoxyCodeLine{00152         \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00153         \{}
-\DoxyCodeLine{00154             OpenConnection();}
-\DoxyCodeLine{00155             \_command.CommandText = \textcolor{stringliteral}{"{}INSERT INTO token (token) VALUES ('"{}} + token + \textcolor{stringliteral}{"{}');"{}};}
-\DoxyCodeLine{00156             \_command.ExecuteNonQuery();}
-\DoxyCodeLine{00157             CloseConnection();}
-\DoxyCodeLine{00158         \}}
-\DoxyCodeLine{00159     \}}
+\DoxyCodeLine{00146     \{}
+\DoxyCodeLine{00147         \textcolor{keywordflow}{if} (TokenInDB())}
+\DoxyCodeLine{00148         \{}
+\DoxyCodeLine{00149             OpenConnection();}
+\DoxyCodeLine{00150             \_command.CommandText = \textcolor{stringliteral}{"{}UPDATE token SET token = '"{}} + token + \textcolor{stringliteral}{"{}' WHERE id =1;"{}};}
+\DoxyCodeLine{00151             \_command.ExecuteNonQuery();}
+\DoxyCodeLine{00152             CloseConnection();}
+\DoxyCodeLine{00153         \}}
+\DoxyCodeLine{00154         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00155         \{}
+\DoxyCodeLine{00156             OpenConnection();}
+\DoxyCodeLine{00157             \_command.CommandText = \textcolor{stringliteral}{"{}INSERT INTO token (token) VALUES ('"{}} + token + \textcolor{stringliteral}{"{}');"{}};}
+\DoxyCodeLine{00158             \_command.ExecuteNonQuery();}
+\DoxyCodeLine{00159             CloseConnection();}
+\DoxyCodeLine{00160         \}}
+\DoxyCodeLine{00161     \}}
 
 \end{DoxyCode}
 

@@ -1,5 +1,10 @@
 \hypertarget{classSoundSliderManager}{}\doxysection{Класс Sound\+Slider\+Manager}
 \label{classSoundSliderManager}\index{SoundSliderManager@{SoundSliderManager}}
+
+
+Модуль управления слайдером для настройки звука   
+
+
 Граф наследования\+:Sound\+Slider\+Manager\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,11 +15,11 @@
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classSoundSliderManager_a2b34fedbc148b265f72c0e95f788ccfe}{Value\+Changed}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Функция для привязки к изменению значения слайдера  \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSoundSliderManager_ae32c2ccf67516407ddb1f73d022af403}{Set\+Name}} (string new\+Name)
-\item 
+\begin{DoxyCompactList}\small\item\em Установить название настройки звука  \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSoundSliderManager_ad242020d6d457bcb427d2daee78266c7}{Set\+Value}} (float value)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Установить значение настройки звука  \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Статические открытые данные}
 \begin{DoxyCompactItemize}
 \item 
@@ -23,9 +28,9 @@ static Action$<$ string, float $>$ \mbox{\hyperlink{classSoundSliderManager_a47d
 
 
 \doxysubsection{Подробное описание}
+Модуль управления слайдером для настройки звука  
 
-
-См. определение в файле \mbox{\hyperlink{SoundSliderManager_8cs_source}{Sound\+Slider\+Manager.\+cs}} строка \mbox{\hyperlink{SoundSliderManager_8cs_source_l00007}{7}}
+См. определение в файле \mbox{\hyperlink{SoundSliderManager_8cs_source}{Sound\+Slider\+Manager.\+cs}} строка \mbox{\hyperlink{SoundSliderManager_8cs_source_l00009}{9}}
 
 
 
@@ -38,13 +43,22 @@ static Action$<$ string, float $>$ \mbox{\hyperlink{classSoundSliderManager_a47d
 
 
 
-См. определение в файле \mbox{\hyperlink{SoundSliderManager_8cs_source}{Sound\+Slider\+Manager.\+cs}} строка \mbox{\hyperlink{SoundSliderManager_8cs_source_l00027}{27}}
+Установить название настройки звука  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em new\+Name} & Новое название\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{SoundSliderManager_8cs_source}{Sound\+Slider\+Manager.\+cs}} строка \mbox{\hyperlink{SoundSliderManager_8cs_source_l00034}{34}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00028     \{}
-\DoxyCodeLine{00029         text.text = newName;}
-\DoxyCodeLine{00030     \}}
+\DoxyCodeLine{00035     \{}
+\DoxyCodeLine{00036         text.text = newName;}
+\DoxyCodeLine{00037     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classSoundSliderManager_ad242020d6d457bcb427d2daee78266c7}\label{classSoundSliderManager_ad242020d6d457bcb427d2daee78266c7}} 
@@ -55,14 +69,23 @@ static Action$<$ string, float $>$ \mbox{\hyperlink{classSoundSliderManager_a47d
 
 
 
-См. определение в файле \mbox{\hyperlink{SoundSliderManager_8cs_source}{Sound\+Slider\+Manager.\+cs}} строка \mbox{\hyperlink{SoundSliderManager_8cs_source_l00031}{31}}
+Установить значение настройки звука  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em value} & Новое значение\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{SoundSliderManager_8cs_source}{Sound\+Slider\+Manager.\+cs}} строка \mbox{\hyperlink{SoundSliderManager_8cs_source_l00042}{42}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00032     \{}
-\DoxyCodeLine{00033         oldValue = value;}
-\DoxyCodeLine{00034         slider.value = value;}
-\DoxyCodeLine{00035     \}}
+\DoxyCodeLine{00043     \{}
+\DoxyCodeLine{00044         oldValue = value;}
+\DoxyCodeLine{00045         slider.value = value;}
+\DoxyCodeLine{00046     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classSoundSliderManager_a2b34fedbc148b265f72c0e95f788ccfe}\label{classSoundSliderManager_a2b34fedbc148b265f72c0e95f788ccfe}} 
@@ -73,18 +96,22 @@ static Action$<$ string, float $>$ \mbox{\hyperlink{classSoundSliderManager_a47d
 
 
 
-См. определение в файле \mbox{\hyperlink{SoundSliderManager_8cs_source}{Sound\+Slider\+Manager.\+cs}} строка \mbox{\hyperlink{SoundSliderManager_8cs_source_l00016}{16}}
+Функция для привязки к изменению значения слайдера  
+
+
+
+См. определение в файле \mbox{\hyperlink{SoundSliderManager_8cs_source}{Sound\+Slider\+Manager.\+cs}} строка \mbox{\hyperlink{SoundSliderManager_8cs_source_l00020}{20}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00017     \{}
-\DoxyCodeLine{00018         \textcolor{keywordflow}{if} (oldValue != slider.value)}
-\DoxyCodeLine{00019         \{}
-\DoxyCodeLine{00020             onValueChange?.Invoke(text.text, slider.value);}
-\DoxyCodeLine{00021             oldValue = slider.value;}
-\DoxyCodeLine{00022         \}}
-\DoxyCodeLine{00023 }
-\DoxyCodeLine{00024     \}}
+\DoxyCodeLine{00021     \{}
+\DoxyCodeLine{00022         \textcolor{keywordflow}{if} (oldValue != slider.value)}
+\DoxyCodeLine{00023         \{}
+\DoxyCodeLine{00024             onValueChange?.Invoke(text.text, slider.value);}
+\DoxyCodeLine{00025             oldValue = slider.value;}
+\DoxyCodeLine{00026         \}}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028     \}}
 
 \end{DoxyCode}
 
@@ -98,10 +125,10 @@ static Action$<$ string, float $>$ \mbox{\hyperlink{classSoundSliderManager_a47d
 
 
 
-См. определение в файле \mbox{\hyperlink{SoundSliderManager_8cs_source}{Sound\+Slider\+Manager.\+cs}} строка \mbox{\hyperlink{SoundSliderManager_8cs_source_l00012}{12}}
+См. определение в файле \mbox{\hyperlink{SoundSliderManager_8cs_source}{Sound\+Slider\+Manager.\+cs}} строка \mbox{\hyperlink{SoundSliderManager_8cs_source_l00014}{14}}
 
 
 
 Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
 \item 
-Vuji/\+Assets/\+Scripts/\+UIScripts/Sound\+Slider\+Manager.\+cs\end{DoxyCompactItemize}
+Vuji/\+Assets/\+Scripts/\+UIScripts/\+Managers/Sound\+Slider\+Manager.\+cs\end{DoxyCompactItemize}

@@ -1,5 +1,10 @@
 \hypertarget{classEndGameManager}{}\doxysection{Класс End\+Game\+Manager}
 \label{classEndGameManager}\index{EndGameManager@{EndGameManager}}
+
+
+Вспомогательный модуль для отображения панели после окончания игры   
+
+
 Граф наследования\+:End\+Game\+Manager\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,18 +15,13 @@
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classEndGameManager_a76c433d8d1078e6d4fe8221e21282f37}{Leave\+Game}} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{Статические открытые данные}
-\begin{DoxyCompactItemize}
-\item 
-static Action$<$ bool $>$ \mbox{\hyperlink{classEndGameManager_aa53b5ea4e66d2828a7fd26d37697fbe0}{temp}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Вспомогательная функция для кнопки выхода из игры  \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Подробное описание}
+Вспомогательный модуль для отображения панели после окончания игры  
 
-
-См. определение в файле \mbox{\hyperlink{EndGameManager_8cs_source}{End\+Game\+Manager.\+cs}} строка \mbox{\hyperlink{EndGameManager_8cs_source_l00010}{10}}
+См. определение в файле \mbox{\hyperlink{EndGameManager_8cs_source}{End\+Game\+Manager.\+cs}} строка \mbox{\hyperlink{EndGameManager_8cs_source_l00012}{12}}
 
 
 
@@ -34,32 +34,23 @@ static Action$<$ bool $>$ \mbox{\hyperlink{classEndGameManager_aa53b5ea4e66d2828
 
 
 
-См. определение в файле \mbox{\hyperlink{EndGameManager_8cs_source}{End\+Game\+Manager.\+cs}} строка \mbox{\hyperlink{EndGameManager_8cs_source_l00049}{49}}
+Вспомогательная функция для кнопки выхода из игры  
+
+
+
+См. определение в файле \mbox{\hyperlink{EndGameManager_8cs_source}{End\+Game\+Manager.\+cs}} строка \mbox{\hyperlink{EndGameManager_8cs_source_l00060}{60}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00050     \{}
-\DoxyCodeLine{00051         Destroy(UiCanvas);}
-\DoxyCodeLine{00052         Destroy(GameManager);}
-\DoxyCodeLine{00053         SceneManager.LoadScene(\textcolor{stringliteral}{"{}Lobby"{}});}
-\DoxyCodeLine{00054     \}}
+\DoxyCodeLine{00061     \{}
+\DoxyCodeLine{00062         Destroy(UiCanvas);}
+\DoxyCodeLine{00063         Destroy(GameManager);}
+\DoxyCodeLine{00064         SceneManager.LoadScene(\textcolor{stringliteral}{"{}Lobby"{}});}
+\DoxyCodeLine{00065     \}}
 
 \end{DoxyCode}
 
 
-\doxysubsection{Данные класса}
-\mbox{\Hypertarget{classEndGameManager_aa53b5ea4e66d2828a7fd26d37697fbe0}\label{classEndGameManager_aa53b5ea4e66d2828a7fd26d37697fbe0}} 
-\index{EndGameManager@{EndGameManager}!temp@{temp}}
-\index{temp@{temp}!EndGameManager@{EndGameManager}}
-\doxysubsubsection{\texorpdfstring{temp}{temp}}
-{\footnotesize\ttfamily Action$<$bool$>$ End\+Game\+Manager.\+temp\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-См. определение в файле \mbox{\hyperlink{EndGameManager_8cs_source}{End\+Game\+Manager.\+cs}} строка \mbox{\hyperlink{EndGameManager_8cs_source_l00019}{19}}
-
-
-
 Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
 \item 
-Vuji/\+Assets/\+Scripts/\+UIScripts/End\+Game\+Manager.\+cs\end{DoxyCompactItemize}
+Vuji/\+Assets/\+Scripts/\+UIScripts/\+Managers/End\+Game\+Manager.\+cs\end{DoxyCompactItemize}

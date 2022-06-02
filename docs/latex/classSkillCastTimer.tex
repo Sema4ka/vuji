@@ -1,5 +1,10 @@
 \hypertarget{classSkillCastTimer}{}\doxysection{Класс Skill\+Cast\+Timer}
 \label{classSkillCastTimer}\index{SkillCastTimer@{SkillCastTimer}}
+
+
+Модуль для управления таймером каста скила целевой сущностью   
+
+
 Граф наследования\+:Skill\+Cast\+Timer\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,13 +15,13 @@
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classSkillCastTimer_a0a969267461c2d70a296bf4654ad5d53}{Start\+Timer}} (float time)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Функция для события каста скила (Запустить таймер каста с указанным временем)  \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Подробное описание}
+Модуль для управления таймером каста скила целевой сущностью  
 
-
-См. определение в файле \mbox{\hyperlink{SkillCastTimer_8cs_source}{Skill\+Cast\+Timer.\+cs}} строка \mbox{\hyperlink{SkillCastTimer_8cs_source_l00007}{7}}
+См. определение в файле \mbox{\hyperlink{SkillCastTimer_8cs_source}{Skill\+Cast\+Timer.\+cs}} строка \mbox{\hyperlink{SkillCastTimer_8cs_source_l00009}{9}}
 
 
 
@@ -29,20 +34,29 @@ void \mbox{\hyperlink{classSkillCastTimer_a0a969267461c2d70a296bf4654ad5d53}{Sta
 
 
 
-См. определение в файле \mbox{\hyperlink{SkillCastTimer_8cs_source}{Skill\+Cast\+Timer.\+cs}} строка \mbox{\hyperlink{SkillCastTimer_8cs_source_l00024}{24}}
+Функция для события каста скила (Запустить таймер каста с указанным временем)  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em time} & Время каста умения\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{SkillCastTimer_8cs_source}{Skill\+Cast\+Timer.\+cs}} строка \mbox{\hyperlink{SkillCastTimer_8cs_source_l00029}{29}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00025     \{}
-\DoxyCodeLine{00026         timerValue = 0f;}
-\DoxyCodeLine{00027         timerInterval = time;}
-\DoxyCodeLine{00028         timerSlider.minValue = 0f;}
-\DoxyCodeLine{00029         timerSlider.maxValue = time;}
-\DoxyCodeLine{00030     \}}
+\DoxyCodeLine{00030     \{}
+\DoxyCodeLine{00031         timerValue = 0f;}
+\DoxyCodeLine{00032         timerInterval = time;}
+\DoxyCodeLine{00033         timerSlider.minValue = 0f;}
+\DoxyCodeLine{00034         timerSlider.maxValue = time;}
+\DoxyCodeLine{00035     \}}
 
 \end{DoxyCode}
 
 
 Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
 \item 
-Vuji/\+Assets/\+Scripts/\+UIScripts/Skill\+Cast\+Timer.\+cs\end{DoxyCompactItemize}
+Vuji/\+Assets/\+Scripts/\+UIScripts/\+Units/Skill\+Cast\+Timer.\+cs\end{DoxyCompactItemize}

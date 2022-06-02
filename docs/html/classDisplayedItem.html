@@ -70,6 +70,9 @@ $(function() {
   <div class="headertitle"><div class="title">Класс DisplayedItem</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Модуль для управления отображаемым предметом инвентаря   
+ <a href="classDisplayedItem.html#details">Подробнее...</a></p>
 <div class="dynheader">
 Граф наследования:DisplayedItem:</div>
 <div class="dyncontent">
@@ -80,8 +83,10 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Открытые члены</h2></td></tr>
 <tr class="memitem:a7618a672d900dbf7704df5a02f32b8c6"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDisplayedItem.html#a7618a672d900dbf7704df5a02f32b8c6">OnPointerDown</a> (PointerEventData eventData)</td></tr>
+<tr class="memdesc:a7618a672d900dbf7704df5a02f32b8c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">При зажатии курсором панели предмета   <a href="classDisplayedItem.html#a7618a672d900dbf7704df5a02f32b8c6">Подробнее...</a><br /></td></tr>
 <tr class="separator:a7618a672d900dbf7704df5a02f32b8c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a7f2483c314c6edafaad914d8bd891f"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDisplayedItem.html#a7a7f2483c314c6edafaad914d8bd891f">OnPointerUp</a> (PointerEventData eventData)</td></tr>
+<tr class="memdesc:a7a7f2483c314c6edafaad914d8bd891f"><td class="mdescLeft">&#160;</td><td class="mdescRight">При отжатии курсора   <a href="classDisplayedItem.html#a7a7f2483c314c6edafaad914d8bd891f">Подробнее...</a><br /></td></tr>
 <tr class="separator:a7a7f2483c314c6edafaad914d8bd891f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -103,8 +108,9 @@ $(function() {
 <tr class="separator:a53bed016e9dfd0cd0fbdfd1193236bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock">
-<p class="definition">См. определение в файле <a class="el" href="DisplayedItem_8cs_source.html">DisplayedItem.cs</a> строка <a class="el" href="DisplayedItem_8cs_source.html#l00008">8</a></p>
+<div class="textblock"><p >Модуль для управления отображаемым предметом инвентаря  </p>
+
+<p class="definition">См. определение в файле <a class="el" href="DisplayedItem_8cs_source.html">DisplayedItem.cs</a> строка <a class="el" href="DisplayedItem_8cs_source.html#l00010">10</a></p>
 </div><h2 class="groupheader">Методы</h2>
 <a id="a7618a672d900dbf7704df5a02f32b8c6" name="a7618a672d900dbf7704df5a02f32b8c6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7618a672d900dbf7704df5a02f32b8c6">&#9670;&nbsp;</a></span>OnPointerDown()</h2>
@@ -130,11 +136,19 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="DisplayedItem_8cs_source.html">DisplayedItem.cs</a> строка <a class="el" href="DisplayedItem_8cs_source.html#l00037">37</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
-<div class="line"><span class="lineno">   39</span>        itemPosition = displayedItem.position;</div>
-<div class="line"><span class="lineno">   40</span>        isDragging = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   41</span>    }</div>
+<p>При зажатии курсором панели предмета  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eventData</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="DisplayedItem_8cs_source.html">DisplayedItem.cs</a> строка <a class="el" href="DisplayedItem_8cs_source.html#l00042">42</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>        itemPosition = displayedItem.position;</div>
+<div class="line"><span class="lineno">   45</span>        isDragging = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -162,18 +176,26 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="DisplayedItem_8cs_source.html">DisplayedItem.cs</a> строка <a class="el" href="DisplayedItem_8cs_source.html#l00043">43</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
-<div class="line"><span class="lineno">   45</span>        isDragging = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (!RectTransformUtility.RectangleContainsScreenPoint(inventoryPanel, Input.mousePosition))</div>
-<div class="line"><span class="lineno">   47</span>        {</div>
-<div class="line"><span class="lineno">   48</span>            onItemDrop?.Invoke(itemId);</div>
-<div class="line"><span class="lineno">   49</span>        }</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   51</span>        {</div>
-<div class="line"><span class="lineno">   52</span>            onItemSwap?.Invoke(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
+<p>При отжатии курсора  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eventData</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="DisplayedItem_8cs_source.html">DisplayedItem.cs</a> строка <a class="el" href="DisplayedItem_8cs_source.html#l00051">51</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        isDragging = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (!RectTransformUtility.RectangleContainsScreenPoint(inventoryPanel, Input.mousePosition))</div>
+<div class="line"><span class="lineno">   55</span>        {</div>
+<div class="line"><span class="lineno">   56</span>            onItemDrop?.Invoke(itemId);</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   59</span>        {</div>
+<div class="line"><span class="lineno">   60</span>            onItemSwap?.Invoke(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -190,7 +212,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="DisplayedItem_8cs_source.html">DisplayedItem.cs</a> строка <a class="el" href="DisplayedItem_8cs_source.html#l00011">11</a></p>
+<p class="definition">См. определение в файле <a class="el" href="DisplayedItem_8cs_source.html">DisplayedItem.cs</a> строка <a class="el" href="DisplayedItem_8cs_source.html#l00013">13</a></p>
 
 </div>
 </div>
@@ -206,7 +228,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="DisplayedItem_8cs_source.html">DisplayedItem.cs</a> строка <a class="el" href="DisplayedItem_8cs_source.html#l00010">10</a></p>
+<p class="definition">См. определение в файле <a class="el" href="DisplayedItem_8cs_source.html">DisplayedItem.cs</a> строка <a class="el" href="DisplayedItem_8cs_source.html#l00012">12</a></p>
 
 </div>
 </div>
@@ -222,7 +244,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="DisplayedItem_8cs_source.html">DisplayedItem.cs</a> строка <a class="el" href="DisplayedItem_8cs_source.html#l00012">12</a></p>
+<p class="definition">См. определение в файле <a class="el" href="DisplayedItem_8cs_source.html">DisplayedItem.cs</a> строка <a class="el" href="DisplayedItem_8cs_source.html#l00014">14</a></p>
 
 </div>
 </div>
@@ -238,7 +260,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="DisplayedItem_8cs_source.html">DisplayedItem.cs</a> строка <a class="el" href="DisplayedItem_8cs_source.html#l00013">13</a></p>
+<p class="definition">См. определение в файле <a class="el" href="DisplayedItem_8cs_source.html">DisplayedItem.cs</a> строка <a class="el" href="DisplayedItem_8cs_source.html#l00015">15</a></p>
 
 </div>
 </div>
@@ -262,7 +284,7 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="DisplayedItem_8cs_source.html">DisplayedItem.cs</a> строка <a class="el" href="DisplayedItem_8cs_source.html#l00015">15</a></p>
+<p class="definition">См. определение в файле <a class="el" href="DisplayedItem_8cs_source.html">DisplayedItem.cs</a> строка <a class="el" href="DisplayedItem_8cs_source.html#l00017">17</a></p>
 
 </div>
 </div>
@@ -286,7 +308,7 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="DisplayedItem_8cs_source.html">DisplayedItem.cs</a> строка <a class="el" href="DisplayedItem_8cs_source.html#l00016">16</a></p>
+<p class="definition">См. определение в файле <a class="el" href="DisplayedItem_8cs_source.html">DisplayedItem.cs</a> строка <a class="el" href="DisplayedItem_8cs_source.html#l00018">18</a></p>
 
 </div>
 </div>

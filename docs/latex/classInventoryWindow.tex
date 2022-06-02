@@ -1,5 +1,10 @@
 \hypertarget{classInventoryWindow}{}\doxysection{Класс Inventory\+Window}
 \label{classInventoryWindow}\index{InventoryWindow@{InventoryWindow}}
+
+
+Модуль управления отображаемым инвентарем сущности   
+
+
 Граф наследования\+:Inventory\+Window\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,9 +21,9 @@ void \mbox{\hyperlink{classInventoryWindow_aa3f191b9ad5d65e87a12e94af2406920}{On
 
 
 \doxysubsection{Подробное описание}
+Модуль управления отображаемым инвентарем сущности  
 
-
-См. определение в файле \mbox{\hyperlink{InventoryWindow_8cs_source}{Inventory\+Window.\+cs}} строка \mbox{\hyperlink{InventoryWindow_8cs_source_l00009}{9}}
+См. определение в файле \mbox{\hyperlink{InventoryWindow_8cs_source}{Inventory\+Window.\+cs}} строка \mbox{\hyperlink{InventoryWindow_8cs_source_l00011}{11}}
 
 
 
@@ -31,16 +36,16 @@ void \mbox{\hyperlink{classInventoryWindow_aa3f191b9ad5d65e87a12e94af2406920}{On
 
 
 
-См. определение в файле \mbox{\hyperlink{InventoryWindow_8cs_source}{Inventory\+Window.\+cs}} строка \mbox{\hyperlink{InventoryWindow_8cs_source_l00036}{36}}
+См. определение в файле \mbox{\hyperlink{InventoryWindow_8cs_source}{Inventory\+Window.\+cs}} строка \mbox{\hyperlink{InventoryWindow_8cs_source_l00038}{38}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00037     \{}
-\DoxyCodeLine{00038         player = playerObject;}
-\DoxyCodeLine{00039         playerInventory = playerObject.GetComponent<\mbox{\hyperlink{classInventory}{Inventory}}>();}
-\DoxyCodeLine{00040         playerInventory.onItemAdded += OnItemAdded;}
-\DoxyCodeLine{00041         Redraw();}
-\DoxyCodeLine{00042     \}}
+\DoxyCodeLine{00039     \{}
+\DoxyCodeLine{00040         player = playerObject;}
+\DoxyCodeLine{00041         playerInventory = playerObject.GetComponent<\mbox{\hyperlink{classInventory}{Inventory}}>();}
+\DoxyCodeLine{00042         playerInventory.onItemAdded += OnItemAdded;}
+\DoxyCodeLine{00043         Redraw();}
+\DoxyCodeLine{00044     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classInventoryWindow_a978187561a74e417874b86a05b0cefd6}\label{classInventoryWindow_a978187561a74e417874b86a05b0cefd6}} 
@@ -51,17 +56,17 @@ void \mbox{\hyperlink{classInventoryWindow_aa3f191b9ad5d65e87a12e94af2406920}{On
 
 
 
-См. определение в файле \mbox{\hyperlink{InventoryWindow_8cs_source}{Inventory\+Window.\+cs}} строка \mbox{\hyperlink{InventoryWindow_8cs_source_l00019}{19}}
+См. определение в файле \mbox{\hyperlink{InventoryWindow_8cs_source}{Inventory\+Window.\+cs}} строка \mbox{\hyperlink{InventoryWindow_8cs_source_l00021}{21}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00020     \{}
-\DoxyCodeLine{00021         \textcolor{keywordflow}{if} (playerInventory != \textcolor{keyword}{null}) playerInventory.onItemAdded += OnItemAdded;}
-\DoxyCodeLine{00022         DisplayedItem.onItemDrop += OnItemDropped;}
-\DoxyCodeLine{00023         DisplayedItem.onItemSwap += onItemSwapped;}
-\DoxyCodeLine{00024         KeyHandler.keyPressed += KeyPressed;}
-\DoxyCodeLine{00025         SpawnPlayers.OnSpawn += OnSpawn;}
-\DoxyCodeLine{00026     \}}
+\DoxyCodeLine{00022     \{}
+\DoxyCodeLine{00023         \textcolor{keywordflow}{if} (playerInventory != \textcolor{keyword}{null}) playerInventory.onItemAdded += OnItemAdded;}
+\DoxyCodeLine{00024         DisplayedItem.onItemDrop += OnItemDropped;}
+\DoxyCodeLine{00025         DisplayedItem.onItemSwap += onItemSwapped;}
+\DoxyCodeLine{00026         KeyHandler.keyPressed += KeyPressed;}
+\DoxyCodeLine{00027         SpawnPlayers.OnSpawn += OnSpawn;}
+\DoxyCodeLine{00028     \}}
 
 \end{DoxyCode}
 

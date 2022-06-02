@@ -81,9 +81,9 @@
 \DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00077}00077         maxHealthPoints = Mathf.Max(maxHealthPoints, healthPoints);}
 \DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00078}00078         maxEnergy = Mathf.Max(maxEnergy, energy);}
 \DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00079}00079         \textcolor{keywordtype}{float} height = 1.0f;}
-\DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00080}00080         healthBar.SetOffset(\textcolor{keyword}{new} Vector3(0, height * 0.6f, 0));}
-\DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00081}00081         healthBar.SetHealth(healthPoints, maxHealthPoints);}
-\DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00082}00082         displayedName.SetOffset(\textcolor{keyword}{new} Vector3(0, height * 0.6f, 0));}
+\DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00080}00080         healthBar.\mbox{\hyperlink{classHealthBarManager_a69ce9b7f42ede94f983f65a185a0f5ca}{SetOffset}}(\textcolor{keyword}{new} Vector3(0, height * 0.6f, 0));}
+\DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00081}00081         healthBar.\mbox{\hyperlink{classHealthBarManager_a8da00602e4c095264e5bb2512f8e9449}{SetHealth}}(healthPoints, maxHealthPoints);}
+\DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00082}00082         displayedName.\mbox{\hyperlink{classEntityNameManager_ac95f7bfc3b233fd41eae79280dc8c327}{SetOffset}}(\textcolor{keyword}{new} Vector3(0, height * 0.6f, 0));}
 \DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00083}00083         \textcolor{keywordflow}{if} (gameObject.CompareTag(\textcolor{stringliteral}{"{}Player"{}}))}
 \DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00084}00084         \{}
 \DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00085}00085             \textcolor{keywordflow}{if} (\_view.IsMine)}
@@ -96,7 +96,7 @@
 \DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00092}00092 }
 \DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00093}00093     \textcolor{keyword}{private} \textcolor{keywordtype}{void} Update()}
 \DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00094}00094     \{}
-\DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00095}00095         healthBar.SetHealth(healthPoints, maxHealthPoints);}
+\DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00095}00095         healthBar.\mbox{\hyperlink{classHealthBarManager_a8da00602e4c095264e5bb2512f8e9449}{SetHealth}}(healthPoints, maxHealthPoints);}
 \DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00096}00096     \}}
 \DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00097}00097 }
 \DoxyCodeLine{\Hypertarget{BaseEntity_8cs_source_l00098}00098     [PunRPC]}

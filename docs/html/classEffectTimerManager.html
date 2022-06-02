@@ -68,6 +68,9 @@ $(function() {
   <div class="headertitle"><div class="title">Класс EffectTimerManager</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Класс для управления таймером эффекта   
+ <a href="classEffectTimerManager.html#details">Подробнее...</a></p>
 <div class="dynheader">
 Граф наследования:EffectTimerManager:</div>
 <div class="dyncontent">
@@ -78,11 +81,13 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Открытые члены</h2></td></tr>
 <tr class="memitem:a2573e789e1becbe93e91930505e88483"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffectTimerManager.html#a2573e789e1becbe93e91930505e88483">SetEffect</a> (<a class="el" href="classBaseEffect.html">BaseEffect</a> effect)</td></tr>
+<tr class="memdesc:a2573e789e1becbe93e91930505e88483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установка эффекта на данных   <a href="classEffectTimerManager.html#a2573e789e1becbe93e91930505e88483">Подробнее...</a><br /></td></tr>
 <tr class="separator:a2573e789e1becbe93e91930505e88483"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock">
-<p class="definition">См. определение в файле <a class="el" href="EffectTimerManager_8cs_source.html">EffectTimerManager.cs</a> строка <a class="el" href="EffectTimerManager_8cs_source.html#l00007">7</a></p>
+<div class="textblock"><p >Класс для управления таймером эффекта  </p>
+
+<p class="definition">См. определение в файле <a class="el" href="EffectTimerManager_8cs_source.html">EffectTimerManager.cs</a> строка <a class="el" href="EffectTimerManager_8cs_source.html#l00009">9</a></p>
 </div><h2 class="groupheader">Методы</h2>
 <a id="a2573e789e1becbe93e91930505e88483" name="a2573e789e1becbe93e91930505e88483"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2573e789e1becbe93e91930505e88483">&#9670;&nbsp;</a></span>SetEffect()</h2>
@@ -108,17 +113,26 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="EffectTimerManager_8cs_source.html">EffectTimerManager.cs</a> строка <a class="el" href="EffectTimerManager_8cs_source.html#l00023">23</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
-<div class="line"><span class="lineno">   25</span>        targetedSprite.sprite = effect.effectSprite;</div>
-<div class="line"><span class="lineno">   26</span>        timerInterval = effect.duration;</div>
-<div class="line"><span class="lineno">   27</span>        targetedEffect = effect;</div>
-<div class="line"><span class="lineno">   28</span>    }</div>
+<p>Установка эффекта на данных  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effect</td><td>Целевой эффект</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="EffectTimerManager_8cs_source.html">EffectTimerManager.cs</a> строка <a class="el" href="EffectTimerManager_8cs_source.html#l00031">31</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        targetedSprite.sprite = effect.effectSprite;</div>
+<div class="line"><span class="lineno">   34</span>        timerInterval = effect.duration;</div>
+<div class="line"><span class="lineno">   35</span>        targetedEffect = effect;</div>
+<div class="line"><span class="lineno">   36</span>        tooltipText.text = <span class="stringliteral">&quot;\&quot;&quot;</span> + effect.effectName + <span class="stringliteral">&quot;\&quot;\n&quot;</span> + effect.description + <span class="stringliteral">&quot;\n&quot;</span> + <span class="stringliteral">&quot;Duration: &quot;</span> + effect.duration + <span class="stringliteral">&quot;s&quot;</span>;</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>Объявления и описания членов класса находятся в файле:<ul>
-<li>Vuji/Assets/Scripts/UIScripts/<a class="el" href="EffectTimerManager_8cs_source.html">EffectTimerManager.cs</a></li>
+<li>Vuji/Assets/Scripts/UIScripts/Managers/<a class="el" href="EffectTimerManager_8cs_source.html">EffectTimerManager.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vuji: Исходный файл Vuji/Assets/Scripts/UIScripts/TeamHPBarUI.cs</title>
+<title>Vuji: Исходный файл Vuji/Assets/Scripts/UIScripts/Units/TeamHPBarUI.cs</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_24730e22821c406d9b9e7a61f2d28cdd.html">Vuji</a></li><li class="navelem"><a class="el" href="dir_7145773557de44336f52ce66fdce5de2.html">Assets</a></li><li class="navelem"><a class="el" href="dir_839e3d78437d3e0569cb682698c2da1b.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_51e2eda66536db365de4891a9316f556.html">UIScripts</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_24730e22821c406d9b9e7a61f2d28cdd.html">Vuji</a></li><li class="navelem"><a class="el" href="dir_7145773557de44336f52ce66fdce5de2.html">Assets</a></li><li class="navelem"><a class="el" href="dir_839e3d78437d3e0569cb682698c2da1b.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_51e2eda66536db365de4891a9316f556.html">UIScripts</a></li><li class="navelem"><a class="el" href="dir_cd7d013138d2ca0a05d74b87b959e2ae.html">Units</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -73,45 +73,45 @@ $(function() {
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>UnityEngine.UI;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classTeamHPBarUI.html">    6</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTeamHPBarUI.html">TeamHPBarUI</a> : MonoBehaviour</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    [SerializeField] Slider HealthBar;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    [SerializeField] Text HealthBarText;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    [SerializeField] Text DeadText;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">private</span> <a class="code hl_class" href="classBaseEntity.html">BaseEntity</a> entity;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="comment">// Start is called before the first frame update</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">void</span> Start()</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        HealthBar.minValue = 0f;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">// Update is called once per frame</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> Update()</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">if</span> (entity == <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            HealthBar.maxValue = 0f;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            HealthBar.value = 0f;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">if</span> (entity.isDead) <span class="comment">// ��� ��� ����� ��� - �����</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            HealthBar.maxValue = 0f;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            HealthBar.value = 0f;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            DeadText.text = <span class="stringliteral">&quot;DEAD&quot;</span>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        }</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        HealthBar.maxValue = entity.GetMaxHealthPoints();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        HealthBar.value = entity.GetHealthPoints();</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> SetEntity(<a class="code hl_class" href="classBaseEntity.html">BaseEntity</a> player, <span class="keywordtype">string</span> name)</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        entity = player;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        HealthBarText.text = name;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classTeamHPBarUI.html">    8</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTeamHPBarUI.html">TeamHPBarUI</a> : MonoBehaviour</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    [SerializeField, Tooltip(<span class="stringliteral">&quot;Слайдер для отображения хп целевой сущности&quot;</span>)] Slider HealthBar; <span class="comment">// Целевой слайдер</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    [SerializeField, Tooltip(<span class="stringliteral">&quot;Текстовое поле для отображения имени целевого пользователя&quot;</span>)] Text HealthBarText; <span class="comment">// Целевое текстовое поле для имени пользователя</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    [SerializeField, Tooltip(<span class="stringliteral">&quot;Текстовое поле для индикации смерти целевого игрока&quot;</span>)] Text DeadText; <span class="comment">// Целевое поле для индикации смерти сущности игрока</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">private</span> <a class="code hl_class" href="classBaseEntity.html">BaseEntity</a> entity; <span class="comment">// Целевая сущность</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">// Start is called before the first frame update</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">void</span> Start()</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        HealthBar.minValue = 0f;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">// Update is called once per frame</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> Update()</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">if</span> (entity == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            HealthBar.maxValue = 0f;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            HealthBar.value = 0f;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">if</span> (entity.isDead)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            HealthBar.maxValue = 0f;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            HealthBar.value = 0f;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            DeadText.text = <span class="stringliteral">&quot;DEAD&quot;</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        HealthBar.maxValue = entity.GetMaxHealthPoints();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        HealthBar.value = entity.GetHealthPoints();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classTeamHPBarUI.html#ae583df055d30b4cc43af22f567ef7f4b">   43</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTeamHPBarUI.html#ae583df055d30b4cc43af22f567ef7f4b">SetEntity</a>(<a class="code hl_class" href="classBaseEntity.html">BaseEntity</a> player, <span class="keywordtype">string</span> name)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        entity = player;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        HealthBarText.text = name;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
 <div class="ttc" id="aclassBaseEntity_html"><div class="ttname"><a href="classBaseEntity.html">BaseEntity</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseEntity_8cs_source.html#l00009">BaseEntity.cs:10</a></div></div>
-<div class="ttc" id="aclassTeamHPBarUI_html"><div class="ttname"><a href="classTeamHPBarUI.html">TeamHPBarUI</a></div><div class="ttdef"><b>Definition:</b> <a href="TeamHPBarUI_8cs_source.html#l00006">TeamHPBarUI.cs:7</a></div></div>
+<div class="ttc" id="aclassTeamHPBarUI_html"><div class="ttname"><a href="classTeamHPBarUI.html">TeamHPBarUI</a></div><div class="ttdoc">Модуль для управления отдельным хп баром в панели списка участников команды</div><div class="ttdef"><b>Definition:</b> <a href="TeamHPBarUI_8cs_source.html#l00008">TeamHPBarUI.cs:9</a></div></div>
+<div class="ttc" id="aclassTeamHPBarUI_html_ae583df055d30b4cc43af22f567ef7f4b"><div class="ttname"><a href="classTeamHPBarUI.html#ae583df055d30b4cc43af22f567ef7f4b">TeamHPBarUI.SetEntity</a></div><div class="ttdeci">void SetEntity(BaseEntity player, string name)</div><div class="ttdoc">Функция установки целевой сущности</div><div class="ttdef"><b>Definition:</b> <a href="TeamHPBarUI_8cs_source.html#l00043">TeamHPBarUI.cs:43</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

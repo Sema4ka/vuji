@@ -1,5 +1,10 @@
 \hypertarget{classKeybindManager}{}\doxysection{Класс Keybind\+Manager}
 \label{classKeybindManager}\index{KeybindManager@{KeybindManager}}
+
+
+Модуль управления объектом настройки управления   
+
+
 Граф наследования\+:Keybind\+Manager\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,17 +15,17 @@
 \begin{DoxyCompactItemize}
 \item 
 string \mbox{\hyperlink{classKeybindManager_a3cba60bc0e2e29f6971d94cc300c6b65}{Get\+Name}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Получить название настройки управлеия  \end{DoxyCompactList}\item 
 Key\+Code \mbox{\hyperlink{classKeybindManager_aee26ad249ce5dc77e6bcb0218ad84a9f}{Get\+Key}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Получить заданный ключ настройки управления  \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classKeybindManager_a705483499b5ed662ca0e05bc2370d5cc}{Set\+Name}} (string new\+Name)
-\item 
+\begin{DoxyCompactList}\small\item\em Установить название настройки управления  \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classKeybindManager_ab40a512f42d91cbe2f28cd755f3a8542}{Set\+Key}} (Key\+Code new\+Key)
-\item 
+\begin{DoxyCompactList}\small\item\em Установить значение ключа настройки управления  \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classKeybindManager_abcd160929ace3446b134f04199a8eb4f}{Set\+Keybind}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Фунция для кпноки изменения значения ключа настройки управления  \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classKeybindManager_a6c1e2babefa136fb06c74f773891d153}{Reset\+Keybind}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Функция для обнуления значения ключа управления  \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Статические открытые данные}
 \begin{DoxyCompactItemize}
 \item 
@@ -31,9 +36,9 @@ static Action$<$ bool $>$ \mbox{\hyperlink{classKeybindManager_a6edc96d4aa66644f
 
 
 \doxysubsection{Подробное описание}
+Модуль управления объектом настройки управления  
 
-
-См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00007}{7}}
+См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00010}{10}}
 
 
 
@@ -46,13 +51,20 @@ static Action$<$ bool $>$ \mbox{\hyperlink{classKeybindManager_a6edc96d4aa66644f
 
 
 
-См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00059}{59}}
+Получить заданный ключ настройки управления  
+
+\begin{DoxyReturn}{Возвращает}
+Ключ настройки управления
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00069}{69}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00060     \{}
-\DoxyCodeLine{00061         \textcolor{keywordflow}{return} key;}
-\DoxyCodeLine{00062     \}}
+\DoxyCodeLine{00070     \{}
+\DoxyCodeLine{00071         \textcolor{keywordflow}{return} key;}
+\DoxyCodeLine{00072     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classKeybindManager_a3cba60bc0e2e29f6971d94cc300c6b65}\label{classKeybindManager_a3cba60bc0e2e29f6971d94cc300c6b65}} 
@@ -63,13 +75,20 @@ static Action$<$ bool $>$ \mbox{\hyperlink{classKeybindManager_a6edc96d4aa66644f
 
 
 
-См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00055}{55}}
+Получить название настройки управлеия  
+
+\begin{DoxyReturn}{Возвращает}
+Название настройки
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00061}{61}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00056     \{}
-\DoxyCodeLine{00057         \textcolor{keywordflow}{return} keybindName.text;}
-\DoxyCodeLine{00058     \}}
+\DoxyCodeLine{00062     \{}
+\DoxyCodeLine{00063         \textcolor{keywordflow}{return} keybindName.text;}
+\DoxyCodeLine{00064     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classKeybindManager_a6c1e2babefa136fb06c74f773891d153}\label{classKeybindManager_a6c1e2babefa136fb06c74f773891d153}} 
@@ -80,14 +99,18 @@ static Action$<$ bool $>$ \mbox{\hyperlink{classKeybindManager_a6edc96d4aa66644f
 
 
 
-См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00080}{80}}
+Функция для обнуления значения ключа управления  
+
+
+
+См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00102}{102}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00081     \{}
-\DoxyCodeLine{00082         keybindKeys.text = \textcolor{stringliteral}{"{}None"{}};}
-\DoxyCodeLine{00083         key = KeyCode.None;}
-\DoxyCodeLine{00084     \}}
+\DoxyCodeLine{00103     \{}
+\DoxyCodeLine{00104         keybindKeys.text = \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00105         key = KeyCode.None;}
+\DoxyCodeLine{00106     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classKeybindManager_ab40a512f42d91cbe2f28cd755f3a8542}\label{classKeybindManager_ab40a512f42d91cbe2f28cd755f3a8542}} 
@@ -98,14 +121,23 @@ static Action$<$ bool $>$ \mbox{\hyperlink{classKeybindManager_a6edc96d4aa66644f
 
 
 
-См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00067}{67}}
+Установить значение ключа настройки управления  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em new\+Key} & Новый ключ настройки управления\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00085}{85}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00068     \{}
-\DoxyCodeLine{00069         key = newKey;}
-\DoxyCodeLine{00070         keybindKeys.text = \mbox{\hyperlink{classKeyHandler}{KeyHandler}}.NormalizeKeybind(newKey);}
-\DoxyCodeLine{00071     \}}
+\DoxyCodeLine{00086     \{}
+\DoxyCodeLine{00087         key = newKey;}
+\DoxyCodeLine{00088         keybindKeys.text = \mbox{\hyperlink{classKeyHandler}{KeyHandler}}.\mbox{\hyperlink{classKeyHandler_a2a429f3c48b6447d952223a401793935}{NormalizeKeybind}}(newKey);}
+\DoxyCodeLine{00089     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classKeybindManager_abcd160929ace3446b134f04199a8eb4f}\label{classKeybindManager_abcd160929ace3446b134f04199a8eb4f}} 
@@ -116,15 +148,19 @@ static Action$<$ bool $>$ \mbox{\hyperlink{classKeybindManager_a6edc96d4aa66644f
 
 
 
-См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00073}{73}}
+Фунция для кпноки изменения значения ключа настройки управления  
+
+
+
+См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00093}{93}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00074     \{}
-\DoxyCodeLine{00075         binding = \textcolor{keyword}{true};}
-\DoxyCodeLine{00076         keybindKeys.text = \textcolor{stringliteral}{"{}\_"{}};}
-\DoxyCodeLine{00077         Binding?.Invoke(\textcolor{keyword}{true});}
-\DoxyCodeLine{00078     \}}
+\DoxyCodeLine{00094     \{}
+\DoxyCodeLine{00095         binding = \textcolor{keyword}{true};}
+\DoxyCodeLine{00096         keybindKeys.text = \textcolor{stringliteral}{"{}\_"{}};}
+\DoxyCodeLine{00097         Binding?.Invoke(\textcolor{keyword}{true});}
+\DoxyCodeLine{00098     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classKeybindManager_a705483499b5ed662ca0e05bc2370d5cc}\label{classKeybindManager_a705483499b5ed662ca0e05bc2370d5cc}} 
@@ -135,13 +171,22 @@ static Action$<$ bool $>$ \mbox{\hyperlink{classKeybindManager_a6edc96d4aa66644f
 
 
 
-См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00063}{63}}
+Установить название настройки управления  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em new\+Name} & Новое название\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00077}{77}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00064     \{}
-\DoxyCodeLine{00065         keybindName.text = newName;}
-\DoxyCodeLine{00066     \}}
+\DoxyCodeLine{00078     \{}
+\DoxyCodeLine{00079         keybindName.text = newName;}
+\DoxyCodeLine{00080     \}}
 
 \end{DoxyCode}
 
@@ -155,7 +200,7 @@ static Action$<$ bool $>$ \mbox{\hyperlink{classKeybindManager_a6edc96d4aa66644f
 
 
 
-См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00013}{13}}
+См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00016}{16}}
 
 \mbox{\Hypertarget{classKeybindManager_a59dc80eba58b1fe028b901bb2d4771c8}\label{classKeybindManager_a59dc80eba58b1fe028b901bb2d4771c8}} 
 \index{KeybindManager@{KeybindManager}!keyChanged@{keyChanged}}
@@ -165,10 +210,10 @@ static Action$<$ bool $>$ \mbox{\hyperlink{classKeybindManager_a6edc96d4aa66644f
 
 
 
-См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00012}{12}}
+См. определение в файле \mbox{\hyperlink{KeybindManager_8cs_source}{Keybind\+Manager.\+cs}} строка \mbox{\hyperlink{KeybindManager_8cs_source_l00015}{15}}
 
 
 
 Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
 \item 
-Vuji/\+Assets/\+Scripts/\+UIScripts/Keybind\+Manager.\+cs\end{DoxyCompactItemize}
+Vuji/\+Assets/\+Scripts/\+UIScripts/\+Managers/Keybind\+Manager.\+cs\end{DoxyCompactItemize}

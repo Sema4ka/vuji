@@ -11,7 +11,6 @@ public class StartEndZone : MonoBehaviour
         List<BaseItem> inventory = player.GetComponent<Inventory>().GetComponent<List<BaseItem>>();
         if (inventory.Contains(item))
         {
-            //�������� �����
         }
     }
 }

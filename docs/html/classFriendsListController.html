@@ -81,7 +81,7 @@ $(function() {
 <tr class="memdesc:a484d06175495dc41e793b5baa2c0af72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод открывает/скрывает список друзей   <a href="classFriendsListController.html#a484d06175495dc41e793b5baa2c0af72">Подробнее...</a><br /></td></tr>
 <tr class="separator:a484d06175495dc41e793b5baa2c0af72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13257206d6a8a35d02ad3be9a286a8ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFriendsListController.html#a13257206d6a8a35d02ad3be9a286a8ca">FindFriendsByName</a> ()</td></tr>
-<tr class="memdesc:a13257206d6a8a35d02ad3be9a286a8ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод для поиск пользователь с похожем именем Затем в корутине будет вызван метод FillFriendsList из <a class="el" href="classControllers.html">Controllers</a>   <a href="classFriendsListController.html#a13257206d6a8a35d02ad3be9a286a8ca">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:a13257206d6a8a35d02ad3be9a286a8ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод для поиск пользователь с похожем именем Затем в корутине будет вызван метод FillFriendsList из <a class="el" href="classControllers.html" title="Класс для взаимодействий с сервером Vuji">Controllers</a>   <a href="classFriendsListController.html#a13257206d6a8a35d02ad3be9a286a8ca">Подробнее...</a><br /></td></tr>
 <tr class="separator:a13257206d6a8a35d02ad3be9a286a8ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6d5dbe01cb3521cdb941a1c9a141be3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFriendsListController.html#ab6d5dbe01cb3521cdb941a1c9a141be3">FillFriendsList</a> (<a class="el" href="classStructsResponse_1_1UserInfoObject.html">UserInfoObject</a>[] userInfoObjects)</td></tr>
 <tr class="memdesc:ab6d5dbe01cb3521cdb941a1c9a141be3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заполнение ScrollView префабами найденых пользователей   <a href="classFriendsListController.html#ab6d5dbe01cb3521cdb941a1c9a141be3">Подробнее...</a><br /></td></tr>
@@ -145,7 +145,7 @@ $(function() {
 <div class="line"><span class="lineno">   78</span>            instance.transform.SetParent(uiFriendListScrollContent.transform, <span class="keyword">false</span>);</div>
 <div class="line"><span class="lineno">   79</span>        }</div>
 <div class="line"><span class="lineno">   80</span>    }</div>
-<div class="ttc" id="aclassFriendItemManager_html"><div class="ttname"><a href="classFriendItemManager.html">FriendItemManager</a></div><div class="ttdef"><b>Definition:</b> <a href="FriendItemManager_8cs_source.html#l00006">FriendItemManager.cs:7</a></div></div>
+<div class="ttc" id="aclassFriendItemManager_html"><div class="ttname"><a href="classFriendItemManager.html">FriendItemManager</a></div><div class="ttdoc">Модуль управления объектом пользователя, доступного для приглашения в группу (в лобби)</div><div class="ttdef"><b>Definition:</b> <a href="FriendItemManager_8cs_source.html#l00008">FriendItemManager.cs:9</a></div></div>
 <div class="ttc" id="aclassLobbyManager_html"><div class="ttname"><a href="classLobbyManager.html">LobbyManager</a></div><div class="ttdef"><b>Definition:</b> <a href="LobbyManager_8cs_source.html#l00009">LobbyManager.cs:10</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -173,13 +173,14 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p>Метод для поиск пользователь с похожем именем Затем в корутине будет вызван метод FillFriendsList из <a class="el" href="classControllers.html">Controllers</a>  </p>
+<p>Метод для поиск пользователь с похожем именем Затем в корутине будет вызван метод FillFriendsList из <a class="el" href="classControllers.html" title="Класс для взаимодействий с сервером Vuji">Controllers</a>  </p>
 
 <p class="definition">См. определение в файле <a class="el" href="FriendsListController_8cs_source.html">FriendsListController.cs</a> строка <a class="el" href="FriendsListController_8cs_source.html#l00049">49</a></p>
 <div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
 <div class="line"><span class="lineno">   51</span>        var friendsName = friendsNameInputField.text;</div>
-<div class="line"><span class="lineno">   52</span>        _controllers.FindFriendsByName(friendsName);</div>
+<div class="line"><span class="lineno">   52</span>        _controllers.<a class="code hl_function" href="classControllers.html#a7e6e116abf14552b284451f60ac9bf6f">FindFriendsByName</a>(friendsName);</div>
 <div class="line"><span class="lineno">   53</span>    }</div>
+<div class="ttc" id="aclassControllers_html_a7e6e116abf14552b284451f60ac9bf6f"><div class="ttname"><a href="classControllers.html#a7e6e116abf14552b284451f60ac9bf6f">Controllers.FindFriendsByName</a></div><div class="ttdeci">void FindFriendsByName(string friendsName)</div><div class="ttdoc">Поиск пользователя по имени</div><div class="ttdef"><b>Definition:</b> <a href="Controllers_8cs_source.html#l00082">Controllers.cs:82</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

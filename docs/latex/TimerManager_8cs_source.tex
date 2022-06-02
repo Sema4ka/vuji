@@ -1,5 +1,5 @@
 \hypertarget{TimerManager_8cs_source}{}\doxysection{Timer\+Manager.\+cs}
-\label{TimerManager_8cs_source}\index{Vuji/Assets/Scripts/UIScripts/TimerManager.cs@{Vuji/Assets/Scripts/UIScripts/TimerManager.cs}}
+\label{TimerManager_8cs_source}\index{Vuji/Assets/Scripts/UIScripts/Managers/TimerManager.cs@{Vuji/Assets/Scripts/UIScripts/Managers/TimerManager.cs}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00001}00001 \textcolor{keyword}{using }System;}
@@ -7,36 +7,35 @@
 \DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00003}00003 \textcolor{keyword}{using }System.Collections.Generic;}
 \DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00004}00004 \textcolor{keyword}{using }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00005}00005 \textcolor{keyword}{using }UnityEngine.UI;}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00006}00006 }
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00007}\mbox{\hyperlink{classTimerManager}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classTimerManager}{TimerManager}} : MonoBehaviour}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00008}00008 \{}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00009}00009     \textcolor{keyword}{public} \textcolor{keyword}{static} Action<bool> timerEnd;}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00010}00010     [SerializeField] Text timerText;}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00011}00011     [SerializeField] Slider timerSlider;}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00012}00012     [SerializeField] \textcolor{keywordtype}{float} timerInterval;}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00013}00013     \textcolor{keyword}{private} \textcolor{keywordtype}{float} timerValue;}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00014}00014     \textcolor{comment}{// Start is called before the first frame update}}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00015}00015     \textcolor{keywordtype}{void} Start()}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00016}00016     \{}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00017}00017         timerValue = 0f;}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00018}00018         timerSlider.minValue = 0f;}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00019}00019         timerSlider.maxValue = timerInterval;}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00020}00020     \}}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00021}00021 }
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00022}00022     \textcolor{comment}{// Update is called once per frame}}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00023}00023     \textcolor{keywordtype}{void} Update()}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00024}00024     \{}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00025}00025         timerValue += Time.deltaTime;}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00026}00026         \textcolor{keywordtype}{float} current = timerInterval -\/ timerValue;}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00027}00027         \textcolor{keywordflow}{if} (current < 0f)}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00028}00028         \{}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00029}00029             timerEnd?.Invoke(\textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00030}00030             current = 0f;}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00031}00031         \}}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00032}00032         timerSlider.value = current;}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00033}00033         timerText.text = Convert.ToInt32(current).ToString();}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00034}00034         }
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00035}00035     \}}
-\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00036}00036 \}}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00009}\mbox{\hyperlink{classTimerManager}{00009}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classTimerManager}{TimerManager}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00011}00011     \textcolor{keyword}{public} \textcolor{keyword}{static} Action<bool> timerEnd;}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00012}00012     [SerializeField, Tooltip(\textcolor{stringliteral}{"{}Текст таймера выбора класса"{}})] Text timerText;}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00013}00013     [SerializeField, Tooltip(\textcolor{stringliteral}{"{}Слайдер для отображения прогресса таймера"{}})] Slider timerSlider;}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00014}00014     [SerializeField, Tooltip(\textcolor{stringliteral}{"{}Заданное время для выбора класса"{}})] \textcolor{keywordtype}{float} timerInterval;}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00015}00015     \textcolor{keyword}{private} \textcolor{keywordtype}{float} timerValue;}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00016}00016     \textcolor{comment}{// Start is called before the first frame update}}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00017}00017     \textcolor{keywordtype}{void} Start()}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00018}00018     \{}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00019}00019         timerValue = 0f;}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00020}00020         timerSlider.minValue = 0f;}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00021}00021         timerSlider.maxValue = timerInterval;}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00022}00022     \}}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00024}00024     \textcolor{comment}{// Update is called once per frame}}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00025}00025     \textcolor{keywordtype}{void} Update()}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00026}00026     \{}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00027}00027         timerValue += Time.deltaTime;}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00028}00028         \textcolor{keywordtype}{float} current = timerInterval -\/ timerValue;}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00029}00029         \textcolor{keywordflow}{if} (current < 0f)}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00030}00030         \{}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00031}00031             timerEnd?.Invoke(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00032}00032             current = 0f;}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00033}00033         \}}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00034}00034         timerSlider.value = current;}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00035}00035         timerText.text = Convert.ToInt32(current).ToString();}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00037}00037     \}}
+\DoxyCodeLine{\Hypertarget{TimerManager_8cs_source_l00038}00038 \}}
 
 \end{DoxyCode}

@@ -1,5 +1,10 @@
 \hypertarget{classTeamHPBarUI}{}\doxysection{Класс Team\+HPBar\+UI}
 \label{classTeamHPBarUI}\index{TeamHPBarUI@{TeamHPBarUI}}
+
+
+Модуль для управления отдельным хп баром в панели списка участников команды   
+
+
 Граф наследования\+:Team\+HPBar\+UI\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,13 +15,13 @@
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classTeamHPBarUI_ae583df055d30b4cc43af22f567ef7f4b}{Set\+Entity}} (\mbox{\hyperlink{classBaseEntity}{Base\+Entity}} player, string name)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Функция установки целевой сущности  \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Подробное описание}
+Модуль для управления отдельным хп баром в панели списка участников команды  
 
-
-См. определение в файле \mbox{\hyperlink{TeamHPBarUI_8cs_source}{Team\+HPBar\+UI.\+cs}} строка \mbox{\hyperlink{TeamHPBarUI_8cs_source_l00006}{6}}
+См. определение в файле \mbox{\hyperlink{TeamHPBarUI_8cs_source}{Team\+HPBar\+UI.\+cs}} строка \mbox{\hyperlink{TeamHPBarUI_8cs_source_l00008}{8}}
 
 
 
@@ -29,18 +34,29 @@ void \mbox{\hyperlink{classTeamHPBarUI_ae583df055d30b4cc43af22f567ef7f4b}{Set\+E
 
 
 
-См. определение в файле \mbox{\hyperlink{TeamHPBarUI_8cs_source}{Team\+HPBar\+UI.\+cs}} строка \mbox{\hyperlink{TeamHPBarUI_8cs_source_l00036}{36}}
+Функция установки целевой сущности  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em player} & Целевая сущность\\
+\hline
+{\em name} & Имя целевого игрока\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{TeamHPBarUI_8cs_source}{Team\+HPBar\+UI.\+cs}} строка \mbox{\hyperlink{TeamHPBarUI_8cs_source_l00043}{43}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00037     \{}
-\DoxyCodeLine{00038         entity = player;}
-\DoxyCodeLine{00039         HealthBarText.text = name;}
-\DoxyCodeLine{00040     \}}
+\DoxyCodeLine{00044     \{}
+\DoxyCodeLine{00045         entity = player;}
+\DoxyCodeLine{00046         HealthBarText.text = name;}
+\DoxyCodeLine{00047     \}}
 
 \end{DoxyCode}
 
 
 Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
 \item 
-Vuji/\+Assets/\+Scripts/\+UIScripts/Team\+HPBar\+UI.\+cs\end{DoxyCompactItemize}
+Vuji/\+Assets/\+Scripts/\+UIScripts/\+Units/Team\+HPBar\+UI.\+cs\end{DoxyCompactItemize}

@@ -1,5 +1,5 @@
 \hypertarget{SkillCastTimer_8cs_source}{}\doxysection{Skill\+Cast\+Timer.\+cs}
-\label{SkillCastTimer_8cs_source}\index{Vuji/Assets/Scripts/UIScripts/SkillCastTimer.cs@{Vuji/Assets/Scripts/UIScripts/SkillCastTimer.cs}}
+\label{SkillCastTimer_8cs_source}\index{Vuji/Assets/Scripts/UIScripts/Units/SkillCastTimer.cs@{Vuji/Assets/Scripts/UIScripts/Units/SkillCastTimer.cs}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00001}00001 \textcolor{keyword}{using }System;}
@@ -7,45 +7,43 @@
 \DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00003}00003 \textcolor{keyword}{using }System.Collections.Generic;}
 \DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00004}00004 \textcolor{keyword}{using }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00005}00005 \textcolor{keyword}{using }UnityEngine.UI;}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00006}00006 }
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00007}\mbox{\hyperlink{classSkillCastTimer}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classSkillCastTimer}{SkillCastTimer}} : MonoBehaviour}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00008}00008 \{}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00009}00009     [SerializeField] Text timerText;}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00010}00010     [SerializeField] Slider timerSlider;}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00011}00011     \textcolor{keyword}{private} \textcolor{keywordtype}{float} timerInterval;}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00012}00012     \textcolor{keyword}{private} \textcolor{keywordtype}{float} timerValue;}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00013}00013 }
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00014}00014     \textcolor{keyword}{private} \textcolor{keywordtype}{void} Start()}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00015}00015     \{}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00016}00016         BaseSkill.onCast += StartTimer;}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00017}00017     \}}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00018}00018 }
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00019}00019     \textcolor{keyword}{private} \textcolor{keywordtype}{void} OnDestroy()}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00020}00020     \{}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00021}00021         BaseSkill.onCast -\/= StartTimer;}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00022}00022     \}}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00023}00023 }
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00024}00024     \textcolor{keyword}{public} \textcolor{keywordtype}{void} StartTimer(\textcolor{keywordtype}{float} time)}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00025}00025     \{}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00026}00026         timerValue = 0f;}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00027}00027         timerInterval = time;}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00028}00028         timerSlider.minValue = 0f;}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00029}00029         timerSlider.maxValue = time;}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00030}00030     \}}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00031}00031 }
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00032}00032     \textcolor{comment}{// Update is called once per frame}}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00033}00033     \textcolor{keywordtype}{void} Update()}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00034}00034     \{}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00035}00035         timerValue += Time.deltaTime;}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00036}00036         \textcolor{keywordtype}{float} current = timerInterval -\/ timerValue;}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00037}00037         \textcolor{keywordflow}{if} (current < 0f)}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00038}00038         \{}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00039}00039             current = 0f;}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00040}00040         \}}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00041}00041         timerSlider.value = current;}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00042}00042         timerText.text = current > 0f?Convert.ToInt32(current).ToString() + \textcolor{stringliteral}{"{}s"{}}:\textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00043}00043 }
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00044}00044     \}}
-\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00045}00045 \}}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00009}\mbox{\hyperlink{classSkillCastTimer}{00009}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classSkillCastTimer}{SkillCastTimer}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00011}00011     [SerializeField, Tooltip(\textcolor{stringliteral}{"{}Текстовое поле для отображения оставшегося времени"{}})] Text timerText; \textcolor{comment}{// Целевой текст таймера}}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00012}00012     [SerializeField, Tooltip(\textcolor{stringliteral}{"{}Слайдер для отображения оставшегося времени"{}})] Slider timerSlider; \textcolor{comment}{// Целевой слайдер таймера}}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00013}00013     \textcolor{keyword}{private} \textcolor{keywordtype}{float} timerInterval; \textcolor{comment}{// Время каста}}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00014}00014     \textcolor{keyword}{private} \textcolor{keywordtype}{float} timerValue; \textcolor{comment}{// Прошедшее время каста}}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00016}00016     \textcolor{keyword}{private} \textcolor{keywordtype}{void} Start()}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00017}00017     \{}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00018}00018         BaseSkill.onCast += \mbox{\hyperlink{classSkillCastTimer_a0a969267461c2d70a296bf4654ad5d53}{StartTimer}};}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00019}00019     \}}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00021}00021     \textcolor{keyword}{private} \textcolor{keywordtype}{void} OnDestroy()}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00022}00022     \{}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00023}00023         BaseSkill.onCast -\/= \mbox{\hyperlink{classSkillCastTimer_a0a969267461c2d70a296bf4654ad5d53}{StartTimer}};}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00024}00024     \}}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00029}\mbox{\hyperlink{classSkillCastTimer_a0a969267461c2d70a296bf4654ad5d53}{00029}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classSkillCastTimer_a0a969267461c2d70a296bf4654ad5d53}{StartTimer}}(\textcolor{keywordtype}{float} time)}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00030}00030     \{}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00031}00031         timerValue = 0f;}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00032}00032         timerInterval = time;}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00033}00033         timerSlider.minValue = 0f;}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00034}00034         timerSlider.maxValue = time;}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00035}00035     \}}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00037}00037     \textcolor{comment}{// Update is called once per frame}}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00038}00038     \textcolor{keywordtype}{void} Update()}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00039}00039     \{}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00040}00040         timerValue += Time.deltaTime;}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00041}00041         \textcolor{keywordtype}{float} current = timerInterval -\/ timerValue;}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00042}00042         \textcolor{keywordflow}{if} (current < 0f)}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00043}00043         \{}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00044}00044             current = 0f;}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00045}00045         \}}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00046}00046         timerSlider.value = current;}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00047}00047         timerText.text = current > 0f ? Convert.ToInt32(current).ToString() + \textcolor{stringliteral}{"{}s"{}} : \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00049}00049     \}}
+\DoxyCodeLine{\Hypertarget{SkillCastTimer_8cs_source_l00050}00050 \}}
 
 \end{DoxyCode}

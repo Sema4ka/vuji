@@ -1,5 +1,10 @@
 \hypertarget{classHealthBarManager}{}\doxysection{Класс Health\+Bar\+Manager}
 \label{classHealthBarManager}\index{HealthBarManager@{HealthBarManager}}
+
+
+Модуль для управления полоской жизней над сущностью   
+
+
 Граф наследования\+:Health\+Bar\+Manager\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,9 +15,9 @@
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classHealthBarManager_a8da00602e4c095264e5bb2512f8e9449}{Set\+Health}} (float health, float max\+Hp)
-\item 
+\begin{DoxyCompactList}\small\item\em Установить текущие и максимальные хп сущности  \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classHealthBarManager_a69ce9b7f42ede94f983f65a185a0f5ca}{Set\+Offset}} (Vector3 new\+Offset)
-\item 
+\begin{DoxyCompactList}\small\item\em Установить отклонение от позиции сущности  \end{DoxyCompactList}\item 
 Vector3 \mbox{\hyperlink{classHealthBarManager_adbda9707e283b1b445785470767d8e67}{Get\+Offset}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Открытые атрибуты}
@@ -23,9 +28,9 @@ Slider \mbox{\hyperlink{classHealthBarManager_a960d87393f6407701b35f62d6c7a9558}
 
 
 \doxysubsection{Подробное описание}
+Модуль для управления полоской жизней над сущностью  
 
-
-См. определение в файле \mbox{\hyperlink{HealthBarManager_8cs_source}{Health\+Bar\+Manager.\+cs}} строка \mbox{\hyperlink{HealthBarManager_8cs_source_l00006}{6}}
+См. определение в файле \mbox{\hyperlink{HealthBarManager_8cs_source}{Health\+Bar\+Manager.\+cs}} строка \mbox{\hyperlink{HealthBarManager_8cs_source_l00008}{8}}
 
 
 
@@ -38,13 +43,20 @@ Slider \mbox{\hyperlink{classHealthBarManager_a960d87393f6407701b35f62d6c7a9558}
 
 
 
-См. определение в файле \mbox{\hyperlink{HealthBarManager_8cs_source}{Health\+Bar\+Manager.\+cs}} строка \mbox{\hyperlink{HealthBarManager_8cs_source_l00038}{38}}
+
+
+\begin{DoxyReturn}{Возвращает}
+Текущее отклонение от позиции сущности
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{HealthBarManager_8cs_source}{Health\+Bar\+Manager.\+cs}} строка \mbox{\hyperlink{HealthBarManager_8cs_source_l00060}{60}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00039     \{}
-\DoxyCodeLine{00040         \textcolor{keywordflow}{return} offset;}
-\DoxyCodeLine{00041     \}}
+\DoxyCodeLine{00061     \{}
+\DoxyCodeLine{00062         \textcolor{keywordflow}{return} offset;}
+\DoxyCodeLine{00063     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classHealthBarManager_a8da00602e4c095264e5bb2512f8e9449}\label{classHealthBarManager_a8da00602e4c095264e5bb2512f8e9449}} 
@@ -55,16 +67,27 @@ Slider \mbox{\hyperlink{classHealthBarManager_a960d87393f6407701b35f62d6c7a9558}
 
 
 
-См. определение в файле \mbox{\hyperlink{HealthBarManager_8cs_source}{Health\+Bar\+Manager.\+cs}} строка \mbox{\hyperlink{HealthBarManager_8cs_source_l00020}{20}}
+Установить текущие и максимальные хп сущности  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em health} & Текущее хп\\
+\hline
+{\em max\+Hp} & Максимальное хп\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{HealthBarManager_8cs_source}{Health\+Bar\+Manager.\+cs}} строка \mbox{\hyperlink{HealthBarManager_8cs_source_l00032}{32}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00021     \{}
-\DoxyCodeLine{00022         gameObject.SetActive(health < maxHp);}
-\DoxyCodeLine{00023         slider.value = health;}
-\DoxyCodeLine{00024         slider.maxValue = maxHp;}
-\DoxyCodeLine{00025         slider.fillRect.GetComponentInChildren<Image>().color = Color.Lerp(Low, High, slider.normalizedValue);}
-\DoxyCodeLine{00026     \}}
+\DoxyCodeLine{00033     \{}
+\DoxyCodeLine{00034         gameObject.SetActive(health < maxHp);}
+\DoxyCodeLine{00035         slider.value = health;}
+\DoxyCodeLine{00036         slider.maxValue = maxHp;}
+\DoxyCodeLine{00037         slider.fillRect.GetComponentInChildren<Image>().color = Color.Lerp(Low, High, slider.normalizedValue);}
+\DoxyCodeLine{00038     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classHealthBarManager_a69ce9b7f42ede94f983f65a185a0f5ca}\label{classHealthBarManager_a69ce9b7f42ede94f983f65a185a0f5ca}} 
@@ -75,13 +98,22 @@ Slider \mbox{\hyperlink{classHealthBarManager_a960d87393f6407701b35f62d6c7a9558}
 
 
 
-См. определение в файле \mbox{\hyperlink{HealthBarManager_8cs_source}{Health\+Bar\+Manager.\+cs}} строка \mbox{\hyperlink{HealthBarManager_8cs_source_l00034}{34}}
+Установить отклонение от позиции сущности  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em new\+Offset} & Новое отклонение\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{HealthBarManager_8cs_source}{Health\+Bar\+Manager.\+cs}} строка \mbox{\hyperlink{HealthBarManager_8cs_source_l00052}{52}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00035     \{}
-\DoxyCodeLine{00036         offset = newOffset;}
-\DoxyCodeLine{00037     \}}
+\DoxyCodeLine{00053     \{}
+\DoxyCodeLine{00054         offset = newOffset;}
+\DoxyCodeLine{00055     \}}
 
 \end{DoxyCode}
 
@@ -95,10 +127,10 @@ Slider \mbox{\hyperlink{classHealthBarManager_a960d87393f6407701b35f62d6c7a9558}
 
 
 
-См. определение в файле \mbox{\hyperlink{HealthBarManager_8cs_source}{Health\+Bar\+Manager.\+cs}} строка \mbox{\hyperlink{HealthBarManager_8cs_source_l00008}{8}}
+См. определение в файле \mbox{\hyperlink{HealthBarManager_8cs_source}{Health\+Bar\+Manager.\+cs}} строка \mbox{\hyperlink{HealthBarManager_8cs_source_l00010}{10}}
 
 
 
 Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
 \item 
-Vuji/\+Assets/\+Scripts/\+UIScripts/Health\+Bar\+Manager.\+cs\end{DoxyCompactItemize}
+Vuji/\+Assets/\+Scripts/\+UIScripts/\+Managers/Health\+Bar\+Manager.\+cs\end{DoxyCompactItemize}

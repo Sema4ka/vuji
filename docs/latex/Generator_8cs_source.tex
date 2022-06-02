@@ -21,7 +21,7 @@
 \DoxyCodeLine{\Hypertarget{Generator_8cs_source_l00017}00017     \{}
 \DoxyCodeLine{\Hypertarget{Generator_8cs_source_l00018}00018         spawnedRooms = \textcolor{keyword}{new} \mbox{\hyperlink{classRoom}{Room}}[Width, Height];}
 \DoxyCodeLine{\Hypertarget{Generator_8cs_source_l00019}00019         spawnedRooms[Width / 2, 0] = StartingRoom;}
-\DoxyCodeLine{\Hypertarget{Generator_8cs_source_l00020}00020         Debug.Log(\textcolor{stringliteral}{"{}стартовая комната на "{}} +Width / 2 + \textcolor{stringliteral}{"{} "{}} + 0);}
+\DoxyCodeLine{\Hypertarget{Generator_8cs_source_l00020}00020         Debug.Log(\textcolor{stringliteral}{"{}"{}} +Width / 2 + \textcolor{stringliteral}{"{} "{}} + 0);}
 \DoxyCodeLine{\Hypertarget{Generator_8cs_source_l00021}00021 }
 \DoxyCodeLine{\Hypertarget{Generator_8cs_source_l00022}00022 }
 \DoxyCodeLine{\Hypertarget{Generator_8cs_source_l00023}00023         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < Width * Height -\/ 1; i++)}
@@ -54,7 +54,7 @@
 \DoxyCodeLine{\Hypertarget{Generator_8cs_source_l00050}00050         Vector2Int position = vacantPlaces.ElementAt(Random.Range(0, vacantPlaces.Count));}
 \DoxyCodeLine{\Hypertarget{Generator_8cs_source_l00051}00051         newRoom.transform.position = \textcolor{keyword}{new} Vector3(position.x +1, position.y+1, 0) * Random.Range(12, 20);}
 \DoxyCodeLine{\Hypertarget{Generator_8cs_source_l00052}00052         spawnedRooms[position.x, position.y] = newRoom;}
-\DoxyCodeLine{\Hypertarget{Generator_8cs_source_l00053}00053         Debug.Log(\textcolor{stringliteral}{"{}комната на "{}}+ position.x+\textcolor{stringliteral}{"{} "{}} + position.y);}
+\DoxyCodeLine{\Hypertarget{Generator_8cs_source_l00053}00053         Debug.Log(\textcolor{stringliteral}{"{}"{}}+ position.x+\textcolor{stringliteral}{"{} "{}} + position.y);}
 \DoxyCodeLine{\Hypertarget{Generator_8cs_source_l00054}00054 }
 \DoxyCodeLine{\Hypertarget{Generator_8cs_source_l00055}00055 }
 \DoxyCodeLine{\Hypertarget{Generator_8cs_source_l00056}00056     \}}

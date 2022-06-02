@@ -26,7 +26,7 @@
 \DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00022}00022     \textcolor{keywordtype}{void} Start()}
 \DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00023}00023     \{}
 \DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00024}00024         \_controllers = GetComponent<Controllers>();}
-\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00025}00025         \_controllers.SetLocalUserName(username);}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00025}00025         \_controllers.\mbox{\hyperlink{classControllers_a3b868d40ff50b6cd5bdf6613dba7f497}{SetLocalUserName}}(username);}
 \DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00026}00026         \textcolor{comment}{// username.text = PhotonNetwork.NickName; // SET TO USERNAME}}
 \DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00027}00027     \}}
 \DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00028}00028 }
@@ -41,7 +41,7 @@
 \DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00040}00040 }
 \DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00044}00044     \textcolor{keyword}{private} \textcolor{keywordtype}{void} LeaveAccount()}
 \DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00045}00045     \{}
-\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00046}00046         \_controllers.UserOffline();}
+\DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00046}00046         \_controllers.\mbox{\hyperlink{classControllers_a0d2da5df96caf05023c10b65f5a8dfbb}{UserOffline}}();}
 \DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00047}00047         gameObject.GetComponent<\mbox{\hyperlink{classSocketServerController}{SocketServerController}}>().CloseConnection();}
 \DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00048}00048         SceneManager.LoadScene(\textcolor{stringliteral}{"{}Login"{}});}
 \DoxyCodeLine{\Hypertarget{LobbyManager_8cs_source_l00049}00049     \}}

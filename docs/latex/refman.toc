@@ -1,0 +1,819 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {russian}{}
+\contentsline {chapter}{\numberline {1}\IeC {\CYRA }\IeC {\cyrl }\IeC {\cyrf }\IeC {\cyra }\IeC {\cyrv }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrishrt } \IeC {\cyru }\IeC {\cyrk }\IeC {\cyra }\IeC {\cyrz }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrsftsn } \IeC {\cyrp }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrv } \IeC {\cyri }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrn }}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}\IeC {\CYRP }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrv }\IeC {\cyra } \IeC {\cyri }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrn }}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}\IeC {\CYRI }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyrh }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyri }\IeC {\cyrishrt } \IeC {\cyrs }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyro }\IeC {\cyrk } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyro }\IeC {\cyrv }}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}\IeC {\CYRI }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyrh }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyro }\IeC {\cyrv }}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}\IeC {\CYRA }\IeC {\cyrl }\IeC {\cyrf }\IeC {\cyra }\IeC {\cyrv }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrishrt } \IeC {\cyru }\IeC {\cyrk }\IeC {\cyra }\IeC {\cyrz }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrsftsn } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyro }\IeC {\cyrv }}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyrery }}{7}{section.3.1}
+\contentsline {chapter}{\numberline {4}\IeC {\CYRS }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyro }\IeC {\cyrk } \IeC {\cyrf }\IeC {\cyra }\IeC {\cyrishrt }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrv }}{11}{chapter.4}
+\contentsline {section}{\numberline {4.1}\IeC {\CYRF }\IeC {\cyra }\IeC {\cyrishrt }\IeC {\cyrl }\IeC {\cyrery }}{11}{section.4.1}
+\contentsline {chapter}{\numberline {5}\IeC {\CYRP }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrv }\IeC {\cyra } \IeC {\cyri }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrn }}{13}{chapter.5}
+\contentsline {section}{\numberline {5.1}\IeC {\CYRP }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrv }\IeC {\cyro } \IeC {\cyri }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrn } Game\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Settings}{13}{section.5.1}
+\contentsline {section}{\numberline {5.2}\IeC {\CYRP }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrv }\IeC {\cyro } \IeC {\cyri }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrn } Servers\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Info}{13}{section.5.2}
+\contentsline {section}{\numberline {5.3}\IeC {\CYRP }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrv }\IeC {\cyro } \IeC {\cyri }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrn } Structs\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Request}{13}{section.5.3}
+\contentsline {section}{\numberline {5.4}\IeC {\CYRP }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrv }\IeC {\cyro } \IeC {\cyri }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrn } Structs\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Response}{13}{section.5.4}
+\contentsline {chapter}{\numberline {6}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyrery }}{15}{chapter.6}
+\contentsline {section}{\numberline {6.1}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Accept\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Friend\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Invite}{15}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{15}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{15}{subsection.6.1.2}
+\contentsline {subsubsection}{\numberline {6.1.2.1}OnConnectedToMaster()}{16}{subsubsection.6.1.2.1}
+\contentsline {subsubsection}{\numberline {6.1.2.2}OnJoinedRoom()}{16}{subsubsection.6.1.2.2}
+\contentsline {subsubsection}{\numberline {6.1.2.3}StartAcceptInvite()}{16}{subsubsection.6.1.2.3}
+\contentsline {subsection}{\numberline {6.1.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{16}{subsection.6.1.3}
+\contentsline {subsubsection}{\numberline {6.1.3.1}roomName}{16}{subsubsection.6.1.3.1}
+\contentsline {section}{\numberline {6.2}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Agression\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Trigger}{17}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{17}{subsection.6.2.1}
+\contentsline {section}{\numberline {6.3}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Animation\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Player}{17}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{18}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{18}{subsection.6.3.2}
+\contentsline {subsubsection}{\numberline {6.3.2.1}ChangePlayerAnimation()}{18}{subsubsection.6.3.2.1}
+\contentsline {subsubsection}{\numberline {6.3.2.2}ChangePlayerAnimation\_q()}{18}{subsubsection.6.3.2.2}
+\contentsline {subsubsection}{\numberline {6.3.2.3}getCurrentMovingState()}{18}{subsubsection.6.3.2.3}
+\contentsline {subsection}{\numberline {6.3.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{19}{subsection.6.3.3}
+\contentsline {subsubsection}{\numberline {6.3.3.1}\_attack}{19}{subsubsection.6.3.3.1}
+\contentsline {subsubsection}{\numberline {6.3.3.2}\_down}{19}{subsubsection.6.3.3.2}
+\contentsline {subsubsection}{\numberline {6.3.3.3}\_drink}{19}{subsubsection.6.3.3.3}
+\contentsline {subsubsection}{\numberline {6.3.3.4}\_idle}{19}{subsubsection.6.3.3.4}
+\contentsline {subsubsection}{\numberline {6.3.3.5}\_left}{19}{subsubsection.6.3.3.5}
+\contentsline {subsubsection}{\numberline {6.3.3.6}\_move}{19}{subsubsection.6.3.3.6}
+\contentsline {subsubsection}{\numberline {6.3.3.7}\_right}{20}{subsubsection.6.3.3.7}
+\contentsline {subsubsection}{\numberline {6.3.3.8}\_shot}{20}{subsubsection.6.3.3.8}
+\contentsline {subsubsection}{\numberline {6.3.3.9}\_up}{20}{subsubsection.6.3.3.9}
+\contentsline {subsubsection}{\numberline {6.3.3.10}movingState}{20}{subsubsection.6.3.3.10}
+\contentsline {section}{\numberline {6.4}\IeC {\CYRS }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyru }\IeC {\cyrk }\IeC {\cyrt }\IeC {\cyru }\IeC {\cyrr }\IeC {\cyra } Player\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}AOE.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}AOEstruct}{20}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{20}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{21}{subsection.6.4.2}
+\contentsline {subsubsection}{\numberline {6.4.2.1}AOE}{21}{subsubsection.6.4.2.1}
+\contentsline {subsubsection}{\numberline {6.4.2.2}AOEKey}{21}{subsubsection.6.4.2.2}
+\contentsline {section}{\numberline {6.5}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Appe}{21}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{21}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{21}{subsection.6.5.2}
+\contentsline {subsubsection}{\numberline {6.5.2.1}UseItem()}{22}{subsubsection.6.5.2.1}
+\contentsline {section}{\numberline {6.6}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Attack\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Trigger}{22}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{22}{subsection.6.6.1}
+\contentsline {section}{\numberline {6.7}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Base\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}AOE}{22}{section.6.7}
+\contentsline {subsection}{\numberline {6.7.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{23}{subsection.6.7.1}
+\contentsline {subsection}{\numberline {6.7.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{23}{subsection.6.7.2}
+\contentsline {subsubsection}{\numberline {6.7.2.1}GetAoeDescription()}{23}{subsubsection.6.7.2.1}
+\contentsline {subsubsection}{\numberline {6.7.2.2}GetAoeName()}{23}{subsubsection.6.7.2.2}
+\contentsline {subsubsection}{\numberline {6.7.2.3}SetDamageTags()}{23}{subsubsection.6.7.2.3}
+\contentsline {subsubsection}{\numberline {6.7.2.4}SetDestroyTags()}{24}{subsubsection.6.7.2.4}
+\contentsline {subsubsection}{\numberline {6.7.2.5}SetSenderCollider()}{24}{subsubsection.6.7.2.5}
+\contentsline {section}{\numberline {6.8}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Base\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Effect}{24}{section.6.8}
+\contentsline {subsection}{\numberline {6.8.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{25}{subsection.6.8.1}
+\contentsline {subsection}{\numberline {6.8.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{25}{subsection.6.8.2}
+\contentsline {subsubsection}{\numberline {6.8.2.1}ApplyEffect()}{25}{subsubsection.6.8.2.1}
+\contentsline {subsection}{\numberline {6.8.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{25}{subsection.6.8.3}
+\contentsline {subsubsection}{\numberline {6.8.3.1}description}{25}{subsubsection.6.8.3.1}
+\contentsline {subsubsection}{\numberline {6.8.3.2}duration}{25}{subsubsection.6.8.3.2}
+\contentsline {subsubsection}{\numberline {6.8.3.3}effectName}{25}{subsubsection.6.8.3.3}
+\contentsline {subsubsection}{\numberline {6.8.3.4}effectSprite}{26}{subsubsection.6.8.3.4}
+\contentsline {section}{\numberline {6.9}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Base\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Entity}{26}{section.6.9}
+\contentsline {subsection}{\numberline {6.9.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{27}{subsection.6.9.1}
+\contentsline {subsection}{\numberline {6.9.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{27}{subsection.6.9.2}
+\contentsline {subsubsection}{\numberline {6.9.2.1}AddEffect()}{27}{subsubsection.6.9.2.1}
+\contentsline {subsubsection}{\numberline {6.9.2.2}DecreaseDamage()}{27}{subsubsection.6.9.2.2}
+\contentsline {subsubsection}{\numberline {6.9.2.3}DecreaseDefense()}{28}{subsubsection.6.9.2.3}
+\contentsline {subsubsection}{\numberline {6.9.2.4}DecreaseSpeed()}{28}{subsubsection.6.9.2.4}
+\contentsline {subsubsection}{\numberline {6.9.2.5}deSelectSkill()}{28}{subsubsection.6.9.2.5}
+\contentsline {subsubsection}{\numberline {6.9.2.6}GetBaseDamage()}{28}{subsubsection.6.9.2.6}
+\contentsline {subsubsection}{\numberline {6.9.2.7}GetDefense()}{28}{subsubsection.6.9.2.7}
+\contentsline {subsubsection}{\numberline {6.9.2.8}GetEnergyPoints()}{29}{subsubsection.6.9.2.8}
+\contentsline {subsubsection}{\numberline {6.9.2.9}GetEntityName()}{29}{subsubsection.6.9.2.9}
+\contentsline {subsubsection}{\numberline {6.9.2.10}GetHealthPoints()}{29}{subsubsection.6.9.2.10}
+\contentsline {subsubsection}{\numberline {6.9.2.11}GetMaxEnergyPoints()}{29}{subsubsection.6.9.2.11}
+\contentsline {subsubsection}{\numberline {6.9.2.12}GetMaxHealthPoints()}{29}{subsubsection.6.9.2.12}
+\contentsline {subsubsection}{\numberline {6.9.2.13}GetMoveSpeed()}{30}{subsubsection.6.9.2.13}
+\contentsline {subsubsection}{\numberline {6.9.2.14}GetSelectedSkill()}{30}{subsubsection.6.9.2.14}
+\contentsline {subsubsection}{\numberline {6.9.2.15}Heal()}{30}{subsubsection.6.9.2.15}
+\contentsline {subsubsection}{\numberline {6.9.2.16}IncreaseDamage()}{30}{subsubsection.6.9.2.16}
+\contentsline {subsubsection}{\numberline {6.9.2.17}IncreaseDefense()}{30}{subsubsection.6.9.2.17}
+\contentsline {subsubsection}{\numberline {6.9.2.18}IncreaseMaxEnergy()}{31}{subsubsection.6.9.2.18}
+\contentsline {subsubsection}{\numberline {6.9.2.19}IncreaseMaxHealth()}{31}{subsubsection.6.9.2.19}
+\contentsline {subsubsection}{\numberline {6.9.2.20}IncreaseSpeed()}{31}{subsubsection.6.9.2.20}
+\contentsline {subsubsection}{\numberline {6.9.2.21}selectSkill()}{31}{subsubsection.6.9.2.21}
+\contentsline {subsubsection}{\numberline {6.9.2.22}setIsCooldown()}{32}{subsubsection.6.9.2.22}
+\contentsline {subsubsection}{\numberline {6.9.2.23}spendEnergy()}{32}{subsubsection.6.9.2.23}
+\contentsline {subsubsection}{\numberline {6.9.2.24}TakeDamage()}{32}{subsubsection.6.9.2.24}
+\contentsline {subsubsection}{\numberline {6.9.2.25}TickPoints()}{32}{subsubsection.6.9.2.25}
+\contentsline {subsubsection}{\numberline {6.9.2.26}UpdateText()}{33}{subsubsection.6.9.2.26}
+\contentsline {subsubsection}{\numberline {6.9.2.27}UseSkill()}{33}{subsubsection.6.9.2.27}
+\contentsline {subsection}{\numberline {6.9.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{33}{subsection.6.9.3}
+\contentsline {subsubsection}{\numberline {6.9.3.1}\_controller}{33}{subsubsection.6.9.3.1}
+\contentsline {subsubsection}{\numberline {6.9.3.2}\_droppedItemPrefab}{33}{subsubsection.6.9.3.2}
+\contentsline {subsubsection}{\numberline {6.9.3.3}displayedName}{34}{subsubsection.6.9.3.3}
+\contentsline {subsubsection}{\numberline {6.9.3.4}healthBar}{34}{subsubsection.6.9.3.4}
+\contentsline {subsubsection}{\numberline {6.9.3.5}OnEffectApply}{34}{subsubsection.6.9.3.5}
+\contentsline {subsubsection}{\numberline {6.9.3.6}OnSkillSelectionChange}{34}{subsubsection.6.9.3.6}
+\contentsline {subsubsection}{\numberline {6.9.3.7}skills}{34}{subsubsection.6.9.3.7}
+\contentsline {subsubsection}{\numberline {6.9.3.8}teamSpawn}{34}{subsubsection.6.9.3.8}
+\contentsline {subsection}{\numberline {6.9.4}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrishrt } \IeC {\cyrs }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyro }\IeC {\cyrk } \IeC {\cyrs }\IeC {\cyrv }\IeC {\cyro }\IeC {\cyrishrt }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrv }}{34}{subsection.6.9.4}
+\contentsline {subsubsection}{\numberline {6.9.4.1}isDead}{35}{subsubsection.6.9.4.1}
+\contentsline {section}{\numberline {6.10}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Base\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Item}{35}{section.6.10}
+\contentsline {subsection}{\numberline {6.10.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{35}{subsection.6.10.1}
+\contentsline {subsection}{\numberline {6.10.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{35}{subsection.6.10.2}
+\contentsline {subsubsection}{\numberline {6.10.2.1}GetAmount()}{35}{subsubsection.6.10.2.1}
+\contentsline {subsubsection}{\numberline {6.10.2.2}GetDescription()}{36}{subsubsection.6.10.2.2}
+\contentsline {subsubsection}{\numberline {6.10.2.3}GetImage()}{36}{subsubsection.6.10.2.3}
+\contentsline {subsubsection}{\numberline {6.10.2.4}GetItemName()}{36}{subsubsection.6.10.2.4}
+\contentsline {subsubsection}{\numberline {6.10.2.5}SetAmount()}{36}{subsubsection.6.10.2.5}
+\contentsline {subsubsection}{\numberline {6.10.2.6}UseItem()}{37}{subsubsection.6.10.2.6}
+\contentsline {section}{\numberline {6.11}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Base\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Passive\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Skill}{37}{section.6.11}
+\contentsline {subsection}{\numberline {6.11.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{37}{subsection.6.11.1}
+\contentsline {subsection}{\numberline {6.11.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{37}{subsection.6.11.2}
+\contentsline {subsubsection}{\numberline {6.11.2.1}ActivatePassiveSkill()}{38}{subsubsection.6.11.2.1}
+\contentsline {subsubsection}{\numberline {6.11.2.2}GetDescription()}{38}{subsubsection.6.11.2.2}
+\contentsline {subsubsection}{\numberline {6.11.2.3}GetName()}{38}{subsubsection.6.11.2.3}
+\contentsline {subsection}{\numberline {6.11.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{38}{subsection.6.11.3}
+\contentsline {subsubsection}{\numberline {6.11.3.1}skillDescription}{38}{subsubsection.6.11.3.1}
+\contentsline {subsubsection}{\numberline {6.11.3.2}skillName}{38}{subsubsection.6.11.3.2}
+\contentsline {section}{\numberline {6.12}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Base\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Projectile}{39}{section.6.12}
+\contentsline {subsection}{\numberline {6.12.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{39}{subsection.6.12.1}
+\contentsline {subsection}{\numberline {6.12.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{39}{subsection.6.12.2}
+\contentsline {subsubsection}{\numberline {6.12.2.1}AddDamage()}{39}{subsubsection.6.12.2.1}
+\contentsline {subsubsection}{\numberline {6.12.2.2}GetProjectileDescription()}{39}{subsubsection.6.12.2.2}
+\contentsline {subsubsection}{\numberline {6.12.2.3}GetProjectileName()}{40}{subsubsection.6.12.2.3}
+\contentsline {subsubsection}{\numberline {6.12.2.4}SetAimAngel()}{40}{subsubsection.6.12.2.4}
+\contentsline {subsubsection}{\numberline {6.12.2.5}SetAimDirection()}{40}{subsubsection.6.12.2.5}
+\contentsline {subsubsection}{\numberline {6.12.2.6}SetDamageTags()}{40}{subsubsection.6.12.2.6}
+\contentsline {subsubsection}{\numberline {6.12.2.7}SetDestroyTags()}{40}{subsubsection.6.12.2.7}
+\contentsline {subsubsection}{\numberline {6.12.2.8}SetSenderCollider()}{41}{subsubsection.6.12.2.8}
+\contentsline {section}{\numberline {6.13}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Base\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Skill}{41}{section.6.13}
+\contentsline {subsection}{\numberline {6.13.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{42}{subsection.6.13.1}
+\contentsline {subsection}{\numberline {6.13.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{42}{subsection.6.13.2}
+\contentsline {subsubsection}{\numberline {6.13.2.1}GetCastTime()}{42}{subsubsection.6.13.2.1}
+\contentsline {subsubsection}{\numberline {6.13.2.2}GetCooldownTime()}{42}{subsubsection.6.13.2.2}
+\contentsline {subsubsection}{\numberline {6.13.2.3}GetCost()}{42}{subsubsection.6.13.2.3}
+\contentsline {subsubsection}{\numberline {6.13.2.4}GetDescription()}{42}{subsubsection.6.13.2.4}
+\contentsline {subsubsection}{\numberline {6.13.2.5}GetName()}{43}{subsubsection.6.13.2.5}
+\contentsline {subsubsection}{\numberline {6.13.2.6}GetSprite()}{43}{subsubsection.6.13.2.6}
+\contentsline {subsubsection}{\numberline {6.13.2.7}UseSkill()}{43}{subsubsection.6.13.2.7}
+\contentsline {subsection}{\numberline {6.13.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{43}{subsection.6.13.3}
+\contentsline {subsubsection}{\numberline {6.13.3.1}cancelMovementOnCast}{43}{subsubsection.6.13.3.1}
+\contentsline {subsubsection}{\numberline {6.13.3.2}castTime}{43}{subsubsection.6.13.3.2}
+\contentsline {subsubsection}{\numberline {6.13.3.3}cooldown}{44}{subsubsection.6.13.3.3}
+\contentsline {subsubsection}{\numberline {6.13.3.4}energyCost}{44}{subsubsection.6.13.3.4}
+\contentsline {subsubsection}{\numberline {6.13.3.5}onCast}{44}{subsubsection.6.13.3.5}
+\contentsline {subsubsection}{\numberline {6.13.3.6}onRelease}{44}{subsubsection.6.13.3.6}
+\contentsline {subsubsection}{\numberline {6.13.3.7}skillDescription}{44}{subsubsection.6.13.3.7}
+\contentsline {subsubsection}{\numberline {6.13.3.8}skillName}{44}{subsubsection.6.13.3.8}
+\contentsline {subsubsection}{\numberline {6.13.3.9}skillSprite}{45}{subsubsection.6.13.3.9}
+\contentsline {section}{\numberline {6.14}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Base\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Upgrade}{45}{section.6.14}
+\contentsline {subsection}{\numberline {6.14.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{45}{subsection.6.14.1}
+\contentsline {subsection}{\numberline {6.14.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{45}{subsection.6.14.2}
+\contentsline {subsubsection}{\numberline {6.14.2.1}ApplyUpgrade()}{45}{subsubsection.6.14.2.1}
+\contentsline {subsubsection}{\numberline {6.14.2.2}GetCost()}{46}{subsubsection.6.14.2.2}
+\contentsline {subsubsection}{\numberline {6.14.2.3}GetDescription()}{46}{subsubsection.6.14.2.3}
+\contentsline {subsubsection}{\numberline {6.14.2.4}GetName()}{46}{subsubsection.6.14.2.4}
+\contentsline {section}{\numberline {6.15}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Berserk}{46}{section.6.15}
+\contentsline {subsection}{\numberline {6.15.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{46}{subsection.6.15.1}
+\contentsline {section}{\numberline {6.16}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Camera\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Follow}{47}{section.6.16}
+\contentsline {subsection}{\numberline {6.16.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{47}{subsection.6.16.1}
+\contentsline {subsection}{\numberline {6.16.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{47}{subsection.6.16.2}
+\contentsline {subsubsection}{\numberline {6.16.2.1}player}{47}{subsubsection.6.16.2.1}
+\contentsline {section}{\numberline {6.17}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Camera\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Player}{47}{section.6.17}
+\contentsline {subsection}{\numberline {6.17.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{48}{subsection.6.17.1}
+\contentsline {section}{\numberline {6.18}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Class\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Selection}{48}{section.6.18}
+\contentsline {subsection}{\numberline {6.18.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{48}{subsection.6.18.1}
+\contentsline {section}{\numberline {6.19}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Connect}{48}{section.6.19}
+\contentsline {subsection}{\numberline {6.19.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{48}{subsection.6.19.1}
+\contentsline {subsection}{\numberline {6.19.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{49}{subsection.6.19.2}
+\contentsline {subsubsection}{\numberline {6.19.2.1}OnConnectedToMaster()}{49}{subsubsection.6.19.2.1}
+\contentsline {section}{\numberline {6.20}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Controllers}{49}{section.6.20}
+\contentsline {subsection}{\numberline {6.20.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{50}{subsection.6.20.1}
+\contentsline {subsection}{\numberline {6.20.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{50}{subsection.6.20.2}
+\contentsline {subsubsection}{\numberline {6.20.2.1}CheckVujiServer()}{50}{subsubsection.6.20.2.1}
+\contentsline {subsubsection}{\numberline {6.20.2.2}FindFriendsByName()}{50}{subsubsection.6.20.2.2}
+\contentsline {subsubsection}{\numberline {6.20.2.3}GetUserID()}{50}{subsubsection.6.20.2.3}
+\contentsline {subsubsection}{\numberline {6.20.2.4}Login()}{51}{subsubsection.6.20.2.4}
+\contentsline {subsubsection}{\numberline {6.20.2.5}Register()}{51}{subsubsection.6.20.2.5}
+\contentsline {subsubsection}{\numberline {6.20.2.6}SetLocalUserName()}{52}{subsubsection.6.20.2.6}
+\contentsline {subsubsection}{\numberline {6.20.2.7}UserOffline()}{52}{subsubsection.6.20.2.7}
+\contentsline {subsubsection}{\numberline {6.20.2.8}UserOnline()}{52}{subsubsection.6.20.2.8}
+\contentsline {section}{\numberline {6.21}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Data\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Base}{53}{section.6.21}
+\contentsline {subsection}{\numberline {6.21.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{53}{subsection.6.21.1}
+\contentsline {subsection}{\numberline {6.21.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{53}{subsection.6.21.2}
+\contentsline {subsubsection}{\numberline {6.21.2.1}AddKeybind()}{53}{subsubsection.6.21.2.1}
+\contentsline {subsubsection}{\numberline {6.21.2.2}AddSetting()}{54}{subsubsection.6.21.2.2}
+\contentsline {subsubsection}{\numberline {6.21.2.3}ExistKeybind()}{54}{subsubsection.6.21.2.3}
+\contentsline {subsubsection}{\numberline {6.21.2.4}ExistSetting()}{55}{subsubsection.6.21.2.4}
+\contentsline {subsubsection}{\numberline {6.21.2.5}GetKeybinds()}{55}{subsubsection.6.21.2.5}
+\contentsline {subsubsection}{\numberline {6.21.2.6}GetSettings()}{56}{subsubsection.6.21.2.6}
+\contentsline {subsubsection}{\numberline {6.21.2.7}GetToken()}{56}{subsubsection.6.21.2.7}
+\contentsline {subsubsection}{\numberline {6.21.2.8}SetKeybind()}{57}{subsubsection.6.21.2.8}
+\contentsline {subsubsection}{\numberline {6.21.2.9}SetSetting()}{57}{subsubsection.6.21.2.9}
+\contentsline {subsubsection}{\numberline {6.21.2.10}SetToken()}{58}{subsubsection.6.21.2.10}
+\contentsline {section}{\numberline {6.22}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } DISABLESUKA}{58}{section.6.22}
+\contentsline {subsection}{\numberline {6.22.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{59}{subsection.6.22.1}
+\contentsline {section}{\numberline {6.23}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Displayed\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Item}{59}{section.6.23}
+\contentsline {subsection}{\numberline {6.23.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{59}{subsection.6.23.1}
+\contentsline {subsection}{\numberline {6.23.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{59}{subsection.6.23.2}
+\contentsline {subsubsection}{\numberline {6.23.2.1}OnPointerDown()}{59}{subsubsection.6.23.2.1}
+\contentsline {subsubsection}{\numberline {6.23.2.2}OnPointerUp()}{60}{subsubsection.6.23.2.2}
+\contentsline {subsection}{\numberline {6.23.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{60}{subsection.6.23.3}
+\contentsline {subsubsection}{\numberline {6.23.3.1}displayedItem}{60}{subsubsection.6.23.3.1}
+\contentsline {subsubsection}{\numberline {6.23.3.2}inventoryPanel}{60}{subsubsection.6.23.3.2}
+\contentsline {subsubsection}{\numberline {6.23.3.3}itemId}{61}{subsubsection.6.23.3.3}
+\contentsline {subsubsection}{\numberline {6.23.3.4}itemPosition}{61}{subsubsection.6.23.3.4}
+\contentsline {subsubsection}{\numberline {6.23.3.5}onItemDrop}{61}{subsubsection.6.23.3.5}
+\contentsline {subsubsection}{\numberline {6.23.3.6}onItemSwap}{61}{subsubsection.6.23.3.6}
+\contentsline {section}{\numberline {6.24}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Dropped\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Item}{61}{section.6.24}
+\contentsline {subsection}{\numberline {6.24.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{62}{subsection.6.24.1}
+\contentsline {subsection}{\numberline {6.24.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{62}{subsection.6.24.2}
+\contentsline {subsubsection}{\numberline {6.24.2.1}SetItem()}{62}{subsubsection.6.24.2.1}
+\contentsline {subsection}{\numberline {6.24.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{62}{subsection.6.24.3}
+\contentsline {subsubsection}{\numberline {6.24.3.1}itemData}{62}{subsubsection.6.24.3.1}
+\contentsline {section}{\numberline {6.25}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Drunk}{62}{section.6.25}
+\contentsline {subsection}{\numberline {6.25.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{63}{subsection.6.25.1}
+\contentsline {subsection}{\numberline {6.25.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{63}{subsection.6.25.2}
+\contentsline {subsubsection}{\numberline {6.25.2.1}ApplyEffect()}{63}{subsubsection.6.25.2.1}
+\contentsline {subsubsection}{\numberline {6.25.2.2}DrunkEffect()}{63}{subsubsection.6.25.2.2}
+\contentsline {subsection}{\numberline {6.25.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{63}{subsection.6.25.3}
+\contentsline {subsubsection}{\numberline {6.25.3.1}additionalDefense}{64}{subsubsection.6.25.3.1}
+\contentsline {section}{\numberline {6.26}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Drunkard}{64}{section.6.26}
+\contentsline {subsection}{\numberline {6.26.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{64}{subsection.6.26.1}
+\contentsline {subsection}{\numberline {6.26.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{64}{subsection.6.26.2}
+\contentsline {subsubsection}{\numberline {6.26.2.1}UseSkill()}{65}{subsubsection.6.26.2.1}
+\contentsline {section}{\numberline {6.27}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Effects\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}List\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager}{65}{section.6.27}
+\contentsline {subsection}{\numberline {6.27.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{65}{subsection.6.27.1}
+\contentsline {section}{\numberline {6.28}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Effect\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Timer\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager}{66}{section.6.28}
+\contentsline {subsection}{\numberline {6.28.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{66}{subsection.6.28.1}
+\contentsline {subsection}{\numberline {6.28.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{66}{subsection.6.28.2}
+\contentsline {subsubsection}{\numberline {6.28.2.1}SetEffect()}{66}{subsubsection.6.28.2.1}
+\contentsline {section}{\numberline {6.29}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } ENABLESUKA}{67}{section.6.29}
+\contentsline {subsection}{\numberline {6.29.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{67}{subsection.6.29.1}
+\contentsline {section}{\numberline {6.30}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } End\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game}{67}{section.6.30}
+\contentsline {subsection}{\numberline {6.30.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{67}{subsection.6.30.1}
+\contentsline {subsection}{\numberline {6.30.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{68}{subsection.6.30.2}
+\contentsline {subsubsection}{\numberline {6.30.2.1}TeamOneWin()}{68}{subsubsection.6.30.2.1}
+\contentsline {subsubsection}{\numberline {6.30.2.2}TeamTwoWin()}{68}{subsubsection.6.30.2.2}
+\contentsline {subsection}{\numberline {6.30.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{68}{subsection.6.30.3}
+\contentsline {subsubsection}{\numberline {6.30.3.1}OnGameEnd}{68}{subsubsection.6.30.3.1}
+\contentsline {section}{\numberline {6.31}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } End\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager}{68}{section.6.31}
+\contentsline {subsection}{\numberline {6.31.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{69}{subsection.6.31.1}
+\contentsline {subsection}{\numberline {6.31.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{69}{subsection.6.31.2}
+\contentsline {subsubsection}{\numberline {6.31.2.1}LeaveGame()}{69}{subsubsection.6.31.2.1}
+\contentsline {section}{\numberline {6.32}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Enemy\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}AI}{69}{section.6.32}
+\contentsline {subsection}{\numberline {6.32.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{70}{subsection.6.32.1}
+\contentsline {subsection}{\numberline {6.32.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{70}{subsection.6.32.2}
+\contentsline {subsubsection}{\numberline {6.32.2.1}AgressionStart()}{70}{subsubsection.6.32.2.1}
+\contentsline {subsection}{\numberline {6.32.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{70}{subsection.6.32.3}
+\contentsline {subsubsection}{\numberline {6.32.3.1}reachedEndOfPath}{70}{subsubsection.6.32.3.1}
+\contentsline {section}{\numberline {6.33}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Energy\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Bar\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}UI}{70}{section.6.33}
+\contentsline {subsection}{\numberline {6.33.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{71}{subsection.6.33.1}
+\contentsline {subsection}{\numberline {6.33.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{71}{subsection.6.33.2}
+\contentsline {subsubsection}{\numberline {6.33.2.1}SetEntity()}{71}{subsubsection.6.33.2.1}
+\contentsline {section}{\numberline {6.34}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Entity\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Melee}{71}{section.6.34}
+\contentsline {subsection}{\numberline {6.34.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{71}{subsection.6.34.1}
+\contentsline {subsection}{\numberline {6.34.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{71}{subsection.6.34.2}
+\contentsline {subsubsection}{\numberline {6.34.2.1}Attack()}{72}{subsubsection.6.34.2.1}
+\contentsline {section}{\numberline {6.35}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Entity\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Name\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager}{72}{section.6.35}
+\contentsline {subsection}{\numberline {6.35.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{73}{subsection.6.35.1}
+\contentsline {subsection}{\numberline {6.35.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{73}{subsection.6.35.2}
+\contentsline {subsubsection}{\numberline {6.35.2.1}GetOffset()}{73}{subsubsection.6.35.2.1}
+\contentsline {subsubsection}{\numberline {6.35.2.2}SetOffset()}{73}{subsubsection.6.35.2.2}
+\contentsline {subsection}{\numberline {6.35.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{73}{subsection.6.35.3}
+\contentsline {subsubsection}{\numberline {6.35.3.1}entityName}{73}{subsubsection.6.35.3.1}
+\contentsline {section}{\numberline {6.36}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Escape\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Menu}{74}{section.6.36}
+\contentsline {subsection}{\numberline {6.36.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{74}{subsection.6.36.1}
+\contentsline {subsection}{\numberline {6.36.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{74}{subsection.6.36.2}
+\contentsline {subsubsection}{\numberline {6.36.2.1}LeaveGame()}{74}{subsubsection.6.36.2.1}
+\contentsline {subsubsection}{\numberline {6.36.2.2}LeaveLobby()}{75}{subsubsection.6.36.2.2}
+\contentsline {subsubsection}{\numberline {6.36.2.3}OpenSettings()}{75}{subsubsection.6.36.2.3}
+\contentsline {subsubsection}{\numberline {6.36.2.4}ResumeGame()}{75}{subsubsection.6.36.2.4}
+\contentsline {section}{\numberline {6.37}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Exclamation}{75}{section.6.37}
+\contentsline {subsection}{\numberline {6.37.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{76}{subsection.6.37.1}
+\contentsline {subsection}{\numberline {6.37.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{76}{subsection.6.37.2}
+\contentsline {subsubsection}{\numberline {6.37.2.1}UseSkill()}{76}{subsubsection.6.37.2.1}
+\contentsline {section}{\numberline {6.38}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Structs\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Request.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Find\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Friends\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}By\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Name\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Struct\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Request}{76}{section.6.38}
+\contentsline {subsection}{\numberline {6.38.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{77}{subsection.6.38.1}
+\contentsline {subsection}{\numberline {6.38.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{77}{subsection.6.38.2}
+\contentsline {subsubsection}{\numberline {6.38.2.1}friendsName}{77}{subsubsection.6.38.2.1}
+\contentsline {section}{\numberline {6.39}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Structs\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Response.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Find\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Friends\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}By\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Name\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Struct\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Response}{77}{section.6.39}
+\contentsline {subsection}{\numberline {6.39.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{77}{subsection.6.39.1}
+\contentsline {subsection}{\numberline {6.39.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{77}{subsection.6.39.2}
+\contentsline {subsubsection}{\numberline {6.39.2.1}friends}{77}{subsubsection.6.39.2.1}
+\contentsline {section}{\numberline {6.40}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Fireball\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Skill}{78}{section.6.40}
+\contentsline {subsection}{\numberline {6.40.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{78}{subsection.6.40.1}
+\contentsline {subsection}{\numberline {6.40.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{78}{subsection.6.40.2}
+\contentsline {subsubsection}{\numberline {6.40.2.1}UseSkill()}{78}{subsubsection.6.40.2.1}
+\contentsline {section}{\numberline {6.41}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Flurry\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Of\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Fire}{79}{section.6.41}
+\contentsline {subsection}{\numberline {6.41.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{79}{subsection.6.41.1}
+\contentsline {subsection}{\numberline {6.41.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{79}{subsection.6.41.2}
+\contentsline {subsubsection}{\numberline {6.41.2.1}UseSkill()}{79}{subsubsection.6.41.2.1}
+\contentsline {section}{\numberline {6.42}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Friend\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Item\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager}{80}{section.6.42}
+\contentsline {subsection}{\numberline {6.42.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{80}{subsection.6.42.1}
+\contentsline {subsection}{\numberline {6.42.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{80}{subsection.6.42.2}
+\contentsline {subsubsection}{\numberline {6.42.2.1}InviteFriend()}{80}{subsubsection.6.42.2.1}
+\contentsline {subsection}{\numberline {6.42.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{81}{subsection.6.42.3}
+\contentsline {subsubsection}{\numberline {6.42.3.1}lobbyManager}{81}{subsubsection.6.42.3.1}
+\contentsline {subsubsection}{\numberline {6.42.3.2}userID}{81}{subsubsection.6.42.3.2}
+\contentsline {subsubsection}{\numberline {6.42.3.3}usernameTextField}{81}{subsubsection.6.42.3.3}
+\contentsline {section}{\numberline {6.43}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Friends\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}List\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Controller}{81}{section.6.43}
+\contentsline {subsection}{\numberline {6.43.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{82}{subsection.6.43.1}
+\contentsline {subsection}{\numberline {6.43.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{82}{subsection.6.43.2}
+\contentsline {subsubsection}{\numberline {6.43.2.1}FillFriendsList()}{82}{subsubsection.6.43.2.1}
+\contentsline {subsubsection}{\numberline {6.43.2.2}FindFriendsByName()}{82}{subsubsection.6.43.2.2}
+\contentsline {subsubsection}{\numberline {6.43.2.3}OpenFriendsList()}{83}{subsubsection.6.43.2.3}
+\contentsline {section}{\numberline {6.44}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Game\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Settings.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Settings\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Original}{83}{section.6.44}
+\contentsline {subsection}{\numberline {6.44.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{83}{subsection.6.44.1}
+\contentsline {subsection}{\numberline {6.44.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{83}{subsection.6.44.2}
+\contentsline {subsubsection}{\numberline {6.44.2.1}MaxPlayersInGame}{83}{subsubsection.6.44.2.1}
+\contentsline {section}{\numberline {6.45}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Generator}{84}{section.6.45}
+\contentsline {subsection}{\numberline {6.45.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{84}{subsection.6.45.1}
+\contentsline {subsection}{\numberline {6.45.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{84}{subsection.6.45.2}
+\contentsline {subsubsection}{\numberline {6.45.2.1}Height}{84}{subsubsection.6.45.2.1}
+\contentsline {subsubsection}{\numberline {6.45.2.2}RoomPrefabs}{84}{subsubsection.6.45.2.2}
+\contentsline {subsubsection}{\numberline {6.45.2.3}StartingRoom}{84}{subsubsection.6.45.2.3}
+\contentsline {subsubsection}{\numberline {6.45.2.4}Width}{85}{subsubsection.6.45.2.4}
+\contentsline {section}{\numberline {6.46}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Health\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Bar\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager}{85}{section.6.46}
+\contentsline {subsection}{\numberline {6.46.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{85}{subsection.6.46.1}
+\contentsline {subsection}{\numberline {6.46.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{85}{subsection.6.46.2}
+\contentsline {subsubsection}{\numberline {6.46.2.1}GetOffset()}{86}{subsubsection.6.46.2.1}
+\contentsline {subsubsection}{\numberline {6.46.2.2}SetHealth()}{86}{subsubsection.6.46.2.2}
+\contentsline {subsubsection}{\numberline {6.46.2.3}SetOffset()}{86}{subsubsection.6.46.2.3}
+\contentsline {subsection}{\numberline {6.46.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{87}{subsection.6.46.3}
+\contentsline {subsubsection}{\numberline {6.46.3.1}slider}{87}{subsubsection.6.46.3.1}
+\contentsline {section}{\numberline {6.47}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Health\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Bar\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}UI}{87}{section.6.47}
+\contentsline {subsection}{\numberline {6.47.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{87}{subsection.6.47.1}
+\contentsline {subsection}{\numberline {6.47.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{87}{subsection.6.47.2}
+\contentsline {subsubsection}{\numberline {6.47.2.1}SetEntity()}{87}{subsubsection.6.47.2.1}
+\contentsline {section}{\numberline {6.48}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Input\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Controller\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Player}{88}{section.6.48}
+\contentsline {subsection}{\numberline {6.48.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{88}{subsection.6.48.1}
+\contentsline {section}{\numberline {6.49}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Inventory}{88}{section.6.49}
+\contentsline {subsection}{\numberline {6.49.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{89}{subsection.6.49.1}
+\contentsline {subsection}{\numberline {6.49.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{89}{subsection.6.49.2}
+\contentsline {subsubsection}{\numberline {6.49.2.1}AddItem()}{89}{subsubsection.6.49.2.1}
+\contentsline {subsubsection}{\numberline {6.49.2.2}ClearInventory()}{89}{subsubsection.6.49.2.2}
+\contentsline {subsubsection}{\numberline {6.49.2.3}DropItem()}{89}{subsubsection.6.49.2.3}
+\contentsline {subsubsection}{\numberline {6.49.2.4}GetAllItems()}{90}{subsubsection.6.49.2.4}
+\contentsline {subsubsection}{\numberline {6.49.2.5}SyncronisedDrop()}{90}{subsubsection.6.49.2.5}
+\contentsline {subsection}{\numberline {6.49.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{90}{subsection.6.49.3}
+\contentsline {subsubsection}{\numberline {6.49.3.1}inventoryItems}{90}{subsubsection.6.49.3.1}
+\contentsline {subsubsection}{\numberline {6.49.3.2}onItemAdded}{90}{subsubsection.6.49.3.2}
+\contentsline {section}{\numberline {6.50}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Inventory\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Window}{91}{section.6.50}
+\contentsline {subsection}{\numberline {6.50.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{91}{subsection.6.50.1}
+\contentsline {subsection}{\numberline {6.50.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{91}{subsection.6.50.2}
+\contentsline {subsubsection}{\numberline {6.50.2.1}OnSpawn()}{91}{subsubsection.6.50.2.1}
+\contentsline {subsubsection}{\numberline {6.50.2.2}Start()}{91}{subsubsection.6.50.2.2}
+\contentsline {section}{\numberline {6.51}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Invite\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Friend}{92}{section.6.51}
+\contentsline {subsection}{\numberline {6.51.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{92}{subsection.6.51.1}
+\contentsline {subsection}{\numberline {6.51.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{92}{subsection.6.51.2}
+\contentsline {subsubsection}{\numberline {6.51.2.1}OnJoinedRoom()}{92}{subsubsection.6.51.2.1}
+\contentsline {subsubsection}{\numberline {6.51.2.2}StartInviteFriend()}{92}{subsubsection.6.51.2.2}
+\contentsline {subsection}{\numberline {6.51.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{93}{subsection.6.51.3}
+\contentsline {subsubsection}{\numberline {6.51.3.1}invitedUserID}{93}{subsubsection.6.51.3.1}
+\contentsline {subsubsection}{\numberline {6.51.3.2}roomName}{93}{subsubsection.6.51.3.2}
+\contentsline {section}{\numberline {6.52}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Keybind}{93}{section.6.52}
+\contentsline {subsection}{\numberline {6.52.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{93}{subsection.6.52.1}
+\contentsline {subsection}{\numberline {6.52.2}\IeC {\CYRK }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyru }\IeC {\cyrk }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrr }(\IeC {\cyrery })}{93}{subsection.6.52.2}
+\contentsline {subsubsection}{\numberline {6.52.2.1}Keybind()}{93}{subsubsection.6.52.2.1}
+\contentsline {subsection}{\numberline {6.52.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{94}{subsection.6.52.3}
+\contentsline {subsubsection}{\numberline {6.52.3.1}category}{94}{subsubsection.6.52.3.1}
+\contentsline {subsubsection}{\numberline {6.52.3.2}key}{94}{subsubsection.6.52.3.2}
+\contentsline {subsubsection}{\numberline {6.52.3.3}name}{94}{subsubsection.6.52.3.3}
+\contentsline {section}{\numberline {6.53}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Keybind\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager}{94}{section.6.53}
+\contentsline {subsection}{\numberline {6.53.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{95}{subsection.6.53.1}
+\contentsline {subsection}{\numberline {6.53.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{95}{subsection.6.53.2}
+\contentsline {subsubsection}{\numberline {6.53.2.1}GetKey()}{95}{subsubsection.6.53.2.1}
+\contentsline {subsubsection}{\numberline {6.53.2.2}GetName()}{96}{subsubsection.6.53.2.2}
+\contentsline {subsubsection}{\numberline {6.53.2.3}ResetKeybind()}{96}{subsubsection.6.53.2.3}
+\contentsline {subsubsection}{\numberline {6.53.2.4}SetKey()}{96}{subsubsection.6.53.2.4}
+\contentsline {subsubsection}{\numberline {6.53.2.5}SetKeybind()}{96}{subsubsection.6.53.2.5}
+\contentsline {subsubsection}{\numberline {6.53.2.6}SetName()}{97}{subsubsection.6.53.2.6}
+\contentsline {subsection}{\numberline {6.53.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{97}{subsection.6.53.3}
+\contentsline {subsubsection}{\numberline {6.53.3.1}Binding}{97}{subsubsection.6.53.3.1}
+\contentsline {subsubsection}{\numberline {6.53.3.2}keyChanged}{97}{subsubsection.6.53.3.2}
+\contentsline {section}{\numberline {6.54}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Key\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Handler}{98}{section.6.54}
+\contentsline {subsection}{\numberline {6.54.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{99}{subsection.6.54.1}
+\contentsline {subsection}{\numberline {6.54.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{99}{subsection.6.54.2}
+\contentsline {subsubsection}{\numberline {6.54.2.1}GetKeybind()}{99}{subsubsection.6.54.2.1}
+\contentsline {subsubsection}{\numberline {6.54.2.2}GetKeybinds()}{99}{subsubsection.6.54.2.2}
+\contentsline {subsubsection}{\numberline {6.54.2.3}GetUIOpened()}{100}{subsubsection.6.54.2.3}
+\contentsline {subsubsection}{\numberline {6.54.2.4}IsClearAndPlaying()}{100}{subsubsection.6.54.2.4}
+\contentsline {subsubsection}{\numberline {6.54.2.5}IsPaused()}{100}{subsubsection.6.54.2.5}
+\contentsline {subsubsection}{\numberline {6.54.2.6}NormalizeKeybind()}{100}{subsubsection.6.54.2.6}
+\contentsline {subsubsection}{\numberline {6.54.2.7}Pause()}{101}{subsubsection.6.54.2.7}
+\contentsline {subsubsection}{\numberline {6.54.2.8}SetKeybind()}{101}{subsubsection.6.54.2.8}
+\contentsline {subsubsection}{\numberline {6.54.2.9}SetUIOpened()}{102}{subsubsection.6.54.2.9}
+\contentsline {subsection}{\numberline {6.54.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{102}{subsection.6.54.3}
+\contentsline {subsubsection}{\numberline {6.54.3.1}abilityKeys}{102}{subsubsection.6.54.3.1}
+\contentsline {subsubsection}{\numberline {6.54.3.2}AllKeys}{102}{subsubsection.6.54.3.2}
+\contentsline {subsubsection}{\numberline {6.54.3.3}instance}{103}{subsubsection.6.54.3.3}
+\contentsline {subsubsection}{\numberline {6.54.3.4}keyPressed}{103}{subsubsection.6.54.3.4}
+\contentsline {subsubsection}{\numberline {6.54.3.5}movementKeys}{103}{subsubsection.6.54.3.5}
+\contentsline {subsubsection}{\numberline {6.54.3.6}numbersKeyCodes}{103}{subsubsection.6.54.3.6}
+\contentsline {subsubsection}{\numberline {6.54.3.7}uiKeys}{103}{subsubsection.6.54.3.7}
+\contentsline {section}{\numberline {6.55}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Leave\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Room}{104}{section.6.55}
+\contentsline {subsection}{\numberline {6.55.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{104}{subsection.6.55.1}
+\contentsline {subsection}{\numberline {6.55.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{104}{subsection.6.55.2}
+\contentsline {subsubsection}{\numberline {6.55.2.1}HideLeaveRoomButton()}{104}{subsubsection.6.55.2.1}
+\contentsline {subsubsection}{\numberline {6.55.2.2}LeaveFromRoom()}{104}{subsubsection.6.55.2.2}
+\contentsline {subsubsection}{\numberline {6.55.2.3}ShowLeaveRoomButton()}{105}{subsubsection.6.55.2.3}
+\contentsline {section}{\numberline {6.56}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Lobby\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager}{105}{section.6.56}
+\contentsline {subsection}{\numberline {6.56.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{105}{subsection.6.56.1}
+\contentsline {subsection}{\numberline {6.56.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{105}{subsection.6.56.2}
+\contentsline {subsubsection}{\numberline {6.56.2.1}AcceptInviteFriend()}{105}{subsubsection.6.56.2.1}
+\contentsline {subsubsection}{\numberline {6.56.2.2}CreateInviteFriend()}{106}{subsubsection.6.56.2.2}
+\contentsline {subsubsection}{\numberline {6.56.2.3}CreateLobbyAndInviteUser()}{106}{subsubsection.6.56.2.3}
+\contentsline {subsubsection}{\numberline {6.56.2.4}OnConnectedToMaster()}{107}{subsubsection.6.56.2.4}
+\contentsline {subsubsection}{\numberline {6.56.2.5}OnJoinedRoom()}{107}{subsubsection.6.56.2.5}
+\contentsline {subsubsection}{\numberline {6.56.2.6}ToggleSettings()}{107}{subsubsection.6.56.2.6}
+\contentsline {subsection}{\numberline {6.56.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{107}{subsection.6.56.3}
+\contentsline {subsubsection}{\numberline {6.56.3.1}playerStatus}{107}{subsubsection.6.56.3.1}
+\contentsline {section}{\numberline {6.57}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Login\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager}{108}{section.6.57}
+\contentsline {subsection}{\numberline {6.57.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{108}{subsection.6.57.1}
+\contentsline {subsection}{\numberline {6.57.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{108}{subsection.6.57.2}
+\contentsline {subsubsection}{\numberline {6.57.2.1}LoginInAccount()}{108}{subsubsection.6.57.2.1}
+\contentsline {subsubsection}{\numberline {6.57.2.2}ShowRegisterScene()}{108}{subsubsection.6.57.2.2}
+\contentsline {subsection}{\numberline {6.57.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{109}{subsection.6.57.3}
+\contentsline {subsubsection}{\numberline {6.57.3.1}loginInput}{109}{subsubsection.6.57.3.1}
+\contentsline {subsubsection}{\numberline {6.57.3.2}passwordInput}{109}{subsubsection.6.57.3.2}
+\contentsline {section}{\numberline {6.58}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Structs\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Request.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Login\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Struct\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Request}{109}{section.6.58}
+\contentsline {subsection}{\numberline {6.58.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{109}{subsection.6.58.1}
+\contentsline {subsection}{\numberline {6.58.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{109}{subsection.6.58.2}
+\contentsline {subsubsection}{\numberline {6.58.2.1}login}{109}{subsubsection.6.58.2.1}
+\contentsline {subsubsection}{\numberline {6.58.2.2}password}{110}{subsubsection.6.58.2.2}
+\contentsline {section}{\numberline {6.59}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Servers\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Info.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Main\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Server\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Info}{110}{section.6.59}
+\contentsline {subsection}{\numberline {6.59.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{110}{subsection.6.59.1}
+\contentsline {subsection}{\numberline {6.59.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{110}{subsection.6.59.2}
+\contentsline {subsubsection}{\numberline {6.59.2.1}ServerDomain}{110}{subsubsection.6.59.2.1}
+\contentsline {section}{\numberline {6.60}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Manager\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game}{110}{section.6.60}
+\contentsline {subsection}{\numberline {6.60.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{111}{subsection.6.60.1}
+\contentsline {subsection}{\numberline {6.60.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{111}{subsection.6.60.2}
+\contentsline {subsubsection}{\numberline {6.60.2.1}OnPlayerPropertiesUpdate()}{111}{subsubsection.6.60.2.1}
+\contentsline {section}{\numberline {6.61}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Movement\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Player}{111}{section.6.61}
+\contentsline {subsection}{\numberline {6.61.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{112}{subsection.6.61.1}
+\contentsline {subsection}{\numberline {6.61.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{112}{subsection.6.61.2}
+\contentsline {subsubsection}{\numberline {6.61.2.1}cancelMovement()}{112}{subsubsection.6.61.2.1}
+\contentsline {subsection}{\numberline {6.61.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{112}{subsection.6.61.3}
+\contentsline {subsubsection}{\numberline {6.61.3.1}canMove}{112}{subsubsection.6.61.3.1}
+\contentsline {section}{\numberline {6.62}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Notice\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Invite\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager}{112}{section.6.62}
+\contentsline {subsection}{\numberline {6.62.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{113}{subsection.6.62.1}
+\contentsline {subsection}{\numberline {6.62.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{113}{subsection.6.62.2}
+\contentsline {subsubsection}{\numberline {6.62.2.1}AcceptInvite()}{113}{subsubsection.6.62.2.1}
+\contentsline {subsubsection}{\numberline {6.62.2.2}CancelInvite()}{113}{subsubsection.6.62.2.2}
+\contentsline {subsection}{\numberline {6.62.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{113}{subsection.6.62.3}
+\contentsline {subsubsection}{\numberline {6.62.3.1}lobbyManager}{114}{subsubsection.6.62.3.1}
+\contentsline {subsubsection}{\numberline {6.62.3.2}roomName}{114}{subsubsection.6.62.3.2}
+\contentsline {subsubsection}{\numberline {6.62.3.3}usernameTextField}{114}{subsubsection.6.62.3.3}
+\contentsline {section}{\numberline {6.63}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Notice\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}List\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Controller}{114}{section.6.63}
+\contentsline {subsection}{\numberline {6.63.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{114}{subsection.6.63.1}
+\contentsline {subsection}{\numberline {6.63.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{114}{subsection.6.63.2}
+\contentsline {subsubsection}{\numberline {6.63.2.1}AddInviteNotice()}{114}{subsubsection.6.63.2.1}
+\contentsline {subsubsection}{\numberline {6.63.2.2}OpenNoticeList()}{115}{subsubsection.6.63.2.2}
+\contentsline {section}{\numberline {6.64}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } On\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Fire}{115}{section.6.64}
+\contentsline {subsection}{\numberline {6.64.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{116}{subsection.6.64.1}
+\contentsline {subsection}{\numberline {6.64.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{116}{subsection.6.64.2}
+\contentsline {subsubsection}{\numberline {6.64.2.1}ApplyEffect()}{116}{subsubsection.6.64.2.1}
+\contentsline {subsubsection}{\numberline {6.64.2.2}OnFireEffect()}{116}{subsubsection.6.64.2.2}
+\contentsline {section}{\numberline {6.65}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Play}{116}{section.6.65}
+\contentsline {subsection}{\numberline {6.65.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{117}{subsection.6.65.1}
+\contentsline {subsection}{\numberline {6.65.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{117}{subsection.6.65.2}
+\contentsline {subsubsection}{\numberline {6.65.2.1}OnConnectedToMaster()}{117}{subsubsection.6.65.2.1}
+\contentsline {subsubsection}{\numberline {6.65.2.2}OnFriendListUpdate()}{117}{subsubsection.6.65.2.2}
+\contentsline {subsubsection}{\numberline {6.65.2.3}StartPlayInGame()}{118}{subsubsection.6.65.2.3}
+\contentsline {section}{\numberline {6.66}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Player\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}AOE}{118}{section.6.66}
+\contentsline {subsection}{\numberline {6.66.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{118}{subsection.6.66.1}
+\contentsline {subsection}{\numberline {6.66.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{119}{subsection.6.66.2}
+\contentsline {subsubsection}{\numberline {6.66.2.1}Attack()}{119}{subsubsection.6.66.2.1}
+\contentsline {section}{\numberline {6.67}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Player\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Melee}{119}{section.6.67}
+\contentsline {subsection}{\numberline {6.67.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{119}{subsection.6.67.1}
+\contentsline {subsection}{\numberline {6.67.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{119}{subsection.6.67.2}
+\contentsline {subsubsection}{\numberline {6.67.2.1}MasterCheckMeleeAttack()}{120}{subsubsection.6.67.2.1}
+\contentsline {section}{\numberline {6.68}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Player\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Projectile}{120}{section.6.68}
+\contentsline {subsection}{\numberline {6.68.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{120}{subsection.6.68.1}
+\contentsline {subsection}{\numberline {6.68.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{120}{subsection.6.68.2}
+\contentsline {subsubsection}{\numberline {6.68.2.1}Attack()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{121}{subsubsection.6.68.2.1}
+\contentsline {subsubsection}{\numberline {6.68.2.2}Attack()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{121}{subsubsection.6.68.2.2}
+\contentsline {section}{\numberline {6.69}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Player\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Script}{121}{section.6.69}
+\contentsline {subsection}{\numberline {6.69.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{121}{subsection.6.69.1}
+\contentsline {subsection}{\numberline {6.69.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{122}{subsection.6.69.2}
+\contentsline {subsubsection}{\numberline {6.69.2.1}KillPlayer()}{122}{subsubsection.6.69.2.1}
+\contentsline {section}{\numberline {6.70}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Players\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Founded}{122}{section.6.70}
+\contentsline {subsection}{\numberline {6.70.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{122}{subsection.6.70.1}
+\contentsline {subsection}{\numberline {6.70.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{123}{subsection.6.70.2}
+\contentsline {subsubsection}{\numberline {6.70.2.1}HidePlayersFounded()}{123}{subsubsection.6.70.2.1}
+\contentsline {subsubsection}{\numberline {6.70.2.2}ShowPlayersFounded()}{123}{subsubsection.6.70.2.2}
+\contentsline {subsubsection}{\numberline {6.70.2.3}UpdatePlayersFounded()}{123}{subsubsection.6.70.2.3}
+\contentsline {section}{\numberline {6.71}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Players\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Teams\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager}{124}{section.6.71}
+\contentsline {subsection}{\numberline {6.71.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{124}{subsection.6.71.1}
+\contentsline {subsection}{\numberline {6.71.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{124}{subsection.6.71.2}
+\contentsline {subsubsection}{\numberline {6.71.2.1}PlayerInTeamOneDied()}{124}{subsubsection.6.71.2.1}
+\contentsline {subsubsection}{\numberline {6.71.2.2}PlayerInTeamTwoDied()}{124}{subsubsection.6.71.2.2}
+\contentsline {section}{\numberline {6.72}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Player\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Upgrades}{125}{section.6.72}
+\contentsline {subsection}{\numberline {6.72.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{125}{subsection.6.72.1}
+\contentsline {subsection}{\numberline {6.72.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{125}{subsection.6.72.2}
+\contentsline {subsubsection}{\numberline {6.72.2.1}AddUpgrade()}{125}{subsubsection.6.72.2.1}
+\contentsline {subsubsection}{\numberline {6.72.2.2}AddXp()}{126}{subsubsection.6.72.2.2}
+\contentsline {subsubsection}{\numberline {6.72.2.3}GetXp()}{126}{subsubsection.6.72.2.3}
+\contentsline {subsubsection}{\numberline {6.72.2.4}SwitchPanels()}{126}{subsubsection.6.72.2.4}
+\contentsline {section}{\numberline {6.73}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Poison}{126}{section.6.73}
+\contentsline {subsection}{\numberline {6.73.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{127}{subsection.6.73.1}
+\contentsline {subsection}{\numberline {6.73.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{127}{subsection.6.73.2}
+\contentsline {subsubsection}{\numberline {6.73.2.1}ApplyEffect()}{127}{subsubsection.6.73.2.1}
+\contentsline {subsubsection}{\numberline {6.73.2.2}PoisonEffect()}{127}{subsubsection.6.73.2.2}
+\contentsline {subsection}{\numberline {6.73.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{127}{subsection.6.73.3}
+\contentsline {subsubsection}{\numberline {6.73.3.1}damageTickSeconds}{128}{subsubsection.6.73.3.1}
+\contentsline {subsubsection}{\numberline {6.73.3.2}posionDamage}{128}{subsubsection.6.73.3.2}
+\contentsline {section}{\numberline {6.74}\IeC {\CYRS }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyru }\IeC {\cyrk }\IeC {\cyrt }\IeC {\cyru }\IeC {\cyrr }\IeC {\cyra } Player\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Projectile.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Projectile}{128}{section.6.74}
+\contentsline {subsection}{\numberline {6.74.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{128}{subsection.6.74.1}
+\contentsline {subsection}{\numberline {6.74.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{128}{subsection.6.74.2}
+\contentsline {subsubsection}{\numberline {6.74.2.1}projectile}{128}{subsubsection.6.74.2.1}
+\contentsline {subsubsection}{\numberline {6.74.2.2}projectileKey}{128}{subsubsection.6.74.2.2}
+\contentsline {section}{\numberline {6.75}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Register\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager}{129}{section.6.75}
+\contentsline {subsection}{\numberline {6.75.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{129}{subsection.6.75.1}
+\contentsline {subsection}{\numberline {6.75.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{129}{subsection.6.75.2}
+\contentsline {subsubsection}{\numberline {6.75.2.1}RegisterAccount()}{129}{subsubsection.6.75.2.1}
+\contentsline {subsubsection}{\numberline {6.75.2.2}ShowLoginScene()}{130}{subsubsection.6.75.2.2}
+\contentsline {subsection}{\numberline {6.75.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{130}{subsection.6.75.3}
+\contentsline {subsubsection}{\numberline {6.75.3.1}loginInput}{130}{subsubsection.6.75.3.1}
+\contentsline {subsubsection}{\numberline {6.75.3.2}passwordOneInput}{130}{subsubsection.6.75.3.2}
+\contentsline {subsubsection}{\numberline {6.75.3.3}passwordTwoInput}{130}{subsubsection.6.75.3.3}
+\contentsline {section}{\numberline {6.76}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Structs\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Request.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Register\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Struct\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Request}{130}{section.6.76}
+\contentsline {subsection}{\numberline {6.76.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{131}{subsection.6.76.1}
+\contentsline {subsection}{\numberline {6.76.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{131}{subsection.6.76.2}
+\contentsline {subsubsection}{\numberline {6.76.2.1}login}{131}{subsubsection.6.76.2.1}
+\contentsline {subsubsection}{\numberline {6.76.2.2}password}{131}{subsubsection.6.76.2.2}
+\contentsline {section}{\numberline {6.77}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Room}{131}{section.6.77}
+\contentsline {subsection}{\numberline {6.77.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{131}{subsection.6.77.1}
+\contentsline {subsection}{\numberline {6.77.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{132}{subsection.6.77.2}
+\contentsline {subsubsection}{\numberline {6.77.2.1}RotateRandomly()}{132}{subsubsection.6.77.2.1}
+\contentsline {section}{\numberline {6.78}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Setting}{132}{section.6.78}
+\contentsline {subsection}{\numberline {6.78.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{132}{subsection.6.78.1}
+\contentsline {subsection}{\numberline {6.78.2}\IeC {\CYRK }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyru }\IeC {\cyrk }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrr }(\IeC {\cyrery })}{132}{subsection.6.78.2}
+\contentsline {subsubsection}{\numberline {6.78.2.1}Setting()}{132}{subsubsection.6.78.2.1}
+\contentsline {subsection}{\numberline {6.78.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{133}{subsection.6.78.3}
+\contentsline {subsubsection}{\numberline {6.78.3.1}name}{133}{subsubsection.6.78.3.1}
+\contentsline {subsubsection}{\numberline {6.78.3.2}value}{133}{subsubsection.6.78.3.2}
+\contentsline {section}{\numberline {6.79}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Settings\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager}{133}{section.6.79}
+\contentsline {subsection}{\numberline {6.79.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{134}{subsection.6.79.1}
+\contentsline {subsection}{\numberline {6.79.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{134}{subsection.6.79.2}
+\contentsline {subsubsection}{\numberline {6.79.2.1}ChangeFps()}{134}{subsubsection.6.79.2.1}
+\contentsline {subsubsection}{\numberline {6.79.2.2}ChangeFullscreen()}{135}{subsubsection.6.79.2.2}
+\contentsline {subsubsection}{\numberline {6.79.2.3}ChangeResolution()}{135}{subsubsection.6.79.2.3}
+\contentsline {subsubsection}{\numberline {6.79.2.4}ChangeVsync()}{135}{subsubsection.6.79.2.4}
+\contentsline {subsubsection}{\numberline {6.79.2.5}OnKeybindMovementToggle()}{136}{subsubsection.6.79.2.5}
+\contentsline {subsubsection}{\numberline {6.79.2.6}SwitchPanels()}{136}{subsubsection.6.79.2.6}
+\contentsline {subsection}{\numberline {6.79.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{136}{subsection.6.79.3}
+\contentsline {subsubsection}{\numberline {6.79.3.1}keybindMovementToggled}{136}{subsubsection.6.79.3.1}
+\contentsline {section}{\numberline {6.80}\IeC {\CYRS }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyru }\IeC {\cyrk }\IeC {\cyrt }\IeC {\cyru }\IeC {\cyrr }\IeC {\cyra } Base\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Entity.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Skill}{137}{section.6.80}
+\contentsline {subsection}{\numberline {6.80.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{137}{subsection.6.80.1}
+\contentsline {subsection}{\numberline {6.80.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{137}{subsection.6.80.2}
+\contentsline {subsubsection}{\numberline {6.80.2.1}key}{137}{subsubsection.6.80.2.1}
+\contentsline {subsubsection}{\numberline {6.80.2.2}skill}{137}{subsubsection.6.80.2.2}
+\contentsline {section}{\numberline {6.81}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Skill\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Cast\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Timer}{137}{section.6.81}
+\contentsline {subsection}{\numberline {6.81.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{138}{subsection.6.81.1}
+\contentsline {subsection}{\numberline {6.81.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{138}{subsection.6.81.2}
+\contentsline {subsubsection}{\numberline {6.81.2.1}StartTimer()}{138}{subsubsection.6.81.2.1}
+\contentsline {section}{\numberline {6.82}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Skill\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Panel\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager}{138}{section.6.82}
+\contentsline {subsection}{\numberline {6.82.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{139}{subsection.6.82.1}
+\contentsline {subsection}{\numberline {6.82.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{139}{subsection.6.82.2}
+\contentsline {subsubsection}{\numberline {6.82.2.1}trackedPlayer}{139}{subsubsection.6.82.2.1}
+\contentsline {section}{\numberline {6.83}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Socket\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Server\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Controller}{139}{section.6.83}
+\contentsline {subsection}{\numberline {6.83.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{139}{subsection.6.83.1}
+\contentsline {subsection}{\numberline {6.83.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{140}{subsection.6.83.2}
+\contentsline {subsubsection}{\numberline {6.83.2.1}CloseConnection()}{140}{subsubsection.6.83.2.1}
+\contentsline {subsubsection}{\numberline {6.83.2.2}StartSendInviteToSocketServer()}{140}{subsubsection.6.83.2.2}
+\contentsline {section}{\numberline {6.84}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Servers\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Info.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Socket\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Server\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Info}{140}{section.6.84}
+\contentsline {subsection}{\numberline {6.84.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{141}{subsection.6.84.1}
+\contentsline {subsection}{\numberline {6.84.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{141}{subsection.6.84.2}
+\contentsline {subsubsection}{\numberline {6.84.2.1}CommandHaveInvite}{141}{subsubsection.6.84.2.1}
+\contentsline {subsubsection}{\numberline {6.84.2.2}CommandHaveInviteServer}{141}{subsubsection.6.84.2.2}
+\contentsline {subsubsection}{\numberline {6.84.2.3}CommandInvite}{141}{subsubsection.6.84.2.3}
+\contentsline {subsubsection}{\numberline {6.84.2.4}CommandInviteServer}{141}{subsubsection.6.84.2.4}
+\contentsline {subsubsection}{\numberline {6.84.2.5}CommandOpenConnect}{141}{subsubsection.6.84.2.5}
+\contentsline {subsubsection}{\numberline {6.84.2.6}CommandOpenConnectServer}{142}{subsubsection.6.84.2.6}
+\contentsline {subsubsection}{\numberline {6.84.2.7}SocketServerIP}{142}{subsubsection.6.84.2.7}
+\contentsline {subsubsection}{\numberline {6.84.2.8}SocketServerPort}{142}{subsubsection.6.84.2.8}
+\contentsline {section}{\numberline {6.85}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Sound\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager}{142}{section.6.85}
+\contentsline {subsection}{\numberline {6.85.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{142}{subsection.6.85.1}
+\contentsline {section}{\numberline {6.86}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Sound\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Settings}{143}{section.6.86}
+\contentsline {subsection}{\numberline {6.86.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{143}{subsection.6.86.1}
+\contentsline {subsection}{\numberline {6.86.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{143}{subsection.6.86.2}
+\contentsline {subsubsection}{\numberline {6.86.2.1}GetVolume()}{143}{subsubsection.6.86.2.1}
+\contentsline {subsubsection}{\numberline {6.86.2.2}SoundSliderValueChange()}{144}{subsubsection.6.86.2.2}
+\contentsline {subsection}{\numberline {6.86.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{144}{subsection.6.86.3}
+\contentsline {subsubsection}{\numberline {6.86.3.1}instance}{144}{subsubsection.6.86.3.1}
+\contentsline {subsubsection}{\numberline {6.86.3.2}volumeChange}{144}{subsubsection.6.86.3.2}
+\contentsline {section}{\numberline {6.87}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Sound\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Slider\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager}{145}{section.6.87}
+\contentsline {subsection}{\numberline {6.87.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{145}{subsection.6.87.1}
+\contentsline {subsection}{\numberline {6.87.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{145}{subsection.6.87.2}
+\contentsline {subsubsection}{\numberline {6.87.2.1}SetName()}{145}{subsubsection.6.87.2.1}
+\contentsline {subsubsection}{\numberline {6.87.2.2}SetValue()}{146}{subsubsection.6.87.2.2}
+\contentsline {subsubsection}{\numberline {6.87.2.3}ValueChanged()}{146}{subsubsection.6.87.2.3}
+\contentsline {subsection}{\numberline {6.87.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{146}{subsection.6.87.3}
+\contentsline {subsubsection}{\numberline {6.87.3.1}onValueChange}{146}{subsubsection.6.87.3.1}
+\contentsline {section}{\numberline {6.88}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Spawn\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Enemy}{147}{section.6.88}
+\contentsline {subsection}{\numberline {6.88.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{147}{subsection.6.88.1}
+\contentsline {subsection}{\numberline {6.88.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{147}{subsection.6.88.2}
+\contentsline {subsubsection}{\numberline {6.88.2.1}goblinSeekerGameObject2}{147}{subsubsection.6.88.2.1}
+\contentsline {section}{\numberline {6.89}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Spawn\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Players}{147}{section.6.89}
+\contentsline {subsection}{\numberline {6.89.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{148}{subsection.6.89.1}
+\contentsline {subsection}{\numberline {6.89.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{148}{subsection.6.89.2}
+\contentsline {subsubsection}{\numberline {6.89.2.1}SetPlayerObject()}{148}{subsubsection.6.89.2.1}
+\contentsline {subsection}{\numberline {6.89.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{148}{subsection.6.89.3}
+\contentsline {subsubsection}{\numberline {6.89.3.1}OnSpawn}{148}{subsubsection.6.89.3.1}
+\contentsline {section}{\numberline {6.90}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Speed\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Up}{148}{section.6.90}
+\contentsline {subsection}{\numberline {6.90.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{149}{subsection.6.90.1}
+\contentsline {subsection}{\numberline {6.90.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{149}{subsection.6.90.2}
+\contentsline {subsubsection}{\numberline {6.90.2.1}ApplyEffect()}{149}{subsubsection.6.90.2.1}
+\contentsline {subsubsection}{\numberline {6.90.2.2}SpeedEffect()}{149}{subsubsection.6.90.2.2}
+\contentsline {subsection}{\numberline {6.90.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{149}{subsection.6.90.3}
+\contentsline {subsubsection}{\numberline {6.90.3.1}additionalSpeed}{150}{subsubsection.6.90.3.1}
+\contentsline {section}{\numberline {6.91}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Start\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}End\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Zone}{150}{section.6.91}
+\contentsline {subsection}{\numberline {6.91.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{150}{subsection.6.91.1}
+\contentsline {section}{\numberline {6.92}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Start\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Level}{150}{section.6.92}
+\contentsline {subsection}{\numberline {6.92.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{151}{subsection.6.92.1}
+\contentsline {subsection}{\numberline {6.92.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{151}{subsection.6.92.2}
+\contentsline {subsubsection}{\numberline {6.92.2.1}OnJoinedRoom()}{151}{subsubsection.6.92.2.1}
+\contentsline {subsubsection}{\numberline {6.92.2.2}OnPlayerEnteredRoom()}{151}{subsubsection.6.92.2.2}
+\contentsline {subsubsection}{\numberline {6.92.2.3}OnPlayerLeftRoom()}{151}{subsubsection.6.92.2.3}
+\contentsline {section}{\numberline {6.93}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Stop\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Search\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game}{152}{section.6.93}
+\contentsline {subsection}{\numberline {6.93.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{152}{subsection.6.93.1}
+\contentsline {subsection}{\numberline {6.93.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{152}{subsection.6.93.2}
+\contentsline {subsubsection}{\numberline {6.93.2.1}CancelSearchGame()}{152}{subsubsection.6.93.2.1}
+\contentsline {subsubsection}{\numberline {6.93.2.2}OnConnectedToMaster()}{153}{subsubsection.6.93.2.2}
+\contentsline {subsubsection}{\numberline {6.93.2.3}OnFriendListUpdate()}{153}{subsubsection.6.93.2.3}
+\contentsline {section}{\numberline {6.94}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Strong}{153}{section.6.94}
+\contentsline {subsection}{\numberline {6.94.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{154}{subsection.6.94.1}
+\contentsline {subsection}{\numberline {6.94.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{154}{subsection.6.94.2}
+\contentsline {subsubsection}{\numberline {6.94.2.1}ApplyEffect()}{154}{subsubsection.6.94.2.1}
+\contentsline {subsubsection}{\numberline {6.94.2.2}StrongEffect()}{154}{subsubsection.6.94.2.2}
+\contentsline {subsection}{\numberline {6.94.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{154}{subsection.6.94.3}
+\contentsline {subsubsection}{\numberline {6.94.3.1}additionalDamage}{154}{subsubsection.6.94.3.1}
+\contentsline {section}{\numberline {6.95}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Team\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}HPBar\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}UI}{155}{section.6.95}
+\contentsline {subsection}{\numberline {6.95.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{155}{subsection.6.95.1}
+\contentsline {subsection}{\numberline {6.95.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{155}{subsection.6.95.2}
+\contentsline {subsubsection}{\numberline {6.95.2.1}SetEntity()}{155}{subsubsection.6.95.2.1}
+\contentsline {section}{\numberline {6.96}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Team\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Hp\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Panel\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager}{156}{section.6.96}
+\contentsline {subsection}{\numberline {6.96.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{156}{subsection.6.96.1}
+\contentsline {section}{\numberline {6.97}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Timer\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager}{156}{section.6.97}
+\contentsline {subsection}{\numberline {6.97.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{156}{subsection.6.97.1}
+\contentsline {subsection}{\numberline {6.97.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{156}{subsection.6.97.2}
+\contentsline {subsubsection}{\numberline {6.97.2.1}timerEnd}{157}{subsubsection.6.97.2.1}
+\contentsline {section}{\numberline {6.98}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Timer\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}With\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Spritemanager}{157}{section.6.98}
+\contentsline {subsection}{\numberline {6.98.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{157}{subsection.6.98.1}
+\contentsline {subsection}{\numberline {6.98.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{157}{subsection.6.98.2}
+\contentsline {subsubsection}{\numberline {6.98.2.1}SetEntity()}{157}{subsubsection.6.98.2.1}
+\contentsline {subsubsection}{\numberline {6.98.2.2}SetTime()}{158}{subsubsection.6.98.2.2}
+\contentsline {section}{\numberline {6.99}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Structs\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Response.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Token\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Struct\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Response}{158}{section.6.99}
+\contentsline {subsection}{\numberline {6.99.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{158}{subsection.6.99.1}
+\contentsline {subsection}{\numberline {6.99.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{158}{subsection.6.99.2}
+\contentsline {subsubsection}{\numberline {6.99.2.1}token}{159}{subsubsection.6.99.2.1}
+\contentsline {section}{\numberline {6.100}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Tooltip\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Text}{159}{section.6.100}
+\contentsline {subsection}{\numberline {6.100.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{159}{subsection.6.100.1}
+\contentsline {subsection}{\numberline {6.100.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{159}{subsection.6.100.2}
+\contentsline {subsubsection}{\numberline {6.100.2.1}text}{159}{subsubsection.6.100.2.1}
+\contentsline {section}{\numberline {6.101}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Tooltip\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Text\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}UI}{160}{section.6.101}
+\contentsline {subsection}{\numberline {6.101.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{160}{subsection.6.101.1}
+\contentsline {subsection}{\numberline {6.101.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{160}{subsection.6.101.2}
+\contentsline {subsubsection}{\numberline {6.101.2.1}text}{160}{subsubsection.6.101.2.1}
+\contentsline {section}{\numberline {6.102}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Toxicant}{160}{section.6.102}
+\contentsline {subsection}{\numberline {6.102.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{161}{subsection.6.102.1}
+\contentsline {subsection}{\numberline {6.102.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{161}{subsection.6.102.2}
+\contentsline {subsubsection}{\numberline {6.102.2.1}UseSkill()}{161}{subsubsection.6.102.2.1}
+\contentsline {section}{\numberline {6.103}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } UIHint\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager}{161}{section.6.103}
+\contentsline {subsection}{\numberline {6.103.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{162}{subsection.6.103.1}
+\contentsline {subsection}{\numberline {6.103.2}\IeC {\CYRP }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrch }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }}{162}{subsection.6.103.2}
+\contentsline {subsubsection}{\numberline {6.103.2.1}ProjectMode}{162}{subsubsection.6.103.2.1}
+\contentsline {subsection}{\numberline {6.103.3}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{162}{subsection.6.103.3}
+\contentsline {subsubsection}{\numberline {6.103.3.1}\_camera}{163}{subsubsection.6.103.3.1}
+\contentsline {subsubsection}{\numberline {6.103.3.2}arrow}{163}{subsubsection.6.103.3.2}
+\contentsline {subsubsection}{\numberline {6.103.3.3}BGColor}{163}{subsubsection.6.103.3.3}
+\contentsline {subsubsection}{\numberline {6.103.3.4}border}{163}{subsubsection.6.103.3.4}
+\contentsline {subsubsection}{\numberline {6.103.3.5}box}{163}{subsubsection.6.103.3.5}
+\contentsline {subsubsection}{\numberline {6.103.3.6}boxText}{163}{subsubsection.6.103.3.6}
+\contentsline {subsubsection}{\numberline {6.103.3.7}fontSize}{164}{subsubsection.6.103.3.7}
+\contentsline {subsubsection}{\numberline {6.103.3.8}isUI}{164}{subsubsection.6.103.3.8}
+\contentsline {subsubsection}{\numberline {6.103.3.9}maxWidth}{164}{subsubsection.6.103.3.9}
+\contentsline {subsubsection}{\numberline {6.103.3.10}speed}{164}{subsubsection.6.103.3.10}
+\contentsline {subsubsection}{\numberline {6.103.3.11}text}{164}{subsubsection.6.103.3.11}
+\contentsline {subsubsection}{\numberline {6.103.3.12}textColor}{164}{subsubsection.6.103.3.12}
+\contentsline {subsubsection}{\numberline {6.103.3.13}tooltipMode}{165}{subsubsection.6.103.3.13}
+\contentsline {section}{\numberline {6.104}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Unity\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Main\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Thread\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Dispatcher}{165}{section.6.104}
+\contentsline {subsection}{\numberline {6.104.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{165}{subsection.6.104.1}
+\contentsline {subsection}{\numberline {6.104.2}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery }}{166}{subsection.6.104.2}
+\contentsline {subsubsection}{\numberline {6.104.2.1}Enqueue()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{166}{subsubsection.6.104.2.1}
+\contentsline {subsubsection}{\numberline {6.104.2.2}Enqueue()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{166}{subsubsection.6.104.2.2}
+\contentsline {subsubsection}{\numberline {6.104.2.3}EnqueueAsync()}{166}{subsubsection.6.104.2.3}
+\contentsline {subsubsection}{\numberline {6.104.2.4}Exists()}{167}{subsubsection.6.104.2.4}
+\contentsline {subsubsection}{\numberline {6.104.2.5}Instance()}{167}{subsubsection.6.104.2.5}
+\contentsline {subsubsection}{\numberline {6.104.2.6}Update()}{168}{subsubsection.6.104.2.6}
+\contentsline {section}{\numberline {6.105}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Structs\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Response.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}User\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}IDStruct\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Response}{168}{section.6.105}
+\contentsline {subsection}{\numberline {6.105.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{168}{subsection.6.105.1}
+\contentsline {subsection}{\numberline {6.105.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{168}{subsection.6.105.2}
+\contentsline {subsubsection}{\numberline {6.105.2.1}userID}{168}{subsubsection.6.105.2.1}
+\contentsline {section}{\numberline {6.106}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Structs\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Response.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}User\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Info\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Object}{168}{section.6.106}
+\contentsline {subsection}{\numberline {6.106.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{169}{subsection.6.106.1}
+\contentsline {subsection}{\numberline {6.106.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{169}{subsection.6.106.2}
+\contentsline {subsubsection}{\numberline {6.106.2.1}userID}{169}{subsubsection.6.106.2.1}
+\contentsline {subsubsection}{\numberline {6.106.2.2}username}{169}{subsubsection.6.106.2.2}
+\contentsline {section}{\numberline {6.107}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Structs\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Response.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}User\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Info\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Struct\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Response}{169}{section.6.107}
+\contentsline {subsection}{\numberline {6.107.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{169}{subsection.6.107.1}
+\contentsline {subsection}{\numberline {6.107.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{169}{subsection.6.107.2}
+\contentsline {subsubsection}{\numberline {6.107.2.1}created\_at}{170}{subsubsection.6.107.2.1}
+\contentsline {subsubsection}{\numberline {6.107.2.2}login}{170}{subsubsection.6.107.2.2}
+\contentsline {subsubsection}{\numberline {6.107.2.3}username}{170}{subsubsection.6.107.2.3}
+\contentsline {section}{\numberline {6.108}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } User\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Online}{170}{section.6.108}
+\contentsline {subsection}{\numberline {6.108.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{170}{subsection.6.108.1}
+\contentsline {section}{\numberline {6.109}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs } Structs\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Request.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}User\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Online\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}And\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Offline\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Struct\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Request}{171}{section.6.109}
+\contentsline {subsection}{\numberline {6.109.1}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyro }\IeC {\cyrp }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{171}{subsection.6.109.1}
+\contentsline {subsection}{\numberline {6.109.2}\IeC {\CYRD }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyra }}{171}{subsection.6.109.2}
+\contentsline {subsubsection}{\numberline {6.109.2.1}data}{171}{subsubsection.6.109.2.1}
+\contentsline {chapter}{\numberline {7}\IeC {\CYRF }\IeC {\cyra }\IeC {\cyrishrt }\IeC {\cyrl }\IeC {\cyrery }}{173}{chapter.7}
+\contentsline {section}{\numberline {7.1}Login\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{173}{section.7.1}
+\contentsline {section}{\numberline {7.2}Register\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{173}{section.7.2}
+\contentsline {section}{\numberline {7.3}Controllers.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{174}{section.7.3}
+\contentsline {section}{\numberline {7.4}Data\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Base.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{177}{section.7.4}
+\contentsline {section}{\numberline {7.5}Agression\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Trigger.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{180}{section.7.5}
+\contentsline {section}{\numberline {7.6}Attack\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Trigger.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{180}{section.7.6}
+\contentsline {section}{\numberline {7.7}Enemy\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}AI.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{180}{section.7.7}
+\contentsline {section}{\numberline {7.8}Entity\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Melee.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{181}{section.7.8}
+\contentsline {section}{\numberline {7.9}Player\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}AOE.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{182}{section.7.9}
+\contentsline {section}{\numberline {7.10}Player\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Melee.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{182}{section.7.10}
+\contentsline {section}{\numberline {7.11}Player\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Projectile.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{184}{section.7.11}
+\contentsline {section}{\numberline {7.12}Base\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}AOE.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{185}{section.7.12}
+\contentsline {section}{\numberline {7.13}Base\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Effect.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{186}{section.7.13}
+\contentsline {section}{\numberline {7.14}Base\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Entity.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{186}{section.7.14}
+\contentsline {section}{\numberline {7.15}Base\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Item.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{190}{section.7.15}
+\contentsline {section}{\numberline {7.16}Base\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Passive\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Skill.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{191}{section.7.16}
+\contentsline {section}{\numberline {7.17}Base\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Projectile.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{191}{section.7.17}
+\contentsline {section}{\numberline {7.18}Base\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Skill.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{193}{section.7.18}
+\contentsline {section}{\numberline {7.19}Base\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Upgrade.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{194}{section.7.19}
+\contentsline {section}{\numberline {7.20}Camera\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Follow.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{194}{section.7.20}
+\contentsline {section}{\numberline {7.21}Drunk.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{194}{section.7.21}
+\contentsline {section}{\numberline {7.22}On\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Fire.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{195}{section.7.22}
+\contentsline {section}{\numberline {7.23}Poison.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{195}{section.7.23}
+\contentsline {section}{\numberline {7.24}Speed\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Up.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{195}{section.7.24}
+\contentsline {section}{\numberline {7.25}Strong.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{196}{section.7.25}
+\contentsline {section}{\numberline {7.26}End\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{196}{section.7.26}
+\contentsline {section}{\numberline {7.27}Displayed\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Item.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{196}{section.7.27}
+\contentsline {section}{\numberline {7.28}Inventory.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{197}{section.7.28}
+\contentsline {section}{\numberline {7.29}Inventory\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Window.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{198}{section.7.29}
+\contentsline {section}{\numberline {7.30}Appe.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{199}{section.7.30}
+\contentsline {section}{\numberline {7.31}Dropped\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Item.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{199}{section.7.31}
+\contentsline {section}{\numberline {7.32}Manager\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{200}{section.7.32}
+\contentsline {section}{\numberline {7.33}Generator.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{202}{section.7.33}
+\contentsline {section}{\numberline {7.34}Room.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{203}{section.7.34}
+\contentsline {section}{\numberline {7.35}Start\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}End\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Zone.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{203}{section.7.35}
+\contentsline {section}{\numberline {7.36}Berserk.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{203}{section.7.36}
+\contentsline {section}{\numberline {7.37}Animation\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Player.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{204}{section.7.37}
+\contentsline {section}{\numberline {7.38}Camera\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Player.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{205}{section.7.38}
+\contentsline {section}{\numberline {7.39}Class\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Selection.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{206}{section.7.39}
+\contentsline {section}{\numberline {7.40}Input\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Controller\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Player.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{207}{section.7.40}
+\contentsline {section}{\numberline {7.41}Movement\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Player.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{207}{section.7.41}
+\contentsline {section}{\numberline {7.42}Player\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Script.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{209}{section.7.42}
+\contentsline {section}{\numberline {7.43}Player\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Upgrades.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{209}{section.7.43}
+\contentsline {section}{\numberline {7.44}Drunkard.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{210}{section.7.44}
+\contentsline {section}{\numberline {7.45}Exclamation.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{211}{section.7.45}
+\contentsline {section}{\numberline {7.46}Fireball\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Skill.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{211}{section.7.46}
+\contentsline {section}{\numberline {7.47}Flurry\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Of\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Fire.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{212}{section.7.47}
+\contentsline {section}{\numberline {7.48}Toxicant.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{212}{section.7.48}
+\contentsline {section}{\numberline {7.49}Sound\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{213}{section.7.49}
+\contentsline {section}{\numberline {7.50}Spawn\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Enemy.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{213}{section.7.50}
+\contentsline {section}{\numberline {7.51}Spawn\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Players.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{214}{section.7.51}
+\contentsline {section}{\numberline {7.52}Players\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Teams\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{214}{section.7.52}
+\contentsline {section}{\numberline {7.53}Connect.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{215}{section.7.53}
+\contentsline {section}{\numberline {7.54}Accept\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Friend\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Invite.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{215}{section.7.54}
+\contentsline {section}{\numberline {7.55}Friends\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}List\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Controller.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{216}{section.7.55}
+\contentsline {section}{\numberline {7.56}Invite\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Friend.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{217}{section.7.56}
+\contentsline {section}{\numberline {7.57}Leave\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Room.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{217}{section.7.57}
+\contentsline {section}{\numberline {7.58}Lobby\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{217}{section.7.58}
+\contentsline {section}{\numberline {7.59}Notice\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}List\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Controller.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{219}{section.7.59}
+\contentsline {section}{\numberline {7.60}Play.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{219}{section.7.60}
+\contentsline {section}{\numberline {7.61}Players\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Founded.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{221}{section.7.61}
+\contentsline {section}{\numberline {7.62}Socket\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Server\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Controller.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{221}{section.7.62}
+\contentsline {section}{\numberline {7.63}Start\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Level.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{223}{section.7.63}
+\contentsline {section}{\numberline {7.64}Stop\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Search\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{224}{section.7.64}
+\contentsline {section}{\numberline {7.65}Structs.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{225}{section.7.65}
+\contentsline {section}{\numberline {7.66}DISABLESUKA.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{226}{section.7.66}
+\contentsline {section}{\numberline {7.67}ENABLESUKA.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{227}{section.7.67}
+\contentsline {section}{\numberline {7.68}Key\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Handler.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{227}{section.7.68}
+\contentsline {section}{\numberline {7.69}Effects\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}List\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{229}{section.7.69}
+\contentsline {section}{\numberline {7.70}Effect\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Timer\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{230}{section.7.70}
+\contentsline {section}{\numberline {7.71}End\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{231}{section.7.71}
+\contentsline {section}{\numberline {7.72}Entity\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Name\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{231}{section.7.72}
+\contentsline {section}{\numberline {7.73}Escape\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Menu.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{232}{section.7.73}
+\contentsline {section}{\numberline {7.74}Friend\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Item\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{232}{section.7.74}
+\contentsline {section}{\numberline {7.75}Health\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Bar\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{233}{section.7.75}
+\contentsline {section}{\numberline {7.76}Keybind\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{233}{section.7.76}
+\contentsline {section}{\numberline {7.77}Notice\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Invite\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{234}{section.7.77}
+\contentsline {section}{\numberline {7.78}Settings\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{235}{section.7.78}
+\contentsline {section}{\numberline {7.79}Skill\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Panel\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{237}{section.7.79}
+\contentsline {section}{\numberline {7.80}Sound\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Settings.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{238}{section.7.80}
+\contentsline {section}{\numberline {7.81}Sound\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Slider\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{238}{section.7.81}
+\contentsline {section}{\numberline {7.82}Team\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Hp\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Panel\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{239}{section.7.82}
+\contentsline {section}{\numberline {7.83}Timer\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{239}{section.7.83}
+\contentsline {section}{\numberline {7.84}Timer\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}With\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Spritemanager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{240}{section.7.84}
+\contentsline {section}{\numberline {7.85}UIHint\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{240}{section.7.85}
+\contentsline {section}{\numberline {7.86}Energy\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Bar\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}UI.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{242}{section.7.86}
+\contentsline {section}{\numberline {7.87}Health\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Bar\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}UI.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{243}{section.7.87}
+\contentsline {section}{\numberline {7.88}Skill\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Cast\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Timer.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{243}{section.7.88}
+\contentsline {section}{\numberline {7.89}Team\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}HPBar\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}UI.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{244}{section.7.89}
+\contentsline {section}{\numberline {7.90}Tooltip\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Text.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{244}{section.7.90}
+\contentsline {section}{\numberline {7.91}Tooltip\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Text\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}UI.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{245}{section.7.91}
+\contentsline {section}{\numberline {7.92}Unity\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Main\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Thread\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Dispatcher.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{245}{section.7.92}
+\contentsline {section}{\numberline {7.93}User\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Online.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs}{246}{section.7.93}
+\contentsline {chapter}{{\cyrillictext \CYRP \cyrr \cyre \cyrd \cyrm \cyre \cyrt \cyrn \cyrery \cyrishrt \ \cyru \cyrk \cyra \cyrz \cyra \cyrt \cyre \cyrl \cyrsftsn }}{247}{section*.244}

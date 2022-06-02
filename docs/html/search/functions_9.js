@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pause_0',['Pause',['../classKeyHandler.html#a709aa3a10f129eafc0fcb1815f35d43d',1,'KeyHandler']]]
+  ['normalizekeybind_0',['NormalizeKeybind',['../classKeyHandler.html#a2a429f3c48b6447d952223a401793935',1,'KeyHandler']]]
 ];

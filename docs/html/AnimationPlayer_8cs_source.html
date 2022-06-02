@@ -120,12 +120,12 @@ $(function() {
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">if</span> (!isMoving)</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            {</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                ChangePlayerAnimation_q(_idle);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                Debug.Log(_idle + movingState + <span class="stringliteral">&quot;nemove&quot;</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <span class="comment">//Debug.Log(_idle + movingState + &quot;nemove&quot;);</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            }</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            {</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                ChangePlayerAnimation_q(_move);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                Debug.Log(_move + movingState+<span class="stringliteral">&quot;mofe&quot;</span>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                <span class="comment">//Debug.Log(_move + movingState+&quot;mofe&quot;);</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                playStep();</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            }</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
@@ -177,7 +177,7 @@ $(function() {
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    {</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">if</span> (_currentAnimation == newAnimation) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        _currentAnimation = newAnimation;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        Debug.Log(newAnimation+<span class="stringliteral">&quot;Photon&quot;</span>);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="comment">//Debug.Log(newAnimation+&quot;Photon&quot;);</span></div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        _animator.Play(_currentAnimation);</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>}</div>

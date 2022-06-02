@@ -1,5 +1,10 @@
 \hypertarget{classEffectTimerManager}{}\doxysection{Класс Effect\+Timer\+Manager}
 \label{classEffectTimerManager}\index{EffectTimerManager@{EffectTimerManager}}
+
+
+Класс для управления таймером эффекта   
+
+
 Граф наследования\+:Effect\+Timer\+Manager\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,13 +15,13 @@
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classEffectTimerManager_a2573e789e1becbe93e91930505e88483}{Set\+Effect}} (\mbox{\hyperlink{classBaseEffect}{Base\+Effect}} effect)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Установка эффекта на данных  \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Подробное описание}
+Класс для управления таймером эффекта  
 
-
-См. определение в файле \mbox{\hyperlink{EffectTimerManager_8cs_source}{Effect\+Timer\+Manager.\+cs}} строка \mbox{\hyperlink{EffectTimerManager_8cs_source_l00007}{7}}
+См. определение в файле \mbox{\hyperlink{EffectTimerManager_8cs_source}{Effect\+Timer\+Manager.\+cs}} строка \mbox{\hyperlink{EffectTimerManager_8cs_source_l00009}{9}}
 
 
 
@@ -29,19 +34,29 @@ void \mbox{\hyperlink{classEffectTimerManager_a2573e789e1becbe93e91930505e88483}
 
 
 
-См. определение в файле \mbox{\hyperlink{EffectTimerManager_8cs_source}{Effect\+Timer\+Manager.\+cs}} строка \mbox{\hyperlink{EffectTimerManager_8cs_source_l00023}{23}}
+Установка эффекта на данных  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em effect} & Целевой эффект\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{EffectTimerManager_8cs_source}{Effect\+Timer\+Manager.\+cs}} строка \mbox{\hyperlink{EffectTimerManager_8cs_source_l00031}{31}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00024     \{}
-\DoxyCodeLine{00025         targetedSprite.sprite = effect.effectSprite;}
-\DoxyCodeLine{00026         timerInterval = effect.duration;}
-\DoxyCodeLine{00027         targetedEffect = effect;}
-\DoxyCodeLine{00028     \}}
+\DoxyCodeLine{00032     \{}
+\DoxyCodeLine{00033         targetedSprite.sprite = effect.effectSprite;}
+\DoxyCodeLine{00034         timerInterval = effect.duration;}
+\DoxyCodeLine{00035         targetedEffect = effect;}
+\DoxyCodeLine{00036         tooltipText.text = \textcolor{stringliteral}{"{}\(\backslash\)"{}"{}} + effect.effectName + \textcolor{stringliteral}{"{}\(\backslash\)"{}\(\backslash\)n"{}} + effect.description + \textcolor{stringliteral}{"{}\(\backslash\)n"{}} + \textcolor{stringliteral}{"{}Duration: "{}} + effect.duration + \textcolor{stringliteral}{"{}s"{}};}
+\DoxyCodeLine{00037     \}}
 
 \end{DoxyCode}
 
 
 Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
 \item 
-Vuji/\+Assets/\+Scripts/\+UIScripts/Effect\+Timer\+Manager.\+cs\end{DoxyCompactItemize}
+Vuji/\+Assets/\+Scripts/\+UIScripts/\+Managers/Effect\+Timer\+Manager.\+cs\end{DoxyCompactItemize}

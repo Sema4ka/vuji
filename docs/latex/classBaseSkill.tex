@@ -13,6 +13,12 @@ string \mbox{\hyperlink{classBaseSkill_abe19009601b6a62a430038563e01dfd3}{Get\+N
 \item 
 string \mbox{\hyperlink{classBaseSkill_a7fbc176ad74b385d024e7e0aecdbbb2c}{Get\+Description}} ()
 \item 
+int \mbox{\hyperlink{classBaseSkill_ab4a604b0b2e285fafaae1839d63c9bcf}{Get\+Cost}} ()
+\item 
+float \mbox{\hyperlink{classBaseSkill_a054e5c720b50d67ede0fa9cfde3a0efc}{Get\+Cast\+Time}} ()
+\item 
+float \mbox{\hyperlink{classBaseSkill_adea2468768f20d8cfead42439fac89c5}{Get\+Cooldown\+Time}} ()
+\item 
 Sprite \mbox{\hyperlink{classBaseSkill_ac76f144bb87cfcbb25f464d75c301b7b}{Get\+Sprite}} ()
 \item 
 virtual IEnumerator \mbox{\hyperlink{classBaseSkill_a3c6e32f82bb8d3e35aade6acae55d11f}{Use\+Skill}} (Game\+Object caster, string key)
@@ -54,6 +60,57 @@ Sprite \mbox{\hyperlink{classBaseSkill_ad556677017c2091c1054012b7023df9d}{skill\
 
 
 \doxysubsection{Методы}
+\mbox{\Hypertarget{classBaseSkill_a054e5c720b50d67ede0fa9cfde3a0efc}\label{classBaseSkill_a054e5c720b50d67ede0fa9cfde3a0efc}} 
+\index{BaseSkill@{BaseSkill}!GetCastTime@{GetCastTime}}
+\index{GetCastTime@{GetCastTime}!BaseSkill@{BaseSkill}}
+\doxysubsubsection{\texorpdfstring{GetCastTime()}{GetCastTime()}}
+{\footnotesize\ttfamily float Base\+Skill.\+Get\+Cast\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00044}{44}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045     \{}
+\DoxyCodeLine{00046         \textcolor{keywordflow}{return} castTime;}
+\DoxyCodeLine{00047     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseSkill_adea2468768f20d8cfead42439fac89c5}\label{classBaseSkill_adea2468768f20d8cfead42439fac89c5}} 
+\index{BaseSkill@{BaseSkill}!GetCooldownTime@{GetCooldownTime}}
+\index{GetCooldownTime@{GetCooldownTime}!BaseSkill@{BaseSkill}}
+\doxysubsubsection{\texorpdfstring{GetCooldownTime()}{GetCooldownTime()}}
+{\footnotesize\ttfamily float Base\+Skill.\+Get\+Cooldown\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00049}{49}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050     \{}
+\DoxyCodeLine{00051         \textcolor{keywordflow}{return} cooldown;}
+\DoxyCodeLine{00052     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseSkill_ab4a604b0b2e285fafaae1839d63c9bcf}\label{classBaseSkill_ab4a604b0b2e285fafaae1839d63c9bcf}} 
+\index{BaseSkill@{BaseSkill}!GetCost@{GetCost}}
+\index{GetCost@{GetCost}!BaseSkill@{BaseSkill}}
+\doxysubsubsection{\texorpdfstring{GetCost()}{GetCost()}}
+{\footnotesize\ttfamily int Base\+Skill.\+Get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00039}{39}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040     \{}
+\DoxyCodeLine{00041         \textcolor{keywordflow}{return} energyCost;}
+\DoxyCodeLine{00042     \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{classBaseSkill_a7fbc176ad74b385d024e7e0aecdbbb2c}\label{classBaseSkill_a7fbc176ad74b385d024e7e0aecdbbb2c}} 
 \index{BaseSkill@{BaseSkill}!GetDescription@{GetDescription}}
 \index{GetDescription@{GetDescription}!BaseSkill@{BaseSkill}}
@@ -96,13 +153,13 @@ Sprite \mbox{\hyperlink{classBaseSkill_ad556677017c2091c1054012b7023df9d}{skill\
 
 
 
-См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00040}{40}}
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00054}{54}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00041     \{}
-\DoxyCodeLine{00042         \textcolor{keywordflow}{return} skillSprite;}
-\DoxyCodeLine{00043     \}}
+\DoxyCodeLine{00055     \{}
+\DoxyCodeLine{00056         \textcolor{keywordflow}{return} skillSprite;}
+\DoxyCodeLine{00057     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classBaseSkill_a3c6e32f82bb8d3e35aade6acae55d11f}\label{classBaseSkill_a3c6e32f82bb8d3e35aade6acae55d11f}} 
@@ -113,13 +170,13 @@ Sprite \mbox{\hyperlink{classBaseSkill_ad556677017c2091c1054012b7023df9d}{skill\
 
 
 
-См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00048}{48}}
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00062}{62}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00048                                                                        \{}
-\DoxyCodeLine{00049         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForSeconds(0.0f);}
-\DoxyCodeLine{00050     \}}
+\DoxyCodeLine{00062                                                                        \{}
+\DoxyCodeLine{00063         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForSeconds(0.0f);}
+\DoxyCodeLine{00064     \}}
 
 \end{DoxyCode}
 
@@ -173,7 +230,7 @@ Sprite \mbox{\hyperlink{classBaseSkill_ad556677017c2091c1054012b7023df9d}{skill\
 
 
 
-См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00045}{45}}
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00059}{59}}
 
 \mbox{\Hypertarget{classBaseSkill_aa1c4f55cbe61c4c3a12b24d4d449c62e}\label{classBaseSkill_aa1c4f55cbe61c4c3a12b24d4d449c62e}} 
 \index{BaseSkill@{BaseSkill}!onRelease@{onRelease}}
@@ -183,7 +240,7 @@ Sprite \mbox{\hyperlink{classBaseSkill_ad556677017c2091c1054012b7023df9d}{skill\
 
 
 
-См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00046}{46}}
+См. определение в файле \mbox{\hyperlink{BaseSkill_8cs_source}{Base\+Skill.\+cs}} строка \mbox{\hyperlink{BaseSkill_8cs_source_l00060}{60}}
 
 \mbox{\Hypertarget{classBaseSkill_a9c9f490e37e271b779667d6a9d09cb00}\label{classBaseSkill_a9c9f490e37e271b779667d6a9d09cb00}} 
 \index{BaseSkill@{BaseSkill}!skillDescription@{skillDescription}}

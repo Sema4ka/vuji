@@ -69,6 +69,9 @@ $(function() {
   <div class="headertitle"><div class="title">Класс HealthBarManager</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Модуль для управления полоской жизней над сущностью   
+ <a href="classHealthBarManager.html#details">Подробнее...</a></p>
 <div class="dynheader">
 Граф наследования:HealthBarManager:</div>
 <div class="dyncontent">
@@ -79,8 +82,10 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Открытые члены</h2></td></tr>
 <tr class="memitem:a8da00602e4c095264e5bb2512f8e9449"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHealthBarManager.html#a8da00602e4c095264e5bb2512f8e9449">SetHealth</a> (float health, float maxHp)</td></tr>
+<tr class="memdesc:a8da00602e4c095264e5bb2512f8e9449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установить текущие и максимальные хп сущности   <a href="classHealthBarManager.html#a8da00602e4c095264e5bb2512f8e9449">Подробнее...</a><br /></td></tr>
 <tr class="separator:a8da00602e4c095264e5bb2512f8e9449"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69ce9b7f42ede94f983f65a185a0f5ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHealthBarManager.html#a69ce9b7f42ede94f983f65a185a0f5ca">SetOffset</a> (Vector3 newOffset)</td></tr>
+<tr class="memdesc:a69ce9b7f42ede94f983f65a185a0f5ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установить отклонение от позиции сущности   <a href="classHealthBarManager.html#a69ce9b7f42ede94f983f65a185a0f5ca">Подробнее...</a><br /></td></tr>
 <tr class="separator:a69ce9b7f42ede94f983f65a185a0f5ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbda9707e283b1b445785470767d8e67"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHealthBarManager.html#adbda9707e283b1b445785470767d8e67">GetOffset</a> ()</td></tr>
 <tr class="separator:adbda9707e283b1b445785470767d8e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -91,8 +96,9 @@ $(function() {
 <tr class="separator:a960d87393f6407701b35f62d6c7a9558"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock">
-<p class="definition">См. определение в файле <a class="el" href="HealthBarManager_8cs_source.html">HealthBarManager.cs</a> строка <a class="el" href="HealthBarManager_8cs_source.html#l00006">6</a></p>
+<div class="textblock"><p >Модуль для управления полоской жизней над сущностью  </p>
+
+<p class="definition">См. определение в файле <a class="el" href="HealthBarManager_8cs_source.html">HealthBarManager.cs</a> строка <a class="el" href="HealthBarManager_8cs_source.html#l00008">8</a></p>
 </div><h2 class="groupheader">Методы</h2>
 <a id="adbda9707e283b1b445785470767d8e67" name="adbda9707e283b1b445785470767d8e67"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adbda9707e283b1b445785470767d8e67">&#9670;&nbsp;</a></span>GetOffset()</h2>
@@ -117,10 +123,13 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="HealthBarManager_8cs_source.html">HealthBarManager.cs</a> строка <a class="el" href="HealthBarManager_8cs_source.html#l00038">38</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span> offset;</div>
-<div class="line"><span class="lineno">   41</span>    }</div>
+<p></p>
+<dl class="section return"><dt>Возвращает</dt><dd>Текущее отклонение от позиции сущности</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="HealthBarManager_8cs_source.html">HealthBarManager.cs</a> строка <a class="el" href="HealthBarManager_8cs_source.html#l00060">60</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">return</span> offset;</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -158,13 +167,22 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="HealthBarManager_8cs_source.html">HealthBarManager.cs</a> строка <a class="el" href="HealthBarManager_8cs_source.html#l00020">20</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
-<div class="line"><span class="lineno">   22</span>        gameObject.SetActive(health &lt; maxHp);</div>
-<div class="line"><span class="lineno">   23</span>        slider.value = health;</div>
-<div class="line"><span class="lineno">   24</span>        slider.maxValue = maxHp;</div>
-<div class="line"><span class="lineno">   25</span>        slider.fillRect.GetComponentInChildren&lt;Image&gt;().color = Color.Lerp(Low, High, slider.normalizedValue);</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
+<p>Установить текущие и максимальные хп сущности  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">health</td><td>Текущее хп</td></tr>
+    <tr><td class="paramname">maxHp</td><td>Максимальное хп</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="HealthBarManager_8cs_source.html">HealthBarManager.cs</a> строка <a class="el" href="HealthBarManager_8cs_source.html#l00032">32</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        gameObject.SetActive(health &lt; maxHp);</div>
+<div class="line"><span class="lineno">   35</span>        slider.value = health;</div>
+<div class="line"><span class="lineno">   36</span>        slider.maxValue = maxHp;</div>
+<div class="line"><span class="lineno">   37</span>        slider.fillRect.GetComponentInChildren&lt;Image&gt;().color = Color.Lerp(Low, High, slider.normalizedValue);</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -192,10 +210,18 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="HealthBarManager_8cs_source.html">HealthBarManager.cs</a> строка <a class="el" href="HealthBarManager_8cs_source.html#l00034">34</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
-<div class="line"><span class="lineno">   36</span>        offset = newOffset;</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
+<p>Установить отклонение от позиции сущности  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newOffset</td><td>Новое отклонение</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="HealthBarManager_8cs_source.html">HealthBarManager.cs</a> строка <a class="el" href="HealthBarManager_8cs_source.html#l00052">52</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        offset = newOffset;</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -212,12 +238,12 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="HealthBarManager_8cs_source.html">HealthBarManager.cs</a> строка <a class="el" href="HealthBarManager_8cs_source.html#l00008">8</a></p>
+<p class="definition">См. определение в файле <a class="el" href="HealthBarManager_8cs_source.html">HealthBarManager.cs</a> строка <a class="el" href="HealthBarManager_8cs_source.html#l00010">10</a></p>
 
 </div>
 </div>
 <hr/>Объявления и описания членов класса находятся в файле:<ul>
-<li>Vuji/Assets/Scripts/UIScripts/<a class="el" href="HealthBarManager_8cs_source.html">HealthBarManager.cs</a></li>
+<li>Vuji/Assets/Scripts/UIScripts/Managers/<a class="el" href="HealthBarManager_8cs_source.html">HealthBarManager.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

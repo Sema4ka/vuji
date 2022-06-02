@@ -113,6 +113,8 @@
   \setcounter{secnumdepth}{5}
   % creating indexes
   \makeindex
+  % Packages requested by user
+\usepackage[russian]{babel}
   \usepackage{newunicodechar}
   \newunicodechar{⁻}{${}^{-}$}% Superscript minus
   \newunicodechar{²}{${}^{2}$}% Superscript two
@@ -212,12 +214,14 @@
 \input{classConnect}
 \input{classControllers}
 \input{classDataBase}
+\input{classDISABLESUKA}
 \input{classDisplayedItem}
 \input{classDroppedItem}
 \input{classDrunk}
 \input{classDrunkard}
 \input{classEffectsListManager}
 \input{classEffectTimerManager}
+\input{classENABLESUKA}
 \input{classEndGame}
 \input{classEndGameManager}
 \input{classEnemyAI}
@@ -288,7 +292,10 @@
 \input{classTimerManager}
 \input{classTimerWithSpritemanager}
 \input{classStructsResponse_1_1TokenStructResponse}
+\input{classTooltipText}
+\input{classTooltipTextUI}
 \input{classToxicant}
+\input{classUIHintManager}
 \input{classUnityMainThreadDispatcher}
 \input{classStructsResponse_1_1UserIDStructResponse}
 \input{classStructsResponse_1_1UserInfoObject}
@@ -361,27 +368,32 @@
 \input{StartGameLevel_8cs_source}
 \input{StopSearchGame_8cs_source}
 \input{Structs_8cs_source}
+\input{DISABLESUKA_8cs_source}
+\input{ENABLESUKA_8cs_source}
+\input{KeyHandler_8cs_source}
 \input{EffectsListManager_8cs_source}
 \input{EffectTimerManager_8cs_source}
 \input{EndGameManager_8cs_source}
-\input{EnergyBarUI_8cs_source}
 \input{EntityNameManager_8cs_source}
 \input{EscapeMenu_8cs_source}
 \input{FriendItemManager_8cs_source}
 \input{HealthBarManager_8cs_source}
-\input{HealthBarUI_8cs_source}
 \input{KeybindManager_8cs_source}
-\input{KeyHandler_8cs_source}
 \input{NoticeInviteManager_8cs_source}
 \input{SettingsManager_8cs_source}
-\input{SkillCastTimer_8cs_source}
 \input{SkillPanelManager_8cs_source}
 \input{SoundSettings_8cs_source}
 \input{SoundSliderManager_8cs_source}
-\input{TeamHPBarUI_8cs_source}
 \input{TeamHpPanelManager_8cs_source}
 \input{TimerManager_8cs_source}
 \input{TimerWithSpritemanager_8cs_source}
+\input{UIHintManager_8cs_source}
+\input{EnergyBarUI_8cs_source}
+\input{HealthBarUI_8cs_source}
+\input{SkillCastTimer_8cs_source}
+\input{TeamHPBarUI_8cs_source}
+\input{TooltipText_8cs_source}
+\input{TooltipTextUI_8cs_source}
 \input{UnityMainThreadDispatcher_8cs_source}
 \input{UserOnline_8cs_source}
 %--- End generated contents ---

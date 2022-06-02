@@ -68,6 +68,9 @@ $(function() {
   <div class="headertitle"><div class="title">Класс SkillCastTimer</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Модуль для управления таймером каста скила целевой сущностью   
+ <a href="classSkillCastTimer.html#details">Подробнее...</a></p>
 <div class="dynheader">
 Граф наследования:SkillCastTimer:</div>
 <div class="dyncontent">
@@ -78,11 +81,13 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Открытые члены</h2></td></tr>
 <tr class="memitem:a0a969267461c2d70a296bf4654ad5d53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSkillCastTimer.html#a0a969267461c2d70a296bf4654ad5d53">StartTimer</a> (float time)</td></tr>
+<tr class="memdesc:a0a969267461c2d70a296bf4654ad5d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для события каста скила (Запустить таймер каста с указанным временем)   <a href="classSkillCastTimer.html#a0a969267461c2d70a296bf4654ad5d53">Подробнее...</a><br /></td></tr>
 <tr class="separator:a0a969267461c2d70a296bf4654ad5d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock">
-<p class="definition">См. определение в файле <a class="el" href="SkillCastTimer_8cs_source.html">SkillCastTimer.cs</a> строка <a class="el" href="SkillCastTimer_8cs_source.html#l00007">7</a></p>
+<div class="textblock"><p >Модуль для управления таймером каста скила целевой сущностью  </p>
+
+<p class="definition">См. определение в файле <a class="el" href="SkillCastTimer_8cs_source.html">SkillCastTimer.cs</a> строка <a class="el" href="SkillCastTimer_8cs_source.html#l00009">9</a></p>
 </div><h2 class="groupheader">Методы</h2>
 <a id="a0a969267461c2d70a296bf4654ad5d53" name="a0a969267461c2d70a296bf4654ad5d53"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0a969267461c2d70a296bf4654ad5d53">&#9670;&nbsp;</a></span>StartTimer()</h2>
@@ -108,18 +113,26 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="SkillCastTimer_8cs_source.html">SkillCastTimer.cs</a> строка <a class="el" href="SkillCastTimer_8cs_source.html#l00024">24</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
-<div class="line"><span class="lineno">   26</span>        timerValue = 0f;</div>
-<div class="line"><span class="lineno">   27</span>        timerInterval = time;</div>
-<div class="line"><span class="lineno">   28</span>        timerSlider.minValue = 0f;</div>
-<div class="line"><span class="lineno">   29</span>        timerSlider.maxValue = time;</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
+<p>Функция для события каста скила (Запустить таймер каста с указанным временем)  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>Время каста умения</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="SkillCastTimer_8cs_source.html">SkillCastTimer.cs</a> строка <a class="el" href="SkillCastTimer_8cs_source.html#l00029">29</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        timerValue = 0f;</div>
+<div class="line"><span class="lineno">   32</span>        timerInterval = time;</div>
+<div class="line"><span class="lineno">   33</span>        timerSlider.minValue = 0f;</div>
+<div class="line"><span class="lineno">   34</span>        timerSlider.maxValue = time;</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>Объявления и описания членов класса находятся в файле:<ul>
-<li>Vuji/Assets/Scripts/UIScripts/<a class="el" href="SkillCastTimer_8cs_source.html">SkillCastTimer.cs</a></li>
+<li>Vuji/Assets/Scripts/UIScripts/Units/<a class="el" href="SkillCastTimer_8cs_source.html">SkillCastTimer.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

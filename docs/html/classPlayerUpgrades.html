@@ -68,6 +68,9 @@ $(function() {
   <div class="headertitle"><div class="title">Класс PlayerUpgrades</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Модуль управления панелью улучшения игрока !НЕ АКТИВНО!   
+ <a href="classPlayerUpgrades.html#details">Подробнее...</a></p>
 <div class="dynheader">
 Граф наследования:PlayerUpgrades:</div>
 <div class="dyncontent">
@@ -87,8 +90,9 @@ $(function() {
 <tr class="separator:a0aa14e851134d1561f78755f888956bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock">
-<p class="definition">См. определение в файле <a class="el" href="PlayerUpgrades_8cs_source.html">PlayerUpgrades.cs</a> строка <a class="el" href="PlayerUpgrades_8cs_source.html#l00008">8</a></p>
+<div class="textblock"><p >Модуль управления панелью улучшения игрока !НЕ АКТИВНО!  </p>
+
+<p class="definition">См. определение в файле <a class="el" href="PlayerUpgrades_8cs_source.html">PlayerUpgrades.cs</a> строка <a class="el" href="PlayerUpgrades_8cs_source.html#l00010">10</a></p>
 </div><h2 class="groupheader">Методы</h2>
 <a id="a6f0cb31e1cf309a61c869f92e7730c96" name="a6f0cb31e1cf309a61c869f92e7730c96"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f0cb31e1cf309a61c869f92e7730c96">&#9670;&nbsp;</a></span>AddUpgrade()</h2>
@@ -114,18 +118,18 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="PlayerUpgrades_8cs_source.html">PlayerUpgrades.cs</a> строка <a class="el" href="PlayerUpgrades_8cs_source.html#l00060">60</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (xpPoints &gt;= btn.GetComponent&lt;<a class="code hl_class" href="classBaseUpgrade.html">BaseUpgrade</a>&gt;().GetCost())</div>
-<div class="line"><span class="lineno">   63</span>        {</div>
-<div class="line"><span class="lineno">   64</span>            xpPoints -= btn.GetComponent&lt;<a class="code hl_class" href="classBaseUpgrade.html">BaseUpgrade</a>&gt;().GetCost();</div>
-<div class="line"><span class="lineno">   65</span>            btn.onClick.RemoveAllListeners();</div>
-<div class="line"><span class="lineno">   66</span>            Color col = btn.GetComponent&lt;Image&gt;().color;</div>
-<div class="line"><span class="lineno">   67</span>            col.a = 0.1f;</div>
-<div class="line"><span class="lineno">   68</span>            btn.GetComponent&lt;<a class="code hl_class" href="classBaseUpgrade.html">BaseUpgrade</a>&gt;().ApplyUpgrade(player);</div>
-<div class="line"><span class="lineno">   69</span>        }        </div>
-<div class="line"><span class="lineno">   70</span>        </div>
-<div class="line"><span class="lineno">   71</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="PlayerUpgrades_8cs_source.html">PlayerUpgrades.cs</a> строка <a class="el" href="PlayerUpgrades_8cs_source.html#l00062">62</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">if</span> (xpPoints &gt;= btn.GetComponent&lt;<a class="code hl_class" href="classBaseUpgrade.html">BaseUpgrade</a>&gt;().GetCost())</div>
+<div class="line"><span class="lineno">   65</span>        {</div>
+<div class="line"><span class="lineno">   66</span>            xpPoints -= btn.GetComponent&lt;<a class="code hl_class" href="classBaseUpgrade.html">BaseUpgrade</a>&gt;().GetCost();</div>
+<div class="line"><span class="lineno">   67</span>            btn.onClick.RemoveAllListeners();</div>
+<div class="line"><span class="lineno">   68</span>            Color col = btn.GetComponent&lt;Image&gt;().color;</div>
+<div class="line"><span class="lineno">   69</span>            col.a = 0.1f;</div>
+<div class="line"><span class="lineno">   70</span>            btn.GetComponent&lt;<a class="code hl_class" href="classBaseUpgrade.html">BaseUpgrade</a>&gt;().ApplyUpgrade(player);</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>    }</div>
 <div class="ttc" id="aclassBaseUpgrade_html"><div class="ttname"><a href="classBaseUpgrade.html">BaseUpgrade</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseUpgrade_8cs_source.html#l00005">BaseUpgrade.cs:6</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -154,11 +158,11 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="PlayerUpgrades_8cs_source.html">PlayerUpgrades.cs</a> строка <a class="el" href="PlayerUpgrades_8cs_source.html#l00055">55</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (points &lt; 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   58</span>        xpPoints += points;</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="PlayerUpgrades_8cs_source.html">PlayerUpgrades.cs</a> строка <a class="el" href="PlayerUpgrades_8cs_source.html#l00057">57</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (points &lt; 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   60</span>        xpPoints += points;</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -185,10 +189,10 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="PlayerUpgrades_8cs_source.html">PlayerUpgrades.cs</a> строка <a class="el" href="PlayerUpgrades_8cs_source.html#l00051">51</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> xpPoints;</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="PlayerUpgrades_8cs_source.html">PlayerUpgrades.cs</a> строка <a class="el" href="PlayerUpgrades_8cs_source.html#l00053">53</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">return</span> xpPoints;</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -216,11 +220,11 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="PlayerUpgrades_8cs_source.html">PlayerUpgrades.cs</a> строка <a class="el" href="PlayerUpgrades_8cs_source.html#l00072">72</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>    {</div>
-<div class="line"><span class="lineno">   74</span>        classPanel.gameObject.SetActive(toClass);</div>
-<div class="line"><span class="lineno">   75</span>        subclassPanel.gameObject.SetActive(!toClass);</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="PlayerUpgrades_8cs_source.html">PlayerUpgrades.cs</a> строка <a class="el" href="PlayerUpgrades_8cs_source.html#l00074">74</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>    {</div>
+<div class="line"><span class="lineno">   76</span>        classPanel.gameObject.SetActive(toClass);</div>
+<div class="line"><span class="lineno">   77</span>        subclassPanel.gameObject.SetActive(!toClass);</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
