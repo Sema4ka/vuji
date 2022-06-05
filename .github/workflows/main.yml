@@ -1,11 +1,10 @@
-name: CI
+name: Docs builder
 
 on:
   push:
-    branches: [ main, develop, feature ]
+    branches: [ main, develop ]
   pull_request:
-    branches: [ main, develop, feature ]
-  workflow_dispatch:
+    branches: [ main, develop ]
 
 jobs:
   build:
