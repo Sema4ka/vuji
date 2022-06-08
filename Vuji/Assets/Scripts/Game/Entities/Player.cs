@@ -1,0 +1,172 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using Photon.Pun;
+using Photon.Pun.UtilityScripts;
+
+public class Player : BaseEntity
+{
+    private BaseEntity _playerEntitiy;
+
+    private GameObject _gameManager;
+    private PlayersTeamsManager _playersTeamsManager;    
+
+    public Action<string, bool> OnSkillSelectionChange;
+    
+    [SerializeField] public EntityNameManager displayedName;
+    public static Action<BaseEntity, string> teamSpawn;
+    public Controllers _controller;
+
+    protected bool _isSkill1Cooldown = false;
+    protected bool _isSkill2Cooldown = false;
+    protected string _selectedSkill = "";
+
+    protected override void Start()
+    {
+        base.Start();
+
+        _view = gameObject.GetComponent<PhotonView>();
+        _playerEntitiy = gameObject.GetComponent<BaseEntity>();
+
+        _gameManager = GameObject.FindGameObjectWithTag("GameManager");
+        _playersTeamsManager = _gameManager.GetComponent<PlayersTeamsManager>();
+
+        if(_view.IsMine)
+            KeyHandler.keyPressed += OnKeyPressed;
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+        
+        displayedName.SetOffset(new Vector3(0, 1.0f * 0.6f, 0));
+        if (gameObject.CompareTag("Player"))
+        {
+            if (_view.IsMine)
+            {
+                _view.RPC("UpdateText", RpcTarget.All, "[" + PhotonNetwork.LocalPlayer.GetPhotonTeam().Name + "] ", PhotonNetwork.LocalPlayer.NickName);
+            }
+        }
+
+        if(_view.IsMine)
+            _playerEntitiy.TickPoints();
+    }
+
+
+    
+    protected override void UseSkill()
+    {
+        if (_selectedSkill.StartsWith("Skill"))
+        {
+            Debug.Log("Used " + _selectedSkill);
+            StartCoroutine(_skills[_selectedSkill].GetComponent<BaseSkill>().UseSkill(this.gameObject, _selectedSkill));
+            deSelectSkill();
+        }
+        else
+        {
+            Debug.Log("Skill is not selected");
+        }
+    }
+
+    public void selectSkill(string skillName)
+    {
+        if ((skillName == "Skill 1" && !_isSkill1Cooldown) || (skillName == "Skill 2" && !_isSkill2Cooldown))
+        {
+            Debug.Log("Selected " + skillName);
+            this._selectedSkill = skillName;
+            OnSkillSelectionChange?.Invoke(_selectedSkill, true);
+        }
+        else
+        {
+            Debug.Log(skillName + " COOLDOWN");
+        }
+    }
+
+    public void deSelectSkill()
+    {
+        Debug.Log("Deselected" + _selectedSkill);
+        OnSkillSelectionChange?.Invoke(_selectedSkill, false);
+        this._selectedSkill = "";
+    }
+
+    public string GetSelectedSkill()
+    {
+        return _selectedSkill;
+    }
+
+    /// <summary>
+    /// Метод устанавливающий задержку на использование скилла
+    /// Вызывается из использованного скилла
+    /// </summary>
+    /// <param name="key"> Название скилла </param>
+    /// <param name="value"> Значиение true/false </param>
+    public void setIsCooldown(string key, bool value)
+    {
+        if (key == "Skill 1") this._isSkill1Cooldown = value;
+        if (key == "Skill 2") this._isSkill2Cooldown = value;
+    }
+
+    private void OnDestroy()
+    {
+        if (_view.IsMine) KeyHandler.keyPressed -= OnKeyPressed;
+    }
+
+
+ 
+    /// <summary>
+    /// Функция привязанная к Action из KeyHandler для считывания нажатия кнопки скилла
+    /// </summary>
+    /// <param name="name">Название привязанное к кнопке</param>
+    /// <param name="key">KeyCode кнопки</param>
+    void OnKeyPressed(string name, KeyCode key)
+    {
+        Debug.Log("KeyPressed" + name);
+        if (name == "Attack")
+        {
+            if(GetEntityName() == "Pirate") GetComponent<PlayerMelee>().MasterCheckMeleeAttack();
+            if(GetEntityName() == "Mage") gameObject.GetComponent<PlayerProjectile>().Attack("Fireball", 1.5f);
+            AnimationPlayer _anim = GetComponent<AnimationPlayer>();
+            _anim.ChangePlayerAnimation_q(_anim._attack);
+        }
+        if (name == "Use Skill") UseSkill();
+        else if (name.StartsWith("Skill"))
+        {
+            var current = GetSelectedSkill();
+            deSelectSkill();
+            if (current != name)
+            {
+                selectSkill(name);
+            }
+        }
+    }
+
+    [PunRPC]
+    public void UpdateText(string teamTag, string newText)
+    {
+        GetComponentInChildren<Text>().text =  teamTag + newText;
+        if ("[" + PhotonNetwork.LocalPlayer.GetPhotonTeam().Name + "] " == teamTag) teamSpawn?.Invoke(this, newText);
+    }
+
+    /// <summary>
+    /// Метод для убийства имено игрока, т.к. используется фотон
+    /// </summary>
+    public void KillPlayer()
+    {
+        var myPlayerView = gameObject.GetComponent<PhotonView>();
+
+        Debug.Log("PLAYER DIED FROM: " + myPlayerView.Owner.GetPhotonTeam().Name);
+        if (myPlayerView.Owner.GetPhotonTeam().Name == "TeamOne")
+        {
+            _playersTeamsManager.PlayerInTeamOneDied();
+        }
+        
+        if (myPlayerView.Owner.GetPhotonTeam().Name == "TeamTwo")
+        {
+            _playersTeamsManager.PlayerInTeamTwoDied();
+        }
+        gameObject.SetActive(false);
+        //PhotonNetwork.Destroy(gameObject);
+    }        
+}
