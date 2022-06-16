@@ -15,14 +15,14 @@ public class Drunkard : BaseSkill
     public override IEnumerator UseSkill(GameObject caster, string key)
     {
         base.UseSkill(caster, key);
-        if (caster.GetComponent<BaseEntity>().spendEnergy(energyCost) == false)
+        if (caster.GetComponent<PlayerEntity>().spendEnergy(energyCost) == false)
         {
             Debug.Log("Not enough energy to cast " + this.gameObject.name);
             yield break;
         }
         
         onCast?.Invoke(castTime); 
-        caster.GetComponent<BaseEntity>().setIsCooldown(key, true);
+        caster.GetComponent<PlayerEntity>().setIsCooldown(key, true);
         if(cancelMovementOnCast)
             caster.GetComponent<MovementPlayer>().cancelMovement(castTime);
 
@@ -35,10 +35,10 @@ public class Drunkard : BaseSkill
         drunkEffect.GetComponent<Drunk>().duration = drunkTime;
         onRelease?.Invoke(cooldown);
 
-        caster.GetComponent<BaseEntity>().AddEffect(drunkEffect);
+        caster.GetComponent<PlayerEntity>().AddEffect(drunkEffect);
         // Сам скилл
         
         yield return new WaitForSeconds(cooldown);
-        caster.GetComponent<BaseEntity>().setIsCooldown(key, false);
+        caster.GetComponent<PlayerEntity>().setIsCooldown(key, false);
     }
 }

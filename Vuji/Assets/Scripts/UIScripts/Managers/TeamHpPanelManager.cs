@@ -12,11 +12,11 @@ public class TeamHpPanelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        BaseEntity.teamSpawn += OnSpawn;
+        PlayerEntity.teamSpawn += OnSpawn;
     }
     private void OnDestroy()
     {
-        BaseEntity.teamSpawn -= OnSpawn;
+        PlayerEntity.teamSpawn -= OnSpawn;
     }
     void OnSpawn(BaseEntity player, string name)
     {

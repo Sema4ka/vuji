@@ -11,14 +11,14 @@ public class FireballSkill : BaseSkill
     {
         base.UseSkill(caster, key);
 
-        if (caster.GetComponent<BaseEntity>().spendEnergy(energyCost) == false)
+        if (caster.GetComponent<PlayerEntity>().spendEnergy(energyCost) == false)
         {
             Debug.Log("Not enough energy to cast " + this.gameObject.name);
             yield break;
         }
         
         onCast?.Invoke(castTime); 
-        caster.GetComponent<BaseEntity>().setIsCooldown(key, true);
+        caster.GetComponent<PlayerEntity>().setIsCooldown(key, true);
         if(cancelMovementOnCast)
             caster.GetComponent<MovementPlayer>().cancelMovement(castTime);
         yield return new WaitForSeconds(castTime);
@@ -27,6 +27,6 @@ public class FireballSkill : BaseSkill
         caster.GetComponent<PlayerProjectile>().Attack("Fireball");
         onRelease?.Invoke(cooldown);
         yield return new WaitForSeconds(cooldown);
-        caster.GetComponent<BaseEntity>().setIsCooldown(key, false);
+        caster.GetComponent<PlayerEntity>().setIsCooldown(key, false);
     }       
 }

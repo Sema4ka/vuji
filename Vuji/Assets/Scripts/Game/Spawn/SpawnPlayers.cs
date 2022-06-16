@@ -36,7 +36,7 @@ public class SpawnPlayers : MonoBehaviour
                 _position = spawnPointTeamTwo.position;
             }
             GameObject playerObject = PhotonNetwork.Instantiate(playerGameObject.name, _position, Quaternion.identity);
-            playerObject.GetComponent<BaseEntity>()._controller = gameObject.GetComponent<Controllers>();
+            playerObject.GetComponent<PlayerEntity>()._controller = gameObject.GetComponent<Controllers>();
             OnSpawn?.Invoke(playerObject);
         }
         canSpawn = false;

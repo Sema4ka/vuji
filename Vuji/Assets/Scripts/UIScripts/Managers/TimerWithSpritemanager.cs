@@ -49,7 +49,7 @@ public class TimerWithSpritemanager : MonoBehaviour
         targetedText.text = "";
         skill.onRelease += SetTime;
         tooltipText.text = "\"" + skill.GetName() + "\"\n" + skill.GetDescription() + "\n" + "Cast time: " + skill.GetCastTime().ToString() + "s\n" + "Energy cost: " + skill.GetCost().ToString() + "\n" + "Cooldown: " + skill.GetCooldownTime().ToString() + "s";
-        player.GetComponent<BaseEntity>().OnSkillSelectionChange += SetSelection;
+        player.GetComponent<PlayerEntity>().OnSkillSelectionChange += SetSelection;
     }
 
     /// <summary>

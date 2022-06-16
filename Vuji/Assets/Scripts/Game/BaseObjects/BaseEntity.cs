@@ -217,14 +217,11 @@ public class BaseEntity : MonoBehaviour
     /// <summary>
     /// Смерть энтити, при смерти выпадают все предметы и уничтожается объект
     /// </summary>
-    protected void Death()
+    public virtual void Death()
     {
         isDead = true;
         DropAllItems();
-        if(gameObject.CompareTag("Player"))
-            gameObject.GetComponent<PlayerScript>().KillPlayer();
-        else
-            PhotonNetwork.Destroy(gameObject);
+        PhotonNetwork.Destroy(gameObject);
     }
 
     /// <summary>

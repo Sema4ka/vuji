@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Pun.UtilityScripts;
 
-public class Player : BaseEntity
+public class PlayerEntity : BaseEntity
 {
     private BaseEntity _playerEntitiy;
 
@@ -42,12 +42,9 @@ public class Player : BaseEntity
         base.Update();
         
         displayedName.SetOffset(new Vector3(0, 1.0f * 0.6f, 0));
-        if (gameObject.CompareTag("Player"))
+        if (_view.IsMine)
         {
-            if (_view.IsMine)
-            {
-                _view.RPC("UpdateText", RpcTarget.All, "[" + PhotonNetwork.LocalPlayer.GetPhotonTeam().Name + "] ", PhotonNetwork.LocalPlayer.NickName);
-            }
+            _view.RPC("UpdateText", RpcTarget.All, "[" + PhotonNetwork.LocalPlayer.GetPhotonTeam().Name + "] ", PhotonNetwork.LocalPlayer.NickName);
         }
 
         if(_view.IsMine)
@@ -152,17 +149,15 @@ public class Player : BaseEntity
     /// <summary>
     /// Метод для убийства имено игрока, т.к. используется фотон
     /// </summary>
-    public void KillPlayer()
+    public override void Death()
     {
-        var myPlayerView = gameObject.GetComponent<PhotonView>();
-
-        Debug.Log("PLAYER DIED FROM: " + myPlayerView.Owner.GetPhotonTeam().Name);
-        if (myPlayerView.Owner.GetPhotonTeam().Name == "TeamOne")
+        Debug.Log("PLAYER DIED FROM: " + _view.Owner.GetPhotonTeam().Name);
+        if (_view.Owner.GetPhotonTeam().Name == "TeamOne")
         {
             _playersTeamsManager.PlayerInTeamOneDied();
         }
         
-        if (myPlayerView.Owner.GetPhotonTeam().Name == "TeamTwo")
+        if (_view.Owner.GetPhotonTeam().Name == "TeamTwo")
         {
             _playersTeamsManager.PlayerInTeamTwoDied();
         }
