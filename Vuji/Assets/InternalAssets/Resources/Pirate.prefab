@@ -390,7 +390,8 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 320
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2435816656477564949, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
 --- !u!82 &252511161483624306 stripped
 AudioSource:
@@ -724,6 +725,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Category: Environment volume
   source: {fileID: 4541029417071092074}
+--- !u!114 &177049010422263149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6754265623814182265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce9ff152a084508e092cfb4ad5e3fff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityName: baseEntityName
+  baseDamage: 5
+  defense: 0
+  healthPoints: 100
+  maxHealthPoints: 100
+  moveSpeed: 3
+  energy: 100
+  maxEnergy: 100
+  healthRegeneration: 1
+  energyRegeneration: 5
+  skills: []
+  _droppedItemPrefab: {fileID: 0}
+  healthBar: {fileID: 0}
+  displayedName: {fileID: 0}
+  _controller: {fileID: 0}
 --- !u!114 &8727846203474177715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -748,15 +776,3 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &8793731089023418366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6754265623814182265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcbdc9ce2722fda41973a62586f14ac6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
