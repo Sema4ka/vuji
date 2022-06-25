@@ -7,21 +7,28 @@ using System.Collections;
 public class TooltipTextUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 
-    [Tooltip("Текст всплывающей подсказки")] public string text;
+    [Tooltip("Inner tooltip name")] public string tooltipName;
+    public BaseEffect effect;
+    public BaseItem item;
+    public BaseSkill skill;
+    /*public BasePassiveSkill passiveSkill;
+    public BaseProjectile projectile;*/
+
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData e)
     {
-        UIHintManager.text = text;
-        UIHintManager.isUI = true;
+        if (effect != null) TooltipManager.SetEffectTooltip(tooltipName, effect);
+        if (item != null) TooltipManager.SetItemTooltip(tooltipName, item);
+        if (skill != null) TooltipManager.SetSkillTooltip(tooltipName, skill);
     }
 
     void IPointerExitHandler.OnPointerExit(PointerEventData e)
     {
-        UIHintManager.isUI = false;
+        TooltipManager.ClearTooltip(tooltipName);
     }
 
     void OnDestroy()
     {
-        UIHintManager.isUI = false;
+        TooltipManager.ClearTooltip(tooltipName);
     }
 }

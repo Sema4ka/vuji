@@ -33,7 +33,7 @@ public class EffectTimerManager : MonoBehaviour
         targetedSprite.sprite = effect.effectSprite;
         timerInterval = effect.duration;
         targetedEffect = effect;
-        tooltipText.text = "\"" + effect.effectName + "\"\n" + effect.description + "\n" + "Duration: " + effect.duration + "s";
+        tooltipText.tooltipName = effect.effectName;
     }
 
     /// <summary>
