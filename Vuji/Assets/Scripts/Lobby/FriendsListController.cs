@@ -70,7 +70,7 @@ public class FriendsListController : MonoBehaviour
             // берем префаб и заполняем его поля
             var friendItem = uiFriendItemPrefab.gameObject.GetComponent<FriendItemManager>();
             friendItem.userID = userinfo.userID;
-            friendItem.usernameTextField.text = userinfo.username;
+            friendItem.usernameTextField.text = (userinfo.username.StartsWith("user_")?userinfo.username.Substring(5):userinfo.username);
             friendItem.lobbyManager = gameObject.GetComponent<LobbyManager>();
 
             // инициализируем поле установив его родителя как ScrollContent
