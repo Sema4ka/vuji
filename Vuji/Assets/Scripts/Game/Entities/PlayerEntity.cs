@@ -38,17 +38,19 @@ public class PlayerEntity : BaseEntity
 
         if(_view.IsMine)
             KeyHandler.keyPressed += OnKeyPressed;
+
+        displayedName.SetOffset(new Vector3(0, 1.0f * 0.6f, 0));
+        if (_view.IsMine)
+        {
+            _view.RPC("UpdateText", RpcTarget.All, "[" + PhotonNetwork.LocalPlayer.GetPhotonTeam().Name + "] ", PhotonNetwork.LocalPlayer.NickName);
+        }
     }
 
     protected override void Update()
     {
         base.Update();
         
-        displayedName.SetOffset(new Vector3(0, 1.0f * 0.6f, 0));
-        if (_view.IsMine)
-        {
-            _view.RPC("UpdateText", RpcTarget.All, "[" + PhotonNetwork.LocalPlayer.GetPhotonTeam().Name + "] ", PhotonNetwork.LocalPlayer.NickName);
-        }
+
 
         if(_view.IsMine)
             TickPoints();
