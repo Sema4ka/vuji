@@ -6,9 +6,13 @@ using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Pun.UtilityScripts;
 
+
+/// <summary>
+/// Класс игрока, наследуемый от базовой сущности.
+/// </summary>
 public class PlayerEntity : BaseEntity
 {
-    private BaseEntity _playerEntitiy;
+    protected PhotonView _view;
 
     private GameObject _gameManager;
     private PlayersTeamsManager _playersTeamsManager;    
@@ -28,7 +32,6 @@ public class PlayerEntity : BaseEntity
         base.Start();
 
         _view = gameObject.GetComponent<PhotonView>();
-        _playerEntitiy = gameObject.GetComponent<BaseEntity>();
 
         _gameManager = GameObject.FindGameObjectWithTag("GameManager");
         _playersTeamsManager = _gameManager.GetComponent<PlayersTeamsManager>();
@@ -48,11 +51,44 @@ public class PlayerEntity : BaseEntity
         }
 
         if(_view.IsMine)
-            _playerEntitiy.TickPoints();
+            TickPoints();
     }
 
+    /// <summary>
+    /// Перегрузка метода наложения эффекта для отображения эффекта на экране у игрока
+    /// </summary>
+    /// <param name="effect"></param>
+    public override void AddEffect(GameObject effect)
+    {
+        base.AddEffect(effect);
+        OnEffectApply?.Invoke(effect.GetComponent<BaseEffect>(), this);
+    }
 
+    /// <summary>
+    /// Метод увеличивающий значение энергии и здоровья каждый тик. 
+    /// </summary>
+    public void TickPoints()
+    {
+        _currentTick -= Time.deltaTime;
+        if (_currentTick <= 0)
+        {
+            _view.RPC("IncreasePoints", RpcTarget.All);
+            _currentTick = _regenerationTick;
+        }
+    }
     
+    /// <summary>
+    /// Продолжение TickPoints.
+    /// </summary>
+    [PunRPC]
+    void IncreasePoints(){
+        healthPoints = healthPoints + healthRegeneration > maxHealthPoints?maxHealthPoints:healthPoints + healthRegeneration;
+        energy = energy + energyRegeneration > maxEnergy?maxEnergy:energy + energyRegeneration;
+    }
+
+    /// <summary>
+    /// Использование способности игроком. При активации выполняется логика прописанная в способности.
+    /// </summary>
     protected override void UseSkill()
     {
         if (_selectedSkill.StartsWith("Skill"))
@@ -67,6 +103,10 @@ public class PlayerEntity : BaseEntity
         }
     }
 
+    /// <summary>
+    /// Выбор скилла для последующего использования. Реализована механика переключения и снятия выбора.
+    /// </summary>
+    /// <param name="skillName"></param>
     public void selectSkill(string skillName)
     {
         if ((skillName == "Skill 1" && !_isSkill1Cooldown) || (skillName == "Skill 2" && !_isSkill2Cooldown))
@@ -81,6 +121,9 @@ public class PlayerEntity : BaseEntity
         }
     }
 
+    /// <summary>
+    /// Снятие выбора скилла
+    /// </summary>
     public void deSelectSkill()
     {
         Debug.Log("Deselected" + _selectedSkill);
@@ -139,6 +182,11 @@ public class PlayerEntity : BaseEntity
         }
     }
 
+    /// <summary>
+    /// Обновление текста над игроком
+    /// </summary>
+    /// <param name="teamTag">Команда игрока</param>
+    /// <param name="newText">Новый текст для подстановки</param>
     [PunRPC]
     public void UpdateText(string teamTag, string newText)
     {

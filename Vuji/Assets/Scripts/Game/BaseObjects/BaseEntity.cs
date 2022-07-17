@@ -5,6 +5,11 @@ using Photon.Pun.UtilityScripts;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+
+
+/// <summary>
+/// Базовый и главный класс сущностей.
+/// </summary>
 public class BaseEntity : MonoBehaviour
 {
     /// Базовая статистика энтити 
@@ -38,8 +43,6 @@ public class BaseEntity : MonoBehaviour
     /// Обязятальный префаб для выпадения предметов
     public GameObject _droppedItemPrefab;
 
-    protected PhotonView _view;
-
     protected float _regenerationTick = 1;
     protected float _currentTick;
 
@@ -54,7 +57,6 @@ public class BaseEntity : MonoBehaviour
 
     protected virtual void Start()
     {
-        _view = gameObject.GetComponent<PhotonView>();
         _currentTick = _regenerationTick;
 
         /// Заполнение обычного словаря скилов из словаря из инспектора
@@ -77,9 +79,23 @@ public class BaseEntity : MonoBehaviour
         healthBar.SetHealth(healthPoints, maxHealthPoints);
     }
 
+    /// <summary>
+    /// Использование способности
+    /// </summary>
     protected virtual void UseSkill()
     {
         _skills["Skill 1"].GetComponent<BaseSkill>().UseSkill(this.gameObject, "Skill 1");
+    }
+
+    #region Public Methods
+
+    /// <summary>
+    /// Наложение эффекта на сущность
+    /// </summary>
+    /// <param name="effect">Объект эффекта </param>
+    public virtual void AddEffect(GameObject effect)
+    {
+        effect.GetComponent<BaseEffect>().ApplyEffect(this.gameObject);
     }
 
     [PunRPC]
@@ -91,34 +107,6 @@ public class BaseEntity : MonoBehaviour
     public void IncreaseMaxEnergy(float toAdd)
     {
         maxEnergy += toAdd;
-    }
-    [PunRPC]
-    public void Heal(float hp) {
-        healthPoints = healthPoints + hp > maxHealthPoints ? maxHealthPoints : healthPoints + hp;
-    }
-
-    [PunRPC]
-    void IncreasePoints(){
-        healthPoints = healthPoints + healthRegeneration > maxHealthPoints?maxHealthPoints:healthPoints + healthRegeneration;
-        energy = energy + energyRegeneration > maxEnergy?maxEnergy:energy + energyRegeneration;
-    }
-    
-    #region Public Methods
-
-    public void AddEffect(GameObject effect)
-    {
-        OnEffectApply?.Invoke(effect.GetComponent<BaseEffect>(), this);
-        effect.GetComponent<BaseEffect>().ApplyEffect(this.gameObject);
-    }
-
-    public void TickPoints()
-    {
-        _currentTick -= Time.deltaTime;
-        if (_currentTick <= 0)
-        {
-            _view.RPC("IncreasePoints", RpcTarget.All);
-            _currentTick = _regenerationTick;
-        }
     }
 
     public float GetMoveSpeed()
@@ -161,7 +149,6 @@ public class BaseEntity : MonoBehaviour
         return defense;
     }
 
-
     public void IncreaseDamage(int addDamage)
     {
         this.baseDamage += addDamage;
@@ -200,6 +187,19 @@ public class BaseEntity : MonoBehaviour
         return true;
     }
 
+    /// <summary>
+    /// Лечение сущности
+    /// </summary>
+    /// <param name="hp">Колчиество здоровья</param>
+    [PunRPC]
+    public void Heal(float hp) {
+        healthPoints = healthPoints + hp > maxHealthPoints ? maxHealthPoints : healthPoints + hp;
+    }
+
+    /// <summary>
+    /// Получение урона сущностью
+    /// </summary>
+    /// <param name="healthDamage">Количество урона</param>
     public void TakeDamage(int healthDamage)
     {
         // Проверка на полное поглощение урона

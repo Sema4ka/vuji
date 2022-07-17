@@ -350,8 +350,6 @@ MonoBehaviour:
   skills: []
   _droppedItemPrefab: {fileID: 8455292785502437808, guid: 9a0fdf131a4a86540bae8470b1178eba, type: 3}
   healthBar: {fileID: 7538319698648844218}
-  displayedName: {fileID: 2751477512586530114}
-  _controller: {fileID: 0}
 --- !u!114 &8514603979305283721
 MonoBehaviour:
   m_ObjectHideFlags: 0

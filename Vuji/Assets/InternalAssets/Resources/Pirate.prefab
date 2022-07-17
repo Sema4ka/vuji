@@ -120,6 +120,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 242792630073809309, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1287147371733323864, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303551696661554268, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
+      propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2435816656477564949, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
@@ -186,6 +194,10 @@ PrefabInstance:
       propertyPath: _passiveSkills.Array.data[0]
       value: 
       objectReference: {fileID: 8607349788670492310, guid: bca1e2ee690a38c8eb403cae04092d1d, type: 3}
+    - target: {fileID: 2965660368256064661, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3571788434696612582, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -390,6 +402,18 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 320
       objectReference: {fileID: 0}
+    - target: {fileID: 8727846203474177715, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
+      propertyPath: ObservedComponents.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727846203474177715, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
+      propertyPath: ObservedComponents.Array.data[2]
+      value: 
+      objectReference: {fileID: 446163854987307529}
+    - target: {fileID: 8727846203474177715, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
+      propertyPath: ObservedComponents.Array.data[3]
+      value: 
+      objectReference: {fileID: 1988209152861905804}
     m_RemovedComponents:
     - {fileID: 2435816656477564949, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
@@ -414,6 +438,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3571788434696612582, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
   m_PrefabInstance: {fileID: 4392176692006565672}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2838302263855715492 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1988209152861905804, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
+  m_PrefabInstance: {fileID: 4392176692006565672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6754265623814182265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3719664146402169316 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1110915467633223372, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
@@ -433,6 +468,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Category: Environment volume
   source: {fileID: 252511161483624306}
+--- !u!114 &4234846857943981345 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 446163854987307529, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
+  m_PrefabInstance: {fileID: 4392176692006565672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6754265623814182265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7cb724808c322458aa4d15f5035fa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5885185714738064547 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7879122691790691211, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
+  m_PrefabInstance: {fileID: 4392176692006565672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 585fc4414f151764ebd1e4382a71a2e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6315826618186745388 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7733375136035205380, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
+  m_PrefabInstance: {fileID: 4392176692006565672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5674a95e47dd7634bb8cb11766936436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6754265623814182265 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7012066835509977681, guid: a888ff36538bf594d8b6d396ce681af6, type: 3}
@@ -554,6 +622,37 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &177049010422263149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6754265623814182265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce9ff152a084508e092cfb4ad5e3fff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityName: Pirate
+  baseDamage: 5
+  defense: 0
+  healthPoints: 100
+  maxHealthPoints: 100
+  moveSpeed: 3
+  energy: 100
+  maxEnergy: 100
+  healthRegeneration: 1
+  energyRegeneration: 5
+  skills:
+  - key: Skill 1
+    skill: {fileID: 6119958733980992348, guid: 08297c57ec5b42cb68e192d9a48269a1, type: 3}
+  - key: Skill 2
+    skill: {fileID: 3796884077945413057, guid: bc1306c81ce2143fd933fdce7f1f6db7, type: 3}
+  _droppedItemPrefab: {fileID: 8455292785502437808, guid: 9a0fdf131a4a86540bae8470b1178eba, type: 3}
+  healthBar: {fileID: 6315826618186745388}
+  displayedName: {fileID: 5885185714738064547}
+  _controller: {fileID: 0}
 --- !u!114 &446163854987307529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -725,33 +824,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Category: Environment volume
   source: {fileID: 4541029417071092074}
---- !u!114 &177049010422263149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6754265623814182265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce9ff152a084508e092cfb4ad5e3fff0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityName: baseEntityName
-  baseDamage: 5
-  defense: 0
-  healthPoints: 100
-  maxHealthPoints: 100
-  moveSpeed: 3
-  energy: 100
-  maxEnergy: 100
-  healthRegeneration: 1
-  energyRegeneration: 5
-  skills: []
-  _droppedItemPrefab: {fileID: 0}
-  healthBar: {fileID: 0}
-  displayedName: {fileID: 0}
-  _controller: {fileID: 0}
 --- !u!114 &8727846203474177715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -771,6 +843,8 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
+  - {fileID: 4234846857943981345}
+  - {fileID: 2838302263855715492}
   - {fileID: 446163854987307529}
   - {fileID: 1988209152861905804}
   sceneViewId: 0
