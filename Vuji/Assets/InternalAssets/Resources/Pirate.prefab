@@ -653,6 +653,7 @@ MonoBehaviour:
   healthBar: {fileID: 6315826618186745388}
   displayedName: {fileID: 5885185714738064547}
   _controller: {fileID: 0}
+  IdleSprite: {fileID: 1826435285958538685, guid: c4cc5b61db512994ca1843a4e6ee04a3, type: 3}
 --- !u!114 &446163854987307529
 MonoBehaviour:
   m_ObjectHideFlags: 0

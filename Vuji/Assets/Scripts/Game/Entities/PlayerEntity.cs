@@ -22,6 +22,7 @@ public class PlayerEntity : BaseEntity
     [SerializeField] public EntityNameManager displayedName;
     public static Action<BaseEntity, string> teamSpawn;
     public Controllers _controller;
+    public Sprite IdleSprite;
 
     protected bool _isSkill1Cooldown = false;
     protected bool _isSkill2Cooldown = false;

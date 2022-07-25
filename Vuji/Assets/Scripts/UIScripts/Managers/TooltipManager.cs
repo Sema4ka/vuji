@@ -37,8 +37,8 @@ public class TooltipManager : MonoBehaviour
         current = name;
         instance.skillName.text = skill.GetName();
         instance.skillDescription.text = skill.GetDescription();
-        instance.skillName.text = skill.GetCooldownTime().ToString();
-        instance.skillName.text = skill.GetCost().ToString();
+        instance.skillCooldown.text = "Cooldown: " + skill.GetCooldownTime().ToString() + "s";
+        instance.skillCost.text = "Cost: " + skill.GetCost().ToString();
         instance.skillTooltipBox.SetActive(true);
     }
 
