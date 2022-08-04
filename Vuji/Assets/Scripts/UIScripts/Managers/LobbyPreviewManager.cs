@@ -27,6 +27,16 @@ public class LobbyPreviewManager : MonoBehaviour
         Redraw();
     }
 
+    public void SetCharacter(GameObject prefab)
+    {
+        index = previewList.IndexOf(prefab);
+        Debug.Log(index);
+
+        Render();
+        SetSkills();
+        Redraw();
+    }
+
     private void Render()
     {
         GameObject player = previewList[index];
@@ -97,6 +107,9 @@ public class LobbyPreviewManager : MonoBehaviour
         index--;
         if (index < 0) index = previewList.Count - 1;
         if (index >= previewList.Count) index = 0;
+        Render();
+        SetSkills();
+        Redraw();
     }
 
     public void NextCharachter()
@@ -104,6 +117,9 @@ public class LobbyPreviewManager : MonoBehaviour
         index++;
         if (index < 0) index = previewList.Count - 1;
         if (index >= previewList.Count) index = 0;
+        Render();
+        SetSkills();
+        Redraw();
     }
 
 }

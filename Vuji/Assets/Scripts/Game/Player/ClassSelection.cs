@@ -16,35 +16,29 @@ public class ClassSelection : MonoBehaviour
     [SerializeField, Tooltip("Объект панели выбора класса")] GameObject classSelection;
     [SerializeField, Tooltip("Префаб для кнопки выбора класса/подкласса")] GameObject SubclassButton;
     [SerializeField, Tooltip("Модуль появления игрока")] SpawnPlayers spawnPlayers;
+    [SerializeField, Tooltip("Канвас для тултипа превью персонажа")] GameObject tooltipToDisable;
+    [SerializeField, Tooltip("Канвас для тултипа в игре")] GameObject tooltipToEnable;
+    [SerializeField, Tooltip("Скрипт управления превью")] LobbyPreviewManager previewManager;
+    [SerializeField, Tooltip("Кнопка подтверждения выбора персонажа")] GameObject selectButton;
     #region UI Panels
-    [SerializeField, Tooltip("Поле названия первого класса")] private Text firstClassName;
-    [SerializeField, Tooltip("Поле названия второго класса")] private Text secondClassName;
-    [SerializeField, Tooltip("Поле названия третьего класса")] private Text thirdClassName;
 
-    [SerializeField] private RectTransform firstClass;
-    [SerializeField] private RectTransform secondClass;
-    [SerializeField] private RectTransform thirdClass;
+    [SerializeField] private RectTransform linkPanel;
 
     [SerializeField, Tooltip("Список объектов (префабов) для подклассов первого класса")] private GameObject[] firstClassSubclasses;
     [SerializeField, Tooltip("Список объектов (префабов) для подклассов второго класса")] private GameObject[] secondClassSubclasses;
     [SerializeField, Tooltip("Список объектов (префабов) для подклассов третьего класса")] private GameObject[] thirdClassSubclasses;
-
-    [SerializeField, Tooltip("Панель для привязки кнопок выбора подклассов первого класса")] private RectTransform firstClassSubclassesPanel;
-    [SerializeField, Tooltip("Панель для привязки кнопок выбора подклассов второго класса")] private RectTransform secondClassSubclassesPanel;
-    [SerializeField, Tooltip("Панель для привязки кнопок выбора подклассов третьего класса")] private RectTransform thirdClassSubclassesPanel;
     #endregion
+
+    GameObject selectedPreview = null;
     // Start is called before the first frame update
     void Start()
     {
+        selectedPreview = firstClassSubclasses[0];
         TimerManager.timerEnd += OnTimerEnd;
 
-        firstClassSubclassesPanel.sizeDelta = new Vector2(356, firstClassSubclasses.Length * height + 50);
-        secondClassSubclassesPanel.sizeDelta = new Vector2(356, secondClassSubclasses.Length * height + 50);
-        thirdClassSubclassesPanel.sizeDelta = new Vector2(356, thirdClassSubclasses.Length * height + 50);
-
-        SpawnSubclassButtons(firstClassSubclassesPanel, firstClassSubclasses);
-        SpawnSubclassButtons(secondClassSubclassesPanel, secondClassSubclasses);
-        SpawnSubclassButtons(thirdClassSubclassesPanel, thirdClassSubclasses);
+        SpawnSubclassButtons(linkPanel, firstClassSubclasses);
+        SpawnSubclassButtons(linkPanel, secondClassSubclasses);
+        SpawnSubclassButtons(linkPanel, thirdClassSubclasses);
 
     }
     /// <summary>
@@ -72,7 +66,8 @@ public class ClassSelection : MonoBehaviour
                     break;
             }
 
-            SetPlayerClass(cls[UnityEngine.Random.Range(0, cls.Length)]);
+            selectedPreview = cls[UnityEngine.Random.Range(0, cls.Length)];
+            SetPlayerClass();
         }
         TimerManager.timerEnd -= OnTimerEnd;
         classSelection.SetActive(false);
@@ -84,32 +79,40 @@ public class ClassSelection : MonoBehaviour
     /// <param name="prefabs">Целевой список префабор/подклассов</param>
     void SpawnSubclassButtons(RectTransform parent, GameObject[] prefabs)
     {
-        int posY = -75;
         foreach (GameObject playerPrefab in prefabs)
         {
-            var subclass = Instantiate(SubclassButton, new Vector3(0, 0, 0), Quaternion.identity);
-            subclass.transform.SetParent(parent.transform, false);
-            subclass.GetComponent<RectTransform>().sizeDelta = new Vector2(336, height);
-            subclass.transform.localPosition = new Vector3(0, posY, 0);
-            subclass.GetComponent<Button>().onClick.AddListener(() => { SetPlayerClass(playerPrefab); });
-            subclass.GetComponentInChildren<Text>().text = playerPrefab.GetComponent<BaseEntity>().GetEntityName();
-            // subclass.GetComponent<Image>().sprite = playerPrefab.GetComponent<Image>().sprite;
-            posY -= height + 10;
+            var subclass = new GameObject();
+            subclass.AddComponent<Image>().sprite = playerPrefab.GetComponent<PlayerEntity>().IdleSprite;
+            subclass.transform.SetParent(parent, false);
+            subclass.AddComponent<Button>().onClick.AddListener(() => { PreviewPlayerClass(playerPrefab); });
         }
     }
+
+    void PreviewPlayerClass(GameObject playerPrefab)
+    {
+        if (selectedPreview != playerPrefab)
+        {
+            previewManager.SetCharacter(playerPrefab);
+            selectedPreview = playerPrefab;
+        }
+    }
+
     /// <summary>
     /// Функция установки класса/подкласса пользователя
     /// </summary>
     /// <param name="playerPrefab">Объект/префаб подкласса</param>
-    void SetPlayerClass(GameObject playerPrefab)
+    public void SetPlayerClass()
     {
+
         if (classSet) return;
-        firstClass.gameObject.SetActive(false);
-        secondClass.gameObject.SetActive(false);
-        thirdClass.gameObject.SetActive(false);
-        Debug.Log(playerPrefab.GetComponent<BaseEntity>().GetEntityName());
-        spawnPlayers.SetPlayerObject(playerPrefab);
+        if (!selectedPreview) return;
+        linkPanel.gameObject.SetActive(false);
+        Debug.Log(selectedPreview.GetComponent<BaseEntity>().GetEntityName());
+        spawnPlayers.SetPlayerObject(selectedPreview);
         classSet = true;
+        tooltipToDisable.SetActive(false);
+        tooltipToEnable.SetActive(true);
+        selectButton.SetActive(false);
     }
 
     // Update is called once per frame
